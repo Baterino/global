@@ -1,0 +1,698 @@
+{
+  "app": {
+    "title": "Baterino Global",
+    "description": "Situs web multilanguage dan ramah SEO dengan Vite dan React.",
+    "welcome": "Selamat datang"
+  },
+  "nav": {
+    "home": "Beranda",
+    "solutions": "Solusi",
+    "solutions.residential": "Residensial & Komunitas",
+    "solutions.industrial": "Industri",
+    "solutions.maritime": "Maritim",
+    "delivery": "Pengiriman",
+    "impact": "Dampak",
+    "company": "Tentang",
+    "company.aboutBaterino": "Baterino",
+    "company.aboutLithtech": "LithTech",
+    "company.partnership": "Kemitraan",
+    "insights": "Insight",
+    "globalPresence": "Kehadiran Global",
+    "careers": "Karir",
+    "contact": "Kontak"
+  },
+  "pageTitle": {
+    "home": "Baterino Global",
+    "solutions": "Solusi",
+    "solutionsResidential": "Residensial & Komunitas",
+    "solutionsIndustrial": "Solusi Industri",
+    "solutionsMaritime": "Solusi Maritim",
+    "delivery": "Pengiriman",
+    "impact": "Dampak",
+    "company": "Perusahaan",
+    "companyAboutBaterino": "Tentang Baterino",
+    "companyLithtech": "LithTech",
+    "companyPartnership": "Kemitraan",
+    "globalPresence": "Kehadiran Global",
+    "insights": "Insight",
+    "careers": "Karir",
+    "contact": "Kontak",
+    "notFound": "Halaman tidak ditemukan"
+  },
+  "notFound": {
+    "message": "Halaman yang Anda cari tidak ada.",
+    "backHome": "Kembali ke beranda"
+  },
+  "contact": {
+    "hero": {
+      "title": "HUBUNGI KAMI",
+      "subtitle": "Kami di sini untuk membantu. Hubungi kami dan kami akan menghubungkan Anda dengan tim yang tepat."
+    },
+    "categories": {
+      "generalInquiries": {
+        "title": "PERTANYAAN UMUM",
+        "description": "Untuk pertanyaan umum atau peluang kemitraan, gunakan formulir ini."
+      },
+      "careers": {
+        "title": "KARIR",
+        "description": "Untuk peluang kerja dan pertanyaan terkait karir, buka ",
+        "linkText": "bagian Karir"
+      },
+      "projectsOperations": {
+        "title": "PROYEK DAN OPERASI",
+        "description": "Untuk pertanyaan terkait proyek dan operasi, gunakan formulir ini."
+      },
+      "socialImpact": {
+        "title": "DAMPAK SOSIAL",
+        "description": "Untuk pertanyaan terkait program dukungan komunitas dan upaya bantuan bencana."
+      }
+    },
+    "form": {
+      "inquiryTypeLabel": "Jenis pertanyaan",
+      "inquiryTypePlaceholder": "Pilih jenis pertanyaan",
+      "inquiryTypes": {
+        "general": "Pertanyaan umum",
+        "projectsOperations": "Proyek dan operasi",
+        "socialImpact": "Dampak sosial"
+      },
+      "nameLabel": "Nama",
+      "namePlaceholder": "Nama Anda",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@anda.com",
+      "emailInvalid": "Masukkan alamat email yang valid.",
+      "countryLabel": "Negara",
+      "countryPlaceholder": "Pilih negara",
+      "countries": {
+        "austria": "Austria",
+        "bulgaria": "Bulgaria",
+        "china": "Tiongkok",
+        "indonesia": "Indonesia",
+        "philippines": "Filipina",
+        "romania": "Rumania",
+        "slovakia": "Slovakia"
+      },
+      "phoneLabel": "Nomor telepon",
+      "phonePlaceholder": "+1 234 567 890",
+      "messageLabel": "Pesan",
+      "messagePlaceholder": "Pesan Anda...",
+      "submit": "Kirim pesan"
+    },
+    "culture": {
+      "title": "BELAJAR. TUMBUH. BERDAYA.",
+      "subtitle": "Tim kami berkembang dalam lingkungan yang mendukung berdasarkan kesetaraan dan pembelajaran berkelanjutan."
+    }
+  },
+  "partnership": {
+    "hero": {
+      "title": "LITHTECH DAN BATERINO",
+      "subtitle": "Kami bekerja sama untuk menjembatani kesenjangan antara teknologi penyimpanan energi canggih dan infrastruktur energi dunia nyata."
+    },
+    "partnerRoles": {
+      "lithtech": {
+        "title": "LITHTECH",
+        "subtitle": "PENGEMBANGAN TEKNOLOGI",
+        "intro": "LithTech bertanggung jawab atas pengembangan dan manufaktur teknologi penyimpanan energi canggih. Peran mereka meliputi:",
+        "bullet1": "Merancang dan memproduksi sistem penyimpanan energi baterai",
+        "bullet2": "Mengembangkan arsitektur manajemen dan keselamatan baterai",
+        "bullet3": "Memastikan kepatuhan terhadap standar dan sertifikasi internasional",
+        "bullet4": "Meningkatkan kinerja, keselamatan, dan kecerdasan sistem",
+        "closing": "LithTech fokus pada keunggulan teknologi di tingkat sistem."
+      },
+      "baterino": {
+        "title": "BATERINO",
+        "subtitle": "PENDUKUNG INFRASTRUKTUR",
+        "intro": "Baterino bertanggung jawab mengubah teknologi menjadi infrastruktur yang dapat diterapkan dan jangka panjang. Peran kami meliputi:",
+        "bullet1": "Mengintegrasikan teknologi LithTech ke dalam sistem energi lengkap",
+        "bullet2": "Mengadaptasi solusi ke lingkungan operasional nyata",
+        "bullet3": "Mengelola pengiriman dan koordinasi proyek",
+        "bullet4": "Mendukung sistem sepanjang siklus hidup operasionalnya",
+        "closing": "Baterino fokus pada eksekusi, integrasi, dan keandalan jangka panjang."
+      }
+    },
+    "longTerm": {
+      "title": "KEMITRAAN UNTUK JANGKA PANJANG",
+      "subtitle": "DARI PABRIK KE APLIKASI DUNIA NYATA",
+      "intro": "Kolaborasi ini dirancang untuk berkembang secara bertanggung jawab — meluas ke wilayah, aplikasi, dan jenis proyek baru sambil mempertahankan standar yang konsisten.",
+      "factoryToField": {
+        "title": "DARI PABRIK KE LAPANGAN",
+        "description": "Mereka berhasil ketika beroperasi dengan aman dan andal di lingkungan nyata — di komunitas, situs industri, dan operasi maritim.",
+        "listLabel": "Melalui kemitraan ini:",
+        "bullet1": "LithTech menyediakan teknologi bersertifikat dan bankable",
+        "bullet2": "Baterino memastikan penyebaran tingkat infrastruktur"
+      },
+      "sharedStandards": {
+        "title": "STANDAR BERSAMA",
+        "description": "Kemitraan dipandu oleh prinsip bersama:",
+        "bullet1": "Desain sistem keselamatan pertama",
+        "bullet2": "Kinerja jangka panjang daripada optimisasi jangka pendek",
+        "bullet3": "Kepatuhan terhadap standar internasional",
+        "bullet4": "Tanggung jawab siklus hidup",
+        "closing": "Prinsip-prinsip ini memastikan bahwa teknologi dan pengiriman selaras dari desain hingga operasi."
+      },
+      "appliedAcrossSectors": {
+        "title": "DITERAPKAN DI SEMUA SEKTOR",
+        "description": "Kemitraan Baterino-LithTech memungkinkan penyebaran penyimpanan sistematis di:",
+        "bullet1": "Energi komunitas dan perumahan",
+        "bullet2": "Infrastruktur industri dan komersial",
+        "bullet3": "Lingkungan maritim dan lepas pantai",
+        "closing": "Berbagai kasus penggunaan. Satu pendekatan terintegrasi."
+      }
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "BANGUN MASA DEPAN BERSAMA KAMI",
+      "subtitle": "Bergabunglah dengan tim yang membentuk proyek bermakna melalui kolaborasi, inovasi, dan dampak."
+    },
+    "search": {
+      "title": "CARI POSISI TERBUKA",
+      "description": "Filter berdasarkan negara dan departemen untuk menemukan peran yang tersedia.",
+      "countryLabel": "Negara",
+      "countryPlaceholder": "Pilih negara",
+      "departmentLabel": "Departemen",
+      "departmentPlaceholder": "Pilih departemen",
+      "countries": {
+        "romania": "Rumania",
+        "indonesia": "Indonesia",
+        "austria": "Austria",
+        "bulgaria": "Bulgaria",
+        "philippines": "Filipina",
+        "china": "Tiongkok",
+        "slovakia": "Slovakia"
+      },
+      "departments": {
+        "engineering": "Teknik",
+        "projectManagement": "Manajemen Proyek",
+        "operations": "Operasi",
+        "researchInnovation": "Riset & Inovasi",
+        "corporateServices": "Layanan Korporat"
+      }
+    },
+    "culture": {
+      "title": "BELAJAR. TUMBUH. BERDAYA.",
+      "subtitle": "Tim kami berkembang dalam lingkungan yang mendukung berdasarkan kesetaraan dan pembelajaran berkelanjutan."
+    },
+    "noPositions": {
+      "title": "Tidak Ada Posisi Terbuka Saat Ini",
+      "body": "Kami tidak memiliki peran yang tersedia saat ini, tetapi kami selalu senang bertemu bakat baru.",
+      "ctaPrefix": "Jika Anda ingin dipertimbangkan untuk peluang di masa depan, kirim CV Anda ke ",
+      "ctaSuffix": " dan kami akan menyimpan Anda di database kami."
+    }
+  },
+  "greeting": {
+    "hello": "Halo!",
+    "message": "Ini adalah salam yang dilokalisasi dari API."
+  },
+  "home": {
+    "hero": {
+      "title": "Mewujudkan infrastruktur penyimpanan energi di seluruh dunia.",
+      "subtitle": "Kami mengintegrasikan teknologi penyimpanan energi terdepan ke dalam infrastruktur yang scalable dan tangguh untuk utilitas, industri, dan lingkungan maritim.",
+      "poweredBy": "didukung oleh"
+    },
+    "carousel": {
+      "infrastructure": "INFRASTRUKTUR ENABLEMENT",
+      "infrastructureSub": "Residensial - Industri - Maritim",
+      "lifecycle": "Siklus hidup terpercaya",
+      "lifecycleSub": "Monitoring - After Sales - Technical Support",
+      "impact": "PURPOSE AND IMPACT",
+      "impactSub": "Education - Clinics - Disaster Relief",
+      "learnMore": "Selengkapnya"
+    },
+    "whatWeEnable": {
+      "title": "Apa yang kami wujudkan",
+      "subtitle": "Cara kami melayani Anda",
+      "intro": "Kami menyediakan solusi penyimpanan energi dari ujung ke ujung di sektor residensial, industri, dan maritim.",
+      "residential": "Residensial",
+      "residentialDesc": "Solusi penyimpanan energi fleksibel untuk rumah dan usaha kecil.",
+      "industrial": "Industri",
+      "industrialDesc": "Sistem scalable untuk aplikasi komersial dan industri.",
+      "maritime": "Maritim",
+      "maritimeDesc": "Solusi tangguh untuk platform lepas pantai dan kapal.",
+      "utility": "Utilitas",
+      "utilityDesc": "Penyimpanan skala utilitas untuk stabilitas grid dan integrasi energi terbarukan."
+    },
+    "howWeDeliver": {
+      "title": "Cara kami mengirimkan",
+      "subtitle": "Proses inti kami",
+      "intro": "Dari penemuan hingga pendanaan dan dukungan purna jual.",
+      "step1": "Penemuan Proyek",
+      "step1Desc": "Kami menilai kebutuhan dan merancang solusi yang tepat.",
+      "step2": "Integrasi Teknologi",
+      "step2Desc": "Kami menerapkan dan mengintegrasikan sistem LitiTech.",
+      "step3": "Dukungan & Garansi Purna Jual",
+      "step3Desc": "Dukungan dan garansi berkelanjutan.",
+      "step4": "Dukungan Pendanaan Proyek",
+      "step4Desc": "Kami membantu mengamankan pendanaan untuk proyek Anda."
+    },
+    "builtOnTrust": {
+      "title": "Dibangun dengan kepercayaan. Dirancang untuk bertahan.",
+      "subtitle": "Solusi global kami",
+      "col1": "Pendekatan jangka panjang",
+      "col1Desc": "Kami berinvestasi dalam infrastruktur dan kemitraan yang tahan lama.",
+      "col2": "Teknologi yang berevolusi",
+      "col2Desc": "Kami terus meningkatkan teknologi kami.",
+      "col3": "Mempertahankan ekosistem kami",
+      "col3Desc": "Kami berkomitmen pada tanggung jawab lingkungan dan sosial.",
+      "col4": "Infrastruktur aman, fokus pada manusia",
+      "col4Desc": "Keselamatan dan manusia adalah pusat dari semua yang kami lakukan."
+    },
+    "globalImpact": {
+      "title": "DAMPAK GLOBAL KAMI",
+      "subtitle": "MEMBANGUN KETAHANAN DI SELURUH DUNIA",
+      "intro": "Akses energi yang andal membentuk peluang, ketahanan, dan pertumbuhan. Program dampak Baterino menerapkan keahlian infrastruktur yang sama untuk mendukung komunitas dan layanan penting di seluruh dunia.",
+      "alignedGoals": "SELARAS DENGAN TUJUAN GLOBAL",
+      "alignedGoalsDesc": "Baterino & LithTech menyelaraskan inisiatif dampaknya dengan Tujuan Pembangunan Berkelanjutan PBB, bertujuan untuk berkontribusi pada semua 17 tujuan pada tahun 2035 melalui penyampaian infrastruktur energi praktis.",
+      "viewProgress": "Lihat kemajuan kami",
+      "energyWhere": "ENERGI DI TEMPAT YANG PALING PENTING",
+      "energyWhereDesc": "Energi yang andal adalah dasar untuk layanan penting dan kehidupan sehari-hari. Baterino & LithTech memfokuskan upaya dampak di mana ketersediaan daya langsung mempengaruhi kesehatan, pendidikan, sistem air, dan ketahanan komunitas.\nKami memprioritaskan proyek di mana keandalan energi bukan opsional — tetapi kritis.",
+      "beyond": "MELAMPAUI PENGIRIMAN",
+      "beyondDesc": "Pekerjaan dampak kami melampaui instalasi sistem. Kami menyebarkan infrastruktur energi praktis dan scalable yang dirancang untuk kondisi operasi nyata — didukung melalui integrasi, keterlibatan lokal, dan tanggung jawab jangka panjang. Dampak dicapai melalui sistem yang terus berkinerja, bukan penyebaran satu kali.",
+      "inclusive": "MEMBANGUN SISTEM INKLUSIF",
+      "inclusiveDesc": "Transisi energi harus bekerja di berbagai realitas. Dengan menggabungkan integrasi teknologi, dukungan siklus hidup, dan desain sistem yang dapat disesuaikan, Baterino membantu komunitas membangun sistem energi yang mendukung kebutuhan saat ini dan pertumbuhan masa depan. Inklusi berasal dari infrastruktur yang dapat dipelihara, diperluas, dan diandalkan dari waktu ke waktu."
+    },
+    "globalPresence": {
+      "title": "Mengirimkan infrastruktur energi ke seluruh dunia",
+      "subtitle": "Kehadiran global kami"
+    },
+    "footer": {
+      "aboutUs": "Tentang Kami",
+      "aboutUsDesc": "Baterino memungkinkan infrastruktur penyimpanan energi untuk komunitas, industri, dan aplikasi maritim, mengintegrasikan teknologi terbukti dari mitra seperti LithTech dengan fokus pada keandalan, keamanan, dan kinerja jangka panjang.",
+      "localOffices": "Kantor Lokal",
+      "officesList": "Romania\nBulgaria\nChina\nIndonesia",
+      "europe": "Eropa",
+      "asia": "Asia",
+      "americas": "Amerika",
+      "globalContact": "Kontak Global",
+      "globalContactDesc": "Untuk pertanyaan global, hubungi:\ninquiries@baterino.com",
+      "socialImpact": "Dampak Sosial",
+      "socialImpactDesc": "Untuk kemitraan dan inisiatif dampak sosial, hubungi:\nsocial@baterino.com",
+      "copyright": "© {{year}} Baterino. Hak cipta dilindungi."
+    }
+  },
+  "residential": {
+    "hero": {
+        "title": "PENYIMPANAN ENERGI RESIDENSIAL",
+        "subtitle": "Dari rumah individu hingga seluruh komunitas, Baterino memungkinkan solusi penyimpanan energi residensial yang dibangun untuk ketahanan, keandalan, dan dampak jangka panjang."
+      },
+      "individual": {
+        "title": "PENYIMPANAN RESIDENSIAL UNTUK PENGGUNA INDIVIDU",
+        "desc1": "Sistem penyimpanan energi residensial memungkinkan rumah tangga individu untuk menyimpan energi dan menggunakannya saat dibutuhkan. Sistem ini dirancang untuk beroperasi secara independen atau dikombinasikan dengan sumber energi terbarukan, seperti tenaga surya.",
+        "desc2": "Baterino memungkinkan solusi penyimpanan residensial sebagai bagian dari sistem energi rumah terintegrasi, disesuaikan dengan kondisi lokal dan pola penggunaan.",
+        "power": "~5kW hingga ~16 kW per kabinet daya terpasang",
+        "ourFocus": "FOKUS KAMI",
+        "focusIntro": "Kami fokus pada kualitas dan keandalan sistem, bukan hanya pengiriman peralatan.",
+        "focus1": "Sistem baterai residensial yang andal dan aman",
+        "focus2": "Integrasi dengan pembangkit energi terbarukan",
+        "focus3": "Konfigurasi yang dapat diskalakan untuk kebutuhan rumah tangga yang berbeda",
+        "focus4": "Kinerja dan dukungan jangka panjang",
+        "keyAdvantages": "KEUNTUNGAN UTAMA",
+        "keyAdvantagesIntro": "Penyimpanan energi residensial memperkuat keandalan, kontrol, dan ketahanan energi jangka panjang.",
+        "advantage1": "Daya andal selama pemadaman dan ketidakstabilan jaringan",
+        "advantage2": "Kemandirian energi yang lebih besar dan kontrol atas penggunaan energi",
+        "advantage3": "Penggunaan energi terbarukan yang dioptimalkan melalui penyimpanan energi",
+        "advantage4": "Manajemen biaya yang lebih baik dengan mengurangi eksposur terhadap tarif puncak"
+      },
+      "microgrids": {
+        "title": "MICROGRID UNTUK KOMUNITAS KAMI",
+        "desc1": "Microgrid menyediakan komunitas dengan sistem energi lokal yang andal yang dapat beroperasi secara independen atau paralel dengan jaringan utama. Dengan menggabungkan pembangkitan, penyimpanan, dan kontrol cerdas, microgrid memungkinkan akses energi, ketahanan, dan keberlanjutan jangka panjang.",
+        "desc2": "Baterino memungkinkan microgrid komunitas sebagai sistem infrastruktur, dirancang untuk mendukung lingkungan operasi nyata dan penggunaan jangka panjang.",
+        "power": "~50kW hingga ~5 MW berdasarkan konfigurasi microgrid",
+        "ourFocus": "FOKUS KAMI",
+        "focusIntro": "Setiap microgrid disusun berdasarkan kebutuhan spesifik komunitas yang dilayaninya.",
+        "focus1": "Desain sistem tingkat infrastruktur",
+        "focus2": "Integrasi penyimpanan, pembangkitan, dan kontrol",
+        "focus3": "Skalabilitas dan operabilitas jangka panjang",
+        "focus4": "Adaptasi terhadap kondisi regulasi dan lingkungan lokal",
+        "keyAdvantages": "KEUNTUNGAN UTAMA",
+        "advantagesIntro": "Microgrid mendukung kebutuhan energi harian dan layanan kritis selama gangguan.",
+        "advantage1": "Komunitas residensial dan desa",
+        "advantage2": "Pulau dan lokasi terpencil atau di luar jaringan",
+        "advantage3": "Rumah sakit, sekolah, dan fasilitas pendidikan",
+        "advantage4": "Air, sanitasi, layanan penting, dan pusat komunitas"
+      }
+    },
+  "industrial": {
+    "hero": {
+      "title": "INFRASTRUKTUR PENYIMPANAN ENERGI INDUSTRI",
+      "subtitle": "Baterino memungkinkan solusi penyimpanan energi yang dapat diskalakan dan berkinerja tinggi untuk fasilitas industri, operasi komersial, dan lingkungan yang terhubung ke jaringan."
+    },
+    "cabinet": {
+      "title": "SISTEM PENYIMPANAN INDUSTRI BERBASIS KABINET",
+      "desc1": "Sistem penyimpanan energi berbasis kabinet memungkinkan pendekatan yang fleksibel dan modular untuk penyimpanan energi industri. Mereka dirancang untuk fasilitas yang memerlukan kapasitas yang dapat diskalakan, penggunaan ruang yang efisien, dan integrasi dengan sistem listrik yang ada.",
+      "desc2": "Baterino memungkinkan sistem berbasis kabinet sebagai komponen infrastruktur terintegrasi, disesuaikan dengan kebutuhan listrik, operasional, dan peraturan dari setiap lokasi.",
+      "power": "~30 kW hingga ~220 kW per kabinet daya terpasang",
+      "ourFocus": "FOKUS KAMI",
+      "focus1": "Arsitektur sistem modular & dapat diskalakan",
+      "focus2": "Konfigurasi dalam kontainer atau berpendingin cairan",
+      "focus3": "Standar keselamatan tinggi dan perlindungan terintegrasi",
+      "focus4": "Kemudahan instalasi dan pemeliharaan",
+      "applications": "APLIKASI UMUM",
+      "app1": "Fasilitas komersial dan industri",
+      "app2": "Pabrik manufaktur",
+      "app3": "Pusat logistik",
+      "app4": "Operasi area terbatas"
+    },
+    "containerized": {
+      "title": "SISTEM PENYIMPANAN DALAM KONTAINER & SKALA BESAR (BESS)",
+      "desc1": "Sistem penyimpanan energi baterai dalam kontainer (BESS) memungkinkan penerapan berkapasitas lebih tinggi dan daya lebih besar untuk kompleks industri, sistem terhubung jaringan, dan infrastruktur kritis. Sistem ini dirancang sebagai unit infrastruktur energi mandiri, mampu beroperasi di lingkungan industri dan luar ruangan yang menuntut.",
+      "desc2": "Baterino memungkinkan BESS dalam kontainer sebagai infrastruktur daya jangka panjang, dengan kemampuan instalasi sementara.",
+      "power": "~0.5 MW hingga ~2.5 MW per kontainer / blok sistem daya terpasang",
+      "ourFocus": "FOKUS KAMI",
+      "focus1": "Arsitektur sistem dalam kontainer, siap pakai",
+      "focus2": "Konfigurasi energi dan daya berkapasitas tinggi",
+      "focus3": "Manajemen termal terintegrasi dan perlindungan kebakaran",
+      "focus4": "Kontrol dan pemantauan terkonfigurasi untuk operasi jarak jauh",
+      "applications": "APLIKASI",
+      "app1": "Kompleks industri dan operasi intensif energi",
+      "app2": "Proyek terhubung jaringan dan berdekatan dengan utilitas",
+      "app3": "Penstabilan dan integrasi energi terbarukan",
+      "app4": "Pengurangan puncak, manajemen beban, dan arbitrase energi",
+      "app5": "Daya cadangan untuk operasi industri kritis"
+    }
+  },
+  "maritime": {
+    "hero": {
+      "title": "INFRASTRUKTUR PENYIMPANAN ENERGI MARITIM (EES)",
+      "subtitle": "Baterino memungkinkan sistem penyimpanan energi tingkat laut yang dirancang untuk keselamatan, kinerja, dan operasi jangka panjang di kapal dan lingkungan lepas pantai."
+    },
+    "systems": {
+      "title": "SISTEM PENYIMPANAN ENERGI BATERAI LAUT (ESS)",
+      "intro": "Baterino memungkinkan sistem penyimpanan energi baterai laut modular yang dibangun di sekitar:",
+      "feature1": "Kimia Lithium Iron Phosphate (LFP) untuk keamanan dan umur panjang yang lebih baik",
+      "feature2": "Arsitektur DC tegangan tinggi yang cocok untuk sistem daya laut",
+      "feature3": "Modul yang dapat ditumpuk memungkinkan ukuran sistem yang fleksibel",
+      "feature4": "Pemantauan dan kontrol cerdas",
+      "conclusion": "Sistem ini dirancang untuk beroperasi dengan andal dalam kondisi laut yang menuntut, termasuk getaran, kelembaban, salinitas, dan lingkungan korosif.",
+      "safetyTitle": "KESELAMATAN, KEPATUHAN & KEANDALAN",
+      "safetyIntro": "Penyimpanan energi maritim menuntut standar keselamatan tertinggi. Kami memungkinkan sistem yang dirancang dengan:",
+      "safety1": "Desain sel dan modul baterai yang memprioritaskan stabilitas termal",
+      "safety2": "Sistem pemantauan dan kontrol yang diverifikasi untuk laut",
+      "safety3": "Konstruksi tahan guncangan dan getaran",
+      "safety4": "Penutup tahan korosi",
+      "safety5": "Keselarasan dengan klasifikasi dan kepatuhan laut"
+    },
+    "delivery": {
+      "title": "BAGAIMANA KAMI MENYAMPAIKAN",
+      "step1": "Integrasi Sistem & Rekayasa",
+      "step1Desc": "Kami menyelaraskan teknologi, mitra, dan arsitektur sistem untuk menciptakan solusi energi terintegrasi yang secara teknis solid, patuh, dan siap untuk penerapan di dunia nyata.",
+      "step2": "Adaptasi terhadap Konteks Operasional",
+      "step2Desc": "Kami menyesuaikan setiap sistem dengan lingkungan operasinya, memastikan desain memenuhi persyaratan teknis, regulasi, dan operasional khusus di berbagai aplikasi.",
+      "step3": "Penerapan & Komisioning",
+      "step3Desc": "Kami mendukung instalasi dan komisioning untuk memastikan sistem diterapkan dengan benar, diuji secara menyeluruh, dan siap untuk operasi yang stabil dan andal sejak hari pertama.",
+      "step4": "Keandalan Jangka Panjang & Dukungan",
+      "step4Desc": "Kami tetap terlibat setelah komisioning, mendukung kinerja sistem melalui jalur purna jual yang terstruktur dan pendekatan yang berfokus pada keandalan jangka panjang.",
+      "step5": "Koordinasi Mitra & Pelaksanaan",
+      "step5Desc": "Kami berkoordinasi dengan penyedia teknologi, integrator, dan mitra lokal untuk memastikan pelaksanaan yang lancar, akuntabilitas, dan kesuksesan operasional jangka panjang."
+    },
+    "applications": {
+      "title": "APLIKASI MARITIM"
+    }
+  },
+  "delivery": {
+    "hero": {
+      "title": "MENYAMPAIKAN INFRASTRUKTUR ENERGI",
+      "subtitle": "Baterino memungkinkan proyek penyimpanan energi melalui integrasi, koordinasi, dan dukungan jangka panjang — mengubah teknologi kompleks menjadi infrastruktur yang andal."
+    },
+    "framework": {
+      "title": "KERANGKA KERJA PENYAMPAIAN KAMI",
+      "intro": "Baterino menyampaikan infrastruktur energi melalui kerangka kerja terstruktur dan dapat diulang yang dirancang untuk mengurangi risiko dan memungkinkan kinerja jangka panjang.",
+      "item1": {
+        "title": "Pemberdayaan Infrastruktur",
+        "desc": "Kami menyatukan teknologi, mitra, dan logistik yang diperlukan untuk membuat proyek penyimpanan energi dapat digunakan.",
+        "includes": "Ini termasuk:",
+        "point1": "Pemilihan teknologi yang selaras dengan kebutuhan proyek",
+        "point2": "Impor, distribusi, dan koordinasi pasokan",
+        "point3": "Arsitektur sistem dan kesiapan proyek",
+        "footer": "Peran kami adalah menghilangkan hambatan — teknis, logistik, dan struktural — sebelum menjadi risiko."
+      },
+      "item2": {
+        "title": "Integrasi Teknologi",
+        "desc": "Kami mengintegrasikan teknologi penyimpanan energi dan terbarukan menjadi sistem yang koheren dan siap lokasi yang dirancang untuk aplikasi residensial, industri, dan maritim.",
+        "includes": "Ini termasuk:",
+        "point1": "Desain dan rekayasa sistem",
+        "point2": "Desain untuk kepatuhan dan kinerja",
+        "point3": "Kompatibilitas lintas berbagai teknologi dan ekosistem vendor",
+        "point4": "Integrasi listrik dan perangkat lunak",
+        "footer": ""
+      },
+      "item3": {
+        "title": "Purna Jual & Keandalan",
+        "desc": "Keterlibatan kami berlanjut jauh melampaui komisioning. Kami mendukung sistem sepanjang masa operasinya dengan:",
+        "includes": "",
+        "point1": "Membangun jalur dukungan dan layanan terstruktur",
+        "point2": "Mendukung kontinuitas kinerja dan stabilitas sistem",
+        "point3": "Menerapkan pendekatan penyampaian berorientasi siklus hidup",
+        "footer": "Keandalan bukan fitur. Ini adalah hasil dari komitmen jangka panjang."
+      },
+      "item4": {
+        "title": "Struktur Proyek & Dukungan Pendanaan",
+        "desc": "Untuk proyek terpilih, Baterino dapat mendukung struktur proyek dan akses ke pendanaan melalui mitra keuangan strategis.",
+        "capability": "Kemampuan ini dapat mencakup:",
+        "point1": "Koordinasi dengan pembiayaan institusional dan proyek",
+        "point2": "Dukungan untuk struktur yang dapat dibiayai dan regulasi",
+        "point3": "Penyelarasan standar global dengan pelaksanaan lokal",
+        "footer": ""
+      }
+    },
+    "consistency": {
+      "title": "DIBANGUN UNTUK KONSISTENSI",
+      "intro": "Baterino menyampaikan infrastruktur energi melalui pendekatan disiplin dan dapat diulang yang berlaku di seluruh proyek, sektor, dan wilayah.",
+      "col1": {
+        "title": "Kemampuan Lintas Sektoral",
+        "desc": "Di semua tahap penyampaian, Baterino membawa kemampuan yang dirancang untuk skala dan replikabilitas:",
+        "subtitle": "Kemampuan ini termasuk:",
+        "point1": "Koordinasi lintas berbagai pemangku kepentingan",
+        "point2": "Integrasi persyaratan regulasi",
+        "point3": "Adaptasi persyaratan regulasi dan kepatuhan",
+        "point4": "Penerapan di berbagai jenis proyek dan geografi"
+      },
+      "col2": {
+        "title": "Komitmen Jangka Panjang",
+        "desc": "Sistem penyimpanan energi dibangun untuk beroperasi selama bertahun-tahun — dalam banyak kasus lebih dari satu dekade. Pekerjaan infrastruktur kami mempertimbangkan horizon ini:",
+        "subtitle": "Komitmen kami meliputi:",
+        "point1": "Operabilitas jangka panjang",
+        "point2": "Dukungan siklus hidup dan kontinuitas sistem",
+        "point3": "Kontinuitas sistem",
+        "footer": "Tanggung jawab kami tidak berakhir pada komisioning — berlanjut sepanjang siklus hidup sistem."
+      },
+      "col3": {
+        "title": "Penyampaian Di Seluruh Sektor",
+        "desc": "Kerangka kerja penyampaian Baterino berskala di berbagai sektor:",
+        "subtitle": "Kemampuan kami meliputi:",
+        "point1": "Komunitas — memungkinkan infrastruktur yang tangguh, komunitas, dan off-grid",
+        "point2": "Industri — mendukung fasilitas dengan kinerja, keandalan, dan skala",
+        "point3": "Maritim — menyampaikan sistem yang memenuhi tuntutan keselamatan dan operasional",
+        "point4": "Pasar berkembang — menerapkan infrastruktur di lingkungan di mana keandalan bukan pilihan"
+      }
+    }
+  },
+  "impact": {
+    "hero": {
+      "title": "DAMPAK GLOBAL",
+      "subtitle": "Baterino membangun sistem energi yang mendukung layanan penting dan memperkuat ketahanan komunitas di seluruh dunia."
+    },
+    "essentialServices": {
+      "title": "ENERGI UNTUK LAYANAN PENTING",
+      "intro": "Energi yang andal adalah fondasi untuk layanan kesehatan, pendidikan, infrastruktur air, dan layanan komunitas penting lainnya. Baterino & LithTech memfokuskan upaya dampak di mana ketersediaan listrik secara langsung mempengaruhi kesehatan, pendidikan, dan ketahanan komunitas.",
+      "box1": "LAYANAN KESEHATAN DAN FASILITAS MEDIS",
+      "box2": "PUSAT PENDIDIKAN DAN PELATIHAN",
+      "box3": "SISTEM AIR DAN SANITASI",
+      "box4": "PUSAT KOMUNITAS DAN LAYANAN DARURAT"
+    },
+    "infrastructure": {
+      "title": "INFRASTRUKTUR DENGAN TUJUAN",
+      "intro": "Baterino mengaktifkan lebih dari 20 unit microgrid mandiri, membantu desa-desa dan berbagai industri lainnya. Dampak diciptakan melalui infrastruktur yang terus berkinerja seiring waktu."
+    },
+    "community": {
+      "title": "ENERGI KOMUNITAS & PROGRAM SOSIAL",
+      "intro": "Kami mendukung sistem energi yang berfokus pada komunitas — membangun infrastruktur untuk penyimpanan dan penggunaan microgrid. Proyek memprioritaskan keandalan, pemeliharaan, dan skalabilitas masa depan."
+    },
+    "globalAlignment": {
+      "title": "KESELARASAN GLOBAL & DAMPAK JANGKA PANJANG",
+      "intro": "Baterino menyelaraskan inisiatif dampaknya dengan Tujuan Pembangunan Berkelanjutan Perserikatan Bangsa-Bangsa, berkomitmen untuk berkontribusi melalui penyediaan infrastruktur energi yang bertanggung jawab. Di seluruh proyeknya, Baterino menerapkan solusi jangka panjang yang berfokus pada keandalan yang mendukung akses energi, layanan penting, dan komunitas yang tangguh.",
+      "logoText": "Baterino berkontribusi pada SDG PBB melalui penyediaan infrastruktur energi yang andal di mana ia memiliki pengaruh langsung.",
+      "goal7": "ENERGI BERSIH DAN TERJANGKAU",
+      "goal9": "INDUSTRI, INOVASI, DAN INFRASTRUKTUR",
+      "goal11": "KOTA DAN KOMUNITAS BERKELANJUTAN",
+      "goal13": "AKSI IKLIM",
+      "goal17": "KEMITRAAN UNTUK MENCAPAI TUJUAN"
+    }
+  },
+  "aboutBaterino": {
+    "hero": {
+      "title": "About Baterino",
+      "subtitle": "Kami mengaktifkan infrastruktur energi yang dibangun untuk berkinerja dan dibangun untuk bertahan."
+    },
+    "whoWeAre": {
+      "title": "SIAPA KAMI",
+      "intro": "Baterino adalah pengaktif infrastruktur energi global yang berfokus pada penyediaan solusi penyimpanan energi yang andal untuk komunitas, industri, dan lingkungan maritim.",
+      "description": "Kami beroperasi di persimpangan integrasi teknologi, pengiriman proyek, dan dukungan sistem jangka panjang — menyatukan teknologi yang terbukti, eksekusi lokal, dan tanggung jawab siklus hidup untuk mengubah proyek energi yang kompleks menjadi infrastruktur yang berfungsi.",
+      "role": "Baterino bukan produsen produk. Kami adalah integrator dan mitra pengiriman, mengaktifkan sistem energi yang dirancang untuk bekerja dengan aman dan andal dari waktu ke waktu."
+    },
+    "vision": {
+      "title": "VISI",
+      "description": "Masa depan di mana infrastruktur energi tangguh, inklusif, dan dibangun untuk mendukung komunitas, industri, dan layanan penting — di mana keandalan paling penting."
+    },
+    "mission": {
+      "title": "MISI",
+      "description": "Untuk mengaktifkan infrastruktur energi yang andal, aman, dan jangka panjang dengan mengintegrasikan teknologi yang terbukti dan mendukung proyek sepanjang siklus hidup penuh mereka."
+    },
+    "whatWeDo": {
+      "title": "APA YANG KAMI LAKUKAN",
+      "intro": "Baterino mengaktifkan proyek penyimpanan energi melalui kombinasi layanan teknis, operasional, dan siklus hidup.",
+      "technology": {
+        "title": "IMPOR DAN DISTRIBUSI TEKNOLOGI",
+        "description": "Kami mengimpor dan mendistribusikan teknologi penyimpanan energi yang terbukti dipilih untuk kinerja, keamanan, dan kelangsungan jangka panjang di berbagai lingkungan operasi."
+      },
+      "integration": {
+        "title": "INTEGRASI SISTEM & PENGAKTIFAN PROYEK",
+        "description": "Kami mengintegrasikan teknologi ke dalam sistem energi yang lengkap dan siap lokasi — menyelaraskan peralatan, teknik, logistik, dan persyaratan pengiriman."
+      },
+      "afterSales": {
+        "title": "LAYANAN PURNA JUAL & DUKUNGAN SIKLUS HIDUP",
+        "description": "Kami mendukung sistem melampaui instalasi melalui jalur purna jual yang terstruktur, memastikan kontinuitas, kemampuan pemeliharaan, dan kinerja jangka panjang."
+      },
+      "infrastructure": {
+        "title": "PENGAKTIFAN INFRASTRUKTUR",
+        "description": "Kami membantu proyek bergerak dari konsep ke operasi dengan mengatasi tantangan teknis, logistik, dan struktural — memungkinkan penyebaran dalam skala besar."
+      },
+      "tagline": "Baterino mengaktifkan infrastruktur energi yang dibangun untuk berkinerja dan dibangun untuk bertahan."
+    },
+    "socialImpact": {
+      "title": "DAMPAK SOSIAL & DUKUNGAN KOMUNITAS",
+      "vulnerable": {
+        "title": "Dukungan untuk kelompok rentan",
+        "description": "Melalui program yang ditargetkan dan kemitraan, Baterino menyediakan diskon atau akses preferensial untuk warga senior, inisiatif dukungan untuk rumah tangga berpenghasilan rendah dan program bantuan energi berbasis komunitas."
+      },
+      "whenNeeded": {
+        "title": "Ada saat Anda membutuhkan kami",
+        "description": "Infrastruktur energi memiliki dampak langsung pada kualitas hidup, ketahanan, dan peluang. Bersama proyek komersial, kami mendukung inisiatif yang memperluas akses energi yang andal ke komunitas dan individu yang paling membutuhkannya."
+      },
+      "disaster": {
+        "title": "Bantuan Bencana & Dukungan Darurat",
+        "description": "Di saat bencana alam atau gangguan infrastruktur, Baterino mendukung solusi energi darurat dan inisiatif bantuan untuk membantu memulihkan layanan listrik penting."
+      },
+      "community": {
+        "title": "Dukungan Energi Komunitas",
+        "description": "Kami berkontribusi pada proyek energi yang berfokus pada komunitas yang meningkatkan akses ke daya yang andal untuk layanan penting, infrastruktur bersama, dan area yang kurang terlayani."
+      }
+    }
+  },
+  "lithtech": {
+    "hero": {
+      "title": "TENTANG LITHTECH",
+      "subtitle": "Penyedia teknologi penyimpanan energi global yang berfokus pada sistem maritim, industri, dan komersial."
+    },
+    "about": {
+      "title": "TENTANG LITHTECH",
+      "paragraph1": "Didirikan di Shenzhen, LithTech mengkhususkan diri dalam pengembangan dan manufaktur sistem penyimpanan energi baterai berkeamanan tinggi dan andal, dengan penekanan kuat pada aplikasi maritim dan infrastruktur.",
+      "paragraph2": "LithTech beroperasi sebagai produsen teknologi dan pengembang solusi, menyediakan sistem penyimpanan energi bersertifikat yang dirancang untuk lingkungan operasi yang menuntut dan jangka panjang."
+    },
+    "vision": {
+      "title": "VISI",
+      "description": "Mendukung transisi energi global dengan mengaktifkan sistem energi yang lebih aman, cerdas, dan inklusif melalui teknologi penyimpanan canggih."
+    },
+    "mission": {
+      "title": "MISI",
+      "description": "Melindungi ekosistem energi berkelanjutan dengan menyediakan teknologi penyimpanan energi yang aman, andal, dan cerdas di aplikasi maritim dan industri."
+    },
+    "whatWeDo": {
+      "title": "APA YANG DILAKUKAN LITHTECH",
+      "intro": "LithTech mengembangkan dan memproduksi sistem penyimpanan energi di berbagai domain aplikasi.",
+      "card1": {
+        "title": "PENYIMPANAN ENERGI INDUSTRIAL & KOMERSIAL",
+        "description": "LithTech menyediakan sistem penyimpanan energi berbasis kabinet dan kontainer untuk kawasan industri, fasilitas komersial, dan proyek energi hibrida."
+      },
+      "card2": {
+        "title": "SISTEM PENYIMPANAN ENERGI MARITIM",
+        "description": "LithTech sangat mengkhususkan diri dalam sistem baterai maritim untuk kapal seperti feri, kapal kerja, platform lepas pantai, dan tambak ikan — dengan fokus kuat pada keamanan, modularitas, dan umur desain yang panjang."
+      },
+      "card3": {
+        "title": "MANAJEMEN BATERAI & KECERDASAN SISTEM",
+        "description": "LithTech secara independen mengembangkan sistem manajemen baterai (BMS) canggih, memungkinkan: Pemantauan presisi tinggi, Optimisasi sistem dinamis, Deteksi kesalahan cerdas, Diagnostik jarak jauh dan manajemen siklus hidup."
+      }
+    },
+    "footprint": {
+      "title": "JEJAK GLOBAL",
+      "intro": "LithTech mempertahankan kehadiran global mendukung penelitian, manufaktur, dan layanan, termasuk:",
+      "bullet1": "Kantor pusat dan R&D di China",
+      "bullet2": "Fasilitas manufaktur dan pergudangan",
+      "bullet3": "Anak perusahaan dan pusat layanan di Eropa, Amerika Utara, Asia Tenggara, Afrika, dan Timur Tengah"
+    }
+  },
+  "globalPresence": {
+    "hero": {
+      "title": "KEHADIRAN GLOBAL. EKSEKUSI LOKAL.",
+      "subtitle": "Baterino beroperasi sebagai platform infrastruktur energi global, mendukung proyek di berbagai wilayah melalui mitra lokal dan eksekusi di lapangan."
+    },
+    "operatingGlobally": {
+      "title": "BEROPERASI SECARA GLOBAL",
+      "description": "Standar global, teknologi terbukti, dan kerangka pengiriman yang konsisten diterapkan di berbagai wilayah dan sektor."
+    },
+    "deliveringLocally": {
+      "title": "MENGIRIM SECARA LOKAL",
+      "description": "Proyek dikirim melalui mitra lokal, disesuaikan dengan realitas regulasi, lingkungan, dan operasional di lapangan."
+    },
+    "regional": {
+      "title": "KEHADIRAN REGIONAL",
+      "intro": "Kami mendukung proyek di berbagai wilayah, termasuk:",
+      "bullet1": "Eropa",
+      "bullet2": "Timur Tengah",
+      "bullet3": "Asia-Pasifik",
+      "bullet4": "Afrika",
+      "closing": "Kehadiran dan cakupan proyek bervariasi menurut wilayah dan didorong oleh kemitraan lokal dan persyaratan proyek."
+    },
+    "partnerUp": {
+      "title": "BERMITRA DENGAN KAMI",
+      "intro": "Kami secara aktif mencari mitra dan distributor lokal di pasar baru di mana infrastruktur energi yang andal dibutuhkan.",
+      "listLabel": "Kami terbuka untuk berkolaborasi dengan:",
+      "bullet1": "Mitra lokal",
+      "bullet2": "Distributor",
+      "bullet3": "Integrator",
+      "bullet4": "Pemangku kepentingan institusional"
+    },
+    "why": {
+      "title": "MENGAPA?",
+      "intro": "Baterino bermitra untuk membangun bisnis infrastruktur energi yang berkelanjutan dan menguntungkan.",
+      "bullet1": "Margin kompetitif pada solusi tingkat infrastruktur",
+      "bullet2": "Peluang layanan purna jual dan siklus hidup yang berkelanjutan",
+      "bullet3": "Pemasaran terpusat, posisioning merek, dan dukungan go-to-market"
+    }
+  },
+  "insights": {
+    "hero": {
+      "title": "INSIGHTS",
+      "subtitle": "BUKTI. PERSPEKTIF. KEMAJUAN."
+    },
+    "category": "Kategori",
+    "all": "Semua",
+    "news": "Berita",
+    "pressRelease": "Siaran Pers",
+    "caseStudy": "Studi Kasus",
+    "publicRelease": "RILIS PUBLIK",
+    "readMore": "Baca selengkapnya",
+    "loadMore": "Muat lebih banyak",
+    "backToInsights": "Kembali ke Insights",
+    "article1": {
+      "title": "Judul artikel",
+      "author": "Penulis",
+      "date": "29 SEPT 2026",
+      "location": "JAKARTA",
+      "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya. Selain jejak kami saat ini, kami terbuka untuk bekerja dengan:"
+    },
+    "article2": {
+      "title": "Judul artikel",
+      "author": "Penulis",
+      "date": "29 SEPT 2026",
+      "location": "JAKARTA",
+      "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya. Selain jejak kami saat ini, kami terbuka untuk bekerja dengan:"
+    },
+    "article3": {
+      "title": "Judul artikel",
+      "author": "Penulis",
+      "date": "29 SEPT 2026",
+      "location": "JAKARTA",
+      "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya. Selain jejak kami saat ini, kami terbuka untuk bekerja dengan:"
+    }
+  }
+}

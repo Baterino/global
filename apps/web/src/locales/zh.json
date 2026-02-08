@@ -1,0 +1,635 @@
+{
+  "app": {
+    "title": "Baterino Global",
+    "description": "多语言、SEO 友好的网站，使用 Vite 和 React 构建。",
+    "welcome": "欢迎"
+  },
+  "nav": {
+    "home": "首页",
+    "solutions": "解决方案",
+    "solutions.residential": "住宅与社区",
+    "solutions.industrial": "工业",
+    "solutions.maritime": "海事",
+    "delivery": "交付",
+    "impact": "影响",
+    "company": "关于",
+    "company.aboutBaterino": "Baterino",
+    "company.aboutLithtech": "LithTech",
+    "company.partnership": "合作",
+    "insights": "洞察",
+    "globalPresence": "全球布局",
+    "careers": "招聘",
+    "contact": "联系我们"
+  },
+  "notFound": {
+    "message": "您访问的页面不存在。",
+    "backHome": "返回首页"
+  },
+  "contact": {
+    "hero": {
+      "title": "联系我们",
+      "subtitle": "我们随时为您提供帮助。联系我们，我们将为您对接合适的团队。"
+    },
+    "categories": {
+      "generalInquiries": {
+        "title": "一般咨询",
+        "description": "如有一般问题或合作机会，请使用此表单。"
+      },
+      "careers": {
+        "title": "招聘",
+        "description": "有关职位机会及职业相关咨询，请前往",
+        "linkText": "招聘板块"
+      },
+      "projectsOperations": {
+        "title": "项目与运营",
+        "description": "有关项目与运营的咨询，请使用此表单。"
+      },
+      "socialImpact": {
+        "title": "社会影响",
+        "description": "有关社区支持项目及救灾工作的咨询。"
+      }
+    },
+    "form": {
+      "inquiryTypeLabel": "咨询类型",
+      "inquiryTypePlaceholder": "选择咨询类型",
+      "inquiryTypes": {
+        "general": "一般咨询",
+        "projectsOperations": "项目与运营",
+        "socialImpact": "社会影响"
+      },
+      "nameLabel": "姓名",
+      "namePlaceholder": "您的姓名",
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "your@email.com",
+      "emailInvalid": "请输入有效的邮箱地址。",
+      "countryLabel": "国家",
+      "countryPlaceholder": "选择国家",
+      "countries": {
+        "austria": "奥地利",
+        "bulgaria": "保加利亚",
+        "china": "中国",
+        "indonesia": "印度尼西亚",
+        "philippines": "菲律宾",
+        "romania": "罗马尼亚",
+        "slovakia": "斯洛伐克"
+      },
+      "phoneLabel": "电话号码",
+      "phonePlaceholder": "+1 234 567 890",
+      "messageLabel": "留言",
+      "messagePlaceholder": "您的留言...",
+      "submit": "发送消息"
+    },
+    "culture": {
+      "title": "学习。成长。归属。",
+      "subtitle": "我们的团队在基于平等和持续学习的支持性环境中茁壮成长。"
+    }
+  },
+  "partnership": {
+    "hero": {
+      "title": "LITHTECH 与 BATERINO",
+      "subtitle": "我们共同弥合先进储能技术与现实能源基础设施之间的差距。"
+    },
+    "partnerRoles": {
+      "lithtech": {
+        "title": "LITHTECH",
+        "subtitle": "技术开发",
+        "intro": "LithTech 负责先进储能技术的开发和制造。其职责包括：",
+        "bullet1": "设计和制造电池储能系统",
+        "bullet2": "开发电池管理和安全架构",
+        "bullet3": "确保符合国际标准和认证",
+        "bullet4": "提升系统性能、安全与智能化",
+        "closing": "LithTech 专注于系统级技术卓越。"
+      },
+      "baterino": {
+        "title": "BATERINO",
+        "subtitle": "基础设施赋能",
+        "intro": "Baterino 负责将技术转化为可部署的长期基础设施。我们的职责包括：",
+        "bullet1": "将 LithTech 技术集成到完整能源系统中",
+        "bullet2": "使解决方案适应实际运营环境",
+        "bullet3": "管理项目交付与协调",
+        "bullet4": "在系统整个运营生命周期内提供支持",
+        "closing": "Baterino 专注于执行、集成与长期可靠性。"
+      }
+    },
+    "longTerm": {
+      "title": "为长期而建的合作伙伴关系",
+      "subtitle": "从工厂到现实世界应用",
+      "intro": "这一合作旨在负责任地扩展——进入新地区、新应用和新项目类型，同时保持一致的标准。",
+      "factoryToField": {
+        "title": "从工厂到现场",
+        "description": "当它们在真实环境中安全可靠地运行——跨越社区、工业场所和海事运营——即告成功。",
+        "listLabel": "通过这一合作：",
+        "bullet1": "LithTech 提供经认证、可融资的技术",
+        "bullet2": "Baterino 确保基础设施级部署"
+      },
+      "sharedStandards": {
+        "title": "共同标准",
+        "description": "合作以共同原则为指导：",
+        "bullet1": "安全优先的系统设计",
+        "bullet2": "长期性能优于短期优化",
+        "bullet3": "符合国际标准",
+        "bullet4": "全生命周期责任",
+        "closing": "这些原则确保技术与交付从设计到运营保持一致。"
+      },
+      "appliedAcrossSectors": {
+        "title": "跨行业应用",
+        "description": "Baterino-LithTech 合作实现系统性储能在以下领域的部署：",
+        "bullet1": "社区与住宅能源",
+        "bullet2": "工业与商业基础设施",
+        "bullet3": "海事与海上环境",
+        "closing": "不同应用场景。一种综合方法。"
+      }
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "与我们共建未来",
+      "subtitle": "加入我们，通过协作、创新和影响力塑造有意义的项目。"
+    },
+    "search": {
+      "title": "搜索空缺职位",
+      "description": "按国家和部门筛选以查找可用职位。",
+      "countryLabel": "国家",
+      "countryPlaceholder": "选择国家",
+      "departmentLabel": "部门",
+      "departmentPlaceholder": "选择部门",
+      "countries": {
+        "romania": "罗马尼亚",
+        "indonesia": "印度尼西亚",
+        "austria": "奥地利",
+        "bulgaria": "保加利亚",
+        "philippines": "菲律宾",
+        "china": "中国",
+        "slovakia": "斯洛伐克"
+      },
+      "departments": {
+        "engineering": "工程",
+        "projectManagement": "项目管理",
+        "operations": "运营",
+        "researchInnovation": "研究与创新",
+        "corporateServices": "企业服务"
+      }
+    },
+    "culture": {
+      "title": "学习。成长。归属。",
+      "subtitle": "我们的团队在基于平等和持续学习的支持性环境中茁壮成长。"
+    },
+    "noPositions": {
+      "title": "目前暂无空缺职位",
+      "body": "我们目前没有可用职位，但我们始终欢迎结识新人才。",
+      "ctaPrefix": "若您希望被纳入未来机会的考虑范围，请将简历发送至 ",
+      "ctaSuffix": "，我们将把您保留在我们的数据库中。"
+    }
+  },
+  "pageTitle": {
+    "home": "Baterino Global",
+    "solutions": "解决方案",
+    "solutionsResidential": "住宅与社区",
+    "solutionsIndustrial": "工业解决方案",
+    "solutionsMaritime": "海事解决方案",
+    "delivery": "交付",
+    "impact": "影响",
+    "company": "公司",
+    "companyAboutBaterino": "关于 Baterino",
+    "companyLithtech": "LithTech",
+    "companyPartnership": "合作",
+    "globalPresence": "全球布局",
+    "insights": "洞察",
+    "careers": "招聘",
+    "contact": "联系我们",
+    "notFound": "页面未找到"
+  },
+  "greeting": {
+    "hello": "你好！",
+    "message": "这是来自 API 的本地化问候语。"
+  },
+  "home": {
+    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for utility, industry, and maritime environments.", "poweredBy": "powered by" },
+    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Learn more" },
+    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability." },
+    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "step1": "Project Discovery", "step1Desc": "We assess your needs.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding." },
+    "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "Environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people at the center." },
+    "globalImpact": { "title": "我们的全球影响", "subtitle": "在全球范围内建设韧性", "intro": "可靠的能源获取塑造机遇、韧性和增长。Baterino的影响项目将工业和海事项目中使用的相同基础设施专业知识应用于支持全球社区和基本服务。", "alignedGoals": "与全球目标保持一致", "alignedGoalsDesc": "Baterino和LithTech将其影响倡议与联合国可持续发展目标保持一致，旨在通过实际能源基础设施交付，到2035年为所有17个目标做出贡献。", "viewProgress": "查看我们的进展", "energyWhere": "最重要的能源", "energyWhereDesc": "可靠的能源是基本服务和日常生活的基础。Baterino和LithTech将影响力集中在电力可用性直接影响健康、教育、水系统和社区韧性的地方。\n我们优先考虑能源可靠性不是可选的项目——而是至关重要的。", "beyond": "超越交付", "beyondDesc": "我们的影响工作超越了系统安装。我们部署为实际操作条件设计的实用、可扩展的能源基础设施——通过集成、本地参与和长期责任得到支持。影响是通过持续运行的系统实现的，而不是一次性部署。", "inclusive": "建设包容性系统", "inclusiveDesc": "能源转型必须适用于不同的现实。通过结合技术集成、生命周期支持和适应性系统设计，Baterino帮助社区建设支持当前需求和未来增长的能源系统。包容性来自可以维护、扩展和长期依赖的基础设施。" },
+    "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
+    "footer": {
+      "aboutUs": "关于我们",
+      "aboutUsDesc": "Baterino为社区、工业和海事应用提供储能基础设施，整合来自LithTech等合作伙伴的成熟技术，专注于可靠性、安全性和长期性能。",
+      "localOffices": "本地办公室",
+      "officesList": "罗马尼亚\n保加利亚\n中国\n印度尼西亚",
+      "europe": "欧洲",
+      "asia": "亚洲",
+      "americas": "美洲",
+      "globalContact": "全球联系",
+      "globalContactDesc": "全球咨询，请联系：\ninquiries@baterino.com",
+      "socialImpact": "社会影响",
+      "socialImpactDesc": "社会影响合作与倡议，请联系：\nsocial@baterino.com",
+      "copyright": "© {{year}} Baterino. 版权所有。"
+    }
+  },
+  "residential": {
+    "hero": {
+        "title": "住宅储能",
+        "subtitle": "从单个家庭到整个社区，Baterino提供为韧性、可靠性和长期影响而建立的住宅储能解决方案。"
+      },
+      "individual": {
+        "title": "面向个人用户的住宅储能",
+        "desc1": "住宅储能系统允许个人家庭储存能源并在需要时使用。这些系统设计为独立运行或与太阳能等可再生能源结合使用。",
+        "desc2": "Baterino将住宅储能解决方案作为集成家庭能源系统的一部分，适应当地条件和使用模式。",
+        "power": "每个机柜安装功率约5kW至16kW",
+        "ourFocus": "我们的重点",
+        "focusIntro": "我们专注于系统质量和可靠性，而不仅仅是设备交付。",
+        "focus1": "可靠安全的住宅电池系统",
+        "focus2": "与可再生能源发电集成",
+        "focus3": "适用于不同家庭需求的可扩展配置",
+        "focus4": "长期性能和支持",
+        "keyAdvantages": "主要优势",
+        "keyAdvantagesIntro": "住宅储能增强可靠性、控制力和长期能源韧性。",
+        "advantage1": "在停电和电网不稳定期间提供可靠电力",
+        "advantage2": "更大的能源独立性和对能源使用的控制",
+        "advantage3": "通过储能优化使用可再生能源",
+        "advantage4": "通过减少峰值电价敞口改善成本管理"
+      },
+      "microgrids": {
+        "title": "我们社区的微电网",
+        "desc1": "微电网为社区提供可靠的本地化能源系统，可以独立运行或与主电网并行运行。通过结合发电、储能和智能控制，微电网实现能源获取、韧性和长期可持续性。",
+        "desc2": "Baterino将社区微电网作为基础设施系统，旨在支持实际运营环境和长期使用。",
+        "power": "基于微电网配置，约50kW至5MW",
+        "ourFocus": "我们的重点",
+        "focusIntro": "每个微电网都围绕其所服务社区的具体需求进行构建。",
+        "focus1": "基础设施级系统设计",
+        "focus2": "储能、发电和控制的集成",
+        "focus3": "可扩展性和长期可操作性",
+        "focus4": "适应当地监管和环境条件",
+        "keyAdvantages": "主要优势",
+        "advantagesIntro": "微电网支持日常能源需求和中断期间的关键服务。",
+        "advantage1": "住宅社区和村庄",
+        "advantage2": "岛屿和偏远或离网地点",
+        "advantage3": "医院、学校和教育设施",
+        "advantage4": "水、卫生、基本服务和社区中心"
+      }
+    },
+  "industrial": {
+    "hero": {
+      "title": "工业储能基础设施",
+      "subtitle": "Baterino 为工业设施、商业运营和并网环境提供可扩展的高性能储能解决方案。"
+    },
+    "cabinet": {
+      "title": "基于机柜的工业储能系统",
+      "desc1": "基于机柜的储能系统为工业储能提供灵活和模块化的方法。它们专为需要可扩展容量、有效利用可用空间以及与现有电气系统集成的设施而设计。",
+      "desc2": "Baterino 将基于机柜的系统作为集成基础设施组件，适应每个站点的电气、运营和监管需求。",
+      "power": "每个机柜安装功率约 30 kW 至 220 kW",
+      "ourFocus": "我们的重点",
+      "focus1": "模块化和可扩展的系统架构",
+      "focus2": "集装箱式或液冷配置",
+      "focus3": "高安全标准和集成保护",
+      "focus4": "易于安装和维护",
+      "applications": "典型应用",
+      "app1": "商业和工业设施",
+      "app2": "制造工厂",
+      "app3": "物流中心",
+      "app4": "有限区域运营"
+    },
+    "containerized": {
+      "title": "集装箱式和大规模储能系统（BESS）",
+      "desc1": "集装箱式电池储能系统（BESS）为工业综合体、并网系统和关键基础设施提供更高容量和更高功率的部署。这些系统被设计为独立的能源基础设施单元，能够在苛刻的室外和工业环境中运行。",
+      "desc2": "Baterino 将集装箱式 BESS 作为长期电力基础设施，具有临时安装能力。",
+      "power": "每个集装箱/系统块安装功率约 0.5 MW 至 2.5 MW",
+      "ourFocus": "我们的重点",
+      "focus1": "集装箱式交钥匙系统架构",
+      "focus2": "高容量能源和功率配置",
+      "focus3": "集成热管理和消防保护",
+      "focus4": "预配置的控制和监控以实现远程操作",
+      "applications": "应用",
+      "app1": "工业综合体和能源密集型运营",
+      "app2": "并网和公用事业相邻项目",
+      "app3": "可再生能源稳定和集成",
+      "app4": "削峰、负载管理和能源套利",
+      "app5": "关键工业运营的备用电源"
+    }
+  },
+  "maritime": {
+    "hero": {
+      "title": "海事储能基础设施（EES）",
+      "subtitle": "Baterino 提供专为安全、性能和船舶及海上环境中长期运行而设计的船用级储能系统。"
+    },
+    "systems": {
+      "title": "船用电池储能系统（ESS）",
+      "intro": "Baterino 提供围绕以下构建的模块化船用电池储能系统：",
+      "feature1": "磷酸铁锂（LFP）化学成分，增强安全性和寿命",
+      "feature2": "适用于船用电力系统的高压直流架构",
+      "feature3": "可堆叠模块，允许灵活的系统规模",
+      "feature4": "智能监控和控制",
+      "conclusion": "这些系统专为在苛刻的海洋条件下可靠运行而设计，包括振动、湿度、盐度和腐蚀性环境。",
+      "safetyTitle": "安全、合规与可靠性",
+      "safetyIntro": "海事储能需要最高的安全标准。我们提供设计具有以下特点的系统：",
+      "safety1": "优先考虑热稳定性的电池单元和模块设计",
+      "safety2": "经船用验证的监控和控制系统",
+      "safety3": "抗冲击和抗振动结构",
+      "safety4": "耐腐蚀外壳",
+      "safety5": "符合船用分类和合规性"
+    },
+    "delivery": {
+      "title": "我们如何交付",
+      "step1": "系统集成与工程",
+      "step1Desc": "我们协调技术、合作伙伴和系统架构，创建技术上可靠、合规且可用于实际部署的集成能源解决方案。",
+      "step2": "适应运营环境",
+      "step2Desc": "我们使每个系统适应其运营环境，确保设计满足不同应用中的特定技术、监管和运营要求。",
+      "step3": "部署与调试",
+      "step3Desc": "我们支持安装和调试，确保系统正确部署、彻底测试，并从第一天起准备好稳定、可靠的运行。",
+      "step4": "长期可靠性与支持",
+      "step4Desc": "我们在调试后继续参与，通过结构化的售后途径和长期、以可靠性为重点的方法支持系统性能。",
+      "step5": "合作伙伴协调与执行",
+      "step5Desc": "我们与技术提供商、集成商和本地合作伙伴协调，确保顺利执行、问责制和长期运营成功。"
+    },
+    "applications": {
+      "title": "海事应用"
+    }
+  },
+  "delivery": {
+    "hero": {
+      "title": "交付能源基础设施",
+      "subtitle": "Baterino 通过集成、协调和长期支持实现储能项目——将复杂的技术转化为可靠的基础设施。"
+    },
+    "framework": {
+      "title": "我们的交付框架",
+      "intro": "Baterino 通过结构化、可重复的框架交付能源基础设施，旨在降低风险并实现长期性能。",
+      "item1": {
+        "title": "基础设施赋能",
+        "desc": "我们汇集所需的技术、合作伙伴和物流，使储能项目能够部署。",
+        "includes": "这包括：",
+        "point1": "与项目需求一致的技术选择",
+        "point2": "进口、分销和供应协调",
+        "point3": "系统架构和项目准备",
+        "footer": "我们的角色是消除障碍——技术、物流和结构——在它们成为风险之前。"
+      },
+      "item2": {
+        "title": "技术集成",
+        "desc": "我们将储能和可再生能源技术集成到连贯的、现场就绪的系统中，专为住宅、工业和海事应用而设计。",
+        "includes": "这包括：",
+        "point1": "系统设计和工程",
+        "point2": "合规性和性能设计",
+        "point3": "跨多种技术和供应商生态系统的兼容性",
+        "point4": "电气和软件集成",
+        "footer": ""
+      },
+      "item3": {
+        "title": "售后与可靠性",
+        "desc": "我们的参与在调试后继续很长时间。我们通过以下方式在整个运营生命周期内支持系统：",
+        "includes": "",
+        "point1": "建立结构化的支持和服务途径",
+        "point2": "支持性能连续性和系统稳定性",
+        "point3": "应用面向生命周期的交付方法",
+        "footer": "可靠性不是一个功能。这是长期承诺的结果。"
+      },
+      "item4": {
+        "title": "项目结构与资金支持",
+        "desc": "对于选定的项目，Baterino 可以通过战略金融合作伙伴支持项目结构和资金获取。",
+        "capability": "此能力可能包括：",
+        "point1": "与机构和项目融资协调",
+        "point2": "支持可融资结构和监管",
+        "point3": "将全球标准与本地执行保持一致",
+        "footer": ""
+      }
+    },
+    "consistency": {
+      "title": "为一致性而构建",
+      "intro": "Baterino 通过纪律严明、可重复的方法交付能源基础设施，适用于各个项目、行业和地区。",
+      "col1": {
+        "title": "跨领域能力",
+        "desc": "在所有交付阶段，Baterino 带来专为规模和可复制性设计的能力：",
+        "subtitle": "这些能力包括：",
+        "point1": "跨多个利益相关者的协调",
+        "point2": "监管要求的整合",
+        "point3": "监管和合规要求的适应",
+        "point4": "在不同项目类型和地理位置的部署"
+      },
+      "col2": {
+        "title": "长期承诺",
+        "desc": "储能系统的设计运营年限为数年——在许多情况下超过十年。我们的基础设施工作考虑到了这一时间范围：",
+        "subtitle": "我们的承诺包括：",
+        "point1": "长期可操作性",
+        "point2": "生命周期支持和系统连续性",
+        "point3": "系统连续性",
+        "footer": "我们的责任不会在调试时结束——而是贯穿系统的整个生命周期。"
+      },
+      "col3": {
+        "title": "跨行业交付",
+        "desc": "Baterino 交付框架跨多个行业扩展：",
+        "subtitle": "我们的能力包括：",
+        "point1": "社区——实现弹性、社区和离网基础设施",
+        "point2": "工业——以性能、可靠性和规模支持设施",
+        "point3": "海事——交付满足安全和运营需求的系统",
+        "point4": "新兴市场——在可靠性不可选的环境中部署基础设施"
+      }
+    }
+  },
+  "impact": {
+    "hero": {
+      "title": "全球影响",
+      "subtitle": "Baterino 构建支持基本服务并在全球范围内增强社区韧性的能源系统。"
+    },
+    "essentialServices": {
+      "title": "基本服务的能源",
+      "intro": "可靠的能源是医疗保健、教育、水利基础设施和其他关键社区服务的基础。Baterino 和 LithTech 将影响力集中在电力可用性直接影响健康、教育和社区韧性的领域。",
+      "box1": "医疗保健和医疗设施",
+      "box2": "教育和培训中心",
+      "box3": "供水和卫生系统",
+      "box4": "社区中心和应急服务"
+    },
+    "infrastructure": {
+      "title": "有目的的基础设施",
+      "intro": "Baterino 启用了 20 多个独立微电网单元，帮助村庄和各个行业。通过持续运行的基础设施创造影响。"
+    },
+    "community": {
+      "title": "社区能源和社会项目",
+      "intro": "我们支持以社区为中心的能源系统 — 为储能和微电网使用构建基础设施。项目优先考虑可靠性、可维护性和未来可扩展性。"
+    },
+    "globalAlignment": {
+      "title": "全球一致性和长期影响",
+      "intro": "Baterino 将其影响计划与联合国可持续发展目标保持一致，致力于通过负责任的能源基础设施交付做出贡献。在其项目中，Baterino 应用长期的、以可靠性为重点的解决方案，支持能源获取、基本服务和有韧性的社区。",
+      "logoText": "Baterino 通过在其具有直接影响力的领域提供可靠的能源基础设施，为联合国可持续发展目标做出贡献。",
+      "goal7": "经济适用的清洁能源",
+      "goal9": "工业、创新和基础设施",
+      "goal11": "可持续城市和社区",
+      "goal13": "气候行动",
+      "goal17": "促进目标实现的伙伴关系"
+    }
+  },
+  "aboutBaterino": {
+    "hero": {
+      "title": "About Baterino",
+      "subtitle": "我们促进建造以执行和建造以持久的能源基础设施。"
+    },
+    "whoWeAre": {
+      "title": "我们是谁",
+      "intro": "Baterino 是一家全球能源基础设施促进者，专注于为社区、工业和海事环境提供可靠的储能解决方案。",
+      "description": "我们在技术集成、项目交付和长期系统支持的交汇点运营 — 汇集经过验证的技术、本地执行和生命周期责任，将复杂的能源项目转化为运行中的基础设施。",
+      "role": "Baterino 不是产品制造商。我们是集成商和交付合作伙伴，使能源系统能够随着时间的推移安全可靠地运行。"
+    },
+    "vision": {
+      "title": "愿景",
+      "description": "一个能源基础设施具有韧性、包容性的未来，并建立以支持社区、工业和基本服务 — 在可靠性最重要的地方。"
+    },
+    "mission": {
+      "title": "使命",
+      "description": "通过集成经过验证的技术并在项目的整个生命周期中提供支持，实现可靠、安全和长期的能源基础设施。"
+    },
+    "whatWeDo": {
+      "title": "我们的工作",
+      "intro": "Baterino 通过技术、运营和生命周期服务的组合促进储能项目。",
+      "technology": {
+        "title": "技术进口和分销",
+        "description": "我们进口和分销经过验证的储能技术，这些技术因性能、安全性和在不同运营环境中的长期可行性而被选择。"
+      },
+      "integration": {
+        "title": "系统集成与项目促进",
+        "description": "我们将技术集成到完整的、可安装的能源系统中 — 协调设备、工程、物流和交付要求。"
+      },
+      "afterSales": {
+        "title": "售后服务与生命周期支持",
+        "description": "我们通过结构化的售后服务路径支持安装后的系统，确保连续性、可维护性和长期性能。"
+      },
+      "infrastructure": {
+        "title": "基础设施促进",
+        "description": "我们通过解决技术、物流和结构挑战帮助项目从概念到运营 — 实现规模化部署。"
+      },
+      "tagline": "Baterino 促进建造以执行和建造以持久的能源基础设施。"
+    },
+    "socialImpact": {
+      "title": "社会影响与社区支持",
+      "vulnerable": {
+        "title": "对弱势群体的支持",
+        "description": "通过有针对性的计划和合作伙伴关系，Baterino 为老年人提供折扣或优先访问，支持低收入家庭的倡议和基于社区的能源援助计划。"
+      },
+      "whenNeeded": {
+        "title": "在您需要时为您服务",
+        "description": "能源基础设施直接影响生活质量、韧性和机会。在商业项目的同时，我们支持将可靠的能源获取扩展到最需要它的社区和个人的倡议。"
+      },
+      "disaster": {
+        "title": "灾难救援与紧急支持",
+        "description": "在自然灾害或基础设施中断时期，Baterino 支持紧急能源解决方案和救援倡议，帮助恢复基本电力服务。"
+      },
+      "community": {
+        "title": "社区能源支持",
+        "description": "我们为专注于社区的能源项目做出贡献，这些项目改善了基本服务、共享基础设施和服务不足地区的可靠电力获取。"
+      }
+    }
+  },
+  "lithtech": {
+    "hero": {
+      "title": "关于 LithTech",
+      "subtitle": "全球储能技术提供商，专注于海事、工业和商业储能系统。"
+    },
+    "about": {
+      "title": "关于 LithTech",
+      "paragraph1": "LithTech 总部位于深圳，专注于高安全、高可靠性电池储能系统的开发和制造，重点应用于海事和基础设施级应用。",
+      "paragraph2": "LithTech 作为技术制造商和解决方案开发商，提供经认证的储能系统，专为长期、严苛的运行环境而设计。"
+    },
+    "vision": {
+      "title": "愿景",
+      "description": "通过先进储能技术，支持全球能源转型，实现更安全、更智能、更包容的能源系统。"
+    },
+    "mission": {
+      "title": "使命",
+      "description": "通过在海事和工业应用中提供安全、可靠、智能的储能技术，保障可持续能源生态系统。"
+    },
+    "whatWeDo": {
+      "title": "LithTech 的业务",
+      "intro": "LithTech 在多个应用领域开发和制造储能系统。",
+      "card1": {
+        "title": "工业与商业储能",
+        "description": "LithTech 为工业园区、商业设施和混合能源项目提供柜式和集装箱式储能系统。"
+      },
+      "card2": {
+        "title": "海事储能系统",
+        "description": "LithTech 专注于船舶用海事电池系统，如渡轮、工作船、海上平台和渔场 — 高度重视安全性、模块化和长设计寿命。"
+      },
+      "card3": {
+        "title": "电池管理与系统智能",
+        "description": "LithTech 独立开发先进电池管理系统（BMS），实现：高精度监测、动态系统优化、智能故障检测、远程诊断和生命周期管理。"
+      }
+    },
+    "footprint": {
+      "title": "全球足迹",
+      "intro": "LithTech 在全球范围内支持研发、制造和服务，包括：",
+      "bullet1": "中国总部和研发中心",
+      "bullet2": "制造和仓储设施",
+      "bullet3": "欧洲、北美、东南亚、非洲和中东的海外子公司及服务中心"
+    }
+  },
+  "globalPresence": {
+    "hero": {
+      "title": "全球布局。本地执行。",
+      "subtitle": "Baterino 作为全球能源基础设施平台运营，通过本地合作伙伴和实地执行支持各地区项目。"
+    },
+    "operatingGlobally": {
+      "title": "全球运营",
+      "description": "全球标准、成熟技术和一致的交付框架，应用于各地区和各行业。"
+    },
+    "deliveringLocally": {
+      "title": "本地交付",
+      "description": "通过本地合作伙伴交付项目，适应当地的监管、环境和运营实际。"
+    },
+    "regional": {
+      "title": "区域布局",
+      "intro": "我们支持多个地区的项目，包括：",
+      "bullet1": "欧洲",
+      "bullet2": "中东",
+      "bullet3": "亚太",
+      "bullet4": "非洲",
+      "closing": "各地区的存在和项目范围因本地合作与项目需求而异。"
+    },
+    "partnerUp": {
+      "title": "与我们合作",
+      "intro": "我们正在需要可靠能源基础设施的新市场中积极寻找本地合作伙伴和分销商。",
+      "listLabel": "我们愿与以下方面合作：",
+      "bullet1": "本地合作伙伴",
+      "bullet2": "分销商",
+      "bullet3": "集成商",
+      "bullet4": "机构利益相关方"
+    },
+    "why": {
+      "title": "为什么？",
+      "intro": "Baterino 与合作伙伴共同打造可持续、盈利的能源基础设施业务。",
+      "bullet1": "基础设施级解决方案的具有竞争力的利润空间",
+      "bullet2": "持续的售后与全生命周期服务机会",
+      "bullet3": "集中化的营销、品牌定位与市场推广支持"
+    }
+  },
+  "insights": {
+    "hero": {
+      "title": "洞察",
+      "subtitle": "证明。视角。进步。"
+    },
+    "category": "类别",
+    "all": "全部",
+    "news": "新闻",
+    "pressRelease": "新闻稿",
+    "caseStudy": "案例研究",
+    "publicRelease": "公开发布",
+    "readMore": "阅读更多",
+    "loadMore": "加载更多",
+    "backToInsights": "返回洞察",
+    "article1": {
+      "title": "文章标题",
+      "author": "作者",
+      "date": "2026年9月29日",
+      "location": "雅加达",
+      "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。除了我们目前的业务范围，我们还愿意与以下方面合作："
+    },
+    "article2": {
+      "title": "文章标题",
+      "author": "作者",
+      "date": "2026年9月29日",
+      "location": "雅加达",
+      "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。除了我们目前的业务范围，我们还愿意与以下方面合作："
+    },
+    "article3": {
+      "title": "文章标题",
+      "author": "作者",
+      "date": "2026年9月29日",
+      "location": "雅加达",
+      "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。除了我们目前的业务范围，我们还愿意与以下方面合作："
+    }
+  }
+}

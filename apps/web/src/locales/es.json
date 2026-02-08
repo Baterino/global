@@ -1,0 +1,635 @@
+{
+  "app": {
+    "title": "Baterino Global",
+    "description": "Sitio web multilingüe y optimizado para SEO con Vite y React.",
+    "welcome": "Bienvenido"
+  },
+  "nav": {
+    "home": "Inicio",
+    "solutions": "Soluciones",
+    "solutions.residential": "Residencial y Comunidades",
+    "solutions.industrial": "Industrial",
+    "solutions.maritime": "Marítimo",
+    "delivery": "Entrega",
+    "impact": "Impacto",
+    "company": "Acerca de",
+    "company.aboutBaterino": "Baterino",
+    "company.aboutLithtech": "LithTech",
+    "company.partnership": "Asociación",
+    "insights": "Información",
+    "globalPresence": "Presencia Global",
+    "careers": "Carreras",
+    "contact": "Contacto"
+  },
+  "pageTitle": {
+    "home": "Baterino Global",
+    "solutions": "Soluciones",
+    "solutionsResidential": "Residencial y Comunidades",
+    "solutionsIndustrial": "Soluciones industriales",
+    "solutionsMaritime": "Soluciones marítimas",
+    "delivery": "Entrega",
+    "impact": "Impacto",
+    "company": "Empresa",
+    "companyAboutBaterino": "Sobre Baterino",
+    "companyLithtech": "LithTech",
+    "companyPartnership": "Asociación",
+    "globalPresence": "Presencia Global",
+    "insights": "Información",
+    "careers": "Carreras",
+    "contact": "Contacto",
+    "notFound": "Página no encontrada"
+  },
+  "notFound": {
+    "message": "La página que buscas no existe.",
+    "backHome": "Volver al inicio"
+  },
+  "contact": {
+    "hero": {
+      "title": "CONTÁCTENOS",
+      "subtitle": "Estamos aquí para ayudar. Escríbanos y lo conectaremos con el equipo adecuado."
+    },
+    "categories": {
+      "generalInquiries": {
+        "title": "CONSULTAS GENERALES",
+        "description": "Para preguntas generales o oportunidades de asociación, use este formulario."
+      },
+      "careers": {
+        "title": "CARRERAS",
+        "description": "Para oportunidades laborales e inquietudes relacionadas con la carrera, vaya a la ",
+        "linkText": "sección de Carreras"
+      },
+      "projectsOperations": {
+        "title": "PROYECTOS Y OPERACIONES",
+        "description": "Para consultas relacionadas con proyectos y operaciones, use este formulario."
+      },
+      "socialImpact": {
+        "title": "IMPACTO SOCIAL",
+        "description": "Para consultas relacionadas con programas de apoyo comunitario y esfuerzos de ayuda en desastres."
+      }
+    },
+    "form": {
+      "inquiryTypeLabel": "Tipo de consulta",
+      "inquiryTypePlaceholder": "Elegir tipo de consulta",
+      "inquiryTypes": {
+        "general": "Consultas generales",
+        "projectsOperations": "Proyectos y operaciones",
+        "socialImpact": "Impacto social"
+      },
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Su nombre",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "su@email.com",
+      "emailInvalid": "Introduzca una dirección de correo válida.",
+      "countryLabel": "País",
+      "countryPlaceholder": "Elegir país",
+      "countries": {
+        "austria": "Austria",
+        "bulgaria": "Bulgaria",
+        "china": "China",
+        "indonesia": "Indonesia",
+        "philippines": "Filipinas",
+        "romania": "Rumania",
+        "slovakia": "Eslovaquia"
+      },
+      "phoneLabel": "Teléfono",
+      "phonePlaceholder": "+1 234 567 890",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Su mensaje...",
+      "submit": "Enviar mensaje"
+    },
+    "culture": {
+      "title": "APRENDE. CRECE. PERTENECE.",
+      "subtitle": "Nuestros equipos prosperan en un entorno de apoyo basado en la igualdad y el aprendizaje continuo."
+    }
+  },
+  "partnership": {
+    "hero": {
+      "title": "LITHTECH Y BATERINO",
+      "subtitle": "Trabajamos juntos para cerrar la brecha entre la tecnología avanzada de almacenamiento de energía y la infraestructura energética del mundo real."
+    },
+    "partnerRoles": {
+      "lithtech": {
+        "title": "LITHTECH",
+        "subtitle": "DESARROLLO TECNOLÓGICO",
+        "intro": "LithTech es responsable del desarrollo y fabricación de tecnologías avanzadas de almacenamiento de energía. Su papel incluye:",
+        "bullet1": "Diseño y fabricación de sistemas de almacenamiento de energía en baterías",
+        "bullet2": "Desarrollo de arquitecturas de gestión y seguridad de baterías",
+        "bullet3": "Garantizar el cumplimiento de normas y certificaciones internacionales",
+        "bullet4": "Avanzar en rendimiento, seguridad e inteligencia del sistema",
+        "closing": "LithTech se centra en la excelencia tecnológica a nivel de sistema."
+      },
+      "baterino": {
+        "title": "BATERINO",
+        "subtitle": "HABILITADOR DE INFRAESTRUCTURA",
+        "intro": "Baterino es responsable de transformar la tecnología en infraestructura desplegable y a largo plazo. Nuestro papel incluye:",
+        "bullet1": "Integrar las tecnologías LithTech en sistemas energéticos completos",
+        "bullet2": "Adaptar soluciones a entornos operativos reales",
+        "bullet3": "Gestionar la entrega y coordinación de proyectos",
+        "bullet4": "Apoyar los sistemas durante todo su ciclo de vida operativo",
+        "closing": "Baterino se centra en la ejecución, la integración y la fiabilidad a largo plazo."
+      }
+    },
+    "longTerm": {
+      "title": "UNA ASOCIACIÓN CONSTRUIDA A LARGO PLAZO",
+      "subtitle": "DE FÁBRICA A APLICACIONES DEL MUNDO REAL",
+      "intro": "Esta colaboración está diseñada para escalar de forma responsable — expandiéndose a nuevas regiones, aplicaciones y tipos de proyectos manteniendo estándares consistentes.",
+      "factoryToField": {
+        "title": "DE FÁBRICA A CAMPO",
+        "description": "Tienen éxito cuando operan de forma segura y fiable en entornos reales — en comunidades, sitios industriales y operaciones marítimas.",
+        "listLabel": "A través de esta asociación:",
+        "bullet1": "LithTech entrega tecnología certificada y financiable",
+        "bullet2": "Baterino garantiza un despliegue de nivel infraestructura"
+      },
+      "sharedStandards": {
+        "title": "ESTÁNDARES COMPARTIDOS",
+        "description": "La asociación se rige por principios compartidos:",
+        "bullet1": "Diseño de sistemas con seguridad primero",
+        "bullet2": "Rendimiento a largo plazo sobre optimización a corto plazo",
+        "bullet3": "Cumplimiento de estándares internacionales",
+        "bullet4": "Responsabilidad del ciclo de vida",
+        "closing": "Estos principios garantizan que la tecnología y la entrega estén alineadas desde el diseño hasta la operación."
+      },
+      "appliedAcrossSectors": {
+        "title": "APLICADO EN TODOS LOS SECTORES",
+        "description": "La asociación Baterino-LithTech permite un despliegue sistemático de almacenamiento en:",
+        "bullet1": "Energía comunitaria y residencial",
+        "bullet2": "Infraestructura industrial y comercial",
+        "bullet3": "Entornos marítimos y offshore",
+        "closing": "Diferentes casos de uso. Un enfoque integrado."
+      }
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "CONSTRUYE EL FUTURO CON NOSOTROS",
+      "subtitle": "Únete a un equipo que da forma a proyectos significativos a través de la colaboración, la innovación y el impacto."
+    },
+    "search": {
+      "title": "BUSCAR POSICIONES ABIERTAS",
+      "description": "Filtra por país y departamento para encontrar roles disponibles.",
+      "countryLabel": "País",
+      "countryPlaceholder": "Elegir país",
+      "departmentLabel": "Departamento",
+      "departmentPlaceholder": "Elegir departamento",
+      "countries": {
+        "romania": "Rumania",
+        "indonesia": "Indonesia",
+        "austria": "Austria",
+        "bulgaria": "Bulgaria",
+        "philippines": "Filipinas",
+        "china": "China",
+        "slovakia": "Eslovaquia"
+      },
+      "departments": {
+        "engineering": "Ingeniería",
+        "projectManagement": "Gestión de proyectos",
+        "operations": "Operaciones",
+        "researchInnovation": "Investigación e innovación",
+        "corporateServices": "Servicios corporativos"
+      }
+    },
+    "culture": {
+      "title": "APRENDE. CRECE. PERTENECE.",
+      "subtitle": "Nuestros equipos prosperan en un entorno de apoyo basado en la igualdad y el aprendizaje continuo."
+    },
+    "noPositions": {
+      "title": "No hay posiciones abiertas en este momento",
+      "body": "No tenemos roles disponibles en este momento, pero siempre nos complace conocer nuevo talento.",
+      "ctaPrefix": "Si desea ser considerado para futuras oportunidades, envíe su CV a ",
+      "ctaSuffix": " y lo mantendremos en nuestra base de datos."
+    }
+  },
+  "greeting": {
+    "hello": "¡Hola!",
+    "message": "Este es un saludo localizado desde la API."
+  },
+  "home": {
+    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for utility, industry, and maritime environments.", "poweredBy": "powered by" },
+    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Learn more" },
+    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions across residential, industrial, and maritime sectors.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability and renewable integration." },
+    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "step1": "Project Discovery", "step1Desc": "We assess your needs and design the right solution.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding for your project." },
+    "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "We are committed to environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people are at the center of everything we do." },
+    "globalImpact": { "title": "NUESTRO IMPACTO GLOBAL", "subtitle": "CONSTRUYENDO RESILIENCIA MUNDIAL", "intro": "El acceso a energía confiable moldea oportunidades, resiliencia y crecimiento. Los programas de impacto de Baterino aplican la misma experiencia en infraestructura utilizada en proyectos industriales y marítimos para apoyar comunidades y servicios esenciales en todo el mundo.", "alignedGoals": "ALINEADOS CON OBJETIVOS GLOBALES", "alignedGoalsDesc": "Baterino & LithTech alinea sus iniciativas de impacto con los Objetivos de Desarrollo Sostenible de las Naciones Unidas, con el objetivo de contribuir a los 17 objetivos para 2035 mediante la entrega práctica de infraestructura energética.", "viewProgress": "Ver nuestro progreso", "energyWhere": "ENERGÍA DONDE MÁS IMPORTA", "energyWhereDesc": "La energía confiable es fundamental para servicios esenciales y la vida diaria. Baterino & LithTech enfoca esfuerzos de impacto donde la disponibilidad de energía afecta directamente la salud, educación, sistemas de agua y resiliencia comunitaria.\nPriorizamos proyectos donde la confiabilidad energética no es opcional — sino crítica.", "beyond": "MÁS ALLÁ DE LA ENTREGA", "beyondDesc": "Nuestro trabajo de impacto va más allá de la instalación del sistema. Desplegamos infraestructura energética práctica y escalable diseñada para condiciones operativas reales — respaldada por integración, compromiso local y responsabilidad a largo plazo. El impacto se logra a través de sistemas que continúan funcionando, no despliegues únicos.", "inclusive": "CONSTRUYENDO SISTEMAS INCLUSIVOS", "inclusiveDesc": "La transición energética debe funcionar en diferentes realidades. Al combinar integración tecnológica, soporte del ciclo de vida y diseño de sistemas adaptables, Baterino ayuda a las comunidades a construir sistemas energéticos que apoyan las necesidades presentes y el crecimiento futuro. La inclusión proviene de infraestructura que puede mantenerse, expandirse y confiarse con el tiempo." },
+    "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
+    "footer": {
+      "aboutUs": "Acerca de Nosotros",
+      "aboutUsDesc": "Baterino habilita infraestructura de almacenamiento de energía para comunidades, industria y aplicaciones marítimas, integrando tecnologías probadas de socios como LithTech con un enfoque en confiabilidad, seguridad y rendimiento a largo plazo.",
+      "localOffices": "Oficinas Locales",
+      "officesList": "Rumania\nBulgaria\nChina\nIndonesia",
+      "europe": "Europa",
+      "asia": "Asia",
+      "americas": "Américas",
+      "globalContact": "Contacto Global",
+      "globalContactDesc": "Para consultas globales, contactar:\ninquiries@baterino.com",
+      "socialImpact": "Impacto Social",
+      "socialImpactDesc": "Para asociaciones e iniciativas de impacto social, contactar:\nsocial@baterino.com",
+      "copyright": "© {{year}} Baterino. Todos los derechos reservados."
+    }
+  },
+  "residential": {
+    "hero": {
+        "title": "ALMACENAMIENTO DE ENERGÍA RESIDENCIAL",
+        "subtitle": "Desde hogares individuales hasta comunidades enteras, Baterino habilita soluciones de almacenamiento de energía residencial construidas para resiliencia, confiabilidad e impacto a largo plazo."
+      },
+      "individual": {
+        "title": "ALMACENAMIENTO RESIDENCIAL PARA USUARIOS INDIVIDUALES",
+        "desc1": "Los sistemas de almacenamiento de energía residencial permiten a los hogares individuales almacenar energía y usarla cuando sea necesario. Estos sistemas están diseñados para operar independientemente o en combinación con fuentes de energía renovable, como la solar.",
+        "desc2": "Baterino habilita soluciones de almacenamiento residencial como parte de sistemas integrados de energía doméstica, adaptados a condiciones locales y patrones de uso.",
+        "power": "~5kW a ~16 kW por gabinete de potencia instalada",
+        "ourFocus": "NUESTRO ENFOQUE",
+        "focusIntro": "Nos enfocamos en la calidad y confiabilidad del sistema, no solo en la entrega de equipos.",
+        "focus1": "Sistemas de baterías residenciales confiables y seguros",
+        "focus2": "Integración con generación renovable",
+        "focus3": "Configuraciones escalables para diferentes necesidades del hogar",
+        "focus4": "Rendimiento y soporte a largo plazo",
+        "keyAdvantages": "VENTAJAS CLAVE",
+        "keyAdvantagesIntro": "El almacenamiento de energía residencial fortalece la confiabilidad, el control y la resiliencia energética a largo plazo.",
+        "advantage1": "Energía confiable durante apagones e inestabilidad de la red",
+        "advantage2": "Mayor independencia energética y control sobre el uso de energía",
+        "advantage3": "Uso optimizado de energía renovable mediante almacenamiento de energía",
+        "advantage4": "Mejor gestión de costos al reducir la exposición a tarifas pico"
+      },
+      "microgrids": {
+        "title": "MICRORREDES PARA NUESTRAS COMUNIDADES",
+        "desc1": "Las microrredes proporcionan a las comunidades sistemas de energía localizados y confiables que pueden operar independientemente o en paralelo con la red principal. Al combinar generación, almacenamiento y control inteligente, las microrredes permiten acceso a energía, resiliencia y sostenibilidad a largo plazo.",
+        "desc2": "Baterino habilita microrredes comunitarias como sistemas de infraestructura, diseñados para soportar entornos operativos reales y uso a largo plazo.",
+        "power": "~50kW a ~5 MW basado en configuración de microrred",
+        "ourFocus": "NUESTRO ENFOQUE",
+        "focusIntro": "Cada microrred está estructurada en torno a las necesidades específicas de la comunidad a la que sirve.",
+        "focus1": "Diseño de sistemas de grado de infraestructura",
+        "focus2": "Integración de almacenamiento, generación y control",
+        "focus3": "Escalabilidad y operabilidad a largo plazo",
+        "focus4": "Adaptación a condiciones regulatorias y ambientales locales",
+        "keyAdvantages": "VENTAJAS CLAVE",
+        "advantagesIntro": "Las microrredes apoyan tanto las necesidades energéticas diarias como los servicios críticos durante interrupciones.",
+        "advantage1": "Comunidades residenciales y aldeas",
+        "advantage2": "Islas y ubicaciones remotas o fuera de la red",
+        "advantage3": "Hospitales, escuelas e instalaciones educativas",
+        "advantage4": "Agua, saneamiento, servicios esenciales y centros comunitarios"
+      }
+    },
+  "industrial": {
+    "hero": {
+      "title": "INFRAESTRUCTURA DE ALMACENAMIENTO DE ENERGÍA INDUSTRIAL",
+      "subtitle": "Baterino habilita soluciones de almacenamiento de energía escalables y de alto rendimiento para instalaciones industriales, operaciones comerciales y entornos conectados a la red."
+    },
+    "cabinet": {
+      "title": "SISTEMAS DE ALMACENAMIENTO INDUSTRIAL BASADOS EN GABINETES",
+      "desc1": "Los sistemas de almacenamiento de energía basados en gabinetes permiten un enfoque flexible y modular para el almacenamiento de energía industrial. Están diseñados para instalaciones que requieren capacidad escalable, uso eficiente del espacio disponible e integración con sistemas eléctricos existentes.",
+      "desc2": "Baterino habilita sistemas basados en gabinetes como componentes de infraestructura integrada, adaptados a las necesidades eléctricas, operativas y regulatorias de cada sitio.",
+      "power": "~30 kW a ~220 kW por gabinete de potencia instalada",
+      "ourFocus": "NUESTRO ENFOQUE",
+      "focus1": "Arquitectura de sistema modular y escalable",
+      "focus2": "Configuraciones en contenedor o refrigeradas por líquido",
+      "focus3": "Altos estándares de seguridad y protección integrada",
+      "focus4": "Facilidad de instalación y mantenimiento",
+      "applications": "APLICACIONES TÍPICAS",
+      "app1": "Instalaciones comerciales e industriales",
+      "app2": "Plantas de fabricación",
+      "app3": "Centros logísticos",
+      "app4": "Operaciones de área limitada"
+    },
+    "containerized": {
+      "title": "SISTEMAS DE ALMACENAMIENTO CONTENEDORIZADOS Y A GRAN ESCALA (BESS)",
+      "desc1": "Los sistemas de almacenamiento de energía de batería contenedorizados (BESS) permiten implementaciones de mayor capacidad y potencia para complejos industriales, sistemas conectados a la red e infraestructura crítica. Estos sistemas están diseñados como unidades de infraestructura energética autónomas, capaces de operar en entornos industriales y exteriores exigentes.",
+      "desc2": "Baterino habilita BESS contenedorizados como infraestructura de energía a largo plazo, con capacidad de instalación temporal.",
+      "power": "~0.5 MW a ~2.5 MW por contenedor / bloque de sistema de potencia instalada",
+      "ourFocus": "NUESTRO ENFOQUE",
+      "focus1": "Arquitecturas de sistemas contenedorizados llave en mano",
+      "focus2": "Configuraciones de alta capacidad de energía y potencia",
+      "focus3": "Gestión térmica integrada y protección contra incendios",
+      "focus4": "Control y monitoreo preconfigurado para operación remota",
+      "applications": "APLICACIONES",
+      "app1": "Complejos industriales y operaciones de uso intensivo de energía",
+      "app2": "Proyectos conectados a la red y adyacentes a servicios públicos",
+      "app3": "Firmeza e integración de energía renovable",
+      "app4": "Reducción de picos, gestión de carga y arbitraje de energía",
+      "app5": "Energía de respaldo para operaciones industriales críticas"
+    }
+  },
+  "maritime": {
+    "hero": {
+      "title": "INFRAESTRUCTURA DE ALMACENAMIENTO DE ENERGÍA MARÍTIMA (EES)",
+      "subtitle": "Baterino habilita sistemas de almacenamiento de energía de grado marino diseñados para seguridad, rendimiento y operación a largo plazo en embarcaciones y entornos offshore."
+    },
+    "systems": {
+      "title": "SISTEMAS DE ALMACENAMIENTO DE ENERGÍA DE BATERÍA MARINA (ESS)",
+      "intro": "Baterino habilita sistemas de almacenamiento de energía de batería marina modulares construidos alrededor de:",
+      "feature1": "Química de fosfato de hierro y litio (LFP) para mayor seguridad y longevidad",
+      "feature2": "Arquitecturas de CC de alto voltaje adecuadas para sistemas de energía marina",
+      "feature3": "Módulos apilables que permiten dimensionamiento flexible del sistema",
+      "feature4": "Monitoreo y control inteligente",
+      "conclusion": "Estos sistemas están diseñados para operar de manera confiable en condiciones marinas exigentes, incluidas vibración, humedad, salinidad y entornos corrosivos.",
+      "safetyTitle": "SEGURIDAD, CUMPLIMIENTO Y CONFIABILIDAD",
+      "safetyIntro": "El almacenamiento de energía marítima exige los más altos estándares de seguridad. Habilitamos sistemas diseñados con:",
+      "safety1": "Diseño de celdas y módulos de batería que prioriza la estabilidad térmica",
+      "safety2": "Sistemas de monitoreo y control verificados para uso marino",
+      "safety3": "Construcción resistente a golpes y vibraciones",
+      "safety4": "Recintos resistentes a la corrosión",
+      "safety5": "Alineación con clasificación marina y cumplimiento"
+    },
+    "delivery": {
+      "title": "CÓMO ENTREGAMOS",
+      "step1": "Integración de Sistemas e Ingeniería",
+      "step1Desc": "Alineamos tecnologías, socios y arquitectura de sistemas para crear soluciones energéticas integradas que sean técnicamente sólidas, conformes y listas para implementación en el mundo real.",
+      "step2": "Adaptación al Contexto Operacional",
+      "step2Desc": "Adaptamos cada sistema a su entorno operativo, asegurando que los diseños cumplan con requisitos técnicos, regulatorios y operacionales específicos en diferentes aplicaciones.",
+      "step3": "Despliegue y Puesta en Marcha",
+      "step3Desc": "Apoyamos la instalación y puesta en marcha para garantizar que los sistemas se implementen correctamente, se prueben exhaustivamente y estén preparados para una operación estable y confiable desde el primer día.",
+      "step4": "Confiabilidad a Largo Plazo y Soporte",
+      "step4Desc": "Permanecemos involucrados más allá de la puesta en marcha, apoyando el rendimiento del sistema a través de vías de postventa estructuradas y un enfoque centrado en la confiabilidad a largo plazo.",
+      "step5": "Coordinación de Socios y Ejecución",
+      "step5Desc": "Coordinamos con proveedores de tecnología, integradores y socios locales para garantizar una ejecución fluida, responsabilidad y éxito operacional a largo plazo."
+    },
+    "applications": {
+      "title": "APLICACIONES MARÍTIMAS"
+    }
+  },
+  "delivery": {
+    "hero": {
+      "title": "ENTREGANDO INFRAESTRUCTURA ENERGÉTICA",
+      "subtitle": "Baterino habilita proyectos de almacenamiento de energía mediante integración, coordinación y soporte a largo plazo, convirtiendo tecnologías complejas en infraestructura confiable."
+    },
+    "framework": {
+      "title": "NUESTRO MARCO DE ENTREGA",
+      "intro": "Baterino entrega infraestructura energética a través de un marco estructurado y repetible diseñado para reducir riesgos y permitir el rendimiento a largo plazo.",
+      "item1": {
+        "title": "Habilitación de Infraestructura",
+        "desc": "Reunimos las tecnologías, socios y logística necesarios para hacer que los proyectos de almacenamiento de energía sean desplegables.",
+        "includes": "Esto incluye:",
+        "point1": "Selección de tecnología alineada con las necesidades del proyecto",
+        "point2": "Importación, distribución y coordinación de suministro",
+        "point3": "Arquitectura del sistema y preparación del proyecto",
+        "footer": "Nuestro papel es eliminar barreras — técnicas, logísticas y estructurales — antes de que se conviertan en riesgos."
+      },
+      "item2": {
+        "title": "Integración Tecnológica",
+        "desc": "Integramos tecnologías de almacenamiento de energía y renovables en sistemas coherentes y listos para el sitio diseñados para aplicaciones residenciales, industriales y marítimas.",
+        "includes": "Esto incluye:",
+        "point1": "Diseño e ingeniería de sistemas",
+        "point2": "Diseño para cumplimiento y rendimiento",
+        "point3": "Compatibilidad entre múltiples tecnologías y ecosistemas de proveedores",
+        "point4": "Integración eléctrica y de software",
+        "footer": ""
+      },
+      "item3": {
+        "title": "Postventa y Confiabilidad",
+        "desc": "Nuestra participación continúa mucho más allá de la puesta en marcha. Apoyamos los sistemas durante toda su vida operativa mediante:",
+        "includes": "",
+        "point1": "Establecimiento de vías de soporte y servicio estructuradas",
+        "point2": "Soporte de continuidad del rendimiento y estabilidad del sistema",
+        "point3": "Aplicación de un enfoque de entrega orientado al ciclo de vida",
+        "footer": "La confiabilidad no es una característica. Es el resultado del compromiso a largo plazo."
+      },
+      "item4": {
+        "title": "Estructuración de Proyectos y Soporte de Financiamiento",
+        "desc": "Para proyectos seleccionados, Baterino puede apoyar la estructuración de proyectos y el acceso a financiamiento a través de socios financieros estratégicos.",
+        "capability": "Esta capacidad puede incluir:",
+        "point1": "Coordinación con finanzas institucionales y de proyectos",
+        "point2": "Soporte para estructuras bancables y regulatorias",
+        "point3": "Alineación de estándares globales con ejecución local",
+        "footer": ""
+      }
+    },
+    "consistency": {
+      "title": "CONSTRUIDO PARA LA CONSISTENCIA",
+      "intro": "Baterino entrega infraestructura energética a través de un enfoque disciplinado y repetible que se aplica en proyectos, sectores y regiones.",
+      "col1": {
+        "title": "Capacidades Transversales",
+        "desc": "En todas las etapas de entrega, Baterino aporta capacidades diseñadas para escala y replicabilidad:",
+        "subtitle": "Estas capacidades incluyen:",
+        "point1": "Coordinación entre múltiples partes interesadas",
+        "point2": "Integración de requisitos regulatorios",
+        "point3": "Adaptación de requisitos regulatorios y de cumplimiento",
+        "point4": "Implementación en diversos tipos de proyectos y geografías"
+      },
+      "col2": {
+        "title": "Un Compromiso a Largo Plazo",
+        "desc": "Los sistemas de almacenamiento de energía están construidos para operar durante años, en muchos casos más de una década. Nuestro trabajo de infraestructura tiene este horizonte en mente:",
+        "subtitle": "Nuestro compromiso incluye:",
+        "point1": "Operabilidad a largo plazo",
+        "point2": "Soporte del ciclo de vida y continuidad del sistema",
+        "point3": "Continuidad del sistema",
+        "footer": "Nuestra responsabilidad no termina en la puesta en marcha, continúa a lo largo del ciclo de vida del sistema."
+      },
+      "col3": {
+        "title": "Entrega en Todos los Sectores",
+        "desc": "El marco de entrega de Baterino escala en múltiples sectores:",
+        "subtitle": "Nuestras capacidades incluyen:",
+        "point1": "Comunidades: habilitación de infraestructura resiliente, comunitaria y fuera de la red",
+        "point2": "Industrial: apoyo a instalaciones con rendimiento, confiabilidad y escala",
+        "point3": "Marítimo: entrega de sistemas que cumplen con demandas de seguridad y operación",
+        "point4": "Mercados emergentes: implementación de infraestructura en entornos donde la confiabilidad no es opcional"
+      }
+    }
+  },
+  "impact": {
+    "hero": {
+      "title": "IMPACTO GLOBAL",
+      "subtitle": "Baterino construye sistemas energéticos que apoyan servicios esenciales y fortalecen la resiliencia comunitaria en todo el mundo."
+    },
+    "essentialServices": {
+      "title": "ENERGÍA PARA SERVICIOS ESENCIALES",
+      "intro": "La energía confiable es fundamental para la atención médica, la educación, la infraestructura de agua y otros servicios comunitarios críticos. Baterino & LithTech enfocan esfuerzos de impacto donde la disponibilidad de energía afecta directamente la salud, la educación y la resiliencia comunitaria.",
+      "box1": "ATENCIÓN MÉDICA E INSTALACIONES MÉDICAS",
+      "box2": "CENTROS DE EDUCACIÓN Y CAPACITACIÓN",
+      "box3": "SISTEMAS DE AGUA Y SANEAMIENTO",
+      "box4": "CENTROS COMUNITARIOS Y SERVICIOS DE EMERGENCIA"
+    },
+    "infrastructure": {
+      "title": "INFRAESTRUCTURA CON PROPÓSITO",
+      "intro": "Baterino habilita más de 20 unidades de microrredes independientes, ayudando a aldeas y otras industrias. El impacto se crea a través de infraestructura que continúa funcionando con el tiempo."
+    },
+    "community": {
+      "title": "ENERGÍA COMUNITARIA Y PROGRAMAS SOCIALES",
+      "intro": "Apoyamos sistemas energéticos enfocados en la comunidad, construyendo infraestructura para almacenamiento y uso de microrredes. Los proyectos priorizan confiabilidad, mantenibilidad y escalabilidad futura."
+    },
+    "globalAlignment": {
+      "title": "ALINEACIÓN GLOBAL E IMPACTO A LARGO PLAZO",
+      "intro": "Baterino alinea sus iniciativas de impacto con los Objetivos de Desarrollo Sostenible de las Naciones Unidas, comprometiéndose a contribuir a través de la entrega responsable de infraestructura energética. En sus proyectos, Baterino aplica soluciones a largo plazo centradas en la confiabilidad que apoyan el acceso a la energía, los servicios esenciales y las comunidades resilientes.",
+      "logoText": "Baterino contribuye a los ODS de la ONU a través de la entrega de infraestructura energética confiable donde tiene influencia directa.",
+      "goal7": "ENERGÍA ASEQUIBLE Y LIMPIA",
+      "goal9": "INDUSTRIA, INNOVACIÓN E INFRAESTRUCTURA",
+      "goal11": "CIUDADES Y COMUNIDADES SOSTENIBLES",
+      "goal13": "ACCIÓN POR EL CLIMA",
+      "goal17": "ALIANZAS PARA LOGRAR LOS OBJETIVOS"
+    }
+  },
+  "aboutBaterino": {
+    "hero": {
+      "title": "About Baterino",
+      "subtitle": "Habilitamos infraestructura energética construida para funcionar y construida para durar."
+    },
+    "whoWeAre": {
+      "title": "QUIÉNES SOMOS",
+      "intro": "Baterino es un facilitador global de infraestructura energética enfocado en ofrecer soluciones confiables de almacenamiento de energía para comunidades, industria y entornos marítimos.",
+      "description": "Operamos en la intersección de integración tecnológica, entrega de proyectos y soporte de sistemas a largo plazo — reuniendo tecnologías probadas, ejecución local y responsabilidad del ciclo de vida para convertir proyectos energéticos complejos en infraestructura funcional.",
+      "role": "Baterino no es un fabricante de productos. Somos un integrador y socio de entrega, habilitando sistemas energéticos diseñados para funcionar de manera segura y confiable a lo largo del tiempo."
+    },
+    "vision": {
+      "title": "VISIÓN",
+      "description": "Un futuro donde la infraestructura energética sea resiliente, inclusiva y construida para apoyar a comunidades, industria y servicios esenciales — donde la confiabilidad importa más."
+    },
+    "mission": {
+      "title": "MISIÓN",
+      "description": "Habilitar infraestructura energética confiable, segura y a largo plazo integrando tecnologías probadas y apoyando proyectos a lo largo de todo su ciclo de vida."
+    },
+    "whatWeDo": {
+      "title": "QUÉ HACEMOS",
+      "intro": "Baterino habilita proyectos de almacenamiento de energía a través de una combinación de servicios técnicos, operacionales y de ciclo de vida.",
+      "technology": {
+        "title": "IMPORTACIÓN Y DISTRIBUCIÓN DE TECNOLOGÍA",
+        "description": "Importamos y distribuimos tecnologías de almacenamiento de energía probadas, seleccionadas por rendimiento, seguridad y viabilidad a largo plazo en diferentes entornos operativos."
+      },
+      "integration": {
+        "title": "INTEGRACIÓN DE SISTEMAS Y HABILITACIÓN DE PROYECTOS",
+        "description": "Integramos tecnologías en sistemas energéticos completos y listos para el sitio — alineando equipos, ingeniería, logística y requisitos de entrega."
+      },
+      "afterSales": {
+        "title": "POSTVENTA Y SOPORTE DEL CICLO DE VIDA",
+        "description": "Apoyamos sistemas más allá de la instalación a través de rutas estructuradas de postventa, asegurando continuidad, mantenibilidad y rendimiento a largo plazo."
+      },
+      "infrastructure": {
+        "title": "HABILITACIÓN DE INFRAESTRUCTURA",
+        "description": "Ayudamos a los proyectos a pasar del concepto a la operación abordando desafíos técnicos, logísticos y estructurales — habilitando el despliegue a escala."
+      },
+      "tagline": "Baterino habilita infraestructura energética construida para funcionar y construida para durar."
+    },
+    "socialImpact": {
+      "title": "IMPACTO SOCIAL Y APOYO COMUNITARIO",
+      "vulnerable": {
+        "title": "Apoyo para grupos vulnerables",
+        "description": "A través de programas específicos y asociaciones, Baterino proporciona descuentos o acceso preferencial para personas mayores, iniciativas de apoyo para hogares de bajos ingresos y programas de asistencia energética comunitaria."
+      },
+      "whenNeeded": {
+        "title": "Allí cuando nos necesitas",
+        "description": "La infraestructura energética tiene un impacto directo en la calidad de vida, resiliencia y oportunidad. Junto con proyectos comerciales, apoyamos iniciativas que extienden el acceso confiable a la energía a comunidades e individuos que más lo necesitan."
+      },
+      "disaster": {
+        "title": "Alivio de Desastres y Apoyo de Emergencia",
+        "description": "En tiempos de desastres naturales o interrupción de infraestructura, Baterino apoya soluciones energéticas de emergencia e iniciativas de ayuda para restaurar servicios de energía esenciales."
+      },
+      "community": {
+        "title": "Apoyo Energético Comunitario",
+        "description": "Contribuimos a proyectos energéticos enfocados en la comunidad que mejoran el acceso a energía confiable para servicios esenciales, infraestructura compartida y áreas desatendidas."
+      }
+    }
+  },
+  "lithtech": {
+    "hero": {
+      "title": "SOBRE LITHTECH",
+      "subtitle": "Un proveedor global de tecnología de almacenamiento de energía enfocado en sistemas marítimos, industriales y comerciales."
+    },
+    "about": {
+      "title": "SOBRE LITHTECH",
+      "paragraph1": "Fundada en Shenzhen, LithTech se especializa en el desarrollo y fabricación de sistemas de almacenamiento de energía de baterías de alta seguridad y alta confiabilidad, con un fuerte énfasis en aplicaciones marítimas y de grado infraestructura.",
+      "paragraph2": "LithTech opera como fabricante de tecnología y desarrollador de soluciones, entregando sistemas de almacenamiento de energía certificados diseñados para entornos operativos exigentes y a largo plazo."
+    },
+    "vision": {
+      "title": "VISIÓN",
+      "description": "Apoyar la transición energética global permitiendo sistemas energéticos más seguros, inteligentes e inclusivos a través de tecnologías de almacenamiento avanzadas."
+    },
+    "mission": {
+      "title": "MISIÓN",
+      "description": "Safeguardar un ecosistema energético sostenible entregando tecnologías de almacenamiento de energía seguras, confiables e inteligentes en aplicaciones marítimas e industriales."
+    },
+    "whatWeDo": {
+      "title": "QUÉ HACE LITHTECH",
+      "intro": "LithTech desarrolla y fabrica sistemas de almacenamiento de energía en múltiples dominios de aplicación.",
+      "card1": {
+        "title": "ALMACENAMIENTO DE ENERGÍA INDUSTRIAL Y COMERCIAL",
+        "description": "LithTech entrega sistemas de almacenamiento de energía basados en gabinetes y contenedores para parques industriales, instalaciones comerciales y proyectos de energía híbrida."
+      },
+      "card2": {
+        "title": "SISTEMAS DE ALMACENAMIENTO DE ENERGÍA MARÍTIMA",
+        "description": "LithTech está altamente especializado en sistemas de baterías marinas para embarcaciones como ferries, barcos de trabajo, plataformas offshore y piscifactorías — con un fuerte enfoque en seguridad, modularidad y larga vida de diseño."
+      },
+      "card3": {
+        "title": "GESTIÓN DE BATERÍAS E INTELIGENCIA DEL SISTEMA",
+        "description": "LithTech desarrolla de forma independiente sistemas avanzados de gestión de baterías (BMS), permitiendo: Monitoreo de alta precisión, Optimización dinámica del sistema, Detección inteligente de fallas, Diagnósticos remotos y gestión del ciclo de vida."
+      }
+    },
+    "footprint": {
+      "title": "HUELLA GLOBAL",
+      "intro": "LithTech mantiene una presencia global apoyando investigación, fabricación y servicio, incluyendo:",
+      "bullet1": "Sede central e I+D en China",
+      "bullet2": "Instalaciones de fabricación y almacenamiento",
+      "bullet3": "Subsidiarias y centros de servicio en Europa, América del Norte, Sudeste Asiático, África y Oriente Medio"
+    }
+  },
+  "globalPresence": {
+    "hero": {
+      "title": "PRESENCIA GLOBAL. EJECUCIÓN LOCAL.",
+      "subtitle": "Baterino opera como una plataforma global de infraestructura energética, apoyando proyectos en todas las regiones a través de socios locales y ejecución sobre el terreno."
+    },
+    "operatingGlobally": {
+      "title": "OPERANDO GLOBALMENTE",
+      "description": "Estándares globales, tecnologías probadas y un marco de entrega consistente aplicado en regiones y sectores."
+    },
+    "deliveringLocally": {
+      "title": "ENTREGANDO LOCALMENTE",
+      "description": "Proyectos entregados a través de socios locales, adaptados a las realidades regulatorias, ambientales y operativas sobre el terreno."
+    },
+    "regional": {
+      "title": "PRESENCIA REGIONAL",
+      "intro": "Apoyamos proyectos en múltiples regiones, incluyendo:",
+      "bullet1": "Europa",
+      "bullet2": "Oriente Medio",
+      "bullet3": "Asia-Pacífico",
+      "bullet4": "África",
+      "closing": "La presencia y el alcance de los proyectos varían según la región y están impulsados por asociaciones locales y requisitos del proyecto."
+    },
+    "partnerUp": {
+      "title": "ASÓCIESE CON NOSOTROS",
+      "intro": "Buscamos activamente socios y distribuidores locales en nuevos mercados donde se necesite infraestructura energética confiable.",
+      "listLabel": "Estamos abiertos a colaborar con:",
+      "bullet1": "Socios locales",
+      "bullet2": "Distribuidores",
+      "bullet3": "Integradores",
+      "bullet4": "Partes interesadas institucionales"
+    },
+    "why": {
+      "title": "¿POR QUÉ?",
+      "intro": "Baterino se asocia para construir negocios de infraestructura energética sostenibles y rentables.",
+      "bullet1": "Márgenes competitivos en soluciones de nivel infraestructura",
+      "bullet2": "Oportunidades continuas de postventa y servicios de ciclo de vida",
+      "bullet3": "Marketing centralizado, posicionamiento de marca y apoyo comercial"
+    }
+  },
+  "insights": {
+    "hero": {
+      "title": "INSIGHTS",
+      "subtitle": "PRUEBA. PERSPECTIVA. PROGRESO."
+    },
+    "category": "Categoría",
+    "all": "Todos",
+    "news": "Noticias",
+    "pressRelease": "Comunicado de Prensa",
+    "caseStudy": "Caso de Estudio",
+    "publicRelease": "COMUNICADO PÚBLICO",
+    "readMore": "Leer más",
+    "loadMore": "Cargar más",
+    "backToInsights": "Volver a Insights",
+    "article1": {
+      "title": "Título del artículo",
+      "author": "Autor",
+      "date": "29 SEPT 2026",
+      "location": "YAKARTA",
+      "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables. Además de nuestra presencia actual, estamos abiertos a trabajar con:"
+    },
+    "article2": {
+      "title": "Título del artículo",
+      "author": "Autor",
+      "date": "29 SEPT 2026",
+      "location": "YAKARTA",
+      "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables. Además de nuestra presencia actual, estamos abiertos a trabajar con:"
+    },
+    "article3": {
+      "title": "Título del artículo",
+      "author": "Autor",
+      "date": "29 SEPT 2026",
+      "location": "YAKARTA",
+      "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables. Además de nuestra presencia actual, estamos abiertos a trabajar con:"
+    }
+  }
+}
