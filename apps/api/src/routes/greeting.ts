@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express'
 import { getGreetingMessage } from '../locales/greeting.js'
 
-export const greetingRouter = Router()
+export const greetingRouter: Router = Router()
 
 greetingRouter.get('/greeting', (req: Request, res: Response) => {
   const acceptLanguage = req.headers['accept-language'] ?? 'en'
