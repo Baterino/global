@@ -56,14 +56,16 @@ export function Sliders() {
       </div>
 
       {/* What We Do Slider */}
-      <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-[1200px]">
+      <section className="w-full overflow-visible bg-white py-12">
+        <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <h2 className="mb-2 font-heading text-2xl font-bold uppercase tracking-tight text-neutral-900">
             What We Do Slider
           </h2>
           <p className="mb-8 font-body text-body-md text-neutral-600">
             Used on the About Baterino page to showcase services and capabilities.
           </p>
+        </div>
+        <div className="w-full overflow-visible">
           <WhatWeDoSlider />
         </div>
       </section>
@@ -74,14 +76,16 @@ export function Sliders() {
       </div>
 
       {/* Delivery Framework Slider */}
-      <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-[1200px]">
+      <section className="w-full overflow-visible bg-white py-12">
+        <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <h2 className="mb-2 font-heading text-2xl font-bold uppercase tracking-tight text-neutral-900">
             Delivery Framework Slider
           </h2>
           <p className="mb-8 font-body text-body-md text-neutral-600">
             Used on the Delivery page to showcase the delivery process steps.
           </p>
+        </div>
+        <div className="w-full overflow-visible">
           <DeliveryFrameworkSlider />
         </div>
       </section>

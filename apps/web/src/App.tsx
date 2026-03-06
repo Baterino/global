@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import { RedirectToLocale } from './components/RedirectToLocale'
+import { ScrollToTop } from './components/ScrollToTop'
 import { Layout } from './routes/Layout'
 import { Home } from './routes/Home'
 
@@ -44,6 +45,7 @@ export default function App() {
             v7_relativeSplatPath: true,
           }}
         >
+          <ScrollToTop />
           <Suspense
             fallback={
               <div className="mx-auto max-w-[1200px] px-4 py-16 text-center text-body-md text-neutral-500">

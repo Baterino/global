@@ -3,11 +3,12 @@ import { Link, useParams } from 'react-router-dom'
 import { Hero } from '../components/home/Hero'
 import { SectionHeading } from '../components/home/SectionHeading'
 import { EnableCard } from '../components/home/EnableCard'
-import { DeliveryStepCard } from '../components/home/DeliveryStepCard'
+import { HowWeDeliverSlider } from '../components/home/HowWeDeliverSlider'
 import { ImpactSlider } from '../components/home/ImpactSlider'
 
 const INDUSTRIAL_IMG = '/images/industrial-solutions-baterino.png'
 const RESIDENTIAL_IMG = '/images/Residential-solutions-baterino.png'
+const MEDICAL_IMG = '/images/medical-solutions-baterino.png' // fallback: use INDUSTRIAL_IMG if file missing
 const MARITIME_IMG = '/images/maritime-energy-solutions-baterino.png'
 const TRUST_IMG = '/images/baterino-resilience.png'
 
@@ -20,39 +21,36 @@ export function Home() {
     <article className="relative w-full bg-white">
       <Hero />
 
-      {/* What we enable: text block left + Residential top-right; Industrial & Maritime side-by-side below with 20px gap; section width 1200px */}
+      {/* What we enable: title + subtitle on top; then intro and cards */}
       <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-5 lg:grid-cols-2">
-          {/* Top-left: title, subtitle, intro */}
-          <div className="flex flex-col justify-center">
-            <SectionHeading
-              titleKey="home.whatWeEnable.title"
-              subtitleKey="home.whatWeEnable.subtitle"
-            />
-            <p className="max-w-[500px] font-body text-body-md font-medium leading-relaxed text-neutral-600">
-              {t('home.whatWeEnable.intro')}
-            </p>
-          </div>
-          {/* Top-right: Residential card */}
-          <div>
+        <div className="mx-auto w-full max-w-[1200px]">
+          {/* Title and subtitle on top */}
+          <SectionHeading
+            titleKey="home.whatWeEnable.title"
+            subtitleKey="home.whatWeEnable.subtitle"
+          />
+          <p className="mb-8 max-w-[720px] font-body text-body-md font-medium leading-relaxed text-neutral-600">
+            {t('home.whatWeEnable.intro')}
+          </p>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <EnableCard
               image={RESIDENTIAL_IMG}
               titleKey="home.whatWeEnable.residential"
               descKey="home.whatWeEnable.residentialDesc"
               to="/solutions/residential"
             />
-          </div>
-          {/* Bottom-left: Industrial card */}
-          <div>
             <EnableCard
               image={INDUSTRIAL_IMG}
               titleKey="home.whatWeEnable.industrial"
               descKey="home.whatWeEnable.industrialDesc"
               to="/solutions/industrial"
             />
-          </div>
-          {/* Bottom-right: Maritime card */}
-          <div>
+            <EnableCard
+              image={MEDICAL_IMG}
+              titleKey="home.whatWeEnable.medical"
+              descKey="home.whatWeEnable.medicalDesc"
+              to="/solutions/industrial"
+            />
             <EnableCard
               image={MARITIME_IMG}
               titleKey="home.whatWeEnable.maritime"
@@ -73,29 +71,7 @@ export function Home() {
           <p className="mb-10 max-w-[792px] font-body text-body-md font-medium leading-relaxed text-neutral-600">
             {t('home.howWeDeliver.intro')}
           </p>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <DeliveryStepCard
-              number={1}
-              titleKey="home.howWeDeliver.step1"
-              descKey="home.howWeDeliver.step1Desc"
-            />
-            <DeliveryStepCard
-              number={2}
-              titleKey="home.howWeDeliver.step2"
-              descKey="home.howWeDeliver.step2Desc"
-            />
-            <DeliveryStepCard
-              number={3}
-              titleKey="home.howWeDeliver.step3"
-              descKey="home.howWeDeliver.step3Desc"
-            />
-            <DeliveryStepCard
-              number={4}
-              titleKey="home.howWeDeliver.step4"
-              descKey="home.howWeDeliver.step4Desc"
-              isLast
-            />
-          </div>
+          <HowWeDeliverSlider />
         </div>
       </section>
 

@@ -204,13 +204,19 @@
     "message": "这是来自 API 的本地化问候语。"
   },
   "home": {
-    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for utility, industry, and maritime environments.", "poweredBy": "powered by" },
-    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Learn more" },
-    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability." },
-    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "step1": "Project Discovery", "step1Desc": "We assess your needs.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding." },
-    "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "Environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people at the center." },
+    "hero": { "title": "赋能全球储能基础设施", "subtitle": "我们整合可信的绿色能源技术，为社区、工业、医疗和海事环境提供可靠解决方案。", "poweredBy": "由以下技术驱动", "poweredByLabel": "Powered by:", "technologyPoweredBy": "我们的技术由以下驱动：", "hoverToExplore": "悬停以探索" },
+    "heroSlides": {
+      "slide1": { "title": "工业储能基础设施", "subtitle": "我们整合技术、交付与协调，将复杂能源项目转化为可运营的基础设施。" },
+      "slide2": { "title": "面向真实环境的解决方案", "subtitle": "为工业、住宅与海事场景设计并交付的储能系统。" },
+      "slide3": { "title": "售后与全生命周期支持", "subtitle": "我们的责任不止于交付——持续支持性能、可靠性与系统长期连续运行。" },
+      "slide4": { "title": "有使命的基础设施", "subtitle": "支持社区、基本服务与长期韧性的能源基础设施。" }
+    },
+    "carousel": { "infrastructure": "基础设施赋能", "infrastructureSub": "住宅 - 工业 - 海事领域", "lifecycle": "可信赖的全生命周期", "lifecycleSub": "监控 - 售后 - 技术支持", "impact": "使命与影响", "impactSub": "教育 - 医疗 - 救灾", "learnMore": "了解更多", "tapToLearnMore": "点击了解更多" },
+    "whatWeEnable": { "title": "我们所赋能的", "subtitle": "跨领域服务", "intro": "我们将可信的绿色能源技术整合为可靠、基础设施级的能源系统，服务于社区、工业运营和海事应用，适应真实运营环境。", "residential": "住宅", "residentialDesc": "赋能本地社区、改善能源获取的储能解决方案。", "industrial": "工业", "industrialDesc": "为性能、稳定与优化而设计的可扩展储能基础设施。", "medical": "医疗", "medicalDesc": "为医疗机构、诊所及医疗基础设施提供的储能解决方案。", "maritime": "海事", "maritimeDesc": "支持岸外脱碳的先进电池系统。", "utility": "公用事业", "utilityDesc": "面向电网稳定与可再生能源并网的公用事业级储能。" },
+    "howWeDeliver": { "title": "我们如何交付", "subtitle": "从概念到运营", "intro": "Baterino 通过技术集成、运营交付与长期支持赋能储能项目，消除技术、物流与结构障碍，让项目从概念到运营更有信心。", "stage1": "第一阶段", "stage2": "第二阶段", "stage3": "第三阶段", "stage4": "第四阶段", "step1": "基础设施赋能", "step1Desc": "我们汇聚使储能项目在真实环境中可部署所需的技术、合作伙伴与物流。", "step2": "技术集成", "step2Desc": "我们将储能与可再生能源技术集成为面向住宅、工业与海事应用的即装即用系统。", "step3": "售后与可靠性", "step3Desc": "我们的参与不限于投运。我们通过长期、以可靠性为导向的方式持续支持系统性能。", "step4": "项目融资支持", "step4Desc": "对选定项目，Baterino 可通过战略金融合作伙伴支持项目结构与融资渠道，在适当时实现全部或部分融资。" },
+    "builtOnTrust": { "title": "以信任为基，为持久而设计。", "subtitle": "我们的全球解决方案", "col1": "长期合作方式", "col1Desc": "我们参与项目不止于交付，角色贯穿运营、支持与系统全生命周期，确保连续性与责任。", "col2": "可长期信赖的技术", "col2Desc": "Baterino 整合经验证、可融资的能源技术，在住宅、工业与海事环境中兼顾性能、安全与长期可行性。", "col3": "持续的支持", "col3Desc": "通过结构化售后路径与技术支持，我们助力系统在其整个运营寿命内保持可靠。", "col4": "按基础设施打造，而非产品", "col4Desc": "我们将每个项目视为基础设施——旨在融入真实运营环境、监管框架与长期能源战略。" },
     "globalImpact": { "title": "我们的全球影响", "subtitle": "在全球范围内建设韧性", "intro": "可靠的能源获取塑造机遇、韧性和增长。Baterino的影响项目将工业和海事项目中使用的相同基础设施专业知识应用于支持全球社区和基本服务。", "alignedGoals": "与全球目标保持一致", "alignedGoalsDesc": "Baterino和LithTech将其影响倡议与联合国可持续发展目标保持一致，旨在通过实际能源基础设施交付，到2035年为所有17个目标做出贡献。", "viewProgress": "查看我们的进展", "energyWhere": "最重要的能源", "energyWhereDesc": "可靠的能源是基本服务和日常生活的基础。Baterino和LithTech将影响力集中在电力可用性直接影响健康、教育、水系统和社区韧性的地方。\n我们优先考虑能源可靠性不是可选的项目——而是至关重要的。", "beyond": "超越交付", "beyondDesc": "我们的影响工作超越了系统安装。我们部署为实际操作条件设计的实用、可扩展的能源基础设施——通过集成、本地参与和长期责任得到支持。影响是通过持续运行的系统实现的，而不是一次性部署。", "inclusive": "建设包容性系统", "inclusiveDesc": "能源转型必须适用于不同的现实。通过结合技术集成、生命周期支持和适应性系统设计，Baterino帮助社区建设支持当前需求和未来增长的能源系统。包容性来自可以维护、扩展和长期依赖的基础设施。" },
-    "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
+    "globalPresence": { "title": "全球交付能源基础设施", "subtitle": "我们的全球布局" },
     "footer": {
       "aboutUs": "关于我们",
       "aboutUsDesc": "Baterino为社区、工业和海事应用提供储能基础设施，整合来自LithTech等合作伙伴的成熟技术，专注于可靠性、安全性和长期性能。",
@@ -347,7 +353,7 @@
   },
   "delivery": {
     "hero": {
-      "title": "交付能源基础设施",
+      "title": "我们的交付框架",
       "subtitle": "Baterino 通过集成、协调和长期支持实现储能项目——将复杂的技术转化为可靠的基础设施。"
     },
     "framework": {
@@ -586,7 +592,8 @@
       "bullet1": "本地合作伙伴",
       "bullet2": "分销商",
       "bullet3": "集成商",
-      "bullet4": "机构利益相关方"
+      "bullet4": "机构利益相关方",
+      "contactUs": "联系我们"
     },
     "why": {
       "title": "为什么？",
@@ -610,26 +617,60 @@
     "readMore": "阅读更多",
     "loadMore": "加载更多",
     "backToInsights": "返回洞察",
+    "noArticles": "没有与您的筛选条件匹配的文章。",
+    "filters": {
+      "all": "全部",
+      "pressRelease": "新闻稿",
+      "corporateStory": "企业故事",
+      "industryNews": "行业新闻"
+    },
     "article1": {
-      "title": "文章标题",
-      "author": "作者",
+      "title": "Baterino 推出新型海事电池解决方案",
+      "author": "Baterino 团队",
       "date": "2026年9月29日",
       "location": "雅加达",
+      "excerpt": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。除了我们目前的业务范围，我们还愿意与以下方面合作：",
       "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。除了我们目前的业务范围，我们还愿意与以下方面合作："
     },
     "article2": {
-      "title": "文章标题",
-      "author": "作者",
-      "date": "2026年9月29日",
-      "location": "雅加达",
+      "title": "可持续航运：海事行业的未来",
+      "author": "Baterino 团队",
+      "date": "2026年9月28日",
+      "location": "新加坡",
+      "excerpt": "探讨可持续航运实践如何改变海事行业并减少环境影响。",
       "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。除了我们目前的业务范围，我们还愿意与以下方面合作："
     },
     "article3": {
-      "title": "文章标题",
-      "author": "作者",
-      "date": "2026年9月29日",
-      "location": "雅加达",
+      "title": "Baterino 合作公告",
+      "author": "Baterino 团队",
+      "date": "2026年9月27日",
+      "location": "鹿特丹",
+      "excerpt": "Baterino 宣布战略合作，在关键市场扩大储能解决方案。",
       "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。除了我们目前的业务范围，我们还愿意与以下方面合作："
+    },
+    "article4": {
+      "title": "电动渡轮里程碑",
+      "author": "Baterino 团队",
+      "date": "2026年9月26日",
+      "location": "奥斯陆",
+      "excerpt": "Baterino 推动可持续海事运输，电动渡轮部署取得重大里程碑。",
+      "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。"
+    },
+    "article5": {
+      "title": "绿色海事技术",
+      "author": "Baterino 团队",
+      "date": "2026年9月25日",
+      "location": "汉堡",
+      "excerpt": "绿色海事技术的最新发展以及 Baterino 如何引领潮流。",
+      "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。"
+    },
+    "article6": {
+      "title": "Baterino 团队扩张",
+      "author": "Baterino 团队",
+      "date": "2026年9月24日",
+      "location": "全球",
+      "excerpt": "Baterino 扩大团队以支持全球对储能解决方案日益增长的需求。",
+      "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。"
     }
   }
 }

@@ -9,7 +9,7 @@ export function AboutBaterino() {
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
-          <h1 className="font-publicSans text-4xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+          <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             {t('aboutBaterino.hero.title')}
           </h1>
           <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
@@ -50,9 +50,9 @@ export function AboutBaterino() {
             </div>
 
             {/* Right Column - Vision & Mission */}
-            <div>
+            <div className="flex flex-col gap-6">
               {/* Vision */}
-              <div className="mb-8">
+              <div className="rounded-lg bg-[#f7f7f7] p-6">
                 <h3 className="mb-4 font-heading text-xl font-bold uppercase text-neutral-900">
                   {t('aboutBaterino.vision.title')}
                 </h3>
@@ -62,7 +62,7 @@ export function AboutBaterino() {
               </div>
 
               {/* Mission */}
-              <div>
+              <div className="rounded-lg bg-[#f7f7f7] p-6">
                 <h3 className="mb-4 font-heading text-xl font-bold uppercase text-neutral-900">
                   {t('aboutBaterino.mission.title')}
                 </h3>

@@ -206,8 +206,17 @@
   "home": {
     "hero": {
       "title": "Enabling Energy Storage Infrastructure Worldwide",
-      "subtitle": "We integrate trusted green energy technologies to deliver reliable solutions for communities, industry, and maritime environments.",
-      "poweredBy": "powered by"
+      "subtitle": "We integrate trusted green energy technologies to deliver reliable solutions for communities, industry, medical and maritime environments.",
+      "poweredBy": "powered by",
+      "poweredByLabel": "Powered by:",
+      "technologyPoweredBy": "Our technology is powered by:",
+      "hoverToExplore": "Hover to explore"
+    },
+    "heroSlides": {
+      "slide1": { "title": "Industrial Energy Storage Infrastructure", "subtitle": "We integrate technology, delivery, and coordination to turn complex energy projects into operational infrastructure." },
+      "slide2": { "title": "Solutions For Real Environments", "subtitle": "Energy storage systems designed and delivered for industrial, residential, and maritime conditions." },
+      "slide3": { "title": "After-Sales & Lifecycle Support", "subtitle": "Our responsibility continues beyond delivery — supporting performance, reliability, and system continuity over time." },
+      "slide4": { "title": "Infrastructure With Purpose", "subtitle": "Energy infrastructure that supports communities, essential services, and long-term resilience." }
     },
     "carousel": {
       "infrastructure": "INFRASTRUCTURE ENABLEMENT",
@@ -227,6 +236,8 @@
       "residentialDesc": "Energy storage solutions that empower local communities and improve energy access.",
       "industrial": "INDUSTRIAL",
       "industrialDesc": "Scalable storage infrastructure designed for performance, stability, and optimization.",
+      "medical": "MEDICAL",
+      "medicalDesc": "Energy storage solutions for healthcare facilities, clinics, and medical infrastructure.",
       "maritime": "MARITIME",
       "maritimeDesc": "Advanced battery systems supporting decarbonization beyond the shoreline.",
       "utility": "Utility",
@@ -236,6 +247,10 @@
       "title": "HOW WE DELIVER",
       "subtitle": "FROM CONCEPT TO OPERATION",
       "intro": "Baterino enables energy storage projects by combining technology integration, operational delivery, and long-term support. We remove technical, logistical, and structural barriers so projects can move from concept to operation with confidence.",
+      "stage1": "First stage",
+      "stage2": "Second stage",
+      "stage3": "Third stage",
+      "stage4": "Fourth stage",
       "step1": "Infrastructure Enablement",
       "step1Desc": "We bring together the technologies, partners, and logistics required to make energy storage projects deployable in real-world environments.",
       "step2": "Technology Integration",
@@ -418,7 +433,7 @@
   },
   "delivery": {
     "hero": {
-      "title": "DELIVERING ENERGY INFRASTRUCTURE",
+      "title": "OUR DELIVERY FRAMEWORK",
       "subtitle": "Baterino enables energy storage projects through integration, coordination, and long-term support — turning complex technologies into reliable infrastructure."
     },
     "framework": {
@@ -657,7 +672,8 @@
       "bullet1": "Local partners",
       "bullet2": "Distributors",
       "bullet3": "Integrators",
-      "bullet4": "Institutional stakeholders"
+      "bullet4": "Institutional stakeholders",
+      "contactUs": "Contact Us"
     },
     "why": {
       "title": "WHY ?",

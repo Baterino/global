@@ -204,10 +204,16 @@
     "message": "Acesta este un mesaj de salut localizat de la API."
   },
   "home": {
-    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for utility, industry, and maritime environments.", "poweredBy": "powered by" },
-    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Learn more" },
-    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability." },
-    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "step1": "Project Discovery", "step1Desc": "We assess your needs.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding." },
+    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
+    "heroSlides": {
+      "slide1": { "title": "Infrastructură de stocare a energiei industriale", "subtitle": "Integrăm tehnologia, livrarea și coordonarea pentru a transforma proiectele energetice complexe în infrastructură operațională." },
+      "slide2": { "title": "Soluții pentru medii reale", "subtitle": "Sisteme de stocare a energiei concepute și livrate pentru condiții industriale, rezidențiale și maritime." },
+      "slide3": { "title": "Suport post-vânzare și ciclu de viață", "subtitle": "Responsabilitatea noastră continuă dincolo de livrare — sprijinind performanța, fiabilitatea și continuitatea sistemului în timp." },
+      "slide4": { "title": "Infrastructură cu scop", "subtitle": "Infrastructură energetică care sprijină comunitățile, serviciile esențiale și reziliența pe termen lung." }
+    },
+    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Aflați mai multe", "tapToLearnMore": "Atinge pentru a afla mai multe" },
+    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "medical": "MEDICAL", "medicalDesc": "Energy storage solutions for healthcare facilities, clinics, and medical infrastructure.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability." },
+    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "stage1": "First stage", "stage2": "Second stage", "stage3": "Third stage", "stage4": "Fourth stage", "step1": "Project Discovery", "step1Desc": "We assess your needs.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding." },
     "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "Environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people at the center." },
     "globalImpact": { "title": "IMPACTUL NOSTRU GLOBAL", "subtitle": "CONSTRUIND REZILIENȚĂ LA NIVEL MONDIAL", "intro": "Accesul la energie fiabilă modelează oportunități, reziliență și creștere. Programele de impact Baterino aplică aceeași expertiză în infrastructură folosită în proiecte industriale și maritime pentru a sprijini comunitățile și serviciile esențiale din întreaga lume.", "alignedGoals": "ALINIAT CU OBIECTIVELE GLOBALE", "alignedGoalsDesc": "Baterino & LithTech își aliniază inițiativele de impact cu Obiectivele de Dezvoltare Durabilă ale Națiunilor Unite, urmărind să contribuie la toate cele 17 obiective până în 2035 prin furnizarea practică de infrastructură energetică.", "viewProgress": "Vedeți progresul nostru", "energyWhere": "ENERGIE UNDE CONTEAZĂ CEL MAI MULT", "energyWhereDesc": "Energia fiabilă este fundamentală pentru serviciile esențiale și viața de zi cu zi. Baterino & LithTech concentrează eforturile de impact acolo unde disponibilitatea energiei afectează direct sănătatea, educația, sistemele de apă și reziliența comunității.\nPrioritizăm proiectele în care fiabilitatea energiei nu este opțională — ci critică.", "beyond": "DINCOLO DE LIVRARE", "beyondDesc": "Munca noastră de impact merge dincolo de instalarea sistemului. Implementăm infrastructură energetică practică și scalabilă concepută pentru condiții reale de operare — susținută prin integrare, implicare locală și responsabilitate pe termen lung. Impactul este obținut prin sisteme care continuă să funcționeze, nu prin implementări unice.", "inclusive": "CONSTRUIREA SISTEMELOR INCLUZIVE", "inclusiveDesc": "Tranziția energetică trebuie să funcționeze în diferite realități. Combinând integrarea tehnologică, suportul pe tot ciclul de viață și designul adaptabil al sistemelor, Baterino ajută comunitățile să construiască sisteme energetice care susțin atât nevoile prezente, cât și creșterea viitoare. Incluziunea vine din infrastructura care poate fi întreținută, extinsă și pe care te poți baza în timp." },
     "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
@@ -347,7 +353,7 @@
   },
   "delivery": {
     "hero": {
-      "title": "LIVRAREA INFRASTRUCTURII ENERGETICE",
+      "title": "CADRUL NOSTRU DE LIVRARE",
       "subtitle": "Baterino permite proiecte de stocare a energiei prin integrare, coordonare și suport pe termen lung — transformând tehnologii complexe în infrastructură fiabilă."
     },
     "framework": {
@@ -586,7 +592,8 @@
       "bullet1": "Parteneri locali",
       "bullet2": "Distribuitori",
       "bullet3": "Integratori",
-      "bullet4": "Părți interesate instituționale"
+      "bullet4": "Părți interesate instituționale",
+      "contactUs": "Contactați-ne"
     },
     "why": {
       "title": "DE CE?",
@@ -610,26 +617,60 @@
     "readMore": "Citește mai mult",
     "loadMore": "Încarcă mai multe",
     "backToInsights": "Înapoi la Insights",
+    "noArticles": "Niciun articol nu corespunde filtrului dvs.",
+    "filters": {
+      "all": "Toate",
+      "pressRelease": "Comunicat de Presă",
+      "corporateStory": "Poveste Corporativă",
+      "industryNews": "Știri din Industrie"
+    },
     "article1": {
-      "title": "Titlul articolului",
-      "author": "Autor",
+      "title": "Baterino lansează noi soluții de baterii maritime",
+      "author": "Echipa Baterino",
       "date": "29 SEPT 2026",
       "location": "JAKARTA",
+      "excerpt": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:",
       "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:"
     },
     "article2": {
-      "title": "Titlul articolului",
-      "author": "Autor",
-      "date": "29 SEPT 2026",
-      "location": "JAKARTA",
+      "title": "Transportul maritim sustenabil: viitorul sectorului",
+      "author": "Echipa Baterino",
+      "date": "28 SEPT 2026",
+      "location": "SINGAPURA",
+      "excerpt": "Cum practicile de transport maritim sustenabil transformă industria și reduc impactul asupra mediului.",
       "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:"
     },
     "article3": {
-      "title": "Titlul articolului",
-      "author": "Autor",
-      "date": "29 SEPT 2026",
-      "location": "JAKARTA",
+      "title": "Anunț parteneriat Baterino",
+      "author": "Echipa Baterino",
+      "date": "27 SEPT 2026",
+      "location": "ROTTERDAM",
+      "excerpt": "Baterino anunță parteneriate strategice pentru a extinde soluțiile de stocare a energiei pe piețe cheie.",
       "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:"
+    },
+    "article4": {
+      "title": "Pragul feriboturilor electrice",
+      "author": "Echipa Baterino",
+      "date": "26 SEPT 2026",
+      "location": "OSLO",
+      "excerpt": "Un prag major în implementarea feriboturilor electrice, Baterino propulsând transportul maritim sustenabil.",
+      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere."
+    },
+    "article5": {
+      "title": "Tehnologie maritimă verde",
+      "author": "Echipa Baterino",
+      "date": "25 SEPT 2026",
+      "location": "HAMBURG",
+      "excerpt": "Cele mai recente dezvoltări în tehnologia maritimă verde și cum Baterino conduce.",
+      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere."
+    },
+    "article6": {
+      "title": "Extinderea echipei Baterino",
+      "author": "Echipa Baterino",
+      "date": "24 SEPT 2026",
+      "location": "GLOBAL",
+      "excerpt": "Baterino își extinde echipa pentru a sprijini cererea în creștere de soluții de stocare a energiei la nivel mondial.",
+      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere."
     }
   }
 }

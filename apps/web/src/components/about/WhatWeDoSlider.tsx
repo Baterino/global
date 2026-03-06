@@ -126,7 +126,7 @@ export function WhatWeDoSlider() {
   const mobileTranslateX = -mobileIndex * 100
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full">
       {/* Mobile Slider */}
       <div className="block w-full overflow-hidden lg:hidden">
         <div
@@ -180,17 +180,17 @@ export function WhatWeDoSlider() {
       </div>
 
       {/* Desktop Slider */}
-      <div className="hidden lg:block overflow-visible">
+      <div className="hidden lg:block">
         <div
           className="relative overflow-visible rounded-[10px]"
           style={{ height: SLIDE_HEIGHT }}
           onMouseLeave={handleMouseLeave}
         >
           <div
-            className="flex cursor-grab select-none gap-5 active:cursor-grabbing"
+            className="flex cursor-grab select-none gap-5 px-4 active:cursor-grabbing sm:px-6 lg:px-8"
             style={{
               transform: `translateX(${translateX}px)`,
-              width: trackWidth,
+              width: `calc(${trackWidth}px + 100vw)`,
               transition: isDragging ? 'none' : 'transform 0.5s ease-out',
             }}
             onMouseDown={handleMouseDown}

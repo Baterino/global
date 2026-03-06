@@ -1,14 +1,17 @@
+import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export function GlobalPresence() {
   const { t } = useTranslation()
+  const { locale } = useParams<{ locale: string }>()
+  const base = `/${locale ?? 'en'}`
 
   return (
     <article className="w-full bg-white">
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
-          <h1 className="font-publicSans text-4xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+          <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             {t('globalPresence.hero.title')}
           </h1>
           <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
@@ -112,12 +115,18 @@ export function GlobalPresence() {
               <p className="mb-4 font-body text-body-md leading-relaxed text-neutral-700">
                 {t('globalPresence.partnerUp.listLabel')}
               </p>
-              <ul className="list-none space-y-2 font-body text-body-md text-neutral-700">
+              <ul className="mb-6 list-none space-y-2 font-body text-body-md text-neutral-700">
                 <li>• {t('globalPresence.partnerUp.bullet1')}</li>
                 <li>• {t('globalPresence.partnerUp.bullet2')}</li>
                 <li>• {t('globalPresence.partnerUp.bullet3')}</li>
                 <li>• {t('globalPresence.partnerUp.bullet4')}</li>
               </ul>
+              <Link
+                to={`${base}/contact`}
+                className="inline-flex items-center justify-center rounded-[5px] border-2 border-neutral-900 bg-neutral-900 px-6 py-2.5 font-body text-body-md font-bold text-white transition-colors hover:bg-neutral-800"
+              >
+                {t('globalPresence.partnerUp.contactUs')}
+              </Link>
             </div>
 
             {/* Right - Why ? */}

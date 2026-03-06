@@ -204,10 +204,16 @@
     "message": "Este es un saludo localizado desde la API."
   },
   "home": {
-    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for utility, industry, and maritime environments.", "poweredBy": "powered by" },
-    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Learn more" },
-    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions across residential, industrial, and maritime sectors.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability and renewable integration." },
-    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "step1": "Project Discovery", "step1Desc": "We assess your needs and design the right solution.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding for your project." },
+    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
+    "heroSlides": {
+      "slide1": { "title": "Infraestructura de almacenamiento energético industrial", "subtitle": "Integramos tecnología, entrega y coordinación para convertir proyectos energéticos complejos en infraestructura operativa." },
+      "slide2": { "title": "Soluciones para entornos reales", "subtitle": "Sistemas de almacenamiento diseñados y entregados para entornos industriales, residenciales y marítimos." },
+      "slide3": { "title": "Soporte postventa y ciclo de vida", "subtitle": "Nuestra responsabilidad continúa más allá de la entrega: rendimiento, fiabilidad y continuidad del sistema en el tiempo." },
+      "slide4": { "title": "Infraestructura con propósito", "subtitle": "Infraestructura energética que apoya comunidades, servicios esenciales y resiliencia a largo plazo." }
+    },
+    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Saber más", "tapToLearnMore": "Toca para saber más" },
+    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions across residential, industrial, and maritime sectors.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "medical": "MEDICAL", "medicalDesc": "Energy storage solutions for healthcare facilities, clinics, and medical infrastructure.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability and renewable integration." },
+    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "stage1": "First stage", "stage2": "Second stage", "stage3": "Third stage", "stage4": "Fourth stage", "step1": "Project Discovery", "step1Desc": "We assess your needs and design the right solution.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding for your project." },
     "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "We are committed to environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people are at the center of everything we do." },
     "globalImpact": { "title": "NUESTRO IMPACTO GLOBAL", "subtitle": "CONSTRUYENDO RESILIENCIA MUNDIAL", "intro": "El acceso a energía confiable moldea oportunidades, resiliencia y crecimiento. Los programas de impacto de Baterino aplican la misma experiencia en infraestructura utilizada en proyectos industriales y marítimos para apoyar comunidades y servicios esenciales en todo el mundo.", "alignedGoals": "ALINEADOS CON OBJETIVOS GLOBALES", "alignedGoalsDesc": "Baterino & LithTech alinea sus iniciativas de impacto con los Objetivos de Desarrollo Sostenible de las Naciones Unidas, con el objetivo de contribuir a los 17 objetivos para 2035 mediante la entrega práctica de infraestructura energética.", "viewProgress": "Ver nuestro progreso", "energyWhere": "ENERGÍA DONDE MÁS IMPORTA", "energyWhereDesc": "La energía confiable es fundamental para servicios esenciales y la vida diaria. Baterino & LithTech enfoca esfuerzos de impacto donde la disponibilidad de energía afecta directamente la salud, educación, sistemas de agua y resiliencia comunitaria.\nPriorizamos proyectos donde la confiabilidad energética no es opcional — sino crítica.", "beyond": "MÁS ALLÁ DE LA ENTREGA", "beyondDesc": "Nuestro trabajo de impacto va más allá de la instalación del sistema. Desplegamos infraestructura energética práctica y escalable diseñada para condiciones operativas reales — respaldada por integración, compromiso local y responsabilidad a largo plazo. El impacto se logra a través de sistemas que continúan funcionando, no despliegues únicos.", "inclusive": "CONSTRUYENDO SISTEMAS INCLUSIVOS", "inclusiveDesc": "La transición energética debe funcionar en diferentes realidades. Al combinar integración tecnológica, soporte del ciclo de vida y diseño de sistemas adaptables, Baterino ayuda a las comunidades a construir sistemas energéticos que apoyan las necesidades presentes y el crecimiento futuro. La inclusión proviene de infraestructura que puede mantenerse, expandirse y confiarse con el tiempo." },
     "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
@@ -347,7 +353,7 @@
   },
   "delivery": {
     "hero": {
-      "title": "ENTREGANDO INFRAESTRUCTURA ENERGÉTICA",
+      "title": "NUESTRO MARCO DE ENTREGA",
       "subtitle": "Baterino habilita proyectos de almacenamiento de energía mediante integración, coordinación y soporte a largo plazo, convirtiendo tecnologías complejas en infraestructura confiable."
     },
     "framework": {
@@ -586,7 +592,8 @@
       "bullet1": "Socios locales",
       "bullet2": "Distribuidores",
       "bullet3": "Integradores",
-      "bullet4": "Partes interesadas institucionales"
+      "bullet4": "Partes interesadas institucionales",
+      "contactUs": "Contáctenos"
     },
     "why": {
       "title": "¿POR QUÉ?",
@@ -610,26 +617,60 @@
     "readMore": "Leer más",
     "loadMore": "Cargar más",
     "backToInsights": "Volver a Insights",
+    "noArticles": "No hay artículos que coincidan con su filtro.",
+    "filters": {
+      "all": "Todos",
+      "pressRelease": "Comunicado de Prensa",
+      "corporateStory": "Historia Corporativa",
+      "industryNews": "Noticias de la Industria"
+    },
     "article1": {
-      "title": "Título del artículo",
-      "author": "Autor",
+      "title": "Baterino presenta nuevas soluciones de baterías marítimas",
+      "author": "Equipo Baterino",
       "date": "29 SEPT 2026",
-      "location": "YAKARTA",
+      "location": "JAKARTA",
+      "excerpt": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables. Además de nuestra presencia actual, estamos abiertos a trabajar con:",
       "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables. Además de nuestra presencia actual, estamos abiertos a trabajar con:"
     },
     "article2": {
-      "title": "Título del artículo",
-      "author": "Autor",
-      "date": "29 SEPT 2026",
-      "location": "YAKARTA",
+      "title": "Transporte marítimo sostenible: el futuro del sector",
+      "author": "Equipo Baterino",
+      "date": "28 SEPT 2026",
+      "location": "SINGAPUR",
+      "excerpt": "Cómo las prácticas de transporte marítimo sostenible están transformando la industria y reduciendo el impacto ambiental.",
       "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables. Además de nuestra presencia actual, estamos abiertos a trabajar con:"
     },
     "article3": {
-      "title": "Título del artículo",
-      "author": "Autor",
-      "date": "29 SEPT 2026",
-      "location": "YAKARTA",
+      "title": "Anuncio de asociación Baterino",
+      "author": "Equipo Baterino",
+      "date": "27 SEPT 2026",
+      "location": "ROTTERDAM",
+      "excerpt": "Baterino anuncia asociaciones estratégicas para expandir soluciones de almacenamiento de energía en mercados clave.",
       "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables. Además de nuestra presencia actual, estamos abiertos a trabajar con:"
+    },
+    "article4": {
+      "title": "Hito del ferry eléctrico",
+      "author": "Equipo Baterino",
+      "date": "26 SEPT 2026",
+      "location": "OSLO",
+      "excerpt": "Un hito importante en el despliegue de ferris eléctricos con Baterino impulsando el transporte marítimo sostenible.",
+      "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables."
+    },
+    "article5": {
+      "title": "Tecnología marítima verde",
+      "author": "Equipo Baterino",
+      "date": "25 SEPT 2026",
+      "location": "HAMBURGO",
+      "excerpt": "Últimos avances en tecnología marítima verde y cómo Baterino está a la vanguardia.",
+      "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables."
+    },
+    "article6": {
+      "title": "Expansión del equipo Baterino",
+      "author": "Equipo Baterino",
+      "date": "24 SEPT 2026",
+      "location": "GLOBAL",
+      "excerpt": "Baterino amplía su equipo para atender la creciente demanda de soluciones de almacenamiento de energía en todo el mundo.",
+      "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables."
     }
   }
 }

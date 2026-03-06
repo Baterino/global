@@ -8,7 +8,7 @@ export function LithTech() {
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
-          <h1 className="font-publicSans text-4xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+          <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             {t('lithtech.hero.title')}
           </h1>
           <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
@@ -47,8 +47,8 @@ export function LithTech() {
             </div>
 
             {/* Right Column - Vision & Mission */}
-            <div>
-              <div className="mb-8">
+            <div className="flex flex-col gap-6">
+              <div className="rounded-lg bg-[#f7f7f7] p-6">
                 <h3 className="mb-4 font-heading text-xl font-bold uppercase text-neutral-900">
                   {t('lithtech.vision.title')}
                 </h3>
@@ -56,7 +56,7 @@ export function LithTech() {
                   {t('lithtech.vision.description')}
                 </p>
               </div>
-              <div>
+              <div className="rounded-lg bg-[#f7f7f7] p-6">
                 <h3 className="mb-4 font-heading text-xl font-bold uppercase text-neutral-900">
                   {t('lithtech.mission.title')}
                 </h3>

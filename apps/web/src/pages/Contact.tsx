@@ -131,7 +131,7 @@ export function Contact() {
         {/* Hero */}
         <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[1200px] text-center">
-            <h1 className="font-publicSans text-4xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
+            <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
               {t('contact.hero.title')}
             </h1>
             <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">

@@ -206,8 +206,17 @@
   "home": {
     "hero": {
       "title": "Mewujudkan infrastruktur penyimpanan energi di seluruh dunia.",
-      "subtitle": "Kami mengintegrasikan teknologi penyimpanan energi terdepan ke dalam infrastruktur yang scalable dan tangguh untuk utilitas, industri, dan lingkungan maritim.",
-      "poweredBy": "didukung oleh"
+      "subtitle": "Kami mengintegrasikan teknologi penyimpanan energi terdepan ke dalam infrastruktur yang scalable dan tangguh untuk komunitas, industri, medis, dan lingkungan maritim.",
+      "poweredBy": "didukung oleh",
+      "poweredByLabel": "Powered by:",
+      "technologyPoweredBy": "Teknologi kami didukung oleh:",
+      "hoverToExplore": "Arahkan untuk jelajahi"
+    },
+    "heroSlides": {
+      "slide1": { "title": "Infrastruktur Penyimpanan Energi Industri", "subtitle": "Kami mengintegrasikan teknologi, pengiriman, dan koordinasi untuk mengubah proyek energi kompleks menjadi infrastruktur operasional." },
+      "slide2": { "title": "Solusi untuk Lingkungan Nyata", "subtitle": "Sistem penyimpanan energi yang dirancang dan dikirim untuk kondisi industri, residensial, dan maritim." },
+      "slide3": { "title": "Dukungan Purna Jual & Siklus Hidup", "subtitle": "Tanggung jawab kami berlanjut melampaui pengiriman — mendukung kinerja, keandalan, dan kontinuitas sistem dari waktu ke waktu." },
+      "slide4": { "title": "Infrastruktur dengan Tujuan", "subtitle": "Infrastruktur energi yang mendukung komunitas, layanan penting, dan ketahanan jangka panjang." }
     },
     "carousel": {
       "infrastructure": "INFRASTRUKTUR ENABLEMENT",
@@ -216,7 +225,8 @@
       "lifecycleSub": "Monitoring - After Sales - Technical Support",
       "impact": "PURPOSE AND IMPACT",
       "impactSub": "Education - Clinics - Disaster Relief",
-      "learnMore": "Selengkapnya"
+      "learnMore": "Selengkapnya",
+      "tapToLearnMore": "Ketuk untuk info lebih lanjut"
     },
     "whatWeEnable": {
       "title": "Apa yang kami wujudkan",
@@ -226,6 +236,8 @@
       "residentialDesc": "Solusi penyimpanan energi fleksibel untuk rumah dan usaha kecil.",
       "industrial": "Industri",
       "industrialDesc": "Sistem scalable untuk aplikasi komersial dan industri.",
+      "medical": "MEDICAL",
+      "medicalDesc": "Solusi penyimpanan energi untuk fasilitas kesehatan, klinik, dan infrastruktur medis.",
       "maritime": "Maritim",
       "maritimeDesc": "Solusi tangguh untuk platform lepas pantai dan kapal.",
       "utility": "Utilitas",
@@ -235,6 +247,10 @@
       "title": "Cara kami mengirimkan",
       "subtitle": "Proses inti kami",
       "intro": "Dari penemuan hingga pendanaan dan dukungan purna jual.",
+      "stage1": "Tahap pertama",
+      "stage2": "Tahap kedua",
+      "stage3": "Tahap ketiga",
+      "stage4": "Tahap keempat",
       "step1": "Penemuan Proyek",
       "step1Desc": "Kami menilai kebutuhan dan merancang solusi yang tepat.",
       "step2": "Integrasi Teknologi",
@@ -410,7 +426,7 @@
   },
   "delivery": {
     "hero": {
-      "title": "MENYAMPAIKAN INFRASTRUKTUR ENERGI",
+      "title": "KERANGKA KERJA PENYAMPAIAN KAMI",
       "subtitle": "Baterino memungkinkan proyek penyimpanan energi melalui integrasi, koordinasi, dan dukungan jangka panjang — mengubah teknologi kompleks menjadi infrastruktur yang andal."
     },
     "framework": {
@@ -649,7 +665,8 @@
       "bullet1": "Mitra lokal",
       "bullet2": "Distributor",
       "bullet3": "Integrator",
-      "bullet4": "Pemangku kepentingan institusional"
+      "bullet4": "Pemangku kepentingan institusional",
+      "contactUs": "Hubungi Kami"
     },
     "why": {
       "title": "MENGAPA?",
@@ -673,26 +690,60 @@
     "readMore": "Baca selengkapnya",
     "loadMore": "Muat lebih banyak",
     "backToInsights": "Kembali ke Insights",
+    "noArticles": "Tidak ada artikel yang cocok dengan filter Anda.",
+    "filters": {
+      "all": "Semua",
+      "pressRelease": "Siaran Pers",
+      "corporateStory": "Cerita Perusahaan",
+      "industryNews": "Berita Industri"
+    },
     "article1": {
-      "title": "Judul artikel",
-      "author": "Penulis",
+      "title": "Baterino Meluncurkan Solusi Baterai Maritim Baru",
+      "author": "Tim Baterino",
       "date": "29 SEPT 2026",
       "location": "JAKARTA",
+      "excerpt": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya. Selain jejak kami saat ini, kami terbuka untuk bekerja dengan:",
       "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya. Selain jejak kami saat ini, kami terbuka untuk bekerja dengan:"
     },
     "article2": {
-      "title": "Judul artikel",
-      "author": "Penulis",
-      "date": "29 SEPT 2026",
-      "location": "JAKARTA",
+      "title": "Pengiriman Berkelanjutan: Masa Depan Maritim",
+      "author": "Tim Baterino",
+      "date": "28 SEPT 2026",
+      "location": "SINGAPURA",
+      "excerpt": "Mempelajari bagaimana praktik pengiriman berkelanjutan mengubah industri maritim dan mengurangi dampak lingkungan.",
       "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya. Selain jejak kami saat ini, kami terbuka untuk bekerja dengan:"
     },
     "article3": {
-      "title": "Judul artikel",
-      "author": "Penulis",
-      "date": "29 SEPT 2026",
-      "location": "JAKARTA",
+      "title": "Pengumuman Kemitraan Baterino",
+      "author": "Tim Baterino",
+      "date": "27 SEPT 2026",
+      "location": "ROTTERDAM",
+      "excerpt": "Baterino mengumumkan kemitraan strategis untuk memperluas solusi penyimpanan energi di pasar utama.",
       "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya. Selain jejak kami saat ini, kami terbuka untuk bekerja dengan:"
+    },
+    "article4": {
+      "title": "Tonggak Ferry Listrik",
+      "author": "Tim Baterino",
+      "date": "26 SEPT 2026",
+      "location": "OSLO",
+      "excerpt": "Tonggak penting dalam penerapan ferry listrik dengan Baterino mendukung transportasi maritim berkelanjutan.",
+      "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya."
+    },
+    "article5": {
+      "title": "Teknologi Maritim Hijau",
+      "author": "Tim Baterino",
+      "date": "25 SEPT 2026",
+      "location": "HAMBURG",
+      "excerpt": "Perkembangan terbaru dalam teknologi maritim hijau dan bagaimana Baterino memimpin.",
+      "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya."
+    },
+    "article6": {
+      "title": "Ekspansi Tim Baterino",
+      "author": "Tim Baterino",
+      "date": "24 SEPT 2026",
+      "location": "GLOBAL",
+      "excerpt": "Baterino memperluas timnya untuk mendukung permintaan solusi penyimpanan energi yang terus meningkat di seluruh dunia.",
+      "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya."
     }
   }
 }

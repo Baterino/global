@@ -8,7 +8,12 @@ const SLOT_WIDTH = SLIDE_WIDTH_PX + GAP_PX
 const DRAG_THRESHOLD = 60
 const CONTAINER_WIDTH = 1200
 
-export function DeliveryFrameworkSlider() {
+type DeliveryFrameworkSliderProps = {
+  /** When true, slider breaks out to full viewport width and first slide aligns with 1200px content column */
+  fullBleed?: boolean
+}
+
+export function DeliveryFrameworkSlider({ fullBleed }: DeliveryFrameworkSliderProps) {
   const { t } = useTranslation()
   const [index, setIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
@@ -203,7 +208,7 @@ export function DeliveryFrameworkSlider() {
                       <img
                         src="/images/delivery-picture.png"
                         alt="Delivery Framework"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover object-left"
                       />
                     </div>
                   ) : (
@@ -259,18 +264,20 @@ export function DeliveryFrameworkSlider() {
 
       {/* Desktop Slider */}
       <div className="hidden lg:block">
-        <div className="relative -mx-4 w-screen sm:-mx-6 lg:-mx-8">
-          <div className="px-4 sm:px-6 lg:px-8">
-            <div className="overflow-visible" onMouseLeave={handleMouseLeave}>
-            <div
-              className="flex cursor-grab select-none gap-8"
-              style={{
-                transform: `translateX(${translateX}px)`,
-                width: trackWidth,
-                transition: isDragging ? 'none' : 'transform 0.5s ease-out',
-              }}
-              onMouseDown={handleMouseDown}
-            >
+        <div className="relative overflow-visible" onMouseLeave={handleMouseLeave}>
+          <div
+            className={`flex cursor-grab select-none gap-8 active:cursor-grabbing ${
+              fullBleed
+                ? 'pl-[calc((100vw-1200px)/2+1rem)] pr-4 sm:pl-[calc((100vw-1200px)/2+1.5rem)] sm:pr-6 lg:pl-[calc((100vw-1200px)/2+2rem)] lg:pr-8'
+                : 'px-4 sm:px-6 lg:px-8'
+            }`}
+            style={{
+              transform: `translateX(${translateX}px)`,
+              width: `calc(${trackWidth}px + 100vw)`,
+              transition: isDragging ? 'none' : 'transform 0.5s ease-out',
+            }}
+            onMouseDown={handleMouseDown}
+          >
               {cards.map((card) => (
                 <article
                   key={card.number}
@@ -282,7 +289,7 @@ export function DeliveryFrameworkSlider() {
                       <img
                         src="/images/delivery-picture.png"
                         alt="Delivery Framework"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover object-left"
                       />
                     </div>
                   ) : (
@@ -338,8 +345,6 @@ export function DeliveryFrameworkSlider() {
                   )}
                 </article>
               ))}
-            </div>
-            </div>
           </div>
         </div>
 
