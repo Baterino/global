@@ -196,7 +196,7 @@ export function Delivery() {
           </p>
 
           <ImageWithLogo
-            src="/images/consistency-bess.png"
+            src="/images/consistency-bess.jpg"
             alt=""
             className="mb-12 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"

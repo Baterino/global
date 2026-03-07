@@ -90,7 +90,7 @@ export function SolutionsIndustrial() {
       <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <ImageWithLogo
-            src="/images/bess-solutions.png"
+            src="/images/bess-solutions.jpg"
             alt=""
             className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"

@@ -7,7 +7,7 @@ import { WhatWeEnableTabSlider } from '../components/home/WhatWeEnableTabSlider'
 import { HowWeDeliverSlider } from '../components/home/HowWeDeliverSlider'
 import { ImpactSlider } from '../components/home/ImpactSlider'
 
-const TRUST_IMG = '/images/baterino-resilience.png'
+const TRUST_IMG = '/images/baterino-resilience.jpg'
 
 export function Home() {
   const { t } = useTranslation()

@@ -127,7 +127,7 @@ export function Impact() {
 
           {/* Large Image */}
           <ImageWithLogo
-            src="/images/purpose-infrastructure.png"
+            src="/images/purpose-infrastructure.jpg"
             alt="Infrastructure with Purpose"
             className="h-[440px] w-full rounded-[10px]"
             imgClassName="rounded-[10px] object-cover"
