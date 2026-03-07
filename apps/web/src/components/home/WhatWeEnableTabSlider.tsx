@@ -140,10 +140,10 @@ export function WhatWeEnableTabSlider() {
           />
           <div className="absolute bottom-0 left-0 right-0 z-10 p-4 sm:p-6 lg:p-8">
             <h3 className="font-heading text-xl font-bold uppercase tracking-tight text-white drop-shadow-sm sm:text-2xl lg:text-section-title">
-              {t(('cardTitleKey' in active && active.cardTitleKey) ? active.cardTitleKey : active.titleKey)}
+              {t(active.cardTitleKey)}
             </h3>
             <p className="mt-2 max-w-[560px] font-body text-body-sm leading-relaxed text-white/95 sm:text-body-md">
-              {t(('cardDescKey' in active && active.cardDescKey) ? active.cardDescKey : active.descKey)}
+              {t(active.cardDescKey)}
             </p>
             <span className="mt-4 inline-block font-body text-body-sm font-semibold text-white underline-offset-2 group-hover:underline">
               {t('home.whatWeEnable.learnMore', { defaultValue: 'Learn more' })} →
