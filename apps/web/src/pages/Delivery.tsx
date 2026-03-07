@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 
 export function Delivery() {
   const { t } = useTranslation()
@@ -30,7 +31,7 @@ export function Delivery() {
             <img
               src="/images/baterino-logo-white.png"
               alt="Baterino"
-              className="absolute left-1/2 top-1/2 h-5 w-auto -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-md lg:left-auto lg:right-6 lg:bottom-6 lg:top-auto lg:translate-x-0 lg:translate-y-0 lg:h-6"
+              className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
           {/* Right: content card */}
@@ -83,7 +84,7 @@ export function Delivery() {
             <img
               src="/images/baterino-logo-white.png"
               alt="Baterino"
-              className="absolute left-1/2 top-1/2 h-5 w-auto -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-md lg:left-auto lg:right-6 lg:bottom-6 lg:top-auto lg:translate-x-0 lg:translate-y-0 lg:h-6"
+              className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
           <div className="flex flex-1 flex-col justify-start rounded-[10px] bg-neutral-100 px-6 py-8 lg:px-10 lg:py-10">
@@ -117,7 +118,7 @@ export function Delivery() {
             <img
               src="/images/baterino-logo-white.png"
               alt="Baterino"
-              className="absolute left-1/2 top-1/2 h-5 w-auto -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-md lg:left-auto lg:right-6 lg:bottom-6 lg:top-auto lg:translate-x-0 lg:translate-y-0 lg:h-6"
+              className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
           <div className="flex flex-1 flex-col justify-start rounded-[10px] bg-neutral-100 px-6 py-8 lg:px-10 lg:py-10">
@@ -151,7 +152,7 @@ export function Delivery() {
             <img
               src="/images/baterino-logo-white.png"
               alt="Baterino"
-              className="absolute left-1/2 top-1/2 h-5 w-auto -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-md lg:left-auto lg:right-6 lg:bottom-6 lg:top-auto lg:translate-x-0 lg:translate-y-0 lg:h-6"
+              className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
           <div className="flex flex-1 flex-col justify-start rounded-[10px] bg-neutral-100 px-6 py-8 lg:px-10 lg:py-10">
@@ -181,7 +182,7 @@ export function Delivery() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Built for Consistency Section */}
@@ -194,13 +195,13 @@ export function Delivery() {
             {t('delivery.consistency.intro')}
           </p>
 
-          <div className="mb-12">
-            <img
-              src="/images/consistency-bess.png"
-              alt=""
-              className="h-64 w-full rounded-[10px] object-cover sm:h-96"
-            />
-          </div>
+          <ImageWithLogo
+            src="/images/consistency-bess.png"
+            alt=""
+            className="mb-12 h-64 w-full rounded-[10px] sm:h-96"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
+          />
 
           {/* 3 Columns */}
           <div className="grid gap-8 sm:grid-cols-3">

@@ -34,7 +34,7 @@ export function Sliders() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Impact Slider */}
@@ -52,7 +52,7 @@ export function Sliders() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* What We Do Slider */}
@@ -72,7 +72,7 @@ export function Sliders() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Delivery Framework Slider */}
@@ -92,7 +92,7 @@ export function Sliders() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Maritime Delivery Slider */}

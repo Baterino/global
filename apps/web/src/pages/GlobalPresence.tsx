@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 
 export function GlobalPresence() {
   const { t } = useTranslation()
@@ -32,10 +33,12 @@ export function GlobalPresence() {
               <p className="mb-6 font-body text-body-md leading-relaxed text-neutral-700">
                 {t('globalPresence.operatingGlobally.description')}
               </p>
-              <img
+              <ImageWithLogo
                 src="/images/operating-globally.jpg"
                 alt="Operating Globally"
-                className="h-[320px] w-full rounded-[10px] object-cover sm:h-[350px]"
+                className="h-[320px] w-full rounded-[10px] sm:h-[350px]"
+                imgClassName="rounded-[10px] object-cover"
+                logoSize="lg"
               />
             </div>
 
@@ -47,10 +50,12 @@ export function GlobalPresence() {
               <p className="mb-6 font-body text-body-md leading-relaxed text-neutral-700">
                 {t('globalPresence.deliveringLocally.description')}
               </p>
-              <img
+              <ImageWithLogo
                 src="/images/delivering-locally.jpg"
                 alt="Acting Locally"
-                className="h-[320px] w-full rounded-[10px] object-cover sm:h-[350px]"
+                className="h-[320px] w-full rounded-[10px] sm:h-[350px]"
+                imgClassName="rounded-[10px] object-cover"
+                logoSize="lg"
               />
             </div>
           </div>
@@ -59,7 +64,7 @@ export function GlobalPresence() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Regional Presence - 1/3 text left, 2/3 image right */}
@@ -86,10 +91,12 @@ export function GlobalPresence() {
             </div>
 
             {/* Right - Image (2/3), height 440px */}
-            <img
+            <ImageWithLogo
               src="/images/regional-presence-baterino.jpg"
               alt="Regional Presence"
-              className="h-[440px] w-full rounded-[10px] object-cover lg:col-span-2"
+              className="h-[440px] w-full rounded-[10px] lg:col-span-2"
+              imgClassName="rounded-[10px] object-cover"
+              logoSize="lg"
             />
           </div>
         </div>
@@ -97,7 +104,7 @@ export function GlobalPresence() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Partner Up With Us & Why ? - Two card-like columns */}
@@ -116,10 +123,30 @@ export function GlobalPresence() {
                 {t('globalPresence.partnerUp.listLabel')}
               </p>
               <ul className="mb-6 list-none space-y-2 font-body text-body-md text-neutral-700">
-                <li>• {t('globalPresence.partnerUp.bullet1')}</li>
-                <li>• {t('globalPresence.partnerUp.bullet2')}</li>
-                <li>• {t('globalPresence.partnerUp.bullet3')}</li>
-                <li>• {t('globalPresence.partnerUp.bullet4')}</li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t('globalPresence.partnerUp.bullet1')}
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t('globalPresence.partnerUp.bullet2')}
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t('globalPresence.partnerUp.bullet3')}
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t('globalPresence.partnerUp.bullet4')}
+                </li>
               </ul>
               <Link
                 to={`${base}/contact`}
@@ -138,9 +165,24 @@ export function GlobalPresence() {
                 {t('globalPresence.why.intro')}
               </p>
               <ul className="list-none space-y-2 font-body text-body-md leading-relaxed text-neutral-700">
-                <li>• {t('globalPresence.why.bullet1')}</li>
-                <li>• {t('globalPresence.why.bullet2')}</li>
-                <li>• {t('globalPresence.why.bullet3')}</li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t('globalPresence.why.bullet1')}
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t('globalPresence.why.bullet2')}
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t('globalPresence.why.bullet3')}
+                </li>
               </ul>
             </div>
           </div>

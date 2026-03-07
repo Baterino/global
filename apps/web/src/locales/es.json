@@ -19,7 +19,9 @@
     "insights": "Información",
     "globalPresence": "Presencia Global",
     "careers": "Carreras",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "termsOfUse": "Términos de Uso",
+    "privacyPolicy": "Política de Privacidad"
   },
   "pageTitle": {
     "home": "Baterino Global",
@@ -37,11 +39,31 @@
     "insights": "Información",
     "careers": "Carreras",
     "contact": "Contacto",
+    "termsOfUse": "Términos de Uso",
+    "privacyPolicy": "Política de Privacidad",
     "notFound": "Página no encontrada"
   },
   "notFound": {
     "message": "La página que buscas no existe.",
     "backHome": "Volver al inicio"
+  },
+  "termsOfUse": {
+    "title": "Términos de Uso",
+    "lastUpdated": "Última actualización: Enero 2025",
+    "section1": { "title": "Aceptación de los Términos", "content": "Al acceder y utilizar este sitio web, usted acepta y acuerda estar sujeto a estos Términos de Uso. Si no está de acuerdo con estos términos, no utilice este sitio web." },
+    "section2": { "title": "Uso del Sitio Web", "content": "Puede utilizar este sitio web solo para fines legales. Usted acepta no utilizar el sitio de ninguna manera que pueda dañar, deshabilitar o perjudicar el sitio o interferir con el uso del sitio por parte de otras personas." },
+    "section3": { "title": "Propiedad Intelectual", "content": "Todo el contenido de este sitio web, incluidos textos, gráficos, logotipos, imágenes y software, es propiedad de Baterino o sus licenciantes y está protegido por las leyes de propiedad intelectual. No puede reproducir, distribuir o crear obras derivadas sin permiso previo por escrito." },
+    "section4": { "title": "Descargo de Responsabilidad", "content": "La información en este sitio web se proporciona solo con fines informativos generales. Aunque nos esforzamos por mantener la información precisa y actualizada, no hacemos representaciones ni garantías de ningún tipo con respecto a la integridad o precisión del contenido." },
+    "section5": { "title": "Contacto", "content": "Si tiene alguna pregunta sobre estos Términos de Uso, contáctenos a través de nuestra página de Contacto." }
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: Enero 2025",
+    "section1": { "title": "Información que Recopilamos", "content": "Podemos recopilar información que usted proporcione directamente, como cuando completa un formulario de contacto, se suscribe a nuestro boletín o se comunica con nosotros. Esto puede incluir su nombre, dirección de correo electrónico, número de teléfono y otros detalles relevantes." },
+    "section2": { "title": "Cómo Usamos su Información", "content": "Utilizamos la información que recopilamos para responder a sus consultas, mejorar nuestros servicios, enviar actualizaciones relevantes y cumplir con obligaciones legales. No vendemos su información personal a terceros." },
+    "section3": { "title": "Cookies y Seguimiento", "content": "Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar su experiencia, analizar el tráfico del sitio y personalizar el contenido. Puede configurar su navegador para rechazar cookies, aunque algunas funciones pueden no funcionar correctamente." },
+    "section4": { "title": "Seguridad de Datos", "content": "Implementamos medidas técnicas y organizativas apropiadas para proteger sus datos personales contra el acceso, alteración, divulgación o destrucción no autorizados." },
+    "section5": { "title": "Contáctenos", "content": "Si tiene preguntas sobre esta Política de Privacidad o sus datos personales, contáctenos a través de nuestra página de Contacto." }
   },
   "contact": {
     "hero": {
@@ -204,7 +226,7 @@
     "message": "Este es un saludo localizado desde la API."
   },
   "home": {
-    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
+    "hero": { "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
     "heroSlides": {
       "slide1": { "title": "Infraestructura de almacenamiento energético industrial", "subtitle": "Integramos tecnología, entrega y coordinación para convertir proyectos energéticos complejos en infraestructura operativa." },
       "slide2": { "title": "Soluciones para entornos reales", "subtitle": "Sistemas de almacenamiento diseñados y entregados para entornos industriales, residenciales y marítimos." },
@@ -212,12 +234,20 @@
       "slide4": { "title": "Infraestructura con propósito", "subtitle": "Infraestructura energética que apoya comunidades, servicios esenciales y resiliencia a largo plazo." }
     },
     "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Saber más", "tapToLearnMore": "Toca para saber más" },
-    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions across residential, industrial, and maritime sectors.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "medical": "MEDICAL", "medicalDesc": "Energy storage solutions for healthcare facilities, clinics, and medical infrastructure.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability and renewable integration." },
+    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability and renewable integration." },
     "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "stage1": "First stage", "stage2": "Second stage", "stage3": "Third stage", "stage4": "Fourth stage", "step1": "Project Discovery", "step1Desc": "We assess your needs and design the right solution.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding for your project." },
     "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "We are committed to environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people are at the center of everything we do." },
     "globalImpact": { "title": "NUESTRO IMPACTO GLOBAL", "subtitle": "CONSTRUYENDO RESILIENCIA MUNDIAL", "intro": "El acceso a energía confiable moldea oportunidades, resiliencia y crecimiento. Los programas de impacto de Baterino aplican la misma experiencia en infraestructura utilizada en proyectos industriales y marítimos para apoyar comunidades y servicios esenciales en todo el mundo.", "alignedGoals": "ALINEADOS CON OBJETIVOS GLOBALES", "alignedGoalsDesc": "Baterino & LithTech alinea sus iniciativas de impacto con los Objetivos de Desarrollo Sostenible de las Naciones Unidas, con el objetivo de contribuir a los 17 objetivos para 2035 mediante la entrega práctica de infraestructura energética.", "viewProgress": "Ver nuestro progreso", "energyWhere": "ENERGÍA DONDE MÁS IMPORTA", "energyWhereDesc": "La energía confiable es fundamental para servicios esenciales y la vida diaria. Baterino & LithTech enfoca esfuerzos de impacto donde la disponibilidad de energía afecta directamente la salud, educación, sistemas de agua y resiliencia comunitaria.\nPriorizamos proyectos donde la confiabilidad energética no es opcional — sino crítica.", "beyond": "MÁS ALLÁ DE LA ENTREGA", "beyondDesc": "Nuestro trabajo de impacto va más allá de la instalación del sistema. Desplegamos infraestructura energética práctica y escalable diseñada para condiciones operativas reales — respaldada por integración, compromiso local y responsabilidad a largo plazo. El impacto se logra a través de sistemas que continúan funcionando, no despliegues únicos.", "inclusive": "CONSTRUYENDO SISTEMAS INCLUSIVOS", "inclusiveDesc": "La transición energética debe funcionar en diferentes realidades. Al combinar integración tecnológica, soporte del ciclo de vida y diseño de sistemas adaptables, Baterino ayuda a las comunidades a construir sistemas energéticos que apoyan las necesidades presentes y el crecimiento futuro. La inclusión proviene de infraestructura que puede mantenerse, expandirse y confiarse con el tiempo." },
     "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
     "footer": {
+      "poweredByLabel": "Impulsado por: ",
+      "alignedByLabel": "Alineado por: ",
+      "residentialColumn": "Residencial",
+      "solutionsColumn": "Soluciones",
+      "companyColumn": "Empresa",
+      "exploreColumn": "Explorar",
+      "contactColumn": "Contacto",
+      "socialColumn": "Síguenos",
       "aboutUs": "Acerca de Nosotros",
       "aboutUsDesc": "Baterino habilita infraestructura de almacenamiento de energía para comunidades, industria y aplicaciones marítimas, integrando tecnologías probadas de socios como LithTech con un enfoque en confiabilidad, seguridad y rendimiento a largo plazo.",
       "localOffices": "Oficinas Locales",
@@ -617,12 +647,13 @@
     "readMore": "Leer más",
     "loadMore": "Cargar más",
     "backToInsights": "Volver a Insights",
+    "readMoreOnSubstack": "Leer más en Substack",
     "noArticles": "No hay artículos que coincidan con su filtro.",
     "filters": {
       "all": "Todos",
       "pressRelease": "Comunicado de Prensa",
-      "corporateStory": "Historia Corporativa",
-      "industryNews": "Noticias de la Industria"
+      "useCases": "Casos de Uso",
+      "news": "Noticias"
     },
     "article1": {
       "title": "Baterino presenta nuevas soluciones de baterías marítimas",

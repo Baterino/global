@@ -14,26 +14,31 @@ export function Partnership() {
           <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
             {t('partnership.hero.subtitle')}
           </p>
-          {/* Logos side-by-side */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-8">
-            <img
-              src="/images/lithtech-logo.webp"
-              alt="LithTech"
-              className="h-10 w-auto object-contain sm:h-12"
-            />
-            <img
-              src="/images/Baterino-Logo-black.png"
-              alt="Baterino"
-              className="h-8 w-auto object-contain sm:h-10"
-            />
-          </div>
         </div>
       </section>
 
       {/* Large image placeholder */}
       <section className="w-full bg-white px-4 pb-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <img src="/images/lithtech-baterino-partnership.jpg" alt="LithTech Baterino Partnership" className="h-[360px] w-full rounded-[10px] object-cover sm:h-[400px]" />
+          <div className="relative h-[360px] w-full overflow-hidden rounded-[10px] sm:h-[400px]">
+            <img
+              src="/images/lithtech-baterino-partnership.jpg"
+              alt="LithTech Baterino Partnership"
+              className="h-full w-full rounded-[10px] object-cover"
+            />
+            <img
+              src="/images/lithtech-logo-white 3.png"
+              alt="LithTech"
+              className="absolute bottom-4 left-4 z-10 h-8 w-auto object-contain drop-shadow-sm sm:h-10"
+              aria-hidden
+            />
+            <img
+              src="/images/baterino-logo-white.png"
+              alt="Baterino"
+              className="absolute bottom-4 right-4 z-10 h-8 w-auto object-contain drop-shadow-sm sm:h-10"
+              aria-hidden
+            />
+          </div>
         </div>
       </section>
 
@@ -112,7 +117,7 @@ export function Partnership() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Long-term partnership section */}

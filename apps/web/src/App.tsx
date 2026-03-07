@@ -32,6 +32,10 @@ const Partnership = lazy(() =>
 )
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })))
 const Careers = lazy(() => import('./pages/Careers').then((m) => ({ default: m.Careers })))
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse').then((m) => ({ default: m.TermsOfUse })))
+const PrivacyPolicy = lazy(() =>
+  import('./pages/PrivacyPolicy').then((m) => ({ default: m.PrivacyPolicy }))
+)
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })))
 const Sliders = lazy(() => import('./pages/Sliders').then((m) => ({ default: m.Sliders })))
 
@@ -70,6 +74,8 @@ export default function App() {
                 <Route path="global-presence" element={<GlobalPresence />} />
                 <Route path="careers" element={<Careers />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="terms-of-use" element={<TermsOfUse />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="sliders" element={<Sliders />} />
                 <Route path="*" element={<NotFound />} />
               </Route>

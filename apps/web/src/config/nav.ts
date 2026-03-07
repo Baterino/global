@@ -21,6 +21,8 @@ export const nav = {
   globalPresence: { path: 'global-presence' },
   careers: { path: 'careers' },
   contact: { path: 'contact' },
+  termsOfUse: { path: 'terms-of-use' },
+  privacyPolicy: { path: 'privacy-policy' },
 } as const
 
 export type NavKey = keyof typeof nav

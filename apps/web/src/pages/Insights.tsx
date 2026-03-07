@@ -2,7 +2,15 @@ import { useState, useEffect } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-const FILTERS = ['all', 'press-release', 'corporate-story', 'industry-news'] as const
+function SubstackIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+    </svg>
+  )
+}
+
+const FILTERS = ['all', 'press-release', 'use-cases', 'news'] as const
 const INSIGHTS_BASE = 'company/insights'
 type FilterType = (typeof FILTERS)[number]
 
@@ -17,7 +25,7 @@ const ARTICLES = [
   },
   {
     id: 'sustainable-shipping-future',
-    type: 'industry-news' as const,
+    type: 'news' as const,
     image: '/images/article-2.jpg',
     dateKey: 'insights.article2.date',
     titleKey: 'insights.article2.title',
@@ -25,7 +33,7 @@ const ARTICLES = [
   },
   {
     id: 'baterino-partnership-announcement',
-    type: 'corporate-story' as const,
+    type: 'use-cases' as const,
     image: '/images/article-3.jpg',
     dateKey: 'insights.article3.date',
     titleKey: 'insights.article3.title',
@@ -41,7 +49,7 @@ const ARTICLES = [
   },
   {
     id: 'green-maritime-technology',
-    type: 'industry-news' as const,
+    type: 'news' as const,
     image: '/images/article-5.jpg',
     dateKey: 'insights.article5.date',
     titleKey: 'insights.article5.title',
@@ -49,7 +57,7 @@ const ARTICLES = [
   },
   {
     id: 'baterino-team-expansion',
-    type: 'corporate-story' as const,
+    type: 'use-cases' as const,
     image: '/images/article-6.jpg',
     dateKey: 'insights.article6.date',
     titleKey: 'insights.article6.title',
@@ -63,10 +71,10 @@ function getFilterLabel(filter: FilterType, t: (key: string) => string) {
       return t('insights.filters.all')
     case 'press-release':
       return t('insights.filters.pressRelease')
-    case 'corporate-story':
-      return t('insights.filters.corporateStory')
-    case 'industry-news':
-      return t('insights.filters.industryNews')
+    case 'use-cases':
+      return t('insights.filters.useCases')
+    case 'news':
+      return t('insights.filters.news')
     default:
       return filter
   }
@@ -103,7 +111,7 @@ export function Insights() {
   return (
     <article className="w-full bg-white">
       {/* Hero Section */}
-      <section className="w-full bg-neutral-50 px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px] text-center">
           <h1 className="font-heading text-3xl font-bold uppercase tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             {t('insights.hero.title')}
@@ -115,22 +123,33 @@ export function Insights() {
       </section>
 
       {/* Filter Bar */}
-      <section className="w-full border-b border-neutral-200 bg-white px-4 py-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-2 sm:gap-3">
-          {FILTERS.map((filter) => (
-            <button
-              key={filter}
-              type="button"
-              onClick={() => handleFilterClick(filter)}
-              className={`rounded-full px-4 py-2 font-body text-body-sm font-medium transition-colors ${
-                activeFilter === filter
-                  ? 'bg-neutral-900 text-white'
-                  : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
-              }`}
-            >
-              {getFilterLabel(filter, t)}
-            </button>
-          ))}
+      <section className="w-full border-b border-neutral-200 bg-white px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            {FILTERS.map((filter) => (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => handleFilterClick(filter)}
+                className={`rounded-full px-4 py-2 font-body text-body-sm font-medium transition-colors ${
+                  activeFilter === filter
+                    ? 'bg-neutral-900 text-white'
+                    : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
+                }`}
+              >
+                {getFilterLabel(filter, t)}
+              </button>
+            ))}
+          </div>
+          <a
+            href="https://baterino.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 font-body text-body-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50 hover:border-neutral-300"
+          >
+            <SubstackIcon className="h-4 w-4" />
+            {t('insights.readMoreOnSubstack')}
+          </a>
         </div>
       </section>
 

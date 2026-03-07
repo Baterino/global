@@ -1,8 +1,9 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const SLIDE_WIDTH_PX = 587
-const SLIDE_HEIGHT = 320 // h-80
+const SLIDE_HEIGHT = 360
 const GAP_PX = 20
 const SLIDES_COUNT = 4
 const SLOT_WIDTH = SLIDE_WIDTH_PX + GAP_PX
@@ -18,6 +19,8 @@ const DELIVERY_SLIDES = [
 
 export function HowWeDeliverSlider() {
   const { t } = useTranslation()
+  const { locale } = useParams<{ locale: string }>()
+  const base = `/${locale ?? 'en'}`
   const [index, setIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
   const [dragOffset, setDragOffset] = useState(0)
@@ -60,6 +63,10 @@ export function HowWeDeliverSlider() {
       document.removeEventListener('mouseup', onUp)
     }
   }, [isDragging, goPrev, goNext])
+
+  const handleLinkClick = useCallback((e: React.MouseEvent) => {
+    if (didDragRef.current) e.preventDefault()
+  }, [])
 
   const handleMouseLeave = useCallback(() => {
     if (isDragging) {
@@ -134,13 +141,20 @@ export function HowWeDeliverSlider() {
         <p className="mt-3 max-w-[256px] font-sans text-sm font-medium leading-relaxed text-gray-700 md:text-base">
           {t(`home.howWeDeliver.step${slide.step}Desc`)}
         </p>
+        <Link
+          to={`${base}/delivery`}
+          onClick={handleLinkClick}
+          className="mt-4 inline-block font-body text-body-sm font-semibold text-neutral-900 underline-offset-2 hover:underline"
+        >
+          {t('home.carousel.learnMore')} →
+        </Link>
       </div>
       <div className="relative h-full w-72 shrink-0 overflow-hidden rounded-tr-[10px] rounded-br-[10px]">
         <img src={slide.image} alt="" className="h-full w-full object-cover" draggable={false} />
         <img
           src="/images/baterino-logo-white.png"
           alt="Baterino"
-          className="absolute bottom-3 right-3 h-6 w-auto object-contain drop-shadow-sm md:bottom-4 md:right-4 md:h-7"
+          className="absolute bottom-4 right-4 h-6 w-auto object-contain drop-shadow-sm md:bottom-6 md:right-6 md:h-7"
         />
       </div>
     </div>
@@ -166,7 +180,7 @@ export function HowWeDeliverSlider() {
                     <img
                       src="/images/baterino-logo-white.png"
                       alt="Baterino"
-                      className="absolute bottom-2 right-2 h-5 w-auto object-contain drop-shadow-sm"
+                      className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-sm"
                     />
                   </div>
                   <div className="p-5">
@@ -179,6 +193,13 @@ export function HowWeDeliverSlider() {
                     <p className="mt-2.5 font-sans text-sm font-medium leading-relaxed text-gray-700">
                       {t(`home.howWeDeliver.step${slide.step}Desc`)}
                     </p>
+                    <Link
+                      to={`${base}/delivery`}
+                      onClick={(e) => { if (didDragRef.current) e.preventDefault() }}
+                      className="mt-3 inline-block font-body text-body-sm font-semibold text-neutral-900 underline-offset-2 hover:underline"
+                    >
+                      {t('home.carousel.learnMore')} →
+                    </Link>
                   </div>
                 </div>
               </div>

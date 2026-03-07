@@ -19,11 +19,31 @@
     "insights": "Perspective",
     "globalPresence": "Prezență Globală",
     "careers": "Cariere",
-    "contact": "Contact"
+    "contact": "Contact",
+    "termsOfUse": "Termeni și Condiții",
+    "privacyPolicy": "Politica de Confidențialitate"
   },
   "notFound": {
     "message": "Pagina pe care o căutați nu există.",
     "backHome": "Înapoi la prima pagină"
+  },
+  "termsOfUse": {
+    "title": "Termeni și Condiții",
+    "lastUpdated": "Ultima actualizare: Ianuarie 2025",
+    "section1": { "title": "Acceptarea Termenilor", "content": "Prin accesarea și utilizarea acestui site web, acceptați și sunteți de acord să fiți obligați de acești Termeni și Condiții. Dacă nu sunteți de acord cu acești termeni, vă rugăm să nu utilizați acest site web." },
+    "section2": { "title": "Utilizarea Site-ului", "content": "Puteți utiliza acest site web doar în scopuri legale. Sunteți de acord să nu utilizați site-ul în niciun mod care ar putea deteriora, dezactiva sau afecta site-ul sau interfera cu utilizarea site-ului de către alte părți." },
+    "section3": { "title": "Proprietate Intelectuală", "content": "Tot conținutul de pe acest site web, inclusiv text, grafică, logo-uri, imagini și software, este proprietatea Baterino sau a licențiatorilor săi și este protejat de legile privind proprietatea intelectuală. Nu puteți reproduce, distribui sau crea lucrări derivate fără permisiunea prealabilă în scris." },
+    "section4": { "title": "Declinare a Răspunderii", "content": "Informațiile de pe acest site web sunt furnizate doar în scopuri informaționale generale. Deși ne străduim să păstrăm informațiile exacte și actualizate, nu facem declarații sau garanții de niciun fel cu privire la caracterul complet sau exactitudinea conținutului." },
+    "section5": { "title": "Contact", "content": "Dacă aveți întrebări despre acești Termeni și Condiții, vă rugăm să ne contactați prin pagina noastră de Contact." }
+  },
+  "privacyPolicy": {
+    "title": "Politica de Confidențialitate",
+    "lastUpdated": "Ultima actualizare: Ianuarie 2025",
+    "section1": { "title": "Informații pe care le Colectăm", "content": "Putem colecta informații pe care le furnizați direct, cum ar fi atunci când completați un formular de contact, vă abonați la buletinul nostru sau comunicați cu noi. Acestea pot include numele dvs., adresa de e-mail, numărul de telefon și alte detalii relevante." },
+    "section2": { "title": "Cum Folosim Informațiile Dvs.", "content": "Folosim informațiile pe care le colectăm pentru a răspunde la întrebările dvs., îmbunătăți serviciile noastre, trimite actualizări relevante și respecta obligațiile legale. Nu vindem informațiile dvs. personale către terți." },
+    "section3": { "title": "Cookie-uri și Urmărire", "content": "Site-ul nostru web poate utiliza cookie-uri și tehnologii similare pentru a vă îmbunătăți experiența, analiza traficul site-ului și personaliza conținutul. Puteți configura browserul pentru a refuza cookie-urile, deși unele funcții pot să nu funcționeze corect." },
+    "section4": { "title": "Securitatea Datelor", "content": "Implementăm măsuri tehnice și organizatorice adecvate pentru a vă proteja datele personale împotriva accesului, modificării, dezvăluirii sau distrugerii neautorizate." },
+    "section5": { "title": "Contactați-ne", "content": "Dacă aveți întrebări despre această Politică de Confidențialitate sau despre datele dvs. personale, vă rugăm să ne contactați prin pagina noastră de Contact." }
   },
   "contact": {
     "hero": {
@@ -197,6 +217,8 @@
     "insights": "Perspective",
     "careers": "Cariere",
     "contact": "Contact",
+    "termsOfUse": "Termeni și Condiții",
+    "privacyPolicy": "Politica de Confidențialitate",
     "notFound": "Pagina nu a fost găsită"
   },
   "greeting": {
@@ -204,7 +226,7 @@
     "message": "Acesta este un mesaj de salut localizat de la API."
   },
   "home": {
-    "hero": { "title": "Enabling energy storage infrastructure worldwide.", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
+    "hero": { "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
     "heroSlides": {
       "slide1": { "title": "Infrastructură de stocare a energiei industriale", "subtitle": "Integrăm tehnologia, livrarea și coordonarea pentru a transforma proiectele energetice complexe în infrastructură operațională." },
       "slide2": { "title": "Soluții pentru medii reale", "subtitle": "Sisteme de stocare a energiei concepute și livrate pentru condiții industriale, rezidențiale și maritime." },
@@ -212,12 +234,20 @@
       "slide4": { "title": "Infrastructură cu scop", "subtitle": "Infrastructură energetică care sprijină comunitățile, serviciile esențiale și reziliența pe termen lung." }
     },
     "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Aflați mai multe", "tapToLearnMore": "Atinge pentru a afla mai multe" },
-    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver end-to-end energy storage solutions.", "residential": "Residential", "residentialDesc": "Flexible energy storage solutions for homes and small businesses.", "industrial": "Industrial", "industrialDesc": "Scalable systems for commercial and industrial applications.", "medical": "MEDICAL", "medicalDesc": "Energy storage solutions for healthcare facilities, clinics, and medical infrastructure.", "maritime": "Maritime", "maritimeDesc": "Robust solutions for offshore platforms and vessels.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability." },
+    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability." },
     "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "stage1": "First stage", "stage2": "Second stage", "stage3": "Third stage", "stage4": "Fourth stage", "step1": "Project Discovery", "step1Desc": "We assess your needs.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding." },
     "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "Environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people at the center." },
     "globalImpact": { "title": "IMPACTUL NOSTRU GLOBAL", "subtitle": "CONSTRUIND REZILIENȚĂ LA NIVEL MONDIAL", "intro": "Accesul la energie fiabilă modelează oportunități, reziliență și creștere. Programele de impact Baterino aplică aceeași expertiză în infrastructură folosită în proiecte industriale și maritime pentru a sprijini comunitățile și serviciile esențiale din întreaga lume.", "alignedGoals": "ALINIAT CU OBIECTIVELE GLOBALE", "alignedGoalsDesc": "Baterino & LithTech își aliniază inițiativele de impact cu Obiectivele de Dezvoltare Durabilă ale Națiunilor Unite, urmărind să contribuie la toate cele 17 obiective până în 2035 prin furnizarea practică de infrastructură energetică.", "viewProgress": "Vedeți progresul nostru", "energyWhere": "ENERGIE UNDE CONTEAZĂ CEL MAI MULT", "energyWhereDesc": "Energia fiabilă este fundamentală pentru serviciile esențiale și viața de zi cu zi. Baterino & LithTech concentrează eforturile de impact acolo unde disponibilitatea energiei afectează direct sănătatea, educația, sistemele de apă și reziliența comunității.\nPrioritizăm proiectele în care fiabilitatea energiei nu este opțională — ci critică.", "beyond": "DINCOLO DE LIVRARE", "beyondDesc": "Munca noastră de impact merge dincolo de instalarea sistemului. Implementăm infrastructură energetică practică și scalabilă concepută pentru condiții reale de operare — susținută prin integrare, implicare locală și responsabilitate pe termen lung. Impactul este obținut prin sisteme care continuă să funcționeze, nu prin implementări unice.", "inclusive": "CONSTRUIREA SISTEMELOR INCLUZIVE", "inclusiveDesc": "Tranziția energetică trebuie să funcționeze în diferite realități. Combinând integrarea tehnologică, suportul pe tot ciclul de viață și designul adaptabil al sistemelor, Baterino ajută comunitățile să construiască sisteme energetice care susțin atât nevoile prezente, cât și creșterea viitoare. Incluziunea vine din infrastructura care poate fi întreținută, extinsă și pe care te poți baza în timp." },
     "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
     "footer": {
+      "poweredByLabel": "Alimentat de: ",
+      "alignedByLabel": "Aliniat de: ",
+      "residentialColumn": "Rezidențial",
+      "solutionsColumn": "Soluții",
+      "companyColumn": "Companie",
+      "exploreColumn": "Explorare",
+      "contactColumn": "Contact",
+      "socialColumn": "Urmărește-ne",
       "aboutUs": "Despre Noi",
       "aboutUsDesc": "Baterino permite infrastructura de stocare a energiei pentru comunități, industrie și aplicații maritime, integrând tehnologii dovedite de la parteneri precum LithTech cu accent pe fiabilitate, siguranță și performanță pe termen lung.",
       "localOffices": "Birouri Locale",
@@ -617,12 +647,13 @@
     "readMore": "Citește mai mult",
     "loadMore": "Încarcă mai multe",
     "backToInsights": "Înapoi la Insights",
+    "readMoreOnSubstack": "Citește mai mult pe Substack",
     "noArticles": "Niciun articol nu corespunde filtrului dvs.",
     "filters": {
       "all": "Toate",
       "pressRelease": "Comunicat de Presă",
-      "corporateStory": "Poveste Corporativă",
-      "industryNews": "Știri din Industrie"
+      "useCases": "Cazuri de Utilizare",
+      "news": "Știri"
     },
     "article1": {
       "title": "Baterino lansează noi soluții de baterii maritime",

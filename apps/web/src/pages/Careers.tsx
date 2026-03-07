@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 import { SeoHead } from '../components/SeoHead'
 
 export function Careers() {
@@ -32,17 +33,12 @@ export function Careers() {
       {/* Hero Image */}
       <section className="w-full bg-white px-4 pb-4 sm:px-6 sm:pb-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <div className="relative h-[360px] w-full overflow-hidden rounded-[10px] bg-neutral-200 sm:h-[400px]">
-            <img
-              src="/images/careers-baterino.png"
-              alt=""
-              className="h-full w-full object-cover"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement
-                target.style.display = 'none'
-              }}
-            />
-          </div>
+          <ImageWithLogo
+            src="/images/careers-baterino.png"
+            alt=""
+            className="h-[360px] w-full rounded-[10px] bg-neutral-200 sm:h-[400px]"
+            logoSize="lg"
+          />
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 
 export function LithTech() {
   const { t } = useTranslation()
@@ -22,9 +23,12 @@ export function LithTech() {
         <div className="mx-auto w-full max-w-[1200px]">
           <div className="relative h-[400px] w-full overflow-hidden rounded-[10px]">
             <img src="/images/about-lithtech.jpg" alt="LithTech" className="h-full w-full object-cover" />
-            <div className="absolute bottom-4 right-4 flex items-center gap-2">
-              <span className="font-heading text-xl font-bold text-neutral-900">LITHTECH</span>
-            </div>
+            <img
+              src="/images/lithtech-logo-white 3.png"
+              alt="LithTech"
+              className="absolute bottom-4 right-4 z-10 h-8 w-auto object-contain drop-shadow-sm"
+              aria-hidden
+            />
           </div>
         </div>
       </section>
@@ -41,9 +45,17 @@ export function LithTech() {
               <p className="mb-6 font-body text-body-md leading-relaxed text-neutral-700">
                 {t('lithtech.about.paragraph1')}
               </p>
-              <p className="font-body text-body-md leading-relaxed text-neutral-700">
+              <p className="mb-6 font-body text-body-md leading-relaxed text-neutral-700">
                 {t('lithtech.about.paragraph2')}
               </p>
+              <a
+                href="https://ltc-energy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-neutral-900 px-6 py-3 font-heading text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-neutral-700"
+              >
+                Visit LithTech
+              </a>
             </div>
 
             {/* Right Column - Vision & Mission */}
@@ -71,7 +83,7 @@ export function LithTech() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* What LithTech Does Section - 3 Cards */}
@@ -87,7 +99,10 @@ export function LithTech() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Card 1 - Industrial & Commercial */}
             <div className="flex flex-col overflow-hidden rounded-[10px] bg-neutral-50 shadow-sm">
-              <img src="/images/lithtechc-industrial-storage.jpg" alt="" className="h-48 w-full shrink-0 object-cover" />
+              <div className="relative h-48 w-full shrink-0">
+                <img src="/images/lithtechc-industrial-storage.jpg" alt="" className="h-full w-full object-cover" />
+                <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <h4 className="mb-3 max-w-[13rem] font-heading text-base font-bold uppercase leading-tight tracking-tight text-neutral-900">
                   {t('lithtech.whatWeDo.card1.title')}
@@ -100,7 +115,10 @@ export function LithTech() {
 
             {/* Card 2 - Marine */}
             <div className="flex flex-col overflow-hidden rounded-[10px] bg-neutral-50 shadow-sm">
-              <img src="/images/lithtech-maritime-solutions.jpg" alt="" className="h-48 w-full shrink-0 object-cover" />
+              <div className="relative h-48 w-full shrink-0">
+                <img src="/images/lithtech-maritime-solutions.jpg" alt="" className="h-full w-full object-cover" />
+                <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <h4 className="mb-3 max-w-[13rem] font-heading text-base font-bold uppercase leading-tight tracking-tight text-neutral-900">
                   {t('lithtech.whatWeDo.card2.title')}
@@ -113,7 +131,10 @@ export function LithTech() {
 
             {/* Card 3 - BMS */}
             <div className="flex flex-col overflow-hidden rounded-[10px] bg-neutral-50 shadow-sm">
-              <img src="/images/lithtech-energy-battery-system.jpg" alt="" className="h-48 w-full shrink-0 object-cover" />
+              <div className="relative h-48 w-full shrink-0">
+                <img src="/images/lithtech-energy-battery-system.jpg" alt="" className="h-full w-full object-cover" />
+                <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
+              </div>
               <div className="flex flex-1 flex-col p-6">
                 <h4 className="mb-3 max-w-[13rem] font-heading text-base font-bold uppercase leading-tight tracking-tight text-neutral-900">
                   {t('lithtech.whatWeDo.card3.title')}
@@ -129,7 +150,7 @@ export function LithTech() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Global Footprint Section */}
@@ -152,7 +173,13 @@ export function LithTech() {
             </div>
 
             {/* Right Column - Image Placeholder (2/3) */}
-            <img src="/images/lithtech-globall-presence.jpg" alt="Global Footprint" className="h-[400px] w-full rounded-[10px] object-cover lg:col-span-2" />
+            <ImageWithLogo
+              src="/images/lithtech-globall-presence.jpg"
+              alt="Global Footprint"
+              className="h-[400px] w-full rounded-[10px] lg:col-span-2"
+              imgClassName="rounded-[10px] object-cover"
+              logoSize="lg"
+            />
           </div>
         </div>
       </section>

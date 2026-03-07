@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 
 export function Impact() {
   const { t } = useTranslation()
@@ -35,6 +36,12 @@ export function Impact() {
                 alt=""
                 className="h-full w-full object-cover"
               />
+              <img
+                src="/images/baterino-logo-white.png"
+                alt="Baterino"
+                className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
+                aria-hidden
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute inset-0 flex items-end p-6">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">
@@ -47,6 +54,12 @@ export function Impact() {
                 src="/images/highschool.png"
                 alt=""
                 className="h-full w-full object-cover"
+              />
+              <img
+                src="/images/baterino-logo-white.png"
+                alt="Baterino"
+                className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
+                aria-hidden
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute inset-0 flex items-end p-6">
@@ -61,6 +74,12 @@ export function Impact() {
                 alt=""
                 className="h-full w-full object-cover"
               />
+              <img
+                src="/images/baterino-logo-white.png"
+                alt="Baterino"
+                className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
+                aria-hidden
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute inset-0 flex items-end p-6">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">
@@ -73,6 +92,12 @@ export function Impact() {
                 src="/images/emergency-service.png"
                 alt=""
                 className="h-full w-full object-cover"
+              />
+              <img
+                src="/images/baterino-logo-white.png"
+                alt="Baterino"
+                className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
+                aria-hidden
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute inset-0 flex items-end p-6">
@@ -87,7 +112,7 @@ export function Impact() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Infrastructure with Purpose */}
@@ -101,19 +126,19 @@ export function Impact() {
           </p>
 
           {/* Large Image */}
-          <div className="h-[440px] overflow-hidden rounded-[10px]">
-            <img
-              src="/images/purpose-infrastructure.png"
-              alt="Infrastructure with Purpose"
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <ImageWithLogo
+            src="/images/purpose-infrastructure.png"
+            alt="Infrastructure with Purpose"
+            className="h-[440px] w-full rounded-[10px]"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
+          />
         </div>
       </section>
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Community Energy & Social Programs */}
@@ -128,27 +153,27 @@ export function Impact() {
 
           {/* Two Images Side by Side */}
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-[10px]">
-              <img
-                src="/images/social-programs.png"
-                alt="Social Programs"
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            <div className="overflow-hidden rounded-[10px]">
-              <img
-                src="/images/disaster-relief.png"
-                alt="Disaster Relief"
-                className="h-auto w-full object-cover"
-              />
-            </div>
+            <ImageWithLogo
+              src="/images/social-programs.png"
+              alt="Social Programs"
+              className="aspect-[4/3] w-full rounded-[10px]"
+              imgClassName="rounded-[10px] object-cover"
+              logoSize="md"
+            />
+            <ImageWithLogo
+              src="/images/disaster-relief.png"
+              alt="Disaster Relief"
+              className="aspect-[4/3] w-full rounded-[10px]"
+              imgClassName="rounded-[10px] object-cover"
+              logoSize="md"
+            />
           </div>
         </div>
       </section>
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Global Alignment & Long-Term Impact */}
@@ -189,7 +214,7 @@ export function Impact() {
                   href="https://sdgs.un.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-[5px] bg-white px-6 py-2 font-body text-body-md font-bold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
+                  className="inline-block font-body text-body-md text-neutral-900 underline hover:text-black transition-colors"
                 >
                   See more
                 </a>
@@ -292,7 +317,7 @@ export function Impact() {
                   href="https://sdgs.un.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex w-fit items-center justify-center rounded-[5px] border-2 border-neutral-900 bg-white px-6 py-2 font-body text-body-md font-bold text-neutral-900 transition-colors hover:bg-neutral-900 hover:text-white"
+                  className="mt-auto inline-block font-body text-body-md text-neutral-900 underline hover:text-black transition-colors"
                 >
                   See more
                 </a>

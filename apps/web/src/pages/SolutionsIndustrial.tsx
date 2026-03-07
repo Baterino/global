@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 
 export function SolutionsIndustrial() {
   const { t } = useTranslation()
@@ -31,10 +32,12 @@ export function SolutionsIndustrial() {
       {/* Cabinet-Based Section */}
       <section className="w-full bg-white px-4 pt-8 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <img
+          <ImageWithLogo
             src="/images/industrial-cabinet.png"
             alt=""
-            className="mb-8 h-64 w-full rounded-[10px] object-cover sm:h-96"
+            className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
           />
           
           <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">
@@ -84,12 +87,14 @@ export function SolutionsIndustrial() {
       </section>
 
       {/* Containerized & Large Scale Section */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <img
+          <ImageWithLogo
             src="/images/bess-solutions.png"
             alt=""
-            className="mb-8 h-64 w-full rounded-[10px] object-cover sm:h-96"
+            className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
           />
           
           <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 
 export function SolutionsResidential() {
   const { t } = useTranslation()
@@ -31,13 +32,13 @@ export function SolutionsResidential() {
       {/* Individual Users Section */}
       <section className="w-full bg-white px-4 pt-8 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <div className="mb-8 overflow-hidden rounded-[10px]">
-            <img
-              src="/images/residential-storage-solutions.png"
-              alt=""
-              className="h-64 w-full object-cover sm:h-96"
-            />
-          </div>
+          <ImageWithLogo
+            src="/images/residential-storage-solutions.png"
+            alt=""
+            className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
+          />
           
           <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">
             <div>
@@ -89,15 +90,15 @@ export function SolutionsResidential() {
       </section>
 
       {/* Microgrids Section */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <div className="mb-8 overflow-hidden rounded-[10px]">
-            <img
-              src="/images/residential-microgrids.png"
-              alt=""
-              className="h-64 w-full object-cover sm:h-96"
-            />
-          </div>
+          <ImageWithLogo
+            src="/images/residential-microgrids.png"
+            alt=""
+            className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
+          />
           
           <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">
             <div>

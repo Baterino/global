@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const SLIDE_WIDTH_PX = 700
-const SLIDE_HEIGHT = 397
+const SLIDE_HEIGHT = 360
 const GAP_PX = 20
 const SLIDES_COUNT = 4
 const SLOT_WIDTH = SLIDE_WIDTH_PX + GAP_PX
@@ -14,12 +14,12 @@ const IMPACT_SLIDES = [
   { type: 'alignedGoals' as const, image: '/images/baterino-un-global-goals.png' },
   {
     type: 'energyWhere' as const,
-    image: '/images/medical-clinic.png',
+    image: '/images/energy-where-it-matters-most-desktop.jpg',
     mobileImage: '/images/energy-where-it-matter-most-mobile.png',
   },
   {
     type: 'beyond' as const,
-    image: '/images/installation-baterino.png',
+    image: '/images/beyond-delivery-desktop.jpg',
     mobileImage: '/images/beyond-delivery-mobile.png',
   },
   {
@@ -158,13 +158,21 @@ export function ImpactSlider() {
               <div key={slide.type} className="min-w-full max-w-full shrink-0 px-4">
                 <div className="w-full overflow-hidden rounded-[10px] bg-[#f7f7f7]">
                   {/* Image on top */}
-                  <div className={`w-full overflow-hidden ${slide.type === 'alignedGoals' ? 'flex items-center justify-center bg-white p-6' : 'h-48'}`}>
+                  <div className={`relative w-full overflow-hidden ${slide.type === 'alignedGoals' ? 'flex items-center justify-center bg-white p-6' : 'h-48'}`}>
                     <img
                       src={slide.image}
                       alt=""
                       className={slide.type === 'alignedGoals' ? 'h-32 w-auto object-contain' : 'h-full w-full object-cover'}
                       draggable={false}
                     />
+                    {slide.type !== 'alignedGoals' && (
+                      <img
+                        src="/images/baterino-logo-white.png"
+                        alt="Baterino"
+                        className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm"
+                        aria-hidden
+                      />
+                    )}
                   </div>
                   {/* Title and text below */}
                   <div className="p-5">
@@ -174,15 +182,13 @@ export function ImpactSlider() {
                     <p className="mt-3 break-words font-body text-base leading-relaxed text-neutral-700">
                       {t(`home.globalImpact.${slide.type}Desc`)}
                     </p>
-                    {(slide.type === 'alignedGoals' || slide.type === 'inclusive') && (
-                      <Link
-                        to={`${base}/impact`}
-                        onClick={handleLinkClick}
-                        className="mt-5 inline-flex h-11 items-center justify-center rounded-[5px] bg-white px-6 font-body text-base font-bold text-neutral-900 transition-colors hover:bg-neutral-100"
-                      >
-                        {slide.type === 'alignedGoals' ? t('home.globalImpact.viewProgress') : t('home.carousel.learnMore')}
-                      </Link>
-                    )}
+                    <Link
+                      to={`${base}/impact`}
+                      onClick={handleLinkClick}
+                      className="mt-4 inline-block font-body text-body-sm font-semibold text-neutral-900 underline-offset-2 hover:underline"
+                    >
+                      {slide.type === 'alignedGoals' ? `${t('home.globalImpact.viewProgress')} →` : `${t('home.carousel.learnMore')} →`}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -234,31 +240,29 @@ export function ImpactSlider() {
                     <p className="mt-4 flex-1 font-body text-body-md leading-relaxed text-neutral-700">
                       {t(`home.globalImpact.${slide.type}Desc`)}
                     </p>
-                    {slide.type === 'alignedGoals' ? (
-                      <Link
-                        to={`${base}/impact`}
-                        onClick={handleLinkClick}
-                        className="mt-6 inline-flex h-10 w-40 items-center justify-center rounded-[5px] bg-white font-body text-body-sm font-bold text-neutral-900 transition-colors hover:bg-neutral-100"
-                      >
-                        {t('home.globalImpact.viewProgress')}
-                      </Link>
-                    ) : slide.type === 'inclusive' ? (
-                      <Link
-                        to={`${base}/impact`}
-                        onClick={handleLinkClick}
-                        className="mt-6 inline-flex h-10 w-36 items-center justify-center rounded-[5px] bg-white font-body text-body-sm font-bold text-neutral-900 transition-colors hover:bg-neutral-100"
-                      >
-                        {t('home.carousel.learnMore')}
-                      </Link>
-                    ) : null}
+                    <Link
+                      to={`${base}/impact`}
+                      onClick={handleLinkClick}
+                      className="mt-4 inline-block font-body text-body-sm font-semibold text-neutral-900 underline-offset-2 hover:underline"
+                    >
+                      {slide.type === 'alignedGoals' ? `${t('home.globalImpact.viewProgress')} →` : `${t('home.carousel.learnMore')} →`}
+                    </Link>
                   </div>
-                  <div className={`shrink-0 flex items-center justify-center ${slide.type === 'alignedGoals' ? 'h-full w-[280px] p-4' : 'h-full w-[280px]'}`}>
+                  <div className={`relative shrink-0 flex items-center justify-center ${slide.type === 'alignedGoals' ? 'h-full w-[280px] p-4' : 'h-full w-[280px]'}`}>
                     <img
                       src={slide.image}
                       alt=""
                       className={slide.type === 'alignedGoals' ? 'max-h-[280px] w-auto object-contain' : 'h-full w-full object-cover'}
                       draggable={false}
                     />
+                    {slide.type !== 'alignedGoals' && (
+                      <img
+                        src="/images/baterino-logo-white.png"
+                        alt="Baterino"
+                        className="absolute bottom-4 right-4 z-10 h-5 w-auto object-contain drop-shadow-sm"
+                        aria-hidden
+                      />
+                    )}
                   </div>
                 </div>
               </div>

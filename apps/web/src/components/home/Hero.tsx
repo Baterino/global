@@ -84,7 +84,7 @@ export function Hero() {
                 alt="Baterino"
                 className="h-8 w-auto object-contain md:h-10"
               />
-              <h1 className="font-publicSans text-2xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-display-sm lg:text-display-md">
+              <h1 className="mx-auto max-w-[720px] font-publicSans text-2xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-display-sm lg:text-display-md">
                 {t('home.hero.title')}
               </h1>
               <p className="max-w-[640px] font-body text-base font-normal leading-relaxed text-white/95 md:text-body-lg">
@@ -120,13 +120,13 @@ export function Hero() {
               <div className="relative h-10 w-[793px] max-w-full rounded-[20px]">
                 <div className="absolute left-[1px] top-0 h-10 w-[calc(100%-1px)] max-w-[792px] rounded-[20px] bg-white/40 backdrop-blur-sm" />
                 <div
-                  className="absolute top-0 h-10 w-44 rounded-[20px] bg-zinc-300 transition-all duration-200 ease-out"
+                  className="absolute top-0 h-10 w-44 rounded-full bg-zinc-300 transition-all duration-200 ease-out"
                   style={{
                     left: `calc(${activeTab * 25}% + (25% - 11rem) / 2)`,
                   }}
                 />
                 <div className="relative flex h-10 w-full">
-                  {(['C&I BESS', 'industrial', 'after sales', 'SOCIAL IMPACT'] as const).map((label, i) => (
+                  {(['C&I BESS', 'residential', 'after sales', 'SOCIAL IMPACT'] as const).map((label, i) => (
                     <button
                       key={i}
                       type="button"

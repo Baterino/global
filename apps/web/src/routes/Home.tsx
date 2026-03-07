@@ -1,15 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 import { Hero } from '../components/home/Hero'
 import { SectionHeading } from '../components/home/SectionHeading'
-import { EnableCard } from '../components/home/EnableCard'
+import { WhatWeEnableTabSlider } from '../components/home/WhatWeEnableTabSlider'
 import { HowWeDeliverSlider } from '../components/home/HowWeDeliverSlider'
 import { ImpactSlider } from '../components/home/ImpactSlider'
 
-const INDUSTRIAL_IMG = '/images/industrial-solutions-baterino.png'
-const RESIDENTIAL_IMG = '/images/Residential-solutions-baterino.png'
-const MEDICAL_IMG = '/images/medical-solutions-baterino.png' // fallback: use INDUSTRIAL_IMG if file missing
-const MARITIME_IMG = '/images/maritime-energy-solutions-baterino.png'
 const TRUST_IMG = '/images/baterino-resilience.png'
 
 export function Home() {
@@ -29,40 +26,15 @@ export function Home() {
             titleKey="home.whatWeEnable.title"
             subtitleKey="home.whatWeEnable.subtitle"
           />
-          <p className="mb-8 max-w-[720px] font-body text-body-md font-medium leading-relaxed text-neutral-600">
+          <p className="mb-10 max-w-[720px] font-body text-body-md font-medium leading-relaxed text-neutral-600">
             {t('home.whatWeEnable.intro')}
           </p>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <EnableCard
-              image={RESIDENTIAL_IMG}
-              titleKey="home.whatWeEnable.residential"
-              descKey="home.whatWeEnable.residentialDesc"
-              to="/solutions/residential"
-            />
-            <EnableCard
-              image={INDUSTRIAL_IMG}
-              titleKey="home.whatWeEnable.industrial"
-              descKey="home.whatWeEnable.industrialDesc"
-              to="/solutions/industrial"
-            />
-            <EnableCard
-              image={MEDICAL_IMG}
-              titleKey="home.whatWeEnable.medical"
-              descKey="home.whatWeEnable.medicalDesc"
-              to="/solutions/industrial"
-            />
-            <EnableCard
-              image={MARITIME_IMG}
-              titleKey="home.whatWeEnable.maritime"
-              descKey="home.whatWeEnable.maritimeDesc"
-              to="/solutions/maritime"
-            />
-          </div>
+          <WhatWeEnableTabSlider />
         </div>
       </section>
 
       {/* How we deliver */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <SectionHeading
             titleKey="home.howWeDeliver.title"
@@ -76,19 +48,18 @@ export function Home() {
       </section>
 
       {/* Built on trust */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <h2 className="mb-8 font-heading text-heading-lg font-bold uppercase tracking-tight text-neutral-900 sm:text-section-title">
             {t('home.builtOnTrust.title')}
           </h2>
-          <div className="overflow-hidden rounded-[10px]">
-            <img
-              src={TRUST_IMG}
-              alt=""
-              className="h-64 w-full object-cover sm:h-96"
-              style={{ aspectRatio: '1238/825' }}
-            />
-          </div>
+          <ImageWithLogo
+            src={TRUST_IMG}
+            alt=""
+            className="overflow-hidden rounded-[10px]"
+            imgClassName="h-64 w-full object-cover sm:h-96 rounded-[10px]"
+            logoSize="lg"
+          />
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="font-heading text-heading-md font-semibold text-neutral-900">
@@ -127,7 +98,7 @@ export function Home() {
       </section>
 
       {/* Our global impact */}
-      <section className="w-full border-t border-neutral-200 bg-white py-16">
+      <section className="w-full border-t border-neutral-200 bg-white py-20">
         <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <SectionHeading
             titleKey="home.globalImpact.title"
@@ -143,16 +114,18 @@ export function Home() {
       </section>
 
       {/* Global presence */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <SectionHeading
             titleKey="home.globalPresence.title"
             subtitleKey="home.globalPresence.subtitle"
           />
-          <img
+          <ImageWithLogo
             src="/images/global-presence-wide.jpg"
             alt="Global Presence"
-            className="h-96 w-full max-w-[1200px] rounded-[10px] object-cover"
+            className="h-96 w-full max-w-[1200px] rounded-[10px]"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
           />
 
           {/* Footer-like content within Global Presence section */}

@@ -19,7 +19,9 @@
     "insights": "Insights",
     "globalPresence": "Global Presence",
     "careers": "Careers",
-    "contact": "Contact"
+    "contact": "Contact",
+    "termsOfUse": "Terms Of Use",
+    "privacyPolicy": "Privacy Policy"
   },
   "pageTitle": {
     "home": "Baterino Global",
@@ -37,11 +39,61 @@
     "insights": "Insights",
     "careers": "Careers",
     "contact": "Contact",
+    "termsOfUse": "Terms Of Use",
+    "privacyPolicy": "Privacy Policy",
     "notFound": "Page not found"
   },
   "notFound": {
     "message": "The page you are looking for does not exist.",
     "backHome": "Back to home"
+  },
+  "termsOfUse": {
+    "title": "Terms Of Use",
+    "lastUpdated": "Last updated: January 2025",
+    "section1": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing and using this website, you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use this website."
+    },
+    "section2": {
+      "title": "Use of Website",
+      "content": "You may use this website for lawful purposes only. You agree not to use the website in any way that could damage, disable, or impair the site or interfere with any other party's use of the website."
+    },
+    "section3": {
+      "title": "Intellectual Property",
+      "content": "All content on this website, including text, graphics, logos, images, and software, is the property of Baterino or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works without prior written permission."
+    },
+    "section4": {
+      "title": "Disclaimer",
+      "content": "The information on this website is provided for general information purposes only. While we strive to keep the information accurate and up to date, we make no representations or warranties of any kind regarding the completeness or accuracy of the content."
+    },
+    "section5": {
+      "title": "Contact",
+      "content": "If you have any questions about these Terms of Use, please contact us through our Contact page."
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2025",
+    "section1": {
+      "title": "Information We Collect",
+      "content": "We may collect information you provide directly, such as when you fill out a contact form, subscribe to our newsletter, or communicate with us. This may include your name, email address, phone number, and other relevant details."
+    },
+    "section2": {
+      "title": "How We Use Your Information",
+      "content": "We use the information we collect to respond to your inquiries, improve our services, send relevant updates, and comply with legal obligations. We do not sell your personal information to third parties."
+    },
+    "section3": {
+      "title": "Cookies and Tracking",
+      "content": "Our website may use cookies and similar technologies to enhance your experience, analyze site traffic, and personalize content. You can configure your browser to refuse cookies, though some features may not function properly."
+    },
+    "section4": {
+      "title": "Data Security",
+      "content": "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction."
+    },
+    "section5": {
+      "title": "Contact Us",
+      "content": "If you have questions about this Privacy Policy or your personal data, please contact us through our Contact page."
+    }
   },
   "contact": {
     "hero": {
@@ -205,7 +257,7 @@
   },
   "home": {
     "hero": {
-      "title": "Enabling Energy Storage Infrastructure Worldwide",
+      "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE",
       "subtitle": "We integrate trusted green energy technologies to deliver reliable solutions for communities, industry, medical and maritime environments.",
       "poweredBy": "powered by",
       "poweredByLabel": "Powered by:",
@@ -231,15 +283,24 @@
     "whatWeEnable": {
       "title": "WHAT WE ENABLE",
       "subtitle": "ACROSS SECTORS",
-      "intro": "We integrate trusted green energy technologies into dependable, infrastructure-grade energy systems designed to serve communities, industrial operations, and maritime applications in real-world operating environments.",
+      "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.",
       "residential": "RESIDENTIAL",
-      "residentialDesc": "Energy storage solutions that empower local communities and improve energy access.",
-      "industrial": "INDUSTRIAL",
-      "industrialDesc": "Scalable storage infrastructure designed for performance, stability, and optimization.",
+      "residentialTabDesc": "Smart home energy systems with backup power and energy independence.",
+      "residentialCardTitle": "Residential Microgrid Solutions",
+      "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.",
+      "industrial": "INDUSTRIAL BESS",
+      "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.",
+      "industrialCardTitle": "Grid-Scale Power Solutions",
+      "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.",
       "medical": "MEDICAL",
-      "medicalDesc": "Energy storage solutions for healthcare facilities, clinics, and medical infrastructure.",
+      "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.",
+      "medicalCardTitle": "Critical Care Power Systems",
+      "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.",
       "maritime": "MARITIME",
-      "maritimeDesc": "Advanced battery systems supporting decarbonization beyond the shoreline.",
+      "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.",
+      "maritimeCardTitle": "Marine Propulsion & Power",
+      "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.",
+      "learnMore": "Learn more",
       "utility": "Utility",
       "utilityDesc": "Utility-scale storage for grid stability and renewable integration."
     },
@@ -291,6 +352,14 @@
       "subtitle": "OUR GLOBAL PRESENCE"
     },
     "footer": {
+      "poweredByLabel": "Powered by: ",
+      "alignedByLabel": "Aligned by: ",
+      "residentialColumn": "Residential",
+      "solutionsColumn": "Solutions",
+      "companyColumn": "Company",
+      "exploreColumn": "Explore",
+      "contactColumn": "Contact",
+      "socialColumn": "Follow Us",
       "aboutUs": "About Us",
       "aboutUsDesc": "Baterino enables energy storage infrastructure for communities, industry, and maritime applications, integrating proven technologies from partners such as LithTech with a focus on reliability, safety, and long-term performance.",
       "localOffices": "Local Offices",
@@ -697,12 +766,13 @@
     "readMore": "Read more",
     "loadMore": "Load more",
     "backToInsights": "Back to Insights",
+    "readMoreOnSubstack": "Read more on Substack",
     "noArticles": "No articles match your filter.",
     "filters": {
       "all": "All",
       "pressRelease": "Press Release",
-      "corporateStory": "Corporate Story",
-      "industryNews": "Industry News"
+      "useCases": "Use Cases",
+      "news": "News"
     },
     "article1": {
       "title": "Baterino Unveils New Maritime Battery Solutions",

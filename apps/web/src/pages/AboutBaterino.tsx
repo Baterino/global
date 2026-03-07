@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { ImageWithLogo } from '../components/ImageWithLogo'
 import { WhatWeDoSlider } from '../components/about/WhatWeDoSlider'
 
 export function AboutBaterino() {
@@ -21,10 +22,12 @@ export function AboutBaterino() {
       {/* Hero Image */}
       <section className="w-full bg-white px-4 pb-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <img
+          <ImageWithLogo
             src="/images/about-baterino.jpg"
             alt="About Baterino"
-            className="h-[400px] w-full rounded-[10px] object-cover"
+            className="h-[400px] w-full rounded-[10px]"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
           />
         </div>
       </section>
@@ -77,7 +80,7 @@ export function AboutBaterino() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* What We Do Section */}
@@ -96,7 +99,7 @@ export function AboutBaterino() {
 
       {/* Divider */}
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="border-t border-neutral-200" />
+        <hr className="divider" />
       </div>
 
       {/* Social Impact Section */}
@@ -107,10 +110,12 @@ export function AboutBaterino() {
           </h2>
 
           {/* Large Image */}
-          <img
+          <ImageWithLogo
             src="/images/social-impact.jpg"
             alt="Social Impact"
-            className="mb-12 h-[400px] w-full rounded-[10px] object-cover"
+            className="mb-12 h-[400px] w-full rounded-[10px]"
+            imgClassName="rounded-[10px] object-cover"
+            logoSize="lg"
           />
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

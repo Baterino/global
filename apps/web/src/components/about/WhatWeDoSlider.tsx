@@ -143,12 +143,18 @@ export function WhatWeDoSlider() {
             {WHAT_WE_DO_SLIDES.map((slide) => (
               <div key={slide.key} className="min-w-full max-w-full shrink-0 px-4">
                 <div className="w-full overflow-hidden rounded-[10px] bg-[#f5f5f5]">
-                  <div className="h-48 w-full overflow-hidden">
+                  <div className="relative h-48 w-full overflow-hidden">
                     <img
                       src={slide.image}
                       alt=""
                       className="h-full w-full object-cover"
                       draggable={false}
+                    />
+                    <img
+                      src="/images/baterino-logo-white.png"
+                      alt="Baterino"
+                      className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm"
+                      aria-hidden
                     />
                   </div>
                   <div className="p-5">
@@ -202,14 +208,22 @@ export function WhatWeDoSlider() {
                 style={{ width: `${SLIDE_WIDTH_PX}px`, height: `${SLIDE_HEIGHT}px` }}
               >
                 {/* Image section - ~40-45% of card */}
-                <div className="h-[45%] min-h-0 w-full shrink-0 overflow-hidden rounded-t-[10px]">
+                <div className="relative h-[45%] min-h-0 w-full shrink-0 overflow-hidden rounded-t-[10px]">
                   {'image' in slide && slide.image ? (
-                    <img
-                      src={slide.image}
-                      alt=""
-                      className="h-full w-full object-cover"
-                      draggable={false}
-                    />
+                    <>
+                      <img
+                        src={slide.image}
+                        alt=""
+                        className="h-full w-full object-cover"
+                        draggable={false}
+                      />
+                      <img
+                        src="/images/baterino-logo-white.png"
+                        alt="Baterino"
+                        className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm"
+                        aria-hidden
+                      />
+                    </>
                   ) : (
                     <div className="h-full w-full bg-neutral-300" />
                   )}
