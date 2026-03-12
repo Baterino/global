@@ -2,53 +2,12 @@
  * Backup of Hero mobile layout — 8 horizontal cards with first card content overlay.
  * Restore by copying the mobile section (lines 51–100) back into Hero.tsx
  */
-import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => `/images/mobile%20slider/slide${i + 1}.jpg`)
 
-const CAROUSEL_SLIDES = [
-  {
-    image: '/images/hero-slide1.jpg',
-    mobileImage: '/images/hero-slider-mobile1.jpg',
-    titleKey: 'home.heroSlides.slide1.title',
-    subtitleKey: 'home.heroSlides.slide1.subtitle',
-    to: 'solutions/industrial',
-    buttonKey: 'home.carousel.exploreMore',
-  },
-  {
-    image: '/images/hero-slide2.jpg',
-    mobileImage: '/images/hero-slider-mobile2.jpg',
-    titleKey: 'home.heroSlides.slide2.title',
-    subtitleKey: 'home.heroSlides.slide2.subtitle',
-    to: 'solutions/residential',
-    buttonKey: 'home.carousel.learnMore',
-  },
-  {
-    image: '/images/slide3-mission-critical.jpg',
-    mobileImage: '/images/slide3-mission-critical.jpg',
-    titleKey: 'home.heroSlides.slide5.title',
-    subtitleKey: 'home.heroSlides.slide5.subtitle',
-    to: 'impact',
-    buttonKey: 'home.carousel.learnMore',
-  },
-  {
-    image: '/images/hero-slide3.jpg',
-    mobileImage: '/images/hero-slider-mobile3.jpg',
-    titleKey: 'home.heroSlides.slide3.title',
-    subtitleKey: 'home.heroSlides.slide3.subtitle',
-    to: 'delivery',
-    buttonKey: 'home.carousel.learnMore',
-  },
-]
-
 export function HeroMobileCardsBackup() {
   const { t } = useTranslation()
-  const { locale } = useParams<{ locale: string }>()
-  const base = `/${locale ?? 'en'}`
-  const [activeTab, setActiveTab] = useState(0)
-  const slide = CAROUSEL_SLIDES[activeTab]
 
   return (
     <section className="relative w-full bg-white">

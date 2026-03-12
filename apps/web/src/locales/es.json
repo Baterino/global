@@ -71,20 +71,50 @@
   "termsOfUse": {
     "title": "Términos de Uso",
     "lastUpdated": "Última actualización: Enero 2025",
-    "section1": { "title": "Aceptación de los Términos", "content": "Al acceder y utilizar este sitio web, usted acepta y acuerda estar sujeto a estos Términos de Uso. Si no está de acuerdo con estos términos, no utilice este sitio web." },
-    "section2": { "title": "Uso del Sitio Web", "content": "Puede utilizar este sitio web solo para fines legales. Usted acepta no utilizar el sitio de ninguna manera que pueda dañar, deshabilitar o perjudicar el sitio o interferir con el uso del sitio por parte de otras personas." },
-    "section3": { "title": "Propiedad Intelectual", "content": "Todo el contenido de este sitio web, incluidos textos, gráficos, logotipos, imágenes y software, es propiedad de Baterino o sus licenciantes y está protegido por las leyes de propiedad intelectual. No puede reproducir, distribuir o crear obras derivadas sin permiso previo por escrito." },
-    "section4": { "title": "Descargo de Responsabilidad", "content": "La información en este sitio web se proporciona solo con fines informativos generales. Aunque nos esforzamos por mantener la información precisa y actualizada, no hacemos representaciones ni garantías de ningún tipo con respecto a la integridad o precisión del contenido." },
-    "section5": { "title": "Contacto", "content": "Si tiene alguna pregunta sobre estos Términos de Uso, contáctenos a través de nuestra página de Contacto." }
+    "section1": {
+      "title": "Aceptación de los Términos",
+      "content": "Al acceder y utilizar este sitio web, usted acepta y acuerda estar sujeto a estos Términos de Uso. Si no está de acuerdo con estos términos, no utilice este sitio web."
+    },
+    "section2": {
+      "title": "Uso del Sitio Web",
+      "content": "Puede utilizar este sitio web solo para fines legales. Usted acepta no utilizar el sitio de ninguna manera que pueda dañar, deshabilitar o perjudicar el sitio o interferir con el uso del sitio por parte de otras personas."
+    },
+    "section3": {
+      "title": "Propiedad Intelectual",
+      "content": "Todo el contenido de este sitio web, incluidos textos, gráficos, logotipos, imágenes y software, es propiedad de Baterino o sus licenciantes y está protegido por las leyes de propiedad intelectual. No puede reproducir, distribuir o crear obras derivadas sin permiso previo por escrito."
+    },
+    "section4": {
+      "title": "Descargo de Responsabilidad",
+      "content": "La información en este sitio web se proporciona solo con fines informativos generales. Aunque nos esforzamos por mantener la información precisa y actualizada, no hacemos representaciones ni garantías de ningún tipo con respecto a la integridad o precisión del contenido."
+    },
+    "section5": {
+      "title": "Contacto",
+      "content": "Si tiene alguna pregunta sobre estos Términos de Uso, contáctenos a través de nuestra página de Contacto."
+    }
   },
   "privacyPolicy": {
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización: Enero 2025",
-    "section1": { "title": "Información que Recopilamos", "content": "Podemos recopilar información que usted proporcione directamente, como cuando completa un formulario de contacto, se suscribe a nuestro boletín o se comunica con nosotros. Esto puede incluir su nombre, dirección de correo electrónico, número de teléfono y otros detalles relevantes." },
-    "section2": { "title": "Cómo Usamos su Información", "content": "Utilizamos la información que recopilamos para responder a sus consultas, mejorar nuestros servicios, enviar actualizaciones relevantes y cumplir con obligaciones legales. No vendemos su información personal a terceros." },
-    "section3": { "title": "Cookies y Seguimiento", "content": "Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar su experiencia, analizar el tráfico del sitio y personalizar el contenido. Puede configurar su navegador para rechazar cookies, aunque algunas funciones pueden no funcionar correctamente." },
-    "section4": { "title": "Seguridad de Datos", "content": "Implementamos medidas técnicas y organizativas apropiadas para proteger sus datos personales contra el acceso, alteración, divulgación o destrucción no autorizados." },
-    "section5": { "title": "Contáctenos", "content": "Si tiene preguntas sobre esta Política de Privacidad o sus datos personales, contáctenos a través de nuestra página de Contacto." }
+    "section1": {
+      "title": "Información que Recopilamos",
+      "content": "Podemos recopilar información que usted proporcione directamente, como cuando completa un formulario de contacto, se suscribe a nuestro boletín o se comunica con nosotros. Esto puede incluir su nombre, dirección de correo electrónico, número de teléfono y otros detalles relevantes."
+    },
+    "section2": {
+      "title": "Cómo Usamos su Información",
+      "content": "Utilizamos la información que recopilamos para responder a sus consultas, mejorar nuestros servicios, enviar actualizaciones relevantes y cumplir con obligaciones legales. No vendemos su información personal a terceros."
+    },
+    "section3": {
+      "title": "Cookies y Seguimiento",
+      "content": "Nuestro sitio web puede utilizar cookies y tecnologías similares para mejorar su experiencia, analizar el tráfico del sitio y personalizar el contenido. Puede configurar su navegador para rechazar cookies, aunque algunas funciones pueden no funcionar correctamente."
+    },
+    "section4": {
+      "title": "Seguridad de Datos",
+      "content": "Implementamos medidas técnicas y organizativas apropiadas para proteger sus datos personales contra el acceso, alteración, divulgación o destrucción no autorizados."
+    },
+    "section5": {
+      "title": "Contáctenos",
+      "content": "Si tiene preguntas sobre esta Política de Privacidad o sus datos personales, contáctenos a través de nuestra página de Contacto."
+    }
   },
   "contact": {
     "hero": {
@@ -243,21 +273,125 @@
   },
   "home": {
     "ourDivisions": "Nuestras divisiones",
-    "hero": { "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
-    "heroSlides": {
-      "slide1": { "title": "Infraestructura de almacenamiento energético industrial", "subtitle": "Diseñamos e implementamos infraestructura BESS desde 1MW y más — diseñada para rendimiento a escala de red y fiabilidad a largo plazo." },
-      "slide2": { "title": "SOLUCIONES PARA HOGARES RESIDENCIALES", "subtitle": "Alimenta tu hogar de forma más inteligente — nuestros sistemas de almacenamiento de baterías mantienen las luces encendidas, reducen los costos de energía y maximizan cada parte de la energía solar que produce tu techo." },
-      "slide3": { "title": "Soporte postventa y ciclo de vida", "subtitle": "Nuestra responsabilidad continúa más allá de la entrega: rendimiento, fiabilidad y continuidad del sistema en el tiempo." },
-      "slide4": { "title": "Infraestructura con propósito", "subtitle": "Infraestructura energética que apoya comunidades, servicios esenciales y resiliencia a largo plazo." },
-      "slide5": { "title": "ENERGÍA PARA SERVICIOS ESENCIALES", "subtitle": "Cuando el fallo no es una opción, mantenemos en funcionamiento las instalaciones críticas — hospitales, flotas de ambulancias, centros de respuesta emergencias, plantas de tratamiento de agua y servicios públicos de los que las comunidades dependen 24/7." }
+    "hero": {
+      "title": "Habilitando el Almacenamiento de Energía de Alta Capacidad a Nivel Mundial",
+      "subtitle": "Integramos tecnologías de energía verde de confianza para ofrecer soluciones fiables a comunidades, industria, entornos médicos y marítimos.",
+      "poweredBy": "impulsado por",
+      "poweredByLabel": "Impulsado por:",
+      "technologyPoweredBy": "Nuestra tecnología es impulsada por:",
+      "hoverToExplore": "Pasa el cursor para explorar"
     },
-    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Saber más", "exploreMore": "EXPLORE", "tapToLearnMore": "Toca para saber más" },
-    "baterinoPro": { "introducing": "PRESENTANDO", "description": "Nuestra división dedicada a proyectos industriales.", "industrialDesc": "Nuestra división dedicada a proyectos industriales.", "medicalDesc": "Nuestra división dedicada a atención médica y crítica.", "maritimeDesc": "Nuestra división dedicada a operaciones marítimas y offshore." },
-    "whatWeEnable": { "title": "Lo que habilitamos", "subtitle": "Cómo te servimos", "intro": "Ofrecemos soluciones de almacenamiento de energía de nivel empresarial que transforman la forma en que las organizaciones alimentan sus operaciones, desde la confiabilidad a escala de red hasta la resiliencia crítica.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utilidad", "utilityDesc": "Almacenamiento a escala de red para estabilidad y integración de energías renovables.", "learnMore": "Saber más" },
-    "howWeDeliver": { "title": "Cómo entregamos", "subtitle": "Nuestro proceso principal", "intro": "Baterino habilita proyectos de almacenamiento de energía combinando integración tecnológica, entrega operativa y soporte a largo plazo. Eliminamos barreras técnicas, logísticas y estructurales para que los proyectos pasen del concepto a la operación con confianza.", "stage1": "Primera etapa", "stage2": "Segunda etapa", "stage3": "Tercera etapa", "stage4": "Cuarta etapa", "step1": "Habilitación de infraestructura", "step1Desc": "Reunimos las tecnologías, socios y logística necesarios para hacer que los proyectos de almacenamiento de energía sean implementables en entornos reales.", "step2": "Integración tecnológica", "step2Desc": "Integramos sistemas de almacenamiento y tecnologías renovables en sistemas coherentes y listos para instalación en aplicaciones residenciales, industriales y marítimas.", "step3": "Posventa y confiabilidad", "step3Desc": "Nuestra participación continúa más allá de la puesta en marcha. Apoyamos el rendimiento del sistema a lo largo del tiempo mediante un enfoque orientado a la confiabilidad.", "step4": "Apoyo a la financiación de proyectos", "step4Desc": "Para proyectos seleccionados, Baterino puede apoyar la estructuración y el acceso a financiación a través de socios financieros estratégicos — permitiendo financiación total o parcial cuando sea apropiado." },
-    "builtOnTrust": { "title": "Construido con confianza. Diseñado para durar.", "subtitle": "Nuestras soluciones globales", "col1": "Un enfoque a largo plazo", "col1Desc": "Participamos en proyectos más allá de la entrega. Nuestro papel continúa a través de la operación, el soporte y el ciclo de vida del sistema, asegurando continuidad y responsabilidad.", "col2": "Tecnología en la que puedes confiar", "col2Desc": "Baterino integra tecnologías energéticas probadas y financiables seleccionadas por rendimiento, seguridad y viabilidad a largo plazo en entornos residenciales, industriales y marítimos.", "col3": "Soporte que perdura", "col3Desc": "A través de vías estructuradas de posventa y soporte técnico, ayudamos a garantizar la confiabilidad del sistema durante toda su vida operativa.", "col4": "Construido como infraestructura, no como productos", "col4Desc": "Abordamos cada proyecto como infraestructura, diseñada para integrarse en entornos operativos reales, marcos regulatorios y estrategias energéticas a largo plazo." },
-    "globalImpact": { "title": "NUESTRO IMPACTO GLOBAL", "subtitle": "CONSTRUYENDO RESILIENCIA MUNDIAL", "intro": "El acceso a energía confiable moldea oportunidades, resiliencia y crecimiento. Los programas de impacto de Baterino aplican la misma experiencia en infraestructura utilizada en proyectos industriales y marítimos para apoyar comunidades y servicios esenciales en todo el mundo.", "alignedGoals": "ALINEADOS CON OBJETIVOS GLOBALES", "alignedGoalsDesc": "Baterino & LithTech alinea sus iniciativas de impacto con los Objetivos de Desarrollo Sostenible de las Naciones Unidas, con el objetivo de contribuir a los 17 objetivos para 2035 mediante la entrega práctica de infraestructura energética.", "viewProgress": "Ver nuestro progreso", "energyWhere": "ENERGÍA DONDE MÁS IMPORTA", "energyWhereDesc": "La energía confiable es fundamental para servicios esenciales y la vida diaria. Baterino & LithTech enfoca esfuerzos de impacto donde la disponibilidad de energía afecta directamente la salud, educación, sistemas de agua y resiliencia comunitaria.\nPriorizamos proyectos donde la confiabilidad energética no es opcional — sino crítica.", "beyond": "MÁS ALLÁ DE LA ENTREGA", "beyondDesc": "Nuestro trabajo de impacto va más allá de la instalación del sistema. Desplegamos infraestructura energética práctica y escalable diseñada para condiciones operativas reales — respaldada por integración, compromiso local y responsabilidad a largo plazo. El impacto se logra a través de sistemas que continúan funcionando, no despliegues únicos.", "inclusive": "CONSTRUYENDO SISTEMAS INCLUSIVOS", "inclusiveDesc": "La transición energética debe funcionar en diferentes realidades. Al combinar integración tecnológica, soporte del ciclo de vida y diseño de sistemas adaptables, Baterino ayuda a las comunidades a construir sistemas energéticos que apoyan las necesidades presentes y el crecimiento futuro. La inclusión proviene de infraestructura que puede mantenerse, expandirse y confiarse con el tiempo." },
-    "globalPresence": { "title": "Entregando infraestructura energética en todo el mundo", "subtitle": "Nuestra presencia global" },
+    "heroSlides": {
+      "slide1": {
+        "title": "Infraestructura de almacenamiento energético industrial",
+        "subtitle": "Diseñamos e implementamos infraestructura BESS desde 1MW y más — diseñada para rendimiento a escala de red y fiabilidad a largo plazo."
+      },
+      "slide2": {
+        "title": "SOLUCIONES PARA HOGARES RESIDENCIALES",
+        "subtitle": "Alimenta tu hogar de forma más inteligente — nuestros sistemas de almacenamiento de baterías mantienen las luces encendidas, reducen los costos de energía y maximizan cada parte de la energía solar que produce tu techo."
+      },
+      "slide3": {
+        "title": "Soporte postventa y ciclo de vida",
+        "subtitle": "Nuestra responsabilidad continúa más allá de la entrega: rendimiento, fiabilidad y continuidad del sistema en el tiempo."
+      },
+      "slide4": {
+        "title": "Infraestructura con propósito",
+        "subtitle": "Infraestructura energética que apoya comunidades, servicios esenciales y resiliencia a largo plazo."
+      },
+      "slide5": {
+        "title": "ENERGÍA PARA SERVICIOS ESENCIALES",
+        "subtitle": "Cuando el fallo no es una opción, mantenemos en funcionamiento las instalaciones críticas — hospitales, flotas de ambulancias, centros de respuesta emergencias, plantas de tratamiento de agua y servicios públicos de los que las comunidades dependen 24/7."
+      }
+    },
+    "carousel": {
+      "infrastructure": "HABILITACIÓN DE INFRAESTRUCTURA",
+      "infrastructureSub": "Sectores Residencial - Industrial - Marítimo",
+      "lifecycle": "CICLO DE VIDA DE CONFIANZA",
+      "lifecycleSub": "Monitoreo - Posventa - Soporte Técnico",
+      "impact": "PROPÓSITO E IMPACTO",
+      "impactSub": "Educación - Clínicas - Respuesta a Desastres",
+      "learnMore": "Saber más",
+      "exploreMore": "EXPLORAR",
+      "tapToLearnMore": "Toca para saber más"
+    },
+    "baterinoPro": {
+      "introducing": "PRESENTANDO",
+      "description": "Nuestra división dedicada a proyectos industriales.",
+      "industrialDesc": "Nuestra división dedicada a proyectos industriales.",
+      "medicalDesc": "Nuestra división dedicada a atención médica y crítica.",
+      "maritimeDesc": "Nuestra división dedicada a operaciones marítimas y offshore."
+    },
+    "whatWeEnable": {
+      "title": "Lo que habilitamos",
+      "subtitle": "Cómo te servimos",
+      "intro": "Ofrecemos soluciones de almacenamiento de energía de nivel empresarial que transforman la forma en que las organizaciones alimentan sus operaciones, desde la confiabilidad a escala de red hasta la resiliencia crítica.",
+      "residential": "RESIDENCIAL",
+      "residentialTabDesc": "Sistemas de energía para el hogar inteligente con respaldo y autonomía energética.",
+      "residentialCardTitle": "Soluciones de Microred Residencial",
+      "residentialDesc": "Sistemas de baterías modulares que permiten a los propietarios optimizar el uso de energía, reducir la dependencia de la red y mantener el suministro eléctrico durante interrupciones.",
+      "industrial": "INDUSTRIAL BESS",
+      "industrialTabDesc": "Almacenamiento a escala de red para fábricas, parques solares y operaciones industriales.",
+      "industrialCardTitle": "Soluciones de Energía a Escala Industrial",
+      "industrialDesc": "Infraestructura de almacenamiento de alta capacidad optimizada para nivelación de carga, estabilización de microred y gestión de recursos energéticos distribuidos.",
+      "medical": "MÉDICO",
+      "medicalTabDesc": "Soluciones de energía confiables para hospitales, clínicas e instalaciones de emergencia.",
+      "medicalCardTitle": "Sistemas de Energía para Atención Crítica",
+      "medicalDesc": "Infraestructura de baterías ultra-confiable diseñada para operación sin interrupciones, conmutación rápida de carga y suministro continuo de energía a equipos de soporte vital.",
+      "maritime": "MARÍTIMO",
+      "maritimeTabDesc": "Sistemas de baterías avanzados para la electrificación de embarcaciones y operaciones offshore.",
+      "maritimeCardTitle": "Propulsión y Energía Marina",
+      "maritimeDesc": "Almacenamiento de energía de servicio pesado diseñado para entornos de agua salada, manejo de cargas dinámicas y suministro de energía de larga duración en operaciones en alta mar.",
+      "utility": "Utilidad",
+      "utilityDesc": "Almacenamiento a escala de red para estabilidad y integración de energías renovables.",
+      "learnMore": "Saber más"
+    },
+    "howWeDeliver": {
+      "title": "Cómo entregamos",
+      "subtitle": "Nuestro proceso principal",
+      "intro": "Baterino habilita proyectos de almacenamiento de energía combinando integración tecnológica, entrega operativa y soporte a largo plazo. Eliminamos barreras técnicas, logísticas y estructurales para que los proyectos pasen del concepto a la operación con confianza.",
+      "stage1": "Primera etapa",
+      "stage2": "Segunda etapa",
+      "stage3": "Tercera etapa",
+      "stage4": "Cuarta etapa",
+      "step1": "Habilitación de infraestructura",
+      "step1Desc": "Reunimos las tecnologías, socios y logística necesarios para hacer que los proyectos de almacenamiento de energía sean implementables en entornos reales.",
+      "step2": "Integración tecnológica",
+      "step2Desc": "Integramos sistemas de almacenamiento y tecnologías renovables en sistemas coherentes y listos para instalación en aplicaciones residenciales, industriales y marítimas.",
+      "step3": "Posventa y confiabilidad",
+      "step3Desc": "Nuestra participación continúa más allá de la puesta en marcha. Apoyamos el rendimiento del sistema a lo largo del tiempo mediante un enfoque orientado a la confiabilidad.",
+      "step4": "Apoyo a la financiación de proyectos",
+      "step4Desc": "Para proyectos seleccionados, Baterino puede apoyar la estructuración y el acceso a financiación a través de socios financieros estratégicos — permitiendo financiación total o parcial cuando sea apropiado."
+    },
+    "builtOnTrust": {
+      "title": "Construido con confianza. Diseñado para durar.",
+      "subtitle": "Nuestras soluciones globales",
+      "col1": "Un enfoque a largo plazo",
+      "col1Desc": "Participamos en proyectos más allá de la entrega. Nuestro papel continúa a través de la operación, el soporte y el ciclo de vida del sistema, asegurando continuidad y responsabilidad.",
+      "col2": "Tecnología en la que puedes confiar",
+      "col2Desc": "Baterino integra tecnologías energéticas probadas y financiables seleccionadas por rendimiento, seguridad y viabilidad a largo plazo en entornos residenciales, industriales y marítimos.",
+      "col3": "Soporte que perdura",
+      "col3Desc": "A través de vías estructuradas de posventa y soporte técnico, ayudamos a garantizar la confiabilidad del sistema durante toda su vida operativa.",
+      "col4": "Construido como infraestructura, no como productos",
+      "col4Desc": "Abordamos cada proyecto como infraestructura, diseñada para integrarse en entornos operativos reales, marcos regulatorios y estrategias energéticas a largo plazo."
+    },
+    "globalImpact": {
+      "title": "NUESTRO IMPACTO GLOBAL",
+      "subtitle": "CONSTRUYENDO RESILIENCIA MUNDIAL",
+      "intro": "El acceso a energía confiable moldea oportunidades, resiliencia y crecimiento. Los programas de impacto de Baterino aplican la misma experiencia en infraestructura utilizada en proyectos industriales y marítimos para apoyar comunidades y servicios esenciales en todo el mundo.",
+      "alignedGoals": "ALINEADOS CON OBJETIVOS GLOBALES",
+      "alignedGoalsDesc": "Baterino & LithTech alinea sus iniciativas de impacto con los Objetivos de Desarrollo Sostenible de las Naciones Unidas, con el objetivo de contribuir a los 17 objetivos para 2035 mediante la entrega práctica de infraestructura energética.",
+      "viewProgress": "Ver nuestro progreso",
+      "energyWhere": "ENERGÍA DONDE MÁS IMPORTA",
+      "energyWhereDesc": "La energía confiable es fundamental para servicios esenciales y la vida diaria. Baterino & LithTech enfoca esfuerzos de impacto donde la disponibilidad de energía afecta directamente la salud, educación, sistemas de agua y resiliencia comunitaria.\nPriorizamos proyectos donde la confiabilidad energética no es opcional — sino crítica.",
+      "beyond": "MÁS ALLÁ DE LA ENTREGA",
+      "beyondDesc": "Nuestro trabajo de impacto va más allá de la instalación del sistema. Desplegamos infraestructura energética práctica y escalable diseñada para condiciones operativas reales — respaldada por integración, compromiso local y responsabilidad a largo plazo. El impacto se logra a través de sistemas que continúan funcionando, no despliegues únicos.",
+      "inclusive": "CONSTRUYENDO SISTEMAS INCLUSIVOS",
+      "inclusiveDesc": "La transición energética debe funcionar en diferentes realidades. Al combinar integración tecnológica, soporte del ciclo de vida y diseño de sistemas adaptables, Baterino ayuda a las comunidades a construir sistemas energéticos que apoyan las necesidades presentes y el crecimiento futuro. La inclusión proviene de infraestructura que puede mantenerse, expandirse y confiarse con el tiempo."
+    },
+    "globalPresence": {
+      "title": "Entregando infraestructura energética en todo el mundo",
+      "subtitle": "Nuestra presencia global"
+    },
     "footer": {
       "poweredByLabel": "Impulsado por: ",
       "alignedByLabel": "Alineado por: ",
@@ -271,7 +405,12 @@
       "aboutUsDesc": "Baterino habilita infraestructura de almacenamiento de energía para comunidades, industria y aplicaciones marítimas, integrando tecnologías probadas de socios como LithTech con un enfoque en confiabilidad, seguridad y rendimiento a largo plazo.",
       "localOffices": "Oficinas Locales",
       "officesList": "Rumania\nBulgaria\nChina\nIndonesia",
-      "offices": { "romania": "Rumania", "bulgaria": "Bulgaria", "china": "China", "indonesia": "Indonesia" },
+      "offices": {
+        "romania": "Rumania",
+        "bulgaria": "Bulgaria",
+        "china": "China",
+        "indonesia": "Indonesia"
+      },
       "viewMore": "Ver más",
       "europe": "Europa",
       "asia": "Asia",
@@ -285,46 +424,46 @@
   },
   "residential": {
     "hero": {
-        "title": "ALMACENAMIENTO DE ENERGÍA RESIDENCIAL",
-        "subtitle": "Desde hogares individuales hasta comunidades enteras, Baterino habilita soluciones de almacenamiento de energía residencial construidas para resiliencia, confiabilidad e impacto a largo plazo."
-      },
-      "individual": {
-        "title": "ALMACENAMIENTO RESIDENCIAL PARA USUARIOS INDIVIDUALES",
-        "desc1": "Los sistemas de almacenamiento de energía residencial permiten a los hogares individuales almacenar energía y usarla cuando sea necesario. Estos sistemas están diseñados para operar independientemente o en combinación con fuentes de energía renovable, como la solar.",
-        "desc2": "Baterino habilita soluciones de almacenamiento residencial como parte de sistemas integrados de energía doméstica, adaptados a condiciones locales y patrones de uso.",
-        "power": "~5kW a ~16 kW por gabinete de potencia instalada",
-        "ourFocus": "NUESTRO ENFOQUE",
-        "focusIntro": "Nos enfocamos en la calidad y confiabilidad del sistema, no solo en la entrega de equipos.",
-        "focus1": "Sistemas de baterías residenciales confiables y seguros",
-        "focus2": "Integración con generación renovable",
-        "focus3": "Configuraciones escalables para diferentes necesidades del hogar",
-        "focus4": "Rendimiento y soporte a largo plazo",
-        "keyAdvantages": "VENTAJAS CLAVE",
-        "keyAdvantagesIntro": "El almacenamiento de energía residencial fortalece la confiabilidad, el control y la resiliencia energética a largo plazo.",
-        "advantage1": "Energía confiable durante apagones e inestabilidad de la red",
-        "advantage2": "Mayor independencia energética y control sobre el uso de energía",
-        "advantage3": "Uso optimizado de energía renovable mediante almacenamiento de energía",
-        "advantage4": "Mejor gestión de costos al reducir la exposición a tarifas pico"
-      },
-      "microgrids": {
-        "title": "MICRORREDES PARA NUESTRAS COMUNIDADES",
-        "desc1": "Las microrredes proporcionan a las comunidades sistemas de energía localizados y confiables que pueden operar independientemente o en paralelo con la red principal. Al combinar generación, almacenamiento y control inteligente, las microrredes permiten acceso a energía, resiliencia y sostenibilidad a largo plazo.",
-        "desc2": "Baterino habilita microrredes comunitarias como sistemas de infraestructura, diseñados para soportar entornos operativos reales y uso a largo plazo.",
-        "power": "~50kW a ~5 MW basado en configuración de microrred",
-        "ourFocus": "NUESTRO ENFOQUE",
-        "focusIntro": "Cada microrred está estructurada en torno a las necesidades específicas de la comunidad a la que sirve.",
-        "focus1": "Diseño de sistemas de grado de infraestructura",
-        "focus2": "Integración de almacenamiento, generación y control",
-        "focus3": "Escalabilidad y operabilidad a largo plazo",
-        "focus4": "Adaptación a condiciones regulatorias y ambientales locales",
-        "keyAdvantages": "VENTAJAS CLAVE",
-        "advantagesIntro": "Las microrredes apoyan tanto las necesidades energéticas diarias como los servicios críticos durante interrupciones.",
-        "advantage1": "Comunidades residenciales y aldeas",
-        "advantage2": "Islas y ubicaciones remotas o fuera de la red",
-        "advantage3": "Hospitales, escuelas e instalaciones educativas",
-        "advantage4": "Agua, saneamiento, servicios esenciales y centros comunitarios"
-      }
+      "title": "ALMACENAMIENTO DE ENERGÍA RESIDENCIAL",
+      "subtitle": "Desde hogares individuales hasta comunidades enteras, Baterino habilita soluciones de almacenamiento de energía residencial construidas para resiliencia, confiabilidad e impacto a largo plazo."
     },
+    "individual": {
+      "title": "ALMACENAMIENTO RESIDENCIAL PARA USUARIOS INDIVIDUALES",
+      "desc1": "Los sistemas de almacenamiento de energía residencial permiten a los hogares individuales almacenar energía y usarla cuando sea necesario. Estos sistemas están diseñados para operar independientemente o en combinación con fuentes de energía renovable, como la solar.",
+      "desc2": "Baterino habilita soluciones de almacenamiento residencial como parte de sistemas integrados de energía doméstica, adaptados a condiciones locales y patrones de uso.",
+      "power": "~5kW a ~16 kW por gabinete de potencia instalada",
+      "ourFocus": "NUESTRO ENFOQUE",
+      "focusIntro": "Nos enfocamos en la calidad y confiabilidad del sistema, no solo en la entrega de equipos.",
+      "focus1": "Sistemas de baterías residenciales confiables y seguros",
+      "focus2": "Integración con generación renovable",
+      "focus3": "Configuraciones escalables para diferentes necesidades del hogar",
+      "focus4": "Rendimiento y soporte a largo plazo",
+      "keyAdvantages": "VENTAJAS CLAVE",
+      "keyAdvantagesIntro": "El almacenamiento de energía residencial fortalece la confiabilidad, el control y la resiliencia energética a largo plazo.",
+      "advantage1": "Energía confiable durante apagones e inestabilidad de la red",
+      "advantage2": "Mayor independencia energética y control sobre el uso de energía",
+      "advantage3": "Uso optimizado de energía renovable mediante almacenamiento de energía",
+      "advantage4": "Mejor gestión de costos al reducir la exposición a tarifas pico"
+    },
+    "microgrids": {
+      "title": "MICRORREDES PARA NUESTRAS COMUNIDADES",
+      "desc1": "Las microrredes proporcionan a las comunidades sistemas de energía localizados y confiables que pueden operar independientemente o en paralelo con la red principal. Al combinar generación, almacenamiento y control inteligente, las microrredes permiten acceso a energía, resiliencia y sostenibilidad a largo plazo.",
+      "desc2": "Baterino habilita microrredes comunitarias como sistemas de infraestructura, diseñados para soportar entornos operativos reales y uso a largo plazo.",
+      "power": "~50kW a ~5 MW basado en configuración de microrred",
+      "ourFocus": "NUESTRO ENFOQUE",
+      "focusIntro": "Cada microrred está estructurada en torno a las necesidades específicas de la comunidad a la que sirve.",
+      "focus1": "Diseño de sistemas de grado de infraestructura",
+      "focus2": "Integración de almacenamiento, generación y control",
+      "focus3": "Escalabilidad y operabilidad a largo plazo",
+      "focus4": "Adaptación a condiciones regulatorias y ambientales locales",
+      "keyAdvantages": "VENTAJAS CLAVE",
+      "advantagesIntro": "Las microrredes apoyan tanto las necesidades energéticas diarias como los servicios críticos durante interrupciones.",
+      "advantage1": "Comunidades residenciales y aldeas",
+      "advantage2": "Islas y ubicaciones remotas o fuera de la red",
+      "advantage3": "Hospitales, escuelas e instalaciones educativas",
+      "advantage4": "Agua, saneamiento, servicios esenciales y centros comunitarios"
+    }
+  },
   "industrial": {
     "hero": {
       "title": "INFRAESTRUCTURA DE ALMACENAMIENTO DE ENERGÍA INDUSTRIAL",
@@ -399,7 +538,14 @@
       "step5Desc": "Coordinamos con proveedores de tecnología, integradores y socios locales para garantizar una ejecución fluida, responsabilidad y éxito operacional a largo plazo."
     },
     "applications": {
-      "title": "APLICACIONES MARÍTIMAS"
+      "title": "APLICACIONES MARÍTIMAS",
+      "subtitle": "Aplicable a diversas embarcaciones marinas y operaciones offshore con exigentes requisitos de seguridad y rendimiento.",
+      "app1": "Remolcador",
+      "app2": "Embarcación Turística",
+      "app3": "Ferry de Automóviles",
+      "app4": "Granja Piscícola",
+      "app5": "Buque de Carga MPV",
+      "app6": "Buque de Suministro Offshore"
     }
   },
   "delivery": {
@@ -514,7 +660,7 @@
   },
   "aboutBaterino": {
     "hero": {
-      "title": "About Baterino",
+      "title": "Sobre Baterino",
       "subtitle": "Habilitamos infraestructura energética construida para funcionar y construida para durar."
     },
     "whoWeAre": {

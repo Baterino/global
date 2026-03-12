@@ -71,20 +71,50 @@
   "termsOfUse": {
     "title": "Ketentuan Penggunaan",
     "lastUpdated": "Terakhir diperbarui: Januari 2025",
-    "section1": { "title": "Penerimaan Ketentuan", "content": "Dengan mengakses dan menggunakan situs web ini, Anda menerima dan setuju untuk terikat oleh Ketentuan Penggunaan ini. Jika Anda tidak setuju dengan ketentuan ini, harap jangan gunakan situs web ini." },
-    "section2": { "title": "Penggunaan Situs Web", "content": "Anda dapat menggunakan situs web ini hanya untuk tujuan yang sah. Anda setuju untuk tidak menggunakan situs dengan cara apa pun yang dapat merusak, menonaktifkan, atau merugikan situs atau mengganggu penggunaan situs oleh pihak lain." },
-    "section3": { "title": "Kekayaan Intelektual", "content": "Semua konten di situs web ini, termasuk teks, grafik, logo, gambar, dan perangkat lunak, adalah milik Baterino atau pemberi lisensinya dan dilindungi oleh undang-undang kekayaan intelektual. Anda tidak boleh mereproduksi, mendistribusikan, atau membuat karya turunan tanpa izin tertulis sebelumnya." },
-    "section4": { "title": "Penafian", "content": "Informasi di situs web ini disediakan hanya untuk tujuan informasi umum. Meskipun kami berusaha menjaga informasi tetap akurat dan terkini, kami tidak membuat pernyataan atau jaminan apa pun mengenai kelengkapan atau keakuratan konten." },
-    "section5": { "title": "Kontak", "content": "Jika Anda memiliki pertanyaan tentang Ketentuan Penggunaan ini, silakan hubungi kami melalui halaman Kontak kami." }
+    "section1": {
+      "title": "Penerimaan Ketentuan",
+      "content": "Dengan mengakses dan menggunakan situs web ini, Anda menerima dan setuju untuk terikat oleh Ketentuan Penggunaan ini. Jika Anda tidak setuju dengan ketentuan ini, harap jangan gunakan situs web ini."
+    },
+    "section2": {
+      "title": "Penggunaan Situs Web",
+      "content": "Anda dapat menggunakan situs web ini hanya untuk tujuan yang sah. Anda setuju untuk tidak menggunakan situs dengan cara apa pun yang dapat merusak, menonaktifkan, atau merugikan situs atau mengganggu penggunaan situs oleh pihak lain."
+    },
+    "section3": {
+      "title": "Kekayaan Intelektual",
+      "content": "Semua konten di situs web ini, termasuk teks, grafik, logo, gambar, dan perangkat lunak, adalah milik Baterino atau pemberi lisensinya dan dilindungi oleh undang-undang kekayaan intelektual. Anda tidak boleh mereproduksi, mendistribusikan, atau membuat karya turunan tanpa izin tertulis sebelumnya."
+    },
+    "section4": {
+      "title": "Penafian",
+      "content": "Informasi di situs web ini disediakan hanya untuk tujuan informasi umum. Meskipun kami berusaha menjaga informasi tetap akurat dan terkini, kami tidak membuat pernyataan atau jaminan apa pun mengenai kelengkapan atau keakuratan konten."
+    },
+    "section5": {
+      "title": "Kontak",
+      "content": "Jika Anda memiliki pertanyaan tentang Ketentuan Penggunaan ini, silakan hubungi kami melalui halaman Kontak kami."
+    }
   },
   "privacyPolicy": {
     "title": "Kebijakan Privasi",
     "lastUpdated": "Terakhir diperbarui: Januari 2025",
-    "section1": { "title": "Informasi yang Kami Kumpulkan", "content": "Kami dapat mengumpulkan informasi yang Anda berikan secara langsung, seperti saat Anda mengisi formulir kontak, berlangganan buletin kami, atau berkomunikasi dengan kami. Ini dapat mencakup nama Anda, alamat email, nomor telepon, dan detail relevan lainnya." },
-    "section2": { "title": "Cara Kami Menggunakan Informasi Anda", "content": "Kami menggunakan informasi yang kami kumpulkan untuk menanggapi pertanyaan Anda, meningkatkan layanan kami, mengirim pembaruan yang relevan, dan mematuhi kewajiban hukum. Kami tidak menjual informasi pribadi Anda kepada pihak ketiga." },
-    "section3": { "title": "Cookie dan Pelacakan", "content": "Situs web kami dapat menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman Anda, menganalisis lalu lintas situs, dan mempersonalisasi konten. Anda dapat mengonfigurasi browser Anda untuk menolak cookie, meskipun beberapa fitur mungkin tidak berfungsi dengan baik." },
-    "section4": { "title": "Keamanan Data", "content": "Kami menerapkan langkah-langkah teknis dan organisasi yang sesuai untuk melindungi data pribadi Anda dari akses, perubahan, pengungkapan, atau penghancuran yang tidak sah." },
-    "section5": { "title": "Hubungi Kami", "content": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau data pribadi Anda, silakan hubungi kami melalui halaman Kontak kami." }
+    "section1": {
+      "title": "Informasi yang Kami Kumpulkan",
+      "content": "Kami dapat mengumpulkan informasi yang Anda berikan secara langsung, seperti saat Anda mengisi formulir kontak, berlangganan buletin kami, atau berkomunikasi dengan kami. Ini dapat mencakup nama Anda, alamat email, nomor telepon, dan detail relevan lainnya."
+    },
+    "section2": {
+      "title": "Cara Kami Menggunakan Informasi Anda",
+      "content": "Kami menggunakan informasi yang kami kumpulkan untuk menanggapi pertanyaan Anda, meningkatkan layanan kami, mengirim pembaruan yang relevan, dan mematuhi kewajiban hukum. Kami tidak menjual informasi pribadi Anda kepada pihak ketiga."
+    },
+    "section3": {
+      "title": "Cookie dan Pelacakan",
+      "content": "Situs web kami dapat menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman Anda, menganalisis lalu lintas situs, dan mempersonalisasi konten. Anda dapat mengonfigurasi browser Anda untuk menolak cookie, meskipun beberapa fitur mungkin tidak berfungsi dengan baik."
+    },
+    "section4": {
+      "title": "Keamanan Data",
+      "content": "Kami menerapkan langkah-langkah teknis dan organisasi yang sesuai untuk melindungi data pribadi Anda dari akses, perubahan, pengungkapan, atau penghancuran yang tidak sah."
+    },
+    "section5": {
+      "title": "Hubungi Kami",
+      "content": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau data pribadi Anda, silakan hubungi kami melalui halaman Kontak kami."
+    }
   },
   "contact": {
     "hero": {
@@ -244,51 +274,66 @@
   "home": {
     "ourDivisions": "Divisi kami",
     "hero": {
-      "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE",
+      "title": "MENGAKTIFKAN PENYIMPANAN ENERGI BERKAPASITAS TINGGI DI SELURUH DUNIA",
       "subtitle": "Kami mengintegrasikan teknologi penyimpanan energi terdepan ke dalam infrastruktur yang scalable dan tangguh untuk komunitas, industri, medis, dan lingkungan maritim.",
       "poweredBy": "didukung oleh",
-      "poweredByLabel": "Powered by:",
+      "poweredByLabel": "Didukung oleh:",
       "technologyPoweredBy": "Teknologi kami didukung oleh:",
       "hoverToExplore": "Arahkan untuk jelajahi"
     },
     "heroSlides": {
-      "slide1": { "title": "Infrastruktur Penyimpanan Energi Industri", "subtitle": "Kami merancang dan mengerahkan infrastruktur BESS dari 1MW ke atas — dirancang untuk kinerja skala grid dan keandalan jangka panjang." },
-      "slide2": { "title": "SOLUSI UNTUK RUMAH RESIDENSIAL", "subtitle": "Daya rumah Anda lebih cerdas — sistem penyimpanan baterai kami menjaga lampu tetap menyala, mengurangi biaya energi, dan memaksimalkan setiap energi surya yang dihasilkan atap Anda." },
-      "slide3": { "title": "Dukungan Purna Jual & Siklus Hidup", "subtitle": "Tanggung jawab kami berlanjut melampaui pengiriman — mendukung kinerja, keandalan, dan kontinuitas sistem dari waktu ke waktu." },
-      "slide4": { "title": "Infrastruktur dengan Tujuan", "subtitle": "Infrastruktur energi yang mendukung komunitas, layanan penting, dan ketahanan jangka panjang." },
-      "slide5": { "title": "DAYA UNTUK LAYANAN PENTING", "subtitle": "Ketika kegagalan bukan pilihan, kami menjaga fasilitas kritis tetap beroperasi — rumah sakit, armada ambulans, pusat respons darurat, pabrik pengolahan air, dan utilitas publik yang masyarakat andalkan 24/7." }
+      "slide1": {
+        "title": "Infrastruktur Penyimpanan Energi Industri",
+        "subtitle": "Kami merancang dan mengerahkan infrastruktur BESS dari 1MW ke atas — dirancang untuk kinerja skala grid dan keandalan jangka panjang."
+      },
+      "slide2": {
+        "title": "SOLUSI UNTUK RUMAH RESIDENSIAL",
+        "subtitle": "Daya rumah Anda lebih cerdas — sistem penyimpanan baterai kami menjaga lampu tetap menyala, mengurangi biaya energi, dan memaksimalkan setiap energi surya yang dihasilkan atap Anda."
+      },
+      "slide3": {
+        "title": "Dukungan Purna Jual & Siklus Hidup",
+        "subtitle": "Tanggung jawab kami berlanjut melampaui pengiriman — mendukung kinerja, keandalan, dan kontinuitas sistem dari waktu ke waktu."
+      },
+      "slide4": {
+        "title": "Infrastruktur dengan Tujuan",
+        "subtitle": "Infrastruktur energi yang mendukung komunitas, layanan penting, dan ketahanan jangka panjang."
+      },
+      "slide5": {
+        "title": "DAYA UNTUK LAYANAN PENTING",
+        "subtitle": "Ketika kegagalan bukan pilihan, kami menjaga fasilitas kritis tetap beroperasi — rumah sakit, armada ambulans, pusat respons darurat, pabrik pengolahan air, dan utilitas publik yang masyarakat andalkan 24/7."
+      }
     },
     "carousel": {
-      "infrastructure": "INFRASTRUKTUR ENABLEMENT",
+      "infrastructure": "PENGEMBANGAN INFRASTRUKTUR",
       "infrastructureSub": "Residensial - Industri - Maritim",
-      "lifecycle": "Siklus hidup terpercaya",
-      "lifecycleSub": "Monitoring - After Sales - Technical Support",
-      "impact": "PURPOSE AND IMPACT",
-      "impactSub": "Education - Clinics - Disaster Relief",
+      "lifecycle": "SIKLUS HIDUP TERPERCAYA",
+      "lifecycleSub": "Pemantauan - Purna Jual - Dukungan Teknis",
+      "impact": "TUJUAN DAN DAMPAK",
+      "impactSub": "Pendidikan - Klinik - Bantuan Bencana",
       "learnMore": "Selengkapnya",
-      "exploreMore": "EXPLORE",
+      "exploreMore": "JELAJAHI",
       "tapToLearnMore": "Ketuk untuk info lebih lanjut"
     },
     "whatWeEnable": {
       "title": "Apa yang kami wujudkan",
       "subtitle": "Cara kami melayani Anda",
       "intro": "Kami menyediakan solusi penyimpanan energi tingkat perusahaan yang mengubah cara organisasi memberdayakan operasi mereka—dari keandalan skala grid hingga ketahanan misi kritis.",
-      "residential": "RESIDENTIAL",
+      "residential": "RESIDENSIAL",
       "residentialTabDesc": "Sistem energi rumah pintar dengan daya cadangan dan kemandirian energi.",
-      "residentialCardTitle": "Residential Microgrid Solutions",
-      "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.",
+      "residentialCardTitle": "Solusi Microgrid Residensial",
+      "residentialDesc": "Sistem baterai modular yang memungkinkan pemilik rumah mengoptimalkan penggunaan energi, meminimalkan ketergantungan pada jaringan listrik, dan mempertahankan daya saat terjadi gangguan jaringan.",
       "industrial": "INDUSTRIAL BESS",
       "industrialTabDesc": "Penyimpanan skala grid untuk pabrik, ladang surya, dan operasi industri.",
-      "industrialCardTitle": "Grid-Scale Power Solutions",
-      "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.",
-      "medical": "MEDICAL",
+      "industrialCardTitle": "Solusi Daya Skala Grid",
+      "industrialDesc": "Infrastruktur penyimpanan berkapasitas tinggi yang dioptimalkan untuk pemerataan beban, stabilisasi microgrid, dan manajemen sumber daya energi terdistribusi.",
+      "medical": "MEDIS",
       "medicalTabDesc": "Solusi daya andal untuk rumah sakit, klinik, dan fasilitas darurat.",
-      "medicalCardTitle": "Critical Care Power Systems",
-      "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.",
-      "maritime": "MARITIME",
+      "medicalCardTitle": "Sistem Daya Perawatan Kritis",
+      "medicalDesc": "Infrastruktur baterai yang sangat andal, dirancang untuk operasi tanpa gangguan, peralihan beban cepat, dan penyaluran daya berkelanjutan ke peralatan yang menunjang kehidupan.",
+      "maritime": "MARITIM",
       "maritimeTabDesc": "Sistem baterai canggih untuk elektrifikasi kapal dan operasi lepas pantai.",
-      "maritimeCardTitle": "Marine Propulsion & Power",
-      "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.",
+      "maritimeCardTitle": "Propulsi & Daya Kelautan",
+      "maritimeDesc": "Penyimpanan energi tugas berat yang dirancang untuk lingkungan air asin, penanganan beban dinamis, dan penyaluran daya jangka panjang dalam operasi laut lepas.",
       "utility": "Utilitas",
       "utilityDesc": "Penyimpanan skala utilitas untuk stabilitas grid dan integrasi energi terbarukan.",
       "learnMore": "Selengkapnya"
@@ -359,8 +404,13 @@
       "aboutUs": "Tentang Kami",
       "aboutUsDesc": "Baterino memungkinkan infrastruktur penyimpanan energi untuk komunitas, industri, dan aplikasi maritim, mengintegrasikan teknologi terbukti dari mitra seperti LithTech dengan fokus pada keandalan, keamanan, dan kinerja jangka panjang.",
       "localOffices": "Kantor Lokal",
-      "officesList": "Romania\nBulgaria\nChina\nIndonesia",
-      "offices": { "romania": "Romania", "bulgaria": "Bulgaria", "china": "China", "indonesia": "Indonesia" },
+      "officesList": "Rumania\nBulgaria\nTiongkok\nIndonesia",
+      "offices": {
+        "romania": "Rumania",
+        "bulgaria": "Bulgaria",
+        "china": "Tiongkok",
+        "indonesia": "Indonesia"
+      },
       "viewMore": "Lihat selengkapnya",
       "europe": "Eropa",
       "asia": "Asia",
@@ -374,46 +424,46 @@
   },
   "residential": {
     "hero": {
-        "title": "PENYIMPANAN ENERGI RESIDENSIAL",
-        "subtitle": "Dari rumah individu hingga seluruh komunitas, Baterino memungkinkan solusi penyimpanan energi residensial yang dibangun untuk ketahanan, keandalan, dan dampak jangka panjang."
-      },
-      "individual": {
-        "title": "PENYIMPANAN RESIDENSIAL UNTUK PENGGUNA INDIVIDU",
-        "desc1": "Sistem penyimpanan energi residensial memungkinkan rumah tangga individu untuk menyimpan energi dan menggunakannya saat dibutuhkan. Sistem ini dirancang untuk beroperasi secara independen atau dikombinasikan dengan sumber energi terbarukan, seperti tenaga surya.",
-        "desc2": "Baterino memungkinkan solusi penyimpanan residensial sebagai bagian dari sistem energi rumah terintegrasi, disesuaikan dengan kondisi lokal dan pola penggunaan.",
-        "power": "~5kW hingga ~16 kW per kabinet daya terpasang",
-        "ourFocus": "FOKUS KAMI",
-        "focusIntro": "Kami fokus pada kualitas dan keandalan sistem, bukan hanya pengiriman peralatan.",
-        "focus1": "Sistem baterai residensial yang andal dan aman",
-        "focus2": "Integrasi dengan pembangkit energi terbarukan",
-        "focus3": "Konfigurasi yang dapat diskalakan untuk kebutuhan rumah tangga yang berbeda",
-        "focus4": "Kinerja dan dukungan jangka panjang",
-        "keyAdvantages": "KEUNTUNGAN UTAMA",
-        "keyAdvantagesIntro": "Penyimpanan energi residensial memperkuat keandalan, kontrol, dan ketahanan energi jangka panjang.",
-        "advantage1": "Daya andal selama pemadaman dan ketidakstabilan jaringan",
-        "advantage2": "Kemandirian energi yang lebih besar dan kontrol atas penggunaan energi",
-        "advantage3": "Penggunaan energi terbarukan yang dioptimalkan melalui penyimpanan energi",
-        "advantage4": "Manajemen biaya yang lebih baik dengan mengurangi eksposur terhadap tarif puncak"
-      },
-      "microgrids": {
-        "title": "MICROGRID UNTUK KOMUNITAS KAMI",
-        "desc1": "Microgrid menyediakan komunitas dengan sistem energi lokal yang andal yang dapat beroperasi secara independen atau paralel dengan jaringan utama. Dengan menggabungkan pembangkitan, penyimpanan, dan kontrol cerdas, microgrid memungkinkan akses energi, ketahanan, dan keberlanjutan jangka panjang.",
-        "desc2": "Baterino memungkinkan microgrid komunitas sebagai sistem infrastruktur, dirancang untuk mendukung lingkungan operasi nyata dan penggunaan jangka panjang.",
-        "power": "~50kW hingga ~5 MW berdasarkan konfigurasi microgrid",
-        "ourFocus": "FOKUS KAMI",
-        "focusIntro": "Setiap microgrid disusun berdasarkan kebutuhan spesifik komunitas yang dilayaninya.",
-        "focus1": "Desain sistem tingkat infrastruktur",
-        "focus2": "Integrasi penyimpanan, pembangkitan, dan kontrol",
-        "focus3": "Skalabilitas dan operabilitas jangka panjang",
-        "focus4": "Adaptasi terhadap kondisi regulasi dan lingkungan lokal",
-        "keyAdvantages": "KEUNTUNGAN UTAMA",
-        "advantagesIntro": "Microgrid mendukung kebutuhan energi harian dan layanan kritis selama gangguan.",
-        "advantage1": "Komunitas residensial dan desa",
-        "advantage2": "Pulau dan lokasi terpencil atau di luar jaringan",
-        "advantage3": "Rumah sakit, sekolah, dan fasilitas pendidikan",
-        "advantage4": "Air, sanitasi, layanan penting, dan pusat komunitas"
-      }
+      "title": "PENYIMPANAN ENERGI RESIDENSIAL",
+      "subtitle": "Dari rumah individu hingga seluruh komunitas, Baterino memungkinkan solusi penyimpanan energi residensial yang dibangun untuk ketahanan, keandalan, dan dampak jangka panjang."
     },
+    "individual": {
+      "title": "PENYIMPANAN RESIDENSIAL UNTUK PENGGUNA INDIVIDU",
+      "desc1": "Sistem penyimpanan energi residensial memungkinkan rumah tangga individu untuk menyimpan energi dan menggunakannya saat dibutuhkan. Sistem ini dirancang untuk beroperasi secara independen atau dikombinasikan dengan sumber energi terbarukan, seperti tenaga surya.",
+      "desc2": "Baterino memungkinkan solusi penyimpanan residensial sebagai bagian dari sistem energi rumah terintegrasi, disesuaikan dengan kondisi lokal dan pola penggunaan.",
+      "power": "~5kW hingga ~16 kW per kabinet daya terpasang",
+      "ourFocus": "FOKUS KAMI",
+      "focusIntro": "Kami fokus pada kualitas dan keandalan sistem, bukan hanya pengiriman peralatan.",
+      "focus1": "Sistem baterai residensial yang andal dan aman",
+      "focus2": "Integrasi dengan pembangkit energi terbarukan",
+      "focus3": "Konfigurasi yang dapat diskalakan untuk kebutuhan rumah tangga yang berbeda",
+      "focus4": "Kinerja dan dukungan jangka panjang",
+      "keyAdvantages": "KEUNTUNGAN UTAMA",
+      "keyAdvantagesIntro": "Penyimpanan energi residensial memperkuat keandalan, kontrol, dan ketahanan energi jangka panjang.",
+      "advantage1": "Daya andal selama pemadaman dan ketidakstabilan jaringan",
+      "advantage2": "Kemandirian energi yang lebih besar dan kontrol atas penggunaan energi",
+      "advantage3": "Penggunaan energi terbarukan yang dioptimalkan melalui penyimpanan energi",
+      "advantage4": "Manajemen biaya yang lebih baik dengan mengurangi eksposur terhadap tarif puncak"
+    },
+    "microgrids": {
+      "title": "MICROGRID UNTUK KOMUNITAS KAMI",
+      "desc1": "Microgrid menyediakan komunitas dengan sistem energi lokal yang andal yang dapat beroperasi secara independen atau paralel dengan jaringan utama. Dengan menggabungkan pembangkitan, penyimpanan, dan kontrol cerdas, microgrid memungkinkan akses energi, ketahanan, dan keberlanjutan jangka panjang.",
+      "desc2": "Baterino memungkinkan microgrid komunitas sebagai sistem infrastruktur, dirancang untuk mendukung lingkungan operasi nyata dan penggunaan jangka panjang.",
+      "power": "~50kW hingga ~5 MW berdasarkan konfigurasi microgrid",
+      "ourFocus": "FOKUS KAMI",
+      "focusIntro": "Setiap microgrid disusun berdasarkan kebutuhan spesifik komunitas yang dilayaninya.",
+      "focus1": "Desain sistem tingkat infrastruktur",
+      "focus2": "Integrasi penyimpanan, pembangkitan, dan kontrol",
+      "focus3": "Skalabilitas dan operabilitas jangka panjang",
+      "focus4": "Adaptasi terhadap kondisi regulasi dan lingkungan lokal",
+      "keyAdvantages": "KEUNTUNGAN UTAMA",
+      "advantagesIntro": "Microgrid mendukung kebutuhan energi harian dan layanan kritis selama gangguan.",
+      "advantage1": "Komunitas residensial dan desa",
+      "advantage2": "Pulau dan lokasi terpencil atau di luar jaringan",
+      "advantage3": "Rumah sakit, sekolah, dan fasilitas pendidikan",
+      "advantage4": "Air, sanitasi, layanan penting, dan pusat komunitas"
+    }
+  },
   "industrial": {
     "hero": {
       "title": "INFRASTRUKTUR PENYIMPANAN ENERGI INDUSTRI",
@@ -488,7 +538,14 @@
       "step5Desc": "Kami berkoordinasi dengan penyedia teknologi, integrator, dan mitra lokal untuk memastikan pelaksanaan yang lancar, akuntabilitas, dan kesuksesan operasional jangka panjang."
     },
     "applications": {
-      "title": "APLIKASI MARITIM"
+      "title": "APLIKASI MARITIM",
+      "subtitle": "Dapat diterapkan di berbagai kapal laut dan operasi lepas pantai dengan persyaratan keselamatan dan kinerja yang tinggi.",
+      "app1": "Kapal Tunda",
+      "app2": "Kapal Wisata",
+      "app3": "Feri Mobil",
+      "app4": "Tambak Ikan",
+      "app5": "Kapal Kargo MPV",
+      "app6": "Kapal Pasokan Lepas Pantai"
     }
   },
   "delivery": {
@@ -603,7 +660,7 @@
   },
   "aboutBaterino": {
     "hero": {
-      "title": "About Baterino",
+      "title": "Tentang Baterino",
       "subtitle": "Kami mengaktifkan infrastruktur energi yang dibangun untuk berkinerja dan dibangun untuk bertahan."
     },
     "whoWeAre": {

@@ -46,7 +46,7 @@ export function WhatWeEnableTabSlider() {
   const { locale } = useParams<{ locale: string }>()
   const base = `/${locale ?? 'en'}`
   const [activeIndex, setActiveIndex] = useState(0)
-  const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0 })
+  const [, setIndicatorStyle] = useState({ top: 0, height: 0 })
   const [desktopIndicatorStyle, setDesktopIndicatorStyle] = useState({ top: 0, height: 0 })
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
   const tabWrapperRefs = useRef<(HTMLDivElement | null)[]>([])

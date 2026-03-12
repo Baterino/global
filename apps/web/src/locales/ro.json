@@ -1,31 +1,31 @@
 {
   "app": {
     "title": "Baterino Global",
-    "description": "Site multilingv, optimizat pentru SEO, construit cu Vite și React.",
-    "welcome": "Bine ați venit"
+    "description": "Website multilingv, optimizat pentru SEO, construit cu Vite și React.",
+    "welcome": "Bun venit"
   },
   "nav": {
     "home": "Acasă",
     "subtitle": {
-      "solutions": "Alege o baterie",
-      "solutions.residential": "Stocare energie pentru locuințe",
-      "solutions.industrial": "BESS de mare capacitate",
-      "solutions.medical": "Sector medical critic",
+      "solutions": "Rezidențial, Industrial, Maritim",
+      "solutions.residential": "Stocare de energie pentru locuințe",
+      "solutions.industrial": "BESS de înaltă capacitate",
+      "solutions.medical": "Sectorul medical critic",
       "solutions.maritime": "Operațiuni offshore",
-      "delivery": "Procesul de livrare",
+      "delivery": "Cum livrăm",
       "impact": "Impactul nostru global",
       "globalPresence": "Unde operăm",
-      "insights": "Dovezi. Perspectivă. Progres.",
+      "insights": "Dovezi. Perspective. Progres.",
       "company": "Baterino. LithTech. Parteneriat.",
-      "company.aboutBaterino": "Activare proiecte",
-      "company.aboutLithtech": "Producție tehnologie",
+      "company.aboutBaterino": "Proiecte activate",
+      "company.aboutLithtech": "Tehnologie produsă",
       "company.partnership": "Sinergia noastră",
-      "language": "Alege limba sitului",
+      "language": "Selectați limba site-ului",
       "contact": "Clienți și Parteneri"
     },
     "solutions": "Soluții",
     "solutionsMobile": "Soluții Energetice",
-    "solutions.residential": "Rezidențial și Comunități",
+    "solutions.residential": "Rezidențial & Comunități",
     "solutions.residentialShort": "Rezidențial",
     "solutions.industrial": "Industrial",
     "solutions.medical": "Medical",
@@ -37,73 +37,123 @@
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Parteneriat",
-    "insights": "Perspective",
+    "insights": "Articole",
     "globalPresence": "Prezență Globală",
     "careers": "Cariere",
     "contact": "Contact",
-    "termsOfUse": "Termeni și Condiții",
+    "termsOfUse": "Termeni de Utilizare",
     "privacyPolicy": "Politica de Confidențialitate"
+  },
+  "pageTitle": {
+    "home": "Baterino Global",
+    "solutions": "Soluții",
+    "solutionsResidential": "Rezidențial & Comunități",
+    "solutionsIndustrial": "Soluții Industriale",
+    "solutionsMaritime": "Soluții Maritime",
+    "delivery": "Livrare",
+    "impact": "Impact",
+    "company": "Companie",
+    "companyAboutBaterino": "Despre Baterino",
+    "companyLithtech": "LithTech",
+    "companyPartnership": "Parteneriat",
+    "globalPresence": "Prezență Globală",
+    "insights": "Articole",
+    "careers": "Cariere",
+    "contact": "Contact",
+    "termsOfUse": "Termeni de Utilizare",
+    "privacyPolicy": "Politica de Confidențialitate",
+    "notFound": "Pagina nu a fost găsită"
   },
   "notFound": {
     "message": "Pagina pe care o căutați nu există.",
-    "backHome": "Înapoi la prima pagină"
+    "backHome": "Înapoi la pagina principală"
   },
   "termsOfUse": {
-    "title": "Termeni și Condiții",
+    "title": "Termeni de Utilizare",
     "lastUpdated": "Ultima actualizare: Ianuarie 2025",
-    "section1": { "title": "Acceptarea Termenilor", "content": "Prin accesarea și utilizarea acestui site web, acceptați și sunteți de acord să fiți obligați de acești Termeni și Condiții. Dacă nu sunteți de acord cu acești termeni, vă rugăm să nu utilizați acest site web." },
-    "section2": { "title": "Utilizarea Site-ului", "content": "Puteți utiliza acest site web doar în scopuri legale. Sunteți de acord să nu utilizați site-ul în niciun mod care ar putea deteriora, dezactiva sau afecta site-ul sau interfera cu utilizarea site-ului de către alte părți." },
-    "section3": { "title": "Proprietate Intelectuală", "content": "Tot conținutul de pe acest site web, inclusiv text, grafică, logo-uri, imagini și software, este proprietatea Baterino sau a licențiatorilor săi și este protejat de legile privind proprietatea intelectuală. Nu puteți reproduce, distribui sau crea lucrări derivate fără permisiunea prealabilă în scris." },
-    "section4": { "title": "Declinare a Răspunderii", "content": "Informațiile de pe acest site web sunt furnizate doar în scopuri informaționale generale. Deși ne străduim să păstrăm informațiile exacte și actualizate, nu facem declarații sau garanții de niciun fel cu privire la caracterul complet sau exactitudinea conținutului." },
-    "section5": { "title": "Contact", "content": "Dacă aveți întrebări despre acești Termeni și Condiții, vă rugăm să ne contactați prin pagina noastră de Contact." }
+    "section1": {
+      "title": "Acceptarea Termenilor",
+      "content": "Prin accesarea și utilizarea acestui site web, acceptați și sunteți de acord să respectați acești Termeni de Utilizare. Dacă nu sunteți de acord cu acești termeni, vă rugăm să nu utilizați acest site."
+    },
+    "section2": {
+      "title": "Utilizarea Site-ului",
+      "content": "Puteți utiliza acest site web exclusiv în scopuri legale. Sunteți de acord să nu utilizați site-ul în niciun mod care ar putea deteriora, dezactiva sau afecta funcționarea acestuia ori interfera cu utilizarea de către alte persoane."
+    },
+    "section3": {
+      "title": "Proprietate Intelectuală",
+      "content": "Tot conținutul de pe acest site, inclusiv text, grafică, logo-uri, imagini și software, este proprietatea Baterino sau a licențiatorilor săi și este protejat de legile privind proprietatea intelectuală. Nu puteți reproduce, distribui sau crea lucrări derivate fără permisiunea scrisă prealabilă."
+    },
+    "section4": {
+      "title": "Limitarea Răspunderii",
+      "content": "Informațiile de pe acest site sunt furnizate exclusiv în scop informativ general. Deși ne străduim să menținem informațiile corecte și actualizate, nu oferim nicio garanție de niciun fel cu privire la caracterul complet sau exactitatea conținutului."
+    },
+    "section5": {
+      "title": "Contact",
+      "content": "Dacă aveți întrebări referitoare la acești Termeni de Utilizare, vă rugăm să ne contactați prin pagina de Contact."
+    }
   },
   "privacyPolicy": {
     "title": "Politica de Confidențialitate",
     "lastUpdated": "Ultima actualizare: Ianuarie 2025",
-    "section1": { "title": "Informații pe care le Colectăm", "content": "Putem colecta informații pe care le furnizați direct, cum ar fi atunci când completați un formular de contact, vă abonați la buletinul nostru sau comunicați cu noi. Acestea pot include numele dvs., adresa de e-mail, numărul de telefon și alte detalii relevante." },
-    "section2": { "title": "Cum Folosim Informațiile Dvs.", "content": "Folosim informațiile pe care le colectăm pentru a răspunde la întrebările dvs., îmbunătăți serviciile noastre, trimite actualizări relevante și respecta obligațiile legale. Nu vindem informațiile dvs. personale către terți." },
-    "section3": { "title": "Cookie-uri și Urmărire", "content": "Site-ul nostru web poate utiliza cookie-uri și tehnologii similare pentru a vă îmbunătăți experiența, analiza traficul site-ului și personaliza conținutul. Puteți configura browserul pentru a refuza cookie-urile, deși unele funcții pot să nu funcționeze corect." },
-    "section4": { "title": "Securitatea Datelor", "content": "Implementăm măsuri tehnice și organizatorice adecvate pentru a vă proteja datele personale împotriva accesului, modificării, dezvăluirii sau distrugerii neautorizate." },
-    "section5": { "title": "Contactați-ne", "content": "Dacă aveți întrebări despre această Politică de Confidențialitate sau despre datele dvs. personale, vă rugăm să ne contactați prin pagina noastră de Contact." }
+    "section1": {
+      "title": "Informațiile pe care le colectăm",
+      "content": "Putem colecta informații pe care le furnizați direct, de exemplu atunci când completați un formular de contact, vă abonați la newsletter-ul nostru sau comunicați cu noi. Acestea pot include numele, adresa de e-mail, numărul de telefon și alte detalii relevante."
+    },
+    "section2": {
+      "title": "Cum utilizăm informațiile dvs.",
+      "content": "Utilizăm informațiile colectate pentru a răspunde solicitărilor dvs., a ne îmbunătăți serviciile, a trimite actualizări relevante și a respecta obligațiile legale. Nu vindem datele dvs. personale către terți."
+    },
+    "section3": {
+      "title": "Cookie-uri și urmărire",
+      "content": "Site-ul nostru poate utiliza cookie-uri și tehnologii similare pentru a îmbunătăți experiența dvs., a analiza traficul și a personaliza conținutul. Puteți configura browserul pentru a refuza cookie-urile, deși unele funcționalități pot fi afectate."
+    },
+    "section4": {
+      "title": "Securitatea datelor",
+      "content": "Implementăm măsuri tehnice și organizatorice adecvate pentru a proteja datele dvs. personale împotriva accesului neautorizat, modificării, divulgării sau distrugerii."
+    },
+    "section5": {
+      "title": "Contactați-ne",
+      "content": "Dacă aveți întrebări despre această Politică de Confidențialitate sau despre datele dvs. personale, vă rugăm să ne contactați prin pagina de Contact."
+    }
   },
   "contact": {
     "hero": {
-      "title": "CONTACTAȚI-NE",
-      "subtitle": "Suntem aici pentru a ajuta. Contactați-ne și vă vom conecta cu echipa potrivită."
+      "title": "Contactați-ne",
+      "subtitle": "Suntem aici să vă ajutăm. Luați legătura cu noi și vă vom conecta cu echipa potrivită."
     },
     "categories": {
       "generalInquiries": {
-        "title": "ÎNTREBĂRI GENERALE",
-        "description": "Pentru întrebări generale sau oportunități de parteneriat, folosiți acest formular."
+        "title": "Întrebări Generale",
+        "description": "Pentru întrebări generale sau oportunități de parteneriat, utilizați acest formular."
       },
       "careers": {
-        "title": "CARIERE",
-        "description": "Pentru oportunități de job și întrebări legate de carieră, accesați ",
+        "title": "Cariere",
+        "description": "Pentru oportunități de angajare și întrebări legate de carieră, accesați ",
         "linkText": "secțiunea Cariere"
       },
       "projectsOperations": {
-        "title": "PROIECTE ȘI OPERAȚIUNI",
-        "description": "Pentru întrebări legate de proiecte și operațiuni, folosiți acest formular."
+        "title": "Proiecte și Operațiuni",
+        "description": "Pentru întrebări legate de proiecte și operațiuni, utilizați acest formular."
       },
       "socialImpact": {
-        "title": "IMPACT SOCIAL",
-        "description": "Pentru întrebări legate de programe de sprijin comunitar și eforturi de ajutor în dezastre."
+        "title": "Impact Social",
+        "description": "Pentru întrebări legate de programele de sprijin comunitar și acțiunile de ajutor în caz de dezastre."
       }
     },
     "form": {
-      "inquiryTypeLabel": "Tipul întrebării",
-      "inquiryTypePlaceholder": "Alegeți tipul întrebării",
+      "inquiryTypeLabel": "Tipul solicitării",
+      "inquiryTypePlaceholder": "Alegeți tipul solicitării",
       "inquiryTypes": {
-        "general": "Întrebări generale",
-        "projectsOperations": "Proiecte și operațiuni",
-        "socialImpact": "Impact social"
+        "general": "Întrebări Generale",
+        "projectsOperations": "Proiecte și Operațiuni",
+        "socialImpact": "Impact Social"
       },
       "nameLabel": "Nume",
       "namePlaceholder": "Numele dvs.",
-      "emailLabel": "Email",
-      "emailPlaceholder": "email@dvs.com",
-      "emailInvalid": "Introduceți o adresă de email validă.",
-      "countryLabel": "Țara",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "dvs@email.com",
+      "emailInvalid": "Vă rugăm să introduceți o adresă de e-mail validă.",
+      "countryLabel": "Țară",
       "countryPlaceholder": "Alegeți țara",
       "countries": {
         "austria": "Austria",
@@ -117,60 +167,60 @@
       "phoneLabel": "Număr de telefon",
       "phonePlaceholder": "+1 234 567 890",
       "messageLabel": "Mesaj",
-      "messagePlaceholder": "Mesajul dvs....",
+      "messagePlaceholder": "Mesajul dvs...",
       "submit": "Trimite mesaj"
     },
     "culture": {
-      "title": "ÎNVĂȚAȚI. CREȘTEȚI. APARȚINEȚI.",
-      "subtitle": "Echipa noastră prosperă într-un mediu de sprijin bazat pe egalitate și învățare continuă."
+      "title": "ÎNVAȚĂ. CREȘTE. APARȚII.",
+      "subtitle": "Echipele noastre prosperă într-un mediu de susținere bazat pe egalitate și învățare continuă."
     }
   },
   "partnership": {
     "hero": {
-      "title": "LITHTECH ȘI BATERINO",
-      "subtitle": "Lucrăm împreună pentru a acoperi decalajul dintre tehnologia avansată de stocare a energiei și infrastructura energetică din lumea reală."
+      "title": "LithTech și Baterino",
+      "subtitle": "Colaborăm pentru a reduce decalajul dintre tehnologia avansată de stocare a energiei și infrastructura energetică din lumea reală."
     },
     "partnerRoles": {
       "lithtech": {
-        "title": "LITHTECH",
-        "subtitle": "DEZVOLTARE TEHNOLOGICĂ",
-        "intro": "LithTech este responsabil pentru dezvoltarea și fabricarea tehnologiilor avansate de stocare a energiei, cu un accent puternic pe excelența tehnologică la nivel de sistem.",
-        "bullet1": "Proiectarea și fabricarea sistemelor de stocare a energiei în baterii",
+        "title": "LithTech",
+        "subtitle": "Dezvoltare Tehnologică",
+        "intro": "LithTech este responsabilă de dezvoltarea și fabricarea tehnologiilor avansate de stocare a energiei, cu un accent puternic pe excelența tehnologică la nivel de sistem.",
+        "bullet1": "Proiectarea și fabricarea sistemelor de stocare a energiei pe bază de baterii",
         "bullet2": "Dezvoltarea arhitecturilor de management și siguranță a bateriilor",
         "bullet3": "Asigurarea conformității cu standardele și certificările internaționale",
-        "bullet4": "Îmbunătățirea performanței, siguranței și inteligenței sistemului"
+        "bullet4": "Îmbunătățirea performanței, siguranței și inteligenței sistemelor"
       },
       "baterino": {
-        "title": "BATERINO",
-        "subtitle": "FACILITATOR DE INFRASTRUCTURĂ",
-        "intro": "Baterino se specializează în transformarea tehnologiei avansate în infrastructură implementabilă, pe termen lung, condus de un angajament față de integrare fără probleme și fiabilitate durabilă.",
+        "title": "Baterino",
+        "subtitle": "Facilitator de Infrastructură",
+        "intro": "Baterino este specializată în transformarea tehnologiei avansate în infrastructură deployabilă pe termen lung, ghidată de angajamentul față de integrare perfectă și fiabilitate durabilă.",
         "bullet1": "Integrarea tehnologiilor LithTech în sisteme energetice complete",
         "bullet2": "Adaptarea soluțiilor la mediile operaționale reale",
         "bullet3": "Gestionarea livrării și coordonării proiectelor",
-        "bullet4": "Suportarea sistemelor pe tot ciclul lor de viață operațional și dincolo"
+        "bullet4": "Suport pentru sisteme pe parcursul întregului ciclu de viață operațional și ulterior"
       }
     },
     "longTerm": {
-      "title": "UN PARTENERIAT CONSTRUIT PENTRU TERMEN LUNG",
-      "subtitle": "DE LA UZINĂ LA APLICAȚII DIN LUMEA REALĂ",
-      "intro": "Această colaborare este concepută să scaleze responsabil — extinzându-se în regiuni, aplicații și tipuri de proiecte noi, menținând în același timp standarde consistente.",
+      "title": "Un Parteneriat Construit pe Termen Lung",
+      "subtitle": "De la Fabrică la Aplicații din Lumea Reală",
+      "intro": "Această colaborare este concepută pentru a scala responsabil — extinzându-se în noi regiuni, aplicații și tipuri de proiecte, menținând în același timp standarde consecvente.",
       "factoryToField": {
-        "title": "DE LA UZINĂ LA TEREN",
-        "description": "Reușesc când operează în siguranță și fiabil în medii reale — în comunități, situri industriale și operațiuni maritime.",
-        "bullet1": "LithTech livrează tehnologie certificată și bancabilă",
-        "bullet2": "Baterino asigură implementare la nivel de infrastructură"
+        "title": "De la Fabrică la Teren",
+        "description": "Reușesc atunci când funcționează în condiții de siguranță și fiabilitate în medii reale — în comunități, situri industriale și operațiuni maritime.",
+        "bullet1": "LithTech furnizează tehnologie certificată și creditabilă",
+        "bullet2": "Baterino asigură implementarea la nivel de infrastructură"
       },
       "sharedStandards": {
-        "title": "STANDARDE PARTAJATE",
-        "description": "Parteneriatul este ghidat de principii comune care asigură că tehnologia și livrarea sunt aliniate de la proiectare la operare.",
-        "bullet1": "Design de sistem cu siguranță pe primul loc",
-        "bullet2": "Performanță pe termen lung în loc de optimizare pe termen scurt",
+        "title": "Standarde Comune",
+        "description": "Parteneriatul este ghidat de principii comune care asigură alinierea tehnologiei și livrării, de la proiectare până la operare.",
+        "bullet1": "Proiectare de sisteme cu prioritate pe siguranță",
+        "bullet2": "Performanță pe termen lung în detrimentul optimizării pe termen scurt",
         "bullet3": "Conformitate cu standardele internaționale",
         "bullet4": "Responsabilitate pe ciclul de viață"
       },
       "appliedAcrossSectors": {
-        "title": "APLICAT ÎN TOATE SECTORII",
-        "description": "Cazuri de utilizare diferite. O singură abordare integrată. Parteneriatul Baterino-LithTech permite implementarea sistematică a stocării în:",
+        "title": "Aplicat în Mai Multe Sectoare",
+        "description": "Cazuri de utilizare diferite. O abordare integrată. Parteneriatul Baterino-LithTech permite implementarea sistematică a stocării în:",
         "bullet1": "Energie comunitară și rezidențială",
         "bullet2": "Infrastructură industrială și comercială",
         "bullet3": "Medii maritime și offshore"
@@ -179,13 +229,13 @@
   },
   "careers": {
     "hero": {
-      "title": "CONSTRUIEȚI VIITORUL CU NOI",
-      "subtitle": "Alăturați-vă unei echipe care modelează proiecte semnificative prin colaborare, inovație și impact."
+      "title": "Construiește Viitorul Alături de Noi",
+      "subtitle": "Alătură-te unei echipe care modelează proiecte cu sens prin colaborare, inovare și impact."
     },
     "search": {
-      "title": "CĂUTAȚI POZIȚII DESCHISE",
-      "description": "Filtrați după țară și departament pentru a găsi roluri disponibile.",
-      "countryLabel": "Țara",
+      "title": "Caută Poziții Disponibile",
+      "description": "Filtrează după țară și departament pentru a găsi rolurile disponibile.",
+      "countryLabel": "Țară",
       "countryPlaceholder": "Alegeți țara",
       "departmentLabel": "Departament",
       "departmentPlaceholder": "Alegeți departamentul",
@@ -200,64 +250,148 @@
       },
       "departments": {
         "engineering": "Inginerie",
-        "projectManagement": "Management de proiect",
+        "projectManagement": "Management de Proiect",
         "operations": "Operațiuni",
-        "researchInnovation": "Cercetare și inovație",
-        "corporateServices": "Servicii corporative"
+        "researchInnovation": "Cercetare & Inovare",
+        "corporateServices": "Servicii Corporative"
       }
     },
     "culture": {
-      "title": "ÎNVĂȚAȚI. CREȘTEȚI. APARȚINEȚI.",
-      "subtitle": "Echipa noastră prosperă într-un mediu de sprijin bazat pe egalitate și învățare continuă."
+      "title": "ÎNVAȚĂ. CREȘTE. APARȚII.",
+      "subtitle": "Echipele noastre prosperă într-un mediu de susținere bazat pe egalitate și învățare continuă."
     },
     "noPositions": {
-      "title": "Nicio poziție deschisă în acest moment",
-      "body": "Nu avem roluri disponibile în prezent, dar suntem mereu bucuroși să cunoaștem talente noi.",
+      "title": "Nicio Poziție Disponibilă în Acest Moment",
+      "body": "Nu avem roluri disponibile în prezent, dar suntem întotdeauna bucuroși să cunoaștem noi talente.",
       "ctaPrefix": "Dacă doriți să fiți luat în considerare pentru oportunități viitoare, trimiteți CV-ul la ",
       "ctaSuffix": " și vă vom păstra în baza noastră de date."
     }
   },
-  "pageTitle": {
-    "home": "Baterino Global",
-    "solutions": "Soluții",
-    "solutionsResidential": "Rezidențial și Comunități",
-    "solutionsIndustrial": "Soluții industriale",
-    "solutionsMaritime": "Soluții maritime",
-    "delivery": "Livrare",
-    "impact": "Impact",
-    "company": "Companie",
-    "companyAboutBaterino": "Despre Baterino",
-    "companyLithtech": "LithTech",
-    "companyPartnership": "Parteneriat",
-    "globalPresence": "Prezență Globală",
-    "insights": "Perspective",
-    "careers": "Cariere",
-    "contact": "Contact",
-    "termsOfUse": "Termeni și Condiții",
-    "privacyPolicy": "Politica de Confidențialitate",
-    "notFound": "Pagina nu a fost găsită"
-  },
   "greeting": {
-    "hello": "Bună!",
-    "message": "Acesta este un mesaj de salut localizat de la API."
+    "hello": "Bună ziua!",
+    "message": "Acesta este un salut localizat din API."
   },
   "home": {
     "ourDivisions": "Diviziile noastre",
-    "hero": { "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
-    "heroSlides": {
-      "slide1": { "title": "Infrastructură de stocare a energiei industriale", "subtitle": "Proiectăm și implementăm infrastructură BESS de la 1MW și peste — concepută pentru performanță la scară de rețea și fiabilitate pe termen lung." },
-      "slide2": { "title": "SOLUȚII PENTRU LOCUINȚE REZIDENȚIALE", "subtitle": "Alimentează-ți casa mai inteligent — sistemele noastre de stocare în baterii mențin luminile aprinse, reduc costurile energetice și maximizează fiecare pic de energie solară produsă de acoperișul tău." },
-      "slide3": { "title": "Suport post-vânzare și ciclu de viață", "subtitle": "Responsabilitatea noastră continuă dincolo de livrare — sprijinind performanța, fiabilitatea și continuitatea sistemului în timp." },
-      "slide4": { "title": "Infrastructură cu scop", "subtitle": "Infrastructură energetică care sprijină comunitățile, serviciile esențiale și reziliența pe termen lung." },
-      "slide5": { "title": "ENERGIE PENTRU SERVICII ESENȚIALE", "subtitle": "Când eșecul nu este o opțiune, menținem în funcțiune facilitățile critice — spitale, flote de ambulanțe, centre de răspuns la urgențe, stații de tratare a apei și utilități publice de care comunitățile depind 24/7." }
+    "hero": {
+      "title": "Activând Stocarea de Energie de Mare Capacitate la Nivel Mondial",
+      "subtitle": "Integrăm tehnologii de energie verde de încredere pentru a oferi soluții fiabile comunităților, industriei, mediului medical și maritim.",
+      "poweredBy": "alimentat de",
+      "poweredByLabel": "Alimentat de:",
+      "technologyPoweredBy": "Tehnologia noastră este alimentată de:",
+      "hoverToExplore": "Trece cursorul pentru a explora"
     },
-    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Aflați mai multe", "exploreMore": "EXPLORE", "tapToLearnMore": "Atinge pentru a afla mai multe" },
-    "baterinoPro": { "introducing": "PREZENTARE", "description": "Divizia noastră dedicată proiectelor industriale.", "industrialDesc": "Divizia noastră dedicată proiectelor industriale.", "medicalDesc": "Divizia noastră dedicată proiectelor medicale și de îngrijire critică.", "maritimeDesc": "Divizia noastră dedicată operațiunilor maritime și offshore." },
-    "whatWeEnable": { "title": "Ce permitem", "subtitle": "Cum vă servim", "intro": "Oferim soluții de stocare a energiei de nivel enterprise care transformă modul în care organizațiile își alimentează operațiunile—de la fiabilitate la scară de rețea până la reziliență critică.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utilități", "utilityDesc": "Stocare la scară de rețea pentru stabilitate și integrare a energiilor regenerabile.", "learnMore": "Aflați mai multe" },
-    "howWeDeliver": { "title": "Cum livrăm", "subtitle": "Procesul nostru principal", "intro": "Baterino permite proiecte de stocare a energiei prin combinarea integrării tehnologice, livrării operaționale și suportului pe termen lung. Eliminăm barierele tehnice, logistice și structurale astfel încât proiectele să treacă de la concept la operațiune cu încredere.", "stage1": "Prima etapă", "stage2": "A doua etapă", "stage3": "A treia etapă", "stage4": "A patra etapă", "step1": "Activare infrastructură", "step1Desc": "Aducem împreună tehnologiile, partenerii și logistica necesare pentru a face proiectele de stocare a energiei implementabile în medii reale.", "step2": "Integrare tehnologică", "step2Desc": "Integrăm stocarea energiei și tehnologiile regenerabile în sisteme coerente, gata pentru site, concepute pentru aplicații rezidențiale, industriale și maritime.", "step3": "Suport post-vânzare și fiabilitate", "step3Desc": "Implicarea noastră continuă dincolo de punerea în funcțiune. Sprijinim performanța sistemului în timp printr-o abordare orientată pe fiabilitate.", "step4": "Suport pentru finanțarea proiectelor", "step4Desc": "Pentru proiecte selectate, Baterino poate sprijini structurarea proiectului și accesul la finanțare prin parteneri financiari strategici — permitând finanțare totală sau parțială unde este cazul." },
-    "builtOnTrust": { "title": "Construit pe încredere. Proiectat să dureze.", "subtitle": "Soluțiile noastre globale", "col1": "O abordare pe termen lung", "col1Desc": "Ne implicăm în proiecte dincolo de livrare. Rolul nostru continuă prin operațiuni, suport și ciclul de viață al sistemului — asigurând continuitate și responsabilitate.", "col2": "Tehnologie pe care te poți baza", "col2Desc": "Baterino integrează tehnologii energetice dovedite și finanțabile selectate pentru performanță, siguranță și viabilitate pe termen lung în medii rezidențiale, industriale și maritime.", "col3": "Suport care durează", "col3Desc": "Prin căi structurate de post-vânzare și suport tehnic, ajutăm să asigurăm fiabilitatea sistemului pe toată durata vieții operaționale.", "col4": "Construit ca infrastructură, nu ca produse", "col4Desc": "Abordăm fiecare proiect ca infrastructură — concepută să se integreze în medii operaționale reale, cadre de reglementare și strategii energetice pe termen lung." },
-    "globalImpact": { "title": "IMPACTUL NOSTRU GLOBAL", "subtitle": "CONSTRUIND REZILIENȚĂ LA NIVEL MONDIAL", "intro": "Accesul la energie fiabilă modelează oportunități, reziliență și creștere. Programele de impact Baterino aplică aceeași expertiză în infrastructură folosită în proiecte industriale și maritime pentru a sprijini comunitățile și serviciile esențiale din întreaga lume.", "alignedGoals": "ALINIAT CU OBIECTIVELE GLOBALE", "alignedGoalsDesc": "Baterino & LithTech își aliniază inițiativele de impact cu Obiectivele de Dezvoltare Durabilă ale Națiunilor Unite, urmărind să contribuie la toate cele 17 obiective până în 2035 prin furnizarea practică de infrastructură energetică.", "viewProgress": "Vedeți progresul nostru", "energyWhere": "ENERGIE UNDE CONTEAZĂ CEL MAI MULT", "energyWhereDesc": "Energia fiabilă este fundamentală pentru serviciile esențiale și viața de zi cu zi. Baterino & LithTech concentrează eforturile de impact acolo unde disponibilitatea energiei afectează direct sănătatea, educația, sistemele de apă și reziliența comunității.\nPrioritizăm proiectele în care fiabilitatea energiei nu este opțională — ci critică.", "beyond": "DINCOLO DE LIVRARE", "beyondDesc": "Munca noastră de impact merge dincolo de instalarea sistemului. Implementăm infrastructură energetică practică și scalabilă concepută pentru condiții reale de operare — susținută prin integrare, implicare locală și responsabilitate pe termen lung. Impactul este obținut prin sisteme care continuă să funcționeze, nu prin implementări unice.", "inclusive": "CONSTRUIREA SISTEMELOR INCLUZIVE", "inclusiveDesc": "Tranziția energetică trebuie să funcționeze în diferite realități. Combinând integrarea tehnologică, suportul pe tot ciclul de viață și designul adaptabil al sistemelor, Baterino ajută comunitățile să construiască sisteme energetice care susțin atât nevoile prezente, cât și creșterea viitoare. Incluziunea vine din infrastructura care poate fi întreținută, extinsă și pe care te poți baza în timp." },
-    "globalPresence": { "title": "Livrând infrastructură energetică în întreaga lume", "subtitle": "Prezența noastră globală" },
+    "heroSlides": {
+      "slide1": {
+        "title": "Infrastructură Industrială de Stocare a Energiei",
+        "subtitle": "Proiectăm și implementăm infrastructură BESS de la 1 MW și peste — concepută pentru performanță la scară de rețea și fiabilitate pe termen lung."
+      },
+      "slide2": {
+        "title": "SOLUȚII PENTRU LOCUINȚE REZIDENȚIALE",
+        "subtitle": "Alimentează-ți locuința mai inteligent — sistemele noastre de stocare prin baterii mențin lumina aprinsă, reduc costurile cu energia și valorifică la maximum fiecare kilowatt de energie solară produs."
+      },
+      "slide3": {
+        "title": "Suport Post-Vânzare și pe Ciclul de Viață",
+        "subtitle": "Responsabilitatea noastră continuă dincolo de livrare — susținând performanța, fiabilitatea și continuitatea sistemului în timp."
+      },
+      "slide4": {
+        "title": "Infrastructură cu Scop",
+        "subtitle": "Infrastructură energetică care sprijină comunitățile, serviciile esențiale și reziliența pe termen lung."
+      },
+      "slide5": {
+        "title": "ENERGIE PENTRU SERVICII ESENȚIALE",
+        "subtitle": "Când defecțiunea nu este o opțiune, menținem funcționarea instalațiilor critice — spitale, flote de ambulanțe, centre de răspuns la urgențe, stații de tratare a apei și utilități publice de care comunitățile depind 24/7."
+      }
+    },
+    "carousel": {
+      "infrastructure": "ACTIVAREA INFRASTRUCTURII",
+      "infrastructureSub": "Sectoare Rezidențial - Industrial - Maritim",
+      "lifecycle": "CICLU DE VIAȚĂ DE ÎNCREDERE",
+      "lifecycleSub": "Monitorizare - Post-Vânzare - Suport Tehnic",
+      "impact": "SCOP ȘI IMPACT",
+      "impactSub": "Educație - Clinici - Ajutor în Dezastre",
+      "learnMore": "Află mai multe",
+      "exploreMore": "EXPLOREAZĂ",
+      "tapToLearnMore": "Atinge pentru a afla mai multe"
+    },
+    "whatWeEnable": {
+      "title": "Ce Activăm",
+      "subtitle": "Cum vă servim",
+      "intro": "Oferim soluții de stocare a energiei de nivel enterprise care transformă modul în care organizațiile își alimentează operațiunile — de la fiabilitate la scară de rețea până la reziliență pentru misiuni critice.",
+      "residential": "REZIDENȚIAL",
+      "residentialTabDesc": "Sisteme de energie pentru locuințe inteligente cu alimentare de rezervă și independență energetică.",
+      "residentialCardTitle": "Soluții de Microrețea Rezidențială",
+      "residentialDesc": "Sisteme de baterii modulare care permit proprietarilor să optimizeze consumul de energie, să reducă dependența de rețea și să mențină curentul în timpul întreruperilor.",
+      "industrial": "INDUSTRIAL BESS",
+      "industrialTabDesc": "Stocare la scară de rețea pentru fabrici, parcuri solare și operațiuni industriale.",
+      "industrialCardTitle": "Soluții de Energie la Scară Industrială",
+      "industrialDesc": "Infrastructură de stocare de mare capacitate optimizată pentru nivelarea sarcinii, stabilizarea microrețelei și gestionarea resurselor energetice distribuite.",
+      "medical": "MEDICAL",
+      "medicalTabDesc": "Soluții fiabile de energie pentru spitale, clinici și instalații de urgență.",
+      "medicalCardTitle": "Sisteme de Energie pentru Îngrijire Critică",
+      "medicalDesc": "Infrastructură de baterii ultra-fiabilă, concepută pentru funcționare fără întreruperi, comutare rapidă a sarcinii și livrare continuă de energie către echipamentele vitale.",
+      "maritime": "MARITIM",
+      "maritimeTabDesc": "Sisteme avansate de baterii pentru electrificarea navelor și operațiuni offshore.",
+      "maritimeCardTitle": "Propulsie și Energie Navală",
+      "maritimeDesc": "Stocare de energie pentru uz greu, proiectată pentru medii cu apă sărată, gestionare dinamică a sarcinii și livrare de energie pe termen lung în operațiuni în larg.",
+      "learnMore": "Află mai multe",
+      "utility": "Utilități",
+      "utilityDesc": "Stocare la scară utilitară pentru stabilitatea rețelei și integrarea energiei regenerabile."
+    },
+    "baterinoPro": {
+      "introducing": "PREZENTĂM",
+      "description": "Divizia noastră dedicată proiectelor industriale.",
+      "industrialDesc": "Divizia noastră dedicată proiectelor industriale.",
+      "medicalDesc": "Divizia noastră dedicată îngrijirii medicale și a pacienților critici.",
+      "maritimeDesc": "Divizia noastră dedicată operațiunilor maritime și offshore."
+    },
+    "howWeDeliver": {
+      "title": "Cum Livrăm",
+      "subtitle": "De la Concept la Operare",
+      "intro": "Baterino activează proiecte de stocare a energiei prin combinarea integrării tehnologice, livrării operaționale și suportului pe termen lung. Eliminăm barierele tehnice, logistice și structurale pentru ca proiectele să poată trece de la concept la operare cu încredere.",
+      "stage1": "Prima etapă",
+      "stage2": "A doua etapă",
+      "stage3": "A treia etapă",
+      "stage4": "A patra etapă",
+      "step1": "Activarea Infrastructurii",
+      "step1Desc": "Reunim tehnologiile, partenerii și logistica necesară pentru a face proiectele de stocare a energiei deployabile în medii reale.",
+      "step2": "Integrarea Tehnologiei",
+      "step2Desc": "Integrăm tehnologiile de stocare a energiei și cele regenerabile în sisteme coerente, gata de instalare, concepute pentru aplicații rezidențiale, industriale și maritime.",
+      "step3": "Post-Vânzare și Fiabilitate",
+      "step3Desc": "Implicarea noastră continuă dincolo de punerea în funcțiune. Susținem performanța sistemului în timp printr-o abordare pe termen lung, orientată spre fiabilitate.",
+      "step4": "Sprijin pentru Finanțarea Proiectelor",
+      "step4Desc": "Pentru proiectele selectate, Baterino poate sprijini structurarea proiectelor și accesul la finanțare prin parteneri financiari strategici — permițând finanțare totală sau parțială acolo unde este oportun."
+    },
+    "builtOnTrust": {
+      "title": "Construit pe Încredere. Proiectat să Dureze.",
+      "subtitle": "Soluțiile noastre globale",
+      "col1": "O Abordare pe Termen Lung",
+      "col1Desc": "Ne implicăm în proiecte dincolo de livrare. Rolul nostru continuă prin operare, suport și ciclul de viață al sistemului — asigurând continuitate și responsabilitate.",
+      "col2": "Tehnologie de încredere în timp",
+      "col2Desc": "Baterino integrează tehnologii energetice dovedite și creditabile, selectate pentru performanță, siguranță și viabilitate pe termen lung în medii rezidențiale, industriale și maritime.",
+      "col3": "Suport durabil",
+      "col3Desc": "Prin căi structurate de post-vânzare și suport tehnic, contribuim la asigurarea fiabilității sistemului pe toată durata sa operațională.",
+      "col4": "Construit ca infrastructură, nu ca produs",
+      "col4Desc": "Abordăm fiecare proiect ca infrastructură — proiectată pentru a se integra în medii operaționale reale, cadre de reglementare și strategii energetice pe termen lung."
+    },
+    "globalImpact": {
+      "title": "Impactul Nostru Global",
+      "subtitle": "Construind Reziliență la Nivel Mondial",
+      "intro": "Accesul la energie fiabilă modelează oportunitatea, reziliența și creșterea. Programele de impact ale Baterino aplică aceeași expertiză în infrastructură utilizată în proiectele industriale și maritime pentru a sprijini comunitățile și serviciile esențiale din întreaga lume.",
+      "alignedGoals": "Aliniat cu Obiectivele Globale",
+      "alignedGoalsDesc": "Baterino & LithTech își aliniază inițiativele de impact cu Obiectivele de Dezvoltare Durabilă ale Națiunilor Unite, urmărind să contribuie la toate cele 17 obiective până în 2035 prin livrarea practică de infrastructură energetică.",
+      "viewProgress": "Vizualizați progresul nostru",
+      "energyWhere": "Energie Acolo Unde Contează Cel Mai Mult",
+      "energyWhereDesc": "Energia fiabilă este fundamentală pentru serviciile esențiale și viața de zi cu zi. Baterino & LithTech concentrează eforturile de impact acolo unde disponibilitatea energiei afectează direct sănătatea, educația, sistemele de apă și reziliența comunității.\nPrioritizăm proiectele unde fiabilitatea energetică nu este opțională — ci critică.",
+      "beyond": "Dincolo de Livrare",
+      "beyondDesc": "Activitatea noastră de impact depășește simpla instalare de sisteme. Implementăm infrastructură energetică practică și scalabilă, concepută pentru condiții reale de operare — susținută prin integrare, implicare locală și responsabilitate pe termen lung. Impactul se obține prin sisteme care continuă să funcționeze, nu prin implementări punctuale.",
+      "inclusive": "Construind Sisteme Incluzive",
+      "inclusiveDesc": "Tranziția energetică trebuie să funcționeze în realități diverse. Prin combinarea integrării tehnologice, suportului pe ciclul de viață și designului adaptabil al sistemelor, Baterino ajută comunitățile să construiască sisteme energetice care să susțină atât nevoile prezente, cât și creșterea viitoare. Incluziunea vine din infrastructura care poate fi întreținută, extinsă și pe care se poate conta în timp."
+    },
+    "globalPresence": {
+      "title": "Livrând Infrastructură Energetică la Nivel Mondial",
+      "subtitle": "Prezența Noastră Globală"
+    },
     "footer": {
       "poweredByLabel": "Alimentat de: ",
       "alignedByLabel": "Aliniat de: ",
@@ -268,16 +402,21 @@
       "contactColumn": "Contact",
       "socialColumn": "Urmărește-ne",
       "aboutUs": "Despre Noi",
-      "aboutUsDesc": "Baterino permite infrastructura de stocare a energiei pentru comunități, industrie și aplicații maritime, integrând tehnologii dovedite de la parteneri precum LithTech cu accent pe fiabilitate, siguranță și performanță pe termen lung.",
+      "aboutUsDesc": "Baterino activează infrastructura de stocare a energiei pentru comunități, industrie și aplicații maritime, integrând tehnologii dovedite de la parteneri precum LithTech, cu accent pe fiabilitate, siguranță și performanță pe termen lung.",
       "localOffices": "Birouri Locale",
       "officesList": "România\nBulgaria\nChina\nIndonesia",
-      "offices": { "romania": "România", "bulgaria": "Bulgaria", "china": "China", "indonesia": "Indonesia" },
+      "offices": {
+        "romania": "România",
+        "bulgaria": "Bulgaria",
+        "china": "China",
+        "indonesia": "Indonesia"
+      },
       "viewMore": "Vezi mai mult",
       "europe": "Europa",
       "asia": "Asia",
       "americas": "Americi",
       "globalContact": "Contact Global",
-      "globalContactDesc": "Pentru întrebări globale, contactați:\ninquiries@baterino.com",
+      "globalContactDesc": "Pentru solicitări globale, contactați:\ninquiries@baterino.com",
       "socialImpact": "Impact Social",
       "socialImpactDesc": "Pentru parteneriate și inițiative de impact social, contactați:\nsocial@baterino.com",
       "copyright": "© {{year}} Baterino. Toate drepturile rezervate."
@@ -285,361 +424,368 @@
   },
   "residential": {
     "hero": {
-        "title": "STOCARE DE ENERGIE REZIDENȚIALĂ",
-        "subtitle": "De la case individuale la comunități întregi, Baterino permite soluții de stocare a energiei rezidențiale construite pentru reziliență, fiabilitate și impact pe termen lung."
-      },
-      "individual": {
-        "title": "STOCARE REZIDENȚIALĂ PENTRU UTILIZATORI INDIVIDUALI",
-        "desc1": "Sistemele de stocare a energiei rezidențiale permit gospodăriilor individuale să stocheze energie și să o utilizeze când este necesar. Aceste sisteme sunt proiectate să funcționeze independent sau în combinație cu surse de energie regenerabilă, cum ar fi energia solară.",
-        "desc2": "Baterino permite soluții de stocare rezidențială ca parte a sistemelor integrate de energie casnică, adaptate la condițiile locale și modelele de utilizare.",
-        "power": "~5kW până la ~16 kW putere instalată per cabinet",
-        "ourFocus": "FOCUSUL NOSTRU",
-        "focusIntro": "Ne concentrăm pe calitatea și fiabilitatea sistemului, nu doar pe livrarea echipamentelor.",
-        "focus1": "Sisteme de baterii rezidențiale fiabile și sigure",
-        "focus2": "Integrare cu generarea regenerabilă",
-        "focus3": "Configurații scalabile pentru diferite nevoi ale gospodăriei",
-        "focus4": "Performanță și suport pe termen lung",
-        "keyAdvantages": "AVANTAJE CHEIE",
-        "keyAdvantagesIntro": "Stocarea energiei rezidențiale consolidează fiabilitatea, controlul și reziliența energetică pe termen lung.",
-        "advantage1": "Energie fiabilă în timpul întreruperilor și instabilității rețelei",
-        "advantage2": "Independență energetică mai mare și control asupra utilizării energiei",
-        "advantage3": "Utilizare optimizată a energiei regenerabile prin stocarea energiei",
-        "advantage4": "Gestionare îmbunătățită a costurilor prin reducerea expunerii la tarifele de vârf"
-      },
-      "microgrids": {
-        "title": "MICROREŢELE PENTRU COMUNITĂȚILE NOASTRE",
-        "desc1": "Microrețelele oferă comunităților sisteme de energie localizate și fiabile care pot funcționa independent sau în paralel cu rețeaua principală. Combinând generarea, stocarea și controlul inteligent, microrețelele permit accesul la energie, reziliență și sustenabilitate pe termen lung.",
-        "desc2": "Baterino permite microrețele comunitare ca sisteme de infrastructură, proiectate să sprijine medii operaționale reale și utilizare pe termen lung.",
-        "power": "~50kW până la ~5 MW bazat pe configurația microrețelei",
-        "ourFocus": "FOCUSUL NOSTRU",
-        "focusIntro": "Fiecare microreţea este structurată în jurul nevoilor specifice ale comunității pe care o deservește.",
-        "focus1": "Design de sistem de grad infrastructură",
-        "focus2": "Integrarea stocării, generării și controlului",
-        "focus3": "Scalabilitate și operabilitate pe termen lung",
-        "focus4": "Adaptare la condițiile de reglementare și de mediu locale",
-        "keyAdvantages": "AVANTAJE CHEIE",
-        "advantagesIntro": "Microrețelele susțin atât nevoile energetice zilnice, cât și serviciile critice în timpul întreruperilor.",
-        "advantage1": "Comunități rezidențiale și sate",
-        "advantage2": "Insule și locații îndepărtate sau în afara rețelei",
-        "advantage3": "Spitale, școli și facilități educaționale",
-        "advantage4": "Apă, canalizare, servicii esențiale și centre comunitare"
-      }
+      "title": "Stocare de Energie Rezidențială",
+      "subtitle": "De la locuințe individuale la întregi comunități, Baterino activează soluții de stocare a energiei rezidențiale construite pentru reziliență, fiabilitate și impact pe termen lung."
     },
+    "individual": {
+      "title": "Stocare Rezidențială pentru Utilizatori Individuali",
+      "desc1": "Sistemele de stocare a energiei rezidențiale permit gospodăriilor individuale să stocheze energia și să o utilizeze atunci când este nevoie. Aceste sisteme sunt proiectate să funcționeze independent sau în combinație cu surse de energie regenerabilă, cum ar fi energia solară.",
+      "desc2": "Baterino activează soluții de stocare rezidențială ca parte a sistemelor integrate de energie domestică, adaptate condițiilor locale și tiparelor de utilizare.",
+      "power": "~5 kW până la ~16 kW putere instalată per cabinet",
+      "ourFocus": "Concentrarea Noastră",
+      "focusIntro": "Ne concentrăm pe calitatea și fiabilitatea sistemului, nu doar pe livrarea echipamentelor.",
+      "focus1": "Sisteme de baterii rezidențiale fiabile și sigure",
+      "focus2": "Integrare cu generarea de energie regenerabilă",
+      "focus3": "Configurații scalabile pentru diferite nevoi ale gospodăriei",
+      "focus4": "Performanță și suport pe termen lung",
+      "keyAdvantages": "Avantaje Cheie",
+      "keyAdvantagesIntro": "Stocarea de energie rezidențială consolidează fiabilitatea, controlul și reziliența energetică pe termen lung.",
+      "advantage1": "Alimentare fiabilă în timpul întreruperilor și instabilității rețelei",
+      "advantage2": "Independență energetică mai mare și control asupra consumului de energie",
+      "advantage3": "Utilizare optimizată a energiei regenerabile prin stocare",
+      "advantage4": "Gestionare îmbunătățită a costurilor prin reducerea expunerii la tarifele de vârf"
+    },
+    "microgrids": {
+      "title": "Microrețele pentru Comunitățile Noastre",
+      "desc1": "Microrețelele oferă comunităților sisteme energetice locale fiabile, care pot funcționa independent sau în paralel cu rețeaua principală. Prin combinarea generării, stocării și controlului inteligent, microrețelele asigură accesul la energie, reziliența și sustenabilitatea pe termen lung.",
+      "desc2": "Baterino activează microrețele comunitare ca sisteme de infrastructură, proiectate pentru a susține medii operaționale reale și utilizarea pe termen lung.",
+      "power": "~50 kW până la ~5 MW în funcție de configurația microrețelei",
+      "ourFocus": "Concentrarea Noastră",
+      "focusIntro": "Fiecare microrețea este structurată în funcție de nevoile specifice ale comunității pe care o deservește.",
+      "focus1": "Proiectare de sisteme la nivel de infrastructură",
+      "focus2": "Integrarea stocării, generării și controlului",
+      "focus3": "Scalabilitate și operabilitate pe termen lung",
+      "focus4": "Adaptare la condițiile locale de reglementare și de mediu",
+      "keyAdvantages": "Avantaje Cheie",
+      "advantagesIntro": "Microrețelele susțin atât nevoile energetice zilnice, cât și serviciile critice în timpul întreruperilor.",
+      "advantage1": "Comunități rezidențiale și sate",
+      "advantage2": "Insule și locații îndepărtate sau izolate de rețea",
+      "advantage3": "Spitale, școli și instituții de învățământ",
+      "advantage4": "Apă, salubritate, servicii esențiale și centre comunitare"
+    }
+  },
   "industrial": {
     "hero": {
-      "title": "INFRASTRUCTURĂ DE STOCARE ENERGIE INDUSTRIALĂ",
-      "subtitle": "Baterino permite soluții de stocare a energiei scalabile și de înaltă performanță pentru facilități industriale, operațiuni comerciale și medii conectate la rețea."
+      "title": "Infrastructură Industrială de Stocare a Energiei",
+      "subtitle": "Baterino activează soluții de stocare a energiei scalabile și de înaltă performanță pentru instalații industriale, operațiuni comerciale și medii conectate la rețea."
     },
     "cabinet": {
-      "title": "SISTEME DE STOCARE INDUSTRIALĂ BAZATE PE DULAPURI",
-      "desc1": "Sistemele de stocare a energiei bazate pe dulapuri permit o abordare flexibilă și modulară pentru stocarea energiei industriale. Sunt concepute pentru facilități care necesită capacitate scalabilă, utilizare eficientă a spațiului disponibil și integrare cu sistemele electrice existente.",
-      "desc2": "Baterino permite sisteme bazate pe dulapuri ca componente de infrastructură integrată, adaptate la nevoile electrice, operaționale și de reglementare ale fiecărui sit.",
-      "power": "~30 kW până la ~220 kW per dulap putere instalată",
-      "ourFocus": "FOCUSUL NOSTRU",
+      "title": "Sisteme Industriale de Stocare pe Bază de Cabinete",
+      "desc1": "Sistemele de stocare a energiei pe bază de cabinete permit o abordare flexibilă și modulară a stocării industriale a energiei. Sunt concepute pentru instalații care necesită capacitate scalabilă, utilizare eficientă a spațiului disponibil și integrare cu sistemele electrice existente.",
+      "desc2": "Baterino activează sistemele pe bază de cabinete ca componente de infrastructură integrate, adaptate la nevoile electrice, operaționale și de reglementare ale fiecărui amplasament.",
+      "power": "~30 kW până la ~220 kW putere instalată per cabinet",
+      "ourFocus": "Concentrarea Noastră",
       "focus1": "Arhitectură de sistem modulară și scalabilă",
-      "focus2": "Configurații containerizate sau răcite cu lichid",
-      "focus3": "Standarde înalte de siguranță și protecție integrată",
+      "focus2": "Configurații containerizate sau cu răcire lichidă",
+      "focus3": "Standarde ridicate de siguranță și protecție integrată",
       "focus4": "Ușurință în instalare și întreținere",
-      "applications": "APLICAȚII TIPICE",
-      "app1": "Facilități comerciale și industriale",
+      "applications": "Aplicații Tipice",
+      "app1": "Instalații comerciale și industriale",
       "app2": "Fabrici de producție",
       "app3": "Centre logistice",
-      "app4": "Operațiuni cu spațiu limitat"
+      "app4": "Operațiuni în spații restrânse"
     },
     "containerized": {
-      "title": "SISTEME DE STOCARE CONTAINERIZATE & LA SCARĂ LARGĂ (BESS)",
-      "desc1": "Sistemele de stocare a energiei cu baterii containerizate (BESS) permit implementări de capacitate și putere mai mari pentru complexe industriale, sisteme conectate la rețea și infrastructură critică. Aceste sisteme sunt proiectate ca unități de infrastructură energetică autonome, capabile să funcționeze în medii industriale și exterioare solicitante.",
-      "desc2": "Baterino permite BESS containerizate ca infrastructură de putere pe termen lung, cu capacitate de instalare temporară.",
-      "power": "~0.5 MW până la ~2.5 MW per container / bloc de sistem putere instalată",
-      "ourFocus": "FOCUSUL NOSTRU",
-      "focus1": "Arhitecturi de sistem containerizate, gata de utilizare",
+      "title": "Sisteme de Stocare Containerizate și de Mare Scară (BESS)",
+      "desc1": "Sistemele containerizate de stocare a energiei pe bază de baterii (BESS) permit implementări de capacitate și putere mai ridicate pentru complexe industriale, sisteme conectate la rețea și infrastructuri critice. Aceste sisteme sunt proiectate ca unități autonome de infrastructură energetică, capabile să funcționeze în medii exterioare și industriale solicitante.",
+      "desc2": "Baterino activează BESS containerizate ca infrastructură de energie pe termen lung, cu posibilitate de instalare temporară.",
+      "power": "~0,5 MW până la ~2,5 MW putere instalată per container / bloc de sistem",
+      "ourFocus": "Concentrarea Noastră",
+      "focus1": "Arhitecturi de sistem containerizate, la cheie",
       "focus2": "Configurații de energie și putere de mare capacitate",
-      "focus3": "Management termic integrat și protecție împotriva incendiilor",
-      "focus4": "Control și monitorizare preconfigurată pentru operare la distanță",
-      "applications": "APLICAȚII",
+      "focus3": "Management termic integrat și protecție la incendiu",
+      "focus4": "Control și monitorizare preconfigurate pentru operare la distanță",
+      "applications": "Aplicații",
       "app1": "Complexe industriale și operațiuni cu consum intensiv de energie",
       "app2": "Proiecte conectate la rețea și adiacente utilităților",
-      "app3": "Stabilizare și integrare energie regenerabilă",
-      "app4": "Reducerea vârfurilor, gestionarea sarcinii și arbitraj energetic",
-      "app5": "Putere de rezervă pentru operațiuni industriale critice"
+      "app3": "Stabilizarea și integrarea energiei regenerabile",
+      "app4": "Reducerea vârfurilor de sarcină, managementul încărcării și arbitraj energetic",
+      "app5": "Alimentare de rezervă pentru operațiuni industriale critice"
     }
   },
   "maritime": {
     "hero": {
-      "title": "INFRASTRUCTURĂ DE STOCARE ENERGIE MARITIMĂ (EES)",
-      "subtitle": "Baterino permite sisteme de stocare a energiei de grad marin concepute pentru siguranță, performanță și operare pe termen lung pe nave și în medii offshore."
+      "title": "Infrastructură Maritimă de Stocare a Energiei (EES)",
+      "subtitle": "Baterino activează sisteme de stocare a energiei de calitate marină, proiectate pentru siguranță, performanță și operare pe termen lung la bordul navelor și în mediile offshore."
     },
     "systems": {
-      "title": "SISTEME DE STOCARE ENERGIE CU BATERII MARINE (ESS)",
-      "intro": "Baterino permite sisteme modulare de stocare a energiei cu baterii marine construite în jurul:",
-      "feature1": "Chimie cu fosfat de fier și litiu (LFP) pentru siguranță și longevitate sporite",
-      "feature2": "Arhitecturi DC de înaltă tensiune potrivite pentru sistemele de energie marine",
+      "title": "Sisteme Marine de Stocare a Energiei pe Baterii (ESS)",
+      "intro": "Baterino activează sisteme modulare marine de stocare a energiei pe baterii construite în jurul:",
+      "feature1": "Chimia Litiu Fosfat de Fier (LFP) pentru siguranță sporită și longevitate",
+      "feature2": "Arhitecturi DC de înaltă tensiune adecvate pentru sistemele de alimentare marină",
       "feature3": "Module stivuibile care permit dimensionarea flexibilă a sistemului",
       "feature4": "Monitorizare și control inteligent",
-      "conclusion": "Aceste sisteme sunt concepute pentru a funcționa în mod fiabil în condiții marine solicitante, inclusiv vibrații, umiditate, salinitate și medii corozive.",
-      "safetyTitle": "SIGURANȚĂ, CONFORMITATE ȘI FIABILITATE",
-      "safetyIntro": "Stocarea energiei maritime necesită cele mai înalte standarde de siguranță. Permitem sisteme concepute cu:",
-      "safety1": "Design de celule și module de baterii care prioritizează stabilitatea termică",
+      "conclusion": "Aceste sisteme sunt concepute să funcționeze fiabil în condiții marine solicitante, inclusiv vibrații, umiditate, salinitate și medii corozive.",
+      "safetyTitle": "Siguranță, Conformitate și Fiabilitate",
+      "safetyIntro": "Stocarea de energie maritimă impune cele mai înalte standarde de siguranță. Activăm sisteme proiectate cu:",
+      "safety1": "Design al celulelor și modulelor de baterii cu prioritate pe stabilitatea termică",
       "safety2": "Sisteme de monitorizare și control verificate pentru uz marin",
       "safety3": "Construcție rezistentă la șocuri și vibrații",
       "safety4": "Carcase rezistente la coroziune",
-      "safety5": "Aliniere cu clasificarea marină și conformitatea"
+      "safety5": "Conformitate cu clasificările și reglementările marine"
     },
     "delivery": {
-      "title": "CUM LIVRĂM",
-      "step1": "Integrare de Sisteme & Inginerie",
-      "step1Desc": "Aliniem tehnologiile, partenerii și arhitectura sistemului pentru a crea soluții energetice integrate care sunt solid din punct de vedere tehnic, conforme și gata pentru implementare în lumea reală.",
-      "step2": "Adaptare la Contextul Operațional",
-      "step2Desc": "Adaptăm fiecare sistem la mediul său de operare, asigurându-ne că proiectele îndeplinesc cerințe tehnice, de reglementare și operaționale specifice în diferite aplicații.",
+      "title": "Cum Livrăm",
+      "step1": "Integrarea Sistemului și Inginerie",
+      "step1Desc": "Aliniem tehnologiile, partenerii și arhitectura sistemului pentru a crea soluții energetice integrate, solide tehnic, conforme și pregătite pentru implementare în lumea reală.",
+      "step2": "Adaptarea la Contextul Operațional",
+      "step2Desc": "Adaptăm fiecare sistem la mediul său de operare, asigurând că proiectele îndeplinesc cerințele tehnice, de reglementare și operaționale specifice pentru diferite aplicații.",
       "step3": "Implementare și Punere în Funcțiune",
-      "step3Desc": "Sprijinim instalarea și punerea în funcțiune pentru a ne asigura că sistemele sunt implementate corect, testate amănunțit și pregătite pentru o operare stabilă și fiabilă din prima zi.",
-      "step4": "Fiabilitate pe Termen Lung și Suport",
-      "step4Desc": "Rămânem implicați după punerea în funcțiune, sprijinind performanța sistemului prin căi structurate de post-vânzare și o abordare concentrată pe fiabilitate pe termen lung.",
-      "step5": "Coordonare cu Partenerii și Execuție",
-      "step5Desc": "Coordonăm cu furnizorii de tehnologie, integratorii și partenerii locali pentru a asigura o execuție fără probleme, responsabilitate și succes operațional pe termen lung."
+      "step3Desc": "Sprijinim instalarea și punerea în funcțiune pentru a asigura că sistemele sunt implementate corect, testate temeinic și pregătite pentru o funcționare stabilă și fiabilă din prima zi.",
+      "step4": "Fiabilitate și Suport pe Termen Lung",
+      "step4Desc": "Rămânem implicați dincolo de punerea în funcțiune, susținând performanța sistemului prin căi structurate de post-vânzare și o abordare pe termen lung, orientată spre fiabilitate.",
+      "step5": "Coordonarea și Execuția Partenerilor",
+      "step5Desc": "Coordonăm cu furnizorii de tehnologie, integratorii și partenerii locali pentru a asigura execuție fluentă, responsabilitate și succes operațional pe termen lung."
     },
     "applications": {
-      "title": "APLICAȚII MARITIME"
+      "title": "Aplicații Maritime Tipice",
+      "subtitle": "Aplicabil pe diverse nave maritime și operațiuni offshore cu cerințe ridicate de siguranță și performanță.",
+      "app1": "Remorcher",
+      "app2": "Navă Turistică",
+      "app3": "Feribot pentru Mașini",
+      "app4": "Fermă Piscicolă",
+      "app5": "Navă de Marfă MPV",
+      "app6": "Navă de Aprovizionare Offshore"
     }
   },
   "delivery": {
     "hero": {
-      "title": "CADRUL NOSTRU DE LIVRARE",
-      "subtitle": "Baterino permite proiecte de stocare a energiei prin integrare, coordonare și suport pe termen lung — transformând tehnologii complexe în infrastructură fiabilă."
+      "title": "Cadrul Nostru de Livrare",
+      "subtitle": "Baterino activează proiecte de stocare a energiei prin integrare, coordonare și suport pe termen lung — transformând tehnologii complexe în infrastructură fiabilă."
     },
     "framework": {
-      "title": "CADRUL NOSTRU DE LIVRARE",
-      "intro": "Baterino livrează infrastructură energetică printr-un cadru structurat, repetabil, conceput pentru a reduce riscurile și a permite performanța pe termen lung.",
+      "title": "Cadrul Nostru de Livrare",
+      "intro": "Baterino livrează infrastructură energetică printr-un cadru structurat și repetabil, conceput pentru a reduce riscurile și a asigura performanța pe termen lung.",
       "item1": {
-        "title": "Abilitarea Infrastructurii",
-        "desc": "Reunim tehnologiile, partenerii și logistica necesare pentru a face proiectele de stocare a energiei implementabile.",
+        "title": "Activarea Infrastructurii",
+        "desc": "Reunim tehnologiile, partenerii și logistica necesară pentru a face proiectele de stocare a energiei deployabile.",
         "includes": "Aceasta include:",
-        "point1": "Selecția tehnologiei alineată cu nevoile proiectului",
-        "point2": "Import, distribuție și coordonarea aprovizionării",
+        "point1": "Selectarea tehnologiei aliniată cu nevoile proiectului",
+        "point2": "Coordonarea importului, distribuției și aprovizionării",
         "point3": "Arhitectura sistemului și pregătirea proiectului",
         "footer": "Rolul nostru este de a elimina barierele — tehnice, logistice și structurale — înainte ca acestea să devină riscuri."
       },
       "item2": {
         "title": "Integrarea Tehnologiei",
-        "desc": "Integrăm tehnologiile de stocare a energiei și regenerabile în sisteme coerente, gata pentru sit, proiectate pentru aplicații rezidențiale, industriale și maritime.",
+        "desc": "Integrăm tehnologiile de stocare a energiei și cele regenerabile în sisteme coerente, gata de instalare, concepute pentru aplicații rezidențiale, industriale și maritime.",
         "includes": "Aceasta include:",
-        "point1": "Proiectarea și ingineria sistemelor",
-        "point2": "Proiectare pentru conformitate și performanță",
-        "point3": "Compatibilitate între mai multe tehnologii și ecosisteme de furnizori",
+        "point1": "Proiectarea și ingineria sistemului",
+        "point2": "Design pentru conformitate și performanță",
+        "point3": "Compatibilitate între multiple tehnologii și ecosisteme de furnizori",
         "point4": "Integrare electrică și software",
         "footer": ""
       },
       "item3": {
-        "title": "Post-vânzare și Fiabilitate",
-        "desc": "Implicarea noastră continuă mult dincolo de punerea în funcțiune. Sprijinim sistemele pe toată durata lor operațională prin:",
+        "title": "Post-Vânzare și Fiabilitate",
+        "desc": "Implicarea noastră continuă mult dincolo de punerea în funcțiune. Susținem sistemele pe toată durata de viață operațională prin:",
         "includes": "",
-        "point1": "Stabilirea căilor structurate de suport și service",
-        "point2": "Sprijinirea continuității performanței și stabilității sistemului",
-        "point3": "Aplicarea unei abordări de livrare orientate pe ciclul de viață",
-        "footer": "Fiabilitatea nu este o caracteristică. Este rezultatul angajamentului pe termen lung."
+        "point1": "Stabilirea unor căi structurate de suport și service",
+        "point2": "Susținerea continuității performanței și stabilității sistemului",
+        "point3": "Aplicarea unei abordări de livrare orientate spre ciclul de viață",
+        "footer": "Fiabilitatea nu este o caracteristică. Este rezultatul unui angajament pe termen lung."
       },
       "item4": {
-        "title": "Structurarea Proiectelor și Suport Finanțare",
-        "desc": "Pentru proiecte selectate, Baterino poate sprijini structurarea proiectelor și accesul la finanțare prin parteneri financiari strategici.",
-        "capability": "Această capacitate poate include:",
-        "point1": "Coordonare cu finanțarea instituțională și de proiect",
-        "point2": "Suport pentru structuri bancabile și reglementare",
+        "title": "Structurarea Proiectului și Sprijin pentru Finanțare",
+        "desc": "Pentru proiectele selectate, Baterino poate sprijini structurarea proiectelor și accesul la finanțare prin parteneri financiari strategici.",
+        "capability": "Această capabilitate poate include:",
+        "point1": "Coordonarea cu finanțarea instituțională și de proiecte",
+        "point2": "Sprijin pentru structuri creditabile și conformitate cu reglementările",
         "point3": "Alinierea standardelor globale cu execuția locală",
         "footer": ""
       }
     },
     "consistency": {
-      "title": "CONSTRUIT PENTRU CONSISTENȚĂ",
-      "intro": "Baterino livrează infrastructură energetică printr-o abordare disciplinată, repetabilă, care se aplică în proiecte, sectoare și regiuni.",
+      "title": "Construit pentru Consistență",
+      "intro": "Baterino livrează infrastructură energetică printr-o abordare disciplinată și repetabilă, aplicabilă în proiecte, sectoare și regiuni.",
       "col1": {
-        "title": "Capabilități Transversale",
-        "desc": "În toate etapele de livrare, Baterino aduce capabilități concepute pentru scară și replicabilitate:",
-        "subtitle": "Aceste capabilități includ:",
-        "point1": "Coordonare între mai multe părți interesate",
+        "title": "Capacități Transversale",
+        "desc": "Pe toate etapele de livrare, Baterino aduce capacități concepute pentru scalabilitate și replicabilitate:",
+        "subtitle": "Aceste capacități includ:",
+        "point1": "Coordonarea mai multor părți interesate",
         "point2": "Integrarea cerințelor de reglementare",
         "point3": "Adaptarea cerințelor de reglementare și conformitate",
-        "point4": "Implementare în diverse tipuri de proiecte și geografii"
+        "point4": "Implementare în diverse tipuri de proiecte și zone geografice"
       },
       "col2": {
         "title": "Un Angajament pe Termen Lung",
-        "desc": "Sistemele de stocare a energiei sunt construite pentru a funcționa ani de zile — în multe cazuri peste un deceniu. Lucrarea noastră de infrastructură are în vedere acest orizont:",
+        "desc": "Sistemele de stocare a energiei sunt construite pentru a funcționa ani de zile — în multe cazuri, peste un deceniu. Infrastructura noastră funcționează cu acest orizont de timp în minte:",
         "subtitle": "Angajamentul nostru include:",
         "point1": "Operabilitate pe termen lung",
-        "point2": "Suport pe ciclul de viață și continuitatea sistemului",
-        "point3": "Continuitatea sistemului",
-        "footer": "Responsabilitatea noastră nu se termină la punerea în funcțiune — continuă pe tot ciclul de viață al sistemului."
+        "point2": "Suport pe ciclul de viață și continuitate a sistemului",
+        "point3": "Întreținere și optimizare continuă",
+        "footer": "Responsabilitatea noastră nu se încheie la punerea în funcțiune — continuă pe tot parcursul ciclului de viață al sistemului."
       },
       "col3": {
-        "title": "Livrare în Toate Sectoarele",
-        "desc": "Cadrul de livrare Baterino scalează în mai multe sectoare:",
+        "title": "Livrare în Mai Multe Sectoare",
+        "desc": "Cadrul de livrare Baterino se extinde în mai multe sectoare:",
         "subtitle": "Capacitățile noastre includ:",
-        "point1": "Comunități — permiterea infrastructurii reziliente, comunitare și în afara rețelei",
-        "point2": "Industrial — sprijinirea facilităților cu performanță, fiabilitate și scară",
-        "point3": "Maritim — livrarea sistemelor care îndeplinesc cerințele de siguranță și operaționale",
+        "point1": "Comunități — activarea infrastructurii reziliente, comunitare și izolate de rețea",
+        "point2": "Industrial — susținerea instalațiilor cu performanță, fiabilitate și scară",
+        "point3": "Maritim — livrarea de sisteme care îndeplinesc cerințele de siguranță și operaționale",
         "point4": "Piețe emergente — implementarea infrastructurii în medii unde fiabilitatea nu este opțională"
       }
     }
   },
   "impact": {
     "hero": {
-      "title": "IMPACT GLOBAL",
-      "subtitle": "Baterino construiește sisteme energetice care susțin servicii esențiale și consolidează reziliența comunității în întreaga lume."
+      "title": "Impact Global",
+      "subtitle": "Baterino construiește sisteme energetice care susțin serviciile esențiale și consolidează reziliența comunităților din întreaga lume."
     },
     "essentialServices": {
-      "title": "ENERGIE PENTRU SERVICII ESENȚIALE",
-      "intro": "Energia fiabilă este fundamentală pentru asistența medicală, educație, infrastructura de apă și alte servicii comunitare critice. Baterino & LithTech concentrează eforturile de impact acolo unde disponibilitatea energiei afectează direct sănătatea, educația și reziliența comunității.",
-      "box1": "ASISTENȚĂ MEDICALĂ ȘI FACILITĂȚI MEDICALE",
-      "box2": "CENTRE DE EDUCAȚIE ȘI FORMARE",
-      "box3": "SISTEME DE APĂ ȘI SANITAȚIE",
-      "box4": "CENTRE COMUNITARE ȘI SERVICII DE URGENȚĂ"
+      "title": "Energie pentru Servicii Esențiale",
+      "intro": "Energia fiabilă este fundamentală pentru sănătate, educație, infrastructura de apă și alte servicii comunitare critice. Baterino & LithTech concentrează eforturile de impact acolo unde disponibilitatea energiei afectează direct sănătatea, educația și reziliența comunității.",
+      "box1": "Unități de Asistență Medicală și Sănătate",
+      "box2": "Centre de Educație și Formare",
+      "box3": "Sisteme de Apă și Salubritate",
+      "box4": "Centre Comunitare și Servicii de Urgență"
     },
     "infrastructure": {
-      "title": "INFRASTRUCTURĂ CU SCOP",
-      "intro": "Baterino activează peste 20 de unități de micro-rețele independente, ajutând sate și alte industrii. Impactul este creat prin infrastructură care continuă să funcționeze în timp."
+      "title": "Infrastructură cu Scop",
+      "intro": "Baterino activează peste 20 de unități de microrețea autonomă, sprijinind sate și alte industrii diverse. Impactul se creează prin infrastructuri care continuă să funcționeze în timp."
     },
     "community": {
-      "title": "ENERGIE COMUNITARĂ ȘI PROGRAME SOCIALE",
-      "intro": "Susținem sisteme energetice orientate spre comunitate — construind infrastructură pentru stocare și utilizarea micro-rețelelor. Proiectele prioritizează fiabilitatea, mentenabilitatea și scalabilitatea viitoare."
+      "title": "Energie Comunitară și Programe Sociale",
+      "intro": "Susținem sisteme energetice orientate spre comunitate — construind infrastructuri pentru stocarea energiei și microrețele. Proiectele prioritizează fiabilitatea, posibilitatea de întreținere și scalabilitatea viitoare."
     },
     "globalAlignment": {
-      "title": "ALINIERE GLOBALĂ ȘI IMPACT PE TERMEN LUNG",
-      "intro": "Baterino își aliniază inițiativele de impact cu Obiectivele de Dezvoltare Durabilă ale Organizației Națiunilor Unite, angajându-se să contribuie prin livrarea responsabilă a infrastructurii energetice. În toate proiectele sale, Baterino aplică soluții pe termen lung, concentrate pe fiabilitate, care susțin accesul la energie, servicii esențiale și comunități reziliente.",
-      "logoText": "Baterino contribuie la Obiectivele de Dezvoltare Durabilă ale ONU prin furnizarea de infrastructură energetică fiabilă acolo unde are influență directă.",
-      "goal7": "ENERGIE CURATĂ ȘI LA PREȚURI ACCESIBILE",
-      "goal9": "INDUSTRIE, INOVAȚIE ȘI INFRASTRUCTURĂ",
-      "goal11": "ORAȘE ȘI COMUNITĂȚI DURABILE",
-      "goal13": "ACȚIUNE CLIMATICĂ",
-      "goal17": "PARTENERIATE PENTRU OBIECTIVE"
+      "title": "Aliniere Globală și Impact pe Termen Lung",
+      "intro": "Baterino își aliniază inițiativele de impact cu Obiectivele de Dezvoltare Durabilă ale Națiunilor Unite, angajându-se să contribuie prin livrarea responsabilă de infrastructură energetică. În cadrul proiectelor sale, Baterino aplică soluții pe termen lung, orientate spre fiabilitate, care susțin accesul la energie, serviciile esențiale și comunitățile reziliente.",
+      "logoText": "Baterino contribuie la ODD-urile ONU prin livrarea de infrastructură energetică fiabilă acolo unde are influență directă.",
+      "goal7": "Energie Curată\nși la Prețuri Accesibile",
+      "goal9": "Industrie, Inovare și Infrastructură",
+      "goal11": "Orașe și Comunități Durabile",
+      "goal13": "Acțiune Climatică",
+      "goal17": "Parteneriate pentru Obiective"
     }
   },
   "aboutBaterino": {
     "hero": {
-      "title": "About Baterino",
-      "subtitle": "Permitem infrastructură energetică construită pentru a funcționa și construită pentru a dura."
+      "title": "Despre Baterino",
+      "subtitle": "Activăm infrastructuri energetice construite pentru a performa și construite pentru a dura."
     },
     "whoWeAre": {
-      "title": "CINE SUNTEM",
-      "intro": "Baterino este un facilitator global de infrastructură energetică concentrat pe livrarea de soluții fiabile de stocare a energiei pentru comunități, industrie și medii maritime.",
-      "description": "Operăm la intersecția integrării tehnologice, livrării de proiecte și suportului pe termen lung al sistemului — reunind tehnologii dovedite, execuție locală și responsabilitate pe tot ciclul de viață pentru a transforma proiecte energetice complexe în infrastructură funcțională.",
-      "role": "Baterino nu este un producător de produse. Suntem un integrator și partener de livrare, permițând sisteme energetice concepute să funcționeze în siguranță și fiabil în timp."
+      "title": "Cine Suntem",
+      "intro": "Baterino este un facilitator global de infrastructură energetică, axat pe furnizarea de soluții fiabile de stocare a energiei pentru comunități, industrie și medii maritime.",
+      "description": "Operăm la intersecția integrării tehnologice, livrării de proiecte și suportului de sistem pe termen lung — reunind tehnologii dovedite, execuție locală și responsabilitate pe ciclul de viață pentru a transforma proiecte energetice complexe în infrastructură funcțională.",
+      "role": "Baterino nu este un producător de produse. Suntem un integrator și un partener de livrare, activând sisteme energetice proiectate să funcționeze în condiții de siguranță și fiabilitate în timp."
     },
     "vision": {
-      "title": "VIZIUNE",
-      "description": "Un viitor în care infrastructura energetică este rezistentă, inclusivă și construită pentru a sprijini comunitățile, industria și serviciile esențiale — oriunde fiabilitatea contează cel mai mult."
+      "title": "Viziune",
+      "description": "Un viitor în care infrastructura energetică este rezistentă, incluzivă și construită pentru a susține comunitățile, industria și serviciile esențiale — oriunde fiabilitatea contează cel mai mult."
     },
     "mission": {
-      "title": "MISIUNE",
-      "description": "Să permitem o infrastructură energetică fiabilă, sigură și pe termen lung prin integrarea tehnologiilor dovedite și sprijinirea proiectelor pe tot ciclul lor de viață."
+      "title": "Misiune",
+      "description": "Să activăm infrastructuri energetice fiabile, sigure și pe termen lung prin integrarea tehnologiilor dovedite și susținerea proiectelor pe parcursul întregului lor ciclu de viață."
     },
     "whatWeDo": {
-      "title": "CE FACEM",
-      "intro": "Baterino permite proiecte de stocare a energiei printr-o combinație de servicii tehnice, operaționale și de ciclu de viață.",
+      "title": "Ce Facem",
+      "intro": "Baterino activează proiecte de stocare a energiei printr-o combinație de servicii tehnice, operaționale și pe ciclul de viață.",
       "technology": {
-        "title": "IMPORT ȘI DISTRIBUȚIE TEHNOLOGIE",
-        "description": "Importăm și distribuim tehnologii de stocare a energiei dovedite, selectate pentru performanță, siguranță și viabilitate pe termen lung în diferite medii de operare."
+        "title": "Import și Distribuție de Tehnologie",
+        "description": "Importăm și distribuim tehnologii dovedite de stocare a energiei, selectate pentru performanță, siguranță și viabilitate pe termen lung în diferite medii operaționale."
       },
       "integration": {
-        "title": "INTEGRARE SISTEM ȘI ACTIVARE PROIECT",
-        "description": "Integrăm tehnologiile în sisteme energetice complete, gata pentru amplasament — aliniind echipamente, inginerie, logistică și cerințe de livrare."
+        "title": "Integrarea Sistemelor și Activarea Proiectelor",
+        "description": "Integrăm tehnologiile în sisteme energetice complete, gata de instalare — aliniind echipamentele, ingineria, logistica și cerințele de livrare."
       },
       "afterSales": {
-        "title": "POST-VÂNZARE ȘI SUPORT CICLU DE VIAȚĂ",
-        "description": "Susținem sistemele dincolo de instalare prin căi structurate post-vânzare, asigurând continuitate, mentenabilitate și performanță pe termen lung."
+        "title": "Post-Vânzare și Suport pe Ciclul de Viață",
+        "description": "Susținem sistemele dincolo de instalare prin căi structurate de post-vânzare, asigurând continuitate, posibilitate de întreținere și performanță pe termen lung."
       },
       "infrastructure": {
-        "title": "ACTIVARE INFRASTRUCTURĂ",
-        "description": "Ajutăm proiectele să treacă de la concept la operare abordând provocări tehnice, logistice și structurale — permițând implementarea la scară."
+        "title": "Activarea Infrastructurii",
+        "description": "Ajutăm proiectele să treacă de la concept la operare prin abordarea provocărilor tehnice, logistice și structurale — permițând implementarea la scară."
       },
-      "tagline": "Baterino permite infrastructură energetică construită pentru a funcționa și construită pentru a dura."
+      "tagline": "Baterino activează infrastructuri energetice construite pentru a performa și construite pentru a dura."
     },
     "socialImpact": {
-      "title": "IMPACT SOCIAL ȘI SUPORT COMUNITAR",
+      "title": "Impact Social și Sprijin Comunitar",
       "vulnerable": {
-        "title": "Suport pentru grupuri vulnerabile",
-        "description": "Prin programe țintite și parteneriate, Baterino oferă reduceri sau acces preferențial pentru cetățenii seniori, inițiative de sprijin pentru gospodării cu venituri mici și programe de asistență energetică bazate pe comunitate."
+        "title": "Sprijin pentru grupuri vulnerabile",
+        "description": "Prin programe țintite și parteneriate, Baterino acordă reduceri sau acces preferențial persoanelor în vârstă, sprijină inițiative pentru gospodăriile cu venituri mici și programe de asistență energetică la nivel comunitar."
       },
       "whenNeeded": {
-        "title": "Acolo când aveți nevoie de noi",
-        "description": "Infrastructura energetică are un impact direct asupra calității vieții, rezilienței și oportunităților. Alături de proiectele comerciale, susținem inițiative care extind accesul fiabil la energie către comunitățile și persoanele care au cea mai mare nevoie de el."
+        "title": "Alături de tine când ai nevoie",
+        "description": "Infrastructura energetică are un impact direct asupra calității vieții, rezilienței și oportunităților. Alături de proiectele comerciale, susținem inițiative care extind accesul la energie fiabilă către comunitățile și persoanele care au cea mai mare nevoie de ea."
       },
       "disaster": {
-        "title": "Ajutor în Caz de Dezastre și Suport de Urgență",
-        "description": "În perioadele de dezastre naturale sau întreruperi de infrastructură, Baterino sprijină soluții energetice de urgență și inițiative de ajutor pentru a ajuta la restabilirea serviciilor esențiale de energie."
+        "title": "Ajutor în Dezastre și Suport de Urgență",
+        "description": "În perioadele de dezastre naturale sau perturbări ale infrastructurii, Baterino sprijină soluțiile energetice de urgență și inițiativele de ajutor pentru a contribui la restaurarea serviciilor esențiale de alimentare cu energie."
       },
       "community": {
-        "title": "Suport Energetic Comunitar",
-        "description": "Contribuim la proiecte energetice orientate către comunitate care îmbunătățesc accesul la energie fiabilă pentru servicii esențiale, infrastructură partajată și zone nedeservite."
+        "title": "Sprijin Energetic Comunitar",
+        "description": "Contribuim la proiecte energetice orientate spre comunitate care îmbunătățesc accesul la energie fiabilă pentru servicii esențiale, infrastructuri comune și zone defavorizate."
       }
     }
   },
   "lithtech": {
     "hero": {
-      "title": "DESPRE LITHTECH",
-      "subtitle": "Un furnizor global de tehnologie de stocare a energiei, concentrat pe sisteme maritime, industriale și comerciale."
+      "title": "Despre LithTech",
+      "subtitle": "Un furnizor global de tehnologie de stocare a energiei, specializat în sisteme de stocare pentru uz marin, industrial și comercial."
     },
     "about": {
-      "title": "DESPRE LITHTECH",
-      "paragraph1": "Fondată în Shenzhen, LithTech se specializează în dezvoltarea și fabricarea sistemelor de stocare a energiei în baterii de înaltă siguranță și fiabilitate, cu accent puternic pe aplicații maritime și de infrastructură.",
-      "paragraph2": "LithTech operează ca producător de tehnologie și dezvoltator de soluții, livrând sisteme de stocare a energiei certificate, concepute pentru medii operaționale exigente și pe termen lung."
+      "title": "Despre LithTech",
+      "paragraph1": "Fondată în Shenzhen, LithTech este specializată în dezvoltarea și fabricarea sistemelor de stocare a energiei pe bază de baterii cu siguranță și fiabilitate ridicate, cu un accent puternic pe aplicații marine și de calitate infrastructurală.",
+      "paragraph2": "LithTech operează ca producător de tehnologie și dezvoltator de soluții, furnizând sisteme de stocare a energiei certificate, proiectate pentru medii operaționale solicitante și de lungă durată."
     },
     "vision": {
-      "title": "VIZIUNE",
-      "description": "Să sprijine tranziția energetică globală prin sisteme energetice mai sigure, mai inteligente și mai incluzive, prin tehnologii avansate de stocare."
+      "title": "Viziune",
+      "description": "Să sprijine tranziția energetică globală prin activarea unor sisteme energetice mai sigure, mai inteligente și mai incluzive prin intermediul tehnologiilor avansate de stocare."
     },
     "mission": {
-      "title": "MISIUNE",
-      "description": "Să protejeze un ecosistem energetic durabil prin tehnologii de stocare a energiei sigure, fiabile și inteligente în aplicații maritime și industriale."
+      "title": "Misiune",
+      "description": "Să protejeze un ecosistem energetic durabil prin furnizarea de tehnologii de stocare a energiei sigure, fiabile și inteligente pentru aplicații marine și industriale."
     },
     "whatWeDo": {
-      "title": "CE FACE LITHTECH",
-      "intro": "LithTech dezvoltă și fabrică sisteme de stocare a energiei în multiple domenii de aplicare.",
+      "title": "Ce Face LithTech",
+      "intro": "LithTech dezvoltă și fabrică sisteme de stocare a energiei pentru mai multe domenii de aplicare.",
       "card1": {
-        "title": "STOCARE ENERGETICĂ INDUSTRIALĂ ȘI COMERCIALĂ",
-        "description": "LithTech livrează sisteme de stocare a energiei bazate pe dulapuri și containere pentru parcuri industriale, facilități comerciale și proiecte energetice hibride."
+        "title": "Stocare de Energie Industrială și Comercială",
+        "description": "LithTech furnizează sisteme de stocare a energiei pe bază de cabinete și containerizate pentru parcuri industriale, facilități comerciale și proiecte de energie hibridă."
       },
       "card2": {
-        "title": "SISTEME DE STOCARE ENERGETICĂ MARITIMĂ",
-        "description": "LithTech este foarte specializat în sisteme de baterii maritime pentru nave precum feriboturi, bărci de lucru, platforme offshore și ferme de pește — cu accent puternic pe siguranță, modularitate și durată lungă de viață."
+        "title": "Sisteme Marine de Stocare a Energiei",
+        "description": "LithTech este înalt specializată în sisteme de baterii marine pentru nave precum feriboturi, bărci de lucru, platforme offshore și ferme piscicole — cu un accent puternic pe siguranță, modularitate și o viață de proiectare îndelungată."
       },
       "card3": {
-        "title": "MANAGEMENT BATERII ȘI INTELIGENȚĂ SISTEM",
-        "description": "LithTech dezvoltă în mod independent sisteme avansate de management al bateriilor (BMS), permitând: Monitorizare de înaltă precizie, Optimizare dinamică a sistemului, Detectare inteligentă a defecțiunilor, Diagnosticare la distanță și management al ciclului de viață."
+        "title": "Managementul Bateriilor și Inteligența Sistemului",
+        "description": "LithTech dezvoltă independent sisteme avansate de management al bateriilor (BMS), permițând: Monitorizare de înaltă precizie, Optimizare dinamică a sistemului, Detectare inteligentă a defecțiunilor, Diagnosticare la distanță și management pe ciclul de viață."
       }
     },
     "footprint": {
-      "title": "AMPRENTA GLOBALĂ",
-      "intro": "LithTech menține o prezență globală sprijinind cercetarea, fabricarea și serviciul, inclusiv:",
-      "bullet1": "Sediul central și R&D în China",
-      "bullet2": "Facilități de fabricare și depozitare",
-      "bullet3": "Subsidiare și centre de servicii în Europa, America de Nord, Asia de Sud-Est, Africa și Orientul Mijlociu"
+      "title": "Prezență Globală",
+      "intro": "LithTech menține o prezență globală în cercetare, producție și service, inclusiv:",
+      "bullet1": "Sediu central și R&D în China",
+      "bullet2": "Instalații de producție și depozitare",
+      "bullet3": "Filiale și centre de service în Europa, America de Nord, Asia de Sud-Est, Africa și Orientul Mijlociu"
     }
   },
   "globalPresence": {
     "hero": {
-      "title": "PREZENȚĂ GLOBALĂ. EXECUȚIE LOCALĂ.",
-      "subtitle": "Baterino operează ca o platformă globală de infrastructură energetică, sprijinind proiecte în regiuni prin parteneri locali și execuție pe teren."
+      "title": "PREZENȚĂ GLOBALĂ. EXECUȚIE LOCALĂ",
+      "subtitle": "Baterino operează ca o platformă globală de infrastructură energetică, susținând proiecte în diverse regiuni prin parteneri locali și execuție pe teren."
     },
     "operatingGlobally": {
-      "title": "OPERARE GLOBALĂ",
-      "description": "Standarde globale, tehnologii dovedite și un cadru de livrare consistent aplicat în regiuni și sectoare."
+      "title": "Operare la Nivel Global",
+      "description": "Standarde globale, tehnologii dovedite și un cadru de livrare consistent, aplicate în regiuni și sectoare diverse."
     },
     "deliveringLocally": {
-      "title": "LIVRARE LOCALĂ",
-      "description": "Proiecte livrate prin parteneri locali, adaptate la realitățile de reglementare, de mediu și operaționale pe teren."
+      "title": "Livrare la Nivel Local",
+      "description": "Proiecte livrate prin parteneri locali, adaptate la realitățile de reglementare, de mediu și operaționale de pe teren."
     },
     "regional": {
-      "title": "PREZENȚĂ REGIONALĂ",
-      "intro": "Sprijinim proiecte în mai multe regiuni, inclusiv:",
+      "title": "Prezență Regională",
+      "intro": "Susținem proiecte în mai multe regiuni, inclusiv:",
       "bullet1": "Europa",
       "bullet2": "Orientul Mijlociu",
       "bullet3": "Asia-Pacific",
       "bullet4": "Africa",
-      "closing": "Prezența și domeniul proiectelor variază pe regiuni și sunt determinate de parteneriate locale și cerințe de proiect."
+      "closing": "Prezența și scopul proiectelor variază în funcție de regiune și sunt determinate de parteneriatele locale și cerințele proiectelor."
     },
     "partnerUp": {
-      "title": "DEVENIȚI PARTENER",
-      "intro": "Căutăm activ parteneri și distribuitori locali pe piețe noi unde este nevoie de infrastructură energetică fiabilă.",
-      "listLabel": "Suntem deschiși la colaborare cu:",
+      "title": "Deveniți Partenerul Nostru",
+      "intro": "Căutăm activ parteneri locali și distribuitori pe piețe noi unde este nevoie de infrastructură energetică fiabilă.",
+      "listLabel": "Suntem deschiși colaborării cu:",
       "bullet1": "Parteneri locali",
       "bullet2": "Distribuitori",
       "bullet3": "Integratori",
@@ -648,28 +794,28 @@
     },
     "why": {
       "title": "DE CE?",
-      "intro": "Baterino se asociază pentru a construi afaceri de infrastructură energetică sustenabile și profitabile.",
-      "bullet1": "Marje competitive pentru soluții de nivel infrastructură",
-      "bullet2": "Oportunități continue de post-vânzare și servicii pe ciclul de viață",
-      "bullet3": "Marketing centralizat, poziționare de brand și suport go-to-market"
+      "intro": "Baterino parteneriatele pentru a construi afaceri durabile și profitabile în domeniul infrastructurii energetice.",
+      "bullet1": "Marje competitive pentru soluții la nivel de infrastructură",
+      "bullet2": "Oportunități continue de service post-vânzare și pe ciclul de viață",
+      "bullet3": "Marketing centralizat, poziționarea brandului și suport de lansare pe piață"
     }
   },
   "insights": {
     "hero": {
-      "title": "INSIGHTS",
-      "subtitle": "DOVADĂ. PERSPECTIVĂ. PROGRES."
+      "title": "Articole",
+      "subtitle": "DOVEZI. PERSPECTIVE. PROGRES."
     },
     "category": "Categorie",
     "all": "Toate",
     "news": "Știri",
     "pressRelease": "Comunicat de Presă",
     "caseStudy": "Studiu de Caz",
-    "publicRelease": "COMUNICAT PUBLIC",
+    "publicRelease": "Publicare Publică",
     "readMore": "Citește mai mult",
-    "loadMore": "Încarcă mai multe",
-    "backToInsights": "Înapoi la Insights",
+    "loadMore": "Încarcă mai mult",
+    "backToInsights": "Înapoi la Articole",
     "readMoreOnSubstack": "Citește mai mult pe Substack",
-    "noArticles": "Niciun articol nu corespunde filtrului dvs.",
+    "noArticles": "Niciun articol nu corespunde filtrului tău.",
     "filters": {
       "all": "Toate",
       "pressRelease": "Comunicat de Presă",
@@ -677,52 +823,52 @@
       "news": "Știri"
     },
     "article1": {
-      "title": "Baterino lansează noi soluții de baterii maritime",
+      "title": "Baterino Lansează Noi Soluții Maritime pentru Baterii",
       "author": "Echipa Baterino",
-      "date": "29 SEPT 2026",
-      "location": "JAKARTA",
-      "excerpt": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:",
-      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:"
+      "date": "29 sept. 2026",
+      "location": "Jakarta",
+      "excerpt": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși colaborării cu:",
+      "preview": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși colaborării cu:"
     },
     "article2": {
-      "title": "Transportul maritim sustenabil: viitorul sectorului",
+      "title": "Transport Maritim Durabil: Viitorul Industriei Maritime",
       "author": "Echipa Baterino",
-      "date": "28 SEPT 2026",
-      "location": "SINGAPURA",
-      "excerpt": "Cum practicile de transport maritim sustenabil transformă industria și reduc impactul asupra mediului.",
-      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:"
+      "date": "28 sept. 2026",
+      "location": "Singapore",
+      "excerpt": "Explorând modul în care practicile de transport maritim durabil transformă industria navală și reduc impactul asupra mediului.",
+      "preview": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși colaborării cu:"
     },
     "article3": {
-      "title": "Anunț parteneriat Baterino",
+      "title": "Anunț de Parteneriat Baterino",
       "author": "Echipa Baterino",
-      "date": "27 SEPT 2026",
-      "location": "ROTTERDAM",
-      "excerpt": "Baterino anunță parteneriate strategice pentru a extinde soluțiile de stocare a energiei pe piețe cheie.",
-      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși să lucrăm cu:"
+      "date": "27 sept. 2026",
+      "location": "Rotterdam",
+      "excerpt": "Baterino anunță parteneriate strategice pentru extinderea soluțiilor de stocare a energiei pe piețe cheie.",
+      "preview": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere. Pe lângă amprenta noastră actuală, suntem deschiși colaborării cu:"
     },
     "article4": {
-      "title": "Pragul feriboturilor electrice",
+      "title": "Reper în Feriboturile Electrice",
       "author": "Echipa Baterino",
-      "date": "26 SEPT 2026",
-      "location": "OSLO",
-      "excerpt": "Un prag major în implementarea feriboturilor electrice, Baterino propulsând transportul maritim sustenabil.",
-      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere."
+      "date": "26 sept. 2026",
+      "location": "Oslo",
+      "excerpt": "Un reper major în implementarea feriboturilor electrice, pe măsură ce Baterino alimentează transportul maritim durabil.",
+      "preview": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere."
     },
     "article5": {
-      "title": "Tehnologie maritimă verde",
+      "title": "Tehnologie Maritimă Verde",
       "author": "Echipa Baterino",
-      "date": "25 SEPT 2026",
-      "location": "HAMBURG",
-      "excerpt": "Cele mai recente dezvoltări în tehnologia maritimă verde și cum Baterino conduce.",
-      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere."
+      "date": "25 sept. 2026",
+      "location": "Hamburg",
+      "excerpt": "Cele mai recente evoluții în tehnologia maritimă verde și modul în care Baterino conduce această schimbare.",
+      "preview": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere."
     },
     "article6": {
-      "title": "Extinderea echipei Baterino",
+      "title": "Extinderea Echipei Baterino",
       "author": "Echipa Baterino",
-      "date": "24 SEPT 2026",
-      "location": "GLOBAL",
-      "excerpt": "Baterino își extinde echipa pentru a sprijini cererea în creștere de soluții de stocare a energiei la nivel mondial.",
-      "preview": "Platforma globală Baterino este concepută pentru a crește prin parteneriate locale de încredere."
+      "date": "24 sept. 2026",
+      "location": "Global",
+      "excerpt": "Baterino își extinde echipa pentru a susține cererea crescândă de soluții de stocare a energiei la nivel mondial.",
+      "preview": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere."
     }
   }
 }
