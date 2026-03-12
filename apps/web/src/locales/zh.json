@@ -6,13 +6,34 @@
   },
   "nav": {
     "home": "首页",
+    "subtitle": {
+      "solutions": "住宅、工业、海事",
+      "solutions.residential": "家庭储能",
+      "solutions.industrial": "大容量储能系统",
+      "solutions.medical": "关键医疗领域",
+      "solutions.maritime": "海上作业",
+      "delivery": "我们的交付方式",
+      "impact": "我们的全球影响",
+      "globalPresence": "我们的运营地区",
+      "insights": "证明。视角。进步。",
+      "company": "Baterino。LithTech。合作。",
+      "company.aboutBaterino": "赋能项目",
+      "company.aboutLithtech": "技术生产",
+      "company.partnership": "我们的协同",
+      "language": "选择网站语言",
+      "contact": "客户与合作伙伴"
+    },
     "solutions": "解决方案",
+    "solutionsMobile": "能源解决方案",
     "solutions.residential": "住宅与社区",
+    "solutions.residentialShort": "住宅",
     "solutions.industrial": "工业",
+    "solutions.medical": "医疗",
     "solutions.maritime": "海事",
     "delivery": "交付",
     "impact": "影响",
     "company": "关于",
+    "companyMobile": "关于我们",
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "合作",
@@ -113,22 +134,20 @@
       "lithtech": {
         "title": "LITHTECH",
         "subtitle": "技术开发",
-        "intro": "LithTech 负责先进储能技术的开发和制造。其职责包括：",
+        "intro": "LithTech 负责先进储能技术的开发和制造，高度重视系统级技术卓越。",
         "bullet1": "设计和制造电池储能系统",
         "bullet2": "开发电池管理和安全架构",
         "bullet3": "确保符合国际标准和认证",
-        "bullet4": "提升系统性能、安全与智能化",
-        "closing": "LithTech 专注于系统级技术卓越。"
+        "bullet4": "提升系统性能、安全与智能化"
       },
       "baterino": {
         "title": "BATERINO",
         "subtitle": "基础设施赋能",
-        "intro": "Baterino 负责将技术转化为可部署的长期基础设施。我们的职责包括：",
+        "intro": "Baterino 专注于将先进技术转化为可部署的长期基础设施，致力于无缝集成和持久可靠性。",
         "bullet1": "将 LithTech 技术集成到完整能源系统中",
         "bullet2": "使解决方案适应实际运营环境",
         "bullet3": "管理项目交付与协调",
-        "bullet4": "在系统整个运营生命周期内提供支持",
-        "closing": "Baterino 专注于执行、集成与长期可靠性。"
+        "bullet4": "在系统整个运营生命周期内及之后提供支持"
       }
     },
     "longTerm": {
@@ -138,26 +157,23 @@
       "factoryToField": {
         "title": "从工厂到现场",
         "description": "当它们在真实环境中安全可靠地运行——跨越社区、工业场所和海事运营——即告成功。",
-        "listLabel": "通过这一合作：",
         "bullet1": "LithTech 提供经认证、可融资的技术",
         "bullet2": "Baterino 确保基础设施级部署"
       },
       "sharedStandards": {
         "title": "共同标准",
-        "description": "合作以共同原则为指导：",
+        "description": "合作以共同原则为指导，确保技术与交付从设计到运营保持一致。",
         "bullet1": "安全优先的系统设计",
         "bullet2": "长期性能优于短期优化",
         "bullet3": "符合国际标准",
-        "bullet4": "全生命周期责任",
-        "closing": "这些原则确保技术与交付从设计到运营保持一致。"
+        "bullet4": "全生命周期责任"
       },
       "appliedAcrossSectors": {
         "title": "跨行业应用",
-        "description": "Baterino-LithTech 合作实现系统性储能在以下领域的部署：",
+        "description": "不同应用场景。一种综合方法。Baterino-LithTech 合作实现系统性储能在以下领域的部署：",
         "bullet1": "社区与住宅能源",
         "bullet2": "工业与商业基础设施",
-        "bullet3": "海事与海上环境",
-        "closing": "不同应用场景。一种综合方法。"
+        "bullet3": "海事与海上环境"
       }
     }
   },
@@ -226,15 +242,18 @@
     "message": "这是来自 API 的本地化问候语。"
   },
   "home": {
+    "ourDivisions": "我们的业务板块",
     "hero": { "title": "赋能全球大容量储能", "subtitle": "我们整合可信的绿色能源技术，为社区、工业、医疗和海事环境提供可靠解决方案。", "poweredBy": "由以下技术驱动", "poweredByLabel": "Powered by:", "technologyPoweredBy": "我们的技术由以下驱动：", "hoverToExplore": "悬停以探索" },
     "heroSlides": {
-      "slide1": { "title": "工业储能基础设施", "subtitle": "我们整合技术、交付与协调，将复杂能源项目转化为可运营的基础设施。" },
-      "slide2": { "title": "面向真实环境的解决方案", "subtitle": "为工业、住宅与海事场景设计并交付的储能系统。" },
+      "slide1": { "title": "工业储能基础设施", "subtitle": "我们设计并部署从1MW及以上的BESS基础设施 — 专为电网级性能和长期可靠性而设计。" },
+      "slide2": { "title": "住宅家庭解决方案", "subtitle": "让您的家庭用电更智能 — 我们的电池储能系统保持照明、降低能源成本，并充分利用屋顶产生的每一度太阳能。" },
       "slide3": { "title": "售后与全生命周期支持", "subtitle": "我们的责任不止于交付——持续支持性能、可靠性与系统长期连续运行。" },
-      "slide4": { "title": "有使命的基础设施", "subtitle": "支持社区、基本服务与长期韧性的能源基础设施。" }
+      "slide4": { "title": "有使命的基础设施", "subtitle": "支持社区、基本服务与长期韧性的能源基础设施。" },
+      "slide5": { "title": "关键服务的电力保障", "subtitle": "当故障不可接受时，我们保障关键设施持续运行 — 医院、救护车队、应急响应中心、水处理厂和社区24/7依赖的公共设施。" }
     },
-    "carousel": { "infrastructure": "基础设施赋能", "infrastructureSub": "住宅 - 工业 - 海事领域", "lifecycle": "可信赖的全生命周期", "lifecycleSub": "监控 - 售后 - 技术支持", "impact": "使命与影响", "impactSub": "教育 - 医疗 - 救灾", "learnMore": "了解更多", "tapToLearnMore": "点击了解更多" },
-    "whatWeEnable": { "title": "我们所赋能的", "subtitle": "跨领域服务", "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.", "residential": "住宅", "residentialTabDesc": "带备用电源和能源独立性的智能家居能源系统。", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "工业储能", "industrialTabDesc": "为工厂、太阳能农场和工业运营设计的电网级储能。", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "医疗", "medicalTabDesc": "为医院、诊所和急救设施提供的可靠电源解决方案。", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "海事", "maritimeTabDesc": "用于船舶电气化和海上作业的先进电池系统。", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "公用事业", "utilityDesc": "面向电网稳定与可再生能源并网的公用事业级储能。" },
+    "carousel": { "infrastructure": "基础设施赋能", "infrastructureSub": "住宅 - 工业 - 海事领域", "lifecycle": "可信赖的全生命周期", "lifecycleSub": "监控 - 售后 - 技术支持", "impact": "使命与影响", "impactSub": "教育 - 医疗 - 救灾", "learnMore": "了解更多", "exploreMore": "EXPLORE", "tapToLearnMore": "点击了解更多" },
+    "baterinoPro": { "introducing": "隆重推出", "description": "我们专注于工业项目的专业部门。", "industrialDesc": "我们专注于工业项目的专业部门。", "medicalDesc": "我们专注于医疗和关键护理的专业部门。", "maritimeDesc": "我们专注于海事和海上作业的专业部门。" },
+    "whatWeEnable": { "title": "我们所赋能的", "subtitle": "跨领域服务", "intro": "我们提供企业级储能解决方案，改变组织为其运营供电的方式——从电网级可靠性到关键任务韧性。", "residential": "住宅", "residentialTabDesc": "带备用电源和能源独立性的智能家居能源系统。", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "工业储能", "industrialTabDesc": "为工厂、太阳能农场和工业运营设计的电网级储能。", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "医疗", "medicalTabDesc": "为医院、诊所和急救设施提供的可靠电源解决方案。", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "海事", "maritimeTabDesc": "用于船舶电气化和海上作业的先进电池系统。", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "公用事业", "utilityDesc": "面向电网稳定与可再生能源并网的公用事业级储能。", "learnMore": "了解更多" },
     "howWeDeliver": { "title": "我们如何交付", "subtitle": "从概念到运营", "intro": "Baterino 通过技术集成、运营交付与长期支持赋能储能项目，消除技术、物流与结构障碍，让项目从概念到运营更有信心。", "stage1": "第一阶段", "stage2": "第二阶段", "stage3": "第三阶段", "stage4": "第四阶段", "step1": "基础设施赋能", "step1Desc": "我们汇聚使储能项目在真实环境中可部署所需的技术、合作伙伴与物流。", "step2": "技术集成", "step2Desc": "我们将储能与可再生能源技术集成为面向住宅、工业与海事应用的即装即用系统。", "step3": "售后与可靠性", "step3Desc": "我们的参与不限于投运。我们通过长期、以可靠性为导向的方式持续支持系统性能。", "step4": "项目融资支持", "step4Desc": "对选定项目，Baterino 可通过战略金融合作伙伴支持项目结构与融资渠道，在适当时实现全部或部分融资。" },
     "builtOnTrust": { "title": "以信任为基，为持久而设计。", "subtitle": "我们的全球解决方案", "col1": "长期合作方式", "col1Desc": "我们参与项目不止于交付，角色贯穿运营、支持与系统全生命周期，确保连续性与责任。", "col2": "可长期信赖的技术", "col2Desc": "Baterino 整合经验证、可融资的能源技术，在住宅、工业与海事环境中兼顾性能、安全与长期可行性。", "col3": "持续的支持", "col3Desc": "通过结构化售后路径与技术支持，我们助力系统在其整个运营寿命内保持可靠。", "col4": "按基础设施打造，而非产品", "col4Desc": "我们将每个项目视为基础设施——旨在融入真实运营环境、监管框架与长期能源战略。" },
     "globalImpact": { "title": "我们的全球影响", "subtitle": "在全球范围内建设韧性", "intro": "可靠的能源获取塑造机遇、韧性和增长。Baterino的影响项目将工业和海事项目中使用的相同基础设施专业知识应用于支持全球社区和基本服务。", "alignedGoals": "与全球目标保持一致", "alignedGoalsDesc": "Baterino和LithTech将其影响倡议与联合国可持续发展目标保持一致，旨在通过实际能源基础设施交付，到2035年为所有17个目标做出贡献。", "viewProgress": "查看我们的进展", "energyWhere": "最重要的能源", "energyWhereDesc": "可靠的能源是基本服务和日常生活的基础。Baterino和LithTech将影响力集中在电力可用性直接影响健康、教育、水系统和社区韧性的地方。\n我们优先考虑能源可靠性不是可选的项目——而是至关重要的。", "beyond": "超越交付", "beyondDesc": "我们的影响工作超越了系统安装。我们部署为实际操作条件设计的实用、可扩展的能源基础设施——通过集成、本地参与和长期责任得到支持。影响是通过持续运行的系统实现的，而不是一次性部署。", "inclusive": "建设包容性系统", "inclusiveDesc": "能源转型必须适用于不同的现实。通过结合技术集成、生命周期支持和适应性系统设计，Baterino帮助社区建设支持当前需求和未来增长的能源系统。包容性来自可以维护、扩展和长期依赖的基础设施。" },
@@ -252,6 +271,8 @@
       "aboutUsDesc": "Baterino为社区、工业和海事应用提供储能基础设施，整合来自LithTech等合作伙伴的成熟技术，专注于可靠性、安全性和长期性能。",
       "localOffices": "本地办公室",
       "officesList": "罗马尼亚\n保加利亚\n中国\n印度尼西亚",
+      "offices": { "romania": "罗马尼亚", "bulgaria": "保加利亚", "china": "中国", "indonesia": "印度尼西亚" },
+      "viewMore": "查看更多",
       "europe": "欧洲",
       "asia": "亚洲",
       "americas": "美洲",

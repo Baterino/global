@@ -125,7 +125,7 @@ export function Article() {
       {/* Article Header */}
       <section className="w-full bg-white px-4 pb-8 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[900px] text-center">
-          <h1 className="mb-4 font-heading text-3xl font-bold text-neutral-900 sm:text-4xl lg:text-5xl">
+          <h1 className="mb-4 font-heading text-3xl font-bold uppercase tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             {article.title}
           </h1>
           <p className="mb-4 font-body text-body-md text-neutral-600">

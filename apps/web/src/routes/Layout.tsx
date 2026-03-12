@@ -43,20 +43,20 @@ export function Layout() {
       >
         Skip to main content
       </a>
-      <div className="min-h-screen overflow-x-hidden bg-white font-sans text-neutral-900">
+      <div className="min-h-screen bg-white font-sans text-neutral-900">
+        <header
+          className={`fixed left-0 right-0 top-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+            isScrolled ? 'shadow-md' : 'shadow-none'
+          }`}
+        >
+          <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+            <Menu />
+          </div>
+        </header>
         <div className="mx-auto w-full max-w-site overflow-visible">
-          <header
-            className={`sticky top-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300 ease-in-out lg:fixed lg:left-0 lg:right-0 lg:top-0 ${
-              isScrolled ? 'shadow-md' : 'shadow-none'
-            }`}
-          >
-            <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-              <Menu />
-            </div>
-          </header>
           <main
             id="main-content"
-            className="w-full px-0 py-0 pt-0 sm:px-0 lg:pt-16"
+            className="w-full px-0 py-0 pt-20 sm:px-0 lg:pt-16"
             tabIndex={-1}
           >
             <Outlet />

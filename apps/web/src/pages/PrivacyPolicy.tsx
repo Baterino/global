@@ -19,35 +19,35 @@ export function PrivacyPolicy() {
 
             <div className="mt-10 space-y-8 font-body text-body-md text-neutral-700">
               <section>
-                <h2 className="mb-3 font-heading text-lg font-bold text-neutral-900">
+                <h2 className="mb-3 font-heading text-lg font-bold uppercase tracking-tight text-neutral-900">
                   {t('privacyPolicy.section1.title')}
                 </h2>
                 <p className="leading-relaxed">{t('privacyPolicy.section1.content')}</p>
               </section>
 
               <section>
-                <h2 className="mb-3 font-heading text-lg font-bold text-neutral-900">
+                <h2 className="mb-3 font-heading text-lg font-bold uppercase tracking-tight text-neutral-900">
                   {t('privacyPolicy.section2.title')}
                 </h2>
                 <p className="leading-relaxed">{t('privacyPolicy.section2.content')}</p>
               </section>
 
               <section>
-                <h2 className="mb-3 font-heading text-lg font-bold text-neutral-900">
+                <h2 className="mb-3 font-heading text-lg font-bold uppercase tracking-tight text-neutral-900">
                   {t('privacyPolicy.section3.title')}
                 </h2>
                 <p className="leading-relaxed">{t('privacyPolicy.section3.content')}</p>
               </section>
 
               <section>
-                <h2 className="mb-3 font-heading text-lg font-bold text-neutral-900">
+                <h2 className="mb-3 font-heading text-lg font-bold uppercase tracking-tight text-neutral-900">
                   {t('privacyPolicy.section4.title')}
                 </h2>
                 <p className="leading-relaxed">{t('privacyPolicy.section4.content')}</p>
               </section>
 
               <section>
-                <h2 className="mb-3 font-heading text-lg font-bold text-neutral-900">
+                <h2 className="mb-3 font-heading text-lg font-bold uppercase tracking-tight text-neutral-900">
                   {t('privacyPolicy.section5.title')}
                 </h2>
                 <p className="leading-relaxed">{t('privacyPolicy.section5.content')}</p>

@@ -6,13 +6,34 @@
   },
   "nav": {
     "home": "Inicio",
+    "subtitle": {
+      "solutions": "Residencial, Industrial, Marítimo",
+      "solutions.residential": "Almacenamiento de energía para hogares",
+      "solutions.industrial": "BESS de alta capacidad",
+      "solutions.medical": "Sector médico crítico",
+      "solutions.maritime": "Operaciones offshore",
+      "delivery": "Cómo entregamos",
+      "impact": "Nuestro impacto global",
+      "globalPresence": "Dónde operamos",
+      "insights": "Prueba. Perspectiva. Progreso.",
+      "company": "Baterino. LithTech. Asociación.",
+      "company.aboutBaterino": "Habilitar proyectos",
+      "company.aboutLithtech": "Producción de tecnología",
+      "company.partnership": "Nuestra sinergia",
+      "language": "Seleccionar idioma del sitio",
+      "contact": "Clientes y Socios"
+    },
     "solutions": "Soluciones",
+    "solutionsMobile": "Soluciones Energéticas",
     "solutions.residential": "Residencial y Comunidades",
+    "solutions.residentialShort": "Residencial",
     "solutions.industrial": "Industrial",
+    "solutions.medical": "Médico",
     "solutions.maritime": "Marítimo",
     "delivery": "Entrega",
     "impact": "Impacto",
     "company": "Acerca de",
+    "companyMobile": "Sobre Nosotros",
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Asociación",
@@ -133,22 +154,20 @@
       "lithtech": {
         "title": "LITHTECH",
         "subtitle": "DESARROLLO TECNOLÓGICO",
-        "intro": "LithTech es responsable del desarrollo y fabricación de tecnologías avanzadas de almacenamiento de energía. Su papel incluye:",
+        "intro": "LithTech es responsable del desarrollo y fabricación de tecnologías avanzadas de almacenamiento de energía, con un fuerte enfoque en la excelencia tecnológica a nivel de sistema.",
         "bullet1": "Diseño y fabricación de sistemas de almacenamiento de energía en baterías",
         "bullet2": "Desarrollo de arquitecturas de gestión y seguridad de baterías",
         "bullet3": "Garantizar el cumplimiento de normas y certificaciones internacionales",
-        "bullet4": "Avanzar en rendimiento, seguridad e inteligencia del sistema",
-        "closing": "LithTech se centra en la excelencia tecnológica a nivel de sistema."
+        "bullet4": "Avanzar en rendimiento, seguridad e inteligencia del sistema"
       },
       "baterino": {
         "title": "BATERINO",
         "subtitle": "HABILITADOR DE INFRAESTRUCTURA",
-        "intro": "Baterino es responsable de transformar la tecnología en infraestructura desplegable y a largo plazo. Nuestro papel incluye:",
+        "intro": "Baterino se especializa en transformar tecnología avanzada en infraestructura desplegable y a largo plazo, impulsado por un compromiso con la integración fluida y la fiabilidad duradera.",
         "bullet1": "Integrar las tecnologías LithTech en sistemas energéticos completos",
         "bullet2": "Adaptar soluciones a entornos operativos reales",
         "bullet3": "Gestionar la entrega y coordinación de proyectos",
-        "bullet4": "Apoyar los sistemas durante todo su ciclo de vida operativo",
-        "closing": "Baterino se centra en la ejecución, la integración y la fiabilidad a largo plazo."
+        "bullet4": "Apoyar los sistemas durante todo su ciclo de vida operativo y más allá"
       }
     },
     "longTerm": {
@@ -158,26 +177,23 @@
       "factoryToField": {
         "title": "DE FÁBRICA A CAMPO",
         "description": "Tienen éxito cuando operan de forma segura y fiable en entornos reales — en comunidades, sitios industriales y operaciones marítimas.",
-        "listLabel": "A través de esta asociación:",
         "bullet1": "LithTech entrega tecnología certificada y financiable",
         "bullet2": "Baterino garantiza un despliegue de nivel infraestructura"
       },
       "sharedStandards": {
         "title": "ESTÁNDARES COMPARTIDOS",
-        "description": "La asociación se rige por principios compartidos:",
+        "description": "La asociación se rige por principios compartidos que garantizan que la tecnología y la entrega estén alineadas desde el diseño hasta la operación.",
         "bullet1": "Diseño de sistemas con seguridad primero",
         "bullet2": "Rendimiento a largo plazo sobre optimización a corto plazo",
         "bullet3": "Cumplimiento de estándares internacionales",
-        "bullet4": "Responsabilidad del ciclo de vida",
-        "closing": "Estos principios garantizan que la tecnología y la entrega estén alineadas desde el diseño hasta la operación."
+        "bullet4": "Responsabilidad del ciclo de vida"
       },
       "appliedAcrossSectors": {
         "title": "APLICADO EN TODOS LOS SECTORES",
-        "description": "La asociación Baterino-LithTech permite un despliegue sistemático de almacenamiento en:",
+        "description": "Diferentes casos de uso. Un enfoque integrado. La asociación Baterino-LithTech permite un despliegue sistemático de almacenamiento en:",
         "bullet1": "Energía comunitaria y residencial",
         "bullet2": "Infraestructura industrial y comercial",
-        "bullet3": "Entornos marítimos y offshore",
-        "closing": "Diferentes casos de uso. Un enfoque integrado."
+        "bullet3": "Entornos marítimos y offshore"
       }
     }
   },
@@ -226,19 +242,22 @@
     "message": "Este es un saludo localizado desde la API."
   },
   "home": {
+    "ourDivisions": "Nuestras divisiones",
     "hero": { "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
     "heroSlides": {
-      "slide1": { "title": "Infraestructura de almacenamiento energético industrial", "subtitle": "Integramos tecnología, entrega y coordinación para convertir proyectos energéticos complejos en infraestructura operativa." },
-      "slide2": { "title": "Soluciones para entornos reales", "subtitle": "Sistemas de almacenamiento diseñados y entregados para entornos industriales, residenciales y marítimos." },
+      "slide1": { "title": "Infraestructura de almacenamiento energético industrial", "subtitle": "Diseñamos e implementamos infraestructura BESS desde 1MW y más — diseñada para rendimiento a escala de red y fiabilidad a largo plazo." },
+      "slide2": { "title": "SOLUCIONES PARA HOGARES RESIDENCIALES", "subtitle": "Alimenta tu hogar de forma más inteligente — nuestros sistemas de almacenamiento de baterías mantienen las luces encendidas, reducen los costos de energía y maximizan cada parte de la energía solar que produce tu techo." },
       "slide3": { "title": "Soporte postventa y ciclo de vida", "subtitle": "Nuestra responsabilidad continúa más allá de la entrega: rendimiento, fiabilidad y continuidad del sistema en el tiempo." },
-      "slide4": { "title": "Infraestructura con propósito", "subtitle": "Infraestructura energética que apoya comunidades, servicios esenciales y resiliencia a largo plazo." }
+      "slide4": { "title": "Infraestructura con propósito", "subtitle": "Infraestructura energética que apoya comunidades, servicios esenciales y resiliencia a largo plazo." },
+      "slide5": { "title": "ENERGÍA PARA SERVICIOS ESENCIALES", "subtitle": "Cuando el fallo no es una opción, mantenemos en funcionamiento las instalaciones críticas — hospitales, flotas de ambulancias, centros de respuesta emergencias, plantas de tratamiento de agua y servicios públicos de los que las comunidades dependen 24/7." }
     },
-    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Saber más", "tapToLearnMore": "Toca para saber más" },
-    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability and renewable integration." },
-    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "stage1": "First stage", "stage2": "Second stage", "stage3": "Third stage", "stage4": "Fourth stage", "step1": "Project Discovery", "step1Desc": "We assess your needs and design the right solution.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding for your project." },
-    "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "We are committed to environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people are at the center of everything we do." },
+    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Saber más", "exploreMore": "EXPLORE", "tapToLearnMore": "Toca para saber más" },
+    "baterinoPro": { "introducing": "PRESENTANDO", "description": "Nuestra división dedicada a proyectos industriales.", "industrialDesc": "Nuestra división dedicada a proyectos industriales.", "medicalDesc": "Nuestra división dedicada a atención médica y crítica.", "maritimeDesc": "Nuestra división dedicada a operaciones marítimas y offshore." },
+    "whatWeEnable": { "title": "Lo que habilitamos", "subtitle": "Cómo te servimos", "intro": "Ofrecemos soluciones de almacenamiento de energía de nivel empresarial que transforman la forma en que las organizaciones alimentan sus operaciones, desde la confiabilidad a escala de red hasta la resiliencia crítica.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utilidad", "utilityDesc": "Almacenamiento a escala de red para estabilidad y integración de energías renovables.", "learnMore": "Saber más" },
+    "howWeDeliver": { "title": "Cómo entregamos", "subtitle": "Nuestro proceso principal", "intro": "Baterino habilita proyectos de almacenamiento de energía combinando integración tecnológica, entrega operativa y soporte a largo plazo. Eliminamos barreras técnicas, logísticas y estructurales para que los proyectos pasen del concepto a la operación con confianza.", "stage1": "Primera etapa", "stage2": "Segunda etapa", "stage3": "Tercera etapa", "stage4": "Cuarta etapa", "step1": "Habilitación de infraestructura", "step1Desc": "Reunimos las tecnologías, socios y logística necesarios para hacer que los proyectos de almacenamiento de energía sean implementables en entornos reales.", "step2": "Integración tecnológica", "step2Desc": "Integramos sistemas de almacenamiento y tecnologías renovables en sistemas coherentes y listos para instalación en aplicaciones residenciales, industriales y marítimas.", "step3": "Posventa y confiabilidad", "step3Desc": "Nuestra participación continúa más allá de la puesta en marcha. Apoyamos el rendimiento del sistema a lo largo del tiempo mediante un enfoque orientado a la confiabilidad.", "step4": "Apoyo a la financiación de proyectos", "step4Desc": "Para proyectos seleccionados, Baterino puede apoyar la estructuración y el acceso a financiación a través de socios financieros estratégicos — permitiendo financiación total o parcial cuando sea apropiado." },
+    "builtOnTrust": { "title": "Construido con confianza. Diseñado para durar.", "subtitle": "Nuestras soluciones globales", "col1": "Un enfoque a largo plazo", "col1Desc": "Participamos en proyectos más allá de la entrega. Nuestro papel continúa a través de la operación, el soporte y el ciclo de vida del sistema, asegurando continuidad y responsabilidad.", "col2": "Tecnología en la que puedes confiar", "col2Desc": "Baterino integra tecnologías energéticas probadas y financiables seleccionadas por rendimiento, seguridad y viabilidad a largo plazo en entornos residenciales, industriales y marítimos.", "col3": "Soporte que perdura", "col3Desc": "A través de vías estructuradas de posventa y soporte técnico, ayudamos a garantizar la confiabilidad del sistema durante toda su vida operativa.", "col4": "Construido como infraestructura, no como productos", "col4Desc": "Abordamos cada proyecto como infraestructura, diseñada para integrarse en entornos operativos reales, marcos regulatorios y estrategias energéticas a largo plazo." },
     "globalImpact": { "title": "NUESTRO IMPACTO GLOBAL", "subtitle": "CONSTRUYENDO RESILIENCIA MUNDIAL", "intro": "El acceso a energía confiable moldea oportunidades, resiliencia y crecimiento. Los programas de impacto de Baterino aplican la misma experiencia en infraestructura utilizada en proyectos industriales y marítimos para apoyar comunidades y servicios esenciales en todo el mundo.", "alignedGoals": "ALINEADOS CON OBJETIVOS GLOBALES", "alignedGoalsDesc": "Baterino & LithTech alinea sus iniciativas de impacto con los Objetivos de Desarrollo Sostenible de las Naciones Unidas, con el objetivo de contribuir a los 17 objetivos para 2035 mediante la entrega práctica de infraestructura energética.", "viewProgress": "Ver nuestro progreso", "energyWhere": "ENERGÍA DONDE MÁS IMPORTA", "energyWhereDesc": "La energía confiable es fundamental para servicios esenciales y la vida diaria. Baterino & LithTech enfoca esfuerzos de impacto donde la disponibilidad de energía afecta directamente la salud, educación, sistemas de agua y resiliencia comunitaria.\nPriorizamos proyectos donde la confiabilidad energética no es opcional — sino crítica.", "beyond": "MÁS ALLÁ DE LA ENTREGA", "beyondDesc": "Nuestro trabajo de impacto va más allá de la instalación del sistema. Desplegamos infraestructura energética práctica y escalable diseñada para condiciones operativas reales — respaldada por integración, compromiso local y responsabilidad a largo plazo. El impacto se logra a través de sistemas que continúan funcionando, no despliegues únicos.", "inclusive": "CONSTRUYENDO SISTEMAS INCLUSIVOS", "inclusiveDesc": "La transición energética debe funcionar en diferentes realidades. Al combinar integración tecnológica, soporte del ciclo de vida y diseño de sistemas adaptables, Baterino ayuda a las comunidades a construir sistemas energéticos que apoyan las necesidades presentes y el crecimiento futuro. La inclusión proviene de infraestructura que puede mantenerse, expandirse y confiarse con el tiempo." },
-    "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
+    "globalPresence": { "title": "Entregando infraestructura energética en todo el mundo", "subtitle": "Nuestra presencia global" },
     "footer": {
       "poweredByLabel": "Impulsado por: ",
       "alignedByLabel": "Alineado por: ",
@@ -252,6 +271,8 @@
       "aboutUsDesc": "Baterino habilita infraestructura de almacenamiento de energía para comunidades, industria y aplicaciones marítimas, integrando tecnologías probadas de socios como LithTech con un enfoque en confiabilidad, seguridad y rendimiento a largo plazo.",
       "localOffices": "Oficinas Locales",
       "officesList": "Rumania\nBulgaria\nChina\nIndonesia",
+      "offices": { "romania": "Rumania", "bulgaria": "Bulgaria", "china": "China", "indonesia": "Indonesia" },
+      "viewMore": "Ver más",
       "europe": "Europa",
       "asia": "Asia",
       "americas": "Américas",

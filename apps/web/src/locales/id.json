@@ -6,13 +6,34 @@
   },
   "nav": {
     "home": "Beranda",
+    "subtitle": {
+      "solutions": "Residensial, Industri, Maritim",
+      "solutions.residential": "Penyimpanan energi untuk rumah",
+      "solutions.industrial": "BESS kapasitas tinggi",
+      "solutions.medical": "Sektor medis kritis",
+      "solutions.maritime": "Operasi lepas pantai",
+      "delivery": "Cara kami mengirimkan",
+      "impact": "Dampak global kami",
+      "globalPresence": "Di mana kami beroperasi",
+      "insights": "Bukti. Perspektif. Kemajuan.",
+      "company": "Baterino. LithTech. Kemitraan.",
+      "company.aboutBaterino": "Mengaktifkan proyek",
+      "company.aboutLithtech": "Memproduksi teknologi",
+      "company.partnership": "Sinergi kami",
+      "language": "Pilih bahasa situs",
+      "contact": "Klien & Mitra"
+    },
     "solutions": "Solusi",
+    "solutionsMobile": "Solusi Energi",
     "solutions.residential": "Residensial & Komunitas",
+    "solutions.residentialShort": "Residensial",
     "solutions.industrial": "Industri",
+    "solutions.medical": "Medis",
     "solutions.maritime": "Maritim",
     "delivery": "Pengiriman",
     "impact": "Dampak",
     "company": "Tentang",
+    "companyMobile": "Tentang Kami",
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Kemitraan",
@@ -133,22 +154,20 @@
       "lithtech": {
         "title": "LITHTECH",
         "subtitle": "PENGEMBANGAN TEKNOLOGI",
-        "intro": "LithTech bertanggung jawab atas pengembangan dan manufaktur teknologi penyimpanan energi canggih. Peran mereka meliputi:",
+        "intro": "LithTech bertanggung jawab atas pengembangan dan manufaktur teknologi penyimpanan energi canggih, dengan fokus kuat pada keunggulan teknologi di tingkat sistem.",
         "bullet1": "Merancang dan memproduksi sistem penyimpanan energi baterai",
         "bullet2": "Mengembangkan arsitektur manajemen dan keselamatan baterai",
         "bullet3": "Memastikan kepatuhan terhadap standar dan sertifikasi internasional",
-        "bullet4": "Meningkatkan kinerja, keselamatan, dan kecerdasan sistem",
-        "closing": "LithTech fokus pada keunggulan teknologi di tingkat sistem."
+        "bullet4": "Meningkatkan kinerja, keselamatan, dan kecerdasan sistem"
       },
       "baterino": {
         "title": "BATERINO",
         "subtitle": "PENDUKUNG INFRASTRUKTUR",
-        "intro": "Baterino bertanggung jawab mengubah teknologi menjadi infrastruktur yang dapat diterapkan dan jangka panjang. Peran kami meliputi:",
+        "intro": "Baterino mengkhususkan diri dalam mengubah teknologi canggih menjadi infrastruktur yang dapat diterapkan dan jangka panjang, didorong oleh komitmen terhadap integrasi yang mulus dan keandalan yang tahan lama.",
         "bullet1": "Mengintegrasikan teknologi LithTech ke dalam sistem energi lengkap",
         "bullet2": "Mengadaptasi solusi ke lingkungan operasional nyata",
         "bullet3": "Mengelola pengiriman dan koordinasi proyek",
-        "bullet4": "Mendukung sistem sepanjang siklus hidup operasionalnya",
-        "closing": "Baterino fokus pada eksekusi, integrasi, dan keandalan jangka panjang."
+        "bullet4": "Mendukung sistem sepanjang siklus hidup operasionalnya dan seterusnya"
       }
     },
     "longTerm": {
@@ -158,26 +177,23 @@
       "factoryToField": {
         "title": "DARI PABRIK KE LAPANGAN",
         "description": "Mereka berhasil ketika beroperasi dengan aman dan andal di lingkungan nyata — di komunitas, situs industri, dan operasi maritim.",
-        "listLabel": "Melalui kemitraan ini:",
         "bullet1": "LithTech menyediakan teknologi bersertifikat dan bankable",
         "bullet2": "Baterino memastikan penyebaran tingkat infrastruktur"
       },
       "sharedStandards": {
         "title": "STANDAR BERSAMA",
-        "description": "Kemitraan dipandu oleh prinsip bersama:",
+        "description": "Kemitraan dipandu oleh prinsip bersama yang memastikan bahwa teknologi dan pengiriman selaras dari desain hingga operasi.",
         "bullet1": "Desain sistem keselamatan pertama",
         "bullet2": "Kinerja jangka panjang daripada optimisasi jangka pendek",
         "bullet3": "Kepatuhan terhadap standar internasional",
-        "bullet4": "Tanggung jawab siklus hidup",
-        "closing": "Prinsip-prinsip ini memastikan bahwa teknologi dan pengiriman selaras dari desain hingga operasi."
+        "bullet4": "Tanggung jawab siklus hidup"
       },
       "appliedAcrossSectors": {
         "title": "DITERAPKAN DI SEMUA SEKTOR",
-        "description": "Kemitraan Baterino-LithTech memungkinkan penyebaran penyimpanan sistematis di:",
+        "description": "Berbagai kasus penggunaan. Satu pendekatan terintegrasi. Kemitraan Baterino-LithTech memungkinkan penyebaran penyimpanan sistematis di:",
         "bullet1": "Energi komunitas dan perumahan",
         "bullet2": "Infrastruktur industri dan komersial",
-        "bullet3": "Lingkungan maritim dan lepas pantai",
-        "closing": "Berbagai kasus penggunaan. Satu pendekatan terintegrasi."
+        "bullet3": "Lingkungan maritim dan lepas pantai"
       }
     }
   },
@@ -226,6 +242,7 @@
     "message": "Ini adalah salam yang dilokalisasi dari API."
   },
   "home": {
+    "ourDivisions": "Divisi kami",
     "hero": {
       "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE",
       "subtitle": "Kami mengintegrasikan teknologi penyimpanan energi terdepan ke dalam infrastruktur yang scalable dan tangguh untuk komunitas, industri, medis, dan lingkungan maritim.",
@@ -235,10 +252,11 @@
       "hoverToExplore": "Arahkan untuk jelajahi"
     },
     "heroSlides": {
-      "slide1": { "title": "Infrastruktur Penyimpanan Energi Industri", "subtitle": "Kami mengintegrasikan teknologi, pengiriman, dan koordinasi untuk mengubah proyek energi kompleks menjadi infrastruktur operasional." },
-      "slide2": { "title": "Solusi untuk Lingkungan Nyata", "subtitle": "Sistem penyimpanan energi yang dirancang dan dikirim untuk kondisi industri, residensial, dan maritim." },
+      "slide1": { "title": "Infrastruktur Penyimpanan Energi Industri", "subtitle": "Kami merancang dan mengerahkan infrastruktur BESS dari 1MW ke atas — dirancang untuk kinerja skala grid dan keandalan jangka panjang." },
+      "slide2": { "title": "SOLUSI UNTUK RUMAH RESIDENSIAL", "subtitle": "Daya rumah Anda lebih cerdas — sistem penyimpanan baterai kami menjaga lampu tetap menyala, mengurangi biaya energi, dan memaksimalkan setiap energi surya yang dihasilkan atap Anda." },
       "slide3": { "title": "Dukungan Purna Jual & Siklus Hidup", "subtitle": "Tanggung jawab kami berlanjut melampaui pengiriman — mendukung kinerja, keandalan, dan kontinuitas sistem dari waktu ke waktu." },
-      "slide4": { "title": "Infrastruktur dengan Tujuan", "subtitle": "Infrastruktur energi yang mendukung komunitas, layanan penting, dan ketahanan jangka panjang." }
+      "slide4": { "title": "Infrastruktur dengan Tujuan", "subtitle": "Infrastruktur energi yang mendukung komunitas, layanan penting, dan ketahanan jangka panjang." },
+      "slide5": { "title": "DAYA UNTUK LAYANAN PENTING", "subtitle": "Ketika kegagalan bukan pilihan, kami menjaga fasilitas kritis tetap beroperasi — rumah sakit, armada ambulans, pusat respons darurat, pabrik pengolahan air, dan utilitas publik yang masyarakat andalkan 24/7." }
     },
     "carousel": {
       "infrastructure": "INFRASTRUKTUR ENABLEMENT",
@@ -248,12 +266,13 @@
       "impact": "PURPOSE AND IMPACT",
       "impactSub": "Education - Clinics - Disaster Relief",
       "learnMore": "Selengkapnya",
+      "exploreMore": "EXPLORE",
       "tapToLearnMore": "Ketuk untuk info lebih lanjut"
     },
     "whatWeEnable": {
       "title": "Apa yang kami wujudkan",
       "subtitle": "Cara kami melayani Anda",
-      "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.",
+      "intro": "Kami menyediakan solusi penyimpanan energi tingkat perusahaan yang mengubah cara organisasi memberdayakan operasi mereka—dari keandalan skala grid hingga ketahanan misi kritis.",
       "residential": "RESIDENTIAL",
       "residentialTabDesc": "Sistem energi rumah pintar dengan daya cadangan dan kemandirian energi.",
       "residentialCardTitle": "Residential Microgrid Solutions",
@@ -271,7 +290,15 @@
       "maritimeCardTitle": "Marine Propulsion & Power",
       "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.",
       "utility": "Utilitas",
-      "utilityDesc": "Penyimpanan skala utilitas untuk stabilitas grid dan integrasi energi terbarukan."
+      "utilityDesc": "Penyimpanan skala utilitas untuk stabilitas grid dan integrasi energi terbarukan.",
+      "learnMore": "Selengkapnya"
+    },
+    "baterinoPro": {
+      "introducing": "MEMPERKENALKAN",
+      "description": "Divisi kami yang didedikasikan untuk proyek industri.",
+      "industrialDesc": "Divisi kami yang didedikasikan untuk proyek industri.",
+      "medicalDesc": "Divisi kami yang didedikasikan untuk proyek medis dan perawatan kritis.",
+      "maritimeDesc": "Divisi kami yang didedikasikan untuk operasi maritim dan lepas pantai."
     },
     "howWeDeliver": {
       "title": "Cara kami mengirimkan",
@@ -333,6 +360,8 @@
       "aboutUsDesc": "Baterino memungkinkan infrastruktur penyimpanan energi untuk komunitas, industri, dan aplikasi maritim, mengintegrasikan teknologi terbukti dari mitra seperti LithTech dengan fokus pada keandalan, keamanan, dan kinerja jangka panjang.",
       "localOffices": "Kantor Lokal",
       "officesList": "Romania\nBulgaria\nChina\nIndonesia",
+      "offices": { "romania": "Romania", "bulgaria": "Bulgaria", "china": "China", "indonesia": "Indonesia" },
+      "viewMore": "Lihat selengkapnya",
       "europe": "Eropa",
       "asia": "Asia",
       "americas": "Amerika",

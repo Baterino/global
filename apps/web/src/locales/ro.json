@@ -6,13 +6,34 @@
   },
   "nav": {
     "home": "Acasă",
+    "subtitle": {
+      "solutions": "Alege o baterie",
+      "solutions.residential": "Stocare energie pentru locuințe",
+      "solutions.industrial": "BESS de mare capacitate",
+      "solutions.medical": "Sector medical critic",
+      "solutions.maritime": "Operațiuni offshore",
+      "delivery": "Procesul de livrare",
+      "impact": "Impactul nostru global",
+      "globalPresence": "Unde operăm",
+      "insights": "Dovezi. Perspectivă. Progres.",
+      "company": "Baterino. LithTech. Parteneriat.",
+      "company.aboutBaterino": "Activare proiecte",
+      "company.aboutLithtech": "Producție tehnologie",
+      "company.partnership": "Sinergia noastră",
+      "language": "Alege limba sitului",
+      "contact": "Clienți și Parteneri"
+    },
     "solutions": "Soluții",
+    "solutionsMobile": "Soluții Energetice",
     "solutions.residential": "Rezidențial și Comunități",
+    "solutions.residentialShort": "Rezidențial",
     "solutions.industrial": "Industrial",
+    "solutions.medical": "Medical",
     "solutions.maritime": "Maritim",
     "delivery": "Livrare",
     "impact": "Impact",
     "company": "Despre",
+    "companyMobile": "Despre Noi",
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Parteneriat",
@@ -113,22 +134,20 @@
       "lithtech": {
         "title": "LITHTECH",
         "subtitle": "DEZVOLTARE TEHNOLOGICĂ",
-        "intro": "LithTech este responsabil pentru dezvoltarea și fabricarea tehnologiilor avansate de stocare a energiei. Rolul lor include:",
+        "intro": "LithTech este responsabil pentru dezvoltarea și fabricarea tehnologiilor avansate de stocare a energiei, cu un accent puternic pe excelența tehnologică la nivel de sistem.",
         "bullet1": "Proiectarea și fabricarea sistemelor de stocare a energiei în baterii",
         "bullet2": "Dezvoltarea arhitecturilor de management și siguranță a bateriilor",
         "bullet3": "Asigurarea conformității cu standardele și certificările internaționale",
-        "bullet4": "Îmbunătățirea performanței, siguranței și inteligenței sistemului",
-        "closing": "LithTech se concentrează pe excelența tehnologică la nivel de sistem."
+        "bullet4": "Îmbunătățirea performanței, siguranței și inteligenței sistemului"
       },
       "baterino": {
         "title": "BATERINO",
         "subtitle": "FACILITATOR DE INFRASTRUCTURĂ",
-        "intro": "Baterino este responsabil pentru transformarea tehnologiei în infrastructură implementabilă, pe termen lung. Rolul nostru include:",
+        "intro": "Baterino se specializează în transformarea tehnologiei avansate în infrastructură implementabilă, pe termen lung, condus de un angajament față de integrare fără probleme și fiabilitate durabilă.",
         "bullet1": "Integrarea tehnologiilor LithTech în sisteme energetice complete",
         "bullet2": "Adaptarea soluțiilor la mediile operaționale reale",
         "bullet3": "Gestionarea livrării și coordonării proiectelor",
-        "bullet4": "Suportarea sistemelor pe tot ciclul lor de viață operațional",
-        "closing": "Baterino se concentrează pe execuție, integrare și fiabilitate pe termen lung."
+        "bullet4": "Suportarea sistemelor pe tot ciclul lor de viață operațional și dincolo"
       }
     },
     "longTerm": {
@@ -138,26 +157,23 @@
       "factoryToField": {
         "title": "DE LA UZINĂ LA TEREN",
         "description": "Reușesc când operează în siguranță și fiabil în medii reale — în comunități, situri industriale și operațiuni maritime.",
-        "listLabel": "Prin acest parteneriat:",
         "bullet1": "LithTech livrează tehnologie certificată și bancabilă",
         "bullet2": "Baterino asigură implementare la nivel de infrastructură"
       },
       "sharedStandards": {
         "title": "STANDARDE PARTAJATE",
-        "description": "Parteneriatul este ghidat de principii comune:",
+        "description": "Parteneriatul este ghidat de principii comune care asigură că tehnologia și livrarea sunt aliniate de la proiectare la operare.",
         "bullet1": "Design de sistem cu siguranță pe primul loc",
         "bullet2": "Performanță pe termen lung în loc de optimizare pe termen scurt",
         "bullet3": "Conformitate cu standardele internaționale",
-        "bullet4": "Responsabilitate pe ciclul de viață",
-        "closing": "Aceste principii asigură că tehnologia și livrarea sunt aliniate de la proiectare la operare."
+        "bullet4": "Responsabilitate pe ciclul de viață"
       },
       "appliedAcrossSectors": {
         "title": "APLICAT ÎN TOATE SECTORII",
-        "description": "Parteneriatul Baterino-LithTech permite implementarea sistematică a stocării în:",
+        "description": "Cazuri de utilizare diferite. O singură abordare integrată. Parteneriatul Baterino-LithTech permite implementarea sistematică a stocării în:",
         "bullet1": "Energie comunitară și rezidențială",
         "bullet2": "Infrastructură industrială și comercială",
-        "bullet3": "Medii maritime și offshore",
-        "closing": "Cazuri de utilizare diferite. O singură abordare integrată."
+        "bullet3": "Medii maritime și offshore"
       }
     }
   },
@@ -226,19 +242,22 @@
     "message": "Acesta este un mesaj de salut localizat de la API."
   },
   "home": {
+    "ourDivisions": "Diviziile noastre",
     "hero": { "title": "ENABLING HIGH CAPACITY ENERGY STORAGE WORLDWIDE", "subtitle": "We integrate industry-leading energy storage technology into scalable, resilient infrastructure for communities, industry, medical and maritime environments.", "poweredBy": "powered by", "poweredByLabel": "Powered by:", "technologyPoweredBy": "Our technology is powered by:", "hoverToExplore": "Hover to explore" },
     "heroSlides": {
-      "slide1": { "title": "Infrastructură de stocare a energiei industriale", "subtitle": "Integrăm tehnologia, livrarea și coordonarea pentru a transforma proiectele energetice complexe în infrastructură operațională." },
-      "slide2": { "title": "Soluții pentru medii reale", "subtitle": "Sisteme de stocare a energiei concepute și livrate pentru condiții industriale, rezidențiale și maritime." },
+      "slide1": { "title": "Infrastructură de stocare a energiei industriale", "subtitle": "Proiectăm și implementăm infrastructură BESS de la 1MW și peste — concepută pentru performanță la scară de rețea și fiabilitate pe termen lung." },
+      "slide2": { "title": "SOLUȚII PENTRU LOCUINȚE REZIDENȚIALE", "subtitle": "Alimentează-ți casa mai inteligent — sistemele noastre de stocare în baterii mențin luminile aprinse, reduc costurile energetice și maximizează fiecare pic de energie solară produsă de acoperișul tău." },
       "slide3": { "title": "Suport post-vânzare și ciclu de viață", "subtitle": "Responsabilitatea noastră continuă dincolo de livrare — sprijinind performanța, fiabilitatea și continuitatea sistemului în timp." },
-      "slide4": { "title": "Infrastructură cu scop", "subtitle": "Infrastructură energetică care sprijină comunitățile, serviciile esențiale și reziliența pe termen lung." }
+      "slide4": { "title": "Infrastructură cu scop", "subtitle": "Infrastructură energetică care sprijină comunitățile, serviciile esențiale și reziliența pe termen lung." },
+      "slide5": { "title": "ENERGIE PENTRU SERVICII ESENȚIALE", "subtitle": "Când eșecul nu este o opțiune, menținem în funcțiune facilitățile critice — spitale, flote de ambulanțe, centre de răspuns la urgențe, stații de tratare a apei și utilități publice de care comunitățile depind 24/7." }
     },
-    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Aflați mai multe", "tapToLearnMore": "Atinge pentru a afla mai multe" },
-    "whatWeEnable": { "title": "What we enable", "subtitle": "How we serve you", "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utility", "utilityDesc": "Utility-scale storage for grid stability." },
-    "howWeDeliver": { "title": "How we deliver", "subtitle": "Our core process", "intro": "From discovery to funding and after-sales support.", "stage1": "First stage", "stage2": "Second stage", "stage3": "Third stage", "stage4": "Fourth stage", "step1": "Project Discovery", "step1Desc": "We assess your needs.", "step2": "Technology Integration", "step2Desc": "We deploy and integrate LitiTech systems.", "step3": "After-sales Support & Warranty", "step3Desc": "Ongoing support and warranty.", "step4": "Project Funding Support", "step4Desc": "We help secure funding." },
-    "builtOnTrust": { "title": "Built on trust. Designed to last.", "subtitle": "Our global solutions", "col1": "Long-term approach", "col1Desc": "We invest in durable infrastructure.", "col2": "Technology that evolves", "col2Desc": "We continuously improve our technology.", "col3": "Sustain our ecosystem", "col3Desc": "Environmental and social responsibility.", "col4": "Safe infrastructure, focus on people", "col4Desc": "Safety and people at the center." },
+    "carousel": { "infrastructure": "INFRASTRUCTURE ENABLEMENT", "infrastructureSub": "Residential - Industrial - Maritime Sectors", "lifecycle": "Trusted lifecycle", "lifecycleSub": "Monitoring - After Sales - Technical Support", "impact": "PURPOSE AND IMPACT", "impactSub": "Education - Clinics - Disaster Relief", "learnMore": "Aflați mai multe", "exploreMore": "EXPLORE", "tapToLearnMore": "Atinge pentru a afla mai multe" },
+    "baterinoPro": { "introducing": "PREZENTARE", "description": "Divizia noastră dedicată proiectelor industriale.", "industrialDesc": "Divizia noastră dedicată proiectelor industriale.", "medicalDesc": "Divizia noastră dedicată proiectelor medicale și de îngrijire critică.", "maritimeDesc": "Divizia noastră dedicată operațiunilor maritime și offshore." },
+    "whatWeEnable": { "title": "Ce permitem", "subtitle": "Cum vă servim", "intro": "Oferim soluții de stocare a energiei de nivel enterprise care transformă modul în care organizațiile își alimentează operațiunile—de la fiabilitate la scară de rețea până la reziliență critică.", "residential": "RESIDENTIAL", "residentialTabDesc": "Smart home energy systems with backup power and energy independence.", "residentialCardTitle": "Residential Microgrid Solutions", "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.", "industrial": "INDUSTRIAL BESS", "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.", "industrialCardTitle": "Grid-Scale Power Solutions", "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.", "medical": "MEDICAL", "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.", "medicalCardTitle": "Critical Care Power Systems", "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.", "maritime": "MARITIME", "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.", "maritimeCardTitle": "Marine Propulsion & Power", "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.", "utility": "Utilități", "utilityDesc": "Stocare la scară de rețea pentru stabilitate și integrare a energiilor regenerabile.", "learnMore": "Aflați mai multe" },
+    "howWeDeliver": { "title": "Cum livrăm", "subtitle": "Procesul nostru principal", "intro": "Baterino permite proiecte de stocare a energiei prin combinarea integrării tehnologice, livrării operaționale și suportului pe termen lung. Eliminăm barierele tehnice, logistice și structurale astfel încât proiectele să treacă de la concept la operațiune cu încredere.", "stage1": "Prima etapă", "stage2": "A doua etapă", "stage3": "A treia etapă", "stage4": "A patra etapă", "step1": "Activare infrastructură", "step1Desc": "Aducem împreună tehnologiile, partenerii și logistica necesare pentru a face proiectele de stocare a energiei implementabile în medii reale.", "step2": "Integrare tehnologică", "step2Desc": "Integrăm stocarea energiei și tehnologiile regenerabile în sisteme coerente, gata pentru site, concepute pentru aplicații rezidențiale, industriale și maritime.", "step3": "Suport post-vânzare și fiabilitate", "step3Desc": "Implicarea noastră continuă dincolo de punerea în funcțiune. Sprijinim performanța sistemului în timp printr-o abordare orientată pe fiabilitate.", "step4": "Suport pentru finanțarea proiectelor", "step4Desc": "Pentru proiecte selectate, Baterino poate sprijini structurarea proiectului și accesul la finanțare prin parteneri financiari strategici — permitând finanțare totală sau parțială unde este cazul." },
+    "builtOnTrust": { "title": "Construit pe încredere. Proiectat să dureze.", "subtitle": "Soluțiile noastre globale", "col1": "O abordare pe termen lung", "col1Desc": "Ne implicăm în proiecte dincolo de livrare. Rolul nostru continuă prin operațiuni, suport și ciclul de viață al sistemului — asigurând continuitate și responsabilitate.", "col2": "Tehnologie pe care te poți baza", "col2Desc": "Baterino integrează tehnologii energetice dovedite și finanțabile selectate pentru performanță, siguranță și viabilitate pe termen lung în medii rezidențiale, industriale și maritime.", "col3": "Suport care durează", "col3Desc": "Prin căi structurate de post-vânzare și suport tehnic, ajutăm să asigurăm fiabilitatea sistemului pe toată durata vieții operaționale.", "col4": "Construit ca infrastructură, nu ca produse", "col4Desc": "Abordăm fiecare proiect ca infrastructură — concepută să se integreze în medii operaționale reale, cadre de reglementare și strategii energetice pe termen lung." },
     "globalImpact": { "title": "IMPACTUL NOSTRU GLOBAL", "subtitle": "CONSTRUIND REZILIENȚĂ LA NIVEL MONDIAL", "intro": "Accesul la energie fiabilă modelează oportunități, reziliență și creștere. Programele de impact Baterino aplică aceeași expertiză în infrastructură folosită în proiecte industriale și maritime pentru a sprijini comunitățile și serviciile esențiale din întreaga lume.", "alignedGoals": "ALINIAT CU OBIECTIVELE GLOBALE", "alignedGoalsDesc": "Baterino & LithTech își aliniază inițiativele de impact cu Obiectivele de Dezvoltare Durabilă ale Națiunilor Unite, urmărind să contribuie la toate cele 17 obiective până în 2035 prin furnizarea practică de infrastructură energetică.", "viewProgress": "Vedeți progresul nostru", "energyWhere": "ENERGIE UNDE CONTEAZĂ CEL MAI MULT", "energyWhereDesc": "Energia fiabilă este fundamentală pentru serviciile esențiale și viața de zi cu zi. Baterino & LithTech concentrează eforturile de impact acolo unde disponibilitatea energiei afectează direct sănătatea, educația, sistemele de apă și reziliența comunității.\nPrioritizăm proiectele în care fiabilitatea energiei nu este opțională — ci critică.", "beyond": "DINCOLO DE LIVRARE", "beyondDesc": "Munca noastră de impact merge dincolo de instalarea sistemului. Implementăm infrastructură energetică practică și scalabilă concepută pentru condiții reale de operare — susținută prin integrare, implicare locală și responsabilitate pe termen lung. Impactul este obținut prin sisteme care continuă să funcționeze, nu prin implementări unice.", "inclusive": "CONSTRUIREA SISTEMELOR INCLUZIVE", "inclusiveDesc": "Tranziția energetică trebuie să funcționeze în diferite realități. Combinând integrarea tehnologică, suportul pe tot ciclul de viață și designul adaptabil al sistemelor, Baterino ajută comunitățile să construiască sisteme energetice care susțin atât nevoile prezente, cât și creșterea viitoare. Incluziunea vine din infrastructura care poate fi întreținută, extinsă și pe care te poți baza în timp." },
-    "globalPresence": { "title": "Delivering energy infrastructure worldwide", "subtitle": "Our global presence" },
+    "globalPresence": { "title": "Livrând infrastructură energetică în întreaga lume", "subtitle": "Prezența noastră globală" },
     "footer": {
       "poweredByLabel": "Alimentat de: ",
       "alignedByLabel": "Aliniat de: ",
@@ -252,6 +271,8 @@
       "aboutUsDesc": "Baterino permite infrastructura de stocare a energiei pentru comunități, industrie și aplicații maritime, integrând tehnologii dovedite de la parteneri precum LithTech cu accent pe fiabilitate, siguranță și performanță pe termen lung.",
       "localOffices": "Birouri Locale",
       "officesList": "România\nBulgaria\nChina\nIndonesia",
+      "offices": { "romania": "România", "bulgaria": "Bulgaria", "china": "China", "indonesia": "Indonesia" },
+      "viewMore": "Vezi mai mult",
       "europe": "Europa",
       "asia": "Asia",
       "americas": "Americi",

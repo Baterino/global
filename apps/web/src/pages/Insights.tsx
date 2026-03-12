@@ -176,7 +176,7 @@ export function Insights() {
                 <span className="mb-1 font-body text-body-xs text-neutral-400">
                   {t(article.dateKey)}
                 </span>
-                <h2 className="mb-2 font-heading text-lg font-bold leading-tight text-neutral-900 group-hover:text-neutral-700">
+                <h2 className="mb-2 font-heading text-lg font-bold uppercase leading-tight tracking-tight text-neutral-900 group-hover:text-neutral-700">
                   {t(article.titleKey)}
                 </h2>
                 <p className="flex-1 font-body text-body-sm leading-relaxed text-neutral-600">

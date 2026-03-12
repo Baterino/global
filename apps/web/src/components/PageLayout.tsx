@@ -15,7 +15,7 @@ export function PageLayout({ titleKey, children }: PageLayoutProps) {
       <div className="mx-auto w-full max-w-[1200px] px-4 py-10 sm:px-6 lg:px-8">
         <article className="space-y-6 sm:space-y-8">
           <header>
-            <h1 className="text-heading-lg font-semibold tracking-tight text-neutral-900 dark:text-white sm:text-display-sm">
+            <h1 className="text-heading-lg font-semibold uppercase tracking-tight text-neutral-900 dark:text-white sm:text-display-sm">
               {title}
             </h1>
           </header>

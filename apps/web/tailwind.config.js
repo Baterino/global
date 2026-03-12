@@ -24,6 +24,12 @@ export default {
         'heading-lg': ['1.5rem', { lineHeight: '1.35' }],
         'heading-md': ['1.25rem', { lineHeight: '1.4' }],
         'heading-sm': ['1.125rem', { lineHeight: '1.4' }],
+        /* Mobile typography (use with max-lg:) */
+        'mobile-h1': ['1.5rem', { lineHeight: '1.2' }],
+        'mobile-h2': ['1.25rem', { lineHeight: '1.3' }],
+        'mobile-h3': ['1.125rem', { lineHeight: '1.35' }],
+        'mobile-h4': ['1rem', { lineHeight: '1.4' }],
+        'mobile-body': ['0.9375rem', { lineHeight: '1.5' }],
         'body-lg': ['1.125rem', { lineHeight: '1.6' }],
         'body-md': ['1rem', { lineHeight: '1.5' }],
         'body-sm': ['0.875rem', { lineHeight: '1.45' }],

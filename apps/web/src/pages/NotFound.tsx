@@ -11,7 +11,7 @@ export function NotFound() {
     <>
       <SeoHead title={t('pageTitle.notFound')} noIndex />
       <article className="mx-auto max-w-[1200px] px-4 py-16 text-center sm:px-6 lg:px-8">
-        <h1 className="text-display-sm font-semibold text-neutral-900 dark:text-white mb-4">
+        <h1 className="text-display-sm font-semibold uppercase tracking-tight text-neutral-900 dark:text-white mb-4">
           {t('pageTitle.notFound')}
         </h1>
         <p className="text-body-md text-neutral-600 dark:text-neutral-400 mb-8">

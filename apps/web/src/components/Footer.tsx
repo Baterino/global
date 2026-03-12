@@ -43,7 +43,47 @@ export function Footer() {
   return (
     <footer className="w-full border-t border-neutral-200 bg-white pt-16">
       <div className="mx-auto w-full max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+        {/* Mobile footer: centered, stacked layout */}
+        <div className="flex flex-col items-center gap-6 text-center lg:hidden">
+          <Link to={base} className="block">
+            <img
+              src="/images/Baterino-Logo-black.png"
+              alt="Baterino"
+              className="h-8 w-auto"
+            />
+          </Link>
+          <div className="flex gap-6">
+            {SOCIAL_LINKS.map((s) => (
+              <a
+                key={s.name}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-600 transition-colors hover:text-neutral-900"
+                aria-label={s.name}
+              >
+                <s.Icon className="h-6 w-6" />
+              </a>
+            ))}
+          </div>
+          <nav className="flex flex-col items-center gap-3">
+            <Link to={`${base}/contact`} className={linkClass}>
+              {t('nav.contact')}
+            </Link>
+            <Link to={`${base}/${nav.termsOfUse.path}`} className={linkClass}>
+              {t('nav.termsOfUse')}
+            </Link>
+            <Link to={`${base}/${nav.privacyPolicy.path}`} className={linkClass}>
+              {t('nav.privacyPolicy')}
+            </Link>
+          </nav>
+          <p className="font-body text-body-sm text-neutral-600">
+            {t('home.footer.copyright', { year })}
+          </p>
+        </div>
+
+        {/* Desktop footer: multi-column grid */}
+        <div className="hidden grid-cols-2 gap-8 sm:grid-cols-3 lg:grid lg:grid-cols-5">
           {/* Logo & LithTech */}
           <div>
             <Link to={base} className="block">
@@ -189,8 +229,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 flex justify-center border-t border-neutral-200 pt-12 pb-4">
+        {/* Bottom bar (desktop only; mobile has copyright in main block) */}
+        <div className="mt-16 hidden justify-center border-t border-neutral-200 pt-12 pb-4 lg:flex">
           <p className="font-body text-body-sm text-neutral-600">
             {t('home.footer.copyright', { year })}
           </p>

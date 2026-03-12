@@ -34,45 +34,32 @@ export function Delivery() {
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
-          {/* Right: content card */}
-          <div className="flex flex-1 flex-col justify-start rounded-[10px] bg-neutral-100 px-6 py-8 lg:px-10 lg:py-10">
-            <h2 className="font-heading text-xl font-bold leading-tight text-neutral-900">
-              {t('delivery.framework.item1.title')}
-            </h2>
-            <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
-              {t('delivery.framework.item1.desc')}
-            </p>
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
-              <div className="max-w-[180px] shrink-0 sm:max-w-none sm:w-44">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-sm">
-                  <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+          {/* Right: content card - 4 boxes on mobile (title+desc, then 3 bullet points) */}
+          <div className="flex flex-1 flex-col justify-start gap-4 sm:gap-0 sm:rounded-[10px] sm:bg-neutral-100 sm:px-6 sm:py-8 lg:px-10 lg:py-10">
+            <div className="rounded-[10px] bg-[#f7f7f7] p-4 sm:bg-transparent sm:p-0 sm:rounded-none">
+              <h2 className="font-heading text-xl font-bold uppercase leading-tight tracking-tight text-neutral-900">
+                {t('delivery.framework.item1.title')}
+              </h2>
+              <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
+                {t('delivery.framework.item1.desc')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-3 sm:gap-6">
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4 rounded-[10px] bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:gap-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
+                    <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
+                    {t(`delivery.framework.item1.point${i}`)}
+                  </p>
                 </div>
-                <p className="mt-2 font-body text-body-md leading-relaxed text-neutral-900">
-                  {t('delivery.framework.item1.point1')}
-                </p>
-              </div>
-              <div className="max-w-[180px] shrink-0 sm:max-w-none sm:w-44">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-sm">
-                  <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <p className="mt-2 font-body text-body-md leading-relaxed text-neutral-900">
-                  {t('delivery.framework.item1.point2')}
-                </p>
-              </div>
-              <div className="max-w-[180px] shrink-0 sm:max-w-none sm:w-44">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-sm">
-                  <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <p className="mt-2 font-body text-body-md leading-relaxed text-neutral-900">
-                  {t('delivery.framework.item1.point3')}
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -87,22 +74,27 @@ export function Delivery() {
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
-          <div className="flex flex-1 flex-col justify-start rounded-[10px] bg-neutral-100 px-6 py-8 lg:px-10 lg:py-10">
-            <h2 className="font-heading text-xl font-bold leading-tight text-neutral-900">
-              {t('delivery.framework.item2.title')}
-            </h2>
-            <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
-              {t('delivery.framework.item2.desc')}
-            </p>
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="flex flex-1 flex-col justify-start gap-4 sm:gap-0 sm:rounded-[10px] sm:bg-neutral-100 sm:px-6 sm:py-8 lg:px-10 lg:py-10">
+            <div className="rounded-[10px] bg-[#f7f7f7] p-4 sm:bg-transparent sm:p-0 sm:rounded-none">
+              <h2 className="font-heading text-xl font-bold uppercase leading-tight tracking-tight text-neutral-900">
+                {t('delivery.framework.item2.title')}
+              </h2>
+              <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
+                {t('delivery.framework.item2.desc')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-3 sm:gap-6">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="max-w-[180px] shrink-0 sm:max-w-none sm:w-44">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-sm">
+                <div
+                  key={i}
+                  className="flex items-center gap-4 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:border-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
                     <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
-                  <p className="mt-2 font-body text-body-md leading-relaxed text-neutral-900">
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
                     {t(`delivery.framework.item2.point${i}`)}
                   </p>
                 </div>
@@ -121,22 +113,27 @@ export function Delivery() {
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
-          <div className="flex flex-1 flex-col justify-start rounded-[10px] bg-neutral-100 px-6 py-8 lg:px-10 lg:py-10">
-            <h2 className="font-heading text-xl font-bold leading-tight text-neutral-900">
-              {t('delivery.framework.item3.title')}
-            </h2>
-            <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
-              {t('delivery.framework.item3.desc')}
-            </p>
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="flex flex-1 flex-col justify-start gap-4 sm:gap-0 sm:rounded-[10px] sm:bg-neutral-100 sm:px-6 sm:py-8 lg:px-10 lg:py-10">
+            <div className="rounded-[10px] bg-[#f7f7f7] p-4 sm:bg-transparent sm:p-0 sm:rounded-none">
+              <h2 className="font-heading text-xl font-bold uppercase leading-tight tracking-tight text-neutral-900">
+                {t('delivery.framework.item3.title')}
+              </h2>
+              <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
+                {t('delivery.framework.item3.desc')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-3 sm:gap-6">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="max-w-[180px] shrink-0 sm:max-w-none sm:w-44">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-sm">
+                <div
+                  key={i}
+                  className="flex items-center gap-4 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:border-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
                     <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
-                  <p className="mt-2 font-body text-body-md leading-relaxed text-neutral-900">
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
                     {t(`delivery.framework.item3.point${i}`)}
                   </p>
                 </div>
@@ -155,22 +152,27 @@ export function Delivery() {
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
           </div>
-          <div className="flex flex-1 flex-col justify-start rounded-[10px] bg-neutral-100 px-6 py-8 lg:px-10 lg:py-10">
-            <h2 className="font-heading text-xl font-bold leading-tight text-neutral-900">
-              {t('delivery.framework.item4.title')}
-            </h2>
-            <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
-              {t('delivery.framework.item4.desc')}
-            </p>
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="flex flex-1 flex-col justify-start gap-4 sm:gap-0 sm:rounded-[10px] sm:bg-neutral-100 sm:px-6 sm:py-8 lg:px-10 lg:py-10">
+            <div className="rounded-[10px] bg-[#f7f7f7] p-4 sm:bg-transparent sm:p-0 sm:rounded-none">
+              <h2 className="font-heading text-xl font-bold uppercase leading-tight tracking-tight text-neutral-900">
+                {t('delivery.framework.item4.title')}
+              </h2>
+              <p className="mt-2 max-w-[685px] font-body text-body-md leading-relaxed text-neutral-700">
+                {t('delivery.framework.item4.desc')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-3 sm:gap-6">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="max-w-[180px] shrink-0 sm:max-w-none sm:w-44">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-white shadow-sm">
+                <div
+                  key={i}
+                  className="flex items-center gap-4 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:border-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
                     <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
-                  <p className="mt-2 font-body text-body-md leading-relaxed text-neutral-900">
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
                     {t(`delivery.framework.item4.point${i}`)}
                   </p>
                 </div>
@@ -216,11 +218,16 @@ export function Delivery() {
               <p className="mb-2 font-body text-body-md font-semibold text-neutral-900">
                 {t('delivery.consistency.col1.subtitle')}
               </p>
-              <ul className="space-y-2 font-body text-body-md leading-relaxed text-neutral-700">
-                <li>• {t('delivery.consistency.col1.point1')}</li>
-                <li>• {t('delivery.consistency.col1.point2')}</li>
-                <li>• {t('delivery.consistency.col1.point3')}</li>
-                <li>• {t('delivery.consistency.col1.point4')}</li>
+              <ul className="flex flex-col gap-3 sm:space-y-2 sm:gap-0">
+                {[1, 2, 3, 4].map((i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 rounded-[10px] bg-[#f7f7f7] p-4 font-body text-body-md leading-relaxed text-neutral-700 sm:rounded-none sm:bg-transparent sm:p-0"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 sm:h-auto sm:w-auto sm:bg-transparent sm:text-base">→</span>
+                    {t(`delivery.consistency.col1.point${i}`)}
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -235,10 +242,16 @@ export function Delivery() {
               <p className="mb-2 font-body text-body-md font-semibold text-neutral-900">
                 {t('delivery.consistency.col2.subtitle')}
               </p>
-              <ul className="space-y-2 font-body text-body-md leading-relaxed text-neutral-700">
-                <li>• {t('delivery.consistency.col2.point1')}</li>
-                <li>• {t('delivery.consistency.col2.point2')}</li>
-                <li>• {t('delivery.consistency.col2.point3')}</li>
+              <ul className="flex flex-col gap-3 sm:space-y-2 sm:gap-0">
+                {[1, 2, 3].map((i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 rounded-[10px] bg-[#f7f7f7] p-4 font-body text-body-md leading-relaxed text-neutral-700 sm:rounded-none sm:bg-transparent sm:p-0"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 sm:h-auto sm:w-auto sm:bg-transparent sm:text-base">→</span>
+                    {t(`delivery.consistency.col2.point${i}`)}
+                  </li>
+                ))}
               </ul>
               <p className="mt-4 font-body text-body-md leading-relaxed text-neutral-700">
                 {t('delivery.consistency.col2.footer')}
@@ -256,11 +269,16 @@ export function Delivery() {
               <p className="mb-2 font-body text-body-md font-semibold text-neutral-900">
                 {t('delivery.consistency.col3.subtitle')}
               </p>
-              <ul className="space-y-2 font-body text-body-md leading-relaxed text-neutral-700">
-                <li>• {t('delivery.consistency.col3.point1')}</li>
-                <li>• {t('delivery.consistency.col3.point2')}</li>
-                <li>• {t('delivery.consistency.col3.point3')}</li>
-                <li>• {t('delivery.consistency.col3.point4')}</li>
+              <ul className="flex flex-col gap-3 sm:space-y-2 sm:gap-0">
+                {[1, 2, 3, 4].map((i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 rounded-[10px] bg-[#f7f7f7] p-4 font-body text-body-md leading-relaxed text-neutral-700 sm:rounded-none sm:bg-transparent sm:p-0"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 sm:h-auto sm:w-auto sm:bg-transparent sm:text-base">→</span>
+                    {t(`delivery.consistency.col3.point${i}`)}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
