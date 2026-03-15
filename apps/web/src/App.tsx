@@ -25,6 +25,7 @@ const GlobalPresence = lazy(() =>
   import('./pages/GlobalPresence').then((m) => ({ default: m.GlobalPresence }))
 )
 const Insights = lazy(() => import('./pages/Insights').then((m) => ({ default: m.Insights })))
+const UseCases = lazy(() => import('./pages/UseCases').then((m) => ({ default: m.UseCases })))
 const Article = lazy(() => import('./pages/Article').then((m) => ({ default: m.Article })))
 const LithTech = lazy(() => import('./pages/LithTech').then((m) => ({ default: m.LithTech })))
 const Partnership = lazy(() =>
@@ -68,6 +69,7 @@ export default function App() {
                 <Route path="company/about-baterino" element={<AboutBaterino />} />
                 <Route path="company/lithtech" element={<LithTech />} />
                 <Route path="company/insights" element={<Insights />} />
+                <Route path="use-cases" element={<UseCases />} />
                 <Route path="company/insights/:slug" element={<Article />} />
                 <Route path="company/partnership" element={<Partnership />} />
                 <Route path="global-presence" element={<GlobalPresence />} />

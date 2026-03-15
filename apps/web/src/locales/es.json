@@ -16,6 +16,7 @@
       "impact": "Nuestro impacto global",
       "globalPresence": "Dónde operamos",
       "insights": "Prueba. Perspectiva. Progreso.",
+      "useCases": "Casos de Proyecto LithTech Global",
       "company": "Baterino. LithTech. Asociación.",
       "company.aboutBaterino": "Habilitar proyectos",
       "company.aboutLithtech": "Producción de tecnología",
@@ -38,6 +39,7 @@
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Asociación",
     "insights": "Información",
+    "useCases": "Casos de Uso",
     "globalPresence": "Presencia Global",
     "careers": "Carreras",
     "contact": "Contacto",
@@ -58,6 +60,7 @@
     "companyPartnership": "Asociación",
     "globalPresence": "Presencia Global",
     "insights": "Información",
+    "useCases": "Casos de Uso",
     "careers": "Carreras",
     "contact": "Contacto",
     "termsOfUse": "Términos de Uso",
@@ -762,7 +765,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "PRESENCIA GLOBAL. EJECUCIÓN LOCAL.",
+      "title": "EJECUCIÓN LOCAL.",
       "subtitle": "Baterino opera como una plataforma global de infraestructura energética, apoyando proyectos en todas las regiones a través de socios locales y ejecución sobre el terreno."
     },
     "operatingGlobally": {
@@ -800,6 +803,53 @@
       "bullet3": "Marketing centralizado, posicionamiento de marca y apoyo comercial"
     }
   },
+  "useCases": {
+    "meta": {
+      "title": "Casos de Proyecto LithTech Global",
+      "description": "Referencia completa de sistemas de almacenamiento de energía desplegados globalmente — desde instalaciones comerciales de menos de 100 kWh hasta BESS conectados a la red de múltiples megavatios."
+    },
+    "hero": {
+      "tag": "Información · Estudios de Caso",
+      "date": "Proyectos de Referencia LithTech Global · 2025",
+      "title": "39 Proyectos Desplegados.",
+      "titleHighlight": "En 7 Países.",
+      "subtitle": "Referencia completa de sistemas de almacenamiento de energía desplegados globalmente — desde instalaciones comerciales de menos de 100 kWh hasta BESS conectados a la red de múltiples megavatios, microredes insulares fuera de la red y baterías de propulsión marina."
+    },
+    "stats": {
+      "total": "Total de Proyectos",
+      "countries": "Países",
+      "inSweden": "En Suecia",
+      "largest": "Sistema Más Grande",
+      "withSolar": "Con Solar PV"
+    },
+    "filters": {
+      "all": "Todos",
+      "industrial": "Industrial",
+      "offgrid": "Fuera de Red / Comunidad",
+      "maritime": "Marítimo",
+      "solar": "Con Solar PV",
+      "container": "BESS Contenedor",
+      "cabinet": "BESS Gabinete"
+    },
+    "searchPlaceholder": "Buscar ubicación, potencia, tipo…",
+    "showingCount": "Mostrando {{count}} proyectos",
+    "noMatch": "Ningún proyecto coincide con su filtro.",
+    "photoComingSoon": "Foto próximamente",
+    "sector": {
+      "industrial": "Industrial",
+      "maritime": "Marítimo",
+      "offgrid": "Fuera de Red / Comunidad"
+    },
+    "spec": {
+      "capacity": "Capacidad",
+      "powerCapacity": "Potencia / Capacidad",
+      "solar": "Solar PV",
+      "container": "Contenedor",
+      "installation": "Instalación",
+      "vesselType": "Tipo de Embarcación",
+      "country": "País"
+    }
+  },
   "insights": {
     "hero": {
       "title": "INSIGHTS",
@@ -811,6 +861,7 @@
     "pressRelease": "Comunicado de Prensa",
     "caseStudy": "Caso de Estudio",
     "publicRelease": "COMUNICADO PÚBLICO",
+    "categoryCompany": "Empresa",
     "readMore": "Leer más",
     "loadMore": "Cargar más",
     "backToInsights": "Volver a Insights",
@@ -818,6 +869,7 @@
     "noArticles": "No hay artículos que coincidan con su filtro.",
     "filters": {
       "all": "Todos",
+      "company": "Empresa",
       "pressRelease": "Comunicado de Prensa",
       "useCases": "Casos de Uso",
       "news": "Noticias"
@@ -869,6 +921,33 @@
       "location": "GLOBAL",
       "excerpt": "Baterino amplía su equipo para atender la creciente demanda de soluciones de almacenamiento de energía en todo el mundo.",
       "preview": "La plataforma global de Baterino está diseñada para crecer a través de asociaciones locales confiables."
+    },
+    "article7": {
+      "title": "Dónde operamos: Dentro del marco de entrega global de Baterino",
+      "author": "Equipo Baterino",
+      "date": "Marzo 2026",
+      "location": "Yakarta",
+      "excerpt": "Una mirada transparente de cómo funciona el modelo de entrega de Baterino, dónde operamos y qué hace que nuestro enfoque sea diferente de un proveedor de equipos tradicional.",
+      "preview": "Una mirada transparente de cómo funciona el modelo de entrega de Baterino, dónde operamos y qué hace que nuestro enfoque sea diferente de un proveedor de equipos tradicional.",
+      "description": "Una mirada transparente de cómo funciona el modelo de entrega de Baterino, dónde operamos y qué hace que nuestro enfoque sea diferente de un proveedor de equipos tradicional."
+    },
+    "article8": {
+      "title": "Más que un EPC: Entendiendo los roles de Baterino en cada mercado",
+      "author": "Equipo Baterino",
+      "date": "Marzo 2026",
+      "location": "Bucarest",
+      "excerpt": "Baterino fue construido para adaptarse. Según el mercado, actuamos como importador, distribuidor, proveedor de posventa o habilitador — a veces los cuatro a la vez.",
+      "preview": "Baterino fue construido para adaptarse. Según el mercado, actuamos como importador, distribuidor, proveedor de posventa o habilitador — a veces los cuatro a la vez.",
+      "description": "Baterino fue construido para adaptarse. Según el mercado, actuamos como importador, distribuidor, proveedor de posventa o habilitador — a veces los cuatro a la vez."
+    },
+    "article9": {
+      "title": "De la solicitud a la operación: Cómo Baterino evalúa y entrega proyectos de energía",
+      "author": "Equipo Baterino",
+      "date": "Marzo 2026",
+      "location": "Bucarest",
+      "excerpt": "Una mirada al proceso de recepción de proyectos, cuatro divisiones especializadas y cómo los proyectos de almacenamiento de energía pasan del primer contacto a la operación a largo plazo.",
+      "preview": "Una mirada al proceso de recepción de proyectos, cuatro divisiones especializadas y cómo los proyectos de almacenamiento de energía pasan del primer contacto a la operación a largo plazo.",
+      "description": "Una mirada al proceso de evaluación de proyectos de Baterino, cuatro divisiones especializadas y cómo los proyectos de almacenamiento de energía pasan del primer contacto a la operación a largo plazo."
     }
   }
 }

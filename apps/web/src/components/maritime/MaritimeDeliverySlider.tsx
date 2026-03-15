@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { ArrowRightIcon } from '../ArrowRightIcon'
 
 const SLIDE_WIDTH_PX = 340
 const GAP_PX = 20
@@ -180,9 +181,10 @@ export function MaritimeDeliverySlider() {
                     <div className="flex items-center justify-center">
                       <Link
                         to={contactPath}
-                        className="inline-flex items-center justify-center rounded-[5px] bg-white px-6 py-2.5 font-body text-base font-bold text-neutral-900 transition-colors hover:bg-neutral-200"
+                        className="btn-primary"
                       >
                         {t('home.carousel.learnMore')}
+                        <ArrowRightIcon />
                       </Link>
                     </div>
                   ) : (
@@ -264,9 +266,10 @@ export function MaritimeDeliverySlider() {
                     <div className="mt-6 flex items-center justify-center">
                       <Link
                         to={contactPath}
-                        className="inline-flex items-center justify-center rounded-[5px] bg-white px-6 py-2 font-body text-body-md font-bold text-neutral-900 transition-colors hover:bg-neutral-200"
+                        className="btn-primary"
                       >
                         {t('home.carousel.learnMore')}
+                        <ArrowRightIcon />
                       </Link>
                     </div>
                   ) : (

@@ -16,6 +16,7 @@
       "impact": "我们的全球影响",
       "globalPresence": "我们的运营地区",
       "insights": "证明。视角。进步。",
+      "useCases": "LithTech 全球项目案例",
       "company": "Baterino。LithTech。合作。",
       "company.aboutBaterino": "赋能项目",
       "company.aboutLithtech": "技术生产",
@@ -38,6 +39,7 @@
     "company.aboutLithtech": "LithTech",
     "company.partnership": "合作",
     "insights": "洞察",
+    "useCases": "应用案例",
     "globalPresence": "全球布局",
     "careers": "招聘",
     "contact": "联系我们",
@@ -261,6 +263,7 @@
     "companyPartnership": "合作",
     "globalPresence": "全球布局",
     "insights": "洞察",
+    "useCases": "应用案例",
     "careers": "招聘",
     "contact": "联系我们",
     "termsOfUse": "使用条款",
@@ -762,7 +765,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "全球布局。本地执行。",
+      "title": "本地执行。",
       "subtitle": "Baterino 作为全球能源基础设施平台运营，通过本地合作伙伴和实地执行支持各地区项目。"
     },
     "operatingGlobally": {
@@ -800,6 +803,53 @@
       "bullet3": "集中化的营销、品牌定位与市场推广支持"
     }
   },
+  "useCases": {
+    "meta": {
+      "title": "LithTech 全球项目案例",
+      "description": "全球储能系统完整参考 — 从 100 kWh 以下商业安装到多兆瓦并网 BESS。"
+    },
+    "hero": {
+      "tag": "洞察 · 案例研究",
+      "date": "LithTech 全球参考项目 · 2025",
+      "title": "39 个已部署项目。",
+      "titleHighlight": "遍布 7 个国家。",
+      "subtitle": "全球储能系统完整参考 — 从 100 kWh 以下商业安装到多兆瓦并网 BESS、离网岛屿微电网和船舶推进电池。"
+    },
+    "stats": {
+      "total": "总项目数",
+      "countries": "国家",
+      "inSweden": "在瑞典",
+      "largest": "最大系统",
+      "withSolar": "含太阳能"
+    },
+    "filters": {
+      "all": "全部",
+      "industrial": "工业",
+      "offgrid": "离网/社区",
+      "maritime": "海事",
+      "solar": "含太阳能",
+      "container": "集装箱 BESS",
+      "cabinet": "机柜 BESS"
+    },
+    "searchPlaceholder": "搜索位置、功率、类型…",
+    "showingCount": "显示 {{count}} 个项目",
+    "noMatch": "没有与筛选条件匹配的项目。",
+    "photoComingSoon": "照片即将推出",
+    "sector": {
+      "industrial": "工业",
+      "maritime": "海事",
+      "offgrid": "离网/社区"
+    },
+    "spec": {
+      "capacity": "容量",
+      "powerCapacity": "功率/容量",
+      "solar": "太阳能",
+      "container": "集装箱",
+      "installation": "安装",
+      "vesselType": "船型",
+      "country": "国家"
+    }
+  },
   "insights": {
     "hero": {
       "title": "洞察",
@@ -811,6 +861,7 @@
     "pressRelease": "新闻稿",
     "caseStudy": "案例研究",
     "publicRelease": "公开发布",
+    "categoryCompany": "公司",
     "readMore": "阅读更多",
     "loadMore": "加载更多",
     "backToInsights": "返回洞察",
@@ -818,6 +869,7 @@
     "noArticles": "没有与您的筛选条件匹配的文章。",
     "filters": {
       "all": "全部",
+      "company": "公司",
       "pressRelease": "新闻稿",
       "useCases": "使用案例",
       "news": "新闻"
@@ -869,6 +921,33 @@
       "location": "全球",
       "excerpt": "Baterino 扩大团队以支持全球对储能解决方案日益增长的需求。",
       "preview": "Baterino 的全球平台旨在通过值得信赖的本地合作伙伴关系发展。"
+    },
+    "article7": {
+      "title": "我们的运营地点：Baterino 全球交付框架解析",
+      "author": "Baterino 团队",
+      "date": "2026年3月",
+      "location": "雅加达",
+      "excerpt": "深入了解 Baterino 的交付模式如何运作、我们在哪里运营，以及我们的方法与传统设备供应商有何不同。",
+      "preview": "深入了解 Baterino 的交付模式如何运作、我们在哪里运营，以及我们的方法与传统设备供应商有何不同。",
+      "description": "深入了解 Baterino 的交付模式如何运作、我们在哪里运营，以及我们的方法与传统设备供应商有何不同。"
+    },
+    "article8": {
+      "title": "不仅仅是 EPC：了解 Baterino 在各市场中的角色",
+      "author": "Baterino 团队",
+      "date": "2026年3月",
+      "location": "布加勒斯特",
+      "excerpt": "Baterino 为适应而建。根据市场不同，我们扮演进口商、分销商、售后供应商或推动者的角色——有时同时扮演四种角色。",
+      "preview": "Baterino 为适应而建。根据市场不同，我们扮演进口商、分销商、售后供应商或推动者的角色——有时同时扮演四种角色。",
+      "description": "Baterino 为适应而建。根据市场不同，我们扮演进口商、分销商、售后供应商或推动者的角色——有时同时扮演四种角色。"
+    },
+    "article9": {
+      "title": "从需求到运营：Baterino 如何评估和交付能源项目",
+      "author": "Baterino 团队",
+      "date": "2026年3月",
+      "location": "布加勒斯特",
+      "excerpt": "深入了解我们的项目接收流程、四个专业部门，以及储能项目如何从首次接触到长期运营。",
+      "preview": "深入了解我们的项目接收流程、四个专业部门，以及储能项目如何从首次接触到长期运营。",
+      "description": "深入了解 Baterino 的项目评估流程、四个专业部门，以及储能项目如何从首次接触到长期运营。"
     }
   }
 }

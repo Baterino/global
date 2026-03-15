@@ -10,7 +10,7 @@ export function PrivacyPolicy() {
       <article className="w-full bg-white">
         <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[800px]">
-            <h1 className="font-heading text-3xl font-bold uppercase tracking-tight text-neutral-900 sm:text-4xl">
+            <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
               {t('privacyPolicy.title')}
             </h1>
             <p className="mt-4 font-body text-body-md text-neutral-600">

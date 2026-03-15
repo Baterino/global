@@ -16,6 +16,7 @@
       "impact": "Dampak global kami",
       "globalPresence": "Di mana kami beroperasi",
       "insights": "Bukti. Perspektif. Kemajuan.",
+      "useCases": "Kasus Proyek LithTech Global",
       "company": "Baterino. LithTech. Kemitraan.",
       "company.aboutBaterino": "Mengaktifkan proyek",
       "company.aboutLithtech": "Memproduksi teknologi",
@@ -38,6 +39,7 @@
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Kemitraan",
     "insights": "Insight",
+    "useCases": "Kasus Penggunaan",
     "globalPresence": "Kehadiran Global",
     "careers": "Karir",
     "contact": "Kontak",
@@ -58,6 +60,7 @@
     "companyPartnership": "Kemitraan",
     "globalPresence": "Kehadiran Global",
     "insights": "Insight",
+    "useCases": "Kasus Penggunaan",
     "careers": "Karir",
     "contact": "Kontak",
     "termsOfUse": "Ketentuan Penggunaan",
@@ -762,7 +765,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "KEHADIRAN GLOBAL. EKSEKUSI LOKAL.",
+      "title": "EKSEKUSI LOKAL.",
       "subtitle": "Baterino beroperasi sebagai platform infrastruktur energi global, mendukung proyek di berbagai wilayah melalui mitra lokal dan eksekusi di lapangan."
     },
     "operatingGlobally": {
@@ -800,6 +803,53 @@
       "bullet3": "Pemasaran terpusat, posisioning merek, dan dukungan go-to-market"
     }
   },
+  "useCases": {
+    "meta": {
+      "title": "Kasus Proyek LithTech Global",
+      "description": "Referensi lengkap sistem penyimpanan energi yang diterapkan secara global — dari instalasi komersial sub-100 kWh hingga BESS terhubung grid multi-megawatt."
+    },
+    "hero": {
+      "tag": "Insight · Studi Kasus",
+      "date": "Proyek Referensi LithTech Global · 2025",
+      "title": "39 Proyek yang Diterapkan.",
+      "titleHighlight": "Di 7 Negara.",
+      "subtitle": "Referensi lengkap sistem penyimpanan energi yang diterapkan secara global — dari instalasi komersial sub-100 kWh hingga BESS terhubung grid multi-megawatt, mikrogrid pulau off-grid, dan baterai propulsi laut."
+    },
+    "stats": {
+      "total": "Total Proyek",
+      "countries": "Negara",
+      "inSweden": "Di Swedia",
+      "largest": "Sistem Terbesar",
+      "withSolar": "Dengan Solar PV"
+    },
+    "filters": {
+      "all": "Semua",
+      "industrial": "Industri",
+      "offgrid": "Off-Grid / Komunitas",
+      "maritime": "Maritim",
+      "solar": "Dengan Solar PV",
+      "container": "BESS Kontainer",
+      "cabinet": "BESS Kabinet"
+    },
+    "searchPlaceholder": "Cari lokasi, daya, tipe…",
+    "showingCount": "Menampilkan {{count}} proyek",
+    "noMatch": "Tidak ada proyek yang cocok dengan filter Anda.",
+    "photoComingSoon": "Foto segera hadir",
+    "sector": {
+      "industrial": "Industri",
+      "maritime": "Maritim",
+      "offgrid": "Off-Grid / Komunitas"
+    },
+    "spec": {
+      "capacity": "Kapasitas",
+      "powerCapacity": "Daya / Kapasitas",
+      "solar": "Solar PV",
+      "container": "Kontainer",
+      "installation": "Instalasi",
+      "vesselType": "Tipe Kapal",
+      "country": "Negara"
+    }
+  },
   "insights": {
     "hero": {
       "title": "INSIGHTS",
@@ -811,6 +861,7 @@
     "pressRelease": "Siaran Pers",
     "caseStudy": "Studi Kasus",
     "publicRelease": "RILIS PUBLIK",
+    "categoryCompany": "Perusahaan",
     "readMore": "Baca selengkapnya",
     "loadMore": "Muat lebih banyak",
     "backToInsights": "Kembali ke Insights",
@@ -818,6 +869,7 @@
     "noArticles": "Tidak ada artikel yang cocok dengan filter Anda.",
     "filters": {
       "all": "Semua",
+      "company": "Perusahaan",
       "pressRelease": "Siaran Pers",
       "useCases": "Kasus Penggunaan",
       "news": "Berita"
@@ -869,6 +921,33 @@
       "location": "GLOBAL",
       "excerpt": "Baterino memperluas timnya untuk mendukung permintaan solusi penyimpanan energi yang terus meningkat di seluruh dunia.",
       "preview": "Platform global Baterino dirancang untuk tumbuh melalui kemitraan lokal yang terpercaya."
+    },
+    "article7": {
+      "title": "Di Mana Kami Beroperasi: Di Dalam Kerangka Pengiriman Global Baterino",
+      "author": "Tim Baterino",
+      "date": "Maret 2026",
+      "location": "Jakarta",
+      "excerpt": "Pandangan transparan tentang cara kerja model pengiriman Baterino, di mana kami beroperasi, dan apa yang membedakan pendekatan kami dari pemasok peralatan tradisional.",
+      "preview": "Pandangan transparan tentang cara kerja model pengiriman Baterino, di mana kami beroperasi, dan apa yang membedakan pendekatan kami dari pemasok peralatan tradisional.",
+      "description": "Pandangan transparan tentang cara kerja model pengiriman Baterino, di mana kami beroperasi, dan apa yang membedakan pendekatan kami dari pemasok peralatan tradisional."
+    },
+    "article8": {
+      "title": "Lebih dari EPC: Memahami Peran Baterino di Setiap Pasar",
+      "author": "Tim Baterino",
+      "date": "Maret 2026",
+      "location": "Bucharest",
+      "excerpt": "Baterino dibangun untuk beradaptasi. Tergantung pasar, kami bertindak sebagai importir, distributor, penyedia layanan purna jual, atau enabler — kadang keempatnya sekaligus.",
+      "preview": "Baterino dibangun untuk beradaptasi. Tergantung pasar, kami bertindak sebagai importir, distributor, penyedia layanan purna jual, atau enabler — kadang keempatnya sekaligus.",
+      "description": "Baterino dibangun untuk beradaptasi. Tergantung pasar, kami bertindak sebagai importir, distributor, penyedia layanan purna jual, atau enabler — kadang keempatnya sekaligus."
+    },
+    "article9": {
+      "title": "Dari Permintaan ke Operasi: Bagaimana Baterino Menilai dan Mengirimkan Proyek Energi",
+      "author": "Tim Baterino",
+      "date": "Maret 2026",
+      "location": "Bucharest",
+      "excerpt": "Pandangan dalam proses penerimaan proyek kami, empat divisi spesialis, dan bagaimana proyek penyimpanan energi bergerak dari kontak pertama ke operasi jangka panjang.",
+      "preview": "Pandangan dalam proses penerimaan proyek kami, empat divisi spesialis, dan bagaimana proyek penyimpanan energi bergerak dari kontak pertama ke operasi jangka panjang.",
+      "description": "Pandangan dalam proses penilaian proyek Baterino, empat divisi spesialis, dan bagaimana proyek penyimpanan energi bergerak dari kontak pertama ke operasi jangka panjang."
     }
   }
 }

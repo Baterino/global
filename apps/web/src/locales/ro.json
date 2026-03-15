@@ -16,6 +16,7 @@
       "impact": "Impactul nostru global",
       "globalPresence": "Unde operăm",
       "insights": "Dovezi. Perspective. Progres.",
+      "useCases": "Cazuri de Proiect LithTech Global",
       "company": "Baterino. LithTech. Parteneriat.",
       "company.aboutBaterino": "Proiecte activate",
       "company.aboutLithtech": "Tehnologie produsă",
@@ -38,6 +39,7 @@
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Parteneriat",
     "insights": "Articole",
+    "useCases": "Cazuri de Utilizare",
     "globalPresence": "Prezență Globală",
     "careers": "Cariere",
     "contact": "Contact",
@@ -58,6 +60,7 @@
     "companyPartnership": "Parteneriat",
     "globalPresence": "Prezență Globală",
     "insights": "Articole",
+    "useCases": "Cazuri de Utilizare",
     "careers": "Cariere",
     "contact": "Contact",
     "termsOfUse": "Termeni de Utilizare",
@@ -762,7 +765,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "PREZENȚĂ GLOBALĂ. EXECUȚIE LOCALĂ",
+      "title": "EXECUȚIE LOCALĂ.",
       "subtitle": "Baterino operează ca o platformă globală de infrastructură energetică, susținând proiecte în diverse regiuni prin parteneri locali și execuție pe teren."
     },
     "operatingGlobally": {
@@ -800,6 +803,53 @@
       "bullet3": "Marketing centralizat, poziționarea brandului și suport de lansare pe piață"
     }
   },
+  "useCases": {
+    "meta": {
+      "title": "Cazuri de Proiect LithTech Global",
+      "description": "Referință completă a sistemelor de stocare a energiei implementate global — de la instalări comerciale sub 100 kWh la BESS conectate la rețea de mai mulți megawați."
+    },
+    "hero": {
+      "tag": "Perspective · Studii de Caz",
+      "date": "Proiecte de Referință LithTech Global · 2025",
+      "title": "39 Proiecte Implementate.",
+      "titleHighlight": "În 7 Țări.",
+      "subtitle": "Referință completă a sistemelor de stocare a energiei implementate global — de la instalări comerciale sub 100 kWh la BESS conectate la rețea de mai mulți megawați, microrețele insulare off-grid și baterii de propulsie marină."
+    },
+    "stats": {
+      "total": "Total Proiecte",
+      "countries": "Țări",
+      "inSweden": "În Suedia",
+      "largest": "Cel Mai Mare Sistem",
+      "withSolar": "Cu Solar PV"
+    },
+    "filters": {
+      "all": "Toate",
+      "industrial": "Industrial",
+      "offgrid": "Off-Grid / Comunitate",
+      "maritime": "Maritim",
+      "solar": "Cu Solar PV",
+      "container": "BESS Container",
+      "cabinet": "BESS Cabinet"
+    },
+    "searchPlaceholder": "Căutați locație, putere, tip…",
+    "showingCount": "Se afișează {{count}} proiecte",
+    "noMatch": "Niciun proiect nu corespunde filtrului dvs.",
+    "photoComingSoon": "Fotografie în curând",
+    "sector": {
+      "industrial": "Industrial",
+      "maritime": "Maritim",
+      "offgrid": "Off-Grid / Comunitate"
+    },
+    "spec": {
+      "capacity": "Capacitate",
+      "powerCapacity": "Putere / Capacitate",
+      "solar": "Solar PV",
+      "container": "Container",
+      "installation": "Instalare",
+      "vesselType": "Tip Navă",
+      "country": "Țară"
+    }
+  },
   "insights": {
     "hero": {
       "title": "Articole",
@@ -811,6 +861,7 @@
     "pressRelease": "Comunicat de Presă",
     "caseStudy": "Studiu de Caz",
     "publicRelease": "Publicare Publică",
+    "categoryCompany": "Companie",
     "readMore": "Citește mai mult",
     "loadMore": "Încarcă mai mult",
     "backToInsights": "Înapoi la Articole",
@@ -818,6 +869,7 @@
     "noArticles": "Niciun articol nu corespunde filtrului tău.",
     "filters": {
       "all": "Toate",
+      "company": "Companie",
       "pressRelease": "Comunicat de Presă",
       "useCases": "Cazuri de Utilizare",
       "news": "Știri"
@@ -869,6 +921,33 @@
       "location": "Global",
       "excerpt": "Baterino își extinde echipa pentru a susține cererea crescândă de soluții de stocare a energiei la nivel mondial.",
       "preview": "Platforma globală Baterino este concepută să crească prin parteneriate locale de încredere."
+    },
+    "article7": {
+      "title": "Unde operăm: În interiorul cadrului global de livrare Baterino",
+      "author": "Echipa Baterino",
+      "date": "Martie 2026",
+      "location": "Jakarta",
+      "excerpt": "O privire transparentă asupra modului în care funcționează modelul de livrare Baterino, unde operăm și ce face abordarea noastră diferită de un furnizor tradițional de echipamente.",
+      "preview": "O privire transparentă asupra modului în care funcționează modelul de livrare Baterino, unde operăm și ce face abordarea noastră diferită de un furnizor tradițional de echipamente.",
+      "description": "O privire transparentă asupra modului în care funcționează modelul de livrare Baterino, unde operăm și ce face abordarea noastră diferită de un furnizor tradițional de echipamente."
+    },
+    "article8": {
+      "title": "Mai mult decât un EPC: Înțelegând rolurile Baterino în fiecare piață",
+      "author": "Echipa Baterino",
+      "date": "Martie 2026",
+      "location": "București",
+      "excerpt": "Baterino a fost construit să se adapteze. În funcție de piață, acționăm ca importator, distribuitor, furnizor de service sau facilitator — uneori toate patru deodată.",
+      "preview": "Baterino a fost construit să se adapteze. În funcție de piață, acționăm ca importator, distribuitor, furnizor de service sau facilitator — uneori toate patru deodată.",
+      "description": "Baterino a fost construit să se adapteze. În funcție de piață, acționăm ca importator, distribuitor, furnizor de service sau facilitator — uneori toate patru deodată."
+    },
+    "article9": {
+      "title": "De la cerere la operațiune: Cum Baterino evaluează și livrează proiecte de energie",
+      "author": "Echipa Baterino",
+      "date": "Martie 2026",
+      "location": "București",
+      "excerpt": "O privire asupra procesului nostru de primire a proiectelor, patru divizii specializate și modul în care proiectele de stocare a energiei trec de la primul contact la operațiune pe termen lung.",
+      "preview": "O privire asupra procesului nostru de primire a proiectelor, patru divizii specializate și modul în care proiectele de stocare a energiei trec de la primul contact la operațiune pe termen lung.",
+      "description": "O privire asupra procesului de evaluare a proiectelor Baterino, patru divizii specializate și modul în care proiectele de stocare a energiei trec de la primul contact la operațiune pe termen lung."
     }
   }
 }

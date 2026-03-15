@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { SeoHead } from '../components/SeoHead'
+import { ArrowRightIcon } from '../components/ArrowRightIcon'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -430,9 +431,10 @@ export function Contact() {
                       <button
                         type="submit"
                         disabled={formDisabled}
-                        className="rounded-[5px] border-2 border-neutral-900 bg-neutral-900 px-6 py-2.5 font-body text-body-md font-bold text-white transition-colors hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+                        className="btn-primary w-full sm:w-auto"
                       >
                         {t('contact.form.submit')}
+                        <ArrowRightIcon />
                       </button>
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
+import { ArrowRightIcon } from '../components/ArrowRightIcon'
 
 export function LithTech() {
   const { t } = useTranslation()
@@ -52,9 +53,10 @@ export function LithTech() {
                 href="https://ltc-energy.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-neutral-900 px-6 py-3 font-heading text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-neutral-700"
+                className="btn-primary"
               >
                 Visit LithTech
+                <ArrowRightIcon />
               </a>
             </div>
 

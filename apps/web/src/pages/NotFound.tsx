@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { SeoHead } from '../components/SeoHead'
+import { ArrowRightIcon } from '../components/ArrowRightIcon'
 
 export function NotFound() {
   const { t } = useTranslation()
@@ -19,9 +20,10 @@ export function NotFound() {
         </p>
         <Link
           to={base}
-          className="inline-block rounded-lg bg-neutral-900 px-4 py-2 text-body-sm font-medium text-white hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200"
+          className="btn-primary"
         >
           {t('notFound.backHome')}
+          <ArrowRightIcon />
         </Link>
       </article>
     </>

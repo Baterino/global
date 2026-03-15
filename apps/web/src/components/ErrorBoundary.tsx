@@ -1,4 +1,5 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
+import { ArrowRightIcon } from './ArrowRightIcon'
 
 interface Props {
   children: ReactNode
@@ -35,9 +36,10 @@ export class ErrorBoundary extends Component<Props, State> {
           <button
             type="button"
             onClick={() => this.setState({ hasError: false })}
-            className="rounded-lg bg-neutral-900 px-4 py-2 text-body-sm font-medium text-white hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200"
+            className="btn-primary"
           >
             Try again
+            <ArrowRightIcon />
           </button>
         </div>
       )

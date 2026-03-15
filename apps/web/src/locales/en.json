@@ -16,6 +16,7 @@
       "impact": "Our global impact",
       "globalPresence": "Where we operate",
       "insights": "Proof. Perspective. Progress.",
+      "useCases": "LithTech Global Project Cases",
       "company": "Baterino. LithTech. Partnership.",
       "company.aboutBaterino": "Enabling projects",
       "company.aboutLithtech": "Producing technology",
@@ -38,6 +39,7 @@
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Partnership",
     "insights": "Insights",
+    "useCases": "Use Cases",
     "globalPresence": "Global Presence",
     "careers": "Careers",
     "contact": "Contact",
@@ -58,6 +60,7 @@
     "companyPartnership": "Partnership",
     "globalPresence": "Global Presence",
     "insights": "Insights",
+    "useCases": "Use Cases",
     "careers": "Careers",
     "contact": "Contact",
     "termsOfUse": "Terms of Use",
@@ -742,7 +745,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "GLOBAL PRESENCE. LOCAL EXECUTION",
+      "title": "LOCAL EXECUTION.",
       "subtitle": "Baterino operates as a global energy infrastructure platform, supporting projects across regions through local partners and on-the-ground execution."
     },
     "operatingGlobally": {
@@ -780,6 +783,53 @@
       "bullet3": "Centralized marketing, brand positioning, and go-to-market support"
     }
   },
+  "useCases": {
+    "meta": {
+      "title": "LithTech Global Project Cases",
+      "description": "A complete reference of energy storage systems deployed globally — from sub-100 kWh commercial installations to multi-megawatt grid-connected BESS."
+    },
+    "hero": {
+      "tag": "Insights · Case Studies",
+      "date": "LithTech Global Reference Projects · 2025",
+      "title": "39 Deployed Projects.",
+      "titleHighlight": "Across 7 Countries.",
+      "subtitle": "A complete reference of energy storage systems deployed globally — from sub-100 kWh commercial installations to multi-megawatt grid-connected BESS, off-grid island microgrids, and marine propulsion batteries."
+    },
+    "stats": {
+      "total": "Total Projects",
+      "countries": "Countries",
+      "inSweden": "In Sweden",
+      "largest": "Largest System",
+      "withSolar": "With Solar PV"
+    },
+    "filters": {
+      "all": "All",
+      "industrial": "Industrial",
+      "offgrid": "Off-Grid / Community",
+      "maritime": "Maritime",
+      "solar": "With Solar PV",
+      "container": "Container BESS",
+      "cabinet": "Cabinet BESS"
+    },
+    "searchPlaceholder": "Search location, power, type…",
+    "showingCount": "Showing {{count}} projects",
+    "noMatch": "No projects match your filter.",
+    "photoComingSoon": "Photo coming soon",
+    "sector": {
+      "industrial": "Industrial",
+      "maritime": "Maritime",
+      "offgrid": "Off-Grid / Community"
+    },
+    "spec": {
+      "capacity": "Capacity",
+      "powerCapacity": "Power / Capacity",
+      "solar": "Solar PV",
+      "container": "Container",
+      "installation": "Installation",
+      "vesselType": "Vessel Type",
+      "country": "Country"
+    }
+  },
   "insights": {
     "hero": {
       "title": "Insights",
@@ -791,6 +841,7 @@
     "pressRelease": "Press Release",
     "caseStudy": "Case Study",
     "publicRelease": "Public Release",
+    "categoryCompany": "Company",
     "readMore": "Read more",
     "loadMore": "Load more",
     "backToInsights": "Back to Insights",
@@ -798,6 +849,7 @@
     "noArticles": "No articles match your filter.",
     "filters": {
       "all": "All",
+      "company": "Company",
       "pressRelease": "Press Release",
       "useCases": "Use Cases",
       "news": "News"
@@ -849,6 +901,33 @@
       "location": "Global",
       "excerpt": "Baterino expands its team to support growing demand for energy storage solutions worldwide.",
       "preview": "Baterino's global platform is designed to grow through trusted local partnerships."
+    },
+    "article7": {
+      "title": "Where We Operate: Inside Baterino's Global Delivery Framework",
+      "author": "Baterino Team",
+      "date": "March 2026",
+      "location": "Jakarta",
+      "excerpt": "A transparent look at how Baterino's delivery model works, where we operate, and what makes our approach different from a traditional equipment supplier.",
+      "preview": "A transparent look at how Baterino's delivery model works, where we operate, and what makes our approach different from a traditional equipment supplier.",
+      "description": "A transparent look at how Baterino's delivery model works, where we operate, and what makes our approach different from a traditional equipment supplier."
+    },
+    "article8": {
+      "title": "More Than an EPC: Understanding the Roles Baterino Plays in Each Market",
+      "author": "Baterino Team",
+      "date": "March 2026",
+      "location": "Bucharest",
+      "excerpt": "Baterino was built to adapt. Depending on the market, we act as importer, distributor, after-sales provider, or enabler — sometimes all four at once.",
+      "preview": "Baterino was built to adapt. Depending on the market, we act as importer, distributor, after-sales provider, or enabler — sometimes all four at once.",
+      "description": "Baterino was built to adapt. Depending on the market, we act as importer, distributor, after-sales provider, or enabler — sometimes all four at once."
+    },
+    "article9": {
+      "title": "From Request to Operation: How Baterino Assesses and Delivers Energy Projects",
+      "author": "Baterino Team",
+      "date": "March 2026",
+      "location": "Bucharest",
+      "excerpt": "A look inside our project intake process, four specialist divisions, and how energy storage projects move from first contact to long-term operation.",
+      "preview": "A look inside our project intake process, four specialist divisions, and how energy storage projects move from first contact to long-term operation.",
+      "description": "A look inside Baterino's project assessment process, four specialist divisions, and how energy storage projects move from first contact to long-term operation."
     }
   }
 }

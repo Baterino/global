@@ -152,6 +152,13 @@ export function Menu() {
         >
           {t('nav.insights')}
         </NavLink>
+        <NavLink
+          to={link(nav.useCases.path)}
+          className={navLinkClass}
+          onClick={() => setMobileOpen(false)}
+        >
+          {t('nav.useCases')}
+        </NavLink>
 
         <div className="dropdown-container relative">
           <button
@@ -435,6 +442,31 @@ export function Menu() {
                     </span>
                     <span className="font-body text-sm font-medium leading-6 text-black">
                       {t('nav.subtitle.insights')}
+                    </span>
+                  </div>
+                  <svg className="h-6 w-6 shrink-0 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </NavLink>
+              </li>
+
+              {/* Use Cases */}
+              <li>
+                <NavLink
+                  to={link(nav.useCases.path)}
+                  className={({ isActive }) =>
+                    `flex w-full items-center justify-between gap-3 py-4 ${
+                      isActive ? 'text-neutral-900' : 'text-neutral-900'
+                    }`
+                  }
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <div className="flex min-w-0 flex-1 flex-col">
+                    <span className="font-body text-lg font-bold leading-7 text-black">
+                      {t('nav.useCases')}
+                    </span>
+                    <span className="font-body text-sm font-medium leading-6 text-black">
+                      {t('nav.subtitle.useCases')}
                     </span>
                   </div>
                   <svg className="h-6 w-6 shrink-0 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

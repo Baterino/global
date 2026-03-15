@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ArrowRightIcon } from '../ArrowRightIcon'
 
 const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => `/images/mobile%20slider/slide${i + 1}.jpg`)
 
@@ -279,9 +280,10 @@ export function Hero() {
                 </div>
                 <Link
                   to={activeTab === 0 ? `${base}/solutions/industrial` : `${base}/${slide.to}`}
-                  className="relative z-20 mt-4 inline-flex w-fit items-center justify-center rounded-[5px] bg-white/95 px-6 py-3 font-body text-base font-bold text-neutral-900 shadow-sm transition-opacity hover:opacity-95 md:mt-0 md:px-8 md:py-3"
+                  className="btn-primary relative z-20 mt-4 w-fit md:mt-0 md:px-8 md:py-3"
                 >
                   {t(slide.buttonKey ?? 'home.carousel.learnMore')}
+                  <ArrowRightIcon />
                 </Link>
               </div>
             </div>

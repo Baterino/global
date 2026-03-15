@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
+import { ArrowRightIcon } from '../components/ArrowRightIcon'
 
 export function GlobalPresence() {
   const { t } = useTranslation()
@@ -12,7 +13,7 @@ export function GlobalPresence() {
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
-          <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
+          <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-[#10064B] sm:text-4xl lg:text-5xl">
             {t('globalPresence.hero.title')}
           </h1>
           <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
@@ -150,9 +151,10 @@ export function GlobalPresence() {
               </ul>
               <Link
                 to={`${base}/contact`}
-                className="inline-flex items-center justify-center rounded-[5px] border-2 border-neutral-900 bg-neutral-900 px-6 py-2.5 font-body text-body-md font-bold text-white transition-colors hover:bg-neutral-800"
+                className="btn-primary"
               >
                 {t('globalPresence.partnerUp.contactUs')}
+                <ArrowRightIcon />
               </Link>
             </div>
 

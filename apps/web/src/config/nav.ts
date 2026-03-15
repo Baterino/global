@@ -10,6 +10,7 @@ export const nav = {
   delivery: { path: 'delivery' },
   impact: { path: 'impact' },
   insights: { path: 'company/insights' },
+  useCases: { path: 'use-cases' },
   company: {
     path: 'company',
     sub: [

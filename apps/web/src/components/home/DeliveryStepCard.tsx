@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
+import { ArrowRightIcon } from '../ArrowRightIcon'
 
 interface DeliveryStepCardProps {
   number: number
@@ -30,9 +31,10 @@ export function DeliveryStepCard({ number, titleKey, descKey, isLast = false }: 
         <div className="mt-6 flex justify-center">
           <Link
             to={deliveryPath}
-            className="inline-flex h-10 w-36 items-center justify-center rounded-[5px] bg-white font-body text-body-sm font-bold text-neutral-900 transition-colors hover:bg-neutral-100"
+            className="btn-primary"
           >
             {t('home.carousel.learnMore')}
+            <ArrowRightIcon />
           </Link>
         </div>
       ) : (
