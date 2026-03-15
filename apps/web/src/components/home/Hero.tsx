@@ -27,7 +27,7 @@ const CAROUSEL_SLIDES = [
     mobileImage: '/images/slide3-mission-critical.jpg',
     titleKey: 'home.heroSlides.slide5.title',
     subtitleKey: 'home.heroSlides.slide5.subtitle',
-    to: 'impact',
+    to: 'solutions/critical-services',
     buttonKey: 'home.carousel.learnMore',
   },
   {

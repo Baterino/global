@@ -4,11 +4,11 @@ export const nav = {
     sub: [
       { path: 'residential', key: 'nav.solutions.residential' },
       { path: 'industrial', key: 'nav.solutions.industrial' },
+      { path: 'critical-services', key: 'nav.solutions.criticalServices' },
       { path: 'maritime', key: 'nav.solutions.maritime' },
     ],
   },
   delivery: { path: 'delivery' },
-  impact: { path: 'impact' },
   insights: { path: 'company/insights' },
   useCases: { path: 'use-cases' },
   company: {

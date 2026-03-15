@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import { RedirectToLocale } from './components/RedirectToLocale'
@@ -68,7 +68,8 @@ export default function App() {
                 <Route path="solutions/industrial" element={<SolutionsIndustrial />} />
                 <Route path="solutions/maritime" element={<SolutionsMaritime />} />
                 <Route path="delivery" element={<Delivery />} />
-                <Route path="impact" element={<Impact />} />
+                <Route path="solutions/critical-services" element={<Impact />} />
+                <Route path="impact" element={<Navigate to="../solutions/critical-services" replace />} />
                 <Route path="company/about-baterino" element={<AboutBaterino />} />
                 <Route path="company/lithtech" element={<LithTech />} />
                 <Route path="company/insights" element={<Insights />} />

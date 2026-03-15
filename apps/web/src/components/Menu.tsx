@@ -132,13 +132,6 @@ export function Menu() {
           {t('nav.delivery')}
         </NavLink>
         <NavLink
-          to={link(nav.impact.path)}
-          className={navLinkClass}
-          onClick={() => setMobileOpen(false)}
-        >
-          {t('nav.impact')}
-        </NavLink>
-        <NavLink
           to={link(nav.globalPresence.path)}
           className={navLinkClass}
           onClick={() => setMobileOpen(false)}
@@ -367,31 +360,6 @@ export function Menu() {
                     </span>
                     <span className="font-body text-sm font-medium leading-6 text-black">
                       {t('nav.subtitle.delivery')}
-                    </span>
-                  </div>
-                  <svg className="h-6 w-6 shrink-0 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </NavLink>
-              </li>
-
-              {/* Impact */}
-              <li>
-                <NavLink
-                  to={link(nav.impact.path)}
-                  className={({ isActive }) =>
-                    `flex w-full items-center justify-between gap-3 py-4 ${
-                      isActive ? 'text-neutral-900' : 'text-neutral-900'
-                    }`
-                  }
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <div className="flex min-w-0 flex-1 flex-col">
-                    <span className="font-body text-lg font-bold leading-7 text-black">
-                      {t('nav.impact')}
-                    </span>
-                    <span className="font-body text-sm font-medium leading-6 text-black">
-                      {t('nav.subtitle.impact')}
                     </span>
                   </div>
                   <svg className="h-6 w-6 shrink-0 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -631,7 +599,7 @@ export function Menu() {
                   [
                     { path: 'residential', key: 'nav.solutions.residentialShort', to: 'solutions/residential' },
                     { path: 'industrial', key: 'nav.solutions.industrial', to: 'solutions/industrial' },
-                    { path: 'medical', key: 'nav.solutions.medical', to: 'impact' },
+                    { path: 'critical-services', key: 'nav.solutions.criticalServices', to: 'solutions/critical-services' },
                     { path: 'maritime', key: 'nav.solutions.maritime', to: 'solutions/maritime' },
                   ] as const
                 ).map((item) => (

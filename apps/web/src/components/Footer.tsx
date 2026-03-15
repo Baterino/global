@@ -173,8 +173,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to={`${base}/impact`} className={linkClass}>
-                  {t('nav.impact')}
+                <Link to={`${base}/solutions/critical-services`} className={linkClass}>
+                  {t('nav.solutions.criticalServices')}
                 </Link>
               </li>
               <li>
