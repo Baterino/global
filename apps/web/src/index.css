@@ -504,11 +504,11 @@
   transition: color 0.2s, border-color 0.2s;
 }
 .article-rich.article-roles .roles-tab:hover {
-  color: var(--ar-accent);
+  color: #111111;
 }
 .article-rich.article-roles .roles-tab-active {
-  color: var(--ar-accent);
-  border-bottom-color: var(--ar-accent);
+  color: #111111;
+  border-bottom-color: #111111;
 }
 .article-rich.article-roles .role-card {
   border: 1px solid var(--ar-border);
@@ -757,22 +757,22 @@
 }
 .article-rich.article-projects .div-res .division-icon { background: var(--ar-accent-light); }
 .article-rich.article-projects .div-res .division-name { color: #111111; }
-.article-rich.article-projects .div-res .division-subtitle { color: #666666; }
+.article-rich.article-projects .div-res .division-subtitle { color: #111111; }
 .article-rich.article-projects .div-res .division-bullets li::before { background: #2563eb; }
 .article-rich.article-projects .div-res .division-strip { background: #2563eb; }
 .article-rich.article-projects .div-pro .division-icon { background: #fffbeb; }
-.article-rich.article-projects .div-pro .division-name { color: #d97706; }
-.article-rich.article-projects .div-pro .division-subtitle { color: #d97706; }
+.article-rich.article-projects .div-pro .division-name { color: #111111; }
+.article-rich.article-projects .div-pro .division-subtitle { color: #111111; }
 .article-rich.article-projects .div-pro .division-bullets li::before { background: #d97706; }
 .article-rich.article-projects .div-pro .division-strip { background: #d97706; }
 .article-rich.article-projects .div-med .division-icon { background: #fef2f2; }
-.article-rich.article-projects .div-med .division-name { color: #dc2626; }
-.article-rich.article-projects .div-med .division-subtitle { color: #dc2626; }
+.article-rich.article-projects .div-med .division-name { color: #111111; }
+.article-rich.article-projects .div-med .division-subtitle { color: #111111; }
 .article-rich.article-projects .div-med .division-bullets li::before { background: #dc2626; }
 .article-rich.article-projects .div-med .division-strip { background: #dc2626; }
 .article-rich.article-projects .div-sea .division-icon { background: #ecfeff; }
-.article-rich.article-projects .div-sea .division-name { color: #0891b2; }
-.article-rich.article-projects .div-sea .division-subtitle { color: #0891b2; }
+.article-rich.article-projects .div-sea .division-name { color: #111111; }
+.article-rich.article-projects .div-sea .division-subtitle { color: #111111; }
 .article-rich.article-projects .div-sea .division-bullets li::before { background: #0891b2; }
 .article-rich.article-projects .div-sea .division-strip { background: #0891b2; }
 

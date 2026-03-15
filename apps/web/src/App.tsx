@@ -38,6 +38,9 @@ const PrivacyPolicy = lazy(() =>
   import('./pages/PrivacyPolicy').then((m) => ({ default: m.PrivacyPolicy }))
 )
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })))
+const ButtonVariations = lazy(() =>
+  import('./pages/ButtonVariations').then((m) => ({ default: m.ButtonVariations }))
+)
 
 export default function App() {
   return (
@@ -77,6 +80,7 @@ export default function App() {
                 <Route path="contact" element={<Contact />} />
                 <Route path="terms-of-use" element={<TermsOfUse />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="design/buttons" element={<ButtonVariations />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
               <Route path="*" element={<RedirectToLocale />} />

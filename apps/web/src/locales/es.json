@@ -336,7 +336,7 @@
       "industrialTabDesc": "Almacenamiento a escala de red para fábricas, parques solares y operaciones industriales.",
       "industrialCardTitle": "Soluciones de Energía a Escala Industrial",
       "industrialDesc": "Infraestructura de almacenamiento de alta capacidad optimizada para nivelación de carga, estabilización de microred y gestión de recursos energéticos distribuidos.",
-      "medical": "MÉDICO",
+      "medical": "SERVICIOS CRÍTICOS",
       "medicalTabDesc": "Soluciones de energía confiables para hospitales, clínicas e instalaciones de emergencia.",
       "medicalCardTitle": "Sistemas de Energía para Atención Crítica",
       "medicalDesc": "Infraestructura de baterías ultra-confiable diseñada para operación sin interrupciones, conmutación rápida de carga y suministro continuo de energía a equipos de soporte vital.",
@@ -364,6 +364,22 @@
       "step3Desc": "Nuestra participación continúa más allá de la puesta en marcha. Apoyamos el rendimiento del sistema a lo largo del tiempo mediante un enfoque orientado a la confiabilidad.",
       "step4": "Apoyo a la financiación de proyectos",
       "step4Desc": "Para proyectos seleccionados, Baterino puede apoyar la estructuración y el acceso a financiación a través de socios financieros estratégicos — permitiendo financiación total o parcial cuando sea apropiado."
+    },
+    "roles": {
+      "subtitle": "Una empresa. Cuatro roles.",
+      "title": "Nos adaptamos a lo que el mercado necesita",
+      "intro": "La mayoría de las empresas energéticas tienen una identidad fija. Baterino se construyó de otra manera. Dependiendo de lo que un mercado necesite, intervenimos en diferentes puntos de la cadena de valor — a veces aguas arriba, a veces aguas abajo, a veces ambos.",
+      "integratorEnabler": { "title": "Integrador y Facilitador", "desc": "Impulsando proyectos de idea a realidad. Diseñamos, compramos, integramos y entregamos — o apoyamos a socios locales para hacerlo. Intervenimos donde el mercado nos necesita." },
+      "importer": { "title": "Importador", "desc": "Llevando tecnología certificada y de alta calidad a mercados donde el acceso es la barrera. Navegamos aduanas, cumplimiento y cadenas de suministro para que los proyectos puedan desplegarse." },
+      "distributor": { "title": "Distribuidor", "desc": "Haciendo la tecnología disponible para instaladores, integradores y desarrolladores. Proporcionamos suministro confiable, soporte técnico y responsabilidad de extremo a extremo." },
+      "afterSales": { "title": "Postventa y Soporte del Ciclo de Vida", "desc": "El trabajo que comienza cuando todos los demás se van. Monitoreo, mantenimiento, optimización y soporte — para toda la vida operativa del sistema." },
+      "closing": "No preguntamos 'qué podemos vender aquí'. Preguntamos 'qué papel necesita este mercado que desempeñemos'."
+    },
+    "technologyProven": {
+      "title": "Tecnología Probada en el Campo",
+      "subtitle": "El Historial Global de Nuestro Socio Tecnológico",
+      "intro": "Los sistemas que integramos no son nuevos en el mercado. LithTech ha desplegado infraestructura de almacenamiento de energía en Europa, Asia y más allá — desde sistemas en armario hasta BESS de varios megavatios y baterías de propulsión marina. Certificados, documentados y ya en funcionamiento.",
+      "seeMore": "Ver más"
     },
     "builtOnTrust": {
       "title": "Construido con confianza. Diseñado para durar.",
@@ -765,7 +781,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "EJECUCIÓN LOCAL.",
+      "title": "PRESENCIA GLOBAL. EJECUCIÓN LOCAL.",
       "subtitle": "Baterino opera como una plataforma global de infraestructura energética, apoyando proyectos en todas las regiones a través de socios locales y ejecución sobre el terreno."
     },
     "operatingGlobally": {
@@ -865,7 +881,7 @@
     "readMore": "Leer más",
     "loadMore": "Cargar más",
     "backToInsights": "Volver a Insights",
-    "readMoreOnSubstack": "Leer más en Substack",
+    "followUsOnLinkedIn": "Síguenos en LinkedIn",
     "noArticles": "No hay artículos que coincidan con su filtro.",
     "filters": {
       "all": "Todos",

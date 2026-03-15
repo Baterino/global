@@ -12,14 +12,14 @@ export function SectionHeading({ titleKey, subtitleKey, center, centerOnMobile }
   const alignClass = center ? 'text-center' : centerOnMobile ? 'text-left max-md:text-center' : ''
   return (
     <header className={`mb-6 ${alignClass}`}>
-      <h2 className="font-heading text-heading-lg font-bold uppercase tracking-tight text-neutral-900 sm:text-section-title">
-        {t(titleKey)}
-      </h2>
       {subtitleKey && (
-        <p className="mt-2 font-body text-body-md font-medium uppercase tracking-wider text-neutral-500">
+        <p className="font-body text-body-sm font-semibold uppercase tracking-widest text-[#323671]">
           {t(subtitleKey)}
         </p>
       )}
+      <h2 className={`font-heading text-heading-lg font-bold uppercase tracking-tight text-black sm:text-section-title ${subtitleKey ? 'mt-2' : ''}`}>
+        {t(titleKey)}
+      </h2>
     </header>
   )
 }

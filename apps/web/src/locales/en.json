@@ -314,7 +314,7 @@
       "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.",
       "industrialCardTitle": "Grid-Scale Power Solutions",
       "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.",
-      "medical": "Medical",
+      "medical": "Critical Services",
       "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.",
       "medicalCardTitle": "Critical Care Power Systems",
       "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.",
@@ -349,6 +349,34 @@
       "step3Desc": "Our involvement continues beyond commissioning. We support system performance over time through a long-term, reliability-driven approach.",
       "step4": "Project Funding Support",
       "step4Desc": "For selected projects, Baterino can support project structuring and access to funding through strategic financial partners — enabling full or partial financing where appropriate."
+    },
+    "roles": {
+      "subtitle": "One Company. Four Roles.",
+      "title": "We Adapt to What the Market Needs",
+      "intro": "Most energy companies have a fixed identity. Baterino was built differently. Depending on what a market needs, we step in at different points in the value chain — sometimes upstream, sometimes downstream, sometimes both.",
+      "integratorEnabler": {
+        "title": "Integrator & Enabler",
+        "desc": "Pushing projects from idea to reality. We design, procure, integrate, and deliver — or support local partners to do it. We step in where the market needs us."
+      },
+      "importer": {
+        "title": "Importer",
+        "desc": "Bringing certified, high-quality technology into markets where access is the barrier. We navigate customs, compliance, and supply chains so projects can deploy."
+      },
+      "distributor": {
+        "title": "Distributor",
+        "desc": "Making technology available to installers, integrators, and developers. We provide reliable supply, technical support, and accountability end-to-end."
+      },
+      "afterSales": {
+        "title": "After-Sales & Lifecycle Support",
+        "desc": "The work that starts after everyone else leaves. Monitoring, maintenance, optimization, and support — for the full operational life of the system."
+      },
+      "closing": "We don't ask 'what can we sell here'. We ask 'what role does this market need us to play'."
+    },
+    "technologyProven": {
+      "title": "Technology Proven in the Field",
+      "subtitle": "Our Technology Partner's Global Track Record",
+      "intro": "The systems we integrate are not new to the market. LithTech has deployed energy storage infrastructure across Europe, Asia, and beyond — from cabinet-based systems to multi-megawatt BESS and marine propulsion batteries. Certified, documented, and already running.",
+      "seeMore": "See more"
     },
     "builtOnTrust": {
       "title": "Built on Trust. Designed to Last.",
@@ -745,7 +773,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "LOCAL EXECUTION.",
+      "title": "GLOBAL PRESENCE. LOCAL EXECUTION.",
       "subtitle": "Baterino operates as a global energy infrastructure platform, supporting projects across regions through local partners and on-the-ground execution."
     },
     "operatingGlobally": {
@@ -845,7 +873,7 @@
     "readMore": "Read more",
     "loadMore": "Load more",
     "backToInsights": "Back to Insights",
-    "readMoreOnSubstack": "Read more on Substack",
+    "followUsOnLinkedIn": "Follow us on LinkedIn",
     "noArticles": "No articles match your filter.",
     "filters": {
       "all": "All",

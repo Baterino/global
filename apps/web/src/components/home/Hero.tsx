@@ -280,10 +280,10 @@ export function Hero() {
                 </div>
                 <Link
                   to={activeTab === 0 ? `${base}/solutions/industrial` : `${base}/${slide.to}`}
-                  className="btn-primary relative z-20 mt-4 w-fit md:mt-0 md:px-8 md:py-3"
+                  className="relative z-20 mt-4 inline-flex w-fit items-center justify-center gap-2 rounded-lg border-2 border-transparent bg-white px-6 py-2.5 font-body text-body-md font-semibold uppercase tracking-wide text-black transition-colors hover:border-[#0B0726] hover:shadow-md md:mt-0 md:px-8 md:py-3"
                 >
                   {t(slide.buttonKey ?? 'home.carousel.learnMore')}
-                  <ArrowRightIcon />
+                  <ArrowRightIcon className="h-4 w-4 shrink-0" />
                 </Link>
               </div>
             </div>

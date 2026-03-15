@@ -336,7 +336,7 @@
       "industrialTabDesc": "为工厂、太阳能农场和工业运营设计的电网级储能。",
       "industrialCardTitle": "电网级电力解决方案",
       "industrialDesc": "高容量储能基础设施，专为负荷均衡、微电网稳定及分布式能源资源管理而优化。",
-      "medical": "医疗",
+      "medical": "关键服务",
       "medicalTabDesc": "为医院、诊所和急救设施提供的可靠电源解决方案。",
       "medicalCardTitle": "重症医疗电力系统",
       "medicalDesc": "超高可靠性电池基础设施，专为零停机运行、快速负载切换及向生命维持设备持续供电而设计。",
@@ -364,6 +364,22 @@
       "step3Desc": "我们的参与不限于投运。我们通过长期、以可靠性为导向的方式持续支持系统性能。",
       "step4": "项目融资支持",
       "step4Desc": "对选定项目，Baterino 可通过战略金融合作伙伴支持项目结构与融资渠道，在适当时实现全部或部分融资。"
+    },
+    "roles": {
+      "subtitle": "一家公司。四种角色。",
+      "title": "我们适应市场需求",
+      "intro": "大多数能源公司有固定的身份。Baterino 的构建方式不同。根据市场需求，我们在价值链的不同环节介入——有时在上游，有时在下游，有时两者兼而有之。",
+      "integratorEnabler": { "title": "集成商与赋能者", "desc": "将项目从想法推向现实。我们设计、采购、集成和交付——或支持当地合作伙伴完成。我们在市场需要的地方介入。" },
+      "importer": { "title": "进口商", "desc": "将经过认证的高质量技术引入以获取为障碍的市场。我们处理海关、合规和供应链，使项目得以部署。" },
+      "distributor": { "title": "分销商", "desc": "使技术可供安装商、集成商和开发商使用。我们提供可靠的供应、技术支持和端到端的责任。" },
+      "afterSales": { "title": "售后与生命周期支持", "desc": "在其他人离开后开始的工作。监控、维护、优化和支持——贯穿系统的整个运行寿命。" },
+      "closing": "我们不问'我们能在这里卖什么'。我们问'这个市场需要我们扮演什么角色'。"
+    },
+    "technologyProven": {
+      "title": "经过实地验证的技术",
+      "subtitle": "我们技术合作伙伴的全球业绩",
+      "intro": "我们集成的系统并非市场新品。LithTech 已在欧洲、亚洲及其他地区部署能源存储基础设施——从机柜式系统到多兆瓦 BESS 和船用推进电池。经过认证、有据可查，且已在运行。",
+      "seeMore": "查看更多"
     },
     "builtOnTrust": {
       "title": "以信任为基，为持久而设计。",
@@ -765,7 +781,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "本地执行。",
+      "title": "全球布局。本地执行。",
       "subtitle": "Baterino 作为全球能源基础设施平台运营，通过本地合作伙伴和实地执行支持各地区项目。"
     },
     "operatingGlobally": {
@@ -865,7 +881,7 @@
     "readMore": "阅读更多",
     "loadMore": "加载更多",
     "backToInsights": "返回洞察",
-    "readMoreOnSubstack": "在 Substack 上阅读更多",
+    "followUsOnLinkedIn": "在 LinkedIn 上关注我们",
     "noArticles": "没有与您的筛选条件匹配的文章。",
     "filters": {
       "all": "全部",

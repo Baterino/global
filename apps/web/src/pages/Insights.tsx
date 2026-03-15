@@ -2,14 +2,6 @@ import { useState, useEffect } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-function SubstackIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
-    </svg>
-  )
-}
-
 const FILTERS = ['all', 'company', 'press-release', 'use-cases', 'news'] as const
 const INSIGHTS_BASE = 'company/insights'
 type FilterType = (typeof FILTERS)[number]
@@ -92,7 +84,7 @@ export function Insights() {
   return (
     <article className="w-full bg-white">
       {/* Hero Section */}
-      <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full bg-white px-4 pb-4 pt-16 sm:px-6 lg:px-8 lg:pb-16">
         <div className="mx-auto max-w-[1200px] text-center">
           <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             {t('insights.hero.title')}
@@ -104,9 +96,30 @@ export function Insights() {
       </section>
 
       {/* Filter Bar */}
-      <section className="w-full border-b border-neutral-200 bg-white px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+      <section className="w-full border-b border-neutral-200 bg-white px-4 py-4 sm:px-6 lg:px-8 lg:py-12">
+        <div className="mx-auto flex max-w-[1200px] flex-col gap-4 lg:flex-row lg:items-center">
+          {/* Mobile/tablet: dropdown */}
+          <div className="relative lg:hidden">
+            <select
+              value={activeFilter}
+              onChange={(e) => handleFilterClick(e.target.value as FilterType)}
+              className="w-full appearance-none rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3 pr-10 font-body text-body-sm font-medium text-neutral-900 focus:border-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900/20"
+              aria-label={t('insights.filters.all')}
+            >
+              {FILTERS.map((filter) => (
+                <option key={filter} value={filter}>
+                  {getFilterLabel(filter, t)}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500">
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
+          {/* Desktop: pill buttons */}
+          <div className="hidden flex-wrap items-center gap-2 sm:gap-3 lg:flex">
             {FILTERS.map((filter) => (
               <button
                 key={filter}
@@ -122,15 +135,6 @@ export function Insights() {
               </button>
             ))}
           </div>
-          <a
-            href="https://baterino.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 font-body text-body-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50 hover:border-neutral-300"
-          >
-            <SubstackIcon className="h-4 w-4" />
-            {t('insights.readMoreOnSubstack')}
-          </a>
         </div>
       </section>
 

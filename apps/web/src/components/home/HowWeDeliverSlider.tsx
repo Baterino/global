@@ -206,17 +206,6 @@ export function HowWeDeliverSlider() {
             ))}
           </div>
         </div>
-        <div className="mt-4 flex justify-center gap-2">
-          {DELIVERY_SLIDES.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => setMobileIndex(i)}
-              className={`h-2.5 w-2.5 rounded-full transition-colors ${i === mobileIndex ? 'bg-neutral-900' : 'bg-neutral-300'}`}
-              aria-label={`Slide ${i + 1}`}
-            />
-          ))}
-        </div>
       </div>
 
       {/* Desktop */}
@@ -245,19 +234,6 @@ export function HowWeDeliverSlider() {
               </div>
             ))}
           </div>
-        </div>
-        <div className="mx-auto mt-4 flex max-w-[1200px] justify-center gap-2 px-4">
-          {Array.from({ length: SLIDES_COUNT }).map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => setIndex(i)}
-              className={`h-3 w-3 rounded-full transition-colors ${
-                i === index ? 'bg-neutral-900' : 'bg-neutral-300 hover:bg-neutral-400'
-              }`}
-              aria-label={`Slide ${i + 1}`}
-            />
-          ))}
         </div>
       </div>
     </div>

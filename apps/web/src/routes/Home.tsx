@@ -7,9 +7,9 @@ import { SectionHeading } from '../components/home/SectionHeading'
 import { WhatWeEnableTabSlider } from '../components/home/WhatWeEnableTabSlider'
 import { HowWeDeliverSlider } from '../components/home/HowWeDeliverSlider'
 import { IntroducingSlider } from '../components/home/IntroducingSlider'
+import { RolesSection } from '../components/home/RolesSection'
+import { TechnologyProvenSection } from '../components/home/TechnologyProvenSection'
 import { ImpactSlider } from '../components/home/ImpactSlider'
-
-const TRUST_IMG = '/images/baterino-resilience.jpg'
 
 export function Home() {
   const { t } = useTranslation()
@@ -20,22 +20,17 @@ export function Home() {
     <article className="relative w-full bg-white">
       <Hero />
 
-      {/* Our divisions - logos under hero (hidden on mobile) */}
-      <section className="hidden w-full justify-center bg-white py-6 md:flex">
-        <OurDivisions />
-      </section>
-
       {/* What we enable: title + subtitle on top; then intro and cards */}
       <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          {/* Title and subtitle on top — centered on mobile */}
+          {/* Subtitle on top, title below — centered on mobile */}
           <div className="mb-6 text-center md:text-left">
-            <h2 className="font-heading text-heading-lg font-bold uppercase tracking-tight text-neutral-900 sm:text-section-title">
-              {t('home.whatWeEnable.title')}
-            </h2>
-            <p className="mt-2 font-body text-body-md font-medium uppercase tracking-wider text-neutral-500">
+            <p className="font-body text-body-sm font-semibold uppercase tracking-widest text-[#323671]">
               {t('home.whatWeEnable.subtitle')}
             </p>
+            <h2 className="mt-2 font-heading text-heading-lg font-bold uppercase tracking-tight text-black sm:text-section-title">
+              {t('home.whatWeEnable.title')}
+            </h2>
           </div>
           <p className="mx-auto mb-10 max-w-[720px] text-center font-body text-body-md font-medium leading-relaxed text-neutral-600 md:mx-0 md:text-left">
             {t('home.whatWeEnable.intro')}
@@ -59,83 +54,21 @@ export function Home() {
             {t('home.howWeDeliver.intro')}
           </p>
           <HowWeDeliverSlider />
-        </div>
-      </section>
-
-      {/* Introducing Baterino divisions — mobile only */}
-      <section className="w-full bg-[#f7f7f7] py-12 md:hidden">
-        <IntroducingSlider />
-      </section>
-
-      {/* Built on trust — divider moved to above How we deliver */}
-      <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-[1200px]">
-          <h2 className="mb-8 text-center font-heading text-heading-lg font-bold uppercase tracking-tight text-neutral-900 sm:text-section-title md:text-left">
-            {t('home.builtOnTrust.title')}
-          </h2>
-          <ImageWithLogo
-            src={TRUST_IMG}
-            alt=""
-            className="overflow-hidden rounded-[10px]"
-            imgClassName="h-64 w-full object-cover sm:h-96 rounded-[10px]"
-            logoSize="lg"
-          />
-          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <h3 className="flex items-center gap-2 font-heading text-heading-md font-semibold text-neutral-900">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-neutral-200 md:hidden">
-                  <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </span>
-                {t('home.builtOnTrust.col1')}
-              </h3>
-              <p className="mt-3 font-body text-body-md leading-relaxed text-neutral-600">
-                {t('home.builtOnTrust.col1Desc')}
-              </p>
+          {/* Our divisions — desktop logos, mobile IntroducingSlider */}
+          <div className="mt-12">
+            <div className="hidden md:flex md:justify-center">
+              <OurDivisions />
             </div>
-            <div>
-              <h3 className="flex items-center gap-2 font-heading text-heading-md font-semibold text-neutral-900">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-neutral-200 md:hidden">
-                  <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 0H3m2 0H3m2 0h2M5 15H3m2 0H3m2 0H3m2 0h2M15 9h2m2 0h2m2 0h2m2 0h-2M15 15h2m2 0h2m2 0h2m2 0h-2M9 9h6v6H9V9z" />
-                  </svg>
-                </span>
-                {t('home.builtOnTrust.col2')}
-              </h3>
-              <p className="mt-3 font-body text-body-md leading-relaxed text-neutral-600">
-                {t('home.builtOnTrust.col2Desc')}
-              </p>
-            </div>
-            <div>
-              <h3 className="flex items-center gap-2 font-heading text-heading-md font-semibold text-neutral-900">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-neutral-200 md:hidden">
-                  <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </span>
-                {t('home.builtOnTrust.col3')}
-              </h3>
-              <p className="mt-3 font-body text-body-md leading-relaxed text-neutral-600">
-                {t('home.builtOnTrust.col3Desc')}
-              </p>
-            </div>
-            <div>
-              <h3 className="flex items-center gap-2 font-heading text-heading-md font-semibold text-neutral-900">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-neutral-200 md:hidden">
-                  <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </span>
-                {t('home.builtOnTrust.col4')}
-              </h3>
-              <p className="mt-3 font-body text-body-md leading-relaxed text-neutral-600">
-                {t('home.builtOnTrust.col4Desc')}
-              </p>
+            <div className="rounded-[10px] bg-[#f7f7f7] py-12 md:hidden">
+              <IntroducingSlider />
             </div>
           </div>
         </div>
       </section>
+
+      <RolesSection />
+
+      <TechnologyProvenSection />
 
       {/* Our global impact */}
       <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">

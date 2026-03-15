@@ -329,7 +329,7 @@
       "industrialTabDesc": "Penyimpanan skala grid untuk pabrik, ladang surya, dan operasi industri.",
       "industrialCardTitle": "Solusi Daya Skala Grid",
       "industrialDesc": "Infrastruktur penyimpanan berkapasitas tinggi yang dioptimalkan untuk pemerataan beban, stabilisasi microgrid, dan manajemen sumber daya energi terdistribusi.",
-      "medical": "MEDIS",
+      "medical": "LAYANAN KRITIS",
       "medicalTabDesc": "Solusi daya andal untuk rumah sakit, klinik, dan fasilitas darurat.",
       "medicalCardTitle": "Sistem Daya Perawatan Kritis",
       "medicalDesc": "Infrastruktur baterai yang sangat andal, dirancang untuk operasi tanpa gangguan, peralihan beban cepat, dan penyaluran daya berkelanjutan ke peralatan yang menunjang kehidupan.",
@@ -364,6 +364,22 @@
       "step3Desc": "Dukungan dan garansi berkelanjutan.",
       "step4": "Dukungan Pendanaan Proyek",
       "step4Desc": "Kami membantu mengamankan pendanaan untuk proyek Anda."
+    },
+    "roles": {
+      "subtitle": "Satu Perusahaan. Empat Peran.",
+      "title": "Kami Beradaptasi dengan Kebutuhan Pasar",
+      "intro": "Kebanyakan perusahaan energi memiliki identitas tetap. Baterino dibangun berbeda. Tergantung pada kebutuhan pasar, kami masuk di titik berbeda dalam rantai nilai — kadang hulu, kadang hilir, kadang keduanya.",
+      "integratorEnabler": { "title": "Integrator & Enabler", "desc": "Mendorong proyek dari ide ke kenyataan. Kami merancang, mengadakan, mengintegrasikan, dan mengirimkan — atau mendukung mitra lokal untuk melakukannya. Kami masuk di mana pasar membutuhkan kami." },
+      "importer": { "title": "Importir", "desc": "Membawa teknologi bersertifikat dan berkualitas tinggi ke pasar di mana akses adalah hambatan. Kami menavigasi bea cukai, kepatuhan, dan rantai pasokan agar proyek dapat diimplementasikan." },
+      "distributor": { "title": "Distributor", "desc": "Membuat teknologi tersedia untuk installer, integrator, dan pengembang. Kami menyediakan pasokan andal, dukungan teknis, dan akuntabilitas ujung ke ujung." },
+      "afterSales": { "title": "Purna Jual & Dukungan Siklus Hidup", "desc": "Pekerjaan yang dimulai setelah semua orang pergi. Pemantauan, pemeliharaan, optimasi, dan dukungan — untuk seluruh masa operasional sistem." },
+      "closing": "Kami tidak bertanya 'apa yang bisa kami jual di sini'. Kami bertanya 'peran apa yang dibutuhkan pasar ini dari kami'."
+    },
+    "technologyProven": {
+      "title": "Teknologi Terbukti di Lapangan",
+      "subtitle": "Rekam Jejak Global Mitra Teknologi Kami",
+      "intro": "Sistem yang kami integrasikan bukan hal baru di pasar. LithTech telah mengerahkan infrastruktur penyimpanan energi di Eropa, Asia, dan sekitarnya — dari sistem berbasis kabinet hingga BESS multi-megawatt dan baterai propulsi laut. Bersertifikat, terdokumentasi, dan sudah beroperasi.",
+      "seeMore": "Lihat lebih banyak"
     },
     "builtOnTrust": {
       "title": "Dibangun dengan kepercayaan. Dirancang untuk bertahan.",
@@ -765,7 +781,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "EKSEKUSI LOKAL.",
+      "title": "KEHADIRAN GLOBAL. EKSEKUSI LOKAL.",
       "subtitle": "Baterino beroperasi sebagai platform infrastruktur energi global, mendukung proyek di berbagai wilayah melalui mitra lokal dan eksekusi di lapangan."
     },
     "operatingGlobally": {
@@ -865,7 +881,7 @@
     "readMore": "Baca selengkapnya",
     "loadMore": "Muat lebih banyak",
     "backToInsights": "Kembali ke Insights",
-    "readMoreOnSubstack": "Baca selengkapnya di Substack",
+    "followUsOnLinkedIn": "Ikuti kami di LinkedIn",
     "noArticles": "Tidak ada artikel yang cocok dengan filter Anda.",
     "filters": {
       "all": "Semua",

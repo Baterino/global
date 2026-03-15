@@ -329,7 +329,7 @@
       "industrialTabDesc": "Stocare la scară de rețea pentru fabrici, parcuri solare și operațiuni industriale.",
       "industrialCardTitle": "Soluții de Energie la Scară Industrială",
       "industrialDesc": "Infrastructură de stocare de mare capacitate optimizată pentru nivelarea sarcinii, stabilizarea microrețelei și gestionarea resurselor energetice distribuite.",
-      "medical": "MEDICAL",
+      "medical": "SERVICII CRITICE",
       "medicalTabDesc": "Soluții fiabile de energie pentru spitale, clinici și instalații de urgență.",
       "medicalCardTitle": "Sisteme de Energie pentru Îngrijire Critică",
       "medicalDesc": "Infrastructură de baterii ultra-fiabilă, concepută pentru funcționare fără întreruperi, comutare rapidă a sarcinii și livrare continuă de energie către echipamentele vitale.",
@@ -364,6 +364,22 @@
       "step3Desc": "Implicarea noastră continuă dincolo de punerea în funcțiune. Susținem performanța sistemului în timp printr-o abordare pe termen lung, orientată spre fiabilitate.",
       "step4": "Sprijin pentru Finanțarea Proiectelor",
       "step4Desc": "Pentru proiectele selectate, Baterino poate sprijini structurarea proiectelor și accesul la finanțare prin parteneri financiari strategici — permițând finanțare totală sau parțială acolo unde este oportun."
+    },
+    "roles": {
+      "subtitle": "O companie. Patru roluri.",
+      "title": "Ne adaptăm la ce are nevoie piața",
+      "intro": "Majoritatea companiilor energetice au o identitate fixă. Baterino a fost construit diferit. În funcție de ce are nevoie o piață, intervenim în diferite puncte ale lanțului de valoare — uneori upstream, uneori downstream, uneori ambele.",
+      "integratorEnabler": { "title": "Integrator și Facilitator", "desc": "Impulsând proiecte de la idee la realitate. Proiectăm, achiziționăm, integrăm și livrăm — sau sprijinim partenerii locali să o facă. Intervenim acolo unde piața are nevoie de noi." },
+      "importer": { "title": "Importator", "desc": "Aducând tehnologie certificată și de înaltă calitate în piețe unde accesul este bariera. Navigăm vamă, conformitate și lanțuri de aprovizionare pentru ca proiectele să poată fi implementate." },
+      "distributor": { "title": "Distribuitor", "desc": "Făcând tehnologia disponibilă pentru instalatori, integratori și dezvoltatori. Oferim aprovizionare fiabilă, suport tehnic și responsabilitate de la un capăt la altul." },
+      "afterSales": { "title": "Post-Vânzare și Suport pe Ciclul de Viață", "desc": "Lucrul care începe când toți ceilalți pleacă. Monitorizare, întreținere, optimizare și suport — pentru întreaga viață operațională a sistemului." },
+      "closing": "Nu întrebăm 'ce putem vinde aici'. Întrebăm 'ce rol are nevoie această piață să jucăm'."
+    },
+    "technologyProven": {
+      "title": "Tehnologie Dovedită în Teren",
+      "subtitle": "Istoricul Global al Partenerului Nostru Tehnologic",
+      "intro": "Sistemele pe care le integrăm nu sunt noi pe piață. LithTech a implementat infrastructură de stocare a energiei în Europa, Asia și dincolo — de la sisteme în dulap la BESS multi-megawat și baterii de propulsie marină. Certificate, documentate și deja în funcțiune.",
+      "seeMore": "Vezi mai mult"
     },
     "builtOnTrust": {
       "title": "Construit pe Încredere. Proiectat să Dureze.",
@@ -765,7 +781,7 @@
   },
   "globalPresence": {
     "hero": {
-      "title": "EXECUȚIE LOCALĂ.",
+      "title": "PREZENȚĂ GLOBALĂ. EXECUȚIE LOCALĂ.",
       "subtitle": "Baterino operează ca o platformă globală de infrastructură energetică, susținând proiecte în diverse regiuni prin parteneri locali și execuție pe teren."
     },
     "operatingGlobally": {
@@ -865,7 +881,7 @@
     "readMore": "Citește mai mult",
     "loadMore": "Încarcă mai mult",
     "backToInsights": "Înapoi la Articole",
-    "readMoreOnSubstack": "Citește mai mult pe Substack",
+    "followUsOnLinkedIn": "Urmărește-ne pe LinkedIn",
     "noArticles": "Niciun articol nu corespunde filtrului tău.",
     "filters": {
       "all": "Toate",
