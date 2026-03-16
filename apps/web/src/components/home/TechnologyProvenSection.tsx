@@ -45,10 +45,19 @@ export function TechnologyProvenSection() {
           </h2>
         </div>
 
-        {/* Intro text */}
-        <p className="mx-auto mb-10 max-w-[780px] text-center font-body text-body-md font-medium leading-relaxed text-neutral-600 md:mx-0 md:text-left">
-          {t('home.technologyProven.intro')}
-        </p>
+        {/* Intro text + See more button (desktop only: button next to intro) */}
+        <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-8">
+          <p className="max-w-[780px] text-center font-body text-body-md font-medium leading-relaxed text-neutral-600 md:text-left">
+            {t('home.technologyProven.intro')}
+          </p>
+          <Link
+            to={`${base}/use-cases`}
+            className="btn-primary max-md:hidden shrink-0 items-center gap-1.5 px-4 py-1.5 text-body-sm md:mt-2 md:inline-flex"
+          >
+            {t('home.technologyProven.seeMore')}
+            <ArrowRightIcon className="h-3.5 w-3.5 shrink-0" />
+          </Link>
+        </div>
 
         {/* 3 use case cards */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -175,14 +184,14 @@ export function TechnologyProvenSection() {
           })}
         </div>
 
-        {/* See more button */}
-        <div className="mt-10 flex justify-center md:justify-start">
+        {/* See more button (mobile: below cards) */}
+        <div className="mt-10 flex justify-center md:hidden">
           <Link
             to={`${base}/use-cases`}
-            className="btn-primary inline-flex items-center gap-2"
+            className="btn-primary inline-flex items-center gap-1.5 px-4 py-1.5 text-body-sm"
           >
             {t('home.technologyProven.seeMore')}
-            <ArrowRightIcon />
+            <ArrowRightIcon className="h-3.5 w-3.5 shrink-0" />
           </Link>
         </div>
       </div>

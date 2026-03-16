@@ -155,7 +155,7 @@ export function ImpactSlider() {
             }}
           >
             {IMPACT_SLIDES.map((slide) => (
-              <div key={slide.type} className="min-w-full max-w-full shrink-0 px-4">
+              <div key={slide.type} className="min-w-full max-w-[1200px] shrink-0 px-4">
                 <div className="w-full overflow-hidden rounded-[10px] bg-[#f7f7f7]">
                   {/* Image on top */}
                   <div className={`relative w-full overflow-hidden ${slide.type === 'alignedGoals' ? 'flex items-center justify-center bg-white p-6' : 'h-48'}`}>
