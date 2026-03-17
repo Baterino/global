@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { SeoHead } from '../components/SeoHead'
 
 const FILTERS = ['all', 'company', 'press-release', 'use-cases', 'news'] as const
 const INSIGHTS_BASE = 'company/insights'
@@ -18,12 +19,6 @@ interface ArticleItem {
 }
 
 const FALLBACK_ARTICLES: ArticleItem[] = [
-  { id: 'baterino-unveils-new-maritime-battery', slug: 'baterino-unveils-new-maritime-battery', type: 'press-release', image: '/images/article-1.jpg', date: 'insights.article1.date', dateSort: '2026-09-29', title: 'insights.article1.title', excerpt: 'insights.article1.excerpt' },
-  { id: 'sustainable-shipping-future', slug: 'sustainable-shipping-future', type: 'news', image: '/images/article-2.jpg', date: 'insights.article2.date', dateSort: '2026-09-28', title: 'insights.article2.title', excerpt: 'insights.article2.excerpt' },
-  { id: 'baterino-partnership-announcement', slug: 'baterino-partnership-announcement', type: 'use-cases', image: '/images/article-3.jpg', date: 'insights.article3.date', dateSort: '2026-09-27', title: 'insights.article3.title', excerpt: 'insights.article3.excerpt' },
-  { id: 'electric-ferry-milestone', slug: 'electric-ferry-milestone', type: 'press-release', image: '/images/article-4.jpg', date: 'insights.article4.date', dateSort: '2026-09-26', title: 'insights.article4.title', excerpt: 'insights.article4.excerpt' },
-  { id: 'green-maritime-technology', slug: 'green-maritime-technology', type: 'news', image: '/images/article-5.jpg', date: 'insights.article5.date', dateSort: '2026-09-25', title: 'insights.article5.title', excerpt: 'insights.article5.excerpt' },
-  { id: 'baterino-team-expansion', slug: 'baterino-team-expansion', type: 'use-cases', image: '/images/article-6.jpg', date: 'insights.article6.date', dateSort: '2026-09-24', title: 'insights.article6.title', excerpt: 'insights.article6.excerpt' },
   { id: 'global-delivery-framework', slug: 'global-delivery-framework', type: 'company', image: '/images/blog/global-delivery-framework.jpg', date: 'insights.article7.date', dateSort: '2026-03-01', title: 'insights.article7.title', excerpt: 'insights.article7.excerpt' },
   { id: 'baterino-roles-in-every-market', slug: 'baterino-roles-in-every-market', type: 'company', image: '/images/about-baterino.jpg', date: 'insights.article8.date', dateSort: '2026-03-15', title: 'insights.article8.title', excerpt: 'insights.article8.excerpt' },
   { id: 'request-to-operation', slug: 'request-to-operation', type: 'company', image: '/images/delivery-enablement.jpg', date: 'insights.article9.date', dateSort: '2026-03-20', title: 'insights.article9.title', excerpt: 'insights.article9.excerpt' },
@@ -83,6 +78,7 @@ export function Insights() {
 
   return (
     <article className="w-full bg-white">
+      <SeoHead title={t('insights.hero.title')} description={t('insights.hero.subtitle')} />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-4 pt-16 sm:px-6 lg:px-8 lg:pb-16">
         <div className="mx-auto max-w-[1200px] text-center">

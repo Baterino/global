@@ -52,7 +52,7 @@ export function TechnologyProvenSection() {
           </p>
           <Link
             to={`${base}/use-cases`}
-            className="btn-primary max-md:hidden shrink-0 items-center gap-1.5 px-4 py-1.5 text-body-sm md:mt-2 md:inline-flex"
+            className="max-md:hidden shrink-0 inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-6 py-2.5 text-sm font-medium text-neutral-900 transition-colors duration-200 hover:bg-neutral-50 md:mt-2"
           >
             {t('home.technologyProven.seeMore')}
             <ArrowRightIcon className="h-3.5 w-3.5 shrink-0" />
@@ -188,7 +188,7 @@ export function TechnologyProvenSection() {
         <div className="mt-10 flex justify-center md:hidden">
           <Link
             to={`${base}/use-cases`}
-            className="btn-primary inline-flex items-center gap-1.5 px-4 py-1.5 text-body-sm"
+            className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-6 py-2.5 text-sm font-medium text-neutral-900 transition-colors duration-200 hover:bg-neutral-50"
           >
             {t('home.technologyProven.seeMore')}
             <ArrowRightIcon className="h-3.5 w-3.5 shrink-0" />

@@ -22,6 +22,7 @@
       "company.aboutBaterino": "Proiecte activate",
       "company.aboutLithtech": "Tehnologie produsă",
       "company.partnership": "Sinergia noastră",
+      "company.operatingModel": "Modelul operațional",
       "language": "Selectați limba site-ului",
       "contact": "Clienți și Parteneri"
     },
@@ -46,6 +47,47 @@
     "contact": "Contact",
     "termsOfUse": "Termeni de Utilizare",
     "privacyPolicy": "Politica de Confidențialitate"
+  },
+  "operatingModel": {
+    "pageTitle": "Model Operațional | Baterino",
+    "pageDescription": "Operațiuni Baterino Global și Local: lanț de aprovizionare, oferte de servicii și interacțiuni cu clienții.",
+    "title": "Model Operațional",
+    "subtitle": "De la furnizori la clienți finali — structura noastră globală și locală.",
+    "supportLabel": "Suport tehnic direct prin site-ul local și aplicația mobilă.",
+    "supportLabelIndustrial": "Suport tehnic și post-vânzare prin echipele noastre industriale.",
+    "hoverToView": "Treceți cu mouse-ul pentru a vedea",
+    "baterinoGlobal": "Baterino Global",
+    "globalDesc": "Negociere contracte, strategie de distribuție și optimizare lanț aprovizionare",
+    "baterinoLocal": "Structură Locală Baterino",
+    "localDesc": "În funcție de țară, îndeplinește roluri diferite.",
+    "localPartners": "Parteneri Locali",
+    "localPartnersDesc": "Împuternicind companii locale, pentru creșterea marjelor, produse de calitate, crearea locurilor de muncă.",
+    "distributor": "Distribuitor",
+    "installer": "Instalator",
+    "roles": {
+      "importer": "Importator",
+      "epc": "EPC Sector Industrial",
+      "afterSales": "Post-vânzare și Suport"
+    },
+    "industrialDivisionsTitle": "Oferind prin diviziile noastre dedicate",
+    "divisions": {
+      "pro": { "desc": "pentru sector industrial și comercial" },
+      "med": { "desc": "pentru servicii medicale și critice" },
+      "atSea": { "desc": "pentru sector maritim" }
+    },
+    "residentialUsers": "Utilizatori Finali Rezidențiali",
+    "residentialDesc": "Utilizatori finali rezidențiali. Soluții de stocare energie accesibile și fiabile pentru gospodării.",
+    "industrialClients": "Clienți Finali Industriali",
+    "industrialDesc": "Împuternicind companii locale, pentru creșterea marjelor, produse de calitate, crearea locurilor de muncă.",
+    "suppliers": {
+      "transformers": "Furnizori Transformatoare",
+      "heatPumps": "Furnizori Pompe de Căldură",
+      "solarAccessories": "Furnizori Accesorii Solare",
+      "greenEnergyTech": "Furnizori Tehnologie Energie Verde",
+      "pv": "Furnizori PV",
+      "inverters": "Furnizori Invertoare",
+      "energyStorage": "Furnizori Stocare Energie"
+    }
   },
   "pageTitle": {
     "home": "Baterino Global",
@@ -278,8 +320,8 @@
   "home": {
     "ourDivisions": "Diviziile noastre",
     "hero": {
-      "title": "Activând Stocarea de Energie de Mare Capacitate la Nivel Mondial",
-      "subtitle": "Integrăm tehnologii de energie verde de încredere pentru a oferi soluții fiabile comunităților, industriei, mediului medical și maritim.",
+      "title": "STOCARE DE ENERGIE ÎN BATERII.\nFURNIZAT. INTEGRAT. SUSTINUT.",
+      "subtitle": "Aducem pe piață sisteme de stocare a energiei în baterii certificate — și le asigurăm de la furnizare și integrare până la suport operațional pe termen lung, în mediile rezidențiale, industriale, maritime și de servicii critice.",
       "poweredBy": "alimentat de",
       "poweredByLabel": "Alimentat de:",
       "technologyPoweredBy": "Tehnologia noastră este alimentată de:",

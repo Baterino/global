@@ -22,6 +22,7 @@
       "company.aboutBaterino": "Habilitar proyectos",
       "company.aboutLithtech": "Producción de tecnología",
       "company.partnership": "Nuestra sinergia",
+      "company.operatingModel": "Modelo operativo",
       "language": "Seleccionar idioma del sitio",
       "contact": "Clientes y Socios"
     },
@@ -39,6 +40,7 @@
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Asociación",
+    "company.operatingModel": "Modelo Operativo",
     "insights": "Información",
     "useCases": "Casos de Uso",
     "globalPresence": "Presencia Global",
@@ -46,6 +48,47 @@
     "contact": "Contacto",
     "termsOfUse": "Términos de Uso",
     "privacyPolicy": "Política de Privacidad"
+  },
+  "operatingModel": {
+    "pageTitle": "Modelo Operativo | Baterino",
+    "pageDescription": "Operaciones globales y locales de Baterino: cadena de suministro, ofertas de servicio e interacciones con clientes.",
+    "title": "Modelo Operativo",
+    "subtitle": "De proveedores a clientes finales — nuestra estructura global y local.",
+    "supportLabel": "Soporte técnico directo a través del sitio web local y aplicación móvil.",
+    "supportLabelIndustrial": "Soporte técnico y postventa a través de nuestros equipos industriales.",
+    "hoverToView": "Pasar el cursor para ver",
+    "baterinoGlobal": "Baterino Global",
+    "globalDesc": "Negociación de contratos, estrategia de distribución y optimización de la cadena de suministro",
+    "baterinoLocal": "Estructura Local Baterino",
+    "localDesc": "Según el país, desempeña diferentes roles.",
+    "localPartners": "Socios Locales",
+    "localPartnersDesc": "Empoderando empresas locales, para aumentar márgenes, proporcionar productos de calidad, crear empleos.",
+    "distributor": "Distribuidor",
+    "installer": "Instalador",
+    "roles": {
+      "importer": "Importador",
+      "epc": "EPC Sector Industrial",
+      "afterSales": "Postventa y Soporte"
+    },
+    "industrialDivisionsTitle": "Habilitando a través de nuestras divisiones dedicadas",
+    "divisions": {
+      "pro": { "desc": "para sector industrial y comercial" },
+      "med": { "desc": "para servicios médicos y críticos" },
+      "atSea": { "desc": "para sector marítimo" }
+    },
+    "residentialUsers": "Usuarios Finales Residenciales",
+    "residentialDesc": "Usuarios finales residenciales. Soluciones de almacenamiento de energía asequibles y fiables para hogares.",
+    "industrialClients": "Clientes Finales Industriales",
+    "industrialDesc": "Empoderando empresas locales, para aumentar márgenes, proporcionar productos de calidad, crear empleos.",
+    "suppliers": {
+      "transformers": "Proveedores de Transformadores",
+      "heatPumps": "Proveedores de Bombas de Calor",
+      "solarAccessories": "Proveedores de Accesorios Solares",
+      "greenEnergyTech": "Proveedores de Tecnología de Energía Verde",
+      "pv": "Proveedores de PV",
+      "inverters": "Proveedores de Inversores",
+      "energyStorage": "Proveedores de Almacenamiento de Energía"
+    }
   },
   "pageTitle": {
     "home": "Baterino Global",
@@ -278,8 +321,8 @@
   "home": {
     "ourDivisions": "Nuestras divisiones",
     "hero": {
-      "title": "Habilitando el Almacenamiento de Energía de Alta Capacidad a Nivel Mundial",
-      "subtitle": "Integramos tecnologías de energía verde de confianza para ofrecer soluciones fiables a comunidades, industria, entornos médicos y marítimos.",
+      "title": "ALMACENAMIENTO DE ENERGÍA EN BATERÍAS.\nSUMINISTRADO. INTEGRADO. SOPORTADO.",
+      "subtitle": "Llevamos sistemas de almacenamiento de baterías certificados al mercado — y los acompañamos desde el suministro y la integración hasta el soporte operativo a largo plazo, en entornos residenciales, industriales, marítimos y de servicios críticos.",
       "poweredBy": "impulsado por",
       "poweredByLabel": "Impulsado por:",
       "technologyPoweredBy": "Nuestra tecnología es impulsada por:",

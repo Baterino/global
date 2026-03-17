@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
+import { SeoHead } from '../components/SeoHead'
 
 export function Delivery() {
   const { t } = useTranslation()
 
   return (
     <article className="w-full bg-white">
+      <SeoHead title={t('delivery.hero.title')} description={t('delivery.hero.subtitle')} />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

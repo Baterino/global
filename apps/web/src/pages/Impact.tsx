@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
+import { SeoHead } from '../components/SeoHead'
 
 export function Impact() {
   const { t } = useTranslation()
 
   return (
     <article className="w-full bg-white">
+      <SeoHead title={t('impact.hero.title')} description={t('impact.hero.subtitle')} />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

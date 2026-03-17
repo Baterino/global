@@ -22,6 +22,7 @@
       "company.aboutBaterino": "Mengaktifkan proyek",
       "company.aboutLithtech": "Memproduksi teknologi",
       "company.partnership": "Sinergi kami",
+      "company.operatingModel": "Model operasional",
       "language": "Pilih bahasa situs",
       "contact": "Klien & Mitra"
     },
@@ -39,6 +40,7 @@
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Kemitraan",
+    "company.operatingModel": "Model Operasional",
     "insights": "Insight",
     "useCases": "Kasus Penggunaan",
     "globalPresence": "Kehadiran Global",
@@ -46,6 +48,47 @@
     "contact": "Kontak",
     "termsOfUse": "Ketentuan Penggunaan",
     "privacyPolicy": "Kebijakan Privasi"
+  },
+  "operatingModel": {
+    "pageTitle": "Model Operasional | Baterino",
+    "pageDescription": "Operasi Baterino Global dan Lokal: rantai pasokan, penawaran layanan, dan interaksi klien.",
+    "title": "Model Operasional",
+    "subtitle": "Dari pemasok ke klien akhir — struktur global dan lokal kami.",
+    "supportLabel": "Dukungan teknis langsung melalui situs web lokal dan aplikasi seluler.",
+    "supportLabelIndustrial": "Dukungan teknis dan purna jual melalui tim industri kami.",
+    "hoverToView": "Arahkan kursor untuk melihat",
+    "baterinoGlobal": "Baterino Global",
+    "globalDesc": "Negosiasi Kontrak, Strategi Distribusi & Optimisasi Rantai Pasokan",
+    "baterinoLocal": "Struktur Lokal Baterino",
+    "localDesc": "Berdasarkan negara, memainkan peran yang berbeda.",
+    "localPartners": "Mitra Lokal",
+    "localPartnersDesc": "Memberdayakan perusahaan lokal, untuk meningkatkan margin, menyediakan produk berkualitas, menciptakan lapangan kerja.",
+    "distributor": "Distributor",
+    "installer": "Installer",
+    "roles": {
+      "importer": "Importir",
+      "epc": "EPC Sektor Industri",
+      "afterSales": "Purna Jual & Dukungan"
+    },
+    "industrialDivisionsTitle": "Memungkinkan melalui divisi khusus kami",
+    "divisions": {
+      "pro": { "desc": "untuk sektor industri dan komersial" },
+      "med": { "desc": "untuk layanan medis dan kritis" },
+      "atSea": { "desc": "untuk sektor maritim" }
+    },
+    "residentialUsers": "Pengguna Akhir Perumahan",
+    "residentialDesc": "Pengguna akhir perumahan. Solusi penyimpanan energi yang terjangkau dan andal untuk pemilik rumah.",
+    "industrialClients": "Klien Akhir Industri",
+    "industrialDesc": "Memberdayakan perusahaan lokal, untuk meningkatkan margin, menyediakan produk berkualitas, menciptakan lapangan kerja.",
+    "suppliers": {
+      "transformers": "Pemasok Transformator",
+      "heatPumps": "Pemasok Pompa Panas",
+      "solarAccessories": "Pemasok Aksesori Surya",
+      "greenEnergyTech": "Pemasok Teknologi Energi Hijau",
+      "pv": "Pemasok PV",
+      "inverters": "Pemasok Inverter",
+      "energyStorage": "Pemasok Penyimpanan Energi"
+    }
   },
   "pageTitle": {
     "home": "Baterino Global",
@@ -278,8 +321,8 @@
   "home": {
     "ourDivisions": "Divisi kami",
     "hero": {
-      "title": "MENGAKTIFKAN PENYIMPANAN ENERGI BERKAPASITAS TINGGI DI SELURUH DUNIA",
-      "subtitle": "Kami mengintegrasikan teknologi penyimpanan energi terdepan ke dalam infrastruktur yang scalable dan tangguh untuk komunitas, industri, medis, dan lingkungan maritim.",
+      "title": "PENYIMPANAN ENERGI BATERAI.\nDIPASOK. TERINTEGRASI. DIDUKUNG.",
+      "subtitle": "Kami membawa sistem penyimpanan energi baterai bersertifikat ke pasar — dan mengantarnya dari pasokan dan integrasi hingga dukungan operasional jangka panjang, di lingkungan perumahan, industri, maritim, dan layanan kritis.",
       "poweredBy": "didukung oleh",
       "poweredByLabel": "Didukung oleh:",
       "technologyPoweredBy": "Teknologi kami didukung oleh:",

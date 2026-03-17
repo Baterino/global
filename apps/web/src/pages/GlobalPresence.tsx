@@ -2,6 +2,8 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { ArrowRightIcon } from '../components/ArrowRightIcon'
+import { OperatingModelDiagramContent } from './OperatingModelDiagram'
+import { SeoHead } from '../components/SeoHead'
 
 export function GlobalPresence() {
   const { t } = useTranslation()
@@ -10,6 +12,7 @@ export function GlobalPresence() {
 
   return (
     <article className="w-full bg-white">
+      <SeoHead title={t('globalPresence.hero.title')} description={t('globalPresence.hero.subtitle')} />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
@@ -68,6 +71,24 @@ export function GlobalPresence() {
         <hr className="divider" />
       </div>
 
+      {/* Operating Model */}
+      <section id="operating-model" className="w-full bg-white px-4 pt-12 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[1200px]">
+          <h2 className="font-heading text-2xl font-bold uppercase tracking-tight text-neutral-900 sm:text-3xl">
+            Operating Model
+          </h2>
+          <p className="mt-3 max-w-[600px] font-body text-body-md leading-relaxed text-neutral-600">
+            Streamlined procurement and distribution enabling rapid scaling from global suppliers to market deployment.
+          </p>
+        </div>
+        <OperatingModelDiagramContent />
+      </section>
+
+      {/* Divider */}
+      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+        <hr className="divider" />
+      </div>
+
       {/* Regional Presence - 1/3 text left, 2/3 image right */}
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
@@ -108,86 +129,67 @@ export function GlobalPresence() {
         <hr className="divider" />
       </div>
 
-      {/* Partner Up With Us & Why ? - Two card-like columns */}
+      {/* Join Baterino — Partnership section */}
       <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <div className="grid gap-8 lg:grid-cols-2">
-            {/* Left - Partner Up With Us */}
-            <div className="rounded-[10px] bg-neutral-50 p-8">
-              <h2 className="mb-6 font-heading text-2xl font-bold uppercase tracking-tight text-neutral-900 sm:text-3xl">
-                {t('globalPresence.partnerUp.title')}
-              </h2>
-              <p className="mb-4 font-body text-body-md leading-relaxed text-neutral-700">
-                {t('globalPresence.partnerUp.intro')}
-              </p>
-              <p className="mb-4 font-body text-body-md leading-relaxed text-neutral-700">
-                {t('globalPresence.partnerUp.listLabel')}
-              </p>
-              <ul className="mb-6 list-none space-y-2 font-body text-body-md text-neutral-700">
-                <li className="flex items-start gap-2">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {t('globalPresence.partnerUp.bullet1')}
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {t('globalPresence.partnerUp.bullet2')}
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {t('globalPresence.partnerUp.bullet3')}
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {t('globalPresence.partnerUp.bullet4')}
-                </li>
-              </ul>
-              <Link
-                to={`${base}/contact`}
-                className="btn-primary"
-              >
-                {t('globalPresence.partnerUp.contactUs')}
-                <ArrowRightIcon />
-              </Link>
+
+          {/* Header */}
+          <div className="mb-12 md:mb-16">
+            <h2 className="mb-3 font-heading text-2xl font-bold uppercase tracking-tight text-neutral-900 sm:text-3xl">
+              {t('globalPresence.joinBaterino.title')}
+            </h2>
+            <p className="max-w-2xl font-body text-base leading-relaxed text-neutral-500 md:text-lg">
+              {t('globalPresence.joinBaterino.subtitle')}
+            </p>
+          </div>
+
+          {/* Two cards */}
+          <div className="mb-12 grid grid-cols-1 gap-7 md:grid-cols-2">
+
+            {/* Partnership pathways */}
+            <div className="rounded-xl border border-neutral-200 bg-white p-8">
+              <h3 className="mb-6 font-heading text-lg font-medium text-neutral-900 md:text-xl">
+                {t('globalPresence.joinBaterino.pathwaysTitle')}
+              </h3>
+              <div className="space-y-4">
+                {(t('globalPresence.joinBaterino.partners', { returnObjects: true }) as { title: string; desc: string }[]).map((item, i, arr) => (
+                  <div key={i} className={`pb-4${i !== arr.length - 1 ? ' border-b border-neutral-200' : ''}`}>
+                    <p className="mb-1 text-sm font-medium text-neutral-900 md:text-base">{item.title}</p>
+                    <p className="text-xs text-neutral-500 md:text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Right - Why ? */}
-            <div className="rounded-[10px] bg-neutral-50 p-8">
-              <h2 className="mb-6 font-heading text-2xl font-bold uppercase tracking-tight text-neutral-900 sm:text-3xl">
-                {t('globalPresence.why.title')}
-              </h2>
-              <p className="mb-6 font-body text-body-md leading-relaxed text-neutral-700">
-                {t('globalPresence.why.intro')}
-              </p>
-              <ul className="list-none space-y-2 font-body text-body-md leading-relaxed text-neutral-700">
-                <li className="flex items-start gap-2">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {t('globalPresence.why.bullet1')}
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {t('globalPresence.why.bullet2')}
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                    <polyline points="9 18 15 12 9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {t('globalPresence.why.bullet3')}
-                </li>
-              </ul>
+            {/* Partner benefits */}
+            <div className="flex flex-col rounded-xl border border-neutral-200 bg-white p-8">
+              <h3 className="mb-6 font-heading text-lg font-medium text-neutral-900 md:text-xl">
+                {t('globalPresence.joinBaterino.benefitsTitle')}
+              </h3>
+              <div className="space-y-4">
+                {(t('globalPresence.joinBaterino.benefits', { returnObjects: true }) as { title: string; desc: string }[]).map((item, i, arr) => (
+                  <div key={i} className={`pb-4${i !== arr.length - 1 ? ' border-b border-neutral-200' : ''}`}>
+                    <p className="mb-1 text-sm font-medium text-neutral-900 md:text-base">{item.title}</p>
+                    <p className="text-xs text-neutral-500 md:text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-auto border-t border-neutral-200 pt-6">
+                <p className="mb-4 text-sm text-neutral-500">
+                  {t('globalPresence.joinBaterino.ctaLabel')}
+                </p>
+                <Link
+                  to={`${base}/contact`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-6 py-2.5 text-sm font-medium text-neutral-900 transition-colors duration-200 hover:bg-neutral-50"
+                >
+                  {t('globalPresence.joinBaterino.ctaButton')}
+                  <span aria-hidden>→</span>
+                </Link>
+              </div>
             </div>
+
           </div>
+
         </div>
       </section>
     </article>

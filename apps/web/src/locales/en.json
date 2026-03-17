@@ -22,6 +22,7 @@
       "company.aboutBaterino": "Enabling projects",
       "company.aboutLithtech": "Producing technology",
       "company.partnership": "Our synergy",
+      "company.operatingModel": "Operating model",
       "language": "Select site language",
       "contact": "Clients & Partners"
     },
@@ -40,13 +41,56 @@
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Partnership",
+    "company.operatingModel": "Operating Model",
     "insights": "Insights",
     "useCases": "Use Cases",
     "globalPresence": "Global Presence",
     "careers": "Careers",
     "contact": "Contact",
     "termsOfUse": "Terms of Use",
-    "privacyPolicy": "Privacy Policy"
+    "privacyPolicy": "Privacy Policy",
+    "operatingModel": "Operating Model"
+  },
+  "operatingModel": {
+    "pageTitle": "Operating Model | Baterino",
+    "pageDescription": "Baterino Global and Local operations: supply chain, service offerings, and client interactions.",
+    "title": "Operating Model",
+    "subtitle": "From suppliers to final clients — our global and local structure.",
+    "supportLabel": "Direct technical support is offered through local website and mobile app.",
+    "supportLabelIndustrial": "Technical and after sales support is offered through our industrial teams.",
+    "hoverToView": "Hover to view",
+    "baterinoGlobal": "Baterino Global",
+    "globalDesc": "Contract Negotiation, Distribution Strategy & Supply Chain Optimization",
+    "baterinoLocal": "Baterino Local Structure",
+    "localDesc": "Based on the country, plays different roles.",
+    "localPartners": "Local Partners",
+    "localPartnersDesc": "Empowering local companies, to increase margins, provide quality products, create jobs.",
+    "distributor": "Distributor",
+    "installer": "Installer",
+    "roles": {
+      "importer": "Importer",
+      "epc": "EPC for Industrial Sector",
+      "afterSales": "AfterSales & Support"
+    },
+    "industrialDivisionsTitle": "Enabling through our dedicated divisions",
+    "divisions": {
+      "pro": { "desc": "for industrial and commercial sector" },
+      "med": { "desc": "for medical and critical services" },
+      "atSea": { "desc": "for maritime sector" }
+    },
+    "residentialUsers": "Residential Final Users",
+    "residentialDesc": "Residential End Users. Affordable, reliable energy storage solutions for homeowners.",
+    "industrialClients": "Industrial Final Clients",
+    "industrialDesc": "Enabling local businesses to reduce energy costs, strengthen competitiveness, and access reliable energy infrastructure",
+    "suppliers": {
+      "transformers": "Transformers Suppliers",
+      "heatPumps": "Heat Pumps Suppliers",
+      "solarAccessories": "Solar Accessories Suppliers",
+      "greenEnergyTech": "Green Energy Technology Suppliers",
+      "pv": "PV Suppliers",
+      "inverters": "Inverters Suppliers",
+      "energyStorage": "Energy Storage Suppliers"
+    }
   },
   "pageTitle": {
     "home": "Baterino Global",
@@ -67,7 +111,8 @@
     "contact": "Contact",
     "termsOfUse": "Terms of Use",
     "privacyPolicy": "Privacy Policy",
-    "notFound": "Page not found"
+    "notFound": "Page not found",
+    "operatingModel": "Operating Model"
   },
   "notFound": {
     "message": "The page you are looking for does not exist.",
@@ -279,8 +324,8 @@
   "home": {
     "ourDivisions": "Our divisions",
     "hero": {
-      "title": "Enabling High Capacity Energy Storage Worldwide",
-      "subtitle": "We integrate trusted green energy technologies to deliver reliable solutions for communities, industry, medical and maritime environments.",
+      "title": "BATTERY ENERGY STORAGE.\nSUPPLIED. INTEGRATED. SUPPORTED.",
+      "subtitle": "We bring certified battery storage systems to market — and take them all the way from supply and integration to long-term operational support, across residential, industrial, maritime, and critical service environments.",
       "poweredBy": "powered by",
       "poweredByLabel": "Powered by:",
       "technologyPoweredBy": "Our technology is powered by:",
@@ -794,6 +839,25 @@
       "bullet3": "Asia-Pacific",
       "bullet4": "Africa",
       "closing": "Presence and project scope vary by region and are driven by local partnerships and project requirements."
+    },
+    "joinBaterino": {
+      "title": "Partner Up With Us",
+      "subtitle": "Build sustainable, profitable energy infrastructure with local partners in emerging markets.",
+      "pathwaysTitle": "Partnership pathways",
+      "benefitsTitle": "Partner benefits",
+      "ctaLabel": "Ready to partner with us?",
+      "ctaButton": "Get in touch",
+      "partners": [
+        { "title": "Local partners", "desc": "Regional integrators with market access and customer relationships" },
+        { "title": "Distributors", "desc": "Supply chain specialists managing inventory and logistics" },
+        { "title": "System integrators", "desc": "Engineering firms delivering turnkey solutions to end customers" },
+        { "title": "Institutional stakeholders", "desc": "Government bodies and development agencies expanding infrastructure" }
+      ],
+      "benefits": [
+        { "title": "Competitive margins", "desc": "Industry-leading pricing on battery technology and project delivery" },
+        { "title": "Service revenue streams", "desc": "Recurring opportunities in maintenance, monitoring, and lifecycle support" },
+        { "title": "Growth enablement", "desc": "Dedicated marketing, technical training, and go-to-market support" }
+      ]
     },
     "partnerUp": {
       "title": "Partner Up With Us",

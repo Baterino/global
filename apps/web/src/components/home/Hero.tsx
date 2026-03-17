@@ -209,7 +209,7 @@ export function Hero() {
                 alt="Baterino"
                 className="h-8 w-auto object-contain md:h-10"
               />
-              <h1 className="mx-auto max-w-[720px] font-publicSans text-2xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-display-sm lg:text-display-md">
+              <h1 className="mx-auto max-w-[800px] whitespace-pre-line font-publicSans text-xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-2xl lg:text-display-sm">
                 {t('home.hero.title')}
               </h1>
               <p className="max-w-[640px] font-body text-base font-normal leading-relaxed text-white/95 md:text-body-lg">

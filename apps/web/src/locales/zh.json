@@ -22,6 +22,7 @@
       "company.aboutBaterino": "赋能项目",
       "company.aboutLithtech": "技术生产",
       "company.partnership": "我们的协同",
+      "company.operatingModel": "运营模式",
       "language": "选择网站语言",
       "contact": "客户与合作伙伴"
     },
@@ -47,6 +48,47 @@
     "contact": "联系我们",
     "termsOfUse": "使用条款",
     "privacyPolicy": "隐私政策"
+  },
+  "operatingModel": {
+    "pageTitle": "运营模式 | Baterino",
+    "pageDescription": "Baterino 全球与本地运营：供应链、服务产品与客户互动。",
+    "title": "运营模式",
+    "subtitle": "从供应商到最终客户 — 我们的全球与本地架构。",
+    "supportLabel": "通过本地网站和移动应用提供直接技术支持。",
+    "supportLabelIndustrial": "通过我们的工业团队提供技术和售后支持。",
+    "hoverToView": "悬停查看",
+    "baterinoGlobal": "Baterino 全球",
+    "globalDesc": "合同谈判、分销策略与供应链优化",
+    "baterinoLocal": "Baterino 本地结构",
+    "localDesc": "根据国家/地区，扮演不同角色。",
+    "localPartners": "本地合作伙伴",
+    "localPartnersDesc": "赋能本地企业，提高利润，提供优质产品，创造就业。",
+    "distributor": "分销商",
+    "installer": "安装商",
+    "roles": {
+      "importer": "进口商",
+      "epc": "工业领域 EPC",
+      "afterSales": "售后与支持"
+    },
+    "industrialDivisionsTitle": "通过我们的专业部门赋能",
+    "divisions": {
+      "pro": { "desc": "面向工业和商业领域" },
+      "med": { "desc": "面向医疗和关键服务" },
+      "atSea": { "desc": "面向海事领域" }
+    },
+    "residentialUsers": "住宅终端用户",
+    "residentialDesc": "住宅终端用户。为业主提供经济实惠、可靠的储能解决方案。",
+    "industrialClients": "工业终端客户",
+    "industrialDesc": "赋能本地企业，提高利润，提供优质产品，创造就业。",
+    "suppliers": {
+      "transformers": "变压器供应商",
+      "heatPumps": "热泵供应商",
+      "solarAccessories": "太阳能配件供应商",
+      "greenEnergyTech": "绿色能源技术供应商",
+      "pv": "光伏供应商",
+      "inverters": "逆变器供应商",
+      "energyStorage": "储能供应商"
+    }
   },
   "notFound": {
     "message": "您访问的页面不存在。",
@@ -279,8 +321,8 @@
   "home": {
     "ourDivisions": "我们的业务板块",
     "hero": {
-      "title": "赋能全球大容量储能",
-      "subtitle": "我们整合可信的绿色能源技术，为社区、工业、医疗和海事环境提供可靠解决方案。",
+      "title": "电池储能。\n供应。集成。支持。",
+      "subtitle": "我们将经过认证的电池储能系统引入市场 — 从供应和集成到长期运营支持，全程覆盖住宅、工业、海事和关键服务环境。",
       "poweredBy": "由以下技术驱动",
       "poweredByLabel": "技术支持方：",
       "technologyPoweredBy": "我们的技术由以下驱动：",

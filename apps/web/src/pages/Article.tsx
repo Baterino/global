@@ -18,114 +18,13 @@ interface ArticleData {
   content: string
 }
 
+const SLUG_TO_ARTICLE_KEY: Record<string, number> = {
+  'global-delivery-framework': 7,
+  'baterino-roles-in-every-market': 8,
+  'request-to-operation': 9,
+}
+
 const FALLBACK_ARTICLES: ArticleData[] = [
-    {
-      id: 'baterino-unveils-new-maritime-battery',
-      slug: 'baterino-unveils-new-maritime-battery',
-      title: '',
-      author: '',
-      date: '',
-      location: '',
-      category: '',
-      image: '/images/article-1.jpg',
-      content: `
-        <p>Baterino's global platform is designed to grow through trusted local partnerships. In addition to our current footprint, we are open to working with:</p>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        
-        <h2>Key Highlights</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        
-        <ul>
-          <li>Strategic partnerships across multiple regions</li>
-          <li>Scalable energy storage solutions</li>
-          <li>Long-term sustainability commitment</li>
-          <li>Local expertise and global standards</li>
-        </ul>
-        
-        <h2>Impact and Results</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-      `,
-    },
-    {
-      id: 'sustainable-shipping-future',
-      slug: 'sustainable-shipping-future',
-      title: '',
-      author: '',
-      date: '',
-      location: '',
-      category: '',
-      image: '/images/article-2.jpg',
-      content: `
-        <p>This is the second article's content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        
-        <h2>Overview</h2>
-        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        
-        <ul>
-          <li>First key point</li>
-          <li>Second key point</li>
-          <li>Third key point</li>
-        </ul>
-      `,
-    },
-    {
-      id: 'baterino-partnership-announcement',
-      slug: 'baterino-partnership-announcement',
-      title: '',
-      author: '',
-      date: '',
-      location: '',
-      category: '',
-      image: '/images/article-3.jpg',
-      content: `
-        <p>This is the third article's content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        
-        <h2>Introduction</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        
-        <ul>
-          <li>Innovation in energy storage</li>
-          <li>Sustainable development</li>
-          <li>Global partnerships</li>
-        </ul>
-      `,
-    },
-    {
-      id: 'electric-ferry-milestone',
-      slug: 'electric-ferry-milestone',
-      title: 'Electric Ferry Milestone',
-      author: 'Baterino Team',
-      date: '',
-      location: '',
-      category: '',
-      image: '/images/article-4.jpg',
-      content: `<p>Baterino celebrates a major milestone in electric ferry deployment. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>`,
-    },
-    {
-      id: 'green-maritime-technology',
-      slug: 'green-maritime-technology',
-      title: 'Green Maritime Technology',
-      author: 'Baterino Team',
-      date: '',
-      location: '',
-      category: '',
-      image: '/images/article-5.jpg',
-      content: `<p>Exploring the latest in green maritime technology. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`,
-    },
-    {
-      id: 'baterino-team-expansion',
-      slug: 'baterino-team-expansion',
-      title: 'Baterino Team Expansion',
-      author: 'Baterino Team',
-      date: '',
-      location: '',
-      category: '',
-      image: '/images/article-6.jpg',
-      content: `<p>Baterino expands its team to support growing demand. Ut enim ad minim veniam, quis nostrud exercitation.</p>`,
-    },
     {
       id: 'global-delivery-framework',
       slug: 'global-delivery-framework',
@@ -688,14 +587,14 @@ export function Article() {
   const { t } = useTranslation()
   const { locale, slug } = useParams<{ locale: string; slug: string }>()
   const fallback = FALLBACK_ARTICLES.find((a) => a.slug === slug || a.id === slug) ?? FALLBACK_ARTICLES[0]
-  const idx = fallback ? FALLBACK_ARTICLES.indexOf(fallback) : 0
+  const articleKey = fallback ? (SLUG_TO_ARTICLE_KEY[fallback.slug] ?? 7) : 7
   const resolvedArticle = fallback
     ? {
         ...fallback,
-        title: fallback.title || t(`insights.article${idx + 1}.title`),
-        author: fallback.author || t('insights.article1.author'),
-        date: fallback.date || t(`insights.article${idx + 1}.date`),
-        location: fallback.location || t(`insights.article${idx + 1}.location`),
+        title: fallback.title || t(`insights.article${articleKey}.title`),
+        author: fallback.author || t('insights.article7.author'),
+        date: fallback.date || t(`insights.article${articleKey}.date`),
+        location: fallback.location || t(`insights.article${articleKey}.location`),
         category: fallback.category
           ? (fallback.category.startsWith('insights.') ? t(fallback.category) : fallback.category)
           : t('insights.publicRelease'),

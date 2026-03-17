@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const roles = [
@@ -59,8 +60,9 @@ export function RolesSection() {
         {/* Role cards — matches article-rich framework-card style */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {roles.map(({ key, icon }) => (
-            <div
+            <Link
               key={key}
+              to="/global-presence#operating-model"
               className="group flex flex-col gap-4 rounded-[10px] bg-[#f9fafb] p-6 transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(11,7,38,0.12)]"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#e8ecf5] text-[#0B0726] transition-colors group-hover:bg-[#0B0726] group-hover:text-white">
@@ -74,7 +76,7 @@ export function RolesSection() {
                   {t(`home.roles.${key}.desc`)}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

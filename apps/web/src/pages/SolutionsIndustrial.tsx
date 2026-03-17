@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
+import { SeoHead } from '../components/SeoHead'
 
 export function SolutionsIndustrial() {
   const { t } = useTranslation()
@@ -11,6 +12,7 @@ export function SolutionsIndustrial() {
 
   return (
     <article className="w-full bg-white">
+      <SeoHead title={t('industrial.hero.title')} description={t('industrial.hero.subtitle')} />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

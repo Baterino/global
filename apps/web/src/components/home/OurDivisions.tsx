@@ -22,7 +22,7 @@ export function OurDivisions() {
           <Link
             key={to}
             to={`${base}/${to}`}
-            className="flex h-10 min-h-10 max-h-10 shrink-0 items-center justify-center opacity-20 transition-opacity hover:opacity-90"
+            className="flex h-10 min-h-10 max-h-10 shrink-0 items-center justify-center transition-[filter] duration-200 hover:[filter:drop-shadow(0_4px_12px_rgba(0,0,0,0.25))]"
           >
             <img
               src={src}
