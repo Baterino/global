@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+﻿import { type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const INDUSTRIAL_DIVISIONS = [
@@ -73,7 +73,7 @@ const SUPPLIER_RIGHT: { key: string; label: string; icon: ReactNode }[] = [
   },
 ]
 
-/* ── Shared tiny arrow ── */
+/* ΓöÇΓöÇ Shared tiny arrow ΓöÇΓöÇ */
 function ArrowDown() {
   return (
     <div className="flex justify-center" style={{ height: 36 }}>
@@ -91,9 +91,9 @@ export function OperatingModelDiagramContent() {
   return (
     <section className="bg-white px-4 py-12 sm:px-6 lg:px-8">
 
-      {/* ════════════════════════════════
+      {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
           MOBILE  (< lg)
-      ════════════════════════════════ */}
+      ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
       <div className="lg:hidden mx-auto flex flex-col items-stretch gap-0" style={{ maxWidth: 480 }}>
 
         {/* Suppliers grid */}
@@ -116,7 +116,7 @@ export function OperatingModelDiagramContent() {
             {t('operatingModel.suppliers.greenEnergyTech')}
           </div>
           <div className="text-center text-[10px] text-green-700 font-medium">
-            Vetted suppliers · Best-in-class technologies · Quality assurance
+            Vetted suppliers ┬╖ Best-in-class technologies ┬╖ Quality assurance
           </div>
         </div>
 
@@ -201,27 +201,27 @@ export function OperatingModelDiagramContent() {
         </div>
       </div>
 
-      {/* ════════════════════════════════
-          DESKTOP  (≥ lg)
-      ════════════════════════════════ */}
+      {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          DESKTOP  (ΓëÑ lg)
+      ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
       <div className="hidden lg:block">
         <div className="mx-auto relative flex flex-col items-center" style={{ maxWidth: 920 }}>
 
-          {/* ── OVERLAY SVG: dashed feedback connectors ── */}
+          {/* ΓöÇΓöÇ OVERLAY SVG: dashed feedback connectors ΓöÇΓöÇ */}
           <svg
             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 1102, pointerEvents: 'none', zIndex: 10 }}
             viewBox="0 0 920 1102"
             fill="none"
           >
-            {/* Residential Final Users → AfterSales */}
+            {/* Residential Final Users ΓåÆ AfterSales */}
             <path d="M 389,872 H 448 V 529" stroke="#9CA3AF" strokeWidth="2" strokeDasharray="6 4"/>
             <polygon points="442,529 448,515 454,529" fill="#9CA3AF"/>
-            {/* Industrial Final Clients → AfterSales */}
+            {/* Industrial Final Clients ΓåÆ AfterSales */}
             <path d="M 523,1030 H 464 V 529" stroke="#9CA3AF" strokeWidth="2" strokeDasharray="6 4"/>
             <polygon points="458,529 464,515 470,529" fill="#9CA3AF"/>
           </svg>
 
-          {/* ── GREEN ENERGY ROW ── */}
+          {/* ΓöÇΓöÇ GREEN ENERGY ROW ΓöÇΓöÇ */}
           <div className="flex items-center gap-2">
             {/* Left 3 supplier boxes */}
             <div className="flex gap-2">
@@ -243,7 +243,7 @@ export function OperatingModelDiagramContent() {
                 {t('operatingModel.suppliers.greenEnergyTech')}
               </div>
               <div className="text-center text-[10px] text-green-700 font-medium">
-                Vetted suppliers · Best-in-class technologies · Quality assurance
+                Vetted suppliers ┬╖ Best-in-class technologies ┬╖ Quality assurance
               </div>
             </div>
 
@@ -262,7 +262,7 @@ export function OperatingModelDiagramContent() {
             </div>
           </div>
 
-          {/* Arrow: Green Energy → Baterino Global */}
+          {/* Arrow: Green Energy ΓåÆ Baterino Global */}
           <div className="flex justify-center" style={{ height: 40 }}>
             <svg width="20" height="40" viewBox="0 0 20 40" fill="none">
               <line x1="10" y1="0" x2="10" y2="30" stroke="#9CA3AF" strokeWidth="2"/>
@@ -270,7 +270,7 @@ export function OperatingModelDiagramContent() {
             </svg>
           </div>
 
-          {/* ── BATERINO GLOBAL ── */}
+          {/* ΓöÇΓöÇ BATERINO GLOBAL ΓöÇΓöÇ */}
           <div className="w-72 h-36 rounded-[10px] bg-blue-100 relative">
             <div className="absolute left-[80px] top-[26px] w-36 text-lg font-bold text-black">
               {t('operatingModel.baterinoGlobal')}
@@ -283,7 +283,7 @@ export function OperatingModelDiagramContent() {
             </div>
           </div>
 
-          {/* Arrow: Baterino Global → Baterino Local Presence */}
+          {/* Arrow: Baterino Global ΓåÆ Baterino Local Presence */}
           <div className="flex justify-center" style={{ height: 40 }}>
             <svg width="20" height="40" viewBox="0 0 20 40" fill="none">
               <line x1="10" y1="0" x2="10" y2="30" stroke="#9CA3AF" strokeWidth="2"/>
@@ -291,7 +291,7 @@ export function OperatingModelDiagramContent() {
             </svg>
           </div>
 
-          {/* ── BATERINO LOCAL PRESENCE ── */}
+          {/* ΓöÇΓöÇ BATERINO LOCAL PRESENCE ΓöÇΓöÇ */}
           <div className="w-96 h-48 relative rounded-[10px]">
             <div className="w-96 h-36 left-0 top-0 absolute rounded-[10px]" style={{ background: 'linear-gradient(to right, #d9f99d 0%, #ddd6fe 100%)' }} />
             <div className="left-[83px] top-[27px] absolute text-black text-lg font-bold whitespace-nowrap">{t('operatingModel.baterinoLocal')}</div>
@@ -304,19 +304,19 @@ export function OperatingModelDiagramContent() {
             <div className="w-16 left-[272px] top-[115px] absolute text-center text-black text-sm font-bold">{t('operatingModel.roles.epc')}</div>
           </div>
 
-          {/* Connectors: AfterSales(x=456)→Local Partners(x=245) + EPC(x=571)→Industrial Div(x=573) */}
+          {/* Connectors: AfterSales(x=456)ΓåÆLocal Partners(x=245) + EPC(x=571)ΓåÆIndustrial Div(x=573) */}
           <div className="w-full" style={{ height: 40 }}>
             <svg width="100%" height="40" viewBox="0 0 920 40" fill="none">
-              {/* Importer → Local Partners: down, left, down */}
+              {/* Importer ΓåÆ Local Partners: down, left, down */}
               <path d="M 341,0 L 341,18 L 245,18 L 245,34" stroke="#9CA3AF" strokeWidth="2" fill="none"/>
               <polygon points="239,30 245,40 251,30" fill="#9CA3AF"/>
-              {/* EPC → Industrial Divisions: down, right, down */}
+              {/* EPC ΓåÆ Industrial Divisions: down, right, down */}
               <path d="M 571,0 L 571,18 L 667,18 L 667,34" stroke="#9CA3AF" strokeWidth="2" fill="none"/>
               <polygon points="661,30 667,40 673,30" fill="#9CA3AF"/>
             </svg>
           </div>
 
-          {/* ── TWO COLUMNS ── */}
+          {/* ΓöÇΓöÇ TWO COLUMNS ΓöÇΓöÇ */}
           <div className="flex self-start" style={{ marginLeft: 101, gap: 134 }}>
 
             {/* LEFT COLUMN */}
@@ -333,7 +333,7 @@ export function OperatingModelDiagramContent() {
                 <div className="w-14 left-[179px] top-[132px] absolute text-black text-sm font-bold font-['Inter']">{t('operatingModel.installer')}</div>
               </div>
 
-              {/* Arrows: Distributor + Installer → Residential Final Users */}
+              {/* Arrows: Distributor + Installer ΓåÆ Residential Final Users */}
               <div style={{ height: 40 }}>
                 <svg width="288" height="40" viewBox="0 0 288 40" fill="none">
                   <line x1="91" y1="0" x2="91" y2="30" stroke="#9CA3AF" strokeWidth="2"/>
@@ -378,7 +378,7 @@ export function OperatingModelDiagramContent() {
                 })}
               </div>
 
-              {/* Arrow: Industrial Divisions → Industrial Final Clients */}
+              {/* Arrow: Industrial Divisions ΓåÆ Industrial Final Clients */}
               <div className="flex justify-center w-72" style={{ height: 40 }}>
                 <svg width="20" height="40" viewBox="0 0 20 40" fill="none">
                   <line x1="10" y1="0" x2="10" y2="30" stroke="#9CA3AF" strokeWidth="2"/>

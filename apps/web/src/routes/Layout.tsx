@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Menu } from '../components/Menu'
 import { Footer } from '../components/Footer'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 import { supportedLngs, type Locale } from '../i18n'
 
 const SCROLL_THRESHOLD = 10
@@ -36,7 +36,7 @@ export function Layout() {
 
   return (
     <>
-      <SeoHead />
+      <SEOHead />
       <a
         href="#main-content"
         className="sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:block focus:w-auto focus:h-auto focus:py-2 focus:px-4 focus:m-0 focus:overflow-visible focus:whitespace-normal focus:rounded-lg focus:bg-neutral-900 focus:text-body-sm focus:font-medium focus:text-white focus:outline-none focus:ring-2 focus:ring-white focus:[clip:auto] dark:focus:bg-white dark:focus:text-neutral-900"

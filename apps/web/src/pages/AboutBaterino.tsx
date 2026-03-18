@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { WhatWeDoSlider } from '../components/about/WhatWeDoSlider'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 export function AboutBaterino() {
   const { t } = useTranslation()
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('aboutBaterino.hero.title')} description={t('aboutBaterino.hero.subtitle')} />
+      <SEOHead title={t('aboutBaterino.hero.title')} description={t('aboutBaterino.hero.subtitle')} ogImage="/images/og-images/og-about-baterino.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

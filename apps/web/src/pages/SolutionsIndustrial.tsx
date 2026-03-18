@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 export function SolutionsIndustrial() {
   const { t } = useTranslation()
@@ -12,7 +12,7 @@ export function SolutionsIndustrial() {
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('industrial.hero.title')} description={t('industrial.hero.subtitle')} />
+      <SEOHead title="Industrial BESS Solutions | Baterino" description="Industrial BESS solutions for commercial facilities. Scalable containerized and cabinet-based battery energy storage systems for grid stability." ogImage="/images/og-images/og-industrial.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
@@ -132,7 +132,7 @@ export function SolutionsIndustrial() {
             {t('industrial.containerized.title')}
           </h2>
           <ImageWithLogo
-            src="/images/bess-solutions.jpg"
+            src="/images/consistency-bess.jpg"
             alt=""
             className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"

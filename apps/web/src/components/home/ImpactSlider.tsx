@@ -137,8 +137,6 @@ export function ImpactSlider() {
     }
   }, [isDragging, mobileGoPrev, mobileGoNext])
 
-  const mobileTranslateX = -mobileIndex * 100
-
   return (
     <div className="w-full">
       {/* Mobile Slider */}
@@ -148,14 +146,15 @@ export function ImpactSlider() {
           onTouchStart={handleMobileTouchStart}
         >
           <div
-            className="flex w-full cursor-grab select-none active:cursor-grabbing"
+            className="flex cursor-grab select-none active:cursor-grabbing"
             style={{
-              transform: `translateX(calc(${mobileTranslateX}% + ${mobileDragOffset}px))`,
+              width: `${SLIDES_COUNT * 100}%`,
+              transform: `translateX(calc(${-mobileIndex * (100 / SLIDES_COUNT)}% + ${mobileDragOffset}px))`,
               transition: isDragging ? 'none' : 'transform 0.3s ease-out',
             }}
           >
             {IMPACT_SLIDES.map((slide) => (
-              <div key={slide.type} className="min-w-full max-w-[1200px] shrink-0 px-4">
+              <div key={slide.type} className="shrink-0 px-4" style={{ width: `${100 / SLIDES_COUNT}%` }}>
                 <div className="w-full overflow-hidden rounded-[10px] bg-[#f7f7f7]">
                   {/* Image on top */}
                   <div className={`relative w-full overflow-hidden ${slide.type === 'alignedGoals' ? 'flex items-center justify-center bg-white p-6' : 'h-48'}`}>

@@ -9,7 +9,7 @@ export function Solutions() {
   const base = `/${locale}`
 
   return (
-    <PageLayout titleKey="pageTitle.solutions">
+    <PageLayout titleKey="pageTitle.solutions" description="Energy storage solutions for residential, industrial, and maritime sectors. Battery systems (BESS) and infrastructure with long-term support.">
       <p className="mb-8">{t('nav.solutions')} — Residential, Industrial, Maritime.</p>
       <ul className="grid gap-4 sm:grid-cols-3">
         {nav.solutions.sub.map((s) => (

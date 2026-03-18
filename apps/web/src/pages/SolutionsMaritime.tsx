@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { MaritimeDeliverySlider } from '../components/maritime/MaritimeDeliverySlider'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 export function SolutionsMaritime() {
   const { t } = useTranslation()
@@ -10,7 +10,7 @@ export function SolutionsMaritime() {
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('maritime.hero.title')} description={t('maritime.hero.subtitle')} />
+      <SEOHead title="Maritime Energy Storage | Baterino" description="Maritime battery energy storage systems for vessels and offshore operations. Marine-grade ESS engineered for safety and reliability." ogImage="/images/og-images/og-maritime.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

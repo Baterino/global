@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Baterino Global",
+    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
     "description": "Sitio web multilingüe y optimizado para SEO con Vite y React.",
     "welcome": "Bienvenido"
   },
@@ -91,14 +91,14 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino Global",
-    "solutions": "Soluciones",
+    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "Residencial y Comunidades",
     "solutionsIndustrial": "Soluciones industriales",
     "solutionsMaritime": "Soluciones marítimas",
     "solutionsCriticalServices": "Servicios Críticos",
     "delivery": "Entrega",
-    "company": "Empresa",
+    "company": "About Baterino | Company",
     "companyAboutBaterino": "Sobre Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "Asociación",
@@ -691,7 +691,7 @@
   },
   "impact": {
     "hero": {
-      "title": "IMPACTO GLOBAL",
+      "title": "Energy Storage Solutions for Critical Services",
       "subtitle": "Baterino construye sistemas energéticos que apoyan servicios esenciales y fortalecen la resiliencia comunitaria en todo el mundo."
     },
     "essentialServices": {

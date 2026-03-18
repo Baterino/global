@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 const FILTERS = ['all', 'company', 'press-release', 'use-cases', 'news'] as const
 const INSIGHTS_BASE = 'company/insights'
@@ -21,7 +21,7 @@ interface ArticleItem {
 const FALLBACK_ARTICLES: ArticleItem[] = [
   { id: 'global-delivery-framework', slug: 'global-delivery-framework', type: 'company', image: '/images/blog/global-delivery-framework.jpg', date: 'insights.article7.date', dateSort: '2026-03-01', title: 'insights.article7.title', excerpt: 'insights.article7.excerpt' },
   { id: 'baterino-roles-in-every-market', slug: 'baterino-roles-in-every-market', type: 'company', image: '/images/about-baterino.jpg', date: 'insights.article8.date', dateSort: '2026-03-15', title: 'insights.article8.title', excerpt: 'insights.article8.excerpt' },
-  { id: 'request-to-operation', slug: 'request-to-operation', type: 'company', image: '/images/delivery-enablement.jpg', date: 'insights.article9.date', dateSort: '2026-03-20', title: 'insights.article9.title', excerpt: 'insights.article9.excerpt' },
+  { id: 'request-to-operation', slug: 'request-to-operation', type: 'company', image: '/images/blog/how-baterino-assess-a-project.jpg', date: 'insights.article9.date', dateSort: '2026-03-20', title: 'insights.article9.title', excerpt: 'insights.article9.excerpt' },
 ].sort((a, b) => b.dateSort.localeCompare(a.dateSort))
 
 function getFilterLabel(filter: FilterType, t: (key: string) => string) {
@@ -78,7 +78,7 @@ export function Insights() {
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('insights.hero.title')} description={t('insights.hero.subtitle')} />
+      <SEOHead title={t('insights.hero.title')} description={t('insights.hero.subtitle')} ogImage="/images/og-images/og-insights.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-4 pt-16 sm:px-6 lg:px-8 lg:pb-16">
         <div className="mx-auto max-w-[1200px] text-center">
@@ -145,11 +145,18 @@ export function Insights() {
                 to={`${base}/${INSIGHTS_BASE}/${article.slug}`}
                 className="group flex flex-col overflow-hidden rounded-[10px] bg-white shadow-sm ring-1 ring-neutral-200 transition-shadow hover:shadow-md"
               >
-                <div className="aspect-[16/10] w-full overflow-hidden bg-neutral-100">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100">
                   <img
                     src={article.image}
                     alt=""
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-black/40" aria-hidden />
+                  <img
+                    src="/images/baterino-logo-white.png"
+                    alt=""
+                    className="absolute bottom-4 right-4 z-10 h-5 w-auto object-contain drop-shadow-sm"
+                    aria-hidden
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">

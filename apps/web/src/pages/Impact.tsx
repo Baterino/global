@@ -1,18 +1,18 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 export function Impact() {
   const { t } = useTranslation()
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('impact.hero.title')} description={t('impact.hero.subtitle')} />
+      <SEOHead title={t('impact.hero.title')} description={t('impact.hero.subtitle')} ogImage="/images/og-images/og-critical-services.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
           <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
-            {t('impact.hero.title')}
+            Energy Storage Solutions<br />for Critical Services
           </h1>
           <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
             {t('impact.hero.subtitle')}

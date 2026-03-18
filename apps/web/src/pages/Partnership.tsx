@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 export function Partnership() {
   const { t } = useTranslation()
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('partnership.hero.title')} description={t('partnership.hero.subtitle')} />
+      <SEOHead title={t('partnership.hero.title')} description={t('partnership.hero.subtitle')} ogImage="/images/og-images/og-strategic-partnership.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

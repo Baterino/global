@@ -10,6 +10,7 @@ import { IntroducingSlider } from '../components/home/IntroducingSlider'
 import { RolesSection } from '../components/home/RolesSection'
 import { TechnologyProvenSection } from '../components/home/TechnologyProvenSection'
 import { ImpactSlider } from '../components/home/ImpactSlider'
+import { SEOHead } from '../components/SEOHead'
 
 export function Home() {
   const { t } = useTranslation()
@@ -18,6 +19,7 @@ export function Home() {
 
   return (
     <article className="relative w-full bg-white">
+      <SEOHead description="Enterprise-grade energy storage solutions (BESS) for residential, industrial, and maritime applications. Battery systems with integrated long-term support from Baterino." ogImage="/images/og-images/og-home.jpg" />
       <Hero />
 
       {/* What we enable: title + subtitle on top; then intro and cards */}

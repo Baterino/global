@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { ArrowRightIcon } from '../components/ArrowRightIcon'
 import { OperatingModelDiagramContent } from './OperatingModelDiagram'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 export function GlobalPresence() {
   const { t } = useTranslation()
@@ -12,7 +12,7 @@ export function GlobalPresence() {
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('globalPresence.hero.title')} description={t('globalPresence.hero.subtitle')} />
+      <SEOHead title={t('globalPresence.hero.title')} description={t('globalPresence.hero.subtitle')} ogImage="/images/og-images/og-global-presence.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

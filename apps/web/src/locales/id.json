@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Baterino Global",
+    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
     "description": "Situs web multilanguage dan ramah SEO dengan Vite dan React.",
     "welcome": "Selamat datang"
   },
@@ -91,14 +91,14 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino Global",
-    "solutions": "Solusi",
+    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "Residensial & Komunitas",
     "solutionsIndustrial": "Solusi Industri",
     "solutionsMaritime": "Solusi Maritim",
     "solutionsCriticalServices": "Layanan Kritis",
     "delivery": "Pengiriman",
-    "company": "Perusahaan",
+    "company": "About Baterino | Company",
     "companyAboutBaterino": "Tentang Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "Kemitraan",
@@ -691,7 +691,7 @@
   },
   "impact": {
     "hero": {
-      "title": "DAMPAK GLOBAL",
+      "title": "Energy Storage Solutions for Critical Services",
       "subtitle": "Baterino membangun sistem energi yang mendukung layanan penting dan memperkuat ketahanan komunitas di seluruh dunia."
     },
     "essentialServices": {

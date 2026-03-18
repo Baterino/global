@@ -1,17 +1,18 @@
 import { useTranslation } from 'react-i18next'
-import { SeoHead } from './SeoHead'
+import { SEOHead } from './SEOHead'
 
 interface PageLayoutProps {
   titleKey: string
+  description?: string
   children: React.ReactNode
 }
 
-export function PageLayout({ titleKey, children }: PageLayoutProps) {
+export function PageLayout({ titleKey, description, children }: PageLayoutProps) {
   const { t } = useTranslation()
   const title = t(titleKey)
   return (
     <>
-      <SeoHead title={title} />
+      <SEOHead title={title} description={description} />
       <div className="mx-auto w-full max-w-[1200px] px-4 py-10 sm:px-6 lg:px-8">
         <article className="space-y-6 sm:space-y-8">
           <header>

@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Baterino Global",
+    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
     "description": "Website multilingv, optimizat pentru SEO, construit cu Vite și React.",
     "welcome": "Bun venit"
   },
@@ -90,14 +90,14 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino Global",
-    "solutions": "Soluții",
+    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "Rezidențial & Comunități",
     "solutionsIndustrial": "Soluții Industriale",
     "solutionsMaritime": "Soluții Maritime",
     "solutionsCriticalServices": "Servicii Critice",
     "delivery": "Livrare",
-    "company": "Companie",
+    "company": "About Baterino | Company",
     "companyAboutBaterino": "Despre Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "Parteneriat",
@@ -690,7 +690,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Impact Global",
+      "title": "Energy Storage Solutions for Critical Services",
       "subtitle": "Baterino construiește sisteme energetice care susțin serviciile esențiale și consolidează reziliența comunităților din întreaga lume."
     },
     "essentialServices": {

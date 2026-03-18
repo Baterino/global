@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 import { ArrowRightIcon } from '../components/ArrowRightIcon'
 
 export function NotFound() {
@@ -10,7 +10,7 @@ export function NotFound() {
 
   return (
     <>
-      <SeoHead title={t('pageTitle.notFound')} noIndex />
+      <SEOHead title={t('pageTitle.notFound')} noIndex />
       <article className="mx-auto max-w-[1200px] px-4 py-16 text-center sm:px-6 lg:px-8">
         <h1 className="text-display-sm font-semibold uppercase tracking-tight text-neutral-900 dark:text-white mb-4">
           {t('pageTitle.notFound')}

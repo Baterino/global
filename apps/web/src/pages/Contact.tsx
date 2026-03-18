@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 import { ArrowRightIcon } from '../components/ArrowRightIcon'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -127,7 +127,7 @@ export function Contact() {
 
   return (
     <>
-      <SeoHead title={t('pageTitle.contact')} />
+      <SEOHead title={t('pageTitle.contact')} description="Get in touch with Baterino for project inquiries, partnership opportunities, and energy storage solutions. Our team is ready to support your next energy project." ogImage="/images/og-images/og-contact.jpg" />
       <article className="w-full bg-white">
         {/* Hero */}
         <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">

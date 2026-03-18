@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Baterino Global",
+    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
     "description": "多语言、SEO 友好的网站，使用 Vite 和 React 构建。",
     "welcome": "欢迎"
   },
@@ -294,14 +294,14 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino Global",
-    "solutions": "解决方案",
+    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "住宅与社区",
     "solutionsIndustrial": "工业解决方案",
     "solutionsMaritime": "海事解决方案",
     "solutionsCriticalServices": "关键服务",
     "delivery": "交付",
-    "company": "公司",
+    "company": "About Baterino | Company",
     "companyAboutBaterino": "关于 Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "合作",
@@ -691,7 +691,7 @@
   },
   "impact": {
     "hero": {
-      "title": "全球影响",
+      "title": "Energy Storage Solutions for Critical Services",
       "subtitle": "Baterino 构建支持基本服务并在全球范围内增强社区韧性的能源系统。"
     },
     "essentialServices": {

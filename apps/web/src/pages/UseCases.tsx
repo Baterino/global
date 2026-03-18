@@ -1,7 +1,7 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Helmet } from 'react-helmet-async'
 import { USE_CASE_PROJECTS, type UseCaseProject, type Sector } from '../data/useCasesProjects'
+import { SEOHead } from '../components/SEOHead'
 
 const FILTERS = ['all', 'industrial', 'offgrid', 'maritime', 'solar', 'container', 'cabinet'] as const
 type FilterType = (typeof FILTERS)[number]
@@ -502,10 +502,11 @@ export function UseCases() {
 
   return (
     <>
-      <Helmet>
-        <title>{t('useCases.meta.title')} | Baterino</title>
-        <meta name="description" content={t('useCases.meta.description')} />
-      </Helmet>
+      <SEOHead
+        title={`${t('useCases.meta.title')} | Baterino`}
+        description={t('useCases.meta.description')}
+        ogImage="/images/og-images/og-use-cases.jpg"
+      />
       <article className="w-full bg-white">
         {/* Progress bar */}
         <div

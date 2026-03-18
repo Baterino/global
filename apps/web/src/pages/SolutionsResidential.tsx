@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 
 export function SolutionsResidential() {
   const { t } = useTranslation()
@@ -12,7 +12,7 @@ export function SolutionsResidential() {
 
   return (
     <article className="w-full bg-white">
-      <SeoHead title={t('residential.hero.title')} description={t('residential.hero.subtitle')} />
+      <SEOHead title="Residential Energy Storage Solutions | Baterino" description="Residential battery storage systems for homes and communities. Reliable energy storage solutions for solar integration and energy independence." ogImage="/images/og-images/og-residential.jpg" />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

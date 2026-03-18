@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useParams, Link } from 'react-router-dom'
-import { SeoHead } from '../components/SeoHead'
+import { SEOHead } from '../components/SEOHead'
 import { RolesArticleContent } from '../components/RolesArticleContent'
 import { ProjectsArticleContent } from '../components/ProjectsArticleContent'
 
@@ -354,7 +354,7 @@ const FALLBACK_ARTICLES: ArticleData[] = [
       date: '',
       location: '',
       category: 'insights.categoryCompany',
-      image: '/images/delivery-enablement.jpg',
+      image: '/images/blog/how-baterino-assess-a-project.jpg',
       content: `
 <div class="article-rich article-projects">
   <p class="intro-lead">Energy storage projects fail more often during assessment and delivery than they do due to technology. The hardware works. The gaps between intake, routing, design, regulatory approval, and long-term support are where projects stall, overrun, or underdeliver.</p>
@@ -611,7 +611,7 @@ export function Article() {
 
   return (
     <article className="w-full bg-white">
-      <SeoHead
+      <SEOHead
         title={`${resolvedArticle.title} | ${resolvedArticle.author}`}
         description={
           resolvedArticle.slug === 'global-delivery-framework'
@@ -622,6 +622,7 @@ export function Article() {
                 ? t('insights.article9.description')
                 : undefined
         }
+        ogImage={resolvedArticle.image}
         type="article"
       />
       {/* Article Header */}
@@ -649,11 +650,18 @@ export function Article() {
               </div>
             </div>
           ) : (
-            <div className="overflow-hidden rounded-[10px]">
+            <div className="relative overflow-hidden rounded-[10px]">
               <img
                 src={resolvedArticle.image}
                 alt={resolvedArticle.title}
                 className="h-auto w-full object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-black/40" aria-hidden />
+              <img
+                src="/images/baterino-logo-white.png"
+                alt=""
+                className="absolute bottom-4 right-4 z-10 h-5 w-auto object-contain drop-shadow-sm"
+                aria-hidden
               />
             </div>
           )}
