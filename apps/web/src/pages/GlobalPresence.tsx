@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
-import { ArrowRightIcon } from '../components/ArrowRightIcon'
 import { OperatingModelDiagramContent } from './OperatingModelDiagram'
 import { SEOHead } from '../components/SEOHead'
 
