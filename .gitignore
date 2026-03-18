@@ -6,6 +6,9 @@ dist/
 build/
 .vite/
 
+# Image optimization temp
+.optimize-temp/
+
 # Environment
 .env
 .env.local
