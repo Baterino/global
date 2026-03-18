@@ -1,6 +1,5 @@
 import { type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SeoHead } from '../components/SeoHead'
 
 const INDUSTRIAL_DIVISIONS = [
   { key: 'pro', label: 'PRO' },
@@ -403,28 +402,5 @@ export function OperatingModelDiagramContent() {
       </div>{/* end desktop wrapper */}
 
     </section>
-  )
-}
-
-export function OperatingModelDiagram() {
-  const { t } = useTranslation()
-  return (
-    <article className="w-full bg-white">
-      <SeoHead
-        title={t('operatingModel.pageTitle')}
-        description={t('operatingModel.pageDescription')}
-      />
-      <section className="border-b border-neutral-100 px-4 pt-16 pb-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-[1200px] text-center">
-          <h1 className="font-publicSans text-3xl font-extrabold uppercase tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
-            {t('operatingModel.title')}
-          </h1>
-          <p className="mx-auto mt-4 max-w-[600px] font-body text-body-md leading-relaxed text-neutral-600">
-            {t('operatingModel.subtitle')}
-          </p>
-        </div>
-      </section>
-      <OperatingModelDiagramContent />
-    </article>
   )
 }

@@ -17,7 +17,6 @@ export const nav = {
       { path: 'about-baterino', key: 'nav.company.aboutBaterino' },
       { path: 'lithtech', key: 'nav.company.aboutLithtech' },
       { path: 'partnership', key: 'nav.company.partnership' },
-      { path: 'operating-model', key: 'nav.company.operatingModel' },
     ],
   },
   globalPresence: { path: 'global-presence' },
