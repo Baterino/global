@@ -6,8 +6,15 @@ dist/
 build/
 .vite/
 
+# Removed from project
+Resources/
+
 # Image optimization temp
 .optimize-temp/
+
+# Git keys (do not commit)
+gitkey
+gitkey.pub
 
 # Environment
 .env
