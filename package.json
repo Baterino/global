@@ -1,6 +1,13 @@
 {
   "name": "baterino-global",
   "private": true,
+  "dependencies": {
+    "nodemailer": "^8.0.3"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^7.0.11",
+    "@vercel/node": "^3.2.27"
+  },
   "scripts": {
     "dev": "pnpm run --parallel dev",
     "dev:web": "pnpm --filter web dev",
