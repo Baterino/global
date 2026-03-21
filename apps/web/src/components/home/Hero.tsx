@@ -1,9 +1,16 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 import { ArrowRightIcon } from '../ArrowRightIcon'
 
 const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => `/images/mobile%20slider/slide${i + 1}.jpg`)
+
+const HERO_SLIDER_TAB_KEYS = [
+  'home.hero.sliderTabs.industrial',
+  'home.hero.sliderTabs.residential',
+  'home.hero.sliderTabs.missionCritical',
+  'home.hero.sliderTabs.afterSales',
+] as const
 
 const CAROUSEL_SLIDES = [
   {
@@ -52,7 +59,7 @@ export function Hero() {
       <div className="mx-auto w-full max-w-[1200px] px-4 pt-0 pb-8 sm:px-6 md:pt-12 lg:px-8">
         {/* Mobile: text above cards */}
         <div className="mb-8 flex flex-col items-center px-4 text-center md:hidden">
-          <h2 className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-neutral-900">
+          <h2 className="whitespace-pre-line font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-neutral-900">
             {t('home.hero.title')}
           </h2>
         </div>
@@ -213,7 +220,12 @@ export function Hero() {
                 {t('home.hero.title')}
               </h1>
               <p className="max-w-[640px] font-body text-base font-normal leading-relaxed text-white/95 md:text-body-lg">
-                {t('home.hero.subtitle')}
+                <Trans
+                  i18nKey="home.hero.subtitle"
+                  components={{
+                    bold: <strong className="font-bold text-white" />,
+                  }}
+                />
               </p>
               {/* Powered by: LithTech — under subtitle */}
               <div className="mt-4 flex flex-wrap items-center justify-center gap-1.5 font-nunito text-xs font-normal text-white/90 md:mt-5 md:text-body-sm [pointer-events:auto]">
@@ -251,16 +263,16 @@ export function Hero() {
                   }}
                 />
                 <div className="relative flex h-10 w-full">
-                  {(['INDUSTRIAL BESS', 'residential', 'MISSION CRITICAL', 'after sales'] as const).map((label, i) => (
+                  {HERO_SLIDER_TAB_KEYS.map((tabKey, i) => (
                     <button
-                      key={i}
+                      key={tabKey}
                       type="button"
                       onClick={() => setActiveTab(i)}
                       className="flex flex-1 items-center justify-center font-sans text-base font-semibold uppercase leading-6 text-black [text-shadow:0_1px_2px_rgba(255,255,255,0.8)] transition-colors hover:opacity-90"
-                      aria-label={label}
+                      aria-label={t(tabKey)}
                       aria-selected={activeTab === i}
                     >
-                      {label}
+                      {t(tabKey)}
                     </button>
                   ))}
                 </div>

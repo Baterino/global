@@ -108,9 +108,17 @@
     "contact": "Contact",
     "termsOfUse": "Termeni de Utilizare",
     "privacyPolicy": "Politica de Confidențialitate",
-    "notFound": "Pagina nu a fost găsită"
+    "notFound": "Pagina nu a fost găsită",
+    "unauthorized": "401 — Neautorizat"
+  },
+  "unauthorized": {
+    "code": "401",
+    "title": "Neautorizat",
+    "message": "Nu aveți permisiunea de a vizualiza această pagină. Dacă credeți că este o eroare, contactați administratorul site-ului sau încercați să vă autentificați din nou.",
+    "backHome": "Înapoi la pagina principală"
   },
   "notFound": {
+    "code": "404",
     "message": "Pagina pe care o căutați nu există.",
     "backHome": "Înapoi la pagina principală"
   },
@@ -165,7 +173,8 @@
   "contact": {
     "hero": {
       "title": "Contactați-ne",
-      "subtitle": "Suntem aici să vă ajutăm. Luați legătura cu noi și vă vom conecta cu echipa potrivită."
+      "subtitle": "Suntem aici să vă ajutăm. Luați legătura cu noi și vă vom conecta cu echipa potrivită.",
+      "previewAutoReplyLink": "Previzualizați emailul de confirmare trimis"
     },
     "categories": {
       "generalInquiries": {
@@ -214,7 +223,25 @@
       "phonePlaceholder": "+1 234 567 890",
       "messageLabel": "Mesaj",
       "messagePlaceholder": "Mesajul dvs...",
-      "submit": "Trimite mesaj"
+      "submit": "Trimite mesaj",
+      "submitting": "Se trimite…",
+      "submitSuccess": "Mulțumim — mesajul a fost trimis. Vă vom contacta în curând.",
+      "submitSuccessReference": "Referința solicitării: {{reference}}. Veți primi un email de confirmare în curând.",
+      "submitError": "A apărut o problemă. Încercați din nou sau scrieți-ne direct pe email.",
+      "submitErrorUnavailable": "Formularul de contact nu este disponibil momentan. Scrieți la inquiries@baterino.com.",
+      "errorCodes": {
+        "invalid_json": "Cerere nevalidă. Reîmprospătați pagina și încercați din nou.",
+        "invalid_inquiry_type": "Alegeți tipul solicitării.",
+        "name_required": "Introduceți numele.",
+        "email_required": "Introduceți adresa de email.",
+        "invalid_email": "Introduceți o adresă de email validă.",
+        "country_required": "Alegeți țara.",
+        "phone_required": "Introduceți un număr de telefon valid (minimum 5 caractere).",
+        "message_too_short": "Introduceți un mesaj mai lung (minimum 10 caractere).",
+        "contact_unavailable": "Formularul de contact nu este configurat. Scrieți la inquiries@baterino.com.",
+        "send_failed": "Nu am putut trimite mesajul. Încercați mai târziu.",
+        "network": "Eroare de rețea. Verificați conexiunea și încercați din nou."
+      }
     },
     "culture": {
       "title": "ÎNVAȚĂ. CREȘTE. APARȚII.",
@@ -320,12 +347,18 @@
   "home": {
     "ourDivisions": "Diviziile noastre",
     "hero": {
-      "title": "STOCARE DE ENERGIE ÎN BATERII.\nFURNIZAT. INTEGRAT. SUSTINUT.",
-      "subtitle": "Aducem pe piață sisteme de stocare a energiei în baterii certificate — și le asigurăm de la furnizare și integrare până la suport operațional pe termen lung, în mediile rezidențiale, industriale, maritime și de servicii critice.",
+      "title": "Soluții de stocare a energiei &\ninfrastructură BESS",
+      "subtitle": "<bold>Furnizăm, integrăm și susținem</bold> sisteme certificate de stocare a energiei în baterii pe piață — în mediile rezidențiale, industriale, maritime și de servicii critice.",
       "poweredBy": "alimentat de",
       "poweredByLabel": "Alimentat de:",
       "technologyPoweredBy": "Tehnologia noastră este alimentată de:",
-      "hoverToExplore": "Trece cursorul pentru a explora"
+      "hoverToExplore": "Trece cursorul pentru a explora",
+      "sliderTabs": {
+        "industrial": "BESS industrial",
+        "residential": "Rezidențial",
+        "missionCritical": "Servicii critice",
+        "afterSales": "Post-vânzare"
+      }
     },
     "heroSlides": {
       "slide1": {
@@ -489,11 +522,13 @@
       "title": "Stocare de Energie Rezidențială",
       "subtitle": "De la locuințe individuale la întregi comunități, Baterino activează soluții de stocare a energiei rezidențiale construite pentru reziliență, fiabilitate și impact pe termen lung."
     },
+    "techBoxTitle": "Tehnologiile pe care le folosim",
     "individual": {
       "title": "Stocare Rezidențială pentru Utilizatori Individuali",
       "desc1": "Sistemele de stocare a energiei rezidențiale permit gospodăriilor individuale să stocheze energia și să o utilizeze atunci când este nevoie. Aceste sisteme sunt proiectate să funcționeze independent sau în combinație cu surse de energie regenerabilă, cum ar fi energia solară.",
       "desc2": "Baterino activează soluții de stocare rezidențială ca parte a sistemelor integrate de energie domestică, adaptate condițiilor locale și tiparelor de utilizare.",
       "power": "~5 kW până la ~16 kW putere instalată per cabinet",
+      "techBoxSubtitle": "Soluții de la 5 kWh la 16 kWh",
       "ourFocus": "Concentrarea Noastră",
       "focusIntro": "Ne concentrăm pe calitatea și fiabilitatea sistemului, nu doar pe livrarea echipamentelor.",
       "focus1": "Sisteme de baterii rezidențiale fiabile și sigure",
@@ -512,6 +547,7 @@
       "desc1": "Microrețelele oferă comunităților sisteme energetice locale fiabile, care pot funcționa independent sau în paralel cu rețeaua principală. Prin combinarea generării, stocării și controlului inteligent, microrețelele asigură accesul la energie, reziliența și sustenabilitatea pe termen lung.",
       "desc2": "Baterino activează microrețele comunitare ca sisteme de infrastructură, proiectate pentru a susține medii operaționale reale și utilizarea pe termen lung.",
       "power": "~50 kW până la ~5 MW în funcție de configurația microrețelei",
+      "techBoxSubtitle": "Soluții de la ~50 kW la ~5 MW",
       "ourFocus": "Concentrarea Noastră",
       "focusIntro": "Fiecare microrețea este structurată în funcție de nevoile specifice ale comunității pe care o deservește.",
       "focus1": "Proiectare de sisteme la nivel de infrastructură",
@@ -531,12 +567,15 @@
       "title": "Infrastructură Industrială de Stocare a Energiei",
       "subtitle": "Baterino activează soluții de stocare a energiei scalabile și de înaltă performanță pentru instalații industriale, operațiuni comerciale și medii conectate la rețea."
     },
+    "techBoxTitle": "Tehnologiile pe care le folosim",
     "cabinet": {
       "title": "Sisteme Industriale de Stocare pe Bază de Cabinete",
       "desc1": "Sistemele de stocare a energiei pe bază de cabinete permit o abordare flexibilă și modulară a stocării industriale a energiei. Sunt concepute pentru instalații care necesită capacitate scalabilă, utilizare eficientă a spațiului disponibil și integrare cu sistemele electrice existente.",
       "desc2": "Baterino activează sistemele pe bază de cabinete ca componente de infrastructură integrate, adaptate la nevoile electrice, operaționale și de reglementare ale fiecărui amplasament.",
       "power": "~30 kW până la ~220 kW putere instalată per cabinet",
+      "techBoxSubtitle": "Soluții de la ~30 kW la ~220 kW per cabinet",
       "ourFocus": "Concentrarea Noastră",
+      "focusIntro": "Ne concentrăm pe sistemele pe bază de cabinete ca infrastructură practică și eficientă din punct de vedere al spațiului — nu doar livrarea echipamentelor, ci integrarea, siguranța și operabilitatea pe termen lung în medii industriale reale.",
       "focus1": "Arhitectură de sistem modulară și scalabilă",
       "focus2": "Configurații containerizate sau cu răcire lichidă",
       "focus3": "Standarde ridicate de siguranță și protecție integrată",
@@ -545,14 +584,17 @@
       "app1": "Instalații comerciale și industriale",
       "app2": "Fabrici de producție",
       "app3": "Centre logistice",
-      "app4": "Operațiuni în spații restrânse"
+      "app4": "Operațiuni în spații restrânse",
+      "applicationsIntro": "BESS-ul pe cabinete se potrivește amplasamentelor care au nevoie de stocare scalabilă fără amprente mari. Implementări tipice includ:"
     },
     "containerized": {
       "title": "Sisteme de Stocare Containerizate și de Mare Scară (BESS)",
       "desc1": "Sistemele containerizate de stocare a energiei pe bază de baterii (BESS) permit implementări de capacitate și putere mai ridicate pentru complexe industriale, sisteme conectate la rețea și infrastructuri critice. Aceste sisteme sunt proiectate ca unități autonome de infrastructură energetică, capabile să funcționeze în medii exterioare și industriale solicitante.",
       "desc2": "Baterino activează BESS containerizate ca infrastructură de energie pe termen lung, cu posibilitate de instalare temporară.",
       "power": "~0,5 MW până la ~2,5 MW putere instalată per container / bloc de sistem",
+      "techBoxSubtitle": "Soluții de la ~0,5 MW la ~2,5 MW per container",
       "ourFocus": "Concentrarea Noastră",
+      "focusIntro": "Ne concentrăm pe BESS containerizat ca blocuri la scară de rețea și de amplasament — infrastructură la cheie, pregătită pentru exterior, cu inginerie clară, siguranță și operare la distanță din prima zi.",
       "focus1": "Arhitecturi de sistem containerizate, la cheie",
       "focus2": "Configurații de energie și putere de mare capacitate",
       "focus3": "Management termic integrat și protecție la incendiu",
@@ -562,7 +604,8 @@
       "app2": "Proiecte conectate la rețea și adiacente utilităților",
       "app3": "Stabilizarea și integrarea energiei regenerabile",
       "app4": "Reducerea vârfurilor de sarcină, managementul încărcării și arbitraj energetic",
-      "app5": "Alimentare de rezervă pentru operațiuni industriale critice"
+      "app5": "Alimentare de rezervă pentru operațiuni industriale critice",
+      "applicationsIntro": "BESS containerizat de capacitate mai mare susține o gamă largă de cazuri industriale și conectate la rețea, inclusiv:"
     }
   },
   "maritime": {
@@ -570,9 +613,13 @@
       "title": "Infrastructură Maritimă de Stocare a Energiei (EES)",
       "subtitle": "Baterino activează sisteme de stocare a energiei de calitate marină, proiectate pentru siguranță, performanță și operare pe termen lung la bordul navelor și în mediile offshore."
     },
+    "techBoxTitle": "Tehnologiile pe care le folosim",
     "systems": {
       "title": "Sisteme Marine de Stocare a Energiei pe Baterii (ESS)",
-      "intro": "Baterino activează sisteme modulare marine de stocare a energiei pe baterii construite în jurul:",
+      "techBoxSubtitle": "Sisteme LFP modulare pentru nave și medii offshore",
+      "intro": "Baterino activează sisteme marine modulare de stocare a energiei în baterii, proiectate pentru condiții marine solicitante — chimie LFP, arhitecturi DC de înaltă tensiune, module stivuibile și monitorizare și control inteligent.",
+      "ourFocus": "Concentrarea Noastră",
+      "ourFocusIntro": "Ne concentrăm pe ESS marin modular ca infrastructură integrată, conștientă de clasificare — chimie LFP, arhitecturi DC de înaltă tensiune și control inteligent pentru operare sigură pe termen lung pe mare.",
       "feature1": "Chimia Litiu Fosfat de Fier (LFP) pentru siguranță sporită și longevitate",
       "feature2": "Arhitecturi DC de înaltă tensiune adecvate pentru sistemele de alimentare marină",
       "feature3": "Module stivuibile care permit dimensionarea flexibilă a sistemului",

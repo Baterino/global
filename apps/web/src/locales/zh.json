@@ -91,7 +91,14 @@
     }
   },
   "notFound": {
+    "code": "404",
     "message": "您访问的页面不存在。",
+    "backHome": "返回首页"
+  },
+  "unauthorized": {
+    "code": "401",
+    "title": "未授权",
+    "message": "您无权查看此页面。如认为有误，请联系网站管理员或重新登录。",
     "backHome": "返回首页"
   },
   "termsOfUse": {
@@ -145,7 +152,8 @@
   "contact": {
     "hero": {
       "title": "联系我们",
-      "subtitle": "我们随时为您提供帮助。联系我们，我们将为您对接合适的团队。"
+      "subtitle": "我们随时为您提供帮助。联系我们，我们将为您对接合适的团队。",
+      "previewAutoReplyLink": "预览我们发送的确认邮件"
     },
     "categories": {
       "generalInquiries": {
@@ -194,7 +202,25 @@
       "phonePlaceholder": "+1 234 567 890",
       "messageLabel": "留言",
       "messagePlaceholder": "您的留言...",
-      "submit": "发送消息"
+      "submit": "发送消息",
+      "submitting": "发送中…",
+      "submitSuccess": "谢谢 — 您的消息已发送。我们会尽快与您联系。",
+      "submitSuccessReference": "您的咨询编号：{{reference}}。确认邮件将发送至您的邮箱。",
+      "submitError": "发送失败，请重试或直接发送邮件与我们联系。",
+      "submitErrorUnavailable": "联系表单暂不可用，请发送邮件至 inquiries@baterino.com。",
+      "errorCodes": {
+        "invalid_json": "请求无效，请刷新页面后重试。",
+        "invalid_inquiry_type": "请选择咨询类型。",
+        "name_required": "请填写姓名。",
+        "email_required": "请填写电子邮箱。",
+        "invalid_email": "请输入有效的电子邮箱。",
+        "country_required": "请选择国家/地区。",
+        "phone_required": "请填写有效电话号码（至少 5 个字符）。",
+        "message_too_short": "留言请至少 10 个字符。",
+        "contact_unavailable": "联系表单未配置，请发送邮件至 inquiries@baterino.com。",
+        "send_failed": "无法发送消息，请稍后重试。",
+        "network": "网络错误，请检查连接后重试。"
+      }
     },
     "culture": {
       "title": "学习。成长。归属。",
@@ -312,7 +338,8 @@
     "contact": "联系我们",
     "termsOfUse": "使用条款",
     "privacyPolicy": "隐私政策",
-    "notFound": "页面未找到"
+    "notFound": "页面未找到",
+    "unauthorized": "401 — 未授权"
   },
   "greeting": {
     "hello": "你好！",
@@ -321,12 +348,18 @@
   "home": {
     "ourDivisions": "我们的业务板块",
     "hero": {
-      "title": "电池储能。\n供应。集成。支持。",
-      "subtitle": "我们将经过认证的电池储能系统引入市场 — 从供应和集成到长期运营支持，全程覆盖住宅、工业、海事和关键服务环境。",
+      "title": "储能解决方案 &\nBESS 基础设施",
+      "subtitle": "我们将经过认证的电池储能系统<bold>供应、集成并支持</bold>至市场 — 覆盖住宅、工业、海事与关键服务环境。",
       "poweredBy": "由以下技术驱动",
       "poweredByLabel": "技术支持方：",
       "technologyPoweredBy": "我们的技术由以下驱动：",
-      "hoverToExplore": "悬停以探索"
+      "hoverToExplore": "悬停以探索",
+      "sliderTabs": {
+        "industrial": "工业 BESS",
+        "residential": "住宅",
+        "missionCritical": "关键服务",
+        "afterSales": "售后"
+      }
     },
     "heroSlides": {
       "slide1": {
@@ -490,11 +523,13 @@
       "title": "住宅储能",
       "subtitle": "从单个家庭到整个社区，Baterino提供为韧性、可靠性和长期影响而建立的住宅储能解决方案。"
     },
+    "techBoxTitle": "我们采用的技术",
     "individual": {
       "title": "面向个人用户的住宅储能",
       "desc1": "住宅储能系统允许个人家庭储存能源并在需要时使用。这些系统设计为独立运行或与太阳能等可再生能源结合使用。",
       "desc2": "Baterino将住宅储能解决方案作为集成家庭能源系统的一部分，适应当地条件和使用模式。",
       "power": "每个机柜安装功率约5kW至16kW",
+      "techBoxSubtitle": "5 kWh 至 16 kWh 解决方案",
       "ourFocus": "我们的重点",
       "focusIntro": "我们专注于系统质量和可靠性，而不仅仅是设备交付。",
       "focus1": "可靠安全的住宅电池系统",
@@ -513,6 +548,7 @@
       "desc1": "微电网为社区提供可靠的本地化能源系统，可以独立运行或与主电网并行运行。通过结合发电、储能和智能控制，微电网实现能源获取、韧性和长期可持续性。",
       "desc2": "Baterino将社区微电网作为基础设施系统，旨在支持实际运营环境和长期使用。",
       "power": "基于微电网配置，约50kW至5MW",
+      "techBoxSubtitle": "约 50 kW 至 5 MW 解决方案",
       "ourFocus": "我们的重点",
       "focusIntro": "每个微电网都围绕其所服务社区的具体需求进行构建。",
       "focus1": "基础设施级系统设计",
@@ -532,12 +568,15 @@
       "title": "工业储能基础设施",
       "subtitle": "Baterino 为工业设施、商业运营和并网环境提供可扩展的高性能储能解决方案。"
     },
+    "techBoxTitle": "我们采用的技术",
     "cabinet": {
       "title": "基于机柜的工业储能系统",
       "desc1": "基于机柜的储能系统为工业储能提供灵活和模块化的方法。它们专为需要可扩展容量、有效利用可用空间以及与现有电气系统集成的设施而设计。",
       "desc2": "Baterino 将基于机柜的系统作为集成基础设施组件，适应每个站点的电气、运营和监管需求。",
       "power": "每个机柜安装功率约 30 kW 至 220 kW",
+      "techBoxSubtitle": "单机柜约 30 kW 至 220 kW 解决方案",
       "ourFocus": "我们的重点",
+      "focusIntro": "我们专注于机柜式系统作为务实、省地的基础设施——不仅是设备交付，还包括在真实工业环境中的集成、安全与长期可运行性。",
       "focus1": "模块化和可扩展的系统架构",
       "focus2": "集装箱式或液冷配置",
       "focus3": "高安全标准和集成保护",
@@ -546,13 +585,15 @@
       "app1": "商业和工业设施",
       "app2": "制造工厂",
       "app3": "物流中心",
-      "app4": "有限区域运营"
+      "app4": "有限区域运营",
+      "applicationsIntro": "机柜式 BESS 适合需要可扩展储能且占地有限的场景，典型部署包括："
     },
     "containerized": {
       "title": "集装箱式和大规模储能系统（BESS）",
       "desc1": "集装箱式电池储能系统（BESS）为工业综合体、并网系统和关键基础设施提供更高容量和更高功率的部署。这些系统被设计为独立的能源基础设施单元，能够在苛刻的室外和工业环境中运行。",
       "desc2": "Baterino 将集装箱式 BESS 作为长期电力基础设施，具有临时安装能力。",
       "power": "每个集装箱/系统块安装功率约 0.5 MW 至 2.5 MW",
+      "techBoxSubtitle": "单集装箱约 0.5 MW 至 2.5 MW 解决方案",
       "ourFocus": "我们的重点",
       "focus1": "集装箱式交钥匙系统架构",
       "focus2": "高容量能源和功率配置",
@@ -563,7 +604,8 @@
       "app2": "并网和公用事业相邻项目",
       "app3": "可再生能源稳定和集成",
       "app4": "削峰、负载管理和能源套利",
-      "app5": "关键工业运营的备用电源"
+      "app5": "关键工业运营的备用电源",
+      "applicationsIntro": "更高容量的集装箱式 BESS 可支持广泛的工业与并网应用场景，包括："
     }
   },
   "maritime": {
@@ -571,9 +613,13 @@
       "title": "海事储能基础设施（EES）",
       "subtitle": "Baterino 提供专为安全、性能和船舶及海上环境中长期运行而设计的船用级储能系统。"
     },
+    "techBoxTitle": "我们采用的技术",
     "systems": {
       "title": "船用电池储能系统（ESS）",
-      "intro": "Baterino 提供围绕以下构建的模块化船用电池储能系统：",
+      "techBoxSubtitle": "面向船舶与海上环境的模块化 LFP 系统",
+      "intro": "Baterino 提供面向苛刻海洋工况的模块化船用电池储能系统——结合 LFP 化学体系、高压直流架构、可堆叠模块以及智能监控与控制。",
+      "ourFocus": "我们的重点",
+      "ourFocusIntro": "我们将模块化船用 ESS 视为符合船级要求的集成基础设施——LFP、高压直流与智能控制，保障海上长期安全运行。",
       "feature1": "磷酸铁锂（LFP）化学成分，增强安全性和寿命",
       "feature2": "适用于船用电力系统的高压直流架构",
       "feature3": "可堆叠模块，允许灵活的系统规模",

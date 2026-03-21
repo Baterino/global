@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { Link, NavLink, useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { nav } from '../config/nav'
+import { handleHomeLogoLinkClick } from '../utils/homeLogoClick'
 import { LanguageDropdown } from './LanguageDropdown'
 import { localeLabels, supportedLngs, type Locale } from '../i18n'
 
@@ -76,7 +77,10 @@ export function Menu() {
       <Link
         to={base}
         className="shrink-0 hover:opacity-80"
-        onClick={() => setMobileOpen(false)}
+        onClick={(e) => {
+          setMobileOpen(false)
+          handleHomeLogoLinkClick(e, location.pathname, base)
+        }}
       >
         <img
           src="/images/Baterino-Logo-black.png"

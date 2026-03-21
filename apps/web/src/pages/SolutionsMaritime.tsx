@@ -1,12 +1,23 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { MaritimeDeliverySlider } from '../components/maritime/MaritimeDeliverySlider'
+import { SolutionTwoColumnLayout } from '../components/solutions/SolutionTwoColumnLayout'
 import { SEOHead } from '../components/SEOHead'
+
+const MARITIME_SYSTEM_GRID_KEYS = [
+  'maritime.systems.feature1',
+  'maritime.systems.feature2',
+  'maritime.systems.feature3',
+  'maritime.systems.feature4',
+  'maritime.systems.safety1',
+  'maritime.systems.safety2',
+  'maritime.systems.safety3',
+  'maritime.systems.safety4',
+  'maritime.systems.safety5',
+] as const
 
 export function SolutionsMaritime() {
   const { t } = useTranslation()
-  const [systemsSafetyOpen, setSystemsSafetyOpen] = useState(false)
 
   return (
     <article className="w-full bg-white">
@@ -37,7 +48,7 @@ export function SolutionsMaritime() {
       {/* Marine Battery Energy Storage Systems Section */}
       <section className="w-full bg-white px-4 pt-8 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <h2 className="mb-4 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-6 lg:text-left lg:text-2xl xl:text-3xl">
+          <h2 className="mb-6 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-8 lg:text-left lg:text-2xl xl:text-3xl">
             {t('maritime.systems.title')}
           </h2>
           <ImageWithLogo
@@ -48,56 +59,42 @@ export function SolutionsMaritime() {
             logoSize="lg"
             mobileCenter
           />
-          
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('maritime.systems.intro')}
-              </p>
-              <ul className="mt-4 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                <li>• {t('maritime.systems.feature1')}</li>
-                <li>• {t('maritime.systems.feature2')}</li>
-                <li>• {t('maritime.systems.feature3')}</li>
-                <li>• {t('maritime.systems.feature4')}</li>
-              </ul>
-              <p className="mt-6 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('maritime.systems.conclusion')}
-              </p>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setSystemsSafetyOpen((o) => !o)}
-                aria-expanded={systemsSafetyOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('maritime.systems.safetyTitle')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${systemsSafetyOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${systemsSafetyOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <p className="mt-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  {t('maritime.systems.safetyIntro')}
+          <SolutionTwoColumnLayout
+            leftColumnContent={
+              <div className="space-y-5">
+                <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+                  {t('maritime.systems.intro')}
                 </p>
-                <ul className="mt-4 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('maritime.systems.safety1')}</li>
-                  <li>• {t('maritime.systems.safety2')}</li>
-                  <li>• {t('maritime.systems.safety3')}</li>
-                  <li>• {t('maritime.systems.safety4')}</li>
-                  <li>• {t('maritime.systems.safety5')}</li>
-                </ul>
+                <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+                  {t('maritime.systems.conclusion')}
+                </p>
               </div>
-            </div>
-          </div>
+            }
+            techTitleKey="maritime.techBoxTitle"
+            techSubtitleKey="maritime.systems.techBoxSubtitle"
+            rightColumn={
+              <div className="flex flex-col">
+                <h3 className="mb-4 font-heading text-lg font-bold uppercase tracking-tight text-neutral-900 sm:text-xl lg:mb-5">
+                  {t('maritime.systems.ourFocus')}
+                </h3>
+                <p className="mb-6 font-body text-mobile-body leading-relaxed text-neutral-600 lg:text-body-md">
+                  {t('maritime.systems.ourFocusIntro')}
+                </p>
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  {MARITIME_SYSTEM_GRID_KEYS.map((key) => (
+                    <div
+                      key={key}
+                      className="rounded-2xl bg-[#f7f7f7] p-4 sm:p-5"
+                    >
+                      <p className="font-body text-mobile-body leading-relaxed text-neutral-800 lg:text-body-md">
+                        {t(key)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            }
+          />
         </div>
       </section>
 
@@ -116,9 +113,7 @@ export function SolutionsMaritime() {
             {t('maritime.applications.subtitle')}
           </p>
 
-          {/* Grid layout - 4 columns, 6 items total */}
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-            {/* App 1 - Tugboat */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
               <img src="/images/tugboat.jpg" alt="Tugboat" className="absolute inset-0 h-full w-full object-cover" />
               <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
@@ -130,7 +125,6 @@ export function SolutionsMaritime() {
               </div>
             </div>
 
-            {/* App 2 - Tourist Vessel */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
               <img src="/images/ferry.jpg" alt="Tourist Vessel" className="absolute inset-0 h-full w-full object-cover" />
               <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
@@ -142,7 +136,6 @@ export function SolutionsMaritime() {
               </div>
             </div>
 
-            {/* App 3 - Car Ferry */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
               <img src="/images/car-ferry.jpg" alt="Car Ferry" className="absolute inset-0 h-full w-full object-cover" />
               <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
@@ -154,7 +147,6 @@ export function SolutionsMaritime() {
               </div>
             </div>
 
-            {/* App 4 - Fish Farm */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
               <img src="/images/fish-farm.jpg" alt="Fish Farm" className="absolute inset-0 h-full w-full object-cover" />
               <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
@@ -166,7 +158,6 @@ export function SolutionsMaritime() {
               </div>
             </div>
 
-            {/* App 5 - MPV Cargo Vessel */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
               <img src="/images/container-ship.jpg" alt="MPV Cargo Vessel" className="absolute inset-0 h-full w-full object-cover" />
               <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
@@ -178,7 +169,6 @@ export function SolutionsMaritime() {
               </div>
             </div>
 
-            {/* App 6 - Offshore Supply Vessel */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
               <img src="/images/service-boat.jpg" alt="Offshore Supply Vessel" className="absolute inset-0 h-full w-full object-cover" />
               <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />

@@ -1,14 +1,10 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
+import { SolutionTwoColumnLayout } from '../components/solutions/SolutionTwoColumnLayout'
 import { SEOHead } from '../components/SEOHead'
 
 export function SolutionsIndustrial() {
   const { t } = useTranslation()
-  const [cabinetFocusOpen, setCabinetFocusOpen] = useState(false)
-  const [cabinetApplicationsOpen, setCabinetApplicationsOpen] = useState(false)
-  const [containerizedFocusOpen, setContainerizedFocusOpen] = useState(false)
-  const [containerizedApplicationsOpen, setContainerizedApplicationsOpen] = useState(false)
 
   return (
     <article className="w-full bg-white">
@@ -39,7 +35,7 @@ export function SolutionsIndustrial() {
       {/* Cabinet-Based Section */}
       <section className="w-full bg-white px-4 pt-8 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <h2 className="mb-4 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-6 lg:text-left lg:text-2xl xl:text-3xl">
+          <h2 className="mb-6 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-8 lg:text-left lg:text-2xl xl:text-3xl">
             {t('industrial.cabinet.title')}
           </h2>
           <ImageWithLogo
@@ -50,85 +46,47 @@ export function SolutionsIndustrial() {
             logoSize="lg"
             mobileCenter
           />
-          
-          <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">
-            <div>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('industrial.cabinet.desc1')}
-              </p>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('industrial.cabinet.desc2')}
-              </p>
-              <p className="mt-6 font-heading text-mobile-h3 font-bold text-neutral-900 lg:text-xl">
-                {t('industrial.cabinet.power')}
-              </p>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setCabinetFocusOpen((o) => !o)}
-                aria-expanded={cabinetFocusOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('industrial.cabinet.ourFocus')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${cabinetFocusOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${cabinetFocusOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <ul className="mt-3 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('industrial.cabinet.focus1')}</li>
-                  <li>• {t('industrial.cabinet.focus2')}</li>
-                  <li>• {t('industrial.cabinet.focus3')}</li>
-                  <li>• {t('industrial.cabinet.focus4')}</li>
-                </ul>
+          <SolutionTwoColumnLayout
+            leftColumnContent={
+              <div className="space-y-5">
+                <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+                  {t('industrial.cabinet.desc1')}
+                </p>
+                <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+                  {t('industrial.cabinet.desc2')}
+                </p>
               </div>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setCabinetApplicationsOpen((o) => !o)}
-                aria-expanded={cabinetApplicationsOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('industrial.cabinet.applications')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${cabinetApplicationsOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${cabinetApplicationsOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <ul className="mt-3 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('industrial.cabinet.app1')}</li>
-                  <li>• {t('industrial.cabinet.app2')}</li>
-                  <li>• {t('industrial.cabinet.app3')}</li>
-                  <li>• {t('industrial.cabinet.app4')}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            }
+            techTitleKey="industrial.techBoxTitle"
+            techSubtitleKey="industrial.cabinet.techBoxSubtitle"
+            primaryCard={{
+              titleKey: 'industrial.cabinet.ourFocus',
+              introKey: 'industrial.cabinet.focusIntro',
+              itemKeys: [
+                'industrial.cabinet.focus1',
+                'industrial.cabinet.focus2',
+                'industrial.cabinet.focus3',
+                'industrial.cabinet.focus4',
+              ],
+            }}
+            secondaryCard={{
+              titleKey: 'industrial.cabinet.applications',
+              introKey: 'industrial.cabinet.applicationsIntro',
+              itemKeys: [
+                'industrial.cabinet.app1',
+                'industrial.cabinet.app2',
+                'industrial.cabinet.app3',
+                'industrial.cabinet.app4',
+              ],
+            }}
+          />
         </div>
       </section>
 
       {/* Containerized & Large Scale Section */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <section className="w-full border-t border-neutral-200 bg-neutral-50/40 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <h2 className="mb-4 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-6 lg:text-left lg:text-2xl xl:text-3xl">
+          <h2 className="mb-6 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-8 lg:text-left lg:text-2xl xl:text-3xl">
             {t('industrial.containerized.title')}
           </h2>
           <ImageWithLogo
@@ -139,79 +97,41 @@ export function SolutionsIndustrial() {
             logoSize="lg"
             mobileCenter
           />
-          
-          <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">
-            <div>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('industrial.containerized.desc1')}
-              </p>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('industrial.containerized.desc2')}
-              </p>
-              <p className="mt-6 font-heading text-mobile-h3 font-bold text-neutral-900 lg:text-xl">
-                {t('industrial.containerized.power')}
-              </p>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setContainerizedFocusOpen((o) => !o)}
-                aria-expanded={containerizedFocusOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('industrial.containerized.ourFocus')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${containerizedFocusOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${containerizedFocusOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <ul className="mt-3 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('industrial.containerized.focus1')}</li>
-                  <li>• {t('industrial.containerized.focus2')}</li>
-                  <li>• {t('industrial.containerized.focus3')}</li>
-                  <li>• {t('industrial.containerized.focus4')}</li>
-                </ul>
+          <SolutionTwoColumnLayout
+            leftColumnContent={
+              <div className="space-y-5">
+                <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+                  {t('industrial.containerized.desc1')}
+                </p>
+                <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+                  {t('industrial.containerized.desc2')}
+                </p>
               </div>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setContainerizedApplicationsOpen((o) => !o)}
-                aria-expanded={containerizedApplicationsOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('industrial.containerized.applications')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${containerizedApplicationsOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${containerizedApplicationsOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <ul className="mt-3 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('industrial.containerized.app1')}</li>
-                  <li>• {t('industrial.containerized.app2')}</li>
-                  <li>• {t('industrial.containerized.app3')}</li>
-                  <li>• {t('industrial.containerized.app4')}</li>
-                  <li>• {t('industrial.containerized.app5')}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            }
+            techTitleKey="industrial.techBoxTitle"
+            techSubtitleKey="industrial.containerized.techBoxSubtitle"
+            primaryCard={{
+              titleKey: 'industrial.containerized.ourFocus',
+              introKey: 'industrial.containerized.focusIntro',
+              itemKeys: [
+                'industrial.containerized.focus1',
+                'industrial.containerized.focus2',
+                'industrial.containerized.focus3',
+                'industrial.containerized.focus4',
+              ],
+            }}
+            secondaryCard={{
+              titleKey: 'industrial.containerized.applications',
+              introKey: 'industrial.containerized.applicationsIntro',
+              itemKeys: [
+                'industrial.containerized.app1',
+                'industrial.containerized.app2',
+                'industrial.containerized.app3',
+                'industrial.containerized.app4',
+                'industrial.containerized.app5',
+              ],
+            }}
+          />
         </div>
       </section>
     </article>

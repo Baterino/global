@@ -1,14 +1,49 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
+import { SolutionTwoColumnLayout } from '../components/solutions/SolutionTwoColumnLayout'
 import { SEOHead } from '../components/SEOHead'
+
+type ResidentialSectionId = 'individual' | 'microgrids'
+
+function ResidentialSectionBody({ section }: { section: ResidentialSectionId }) {
+  const { t } = useTranslation()
+  const base = `residential.${section}`
+  const advantagesIntroKey =
+    section === 'microgrids' ? `${base}.advantagesIntro` : `${base}.keyAdvantagesIntro`
+
+  const focusItems = [`${base}.focus1`, `${base}.focus2`, `${base}.focus3`, `${base}.focus4`] as const
+  const advantageItems = [`${base}.advantage1`, `${base}.advantage2`, `${base}.advantage3`, `${base}.advantage4`] as const
+
+  return (
+    <SolutionTwoColumnLayout
+      leftColumnContent={
+        <div className="space-y-5">
+          <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+            {t(`${base}.desc1`)}
+          </p>
+          <p className="font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
+            {t(`${base}.desc2`)}
+          </p>
+        </div>
+      }
+      techTitleKey="residential.techBoxTitle"
+      techSubtitleKey={`${base}.techBoxSubtitle`}
+      primaryCard={{
+        titleKey: `${base}.ourFocus`,
+        introKey: `${base}.focusIntro`,
+        itemKeys: focusItems,
+      }}
+      secondaryCard={{
+        titleKey: `${base}.keyAdvantages`,
+        introKey: advantagesIntroKey,
+        itemKeys: advantageItems,
+      }}
+    />
+  )
+}
 
 export function SolutionsResidential() {
   const { t } = useTranslation()
-  const [individualFocusOpen, setIndividualFocusOpen] = useState(false)
-  const [individualAdvantagesOpen, setIndividualAdvantagesOpen] = useState(false)
-  const [microgridsFocusOpen, setMicrogridsFocusOpen] = useState(false)
-  const [microgridsAdvantagesOpen, setMicrogridsAdvantagesOpen] = useState(false)
 
   return (
     <article className="w-full bg-white">
@@ -39,7 +74,7 @@ export function SolutionsResidential() {
       {/* Individual Users Section */}
       <section className="w-full bg-white px-4 pt-8 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <h2 className="mb-4 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-6 lg:text-left lg:text-2xl xl:text-3xl">
+          <h2 className="mb-6 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-8 lg:text-left lg:text-2xl xl:text-3xl">
             {t('residential.individual.title')}
           </h2>
           <ImageWithLogo
@@ -50,91 +85,14 @@ export function SolutionsResidential() {
             logoSize="lg"
             mobileCenter
           />
-          
-          <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">
-            <div>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('residential.individual.desc1')}
-              </p>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('residential.individual.desc2')}
-              </p>
-              <p className="mt-6 font-heading text-mobile-h3 font-bold text-neutral-900 lg:text-xl">
-                {t('residential.individual.power')}
-              </p>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setIndividualFocusOpen((o) => !o)}
-                aria-expanded={individualFocusOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('residential.individual.ourFocus')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${individualFocusOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${individualFocusOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <p className="mt-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  {t('residential.individual.focusIntro')}
-                </p>
-                <ul className="mt-4 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('residential.individual.focus1')}</li>
-                  <li>• {t('residential.individual.focus2')}</li>
-                  <li>• {t('residential.individual.focus3')}</li>
-                  <li>• {t('residential.individual.focus4')}</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setIndividualAdvantagesOpen((o) => !o)}
-                aria-expanded={individualAdvantagesOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('residential.individual.keyAdvantages')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${individualAdvantagesOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${individualAdvantagesOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <p className="mt-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  {t('residential.individual.keyAdvantagesIntro')}
-                </p>
-                <ul className="mt-4 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('residential.individual.advantage1')}</li>
-                  <li>• {t('residential.individual.advantage2')}</li>
-                  <li>• {t('residential.individual.advantage3')}</li>
-                  <li>• {t('residential.individual.advantage4')}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <ResidentialSectionBody section="individual" />
         </div>
       </section>
 
       {/* Microgrids Section */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <section className="w-full border-t border-neutral-200 bg-neutral-50/40 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
-          <h2 className="mb-4 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-6 lg:text-left lg:text-2xl xl:text-3xl">
+          <h2 className="mb-6 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-8 lg:text-left lg:text-2xl xl:text-3xl">
             {t('residential.microgrids.title')}
           </h2>
           <ImageWithLogo
@@ -145,84 +103,7 @@ export function SolutionsResidential() {
             logoSize="lg"
             mobileCenter
           />
-          
-          <div className="grid gap-8 lg:grid-cols-[4fr_3fr_3fr]">
-            <div>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('residential.microgrids.desc1')}
-              </p>
-              <p className="mt-4 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                {t('residential.microgrids.desc2')}
-              </p>
-              <p className="mt-6 font-heading text-mobile-h3 font-bold text-neutral-900 lg:text-xl">
-                {t('residential.microgrids.power')}
-              </p>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setMicrogridsFocusOpen((o) => !o)}
-                aria-expanded={microgridsFocusOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('residential.microgrids.ourFocus')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${microgridsFocusOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${microgridsFocusOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <p className="mt-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  {t('residential.microgrids.focusIntro')}
-                </p>
-                <ul className="mt-4 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('residential.microgrids.focus1')}</li>
-                  <li>• {t('residential.microgrids.focus2')}</li>
-                  <li>• {t('residential.microgrids.focus3')}</li>
-                  <li>• {t('residential.microgrids.focus4')}</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="overflow-hidden rounded-[10px] bg-neutral-50 lg:p-8">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between p-4 text-left lg:pointer-events-none lg:cursor-default"
-                onClick={() => setMicrogridsAdvantagesOpen((o) => !o)}
-                aria-expanded={microgridsAdvantagesOpen}
-              >
-                <h3 className="font-heading text-mobile-h3 font-bold uppercase tracking-tight text-neutral-900 lg:text-lg">
-                  {t('residential.microgrids.keyAdvantages')}
-                </h3>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform lg:hidden ${microgridsAdvantagesOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className={`lg:block ${microgridsAdvantagesOpen ? 'block' : 'hidden'} px-4 pb-4 lg:px-8 lg:pb-0 lg:pt-0`}>
-                <p className="mt-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  {t('residential.microgrids.advantagesIntro')}
-                </p>
-                <ul className="mt-4 space-y-3 font-body text-mobile-body leading-relaxed text-neutral-700 lg:text-body-md">
-                  <li>• {t('residential.microgrids.advantage1')}</li>
-                  <li>• {t('residential.microgrids.advantage2')}</li>
-                  <li>• {t('residential.microgrids.advantage3')}</li>
-                  <li>• {t('residential.microgrids.advantage4')}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <ResidentialSectionBody section="microgrids" />
         </div>
       </section>
     </article>

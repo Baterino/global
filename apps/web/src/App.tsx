@@ -32,12 +32,18 @@ const Partnership = lazy(() =>
   import('./pages/Partnership').then((m) => ({ default: m.Partnership }))
 )
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })))
+const ContactAutoReplyPreview = lazy(() =>
+  import('./pages/ContactAutoReplyPreview').then((m) => ({ default: m.ContactAutoReplyPreview }))
+)
 const Careers = lazy(() => import('./pages/Careers').then((m) => ({ default: m.Careers })))
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse').then((m) => ({ default: m.TermsOfUse })))
 const PrivacyPolicy = lazy(() =>
   import('./pages/PrivacyPolicy').then((m) => ({ default: m.PrivacyPolicy }))
 )
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })))
+const Unauthorized401 = lazy(() =>
+  import('./pages/Unauthorized401').then((m) => ({ default: m.Unauthorized401 }))
+)
 
 export default function App() {
   return (
@@ -75,8 +81,10 @@ export default function App() {
                 <Route path="global-presence" element={<GlobalPresence />} />
                 <Route path="careers" element={<Careers />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="preview/contact-auto-reply" element={<ContactAutoReplyPreview />} />
                 <Route path="terms-of-use" element={<TermsOfUse />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="unauthorized" element={<Unauthorized401 />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
               <Route path="*" element={<RedirectToLocale />} />

@@ -3,6 +3,12 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { SEOHead } from '../components/SEOHead'
 import { ArrowRightIcon } from '../components/ArrowRightIcon'
+import {
+  submitContactForm,
+  ContactSubmitError,
+  type ContactApiErrorCode,
+  type ContactInquiryType,
+} from '../lib/contactApi'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -92,14 +98,23 @@ export function Contact() {
   }, [inquiryDropdownOpen])
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [honeypotCity, setHoneypotCity] = useState('')
+  const [honeypotCounty, setHoneypotCounty] = useState('')
   const [country, setCountry] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
   const [emailError, setEmailError] = useState('')
+  const [nameError, setNameError] = useState('')
+  const [countryError, setCountryError] = useState('')
+  const [phoneError, setPhoneError] = useState('')
+  const [messageError, setMessageError] = useState('')
+  const [inquiryReference, setInquiryReference] = useState<string | null>(null)
   const [touched, setTouched] = useState({ email: false })
+  const [submitPhase, setSubmitPhase] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [submitErrorCode, setSubmitErrorCode] = useState<ContactApiErrorCode | 'network' | null>(null)
 
   const validateEmail = (value: string) => {
-    if (!value.trim()) return ''
+    if (!value.trim()) return t('contact.form.errorCodes.email_required')
     return EMAIL_REGEX.test(value.trim()) ? '' : t('contact.form.emailInvalid')
   }
 
@@ -113,16 +128,108 @@ export function Contact() {
     if (touched.email) setEmailError(validateEmail(value))
   }
 
+  const handleNameChange = (value: string) => {
+    setName(value)
+    if (nameError) setNameError('')
+  }
+
+  const handleMessageChange = (value: string) => {
+    setMessage(value)
+    if (messageError) setMessageError('')
+  }
+
+  const handleCountryChange = (value: string) => {
+    setCountry(value)
+    if (countryError) setCountryError('')
+  }
+
+  const handlePhoneChange = (value: string) => {
+    setPhone(value)
+    if (phoneError) setPhoneError('')
+  }
+
+  const requiredMark = <span className="text-red-600">*</span>
+
   const formDisabled = inquiryType === ''
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (formDisabled) return
+    if (formDisabled || submitPhase === 'submitting') return
+
+    setSubmitPhase('idle')
+    setSubmitErrorCode(null)
+    setInquiryReference(null)
+    setNameError('')
+    setCountryError('')
+    setPhoneError('')
+    setMessageError('')
+
+    if (!name.trim()) {
+      setNameError(t('contact.form.errorCodes.name_required'))
+      return
+    }
+
     const emailErr = validateEmail(email)
     setEmailError(emailErr)
     setTouched((prev) => ({ ...prev, email: true }))
     if (emailErr) return
-    // Form submission logic can be added here (e.g. API call)
+    if (!country.trim()) {
+      setCountryError(t('contact.form.errorCodes.country_required'))
+      return
+    }
+    if (phone.trim().length < 5) {
+      setPhoneError(t('contact.form.errorCodes.phone_required'))
+      return
+    }
+    if (message.trim().length < 10) {
+      setMessageError(t('contact.form.errorCodes.message_too_short'))
+      return
+    }
+
+    setSubmitPhase('submitting')
+    try {
+      const { reference } = await submitContactForm({
+        inquiryType: inquiryType as ContactInquiryType,
+        name: name.trim(),
+        email: email.trim(),
+        country,
+        phone: phone.trim(),
+        message: message.trim(),
+        locale: locale ?? 'en',
+        honeypotCity,
+        honeypotCounty,
+      })
+      setSubmitPhase('success')
+      setInquiryReference(reference ?? null)
+      setName('')
+      setEmail('')
+      setHoneypotCity('')
+      setHoneypotCounty('')
+      setCountry('')
+      setPhone('')
+      setMessage('')
+      setInquiryType('')
+      setTouched({ email: false })
+      setEmailError('')
+    } catch (err) {
+      setSubmitPhase('error')
+      if (err instanceof ContactSubmitError) {
+        setSubmitErrorCode(err.code)
+      } else {
+        setSubmitErrorCode('network')
+      }
+    }
+  }
+
+  const submitErrorMessage =
+    submitErrorCode != null
+      ? t(`contact.form.errorCodes.${submitErrorCode}`, { defaultValue: t('contact.form.submitError') })
+      : ''
+
+  const selectInquiryType = (value: string) => {
+    setInquiryType(value)
+    setInquiryDropdownOpen(false)
+    if (submitPhase === 'success') setSubmitPhase('idle')
   }
 
   return (
@@ -137,6 +244,14 @@ export function Contact() {
             </h1>
             <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
               {t('contact.hero.subtitle')}
+            </p>
+            <p className="mx-auto mt-4 max-w-[800px]">
+              <Link
+                to={`${base}/preview/contact-auto-reply`}
+                className="font-body text-body-sm font-medium text-neutral-900 underline decoration-2 underline-offset-4 hover:text-neutral-600"
+              >
+                {t('contact.hero.previewAutoReplyLink')}
+              </Link>
             </p>
           </div>
         </section>
@@ -263,15 +378,42 @@ export function Contact() {
               <div className="lg:col-span-2">
                 <form
                   onSubmit={handleSubmit}
-                  className="rounded-[10px] bg-white p-6 shadow-sm sm:p-8"
+                  className="relative rounded-[10px] bg-white p-6 shadow-sm sm:p-8"
+                  aria-busy={submitPhase === 'submitting'}
                 >
+                  <div
+                    className="mb-4 space-y-3"
+                    aria-live="polite"
+                  >
+                    {submitPhase === 'success' ? (
+                      <div
+                        className="rounded-[5px] border border-emerald-200 bg-emerald-50 px-4 py-3 font-body text-body-sm text-emerald-900 sm:text-body-md"
+                        role="status"
+                      >
+                        <p className="m-0">{t('contact.form.submitSuccess')}</p>
+                        {inquiryReference ? (
+                          <p className="mt-2 mb-0 font-medium">
+                            {t('contact.form.submitSuccessReference', { reference: inquiryReference })}
+                          </p>
+                        ) : null}
+                      </div>
+                    ) : null}
+                    {submitPhase === 'error' && submitErrorCode ? (
+                      <p
+                        className="rounded-[5px] border border-red-200 bg-red-50 px-4 py-3 font-body text-body-sm text-red-800 sm:text-body-md"
+                        role="alert"
+                      >
+                        {submitErrorMessage}
+                      </p>
+                    ) : null}
+                  </div>
                   <div className="space-y-4">
                     <div ref={inquiryDropdownRef}>
                       <label
                         id="contact-inquiry-label"
                         className="mb-2 block font-body text-body-sm font-bold text-neutral-900"
                       >
-                        {t('contact.form.inquiryTypeLabel')}
+                        {t('contact.form.inquiryTypeLabel')} {requiredMark}
                       </label>
                       <div className="relative">
                         <button
@@ -305,10 +447,7 @@ export function Contact() {
                                 key={opt.value}
                                 role="option"
                                 aria-selected={inquiryType === opt.value}
-                                onClick={() => {
-                                  setInquiryType(opt.value)
-                                  setInquiryDropdownOpen(false)
-                                }}
+                                onClick={() => selectInquiryType(opt.value)}
                                 className="cursor-pointer px-4 py-2.5 font-body text-body-md text-neutral-900 hover:bg-neutral-100 focus:bg-neutral-100"
                               >
                                 {t(opt.labelKey)}
@@ -323,24 +462,36 @@ export function Contact() {
                         htmlFor="contact-name"
                         className="mb-2 block font-body text-body-sm font-bold text-neutral-900"
                       >
-                        {t('contact.form.nameLabel')}
+                        {t('contact.form.nameLabel')} {requiredMark}
                       </label>
                       <input
                         id="contact-name"
                         type="text"
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={(e) => handleNameChange(e.target.value)}
                         placeholder={t('contact.form.namePlaceholder')}
                         disabled={formDisabled}
-                        className="w-full rounded-[5px] border border-neutral-300 bg-white px-4 py-2.5 font-body text-body-md text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 disabled:cursor-not-allowed disabled:bg-neutral-100"
+                        required={!formDisabled}
+                        aria-required="true"
+                        aria-invalid={Boolean(nameError)}
+                        className={`w-full rounded-[5px] border bg-white px-4 py-2.5 font-body text-body-md text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-1 disabled:cursor-not-allowed disabled:bg-neutral-100 ${
+                          nameError
+                            ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                            : 'border-neutral-300 focus:border-neutral-500 focus:ring-neutral-500'
+                        }`}
                       />
+                      {nameError ? (
+                        <p className="mt-1 font-body text-body-sm text-red-600" role="alert">
+                          {nameError}
+                        </p>
+                      ) : null}
                     </div>
                     <div className={formDisabled ? 'opacity-60' : ''}>
                       <label
                         htmlFor="contact-email"
                         className="mb-2 block font-body text-body-sm font-bold text-neutral-900"
                       >
-                        {t('contact.form.emailLabel')}
+                        {t('contact.form.emailLabel')} {requiredMark}
                       </label>
                       <input
                         id="contact-email"
@@ -362,19 +513,48 @@ export function Contact() {
                         </p>
                       )}
                     </div>
+                    {/* Honeypot: hidden from users; bots often fill these */}
+                    <div
+                      className="absolute -left-[10000px] h-px w-px overflow-hidden"
+                      aria-hidden="true"
+                    >
+                      <label htmlFor="contact-hp-city">City</label>
+                      <input
+                        id="contact-hp-city"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={honeypotCity}
+                        onChange={(e) => setHoneypotCity(e.target.value)}
+                      />
+                      <label htmlFor="contact-hp-county">County</label>
+                      <input
+                        id="contact-hp-county"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={honeypotCounty}
+                        onChange={(e) => setHoneypotCounty(e.target.value)}
+                      />
+                    </div>
                     <div className={formDisabled ? 'opacity-60' : ''}>
                       <label
                         htmlFor="contact-country"
                         className="mb-2 block font-body text-body-sm font-bold text-neutral-900"
                       >
-                        {t('contact.form.countryLabel')}
+                        {t('contact.form.countryLabel')} {requiredMark}
                       </label>
                       <div className="relative">
                         <select
                           id="contact-country"
-                          className="w-full appearance-none rounded-[5px] border border-neutral-300 bg-white py-2.5 pl-4 pr-10 font-body text-body-md text-neutral-900 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 disabled:cursor-not-allowed disabled:bg-neutral-100 [&>option]:text-neutral-900"
+                          aria-invalid={Boolean(countryError)}
+                          className={`w-full appearance-none rounded-[5px] border bg-white py-2.5 pl-4 pr-10 font-body text-body-md text-neutral-900 focus:outline-none focus:ring-1 disabled:cursor-not-allowed disabled:bg-neutral-100 [&>option]:text-neutral-900 ${
+                            countryError
+                              ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                              : 'border-neutral-300 focus:border-neutral-500 focus:ring-neutral-500'
+                          }`}
                           value={country}
-                          onChange={(e) => setCountry(e.target.value)}
+                          onChange={(e) => handleCountryChange(e.target.value)}
                           disabled={formDisabled}
                         >
                           <option value="">{t('contact.form.countryPlaceholder')}</option>
@@ -392,48 +572,73 @@ export function Contact() {
                           </svg>
                         </span>
                       </div>
+                      {countryError ? (
+                        <p className="mt-1 font-body text-body-sm text-red-600" role="alert">
+                          {countryError}
+                        </p>
+                      ) : null}
                     </div>
                     <div className={formDisabled ? 'opacity-60' : ''}>
                       <label
                         htmlFor="contact-phone"
                         className="mb-2 block font-body text-body-sm font-bold text-neutral-900"
                       >
-                        {t('contact.form.phoneLabel')}
+                        {t('contact.form.phoneLabel')} {requiredMark}
                       </label>
                       <input
                         id="contact-phone"
                         type="tel"
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
+                        onChange={(e) => handlePhoneChange(e.target.value)}
                         placeholder={t('contact.form.phonePlaceholder')}
                         disabled={formDisabled}
-                        className="w-full rounded-[5px] border border-neutral-300 bg-white px-4 py-2.5 font-body text-body-md text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 disabled:cursor-not-allowed disabled:bg-neutral-100"
+                        aria-invalid={Boolean(phoneError)}
+                        className={`w-full rounded-[5px] border bg-white px-4 py-2.5 font-body text-body-md text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-1 disabled:cursor-not-allowed disabled:bg-neutral-100 ${
+                          phoneError
+                            ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                            : 'border-neutral-300 focus:border-neutral-500 focus:ring-neutral-500'
+                        }`}
                       />
+                      {phoneError ? (
+                        <p className="mt-1 font-body text-body-sm text-red-600" role="alert">
+                          {phoneError}
+                        </p>
+                      ) : null}
                     </div>
                     <div className={formDisabled ? 'opacity-60' : ''}>
                       <label
                         htmlFor="contact-message"
                         className="mb-2 block font-body text-body-sm font-bold text-neutral-900"
                       >
-                        {t('contact.form.messageLabel')}
+                        {t('contact.form.messageLabel')} {requiredMark}
                       </label>
                       <textarea
                         id="contact-message"
                         rows={5}
                         value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        onChange={(e) => handleMessageChange(e.target.value)}
                         placeholder={t('contact.form.messagePlaceholder')}
                         disabled={formDisabled}
-                        className="w-full resize-y rounded-[5px] border border-neutral-300 bg-white px-4 py-2.5 font-body text-body-md text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 disabled:cursor-not-allowed disabled:bg-neutral-100"
+                        aria-invalid={Boolean(messageError)}
+                        className={`w-full resize-y rounded-[5px] border bg-white px-4 py-2.5 font-body text-body-md text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-1 disabled:cursor-not-allowed disabled:bg-neutral-100 ${
+                          messageError
+                            ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                            : 'border-neutral-300 focus:border-neutral-500 focus:ring-neutral-500'
+                        }`}
                       />
+                      {messageError ? (
+                        <p className="mt-1 font-body text-body-sm text-red-600" role="alert">
+                          {messageError}
+                        </p>
+                      ) : null}
                     </div>
                     <div className="pt-2">
                       <button
                         type="submit"
-                        disabled={formDisabled}
-                        className="btn-primary w-full sm:w-auto"
+                        disabled={formDisabled || submitPhase === 'submitting'}
+                        className="btn-primary w-full sm:w-auto disabled:opacity-60"
                       >
-                        {t('contact.form.submit')}
+                        {submitPhase === 'submitting' ? t('contact.form.submitting') : t('contact.form.submit')}
                         <ArrowRightIcon />
                       </button>
                     </div>

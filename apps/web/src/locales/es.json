@@ -109,9 +109,17 @@
     "contact": "Contacto",
     "termsOfUse": "Términos de Uso",
     "privacyPolicy": "Política de Privacidad",
-    "notFound": "Página no encontrada"
+    "notFound": "Página no encontrada",
+    "unauthorized": "401 — No autorizado"
+  },
+  "unauthorized": {
+    "code": "401",
+    "title": "No autorizado",
+    "message": "No tiene permiso para ver esta página. Si cree que es un error, contacte al administrador del sitio o vuelva a iniciar sesión.",
+    "backHome": "Volver al inicio"
   },
   "notFound": {
+    "code": "404",
     "message": "La página que buscas no existe.",
     "backHome": "Volver al inicio"
   },
@@ -166,7 +174,8 @@
   "contact": {
     "hero": {
       "title": "CONTÁCTENOS",
-      "subtitle": "Estamos aquí para ayudar. Escríbanos y lo conectaremos con el equipo adecuado."
+      "subtitle": "Estamos aquí para ayudar. Escríbanos y lo conectaremos con el equipo adecuado.",
+      "previewAutoReplyLink": "Vista previa del correo de confirmación"
     },
     "categories": {
       "generalInquiries": {
@@ -215,7 +224,25 @@
       "phonePlaceholder": "+1 234 567 890",
       "messageLabel": "Mensaje",
       "messagePlaceholder": "Su mensaje...",
-      "submit": "Enviar mensaje"
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "submitSuccess": "Gracias — su mensaje se ha enviado. Nos pondremos en contacto pronto.",
+      "submitSuccessReference": "Referencia de su consulta: {{reference}}. En breve recibirá un correo de confirmación.",
+      "submitError": "Algo salió mal. Inténtelo de nuevo o escríbanos por correo.",
+      "submitErrorUnavailable": "El formulario de contacto no está disponible. Escriba a inquiries@baterino.com.",
+      "errorCodes": {
+        "invalid_json": "Solicitud no válida. Actualice la página e inténtelo de nuevo.",
+        "invalid_inquiry_type": "Seleccione un tipo de consulta.",
+        "name_required": "Introduzca su nombre.",
+        "email_required": "Introduzca su correo electrónico.",
+        "invalid_email": "Introduzca un correo electrónico válido.",
+        "country_required": "Seleccione su país.",
+        "phone_required": "Introduzca un teléfono válido (al menos 5 caracteres).",
+        "message_too_short": "Escriba un mensaje más largo (al menos 10 caracteres).",
+        "contact_unavailable": "El formulario de contacto no está configurado. Escriba a inquiries@baterino.com.",
+        "send_failed": "No pudimos enviar su mensaje. Inténtelo más tarde.",
+        "network": "Error de red. Compruebe su conexión e inténtelo de nuevo."
+      }
     },
     "culture": {
       "title": "APRENDE. CRECE. PERTENECE.",
@@ -321,12 +348,18 @@
   "home": {
     "ourDivisions": "Nuestras divisiones",
     "hero": {
-      "title": "ALMACENAMIENTO DE ENERGÍA EN BATERÍAS.\nSUMINISTRADO. INTEGRADO. SOPORTADO.",
-      "subtitle": "Llevamos sistemas de almacenamiento de baterías certificados al mercado — y los acompañamos desde el suministro y la integración hasta el soporte operativo a largo plazo, en entornos residenciales, industriales, marítimos y de servicios críticos.",
+      "title": "Soluciones de almacenamiento de energía &\ninfraestructura BESS",
+      "subtitle": "<bold>Suministramos, integramos y apoyamos</bold> sistemas de almacenamiento de baterías certificados en el mercado — en entornos residenciales, industriales, marítimos y de servicios críticos.",
       "poweredBy": "impulsado por",
       "poweredByLabel": "Impulsado por:",
       "technologyPoweredBy": "Nuestra tecnología es impulsada por:",
-      "hoverToExplore": "Pasa el cursor para explorar"
+      "hoverToExplore": "Pasa el cursor para explorar",
+      "sliderTabs": {
+        "industrial": "BESS industrial",
+        "residential": "Residencial",
+        "missionCritical": "Servicios críticos",
+        "afterSales": "Posventa"
+      }
     },
     "heroSlides": {
       "slide1": {
@@ -490,11 +523,13 @@
       "title": "ALMACENAMIENTO DE ENERGÍA RESIDENCIAL",
       "subtitle": "Desde hogares individuales hasta comunidades enteras, Baterino habilita soluciones de almacenamiento de energía residencial construidas para resiliencia, confiabilidad e impacto a largo plazo."
     },
+    "techBoxTitle": "Tecnologías que utilizamos",
     "individual": {
       "title": "ALMACENAMIENTO RESIDENCIAL PARA USUARIOS INDIVIDUALES",
       "desc1": "Los sistemas de almacenamiento de energía residencial permiten a los hogares individuales almacenar energía y usarla cuando sea necesario. Estos sistemas están diseñados para operar independientemente o en combinación con fuentes de energía renovable, como la solar.",
       "desc2": "Baterino habilita soluciones de almacenamiento residencial como parte de sistemas integrados de energía doméstica, adaptados a condiciones locales y patrones de uso.",
       "power": "~5kW a ~16 kW por gabinete de potencia instalada",
+      "techBoxSubtitle": "Soluciones de 5 kWh a 16 kWh",
       "ourFocus": "NUESTRO ENFOQUE",
       "focusIntro": "Nos enfocamos en la calidad y confiabilidad del sistema, no solo en la entrega de equipos.",
       "focus1": "Sistemas de baterías residenciales confiables y seguros",
@@ -513,6 +548,7 @@
       "desc1": "Las microrredes proporcionan a las comunidades sistemas de energía localizados y confiables que pueden operar independientemente o en paralelo con la red principal. Al combinar generación, almacenamiento y control inteligente, las microrredes permiten acceso a energía, resiliencia y sostenibilidad a largo plazo.",
       "desc2": "Baterino habilita microrredes comunitarias como sistemas de infraestructura, diseñados para soportar entornos operativos reales y uso a largo plazo.",
       "power": "~50kW a ~5 MW basado en configuración de microrred",
+      "techBoxSubtitle": "Soluciones de ~50 kW a ~5 MW",
       "ourFocus": "NUESTRO ENFOQUE",
       "focusIntro": "Cada microrred está estructurada en torno a las necesidades específicas de la comunidad a la que sirve.",
       "focus1": "Diseño de sistemas de grado de infraestructura",
@@ -532,12 +568,15 @@
       "title": "INFRAESTRUCTURA DE ALMACENAMIENTO DE ENERGÍA INDUSTRIAL",
       "subtitle": "Baterino habilita soluciones de almacenamiento de energía escalables y de alto rendimiento para instalaciones industriales, operaciones comerciales y entornos conectados a la red."
     },
+    "techBoxTitle": "Tecnologías que utilizamos",
     "cabinet": {
       "title": "SISTEMAS DE ALMACENAMIENTO INDUSTRIAL BASADOS EN GABINETES",
       "desc1": "Los sistemas de almacenamiento de energía basados en gabinetes permiten un enfoque flexible y modular para el almacenamiento de energía industrial. Están diseñados para instalaciones que requieren capacidad escalable, uso eficiente del espacio disponible e integración con sistemas eléctricos existentes.",
       "desc2": "Baterino habilita sistemas basados en gabinetes como componentes de infraestructura integrada, adaptados a las necesidades eléctricas, operativas y regulatorias de cada sitio.",
       "power": "~30 kW a ~220 kW por gabinete de potencia instalada",
+      "techBoxSubtitle": "Soluciones de ~30 kW a ~220 kW por gabinete",
       "ourFocus": "NUESTRO ENFOQUE",
+      "focusIntro": "Nos centramos en sistemas en gabinete como infraestructura práctica y eficiente en espacio: no solo entrega de equipos, sino integración, seguridad y operabilidad a largo plazo en entornos industriales reales.",
       "focus1": "Arquitectura de sistema modular y escalable",
       "focus2": "Configuraciones en contenedor o refrigeradas por líquido",
       "focus3": "Altos estándares de seguridad y protección integrada",
@@ -546,14 +585,17 @@
       "app1": "Instalaciones comerciales e industriales",
       "app2": "Plantas de fabricación",
       "app3": "Centros logísticos",
-      "app4": "Operaciones de área limitada"
+      "app4": "Operaciones de área limitada",
+      "applicationsIntro": "El BESS en gabinete encaja en sitios que necesitan almacenamiento escalable sin grandes huellas. Los despliegues típicos incluyen:"
     },
     "containerized": {
       "title": "SISTEMAS DE ALMACENAMIENTO CONTENEDORIZADOS Y A GRAN ESCALA (BESS)",
       "desc1": "Los sistemas de almacenamiento de energía de batería contenedorizados (BESS) permiten implementaciones de mayor capacidad y potencia para complejos industriales, sistemas conectados a la red e infraestructura crítica. Estos sistemas están diseñados como unidades de infraestructura energética autónomas, capaces de operar en entornos industriales y exteriores exigentes.",
       "desc2": "Baterino habilita BESS contenedorizados como infraestructura de energía a largo plazo, con capacidad de instalación temporal.",
       "power": "~0.5 MW a ~2.5 MW por contenedor / bloque de sistema de potencia instalada",
+      "techBoxSubtitle": "Soluciones de ~0.5 MW a ~2.5 MW por contenedor",
       "ourFocus": "NUESTRO ENFOQUE",
+      "focusIntro": "Nos centramos en el BESS contenedorizado como bloques a escala de red e instalación: infraestructura llave en mano y lista para exteriores, con ingeniería clara, seguridad y operación remota desde el primer día.",
       "focus1": "Arquitecturas de sistemas contenedorizados llave en mano",
       "focus2": "Configuraciones de alta capacidad de energía y potencia",
       "focus3": "Gestión térmica integrada y protección contra incendios",
@@ -563,7 +605,8 @@
       "app2": "Proyectos conectados a la red y adyacentes a servicios públicos",
       "app3": "Firmeza e integración de energía renovable",
       "app4": "Reducción de picos, gestión de carga y arbitraje de energía",
-      "app5": "Energía de respaldo para operaciones industriales críticas"
+      "app5": "Energía de respaldo para operaciones industriales críticas",
+      "applicationsIntro": "El BESS contenedorizado de mayor capacidad admite una amplia gama de usos industriales y conectados a la red, entre ellos:"
     }
   },
   "maritime": {
@@ -571,9 +614,13 @@
       "title": "INFRAESTRUCTURA DE ALMACENAMIENTO DE ENERGÍA MARÍTIMA (EES)",
       "subtitle": "Baterino habilita sistemas de almacenamiento de energía de grado marino diseñados para seguridad, rendimiento y operación a largo plazo en embarcaciones y entornos offshore."
     },
+    "techBoxTitle": "Tecnologías que utilizamos",
     "systems": {
       "title": "SISTEMAS DE ALMACENAMIENTO DE ENERGÍA DE BATERÍA MARINA (ESS)",
-      "intro": "Baterino habilita sistemas de almacenamiento de energía de batería marina modulares construidos alrededor de:",
+      "techBoxSubtitle": "Sistemas LFP modulares para buques y entornos offshore",
+      "intro": "Baterino habilita sistemas marinos modulares de almacenamiento en baterías diseñados para condiciones marinas exigentes, combinando química LFP, arquitecturas CC de alto voltaje, módulos apilables y monitorización y control inteligentes.",
+      "ourFocus": "NUESTRO ENFOQUE",
+      "ourFocusIntro": "Nos centramos en el ESS marino modular como infraestructura integrada y alineada con clasificación — química LFP, arquitecturas CC de alto voltaje y control inteligente para una operación segura a largo plazo en el mar.",
       "feature1": "Química de fosfato de hierro y litio (LFP) para mayor seguridad y longevidad",
       "feature2": "Arquitecturas de CC de alto voltaje adecuadas para sistemas de energía marina",
       "feature3": "Módulos apilables que permiten dimensionamiento flexible del sistema",

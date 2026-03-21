@@ -109,9 +109,17 @@
     "contact": "Kontak",
     "termsOfUse": "Ketentuan Penggunaan",
     "privacyPolicy": "Kebijakan Privasi",
-    "notFound": "Halaman tidak ditemukan"
+    "notFound": "Halaman tidak ditemukan",
+    "unauthorized": "401 — Tidak diizinkan"
+  },
+  "unauthorized": {
+    "code": "401",
+    "title": "Tidak diizinkan",
+    "message": "Anda tidak memiliki izin untuk melihat halaman ini. Jika ini kesalahan, hubungi administrator situs atau coba masuk lagi.",
+    "backHome": "Kembali ke beranda"
   },
   "notFound": {
+    "code": "404",
     "message": "Halaman yang Anda cari tidak ada.",
     "backHome": "Kembali ke beranda"
   },
@@ -166,7 +174,8 @@
   "contact": {
     "hero": {
       "title": "HUBUNGI KAMI",
-      "subtitle": "Kami di sini untuk membantu. Hubungi kami dan kami akan menghubungkan Anda dengan tim yang tepat."
+      "subtitle": "Kami di sini untuk membantu. Hubungi kami dan kami akan menghubungkan Anda dengan tim yang tepat.",
+      "previewAutoReplyLink": "Pratinjau email konfirmasi yang kami kirim"
     },
     "categories": {
       "generalInquiries": {
@@ -215,7 +224,25 @@
       "phonePlaceholder": "+1 234 567 890",
       "messageLabel": "Pesan",
       "messagePlaceholder": "Pesan Anda...",
-      "submit": "Kirim pesan"
+      "submit": "Kirim pesan",
+      "submitting": "Mengirim…",
+      "submitSuccess": "Terima kasih — pesan Anda telah terkirim. Kami akan segera menghubungi Anda.",
+      "submitSuccessReference": "Nomor referensi permintaan: {{reference}}. Email konfirmasi akan segera dikirim ke kotak masuk Anda.",
+      "submitError": "Terjadi kesalahan. Coba lagi atau hubungi kami lewat email.",
+      "submitErrorUnavailable": "Formulir kontak tidak tersedia saat ini. Email ke inquiries@baterino.com.",
+      "errorCodes": {
+        "invalid_json": "Permintaan tidak valid. Muat ulang halaman dan coba lagi.",
+        "invalid_inquiry_type": "Pilih jenis pertanyaan.",
+        "name_required": "Masukkan nama Anda.",
+        "email_required": "Masukkan alamat email Anda.",
+        "invalid_email": "Masukkan alamat email yang valid.",
+        "country_required": "Pilih negara Anda.",
+        "phone_required": "Masukkan nomor telepon yang valid (minimal 5 karakter).",
+        "message_too_short": "Tulis pesan yang lebih panjang (minimal 10 karakter).",
+        "contact_unavailable": "Formulir kontak belum dikonfigurasi. Email ke inquiries@baterino.com.",
+        "send_failed": "Kami tidak dapat mengirim pesan. Coba lagi nanti.",
+        "network": "Kesalahan jaringan. Periksa koneksi dan coba lagi."
+      }
     },
     "culture": {
       "title": "BELAJAR. TUMBUH. BERDAYA.",
@@ -321,12 +348,18 @@
   "home": {
     "ourDivisions": "Divisi kami",
     "hero": {
-      "title": "PENYIMPANAN ENERGI BATERAI.\nDIPASOK. TERINTEGRASI. DIDUKUNG.",
-      "subtitle": "Kami membawa sistem penyimpanan energi baterai bersertifikat ke pasar — dan mengantarnya dari pasokan dan integrasi hingga dukungan operasional jangka panjang, di lingkungan perumahan, industri, maritim, dan layanan kritis.",
+      "title": "Solusi penyimpanan energi &\ninfrastruktur BESS",
+      "subtitle": "Kami <bold>memasok, mengintegrasikan, dan mendukung</bold> sistem penyimpanan energi baterai bersertifikat ke pasar — di lingkungan perumahan, industri, maritim, dan layanan kritis.",
       "poweredBy": "didukung oleh",
       "poweredByLabel": "Didukung oleh:",
       "technologyPoweredBy": "Teknologi kami didukung oleh:",
-      "hoverToExplore": "Arahkan untuk jelajahi"
+      "hoverToExplore": "Arahkan untuk jelajahi",
+      "sliderTabs": {
+        "industrial": "BESS industri",
+        "residential": "Residensial",
+        "missionCritical": "Layanan kritis",
+        "afterSales": "Purna jual"
+      }
     },
     "heroSlides": {
       "slide1": {
@@ -490,6 +523,7 @@
       "title": "PENYIMPANAN ENERGI RESIDENSIAL",
       "subtitle": "Dari rumah individu hingga seluruh komunitas, Baterino memungkinkan solusi penyimpanan energi residensial yang dibangun untuk ketahanan, keandalan, dan dampak jangka panjang."
     },
+    "techBoxTitle": "Teknologi yang kami gunakan",
     "individual": {
       "title": "PENYIMPANAN RESIDENSIAL UNTUK PENGGUNA INDIVIDU",
       "desc1": "Sistem penyimpanan energi residensial memungkinkan rumah tangga individu untuk menyimpan energi dan menggunakannya saat dibutuhkan. Sistem ini dirancang untuk beroperasi secara independen atau dikombinasikan dengan sumber energi terbarukan, seperti tenaga surya.",
@@ -513,6 +547,7 @@
       "desc1": "Microgrid menyediakan komunitas dengan sistem energi lokal yang andal yang dapat beroperasi secara independen atau paralel dengan jaringan utama. Dengan menggabungkan pembangkitan, penyimpanan, dan kontrol cerdas, microgrid memungkinkan akses energi, ketahanan, dan keberlanjutan jangka panjang.",
       "desc2": "Baterino memungkinkan microgrid komunitas sebagai sistem infrastruktur, dirancang untuk mendukung lingkungan operasi nyata dan penggunaan jangka panjang.",
       "power": "~50kW hingga ~5 MW berdasarkan konfigurasi microgrid",
+      "techBoxSubtitle": "Solusi dari ~50 kW hingga ~5 MW",
       "ourFocus": "FOKUS KAMI",
       "focusIntro": "Setiap microgrid disusun berdasarkan kebutuhan spesifik komunitas yang dilayaninya.",
       "focus1": "Desain sistem tingkat infrastruktur",
@@ -532,12 +567,15 @@
       "title": "INFRASTRUKTUR PENYIMPANAN ENERGI INDUSTRI",
       "subtitle": "Baterino memungkinkan solusi penyimpanan energi yang dapat diskalakan dan berkinerja tinggi untuk fasilitas industri, operasi komersial, dan lingkungan yang terhubung ke jaringan."
     },
+    "techBoxTitle": "Teknologi yang kami gunakan",
     "cabinet": {
       "title": "SISTEM PENYIMPANAN INDUSTRI BERBASIS KABINET",
       "desc1": "Sistem penyimpanan energi berbasis kabinet memungkinkan pendekatan yang fleksibel dan modular untuk penyimpanan energi industri. Mereka dirancang untuk fasilitas yang memerlukan kapasitas yang dapat diskalakan, penggunaan ruang yang efisien, dan integrasi dengan sistem listrik yang ada.",
       "desc2": "Baterino memungkinkan sistem berbasis kabinet sebagai komponen infrastruktur terintegrasi, disesuaikan dengan kebutuhan listrik, operasional, dan peraturan dari setiap lokasi.",
       "power": "~30 kW hingga ~220 kW per kabinet daya terpasang",
+      "techBoxSubtitle": "Solusi ~30 kW hingga ~220 kW per kabinet",
       "ourFocus": "FOKUS KAMI",
+      "focusIntro": "Kami fokus pada sistem berbasis kabinet sebagai infrastruktur yang praktis dan hemat ruang — bukan sekadar pengiriman peralatan, melainkan integrasi, keselamatan, dan keoperasian jangka panjang di lingkungan industri nyata.",
       "focus1": "Arsitektur sistem modular & dapat diskalakan",
       "focus2": "Konfigurasi dalam kontainer atau berpendingin cairan",
       "focus3": "Standar keselamatan tinggi dan perlindungan terintegrasi",
@@ -554,6 +592,7 @@
       "desc2": "Baterino memungkinkan BESS dalam kontainer sebagai infrastruktur daya jangka panjang, dengan kemampuan instalasi sementara.",
       "power": "~0.5 MW hingga ~2.5 MW per kontainer / blok sistem daya terpasang",
       "ourFocus": "FOKUS KAMI",
+      "focusIntro": "Kami fokus pada BESS terkontainer sebagai blok skala jaringan dan lokasi — infrastruktur siap pakai untuk luar ruangan, dengan rekayasa yang jelas, keselamatan, dan operasi jarak jauh sejak hari pertama.",
       "focus1": "Arsitektur sistem dalam kontainer, siap pakai",
       "focus2": "Konfigurasi energi dan daya berkapasitas tinggi",
       "focus3": "Manajemen termal terintegrasi dan perlindungan kebakaran",
@@ -563,7 +602,8 @@
       "app2": "Proyek terhubung jaringan dan berdekatan dengan utilitas",
       "app3": "Penstabilan dan integrasi energi terbarukan",
       "app4": "Pengurangan puncak, manajemen beban, dan arbitrase energi",
-      "app5": "Daya cadangan untuk operasi industri kritis"
+      "app5": "Daya cadangan untuk operasi industri kritis",
+      "applicationsIntro": "BESS terkontainer berkapasitas lebih tinggi mendukung berbagai kasus industri dan terhubung jaringan, termasuk:"
     }
   },
   "maritime": {
@@ -571,9 +611,13 @@
       "title": "INFRASTRUKTUR PENYIMPANAN ENERGI MARITIM (EES)",
       "subtitle": "Baterino memungkinkan sistem penyimpanan energi tingkat laut yang dirancang untuk keselamatan, kinerja, dan operasi jangka panjang di kapal dan lingkungan lepas pantai."
     },
+    "techBoxTitle": "Teknologi yang kami gunakan",
     "systems": {
       "title": "SISTEM PENYIMPANAN ENERGI BATERAI LAUT (ESS)",
-      "intro": "Baterino memungkinkan sistem penyimpanan energi baterai laut modular yang dibangun di sekitar:",
+      "techBoxSubtitle": "Sistem LFP modular untuk kapal dan lingkungan lepas pantai",
+      "intro": "Baterino memungkinkan sistem penyimpanan energi baterai laut modular yang dirancang untuk kondisi laut menantang — kimia LFP, arsitektur DC tegangan tinggi, modul yang dapat ditumpuk, serta pemantauan dan kontrol cerdas.",
+      "ourFocus": "FOKUS KAMI",
+      "ourFocusIntro": "Kami fokus pada ESS laut modular sebagai infrastruktur terintegrasi yang memperhatikan klasifikasi — kimia LFP, arsitektur DC tegangan tinggi, dan kontrol cerdas untuk operasi aman jangka panjang di laut.",
       "feature1": "Kimia Lithium Iron Phosphate (LFP) untuk keamanan dan umur panjang yang lebih baik",
       "feature2": "Arsitektur DC tegangan tinggi yang cocok untuk sistem daya laut",
       "feature3": "Modul yang dapat ditumpuk memungkinkan ukuran sistem yang fleksibel",

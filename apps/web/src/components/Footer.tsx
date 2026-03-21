@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
+import { handleHomeLogoLinkClick } from '../utils/homeLogoClick'
 import { nav } from '../config/nav'
+import { socialFacebookUrl, socialLinkedInUrl, socialSubstackUrl } from '../config/socialLinks'
 
 const SOCIAL_LINKS = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/baterino', Icon: LinkedInIcon },
-  { name: 'Facebook', href: 'https://www.facebook.com/baterino', Icon: FacebookIcon },
-  { name: 'Substack', href: 'https://baterino.substack.com', Icon: SubstackIcon },
+  { name: 'Facebook', href: socialFacebookUrl, Icon: FacebookIcon },
+  { name: 'LinkedIn', href: socialLinkedInUrl, Icon: LinkedInIcon },
+  { name: 'Substack', href: socialSubstackUrl, Icon: SubstackIcon },
 ] as const
 
 function LinkedInIcon({ className }: { className?: string }) {
@@ -35,6 +37,7 @@ function SubstackIcon({ className }: { className?: string }) {
 export function Footer() {
   const { t } = useTranslation()
   const { locale } = useParams<{ locale: string }>()
+  const { pathname } = useLocation()
   const year = new Date().getFullYear()
   const base = `/${locale ?? 'en'}`
 
@@ -45,7 +48,11 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8">
         {/* Mobile footer: centered, stacked layout */}
         <div className="flex flex-col items-center gap-6 text-center lg:hidden">
-          <Link to={base} className="block">
+          <Link
+            to={base}
+            className="block"
+            onClick={(e) => handleHomeLogoLinkClick(e, pathname, base)}
+          >
             <img
               src="/images/Baterino-Logo-black.png"
               alt="Baterino"
@@ -59,10 +66,10 @@ export function Footer() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-600 transition-colors hover:text-neutral-900"
+                className="text-neutral-500 transition-colors hover:text-neutral-700"
                 aria-label={s.name}
               >
-                <s.Icon className="h-6 w-6" />
+                <s.Icon className="h-5 w-5" />
               </a>
             ))}
           </div>
@@ -86,7 +93,11 @@ export function Footer() {
         <div className="hidden grid-cols-2 gap-8 sm:grid-cols-3 lg:grid lg:grid-cols-5">
           {/* Logo & LithTech */}
           <div>
-            <Link to={base} className="block">
+            <Link
+              to={base}
+              className="block"
+              onClick={(e) => handleHomeLogoLinkClick(e, pathname, base)}
+            >
               <img
                 src="/images/Baterino-Logo-black.png"
                 alt="Baterino"
@@ -208,7 +219,7 @@ export function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-600 transition-colors hover:text-neutral-900"
+                    className="text-neutral-500 transition-colors hover:text-neutral-700"
                     aria-label={s.name}
                   >
                     <s.Icon className="h-5 w-5" />
