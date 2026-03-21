@@ -41,13 +41,15 @@
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "合作",
+    "company.operatingModel": "运营模式",
     "insights": "洞察",
     "useCases": "应用案例",
     "globalPresence": "全球布局",
     "careers": "招聘",
     "contact": "联系我们",
     "termsOfUse": "使用条款",
-    "privacyPolicy": "隐私政策"
+    "privacyPolicy": "隐私政策",
+    "operatingModel": "运营模式"
   },
   "operatingModel": {
     "pageTitle": "运营模式 | Baterino",
@@ -85,6 +87,7 @@
       "heatPumps": "热泵供应商",
       "solarAccessories": "太阳能配件供应商",
       "greenEnergyTech": "绿色能源技术供应商",
+      "greenEnergyTechSub": "经过审核的供应商 · 一流技术 · 质量保证",
       "pv": "光伏供应商",
       "inverters": "逆变器供应商",
       "energyStorage": "储能供应商"
@@ -339,7 +342,8 @@
     "termsOfUse": "使用条款",
     "privacyPolicy": "隐私政策",
     "notFound": "页面未找到",
-    "unauthorized": "401 — 未授权"
+    "unauthorized": "401 — 未授权",
+    "operatingModel": "运营模式 | Baterino"
   },
   "greeting": {
     "hello": "你好！",
@@ -595,6 +599,7 @@
       "power": "每个集装箱/系统块安装功率约 0.5 MW 至 2.5 MW",
       "techBoxSubtitle": "单集装箱约 0.5 MW 至 2.5 MW 解决方案",
       "ourFocus": "我们的重点",
+      "focusIntro": "我们专注于集装箱式 BESS 作为电网与场站级模块——从第一天起即具备清晰工程、安全与远程可运维性的户外就绪交钥匙基础设施。",
       "focus1": "集装箱式交钥匙系统架构",
       "focus2": "高容量能源和功率配置",
       "focus3": "集成热管理和消防保护",
@@ -610,7 +615,7 @@
   },
   "maritime": {
     "hero": {
-      "title": "海事储能基础设施（EES）",
+      "title": "海事储能\n基础设施（EES）",
       "subtitle": "Baterino 提供专为安全、性能和船舶及海上环境中长期运行而设计的船用级储能系统。"
     },
     "techBoxTitle": "我们采用的技术",
@@ -737,7 +742,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Energy Storage Solutions for Critical Services",
+      "title": "储能解决方案\n面向关键服务",
       "subtitle": "Baterino 构建支持基本服务并在全球范围内增强社区韧性的能源系统。"
     },
     "essentialServices": {
@@ -764,7 +769,8 @@
       "goal9": "工业、创新和基础设施",
       "goal11": "可持续城市和社区",
       "goal13": "气候行动",
-      "goal17": "促进目标实现的伙伴关系"
+      "goal17": "促进目标实现的伙伴关系",
+      "seeMore": "了解更多"
     }
   },
   "aboutBaterino": {
@@ -890,6 +896,25 @@
       "bullet3": "亚太",
       "bullet4": "非洲",
       "closing": "各地区的存在和项目范围因本地合作与项目需求而异。"
+    },
+    "joinBaterino": {
+      "title": "与我们携手合作",
+      "subtitle": "与新兴市场本地伙伴共建可持续、可盈利的能源基础设施。",
+      "pathwaysTitle": "合作路径",
+      "benefitsTitle": "伙伴收益",
+      "ctaLabel": "准备好与我们合作了吗？",
+      "ctaButton": "联系我们",
+      "partners": [
+        { "title": "本地合作伙伴", "desc": "具备市场触达与客户关系的区域集成商" },
+        { "title": "分销商", "desc": "管理库存与物流的供应链专家" },
+        { "title": "系统集成商", "desc": "为终端客户提供交钥匙解决方案的工程企业" },
+        { "title": "机构利益相关方", "desc": "拓展基础设施的政府机构与发展机构" }
+      ],
+      "benefits": [
+        { "title": "有竞争力的利润空间", "desc": "领先的电池技术与项目交付定价" },
+        { "title": "服务收入流", "desc": "维护、监控与全生命周期支持方面的持续机会" },
+        { "title": "增长赋能", "desc": "专属营销、技术培训与市场进入支持" }
+      ]
     },
     "partnerUp": {
       "title": "与我们合作",

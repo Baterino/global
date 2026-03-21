@@ -35,6 +35,7 @@
     "solutions.criticalServices": "Layanan Kritis",
     "solutions.maritime": "Maritim",
     "delivery": "Pengiriman",
+    "impact": "Dampak",
     "company": "Tentang",
     "companyMobile": "Tentang Kami",
     "company.aboutBaterino": "Baterino",
@@ -47,7 +48,8 @@
     "careers": "Karir",
     "contact": "Kontak",
     "termsOfUse": "Ketentuan Penggunaan",
-    "privacyPolicy": "Kebijakan Privasi"
+    "privacyPolicy": "Kebijakan Privasi",
+    "operatingModel": "Model Operasional"
   },
   "operatingModel": {
     "pageTitle": "Model Operasional | Baterino",
@@ -85,6 +87,7 @@
       "heatPumps": "Pemasok Pompa Panas",
       "solarAccessories": "Pemasok Aksesori Surya",
       "greenEnergyTech": "Pemasok Teknologi Energi Hijau",
+      "greenEnergyTechSub": "Pemasok terverifikasi · Teknologi terbaik · Jaminan mutu",
       "pv": "Pemasok PV",
       "inverters": "Pemasok Inverter",
       "energyStorage": "Pemasok Penyimpanan Energi"
@@ -110,7 +113,8 @@
     "termsOfUse": "Ketentuan Penggunaan",
     "privacyPolicy": "Kebijakan Privasi",
     "notFound": "Halaman tidak ditemukan",
-    "unauthorized": "401 — Tidak diizinkan"
+    "unauthorized": "401 — Tidak diizinkan",
+    "operatingModel": "Model Operasional | Baterino"
   },
   "unauthorized": {
     "code": "401",
@@ -529,6 +533,7 @@
       "desc1": "Sistem penyimpanan energi residensial memungkinkan rumah tangga individu untuk menyimpan energi dan menggunakannya saat dibutuhkan. Sistem ini dirancang untuk beroperasi secara independen atau dikombinasikan dengan sumber energi terbarukan, seperti tenaga surya.",
       "desc2": "Baterino memungkinkan solusi penyimpanan residensial sebagai bagian dari sistem energi rumah terintegrasi, disesuaikan dengan kondisi lokal dan pola penggunaan.",
       "power": "~5kW hingga ~16 kW per kabinet daya terpasang",
+      "techBoxSubtitle": "Solusi dari 5 kWh hingga 16 kWh",
       "ourFocus": "FOKUS KAMI",
       "focusIntro": "Kami fokus pada kualitas dan keandalan sistem, bukan hanya pengiriman peralatan.",
       "focus1": "Sistem baterai residensial yang andal dan aman",
@@ -584,13 +589,15 @@
       "app1": "Fasilitas komersial dan industri",
       "app2": "Pabrik manufaktur",
       "app3": "Pusat logistik",
-      "app4": "Operasi area terbatas"
+      "app4": "Operasi area terbatas",
+      "applicationsIntro": "BESS kabinet cocok untuk lokasi yang membutuhkan penyimpanan skalabel tanpa jejak besar. Penerapan tipikal meliputi:"
     },
     "containerized": {
       "title": "SISTEM PENYIMPANAN DALAM KONTAINER & SKALA BESAR (BESS)",
       "desc1": "Sistem penyimpanan energi baterai dalam kontainer (BESS) memungkinkan penerapan berkapasitas lebih tinggi dan daya lebih besar untuk kompleks industri, sistem terhubung jaringan, dan infrastruktur kritis. Sistem ini dirancang sebagai unit infrastruktur energi mandiri, mampu beroperasi di lingkungan industri dan luar ruangan yang menuntut.",
       "desc2": "Baterino memungkinkan BESS dalam kontainer sebagai infrastruktur daya jangka panjang, dengan kemampuan instalasi sementara.",
       "power": "~0.5 MW hingga ~2.5 MW per kontainer / blok sistem daya terpasang",
+      "techBoxSubtitle": "Solusi ~0,5 MW hingga ~2,5 MW per kontainer",
       "ourFocus": "FOKUS KAMI",
       "focusIntro": "Kami fokus pada BESS terkontainer sebagai blok skala jaringan dan lokasi — infrastruktur siap pakai untuk luar ruangan, dengan rekayasa yang jelas, keselamatan, dan operasi jarak jauh sejak hari pertama.",
       "focus1": "Arsitektur sistem dalam kontainer, siap pakai",
@@ -608,7 +615,7 @@
   },
   "maritime": {
     "hero": {
-      "title": "INFRASTRUKTUR PENYIMPANAN ENERGI MARITIM (EES)",
+      "title": "INFRASTRUKTUR PENYIMPANAN\nENERGI MARITIM (EES)",
       "subtitle": "Baterino memungkinkan sistem penyimpanan energi tingkat laut yang dirancang untuk keselamatan, kinerja, dan operasi jangka panjang di kapal dan lingkungan lepas pantai."
     },
     "techBoxTitle": "Teknologi yang kami gunakan",
@@ -735,7 +742,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Energy Storage Solutions for Critical Services",
+      "title": "Solusi penyimpanan energi\nuntuk layanan kritis",
       "subtitle": "Baterino membangun sistem energi yang mendukung layanan penting dan memperkuat ketahanan komunitas di seluruh dunia."
     },
     "essentialServices": {
@@ -762,7 +769,8 @@
       "goal9": "INDUSTRI, INOVASI, DAN INFRASTRUKTUR",
       "goal11": "KOTA DAN KOMUNITAS BERKELANJUTAN",
       "goal13": "AKSI IKLIM",
-      "goal17": "KEMITRAAN UNTUK MENCAPAI TUJUAN"
+      "goal17": "KEMITRAAN UNTUK MENCAPAI TUJUAN",
+      "seeMore": "Lihat selengkapnya"
     }
   },
   "aboutBaterino": {
@@ -888,6 +896,25 @@
       "bullet3": "Asia-Pasifik",
       "bullet4": "Afrika",
       "closing": "Kehadiran dan cakupan proyek bervariasi menurut wilayah dan didorong oleh kemitraan lokal dan persyaratan proyek."
+    },
+    "joinBaterino": {
+      "title": "Bermitra dengan kami",
+      "subtitle": "Bangun infrastruktur energi berkelanjutan dan menguntungkan bersama mitra lokal di pasar berkembang.",
+      "pathwaysTitle": "Jalur kemitraan",
+      "benefitsTitle": "Manfaat mitra",
+      "ctaLabel": "Siap bermitra dengan kami?",
+      "ctaButton": "Hubungi kami",
+      "partners": [
+        { "title": "Mitra lokal", "desc": "Integrator regional dengan akses pasar dan hubungan pelanggan" },
+        { "title": "Distributor", "desc": "Spesialis rantai pasokan yang mengelola inventaris dan logistik" },
+        { "title": "Integrator sistem", "desc": "Perusahaan teknik yang menghadirkan solusi siap pakai ke pelanggan akhir" },
+        { "title": "Pemangku kepentingan institusional", "desc": "Badan pemerintah dan lembaga pembangunan yang memperluas infrastruktur" }
+      ],
+      "benefits": [
+        { "title": "Margin kompetitif", "desc": "Harga teknologi baterai dan pengiriman proyek yang terdepan di industri" },
+        { "title": "Aliran pendapatan layanan", "desc": "Peluang berkelanjutan dalam pemeliharaan, pemantauan, dan dukungan siklus hidup" },
+        { "title": "Pendorong pertumbuhan", "desc": "Dukungan pemasaran, pelatihan teknis, dan go-to-market yang berdedikasi" }
+      ]
     },
     "partnerUp": {
       "title": "BERMITRA DENGAN KAMI",

@@ -35,18 +35,21 @@
     "solutions.criticalServices": "Servicii Critice",
     "solutions.maritime": "Maritim",
     "delivery": "Livrare",
+    "impact": "Impact",
     "company": "Despre",
     "companyMobile": "Despre Noi",
     "company.aboutBaterino": "Baterino",
     "company.aboutLithtech": "LithTech",
     "company.partnership": "Parteneriat",
+    "company.operatingModel": "Model operațional",
     "insights": "Articole",
     "useCases": "Cazuri de Utilizare",
     "globalPresence": "Prezență Globală",
     "careers": "Cariere",
     "contact": "Contact",
     "termsOfUse": "Termeni de Utilizare",
-    "privacyPolicy": "Politica de Confidențialitate"
+    "privacyPolicy": "Politica de Confidențialitate",
+    "operatingModel": "Model operațional"
   },
   "operatingModel": {
     "pageTitle": "Model Operațional | Baterino",
@@ -84,6 +87,7 @@
       "heatPumps": "Furnizori Pompe de Căldură",
       "solarAccessories": "Furnizori Accesorii Solare",
       "greenEnergyTech": "Furnizori Tehnologie Energie Verde",
+      "greenEnergyTechSub": "Furnizori verificați · Tehnologii de top · Asigurarea calității",
       "pv": "Furnizori PV",
       "inverters": "Furnizori Invertoare",
       "energyStorage": "Furnizori Stocare Energie"
@@ -109,7 +113,8 @@
     "termsOfUse": "Termeni de Utilizare",
     "privacyPolicy": "Politica de Confidențialitate",
     "notFound": "Pagina nu a fost găsită",
-    "unauthorized": "401 — Neautorizat"
+    "unauthorized": "401 — Neautorizat",
+    "operatingModel": "Model operațional | Baterino"
   },
   "unauthorized": {
     "code": "401",
@@ -362,7 +367,7 @@
     },
     "heroSlides": {
       "slide1": {
-        "title": "Infrastructură Industrială de Stocare a Energiei",
+        "title": "Infrastructură Industrială\nde Stocare a Energiei",
         "subtitle": "Proiectăm și implementăm infrastructură BESS de la 1 MW și peste — concepută pentru performanță la scară de rețea și fiabilitate pe termen lung."
       },
       "slide2": {
@@ -564,7 +569,7 @@
   },
   "industrial": {
     "hero": {
-      "title": "Infrastructură Industrială de Stocare a Energiei",
+      "title": "Infrastructură Industrială\nde Stocare a Energiei",
       "subtitle": "Baterino activează soluții de stocare a energiei scalabile și de înaltă performanță pentru instalații industriale, operațiuni comerciale și medii conectate la rețea."
     },
     "techBoxTitle": "Tehnologiile pe care le folosim",
@@ -610,7 +615,7 @@
   },
   "maritime": {
     "hero": {
-      "title": "Infrastructură Maritimă de Stocare a Energiei (EES)",
+      "title": "Infrastructură Maritimă de Stocare\na Energiei (EES)",
       "subtitle": "Baterino activează sisteme de stocare a energiei de calitate marină, proiectate pentru siguranță, performanță și operare pe termen lung la bordul navelor și în mediile offshore."
     },
     "techBoxTitle": "Tehnologiile pe care le folosim",
@@ -737,7 +742,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Energy Storage Solutions for Critical Services",
+      "title": "Soluții de stocare a energiei\npentru servicii critice",
       "subtitle": "Baterino construiește sisteme energetice care susțin serviciile esențiale și consolidează reziliența comunităților din întreaga lume."
     },
     "essentialServices": {
@@ -764,7 +769,8 @@
       "goal9": "Industrie, Inovare și Infrastructură",
       "goal11": "Orașe și Comunități Durabile",
       "goal13": "Acțiune Climatică",
-      "goal17": "Parteneriate pentru Obiective"
+      "goal17": "Parteneriate pentru Obiective",
+      "seeMore": "Află mai multe"
     }
   },
   "aboutBaterino": {
@@ -890,6 +896,25 @@
       "bullet3": "Asia-Pacific",
       "bullet4": "Africa",
       "closing": "Prezența și scopul proiectelor variază în funcție de regiune și sunt determinate de parteneriatele locale și cerințele proiectelor."
+    },
+    "joinBaterino": {
+      "title": "Asociați-vă cu noi",
+      "subtitle": "Construiți infrastructură energetică durabilă și profitabilă alături de parteneri locali pe piețe emergente.",
+      "pathwaysTitle": "Căi de parteneriat",
+      "benefitsTitle": "Beneficii pentru parteneri",
+      "ctaLabel": "Sunteți gata să vă asociați cu noi?",
+      "ctaButton": "Luați legătura",
+      "partners": [
+        { "title": "Parteneri locali", "desc": "Integratori regionali cu acces la piață și relații cu clienții" },
+        { "title": "Distribuitori", "desc": "Specialiști în lanțul de aprovizionare care gestionează stocurile și logistica" },
+        { "title": "Integratori de sisteme", "desc": "Firme de inginerie care livrează soluții la cheie către clienții finali" },
+        { "title": "Părți interesate instituționale", "desc": "Organisme guvernamentale și agenții de dezvoltare care extind infrastructura" }
+      ],
+      "benefits": [
+        { "title": "Marje competitive", "desc": "Prețuri de top la tehnologia bateriilor și livrarea proiectelor" },
+        { "title": "Venituri recurente din servicii", "desc": "Oportunități în mentenanță, monitorizare și suport pe ciclul de viață" },
+        { "title": "Sprijin pentru creștere", "desc": "Marketing dedicat, formare tehnică și suport go-to-market" }
+      ]
     },
     "partnerUp": {
       "title": "Deveniți Partenerul Nostru",

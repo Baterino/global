@@ -1,4 +1,4 @@
-﻿import { type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const INDUSTRIAL_DIVISIONS = [
@@ -115,8 +115,8 @@ export function OperatingModelDiagramContent() {
           <div className="text-center text-base font-bold text-black">
             {t('operatingModel.suppliers.greenEnergyTech')}
           </div>
-          <div className="text-center text-[10px] text-green-700 font-medium">
-            Vetted suppliers ┬╖ Best-in-class technologies ┬╖ Quality assurance
+          <div className="text-center text-[10px] font-medium text-black">
+            {t('operatingModel.suppliers.greenEnergyTechSub')}
           </div>
         </div>
 
@@ -242,8 +242,8 @@ export function OperatingModelDiagramContent() {
               <div className="text-center text-lg font-bold text-black">
                 {t('operatingModel.suppliers.greenEnergyTech')}
               </div>
-              <div className="text-center text-[10px] text-green-700 font-medium">
-                Vetted suppliers ┬╖ Best-in-class technologies ┬╖ Quality assurance
+              <div className="text-center text-[10px] font-medium text-black">
+                {t('operatingModel.suppliers.greenEnergyTechSub')}
               </div>
             </div>
 

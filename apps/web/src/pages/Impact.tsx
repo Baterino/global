@@ -11,8 +11,8 @@ export function Impact() {
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
-          <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
-            Energy Storage Solutions<br />for Critical Services
+          <h1 className="font-publicSans whitespace-pre-line text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
+            {t('impact.hero.title')}
           </h1>
           <p className="mx-auto mt-6 max-w-[800px] font-body text-body-md leading-relaxed text-neutral-700">
             {t('impact.hero.subtitle')}
@@ -218,7 +218,7 @@ export function Impact() {
                   rel="noopener noreferrer"
                   className="inline-block font-body text-body-md text-neutral-900 underline hover:text-black transition-colors"
                 >
-                  See more
+                  {t('impact.globalAlignment.seeMore')}
                 </a>
               </div>
 
@@ -321,7 +321,7 @@ export function Impact() {
                   rel="noopener noreferrer"
                   className="mt-auto inline-block font-body text-body-md text-neutral-900 underline hover:text-black transition-colors"
                 >
-                  See more
+                  {t('impact.globalAlignment.seeMore')}
                 </a>
               </div>
 

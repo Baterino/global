@@ -25,7 +25,7 @@ export function SolutionsMaritime() {
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">
-          <h1 className="font-publicSans text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
+          <h1 className="font-publicSans whitespace-pre-line text-3xl font-extrabold uppercase leading-tight tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             {t('maritime.hero.title')}
           </h1>
           <p className="mx-auto mt-4 max-w-[740px] font-body text-mobile-body font-medium leading-relaxed text-neutral-600 lg:text-body-md">

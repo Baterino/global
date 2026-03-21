@@ -35,6 +35,7 @@
     "solutions.criticalServices": "Servicios Críticos",
     "solutions.maritime": "Marítimo",
     "delivery": "Entrega",
+    "impact": "Impacto",
     "company": "Acerca de",
     "companyMobile": "Sobre Nosotros",
     "company.aboutBaterino": "Baterino",
@@ -47,7 +48,8 @@
     "careers": "Carreras",
     "contact": "Contacto",
     "termsOfUse": "Términos de Uso",
-    "privacyPolicy": "Política de Privacidad"
+    "privacyPolicy": "Política de Privacidad",
+    "operatingModel": "Modelo operativo"
   },
   "operatingModel": {
     "pageTitle": "Modelo Operativo | Baterino",
@@ -85,6 +87,7 @@
       "heatPumps": "Proveedores de Bombas de Calor",
       "solarAccessories": "Proveedores de Accesorios Solares",
       "greenEnergyTech": "Proveedores de Tecnología de Energía Verde",
+      "greenEnergyTechSub": "Proveedores auditados · Tecnologías de primer nivel · Garantía de calidad",
       "pv": "Proveedores de PV",
       "inverters": "Proveedores de Inversores",
       "energyStorage": "Proveedores de Almacenamiento de Energía"
@@ -110,7 +113,8 @@
     "termsOfUse": "Términos de Uso",
     "privacyPolicy": "Política de Privacidad",
     "notFound": "Página no encontrada",
-    "unauthorized": "401 — No autorizado"
+    "unauthorized": "401 — No autorizado",
+    "operatingModel": "Modelo operativo | Baterino"
   },
   "unauthorized": {
     "code": "401",
@@ -611,7 +615,7 @@
   },
   "maritime": {
     "hero": {
-      "title": "INFRAESTRUCTURA DE ALMACENAMIENTO DE ENERGÍA MARÍTIMA (EES)",
+      "title": "INFRAESTRUCTURA DE ALMACENAMIENTO\nDE ENERGÍA MARÍTIMA (EES)",
       "subtitle": "Baterino habilita sistemas de almacenamiento de energía de grado marino diseñados para seguridad, rendimiento y operación a largo plazo en embarcaciones y entornos offshore."
     },
     "techBoxTitle": "Tecnologías que utilizamos",
@@ -738,7 +742,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Energy Storage Solutions for Critical Services",
+      "title": "Soluciones de almacenamiento de energía\npara servicios críticos",
       "subtitle": "Baterino construye sistemas energéticos que apoyan servicios esenciales y fortalecen la resiliencia comunitaria en todo el mundo."
     },
     "essentialServices": {
@@ -765,7 +769,8 @@
       "goal9": "INDUSTRIA, INNOVACIÓN E INFRAESTRUCTURA",
       "goal11": "CIUDADES Y COMUNIDADES SOSTENIBLES",
       "goal13": "ACCIÓN POR EL CLIMA",
-      "goal17": "ALIANZAS PARA LOGRAR LOS OBJETIVOS"
+      "goal17": "ALIANZAS PARA LOGRAR LOS OBJETIVOS",
+      "seeMore": "Ver más"
     }
   },
   "aboutBaterino": {
@@ -891,6 +896,25 @@
       "bullet3": "Asia-Pacífico",
       "bullet4": "África",
       "closing": "La presencia y el alcance de los proyectos varían según la región y están impulsados por asociaciones locales y requisitos del proyecto."
+    },
+    "joinBaterino": {
+      "title": "Colabore con nosotros",
+      "subtitle": "Construya infraestructura energética sostenible y rentable con socios locales en mercados emergentes.",
+      "pathwaysTitle": "Vías de asociación",
+      "benefitsTitle": "Beneficios para socios",
+      "ctaLabel": "¿Listo para asociarse con nosotros?",
+      "ctaButton": "Póngase en contacto",
+      "partners": [
+        { "title": "Socios locales", "desc": "Integradores regionales con acceso al mercado y relaciones con clientes" },
+        { "title": "Distribuidores", "desc": "Especialistas en cadena de suministro que gestionan inventario y logística" },
+        { "title": "Integradores de sistemas", "desc": "Empresas de ingeniería que entregan soluciones llave en mano a clientes finales" },
+        { "title": "Partes interesadas institucionales", "desc": "Organismos gubernamentales y agencias de desarrollo que amplían la infraestructura" }
+      ],
+      "benefits": [
+        { "title": "Márgenes competitivos", "desc": "Precios líderes en tecnología de baterías y entrega de proyectos" },
+        { "title": "Ingresos recurrentes por servicio", "desc": "Oportunidades en mantenimiento, monitorización y soporte del ciclo de vida" },
+        { "title": "Impulso al crecimiento", "desc": "Marketing dedicado, formación técnica y apoyo go-to-market" }
+      ]
     },
     "partnerUp": {
       "title": "ASÓCIESE CON NOSOTROS",

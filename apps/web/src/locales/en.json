@@ -87,6 +87,7 @@
       "heatPumps": "Heat Pumps Suppliers",
       "solarAccessories": "Solar Accessories Suppliers",
       "greenEnergyTech": "Green Energy Technology Suppliers",
+      "greenEnergyTechSub": "Vetted suppliers · Best-in-class technologies · Quality assurance",
       "pv": "PV Suppliers",
       "inverters": "Inverters Suppliers",
       "energyStorage": "Energy Storage Suppliers"
@@ -606,7 +607,7 @@
   },
   "maritime": {
     "hero": {
-      "title": "Maritime Energy Storage Infrastructure (EES)",
+      "title": "Maritime Energy Storage\nInfrastructure (EES)",
       "subtitle": "Baterino enables marine-grade energy storage systems designed for safety, performance, and long-term operation across vessels and offshore environments."
     },
     "techBoxTitle": "Technologies we use",
@@ -733,7 +734,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Energy Storage Solutions for Critical Services",
+      "title": "Energy Storage Solutions\nfor Critical Services",
       "subtitle": "Baterino builds energy systems that support essential services and strengthen community resilience around the world."
     },
     "essentialServices": {
@@ -760,7 +761,8 @@
       "goal9": "Industry, Innovation & Infrastructure",
       "goal11": "Sustainable Cities & Communities",
       "goal13": "Climate Action",
-      "goal17": "Partnership for the Goals"
+      "goal17": "Partnership for the Goals",
+      "seeMore": "See more"
     }
   },
   "aboutBaterino": {

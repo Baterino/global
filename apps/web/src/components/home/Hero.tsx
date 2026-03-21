@@ -91,7 +91,7 @@ export function Hero() {
               )}
               {i === 0 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
-                  <h3 className="font-heading text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+                  <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide1.title')}
                   </h3>
                   <div className="flex flex-wrap items-center justify-end gap-1.5 font-nunito text-xs font-normal text-white/90">
@@ -117,7 +117,7 @@ export function Hero() {
               )}
               {i === 2 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
-                  <h3 className="font-heading text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+                  <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide2.title')}
                   </h3>
                   <div className="flex flex-wrap items-center justify-end gap-1.5 font-nunito text-xs font-normal text-white/90">
@@ -143,7 +143,7 @@ export function Hero() {
               )}
               {i === 4 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
-                  <h3 className="font-heading text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+                  <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide5.title')}
                   </h3>
                   <div className="flex flex-wrap items-center justify-end gap-1.5 font-nunito text-xs font-normal text-white/90">
@@ -169,7 +169,7 @@ export function Hero() {
               )}
               {i === 6 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
-                  <h3 className="font-heading text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+                  <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide3.title')}
                   </h3>
                   <div className="flex flex-wrap items-center justify-end gap-1.5 font-nunito text-xs font-normal text-white/90">
@@ -283,7 +283,7 @@ export function Hero() {
             <div className="absolute inset-0 z-10 flex flex-col pt-20 translate-y-2 opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 md:pt-24">
               <div className="flex flex-1 flex-col justify-end px-5 pb-4 md:flex-row md:items-end md:justify-between md:px-10 md:pb-10">
                 <div className="max-w-[90%] md:max-w-[55%]">
-                  <h2 className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-white md:font-nunito md:text-3xl md:font-black lg:text-4xl">
+                  <h2 className="font-heading whitespace-pre-line text-2xl font-bold uppercase leading-tight tracking-tight text-white md:font-nunito md:text-3xl md:font-black lg:text-4xl">
                     {t(slide.titleKey)}
                   </h2>
                   <p className="mt-3 font-body text-base font-normal leading-tight text-white/95 md:mt-4 md:text-lg md:leading-6 lg:text-xl lg:leading-7">
