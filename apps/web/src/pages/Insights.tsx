@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { SEOHead } from '../components/SEOHead'
+import { fetchPublishedArticles, type PublicArticleListItem } from '../lib/publicContentApi'
 
 const FILTERS = ['all', 'company', 'press-release', 'use-cases', 'news'] as const
 const INSIGHTS_BASE = 'company/insights'
@@ -23,6 +24,21 @@ const FALLBACK_ARTICLES: ArticleItem[] = [
   { id: 'baterino-roles-in-every-market', slug: 'baterino-roles-in-every-market', type: 'company', image: '/images/about-baterino.jpg', date: 'insights.article8.date', dateSort: '2026-03-15', title: 'insights.article8.title', excerpt: 'insights.article8.excerpt' },
   { id: 'request-to-operation', slug: 'request-to-operation', type: 'company', image: '/images/blog/how-baterino-assess-a-project.jpg', date: 'insights.article9.date', dateSort: '2026-03-20', title: 'insights.article9.title', excerpt: 'insights.article9.excerpt' },
 ].sort((a, b) => b.dateSort.localeCompare(a.dateSort))
+
+function apiArticleToItem(a: PublicArticleListItem): ArticleItem {
+  const sort = a.published_at ? a.published_at.slice(0, 10) : '1970-01-01'
+  const dateDisplay = a.published_at ? new Date(a.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : ''
+  return {
+    id: a.id,
+    slug: a.slug,
+    type: a.type,
+    image: a.image_url || '/images/og-images/og-insights.jpg',
+    date: dateDisplay,
+    dateSort: sort,
+    title: a.title,
+    excerpt: a.excerpt || '',
+  }
+}
 
 function getFilterLabel(filter: FilterType, t: (key: string) => string) {
   switch (filter) {
@@ -47,7 +63,18 @@ export function Insights() {
   const base = `/${locale ?? 'en'}`
   const [searchParams, setSearchParams] = useSearchParams()
   const [activeFilter, setActiveFilter] = useState<FilterType>('all')
-  const articles = FALLBACK_ARTICLES
+  const [apiArticles, setApiArticles] = useState<ArticleItem[]>([])
+
+  useEffect(() => {
+    fetchPublishedArticles().then((list) => setApiArticles(list.map(apiArticleToItem)))
+  }, [])
+
+  const articles = useMemo(() => {
+    const bySlug = new Map<string, ArticleItem>()
+    FALLBACK_ARTICLES.forEach((a) => bySlug.set(a.slug, a))
+    apiArticles.forEach((a) => bySlug.set(a.slug, a))
+    return Array.from(bySlug.values()).sort((a, b) => b.dateSort.localeCompare(a.dateSort))
+  }, [apiArticles])
 
   useEffect(() => {
     const filterParam = searchParams.get('filter')
@@ -161,7 +188,9 @@ export function Insights() {
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <span className="mb-2 font-body text-body-xs font-medium uppercase tracking-wider text-neutral-500">
-                    {getFilterLabel(article.type as FilterType, t)}
+                    {FILTERS.includes(article.type as FilterType)
+                      ? getFilterLabel(article.type as FilterType, t)
+                      : article.type}
                   </span>
                   <span className="mb-1 font-body text-body-xs text-neutral-400">
                     {d.date}

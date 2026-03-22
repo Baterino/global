@@ -11,7 +11,7 @@ pnpm install
 Copy env examples and set values as needed:
 
 - **Root / web:** `cp apps/web/.env.example apps/web/.env` — set `VITE_SITE_URL` for production canonicals and sitemap.
-- **API:** `cp apps/api/.env.example apps/api/.env` — optional; `PORT` defaults to 3001.
+- **API:** `cp apps/api/.env.example apps/api/.env` — optional; `PORT` defaults to 3001. For the **admin CMS**, set `DATABASE_URL`, `JWT_SECRET`, run `pnpm --filter api db:migrate` and `pnpm --filter api db:seed` (see `docs/ADMIN.md`).
 
 ## Development
 
@@ -32,6 +32,14 @@ Or separately:
 |----------------|------|--------------------------------------------------|
 | `VITE_SITE_URL`| web  | Base URL for canonicals and sitemap (build time)|
 | `PORT`         | api  | API server port (default 3001)                    |
+| `DATABASE_URL` | api | PostgreSQL — required for CMS (`/api/public`, `/api/admin`) |
+| `JWT_SECRET`   | api  | Required for admin login & CMS write APIs         |
+
+### Admin CMS
+
+- **Login:** `/admin` → `/admin/login` (not behind locale prefix).
+- **Roles:** Admin (users + all content), Contributor (content only; delete own items only).
+- Full setup: **`docs/ADMIN.md`**.
 
 ## Features
 
@@ -52,6 +60,10 @@ Or separately:
 | `pnpm lint`      | Lint web app (ESLint)     |
 | `pnpm format`    | Format web app (Prettier) |
 | `pnpm test`      | Run web app tests (Vitest)|
+
+## Deploy API (Railway)
+
+Monorepo settings and env vars: **`apps/api/RAILWAY.md`**. Root **`railway.toml`** defines build/start for the `api` package.
 
 ## Build
 

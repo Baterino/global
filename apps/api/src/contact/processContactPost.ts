@@ -214,11 +214,17 @@ function getTransport(): nodemailer.Transporter | null {
 
   const port = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587
   const secure = process.env.SMTP_SECURE === 'true' || port === 465
+  // Port 587 uses STARTTLS; many providers expect explicit TLS upgrade
+  const requireTLS =
+    !secure &&
+    port === 587 &&
+    process.env.SMTP_REQUIRE_TLS !== 'false'
 
   return nodemailer.createTransport({
     host,
     port,
     secure,
+    requireTLS,
     auth: { user, pass },
   })
 }
@@ -229,11 +235,30 @@ function getInternalToAddress(): string {
 }
 
 function getSmtpFromAddress(): string {
-  return process.env.CONTACT_FROM_EMAIL?.trim() || process.env.SMTP_USER || 'noreply@baterino.com'
+  return process.env.CONTACT_FROM_EMAIL?.trim() || process.env.SMTP_USER?.trim() || 'noreply@baterino.com'
 }
 
+/**
+ * Customer-facing auto-reply "From". Must be a sender your SMTP account is allowed to use
+ * (same mailbox, verified alias, or domain-wide policy). Defaulting to global@ often fails
+ * when SMTP_USER is e.g. noreply@… or a transactional provider mailbox.
+ */
 function getAutoReplyFromAddress(): string {
-  return process.env.AUTO_REPLY_FROM_EMAIL?.trim() || 'global@baterino.com'
+  const explicit = process.env.AUTO_REPLY_FROM_EMAIL?.trim()
+  if (explicit) return explicit
+  const contactFrom = process.env.CONTACT_FROM_EMAIL?.trim()
+  if (contactFrom) return contactFrom
+  const user = process.env.SMTP_USER?.trim()
+  if (user) return user
+  return 'global@baterino.com'
+}
+
+/** RFC 5322 From header; avoids double-wrapping if env already contains Name <addr>. */
+function formatFromDisplay(name: string, address: string): string {
+  const a = address.trim()
+  if (!a) return `"${name}" <noreply@invalid>`
+  if (a.includes('<') && a.includes('>')) return a
+  return `"${name}" <${a}>`
 }
 
 /**
@@ -275,7 +300,7 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
 
   try {
     await transport.sendMail({
-      from: smtpFrom,
+      from: formatFromDisplay('Baterino', smtpFrom),
       to: internalTo,
       replyTo: data.email,
       subject: `[Baterino Contact] ${reference} — ${data.inquiryType} — ${data.name}`,
@@ -283,13 +308,14 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
       html: internal.html,
     })
   } catch (err) {
-    console.error('[contact] internal sendMail failed:', err)
+    const detail = err instanceof Error ? err.message : String(err)
+    console.error('[contact] internal sendMail failed:', detail, err)
     return { status: 502, body: { ok: false, code: 'send_failed' } }
   }
 
   try {
     await transport.sendMail({
-      from: `"Baterino" <${autoReplyFrom}>`,
+      from: formatFromDisplay('Baterino', autoReplyFrom),
       to: data.email,
       replyTo: internalTo,
       subject: `We received your message — Baterino (${reference})`,
@@ -297,7 +323,8 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
       html: autoReply.html,
     })
   } catch (err) {
-    console.error('[contact] auto-reply sendMail failed:', err)
+    const detail = err instanceof Error ? err.message : String(err)
+    console.error('[contact] auto-reply sendMail failed:', detail, err)
   }
 
   return { status: 200, body: { ok: true, reference } }

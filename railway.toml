@@ -1,0 +1,14 @@
+# Railway deploy (monorepo: API only)
+# https://docs.railway.com/reference/config-as-code
+#
+# In Railway: create a service from this repo, attach PostgreSQL, set variables (see apps/api/RAILWAY.md).
+
+[build]
+builder = "nixpacks"
+buildCommand = "pnpm install && pnpm --filter api build"
+
+[deploy]
+startCommand = "pnpm --filter api start"
+# Optional: Railway will probe this path after deploy
+healthcheckPath = "/api/greeting"
+healthcheckTimeout = 30

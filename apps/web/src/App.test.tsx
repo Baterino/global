@@ -7,14 +7,14 @@ describe('App', () => {
   it('renders without throwing', async () => {
     expect(() => render(<App />)).not.toThrow()
     await waitFor(() => {
-      expect(screen.getByText(/Enabling energy storage/i)).toBeInTheDocument()
+      expect(screen.getByText(/What We Enable/i)).toBeInTheDocument()
     })
   })
 
   it('renders home hero and settles', async () => {
     render(<App />)
     await waitFor(() => {
-      expect(screen.getByText(/Enabling energy storage/i)).toBeInTheDocument()
+      expect(screen.getByText(/What We Enable/i)).toBeInTheDocument()
     })
   })
 })

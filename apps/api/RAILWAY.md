@@ -1,52 +1,97 @@
-# Deploying API to Railway
+# Deploying the API on Railway
 
-## 1. Create Railway Project
+The API lives in **`apps/api`** inside a **pnpm monorepo**. Railway should build from the **repository root** using the root **`railway.toml`** (or equivalent settings in the dashboard).
 
-1. Go to [railway.app](https://railway.app) and create a project
-2. Add a **PostgreSQL** database (New → Database → PostgreSQL)
-3. Add your API as a service (from GitHub or local)
+## 1. Create the Railway project
 
-## 2. Environment Variables
+1. [railway.app](https://railway.app) → **New Project** → deploy from **GitHub** (this repo).
+2. Add **PostgreSQL**: **New** → **Database** → **PostgreSQL**.
+3. In your **API/web service** (the Node app), **Variables** → **Add variable** → **Reference** `DATABASE_URL` from the Postgres service (Railway fills the connection string).
 
-In your API service, add these variables (Railway → your service → Variables):
+## 2. Service settings (dashboard)
 
-| Variable | Description |
-|----------|-------------|
-| `DATABASE_URL` | Auto-filled when you add Postgres. Or copy from Postgres service → Connect → Postgres URL |
-| `JWT_SECRET` | Generate with `openssl rand -base64 32` |
-| `ADMIN_EMAIL` | Admin login email (e.g. admin@baterino.com) |
-| `ADMIN_PASSWORD` | Admin login password |
+| Setting | Value |
+|--------|--------|
+| **Root directory** | Repository root (`.`) — do **not** set only `apps/api` unless you use a standalone deploy flow; the monorepo needs the root `pnpm-lock.yaml`. |
+| **Build command** | `pnpm install && pnpm --filter api build` (same as `railway.toml`) |
+| **Start command** | `pnpm --filter api start` → runs `node dist/index.js` from `apps/api` |
 
-## 3. Build & Deploy
+If you don’t use `railway.toml`, paste the same build/start commands into **Settings → Build / Deploy**.
 
-Railway will run `pnpm install` and your build command. Ensure your `package.json` has:
+## 3. Required environment variables
 
-```json
-{
-  "scripts": {
-    "build": "prisma generate && tsc",
-    "start": "node dist/index.js"
-  }
-}
-```
+Set these on the **API service** (Variables tab):
 
-## 4. Run Migrations
+| Variable | Required | Notes |
+|----------|----------|--------|
+| `DATABASE_URL` | Yes | From Postgres **Reference** (or paste URL). |
+| `JWT_SECRET` | Yes for admin CMS | `openssl rand -base64 32` — without it, `/api/admin/*` is disabled; `/api/public/*` still works if DB is set. |
+| `NODE_ENV` | Recommended | `production` — contact form returns errors if SMTP is missing in production. |
+| `PORT` | No | **Railway sets this automatically**; the app already uses `process.env.PORT`. |
 
-After first deploy, run migrations to create tables:
+### Contact email (`POST /api/contact`)
+
+| Variable | Notes |
+|----------|--------|
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` | Required in production for contact. |
+| `SMTP_SECURE` | `true` if using port **465**. |
+| `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`, `AUTO_REPLY_FROM_EMAIL` | Optional; see `apps/api/.env.example` and `docs/VERCEL.md`. |
+
+### CMS / public URLs (optional)
+
+| Variable | Notes |
+|----------|--------|
+| `SITE_PUBLIC_URL` | Public site base URL (no trailing slash) — used in contact/auto-reply emails. |
+| `SOCIAL_FACEBOOK_URL`, `SOCIAL_LINKEDIN_URL` | Optional. |
+
+## 4. Database: migrate once, then seed admin
+
+The project uses **SQL files**, not Prisma. After the **first** successful deploy (with `DATABASE_URL` set):
+
+**Option A — Railway CLI**
 
 ```bash
-# Set DATABASE_URL to your Railway Postgres URL, then:
+railway link
+railway run pnpm --filter api run db:migrate:prod
+railway run pnpm --filter api run db:seed:prod
+```
+
+**Option B — local shell** (temporarily set `DATABASE_URL` to the Railway Postgres URL):
+
+```bash
 cd apps/api
-npx prisma migrate deploy
-pnpm db:seed
+pnpm run build
+DATABASE_URL="postgresql://..." pnpm run db:migrate:prod
+ADMIN_PASSWORD="your-secure-password" ADMIN_USERNAME="admin" DATABASE_URL="postgresql://..." pnpm run db:seed:prod
 ```
 
-Or add a one-off migration step in Railway's deploy.
+- **`db:migrate:prod`** runs the compiled script (`node dist/scripts/migrate.js`). Run **once** per environment unless you add new migration files (re-running the current SQL will fail if tables already exist).
+- **`db:seed:prod`** creates/updates the admin user from **`ADMIN_USERNAME`** (or `ADMIN_EMAIL` or default `admin`) and **`ADMIN_PASSWORD`** (min 8 characters).
 
-## 5. Seed Admin User
+## 5. Health check
 
-```bash
-DATABASE_URL="your-railway-postgres-url" pnpm db:seed
+`railway.toml` sets **`healthcheckPath = "/api/greeting"`**.  
+Public URL will be like `https://<service>.up.railway.app/api/greeting`.
+
+## 6. Frontend (Vite / Vercel / elsewhere)
+
+Point the browser at the same API host for `/api`:
+
+```env
+VITE_API_URL=https://your-service.up.railway.app
 ```
 
-This creates the admin user from `ADMIN_EMAIL` and `ADMIN_PASSWORD`.
+No trailing slash. If the site is served from the **same origin** as the API (unusual for static+Vercel), you can omit `VITE_API_URL` and use relative `/api` only when both are on one domain.
+
+## 7. CORS
+
+The API uses `cors({ origin: true })`, so browser calls from your marketing site origin are allowed. No extra Railway setting for that.
+
+## Troubleshooting
+
+| Issue | Check |
+|-------|--------|
+| Build fails on `pnpm` | Root directory must be repo root; `packageManager` in root `package.json` helps Nixpacks pick pnpm. |
+| 502 / app crashes | Logs in Railway; confirm `DATABASE_URL` and that migrate has been run. |
+| Admin login 404 | `JWT_SECRET` set and service redeployed after adding it. |
+| Contact always fails | `SMTP_*` and `NODE_ENV=production` behavior — see `processContactPost.ts`. |
