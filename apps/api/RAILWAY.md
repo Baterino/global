@@ -13,7 +13,7 @@ The API lives in **`apps/api`** inside a **pnpm monorepo**. Railway should build
 | Setting | Value |
 |--------|--------|
 | **Root directory** | Repository root (`.`) — do **not** set only `apps/api` unless you use a standalone deploy flow; the monorepo needs the root `pnpm-lock.yaml`. |
-| **Build command** | `pnpm install && pnpm --filter api build` (same as `railway.toml`) |
+| **Build command** | `NODE_ENV=development pnpm install --frozen-lockfile && pnpm --filter api build` (same as `railway.toml` — avoids pnpm skipping `typescript` when `NODE_ENV=production`) |
 | **Start command** | `pnpm --filter api start` → runs `node dist/index.js` from `apps/api` |
 
 If you don’t use `railway.toml`, paste the same build/start commands into **Settings → Build / Deploy**.
@@ -91,7 +91,7 @@ The API uses `cors({ origin: true })`, so browser calls from your marketing site
 
 | Issue | Check |
 |-------|--------|
-| Build fails on `pnpm` | Root directory must be repo root; `packageManager` in root `package.json` helps Nixpacks pick pnpm. |
+| Build fails on `pnpm` / `tsc` not found | Root directory must be repo root; `packageManager` in root `package.json` helps Nixpacks pick pnpm. If logs show **`tsc` is not recognized**, Railway had `NODE_ENV=production` during install — use the `NODE_ENV=development` prefix in `railway.toml` (already set in this repo). |
 | 502 / app crashes | Logs in Railway; confirm `DATABASE_URL` and that migrate has been run. |
 | Admin login 404 | `JWT_SECRET` set and service redeployed after adding it. |
 | Contact always fails | `SMTP_*` and `NODE_ENV=production` behavior — see `processContactPost.ts`. |
