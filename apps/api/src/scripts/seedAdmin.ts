@@ -1,4 +1,9 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import dotenv from 'dotenv'
 import { getPool, closePool } from '../db/pool.js'
+
+dotenv.config({ path: path.join(path.dirname(fileURLToPath(import.meta.url)), '../../.env') })
 import { hashPassword } from '../auth/password.js'
 
 /**
