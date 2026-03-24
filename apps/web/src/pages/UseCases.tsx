@@ -4,9 +4,7 @@ import {
   USE_CASE_PROJECTS,
   type UseCaseProject,
   type Sector,
-  type InstallType,
 } from '../data/useCasesProjects'
-import { fetchPublishedUseCases, type PublicUseCaseProject } from '../lib/publicContentApi'
 import { SEOHead } from '../components/SEOHead'
 
 const FILTERS = ['all', 'industrial', 'offgrid', 'maritime', 'solar', 'container', 'cabinet'] as const
@@ -28,30 +26,6 @@ function ImagePlaceholderIcon({ className }: { className?: string }) {
       <polyline points="21 15 16 10 5 21" />
     </svg>
   )
-}
-
-function mapPublicToProject(p: PublicUseCaseProject): UseCaseProject {
-  const specsRaw = p.specs as Record<string, string | undefined>
-  return {
-    id: p.id,
-    sector: p.sector as Sector,
-    type: p.type as InstallType,
-    solar: p.solar,
-    loc: p.loc,
-    title: p.title,
-    location: p.location,
-    specs: {
-      capacity: specsRaw.capacity,
-      powerCapacity: specsRaw.powerCapacity,
-      solar: specsRaw.solar,
-      container: specsRaw.container,
-      installation: specsRaw.installation,
-      vesselType: specsRaw.vesselType,
-      country: specsRaw.country ?? '',
-    },
-    useTags: p.useTags,
-    images: p.images?.length ? p.images : undefined,
-  }
 }
 
 function getSectorLabel(sector: Sector, t: (k: string) => string): string {
@@ -478,17 +452,8 @@ export function UseCases() {
   const searchQuery = ''
   const [selectedProject, setSelectedProject] = useState<UseCaseProject | null>(null)
   const progressRef = useRef<HTMLDivElement>(null)
-  const [remoteProjects, setRemoteProjects] = useState<UseCaseProject[]>([])
 
-  useEffect(() => {
-    fetchPublishedUseCases().then((list) => setRemoteProjects(list.map(mapPublicToProject)))
-  }, [])
-
-  const allProjects = useMemo(() => {
-    const ids = new Set(remoteProjects.map((p) => p.id))
-    const rest = USE_CASE_PROJECTS.filter((p) => !ids.has(p.id))
-    return [...remoteProjects, ...rest]
-  }, [remoteProjects])
+  const allProjects = useMemo(() => USE_CASE_PROJECTS, [])
 
   useEffect(() => {
     const onScroll = () => {

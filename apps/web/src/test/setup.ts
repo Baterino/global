@@ -5,8 +5,7 @@ class ResizeObserverMock {
   unobserve() {}
   disconnect() {}
 }
-// @ts-expect-error jsdom
-globalThis.ResizeObserver = ResizeObserverMock
+globalThis.ResizeObserver = ResizeObserverMock as typeof ResizeObserver
 
 Object.defineProperty(window, 'scrollTo', {
   value: () => {},

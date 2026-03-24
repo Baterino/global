@@ -25,7 +25,7 @@ Add the same values you use in `apps/api/.env` for production:
 Most SMTP providers only allow **From** addresses that match the authenticated account or a **verified sender/alias** on that account.
 
 1. Leave `CONTACT_FROM_EMAIL` and `AUTO_REPLY_FROM_EMAIL` unset so both use `SMTP_USER`, **or** set them to addresses your provider has verified for that SMTP login.
-2. Check Vercel (or Railway) **function logs** for `[contact] internal sendMail failed` or `auto-reply sendMail failed` — the message often includes the SMTP error (e.g. 535, 553).
+2. Check Vercel **function logs** for `[contact] internal sendMail failed` or `auto-reply sendMail failed` — the message often includes the SMTP error (e.g. 535, 553).
 3. Port **587**: use `SMTP_SECURE=false` (or omit); port **465**: set `SMTP_SECURE=true`.
 | `SITE_PUBLIC_URL` | Your live URL, no trailing slash (email logo links) |
 | `SOCIAL_FACEBOOK_URL`, `SOCIAL_LINKEDIN_URL` | Optional |

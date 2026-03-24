@@ -6,14 +6,6 @@ import { RedirectToLocale } from './components/RedirectToLocale'
 import { ScrollToTop } from './components/ScrollToTop'
 import { Layout } from './routes/Layout'
 import { Home } from './routes/Home'
-import { AdminLogin } from './admin/AdminLogin'
-import { AdminLayout } from './admin/AdminLayout'
-import { AdminDashboard } from './admin/AdminDashboard'
-import { AdminArticles } from './admin/AdminArticles'
-import { AdminArticleForm } from './admin/AdminArticleForm'
-import { AdminUseCases } from './admin/AdminUseCases'
-import { AdminUseCaseForm } from './admin/AdminUseCaseForm'
-import { AdminUsers } from './admin/AdminUsers'
 
 const SolutionsResidential = lazy(() =>
   import('./pages/SolutionsResidential').then((m) => ({ default: m.SolutionsResidential }))
@@ -73,17 +65,6 @@ export default function App() {
           >
             <Routes>
               <Route path="/" element={<RedirectToLocale />} />
-              <Route path="/admin/login" element={<AdminLogin />} />
-              <Route path="/admin" element={<AdminLayout />}>
-                <Route index element={<AdminDashboard />} />
-                <Route path="articles" element={<AdminArticles />} />
-                <Route path="articles/new" element={<AdminArticleForm />} />
-                <Route path="articles/:id" element={<AdminArticleForm />} />
-                <Route path="use-cases" element={<AdminUseCases />} />
-                <Route path="use-cases/new" element={<AdminUseCaseForm />} />
-                <Route path="use-cases/:projectId" element={<AdminUseCaseForm />} />
-                <Route path="users" element={<AdminUsers />} />
-              </Route>
               <Route path="/:locale" element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path="solutions/residential" element={<SolutionsResidential />} />

@@ -1,6 +1,6 @@
 # Baterino Global
 
-pnpm monorepo: **apps/web** (Vite + React + TypeScript + Tailwind + i18next) and **apps/api** (Node + Express + TypeScript). Multilanguage (en, es, id, zh, ro), SEO-friendly, Inter font.
+pnpm monorepo: **apps/web** (Vite + React + TypeScript + Tailwind + i18next) and **apps/api** (Node + Express — **greeting** + **contact email**). Multilanguage (en, es, id, zh, ro), SEO-friendly.
 
 ## Setup
 
@@ -8,67 +8,48 @@ pnpm monorepo: **apps/web** (Vite + React + TypeScript + Tailwind + i18next) and
 pnpm install
 ```
 
-Copy env examples and set values as needed:
+Copy env examples:
 
-- **Root / web:** `cp apps/web/.env.example apps/web/.env` — set `VITE_SITE_URL` for production canonicals and sitemap.
-- **API:** `cp apps/api/.env.example apps/api/.env` — optional; `PORT` defaults to 3001. For the **admin CMS**, set `DATABASE_URL`, `JWT_SECRET`, run `pnpm --filter api db:migrate` and `pnpm --filter api db:seed` (see `docs/ADMIN.md`).
+- **Web:** `cp apps/web/.env.example apps/web/.env` — set `VITE_SITE_URL` for production canonicals and sitemap. Set **`VITE_API_URL`** if the API is not same-origin (e.g. separate API host).
+- **API:** `cp apps/api/.env.example apps/api/.env` — SMTP and contact settings for `POST /api/contact`. See **`docs/VERCEL.md`** for production mail.
 
 ## Development
-
-Run both apps:
 
 ```bash
 pnpm dev
 ```
 
-Or separately:
+- **Web:** Vite on port **5173**, proxies `/api` → **3001**
+- **API:** Express on **3001** — `GET /api/greeting`, `POST /api/contact`
 
-- **Web:** `pnpm dev:web` — Vite dev server (port 5173), proxies `/api` to the API
-- **API:** `pnpm dev:api` — Express on port 3001
+Or: `pnpm dev:web` / `pnpm dev:api` separately.
 
-## Environment variables
+## API (email)
 
-| Variable        | App  | Description                                      |
-|----------------|------|--------------------------------------------------|
-| `VITE_SITE_URL`| web  | Base URL for canonicals and sitemap (build time)|
-| `PORT`         | api  | API server port (default 3001)                    |
-| `DATABASE_URL` | api | PostgreSQL — required for CMS (`/api/public`, `/api/admin`) |
-| `JWT_SECRET`   | api  | Required for admin login & CMS write APIs         |
+The Express app only exposes:
 
-### Admin CMS
+- **`GET /api/greeting`** — localized JSON (optional for the site)
+- **`POST /api/contact`** — contact form → SMTP (see `apps/api/src/contact/processContactPost.ts`)
 
-- **Login:** `/admin` → `/admin/login` (not behind locale prefix).
-- **Roles:** Admin (users + all content), Contributor (content only; delete own items only).
-- Full setup: **`docs/ADMIN.md`**.
+No database or admin CMS.
+
+## Deploy
+
+- **Frontend:** e.g. Vercel — build `apps/web`, set `VITE_SITE_URL` / `VITE_API_URL` as needed.
+- **API + mail:** any Node host, or use Vercel serverless **`api/contact.ts`** at repo root for contact only (see **`docs/VERCEL.md`**).
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Web + API in parallel |
+| `pnpm build` | Build all apps |
+| `pnpm typecheck` | Type-check all |
+| `pnpm lint` / `format` / `test` | Web app |
 
 ## Features
 
 - **Vite + React + TS + Tailwind** — `apps/web`
-- **Inter font** — Google Fonts in `index.html`; typography scale: `text-display-*`, `text-heading-*`, `text-body-*`, etc.
-- **Multilanguage** — react-i18next; locale in URL; 5 languages (en, es, id, zh, ro); browser detection; language dropdown
-- **SEO** — react-helmet-async; per-page meta, canonical, `lang`, Open Graph; `public/robots.txt` and `public/sitemap.xml`
-- **API** — `GET /api/greeting` returns localized message; send `Accept-Language`
-- **Layout** — Site max 1440px, content max 1200px; responsive
-
-## Scripts
-
-| Command        | Description                |
-|----------------|----------------------------|
-| `pnpm dev`     | Run web + API in parallel  |
-| `pnpm build`   | Build all apps             |
-| `pnpm typecheck` | Type-check all apps       |
-| `pnpm lint`      | Lint web app (ESLint)     |
-| `pnpm format`    | Format web app (Prettier) |
-| `pnpm test`      | Run web app tests (Vitest)|
-
-## Deploy API (Railway)
-
-Monorepo settings and env vars: **`apps/api/RAILWAY.md`**. Root **`railway.toml`** defines build/start for the `api` package.
-
-## Build
-
-```bash
-pnpm build
-```
-
-Set `VITE_SITE_URL` when building the web app for correct canonical and sitemap URLs.
+- **Multilanguage** — react-i18next; locale in URL
+- **SEO** — react-helmet-async; `public/robots.txt`, `public/sitemap.xml`
+- **Contact** — `POST /api/contact` (Express or Vercel serverless)
