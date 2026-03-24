@@ -26,6 +26,7 @@ export type ContactApiErrorCode =
   | 'message_too_short'
   | 'contact_unavailable'
   | 'send_failed'
+  | 'network'
 
 type ContactApiSuccess = { ok: true; reference?: string }
 type ContactApiFailure = { ok: false; code: ContactApiErrorCode }
@@ -34,15 +35,31 @@ type ContactApiFailure = { ok: false; code: ContactApiErrorCode }
  * POST /api/contact — proxied to the API in dev (see vite.config).
  * Set VITE_API_URL in production if the API is on another origin.
  */
+const CONTACT_SUBMIT_TIMEOUT_MS = 60_000
+
 export async function submitContactForm(payload: ContactFormPayload): Promise<{ reference?: string }> {
   const base = viteApiBaseUrl()
   const url = `${base}/api/contact`
 
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify(payload),
-  })
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), CONTACT_SUBMIT_TIMEOUT_MS)
+
+  let res: Response
+  try {
+    res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    })
+  } catch (e) {
+    if (e instanceof Error && e.name === 'AbortError') {
+      throw new ContactSubmitError('network', 0)
+    }
+    throw e
+  } finally {
+    clearTimeout(timeoutId)
+  }
 
   let body: ContactApiSuccess | ContactApiFailure | null = null
   try {

@@ -226,6 +226,9 @@ function getTransport(): nodemailer.Transporter | null {
     secure,
     requireTLS,
     auth: { user, pass },
+    connectionTimeout: 15_000,
+    greetingTimeout: 15_000,
+    socketTimeout: 45_000,
   })
 }
 
