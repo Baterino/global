@@ -32,15 +32,56 @@ async function adminFetch(path: string, init: RequestInit = {}): Promise<Respons
 export type AdminUser = { id: string; username: string; role: 'admin' | 'contributor' }
 
 export async function adminLogin(username: string, password: string): Promise<{ token: string; user: AdminUser }> {
-  const res = await adminFetch('/api/admin/login', {
-    method: 'POST',
-    body: JSON.stringify({ username, password }),
-  })
-  const data = (await res.json()) as { ok?: boolean; token?: string; user?: AdminUser; code?: string }
-  if (!res.ok || !data.ok || !data.token || !data.user) {
-    throw new Error(data.code ?? 'login_failed')
+  if (import.meta.env.PROD && !apiBase()) {
+    throw new Error(
+      'Admin API URL is not set. In Vercel → Environment Variables, add VITE_API_URL with your Railway API base URL (no trailing slash), then redeploy.'
+    )
   }
-  return { token: data.token, user: data.user }
+
+  let res: Response
+  try {
+    res = await adminFetch('/api/admin/login', {
+      method: 'POST',
+      body: JSON.stringify({ username, password }),
+    })
+  } catch {
+    throw new Error(
+      'Could not reach the API. Confirm VITE_API_URL, that Railway is online, and the URL uses HTTPS.'
+    )
+  }
+
+  let data = {} as { ok?: boolean; token?: string; user?: AdminUser; code?: string }
+  try {
+    data = (await res.json()) as typeof data
+  } catch {
+    if (res.status === 404) {
+      throw new Error(
+        'Login was sent to the wrong host. Set VITE_API_URL to your Railway API; Vercel only serves /api/contact, not admin.'
+      )
+    }
+    throw new Error('The server did not return JSON. Check API logs and deployment.')
+  }
+
+  if (res.ok && data.ok && data.token && data.user) {
+    return { token: data.token, user: data.user }
+  }
+
+  if (res.status === 401 || data.code === 'invalid_credentials') {
+    throw new Error(
+      'Invalid username or password. The username must match the value in the database (often ADMIN_EMAIL or ADMIN_USERNAME from seed, or "admin").'
+    )
+  }
+  if (res.status === 503 || data.code === 'database_unavailable') {
+    throw new Error('Database unreachable. On Railway, set DATABASE_URL from Postgres and run migrations + seed.')
+  }
+  if (res.status === 404) {
+    throw new Error(
+      'Admin API not found. Set VITE_API_URL to your Railway service URL and ensure JWT_SECRET and DATABASE_URL are set on Railway.'
+    )
+  }
+  throw new Error(
+    data.code === 'credentials_required' ? 'Enter username and password.' : 'Sign-in failed. Check Railway API logs.'
+  )
 }
 
 export async function adminMe(): Promise<AdminUser> {

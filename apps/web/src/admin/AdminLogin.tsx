@@ -21,8 +21,8 @@ export function AdminLogin() {
       const { token } = await adminLogin(username.trim(), password)
       setAdminToken(token)
       navigate(next, { replace: true })
-    } catch {
-      setError('Invalid username or password, or CMS is unavailable.')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Sign-in failed.')
     } finally {
       setLoading(false)
     }
@@ -32,7 +32,10 @@ export function AdminLogin() {
     <div className="flex min-h-screen items-center justify-center bg-neutral-100 px-4">
       <div className="w-full max-w-md rounded-xl border border-neutral-200 bg-white p-8 shadow-sm">
         <h1 className="font-publicSans text-2xl font-bold text-neutral-900">Baterino Admin</h1>
-        <p className="mt-1 text-body-sm text-neutral-600">Sign in to manage articles and use cases.</p>
+        <p className="mt-1 text-body-sm text-neutral-600">
+          Sign in to manage articles and use cases. Username must match the seeded account (often your admin email or{' '}
+          <span className="font-mono text-body-xs">admin</span>).
+        </p>
         <form className="mt-8 space-y-4" onSubmit={onSubmit}>
           <div>
             <label className="block text-body-sm font-medium text-neutral-700" htmlFor="user">
