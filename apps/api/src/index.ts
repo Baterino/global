@@ -1,9 +1,6 @@
 import 'dotenv/config'
 import dns from 'node:dns'
 import express from 'express'
-
-/** Prefer IPv4 for outbound connections (e.g. SMTP) — many PaaS networks have no IPv6 egress (ENETUNREACH). */
-dns.setDefaultResultOrder('ipv4first')
 import cors from 'cors'
 import { greetingRouter } from './routes/greeting.js'
 import { contactRouter } from './routes/contact.js'
@@ -13,6 +10,9 @@ import { adminUsersRouter } from './routes/adminUsers.js'
 import { adminArticlesRouter } from './routes/adminArticles.js'
 import { adminUseCasesRouter } from './routes/adminUseCases.js'
 import { publicContentRouter } from './routes/publicContent.js'
+
+/** Prefer IPv4 for outbound connections (e.g. SMTP) — many PaaS networks have no IPv6 egress (ENETUNREACH). */
+dns.setDefaultResultOrder('ipv4first')
 
 const app = express()
 const PORT = process.env.PORT ?? 3001
