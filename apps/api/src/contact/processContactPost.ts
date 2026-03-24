@@ -1,4 +1,6 @@
 import { randomBytes } from 'node:crypto'
+import dns from 'node:dns'
+import net from 'node:net'
 import nodemailer from 'nodemailer'
 
 const INQUIRY_TYPES = ['general', 'projectsOperations', 'socialImpact'] as const
@@ -206,7 +208,26 @@ function buildAutoReplyMail(name: string, reference: string): { text: string; ht
   return { text, html }
 }
 
-function getTransport(): nodemailer.Transporter | null {
+/**
+ * Nodemailer resolves A+AAAA and picks a random address — IPv6 often breaks on PaaS (no egress).
+ * Connect to an IPv4 literal when possible; keep TLS SNI as the original hostname.
+ */
+async function smtpConnectTarget(hostname: string): Promise<{ host: string; servername: string }> {
+  if (net.isIP(hostname)) {
+    return { host: hostname, servername: hostname }
+  }
+  try {
+    const v4 = await dns.promises.resolve4(hostname)
+    if (v4.length > 0) {
+      return { host: v4[0], servername: hostname }
+    }
+  } catch {
+    /* no A record */
+  }
+  return { host: hostname, servername: hostname }
+}
+
+async function getTransport(): Promise<nodemailer.Transporter | null> {
   const host = process.env.SMTP_HOST
   const user = process.env.SMTP_USER
   const pass = process.env.SMTP_PASS
@@ -220,8 +241,10 @@ function getTransport(): nodemailer.Transporter | null {
     port === 587 &&
     process.env.SMTP_REQUIRE_TLS !== 'false'
 
+  const { host: connectHost, servername } = await smtpConnectTarget(host.trim())
+
   return nodemailer.createTransport({
-    host,
+    host: connectHost,
     port,
     secure,
     requireTLS,
@@ -229,6 +252,7 @@ function getTransport(): nodemailer.Transporter | null {
     connectionTimeout: 15_000,
     greetingTimeout: 15_000,
     socketTimeout: 45_000,
+    ...(connectHost !== servername ? { tls: { servername } } : {}),
   })
 }
 
@@ -285,7 +309,7 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
 
   const data = parsed.data
   const reference = generateInquiryReference()
-  const transport = getTransport()
+  const transport = await getTransport()
   const internalTo = getInternalToAddress()
   const smtpFrom = getSmtpFromAddress()
   const autoReplyFrom = getAutoReplyFromAddress()
