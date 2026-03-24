@@ -1,3 +1,5 @@
+import { viteApiBaseUrl } from './viteApiBaseUrl.js'
+
 export type ContactInquiryType = 'general' | 'projectsOperations' | 'socialImpact'
 
 export type ContactFormPayload = {
@@ -28,18 +30,12 @@ export type ContactApiErrorCode =
 type ContactApiSuccess = { ok: true; reference?: string }
 type ContactApiFailure = { ok: false; code: ContactApiErrorCode }
 
-function getApiBaseUrl(): string {
-  const raw = import.meta.env.VITE_API_URL
-  if (typeof raw === 'string' && raw.trim()) return raw.replace(/\/$/, '')
-  return ''
-}
-
 /**
  * POST /api/contact — proxied to the API in dev (see vite.config).
  * Set VITE_API_URL in production if the API is on another origin.
  */
 export async function submitContactForm(payload: ContactFormPayload): Promise<{ reference?: string }> {
-  const base = getApiBaseUrl()
+  const base = viteApiBaseUrl()
   const url = `${base}/api/contact`
 
   const res = await fetch(url, {

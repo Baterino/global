@@ -1,8 +1,4 @@
-function apiBase(): string {
-  const raw = import.meta.env.VITE_API_URL
-  if (typeof raw === 'string' && raw.trim()) return raw.replace(/\/$/, '')
-  return ''
-}
+import { viteApiBaseUrl } from './viteApiBaseUrl.js'
 
 export type PublicArticleListItem = {
   id: string
@@ -23,7 +19,7 @@ export type PublicArticleDetail = PublicArticleListItem & {
 
 export async function fetchPublishedArticles(): Promise<PublicArticleListItem[]> {
   try {
-    const res = await fetch(`${apiBase()}/api/public/articles`, { headers: { Accept: 'application/json' } })
+    const res = await fetch(`${viteApiBaseUrl()}/api/public/articles`, { headers: { Accept: 'application/json' } })
     if (!res.ok) return []
     const data = (await res.json()) as { ok?: boolean; articles?: PublicArticleListItem[] }
     return data.ok && data.articles ? data.articles : []
@@ -34,7 +30,7 @@ export async function fetchPublishedArticles(): Promise<PublicArticleListItem[]>
 
 export async function fetchPublishedArticleBySlug(slug: string): Promise<PublicArticleDetail | null> {
   try {
-    const res = await fetch(`${apiBase()}/api/public/articles/slug/${encodeURIComponent(slug)}`, {
+    const res = await fetch(`${viteApiBaseUrl()}/api/public/articles/slug/${encodeURIComponent(slug)}`, {
       headers: { Accept: 'application/json' },
     })
     if (!res.ok) return null
@@ -60,7 +56,7 @@ export type PublicUseCaseProject = {
 
 export async function fetchPublishedUseCases(): Promise<PublicUseCaseProject[]> {
   try {
-    const res = await fetch(`${apiBase()}/api/public/use-cases`, { headers: { Accept: 'application/json' } })
+    const res = await fetch(`${viteApiBaseUrl()}/api/public/use-cases`, { headers: { Accept: 'application/json' } })
     if (!res.ok) return []
     const data = (await res.json()) as { ok?: boolean; projects?: PublicUseCaseProject[] }
     return data.ok && data.projects ? data.projects : []

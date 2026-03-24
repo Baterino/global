@@ -3,7 +3,7 @@
  * Use getApiLang() when calling from components (after i18n is ready).
  */
 
-const API_BASE = import.meta.env.VITE_API_URL ?? ''
+import { viteApiBaseUrl } from '../lib/viteApiBaseUrl.js'
 
 export function getApiHeaders(lang: string): HeadersInit {
   return {
@@ -18,7 +18,8 @@ export async function apiFetch<T = unknown>(
   options: { lang: string; signal?: AbortSignal } & Omit<RequestInit, 'headers'> = { lang: 'en' }
 ): Promise<{ data?: T; error?: string }> {
   const { lang, signal, ...rest } = options
-  const url = path.startsWith('http') ? path : `${API_BASE}${path}`
+  const base = viteApiBaseUrl()
+  const url = path.startsWith('http') ? path : `${base}${path}`
   const headers = new Headers()
   headers.set('Accept-Language', lang)
   headers.set('Content-Type', 'application/json')

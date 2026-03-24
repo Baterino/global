@@ -1,3 +1,5 @@
+import { viteApiBaseUrl } from './viteApiBaseUrl.js'
+
 const TOKEN_KEY = 'baterino_admin_token'
 
 export function getAdminToken(): string | null {
@@ -12,12 +14,6 @@ export function clearAdminToken(): void {
   localStorage.removeItem(TOKEN_KEY)
 }
 
-function apiBase(): string {
-  const raw = import.meta.env.VITE_API_URL
-  if (typeof raw === 'string' && raw.trim()) return raw.replace(/\/$/, '')
-  return ''
-}
-
 async function adminFetch(path: string, init: RequestInit = {}): Promise<Response> {
   const token = getAdminToken()
   const headers = new Headers(init.headers)
@@ -26,13 +22,13 @@ async function adminFetch(path: string, init: RequestInit = {}): Promise<Respons
     headers.set('Content-Type', 'application/json')
   }
   if (token) headers.set('Authorization', `Bearer ${token}`)
-  return fetch(`${apiBase()}${path}`, { ...init, headers })
+  return fetch(`${viteApiBaseUrl()}${path}`, { ...init, headers })
 }
 
 export type AdminUser = { id: string; username: string; role: 'admin' | 'contributor' }
 
 export async function adminLogin(username: string, password: string): Promise<{ token: string; user: AdminUser }> {
-  if (import.meta.env.PROD && !apiBase()) {
+  if (import.meta.env.PROD && !viteApiBaseUrl()) {
     throw new Error(
       'Admin API URL is not set. In Vercel → Environment Variables, add VITE_API_URL with your Railway API base URL (no trailing slash), then redeploy.'
     )
@@ -94,6 +90,11 @@ export async function adminLogin(username: string, password: string): Promise<{ 
   if (res.status === 404) {
     throw new Error(
       'Admin API not found. Set VITE_API_URL to your Railway service URL and ensure JWT_SECRET and DATABASE_URL are set on Railway.'
+    )
+  }
+  if (res.status === 405) {
+    throw new Error(
+      'Method not allowed (HTTP 405). POST was rejected for this URL. Set VITE_API_URL to the Railway API hostname only (no /api at the end — the app adds /api/admin/login). Confirm the Railway service is the Node API, not Postgres or another app.'
     )
   }
   if (res.status === 429) {
