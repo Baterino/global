@@ -56,7 +56,14 @@ export async function adminLogin(username: string, password: string): Promise<{ 
   const looksLikeHtml =
     contentType.includes('text/html') || trimmed.startsWith('<!') || trimmed.startsWith('<html')
 
-  let data = {} as { ok?: boolean; token?: string; user?: AdminUser; code?: string }
+  let data = {} as {
+    ok?: boolean
+    token?: string
+    user?: AdminUser
+    code?: string
+    error?: string
+    message?: string
+  }
   try {
     data = trimmed ? (JSON.parse(rawBody) as typeof data) : {}
   } catch {
@@ -74,12 +81,14 @@ export async function adminLogin(username: string, password: string): Promise<{ 
     return { token: data.token, user: data.user }
   }
 
-  if (res.status === 401 || data.code === 'invalid_credentials') {
+  const code = typeof data.code === 'string' ? data.code.trim() : ''
+
+  if (res.status === 401 || code === 'invalid_credentials') {
     throw new Error(
       'Invalid username or password. The username must match the value in the database (often ADMIN_EMAIL or ADMIN_USERNAME from seed, or "admin").'
     )
   }
-  if (res.status === 503 || data.code === 'database_unavailable') {
+  if (res.status === 503 || code === 'database_unavailable') {
     throw new Error('Database unreachable. On Railway, set DATABASE_URL from Postgres and run migrations + seed.')
   }
   if (res.status === 404) {
@@ -87,8 +96,47 @@ export async function adminLogin(username: string, password: string): Promise<{ 
       'Admin API not found. Set VITE_API_URL to your Railway service URL and ensure JWT_SECRET and DATABASE_URL are set on Railway.'
     )
   }
+  if (res.status === 429) {
+    throw new Error('Too many sign-in attempts. Wait a minute and try again.')
+  }
+
+  if (code === 'credentials_required') {
+    throw new Error('Enter username and password.')
+  }
+
+  const serverHint =
+    typeof data.message === 'string' && data.message.trim()
+      ? data.message.trim()
+      : typeof data.error === 'string' && data.error.trim()
+        ? data.error.trim()
+        : ''
+
+  if (res.status >= 500) {
+    throw new Error(
+      serverHint
+        ? `Server error (HTTP ${res.status}): ${serverHint}`
+        : `Server error (HTTP ${res.status}). Check Railway → API → Logs, DATABASE_URL, JWT_SECRET, and run db:migrate + db:seed.`
+    )
+  }
+
+  if (res.status === 403) {
+    throw new Error(
+      'Access forbidden (HTTP 403). Confirm the Railway service URL and that nothing is blocking POST /api/admin/login.'
+    )
+  }
+
+  if (res.ok) {
+    throw new Error(
+      'The server returned HTTP 200 but no login token. VITE_API_URL may point at the wrong host (not the Node API), or the deployed API is missing admin routes. Check Railway build/start and logs for POST /api/admin/login.'
+    )
+  }
+
   throw new Error(
-    data.code === 'credentials_required' ? 'Enter username and password.' : 'Sign-in failed. Check Railway API logs.'
+    code
+      ? `Sign-in failed (${code}). Check Railway API logs.`
+      : serverHint
+        ? `Sign-in failed: ${serverHint}`
+        : `Sign-in failed (HTTP ${res.status}). Check Railway API logs — ensure admin routes are enabled (DATABASE_URL + JWT_SECRET on the API service).`
   )
 }
 
