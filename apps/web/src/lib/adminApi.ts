@@ -50,16 +50,24 @@ export async function adminLogin(username: string, password: string): Promise<{ 
     )
   }
 
+  const rawBody = await res.text()
+  const trimmed = rawBody.trim()
+  const contentType = res.headers.get('content-type') ?? ''
+  const looksLikeHtml =
+    contentType.includes('text/html') || trimmed.startsWith('<!') || trimmed.startsWith('<html')
+
   let data = {} as { ok?: boolean; token?: string; user?: AdminUser; code?: string }
   try {
-    data = (await res.json()) as typeof data
+    data = trimmed ? (JSON.parse(rawBody) as typeof data) : {}
   } catch {
-    if (res.status === 404) {
+    if (looksLikeHtml || res.status === 404) {
       throw new Error(
-        'Login was sent to the wrong host. Set VITE_API_URL to your Railway API; Vercel only serves /api/contact, not admin.'
+        'The app returned a web page instead of API JSON — usually VITE_API_URL points at your Vercel site (or www) instead of the Railway API. Set VITE_API_URL to the Railway service URL only (https://….up.railway.app), save, redeploy Vercel, then try again.'
       )
     }
-    throw new Error('The server did not return JSON. Check API logs and deployment.')
+    throw new Error(
+      'The server did not return valid JSON. Open Railway → your API → Logs while signing in, and confirm POST /api/admin/login responds with JSON.'
+    )
   }
 
   if (res.ok && data.ok && data.token && data.user) {
