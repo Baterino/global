@@ -1,5 +1,9 @@
 import 'dotenv/config'
+import dns from 'node:dns'
 import express from 'express'
+
+/** Prefer IPv4 for outbound connections (e.g. SMTP) — many PaaS networks have no IPv6 egress (ENETUNREACH). */
+dns.setDefaultResultOrder('ipv4first')
 import cors from 'cors'
 import { greetingRouter } from './routes/greeting.js'
 import { contactRouter } from './routes/contact.js'
@@ -12,6 +16,10 @@ import { publicContentRouter } from './routes/publicContent.js'
 
 const app = express()
 const PORT = process.env.PORT ?? 3001
+
+app.get(['/', '/health'], (_req, res) => {
+  res.status(200).json({ ok: true })
+})
 
 app.use(cors({ origin: true }))
 app.use(express.json({ limit: '2mb' }))
