@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams, Link } from 'react-router-dom'
 import { SEOHead } from '../components/SEOHead'
 import { RolesArticleContent } from '../components/RolesArticleContent'
 import { ProjectsArticleContent } from '../components/ProjectsArticleContent'
+import { fetchPublishedArticleBySlug, type PublicArticleDetail } from '../lib/publicContentApi'
+
 interface ArticleData {
   id: string
   slug: string
@@ -585,22 +588,64 @@ const FALLBACK_ARTICLES: ArticleData[] = [
 export function Article() {
   const { t } = useTranslation()
   const { locale, slug } = useParams<{ locale: string; slug: string }>()
+  const [remote, setRemote] = useState<PublicArticleDetail | null | undefined>(undefined)
+
+  useEffect(() => {
+    if (!slug) {
+      setRemote(null)
+      return
+    }
+    let cancelled = false
+    fetchPublishedArticleBySlug(slug).then((r) => {
+      if (!cancelled) setRemote(r)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [slug])
 
   const fallbackMatch = FALLBACK_ARTICLES.find((a) => a.slug === slug || a.id === slug)
   const articleKey = fallbackMatch ? (SLUG_TO_ARTICLE_KEY[fallbackMatch.slug] ?? 7) : 7
 
-  const resolvedArticle = fallbackMatch
+  const resolvedArticle = remote
     ? {
-        ...fallbackMatch,
-        title: fallbackMatch.title || t(`insights.article${articleKey}.title`),
-        author: fallbackMatch.author || t('insights.article7.author'),
-        date: fallbackMatch.date || t(`insights.article${articleKey}.date`),
-        location: fallbackMatch.location || t(`insights.article${articleKey}.location`),
-        category: fallbackMatch.category
-          ? (fallbackMatch.category.startsWith('insights.') ? t(fallbackMatch.category) : fallbackMatch.category)
-          : t('insights.publicRelease'),
+        id: remote.id,
+        slug: remote.slug,
+        title: remote.title,
+        author: remote.author_name || 'Baterino',
+        date: remote.published_at
+          ? new Date(remote.published_at).toLocaleDateString(undefined, {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            })
+          : '',
+        location: remote.location_label || '',
+        category: remote.category_label || t('insights.publicRelease'),
+        type: remote.type,
+        image: remote.image_url || '/images/og-images/og-insights.jpg',
+        content: remote.body_html,
       }
-    : null
+    : fallbackMatch
+      ? {
+          ...fallbackMatch,
+          title: fallbackMatch.title || t(`insights.article${articleKey}.title`),
+          author: fallbackMatch.author || t('insights.article7.author'),
+          date: fallbackMatch.date || t(`insights.article${articleKey}.date`),
+          location: fallbackMatch.location || t(`insights.article${articleKey}.location`),
+          category: fallbackMatch.category
+            ? (fallbackMatch.category.startsWith('insights.') ? t(fallbackMatch.category) : fallbackMatch.category)
+            : t('insights.publicRelease'),
+        }
+      : null
+
+  if (remote === undefined) {
+    return (
+      <div className="flex min-h-[400px] items-center justify-center">
+        <p className="font-body text-body-md text-neutral-500">Loading…</p>
+      </div>
+    )
+  }
 
   if (!resolvedArticle) {
     return (
@@ -615,13 +660,15 @@ export function Article() {
       <SEOHead
         title={`${resolvedArticle.title} | ${resolvedArticle.author}`}
         description={
-          resolvedArticle.slug === 'global-delivery-framework'
-            ? t('insights.article7.description')
-            : resolvedArticle.slug === 'baterino-roles-in-every-market'
-              ? t('insights.article8.description')
-              : resolvedArticle.slug === 'request-to-operation'
-                ? t('insights.article9.description')
-                : undefined
+          remote
+            ? remote.excerpt?.slice(0, 200) || undefined
+            : resolvedArticle.slug === 'global-delivery-framework'
+              ? t('insights.article7.description')
+              : resolvedArticle.slug === 'baterino-roles-in-every-market'
+                ? t('insights.article8.description')
+                : resolvedArticle.slug === 'request-to-operation'
+                  ? t('insights.article9.description')
+                  : undefined
         }
         ogImage={resolvedArticle.image}
         type="article"
@@ -672,7 +719,14 @@ export function Article() {
       {/* Article Content */}
       <section className="w-full bg-white px-4 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[900px]">
-          {resolvedArticle.slug === 'baterino-roles-in-every-market' ? (
+          {remote ? (
+            <div
+              className="prose prose-neutral max-w-none font-body text-body-md leading-relaxed text-neutral-700 prose-headings:font-heading prose-headings:font-bold prose-headings:text-neutral-900 prose-h2:mb-4 prose-h2:mt-8 prose-h2:text-2xl prose-p:mb-6 prose-ul:mb-6 prose-ul:ml-6 prose-ul:list-disc prose-li:mb-2"
+              dangerouslySetInnerHTML={{
+                __html: resolvedArticle.content.replace(/__LOCALE__/g, locale ?? 'en'),
+              }}
+            />
+          ) : resolvedArticle.slug === 'baterino-roles-in-every-market' ? (
             <RolesArticleContent />
           ) : resolvedArticle.slug === 'request-to-operation' ? (
             <ProjectsArticleContent locale={locale ?? 'en'} />
