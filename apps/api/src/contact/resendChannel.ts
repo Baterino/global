@@ -1,4 +1,5 @@
 import { Resend } from 'resend'
+import { contactMailDisplayName } from './mailIdentity.js'
 
 export function hasResend(): boolean {
   return Boolean(process.env.RESEND_API_KEY?.trim())
@@ -26,7 +27,7 @@ export async function sendContactMailsWithResend(params: {
     from: params.notificationFrom,
     to: [params.internalTo],
     replyTo: params.submitterEmail,
-    subject: `[Baterino Contact] ${params.reference} — ${params.inquiryType} — ${params.submitterName}`,
+    subject: `[${contactMailDisplayName()} Contact] ${params.reference} — ${params.inquiryType} — ${params.submitterName}`,
     text: params.internal.text,
     html: params.internal.html,
   })
@@ -39,7 +40,7 @@ export async function sendContactMailsWithResend(params: {
     from: params.autoReplyFrom,
     to: [params.submitterEmail],
     replyTo: params.internalTo,
-    subject: `We received your message — Baterino (${params.reference})`,
+    subject: `We received your message — ${contactMailDisplayName()} (${params.reference})`,
     text: params.autoReply.text,
     html: params.autoReply.html,
   })

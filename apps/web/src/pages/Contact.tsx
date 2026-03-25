@@ -9,8 +9,15 @@ import {
   type ContactApiErrorCode,
   type ContactInquiryType,
 } from '../lib/contactApi'
-
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+import {
+  EMAIL_REGEX,
+  EMAIL_MESSAGE_FORBIDDEN,
+  sanitizeContactNameInput,
+  sanitizeContactEmailInput,
+  sanitizeContactMessageInput,
+  sanitizeContactPhoneInput,
+  isValidContactName,
+} from '../lib/contactValidation'
 
 const INQUIRY_OPTIONS = [
   { value: 'general', labelKey: 'contact.form.inquiryTypes.general' },
@@ -113,9 +120,26 @@ export function Contact() {
   const [submitPhase, setSubmitPhase] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [submitErrorCode, setSubmitErrorCode] = useState<ContactApiErrorCode | 'network' | null>(null)
 
+  const validateNameField = (value: string) => {
+    const v = value.trim()
+    if (!v.length) return t('contact.form.errorCodes.name_required')
+    if (!isValidContactName(v)) return t('contact.form.errorCodes.invalid_name')
+    return ''
+  }
+
   const validateEmail = (value: string) => {
-    if (!value.trim()) return t('contact.form.errorCodes.email_required')
-    return EMAIL_REGEX.test(value.trim()) ? '' : t('contact.form.emailInvalid')
+    const v = value.trim()
+    if (!v) return t('contact.form.errorCodes.email_required')
+    if (EMAIL_MESSAGE_FORBIDDEN.test(v)) return t('contact.form.errorCodes.invalid_email')
+    return EMAIL_REGEX.test(v) ? '' : t('contact.form.errorCodes.invalid_email')
+  }
+
+  const validatePhoneField = (value: string) => {
+    const p = value.trim()
+    const digitCount = p.replace(/\D/g, '').length
+    if (digitCount < 5) return t('contact.form.errorCodes.phone_required')
+    if (!/^\+?\d+$/.test(p)) return t('contact.form.errorCodes.invalid_phone')
+    return ''
   }
 
   const handleEmailBlur = () => {
@@ -123,18 +147,23 @@ export function Contact() {
     setEmailError(validateEmail(email))
   }
 
+  const handleNameBlur = () => {
+    setNameError(validateNameField(name))
+  }
+
   const handleEmailChange = (value: string) => {
-    setEmail(value)
-    if (touched.email) setEmailError(validateEmail(value))
+    const next = sanitizeContactEmailInput(value).slice(0, 320)
+    setEmail(next)
+    if (touched.email) setEmailError(validateEmail(next))
   }
 
   const handleNameChange = (value: string) => {
-    setName(value)
+    setName(sanitizeContactNameInput(value).slice(0, 200))
     if (nameError) setNameError('')
   }
 
   const handleMessageChange = (value: string) => {
-    setMessage(value)
+    setMessage(sanitizeContactMessageInput(value).slice(0, 10000))
     if (messageError) setMessageError('')
   }
 
@@ -144,7 +173,7 @@ export function Contact() {
   }
 
   const handlePhoneChange = (value: string) => {
-    setPhone(value)
+    setPhone(sanitizeContactPhoneInput(value))
     if (phoneError) setPhoneError('')
   }
 
@@ -164,10 +193,9 @@ export function Contact() {
     setPhoneError('')
     setMessageError('')
 
-    if (!name.trim()) {
-      setNameError(t('contact.form.errorCodes.name_required'))
-      return
-    }
+    const nameErr = validateNameField(name)
+    setNameError(nameErr)
+    if (nameErr) return
 
     const emailErr = validateEmail(email)
     setEmailError(emailErr)
@@ -177,8 +205,11 @@ export function Contact() {
       setCountryError(t('contact.form.errorCodes.country_required'))
       return
     }
-    if (phone.trim().length < 5) {
-      setPhoneError(t('contact.form.errorCodes.phone_required'))
+    const phoneErr = validatePhoneField(phone)
+    setPhoneError(phoneErr)
+    if (phoneErr) return
+    if (EMAIL_MESSAGE_FORBIDDEN.test(message)) {
+      setMessageError(t('contact.form.errorCodes.invalid_message'))
       return
     }
     if (message.trim().length < 10) {
@@ -469,6 +500,9 @@ export function Contact() {
                         type="text"
                         value={name}
                         onChange={(e) => handleNameChange(e.target.value)}
+                        onBlur={handleNameBlur}
+                        maxLength={200}
+                        autoComplete="name"
                         placeholder={t('contact.form.namePlaceholder')}
                         disabled={formDisabled}
                         required={!formDisabled}
@@ -499,6 +533,8 @@ export function Contact() {
                         value={email}
                         onChange={(e) => handleEmailChange(e.target.value)}
                         onBlur={handleEmailBlur}
+                        maxLength={320}
+                        autoComplete="email"
                         placeholder={t('contact.form.emailPlaceholder')}
                         disabled={formDisabled}
                         className={`w-full rounded-[5px] border bg-white px-4 py-2.5 font-body text-body-md text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-1 disabled:cursor-not-allowed disabled:bg-neutral-100 ${
@@ -588,8 +624,11 @@ export function Contact() {
                       <input
                         id="contact-phone"
                         type="tel"
+                        inputMode="tel"
                         value={phone}
                         onChange={(e) => handlePhoneChange(e.target.value)}
+                        maxLength={50}
+                        autoComplete="tel"
                         placeholder={t('contact.form.phonePlaceholder')}
                         disabled={formDisabled}
                         aria-invalid={Boolean(phoneError)}
@@ -617,6 +656,7 @@ export function Contact() {
                         rows={5}
                         value={message}
                         onChange={(e) => handleMessageChange(e.target.value)}
+                        maxLength={10000}
                         placeholder={t('contact.form.messagePlaceholder')}
                         disabled={formDisabled}
                         aria-invalid={Boolean(messageError)}

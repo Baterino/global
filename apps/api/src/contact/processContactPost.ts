@@ -3,13 +3,27 @@ import dns from 'node:dns'
 import net from 'node:net'
 import nodemailer from 'nodemailer'
 import { hasResend, sendContactMailsWithResend } from './resendChannel.js'
+import { contactMailDisplayName } from './mailIdentity.js'
 
 const INQUIRY_TYPES = ['general', 'projectsOperations', 'socialImpact'] as const
 type InquiryType = (typeof INQUIRY_TYPES)[number]
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-const DEFAULT_CONTACT_TO = 'alexander@baterino.com'
+/** Disallow angle brackets and slashes in email and message fields (safety / noise reduction). */
+const EMAIL_MESSAGE_FORBIDDEN = /[<>/]/
+
+function isValidContactName(name: string): boolean {
+  return /^[\p{L}]+(?:[ \u00A0][\p{L}]+)*$/u.test(name)
+}
+
+function isValidContactPhone(phone: string): boolean {
+  if (phone.length > 50) return false
+  if (!/^\+?\d+$/.test(phone)) return false
+  return phone.replace(/\D/g, '').length >= 5
+}
+
+const DEFAULT_CONTACT_TO = 'inquiries@baterino.com'
 const DEFAULT_SITE_PUBLIC_URL = 'https://baterino.com'
 const LOGO_PATH = '/images/Baterino-Logo-black.png'
 
@@ -54,20 +68,25 @@ function validateBody(body: unknown): { ok: true; data: ContactSubmission } | { 
     return { ok: false, error: 'invalid_inquiry_type' }
   }
 
-  const name = clampStr(b.name, 200)
+  const name = clampStr(b.name, 200).replace(/\s+/g, ' ')
   if (!name.length) return { ok: false, error: 'name_required' }
+  if (!isValidContactName(name)) return { ok: false, error: 'invalid_name' }
 
   const email = clampStr(b.email, 320)
   if (!email) return { ok: false, error: 'email_required' }
+  if (EMAIL_MESSAGE_FORBIDDEN.test(email)) return { ok: false, error: 'invalid_email' }
   if (!EMAIL_REGEX.test(email)) return { ok: false, error: 'invalid_email' }
 
   const country = clampStr(b.country, 100)
   if (!country) return { ok: false, error: 'country_required' }
 
   const phone = clampStr(b.phone, 50)
-  if (phone.length < 5) return { ok: false, error: 'phone_required' }
+  if (!isValidContactPhone(phone)) {
+    return { ok: false, error: phone.replace(/\D/g, '').length < 5 ? 'phone_required' : 'invalid_phone' }
+  }
 
   const message = clampStr(b.message, 10000)
+  if (EMAIL_MESSAGE_FORBIDDEN.test(message)) return { ok: false, error: 'invalid_message' }
   if (message.length < 10) return { ok: false, error: 'message_too_short' }
 
   const localeRaw = clampStr(b.locale, 16)
@@ -105,17 +124,26 @@ function sitePublicOrigin(): string {
   return (process.env.SITE_PUBLIC_URL ?? DEFAULT_SITE_PUBLIC_URL).replace(/\/$/, '')
 }
 
-function publicUrl(path: string): string {
-  const p = path.startsWith('/') ? path : `/${path}`
-  try {
-    return new URL(p.replace(/^\//, ''), `${sitePublicOrigin()}/`).toString()
-  } catch {
-    return `${sitePublicOrigin()}${p}`
-  }
+/**
+ * Origin for absolute URLs in the customer HTML email (logo + inline icons).
+ * Use the **marketing site** that serves `public/images`, not the API host (e.g. not *.vercel.app API).
+ * Optional override when SITE_PUBLIC_URL points at the API or the function only has API env.
+ */
+function emailHtmlPublicOrigin(): string {
+  const explicit = process.env.CONTACT_EMAIL_PUBLIC_ORIGIN?.trim()
+  if (explicit) return explicit.replace(/\/$/, '')
+  return sitePublicOrigin()
 }
 
-function publicAssetUrl(): string {
-  return publicUrl(LOGO_PATH)
+/** Absolute URL for static assets linked from customer HTML email. */
+function emailPublicUrl(path: string): string {
+  const p = path.startsWith('/') ? path : `/${path}`
+  const origin = emailHtmlPublicOrigin()
+  try {
+    return new URL(p.replace(/^\//, ''), `${origin}/`).toString()
+  } catch {
+    return `${origin}${p}`
+  }
 }
 
 function getSocialFacebookUrl(): string {
@@ -127,8 +155,9 @@ function getSocialLinkedInUrl(): string {
 }
 
 function buildInternalMail(data: ContactSubmission, reference: string): { text: string; html: string } {
+  const brand = contactMailDisplayName()
   const lines = [
-    'New contact form submission (Baterino website)',
+    `New contact form submission (${brand} website)`,
     '',
     `Reference: ${reference}`,
     `Inquiry type: ${data.inquiryType}`,
@@ -148,19 +177,21 @@ function buildInternalMail(data: ContactSubmission, reference: string): { text: 
 }
 
 function buildAutoReplyMail(name: string, reference: string): { text: string; html: string } {
+  const brand = contactMailDisplayName()
   const safeName = escapeHtml(name)
   const safeRef = escapeHtml(reference)
-  const logoUrl = publicAssetUrl()
+  const safeBrand = escapeHtml(brand)
+  const logoUrl = escapeHtml(emailPublicUrl(LOGO_PATH))
   const fbHref = escapeHtml(getSocialFacebookUrl())
   const liHref = escapeHtml(getSocialLinkedInUrl())
-  const fbIconSrc = escapeHtml(publicUrl('/images/social/email-facebook.svg'))
-  const liIconSrc = escapeHtml(publicUrl('/images/social/email-linkedin.svg'))
-  const siteHref = escapeHtml(sitePublicOrigin())
+  const fbIconSrc = escapeHtml(emailPublicUrl('/images/social/email-facebook.svg'))
+  const liIconSrc = escapeHtml(emailPublicUrl('/images/social/email-linkedin.svg'))
+  const siteHref = escapeHtml(emailHtmlPublicOrigin())
 
   const text = [
     `Dear ${name},`,
     '',
-    'Thank you for reaching out to Baterino. Your message has been received and logged under reference number ' +
+    `Thank you for reaching out to ${brand}. Your message has been received and logged under reference number ` +
       reference +
       '.',
     '',
@@ -169,7 +200,7 @@ function buildAutoReplyMail(name: string, reference: string): { text: string; ht
     'We appreciate your interest and look forward to connecting.',
     '',
     'Warm regards,',
-    'The Baterino Team',
+    `The ${brand} Team`,
     `global@baterino.com | baterino.com | Facebook: ${getSocialFacebookUrl()} | LinkedIn: ${getSocialLinkedInUrl()}`,
     '',
     AUTO_REPLY_FOOTPRINT,
@@ -181,14 +212,14 @@ function buildAutoReplyMail(name: string, reference: string): { text: string; ht
 <body style="margin:0;padding:24px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#1a1a1a;background:#ffffff;">
   <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;">
     <tr><td style="padding-bottom:24px;">
-      <img src="${logoUrl}" alt="Baterino" width="200" height="auto" style="display:block;max-width:200px;height:auto;border:0;"/>
+      <img src="${logoUrl}" alt="${safeBrand}" width="200" height="auto" style="display:block;max-width:200px;height:auto;border:0;"/>
     </td></tr>
     <tr><td>
       <p style="margin:0 0 16px;">Dear ${safeName},</p>
-      <p style="margin:0 0 16px;">Thank you for reaching out to Baterino. Your message has been received and logged under reference number <strong>${safeRef}</strong>.</p>
+      <p style="margin:0 0 16px;">Thank you for reaching out to ${safeBrand}. Your message has been received and logged under reference number <strong>${safeRef}</strong>.</p>
       <p style="margin:0 0 16px;">Our team is reviewing your inquiry and will respond shortly. If your request relates to a specific market, the relevant local contact will follow up with you within 24–48 business hours.</p>
       <p style="margin:0 0 24px;">We appreciate your interest and look forward to connecting.</p>
-      <p style="margin:0;">Warm regards,<br/><strong>The Baterino Team</strong></p>
+      <p style="margin:0;">Warm regards,<br/><strong>The ${safeBrand} Team</strong></p>
       <p style="margin:16px 0 0;font-size:14px;color:#444;line-height:1.8;">
         <a href="mailto:global@baterino.com" style="color:#0B0726;">global@baterino.com</a>
         &nbsp;|&nbsp;
@@ -292,17 +323,18 @@ function formatFromDisplay(name: string, address: string): string {
 /** "From" for internal notification via Resend — domain must be verified in Resend. */
 function getResendNotificationFrom(): string {
   const explicit = process.env.RESEND_FROM_EMAIL?.trim()
+  const dn = contactMailDisplayName()
   if (explicit) {
-    return explicit.includes('<') && explicit.includes('>') ? explicit : formatFromDisplay('Baterino', explicit)
+    return explicit.includes('<') && explicit.includes('>') ? explicit : formatFromDisplay(dn, explicit)
   }
-  return formatFromDisplay('Baterino', getSmtpFromAddress())
+  return formatFromDisplay(dn, getSmtpFromAddress())
 }
 
 /** "From" for customer auto-reply via Resend — must be verified (or same verified domain). */
 function getResendAutoReplyFrom(): string {
   const raw = getAutoReplyFromAddress()
   if (raw.includes('<') && raw.includes('>')) return raw
-  return formatFromDisplay('Baterino', raw)
+  return formatFromDisplay(contactMailDisplayName(), raw)
 }
 
 async function canDeliverContactMail(): Promise<boolean> {
@@ -378,11 +410,12 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
   const autoReplyFrom = getAutoReplyFromAddress()
 
   try {
+    const dn = contactMailDisplayName()
     await transport.sendMail({
-      from: formatFromDisplay('Baterino', smtpFrom),
+      from: formatFromDisplay(dn, smtpFrom),
       to: internalTo,
       replyTo: data.email,
-      subject: `[Baterino Contact] ${reference} — ${data.inquiryType} — ${data.name}`,
+      subject: `[${dn} Contact] ${reference} — ${data.inquiryType} — ${data.name}`,
       text: internal.text,
       html: internal.html,
     })
@@ -403,11 +436,12 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
   }
 
   try {
+    const dn = contactMailDisplayName()
     await transport.sendMail({
-      from: formatFromDisplay('Baterino', autoReplyFrom),
+      from: formatFromDisplay(dn, autoReplyFrom),
       to: data.email,
       replyTo: internalTo,
-      subject: `We received your message — Baterino (${reference})`,
+      subject: `We received your message — ${dn} (${reference})`,
       text: autoReply.text,
       html: autoReply.html,
     })

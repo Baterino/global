@@ -23,7 +23,8 @@ Set production values to match what you need for `processContactPost` (see `apps
 | `CONTACT_TO_EMAIL` | Inbox for submissions |
 | `CONTACT_FROM_EMAIL` | Optional “From” for internal notification (SMTP / Resend fallback addressing) |
 | `AUTO_REPLY_FROM_EMAIL` | Optional “From” for customer auto-reply |
-| `SITE_PUBLIC_URL` | Your live URL, no trailing slash (email logo links) |
+| `SITE_PUBLIC_URL` | Your live site URL (defaults for several behaviors) |
+| `CONTACT_EMAIL_PUBLIC_ORIGIN` | **Recommended** if `SITE_PUBLIC_URL` on this project is the API host: set to the **static site** origin (e.g. `https://baterino.com`) so logo/icons in the confirmation email resolve |
 | `SOCIAL_FACEBOOK_URL`, `SOCIAL_LINKEDIN_URL` | Optional |
 
 ### Mail fails / “sender” rejected
