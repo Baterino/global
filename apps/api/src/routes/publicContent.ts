@@ -1,5 +1,6 @@
 import { Router, type Response } from 'express'
 import { getPool } from '../db/pool.js'
+import { publicImageUrlForResponse } from '../storage/r2.js'
 
 export const publicContentRouter = Router()
 
@@ -12,7 +13,11 @@ publicContentRouter.get('/articles', async (_req, res: Response) => {
        WHERE status = 'published'
        ORDER BY published_at DESC NULLS LAST, updated_at DESC`
     )
-    res.json({ ok: true, articles: rows })
+    const articles = rows.map((row) => ({
+      ...row,
+      image_url: publicImageUrlForResponse(row.image_url),
+    }))
+    res.json({ ok: true, articles })
   } catch (e) {
     console.error('[public/articles]', e)
     res.status(503).json({ ok: false, code: 'database_error' })
@@ -75,7 +80,7 @@ publicContentRouter.get('/use-cases', async (_req, res: Response) => {
       useTags: Array.isArray(r.use_tags)
         ? r.use_tags.filter((v: unknown): v is string => typeof v === 'string')
         : [],
-      images: asImg(r.images),
+      images: asImg(r.images).map((url) => publicImageUrlForResponse(url)),
     }))
     res.json({ ok: true, projects })
   } catch (e) {

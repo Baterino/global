@@ -2,11 +2,39 @@ import { Router, type Response } from 'express'
 import { getPool } from '../db/pool.js'
 import type { AuthedRequest } from '../auth/middleware.js'
 import { requireAuth, canDeleteArticle } from '../auth/middleware.js'
+import { publicImageUrlForResponse } from '../storage/r2.js'
 
 export const adminArticlesRouter = Router()
 adminArticlesRouter.use(requireAuth)
 
 const ALLOWED_TYPES = new Set(['company', 'press-release', 'use-cases', 'news'])
+
+function slugifyForArticle(input: string): string {
+  const t = input
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .toLowerCase()
+  const slug = t
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 200)
+  return slug
+}
+
+async function allocateUniqueSlug(pool: ReturnType<typeof getPool>, base: string): Promise<string> {
+  let slug = base || 'article'
+  let n = 0
+  for (;;) {
+    const { rows } = await pool.query<{ id: string }>(
+      `SELECT id FROM blog_articles WHERE slug = $1 LIMIT 1`,
+      [slug]
+    )
+    if (!rows.length) return slug
+    n += 1
+    slug = `${base || 'article'}-${n}`
+  }
+}
 
 adminArticlesRouter.get('/', async (_req: AuthedRequest, res: Response) => {
   try {
@@ -36,7 +64,10 @@ adminArticlesRouter.get('/:id', async (req: AuthedRequest, res: Response) => {
       res.status(404).json({ ok: false, code: 'not_found' })
       return
     }
-    res.json({ ok: true, article: row })
+    res.json({
+      ok: true,
+      article: { ...row, image_url: publicImageUrlForResponse(row.image_url) },
+    })
   } catch (e) {
     console.error('[admin/articles get]', e)
     res.status(503).json({ ok: false, code: 'database_error' })
@@ -44,7 +75,7 @@ adminArticlesRouter.get('/:id', async (req: AuthedRequest, res: Response) => {
 })
 
 adminArticlesRouter.post('/', async (req: AuthedRequest, res: Response) => {
-  const slug = typeof req.body?.slug === 'string' ? req.body.slug.trim().toLowerCase().replace(/\s+/g, '-') : ''
+  const rawSlug = typeof req.body?.slug === 'string' ? req.body.slug.trim() : ''
   const type = typeof req.body?.type === 'string' ? req.body.type : 'company'
   const title = typeof req.body?.title === 'string' ? req.body.title.trim() : ''
   const excerpt = typeof req.body?.excerpt === 'string' ? req.body.excerpt : ''
@@ -55,7 +86,7 @@ adminArticlesRouter.post('/', async (req: AuthedRequest, res: Response) => {
   const category_label = typeof req.body?.category_label === 'string' ? req.body.category_label.trim() : ''
   const status = req.body?.status === 'published' ? 'published' : 'draft'
 
-  if (!slug || !title) {
+  if (!title) {
     res.status(400).json({ ok: false, code: 'slug_title_required' })
     return
   }
@@ -68,6 +99,12 @@ adminArticlesRouter.post('/', async (req: AuthedRequest, res: Response) => {
 
   try {
     const pool = getPool()
+    const baseSlug = rawSlug ? slugifyForArticle(rawSlug) : slugifyForArticle(title)
+    if (!baseSlug) {
+      res.status(400).json({ ok: false, code: 'slug_title_required' })
+      return
+    }
+    const slug = await allocateUniqueSlug(pool, baseSlug)
     const { rows } = await pool.query<{ id: string }>(
       `INSERT INTO blog_articles (
         slug, type, title, excerpt, body_html, image_url, author_name, location_label, category_label,

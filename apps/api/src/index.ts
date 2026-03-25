@@ -9,8 +9,10 @@ import { adminAuthRouter } from './routes/adminAuth.js'
 import { adminUsersRouter } from './routes/adminUsers.js'
 import { adminArticlesRouter } from './routes/adminArticles.js'
 import { adminUseCasesRouter } from './routes/adminUseCases.js'
+import { adminMediaRouter } from './routes/adminMedia.js'
 import { publicContentRouter } from './routes/publicContent.js'
 import { hasResend } from './contact/resendChannel.js'
+import { isR2Configured } from './storage/r2.js'
 
 /** Prefer IPv4 for outbound connections (e.g. SMTP) — many PaaS networks have no IPv6 egress (ENETUNREACH). */
 dns.setDefaultResultOrder('ipv4first')
@@ -35,7 +37,11 @@ if (hasDatabase()) {
       app.use('/api/admin/users', adminUsersRouter)
       app.use('/api/admin/articles', adminArticlesRouter)
       app.use('/api/admin/use-cases', adminUseCasesRouter)
+      app.use('/api/admin/media', adminMediaRouter)
       console.log('[api] CMS enabled: /api/public/* and /api/admin/*')
+      if (!isR2Configured()) {
+        console.warn('[api] R2 media uploads disabled — set R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET_NAME, R2_PUBLIC_URL')
+      }
     } else {
       console.warn('[api] JWT_SECRET missing — public content API active; admin login disabled until JWT_SECRET is set.')
     }

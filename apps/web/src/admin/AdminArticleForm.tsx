@@ -1,15 +1,59 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import {
   adminCreateArticle,
   adminGetArticle,
   adminUpdateArticle,
+  adminUploadMedia,
   type ArticleDetail,
 } from '../lib/adminApi'
+import { AdminArticleBodyEditor } from './AdminArticleBodyEditor'
 
-const TYPES = ['company', 'press-release', 'use-cases', 'news'] as const
+function isArticleBodyEmpty(html: string): boolean {
+  const t = html.trim()
+  if (!t) return true
+  const collapsed = t.replace(/\s/g, '')
+  return /^<(p|div)(\s[^>]*)?>(<br\s*\/?>)*<\/\1>$/i.test(collapsed) || collapsed === '<p></p>'
+}
+
+const ARTICLE_TYPES = ['company', 'press-release', 'use-cases', 'news'] as const
+type ArticleType = (typeof ARTICLE_TYPES)[number]
+
+const TYPE_TO_CATEGORY_I18N: Record<ArticleType, string> = {
+  company: 'insights.filters.company',
+  'press-release': 'insights.filters.pressRelease',
+  'use-cases': 'insights.filters.useCases',
+  news: 'insights.filters.news',
+}
+
+type FormState = {
+  type: ArticleType
+  title: string
+  excerpt: string
+  body_html: string
+  image_url: string
+  author_name: string
+  location_label: string
+  status: 'draft' | 'published'
+}
+
+function buildArticleBody(form: FormState): Record<string, unknown> {
+  return {
+    type: form.type,
+    title: form.title,
+    excerpt: form.excerpt,
+    body_html: form.body_html,
+    image_url: form.image_url.trim(),
+    author_name: form.author_name,
+    location_label: form.location_label,
+    category_label: TYPE_TO_CATEGORY_I18N[form.type],
+    status: form.status,
+  }
+}
 
 export function AdminArticleForm() {
+  const { t } = useTranslation()
   const { id } = useParams<{ id: string }>()
   const location = useLocation()
   const navigate = useNavigate()
@@ -17,18 +61,30 @@ export function AdminArticleForm() {
 
   const [loading, setLoading] = useState(!isNew)
   const [saving, setSaving] = useState(false)
-  const [form, setForm] = useState({
-    slug: '',
-    type: 'company' as (typeof TYPES)[number],
+  const [uploadBusy, setUploadBusy] = useState(false)
+  const [existingSlug, setExistingSlug] = useState('')
+  const [pendingImageFile, setPendingImageFile] = useState<File | null>(null)
+  const [form, setForm] = useState<FormState>({
+    type: 'company',
     title: '',
     excerpt: '',
     body_html: '',
     image_url: '',
     author_name: 'Baterino',
     location_label: '',
-    category_label: 'Insights',
-    status: 'draft' as 'draft' | 'published',
+    status: 'draft',
   })
+
+  const [pendingImagePreviewUrl, setPendingImagePreviewUrl] = useState<string | null>(null)
+  useEffect(() => {
+    if (!pendingImageFile) {
+      setPendingImagePreviewUrl(null)
+      return
+    }
+    const url = URL.createObjectURL(pendingImageFile)
+    setPendingImagePreviewUrl(url)
+    return () => URL.revokeObjectURL(url)
+  }, [pendingImageFile])
 
   useEffect(() => {
     if (isNew) return
@@ -37,16 +93,15 @@ export function AdminArticleForm() {
       try {
         const a: ArticleDetail = await adminGetArticle(id!)
         if (cancelled) return
+        setExistingSlug(a.slug)
         setForm({
-          slug: a.slug,
-          type: (TYPES.includes(a.type as (typeof TYPES)[number]) ? a.type : 'company') as (typeof TYPES)[number],
+          type: (ARTICLE_TYPES.includes(a.type as ArticleType) ? a.type : 'company') as ArticleType,
           title: a.title,
           excerpt: a.excerpt,
           body_html: a.body_html,
           image_url: a.image_url,
           author_name: a.author_name || 'Baterino',
           location_label: a.location_label || '',
-          category_label: a.category_label || '',
           status: a.status === 'published' ? 'published' : 'draft',
         })
       } catch {
@@ -60,23 +115,77 @@ export function AdminArticleForm() {
     }
   }, [id, isNew, navigate])
 
+  async function onFeaturedImageChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+
+    if (isNew || !id) {
+      setPendingImageFile(file)
+      return
+    }
+
+    setUploadBusy(true)
+    try {
+      const { url } = await adminUploadMedia({ kind: 'article', entityId: id, file })
+      setForm((f) => ({ ...f, image_url: url }))
+      setPendingImageFile(null)
+    } catch (err) {
+      alert(err instanceof Error ? err.message : 'Upload failed')
+    } finally {
+      setUploadBusy(false)
+    }
+  }
+
+  function clearPendingImage() {
+    setPendingImageFile(null)
+  }
+
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
+    if (isArticleBodyEmpty(form.body_html)) {
+      alert('Article body is required.')
+      return
+    }
     setSaving(true)
     try {
       if (isNew) {
-        const newId = await adminCreateArticle(form)
+        const body = buildArticleBody(form)
+        const newId = await adminCreateArticle(body)
+        if (pendingImageFile) {
+          setUploadBusy(true)
+          try {
+            const { url } = await adminUploadMedia({
+              kind: 'article',
+              entityId: newId,
+              file: pendingImageFile,
+            })
+            await adminUpdateArticle(newId, { image_url: url })
+            setPendingImageFile(null)
+          } finally {
+            setUploadBusy(false)
+          }
+        }
         navigate(`/admin/articles/${newId}`, { replace: true })
       } else {
-        await adminUpdateArticle(id!, form)
+        await adminUpdateArticle(id!, buildArticleBody(form))
         navigate('/admin/articles')
       }
     } catch (err) {
-      alert(err instanceof Error ? err.message : 'Save failed')
+      const code = err instanceof Error ? err.message : ''
+      const msg =
+        code === 'slug_taken'
+          ? 'That URL slug is already in use. Change the title slightly and try again.'
+          : err instanceof Error
+            ? err.message
+            : 'Save failed'
+      alert(msg)
     } finally {
       setSaving(false)
     }
   }
+
+  const previewSrc = pendingImagePreviewUrl || form.image_url || ''
 
   if (loading) return <p className="text-neutral-500">Loading…</p>
 
@@ -89,35 +198,13 @@ export function AdminArticleForm() {
         {isNew ? 'New article' : 'Edit article'}
       </h1>
       <form className="mt-6 max-w-3xl space-y-4" onSubmit={onSubmit}>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label className="block text-body-sm font-medium">Slug (URL)</label>
-            <input
-              className="mt-1 w-full rounded border border-neutral-300 px-3 py-2"
-              value={form.slug}
-              onChange={(e) => setForm((f) => ({ ...f, slug: e.target.value }))}
-              required
-              disabled={!isNew}
-            />
-            {!isNew ? <p className="mt-1 text-body-xs text-neutral-500">Slug cannot be changed after create.</p> : null}
-          </div>
-          <div>
-            <label className="block text-body-sm font-medium">Type</label>
-            <select
-              className="mt-1 w-full rounded border border-neutral-300 px-3 py-2"
-              value={form.type}
-              onChange={(e) =>
-                setForm((f) => ({ ...f, type: e.target.value as (typeof TYPES)[number] }))
-              }
-            >
-              {TYPES.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
+        {!isNew && existingSlug ? (
+          <p className="text-body-sm text-neutral-600">
+            <span className="font-medium text-neutral-800">URL slug</span>{' '}
+            <code className="rounded bg-neutral-100 px-2 py-0.5 text-body-xs">{existingSlug}</code>
+            <span className="ml-2 text-body-xs text-neutral-500">(set when created from title)</span>
+          </p>
+        ) : null}
         <div>
           <label className="block text-body-sm font-medium">Title</label>
           <input
@@ -126,6 +213,21 @@ export function AdminArticleForm() {
             onChange={(e) => setForm((f) => ({ ...f, title: e.target.value }))}
             required
           />
+        </div>
+        <div>
+          <label className="block text-body-sm font-medium">Category</label>
+          <select
+            className="mt-1 w-full rounded border border-neutral-300 px-3 py-2 sm:max-w-md"
+            value={form.type}
+            onChange={(e) => setForm((f) => ({ ...f, type: e.target.value as ArticleType }))}
+          >
+            {ARTICLE_TYPES.map((ty) => (
+              <option key={ty} value={ty}>
+                {t(TYPE_TO_CATEGORY_I18N[ty])}
+              </option>
+            ))}
+          </select>
+          <p className="mt-1 text-body-xs text-neutral-500">Matches Insights filter tabs on the public site.</p>
         </div>
         <div>
           <label className="block text-body-sm font-medium">Excerpt</label>
@@ -137,15 +239,52 @@ export function AdminArticleForm() {
           />
         </div>
         <div>
-          <label className="block text-body-sm font-medium">Featured image URL</label>
-          <input
-            className="mt-1 w-full rounded border border-neutral-300 px-3 py-2"
-            value={form.image_url}
-            onChange={(e) => setForm((f) => ({ ...f, image_url: e.target.value }))}
-            placeholder="/images/blog/example.jpg"
-          />
+          <label className="block text-body-sm font-medium">Featured image</label>
+          <div className="mt-1 flex flex-wrap items-center gap-3">
+            <input
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+              disabled={uploadBusy || saving}
+              onChange={onFeaturedImageChange}
+              className="text-body-sm text-neutral-700 file:mr-3 file:rounded file:border file:border-neutral-300 file:bg-white file:px-3 file:py-1.5"
+            />
+            {uploadBusy ? <span className="text-body-sm text-neutral-500">Uploading…</span> : null}
+            {pendingImageFile ? (
+              <button
+                type="button"
+                onClick={clearPendingImage}
+                className="text-body-sm text-neutral-600 underline hover:text-neutral-900"
+              >
+                Remove selected file
+              </button>
+            ) : null}
+          </div>
+          <details className="mt-3">
+            <summary className="cursor-pointer text-body-xs font-medium text-neutral-600">
+              Paste image URL instead
+            </summary>
+            <input
+              className="mt-2 w-full rounded border border-neutral-300 px-3 py-2"
+              value={form.image_url}
+              onChange={(e) => setForm((f) => ({ ...f, image_url: e.target.value }))}
+              placeholder="https://… or /images/blog/example.jpg"
+              disabled={Boolean(pendingImageFile && isNew)}
+            />
+            {pendingImageFile && isNew ? (
+              <p className="mt-1 text-body-xs text-neutral-500">
+                Clear the selected file above to edit the URL, or saving will upload the file.
+              </p>
+            ) : null}
+          </details>
+          {previewSrc ? (
+            <img
+              src={previewSrc}
+              alt=""
+              className="mt-3 max-h-48 max-w-full rounded border border-neutral-200 object-contain"
+            />
+          ) : null}
         </div>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <label className="block text-body-sm font-medium">Author (display)</label>
             <input
@@ -155,7 +294,7 @@ export function AdminArticleForm() {
             />
           </div>
           <div>
-            <label className="block text-body-sm font-medium">Location line</label>
+            <label className="block text-body-sm font-medium">City</label>
             <input
               className="mt-1 w-full rounded border border-neutral-300 px-3 py-2"
               value={form.location_label}
@@ -163,28 +302,20 @@ export function AdminArticleForm() {
               placeholder="Global"
             />
           </div>
-          <div>
-            <label className="block text-body-sm font-medium">Category line</label>
-            <input
-              className="mt-1 w-full rounded border border-neutral-300 px-3 py-2"
-              value={form.category_label}
-              onChange={(e) => setForm((f) => ({ ...f, category_label: e.target.value }))}
-            />
-          </div>
         </div>
         <div>
-          <label className="block text-body-sm font-medium">Body (HTML)</label>
-          <textarea
-            className="mt-1 w-full rounded border border-neutral-300 px-3 py-2 font-mono text-body-sm"
-            rows={18}
+          <label className="mb-1 block text-body-sm font-medium">Body</label>
+          <AdminArticleBodyEditor
+            instanceKey={isNew ? 'new' : (id ?? 'edit')}
             value={form.body_html}
-            onChange={(e) => setForm((f) => ({ ...f, body_html: e.target.value }))}
-            required
-            placeholder='<div class="article-rich"><p>…</p></div>'
+            onChange={(html) => setForm((f) => ({ ...f, body_html: html }))}
+            disabled={saving || uploadBusy}
           />
-          <p className="mt-1 text-body-xs text-neutral-500">
-            Use <code className="rounded bg-neutral-100 px-1">__LOCALE__</code> in links; it is replaced with the
-            visitor&apos;s locale on the public site.
+          <p className="mt-2 text-body-xs text-neutral-500">
+            Rich text and <strong className="font-medium text-neutral-700">Source</strong> (&lt;/&gt;) for raw HTML.
+            Custom classes (e.g. <code className="rounded bg-neutral-100 px-1">article-rich</code>) are easiest to
+            keep in Source mode. Use <code className="rounded bg-neutral-100 px-1">__LOCALE__</code> in links; it is
+            replaced with the visitor&apos;s locale on the public site.
           </p>
         </div>
         <div>
@@ -202,7 +333,7 @@ export function AdminArticleForm() {
         </div>
         <button
           type="submit"
-          disabled={saving}
+          disabled={saving || uploadBusy}
           className="rounded-lg bg-neutral-900 px-6 py-2.5 font-semibold text-white hover:bg-neutral-800 disabled:opacity-50"
         >
           {saving ? 'Saving…' : isNew ? 'Create' : 'Save changes'}

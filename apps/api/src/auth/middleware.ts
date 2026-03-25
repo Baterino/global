@@ -40,3 +40,12 @@ export function canDeleteArticle(user: JwtPayload | undefined, authorId: string 
 export function canDeleteUseCase(user: JwtPayload | undefined, authorId: string | null): boolean {
   return canDeleteArticle(user, authorId)
 }
+
+/** Same rules as delete: admins or owning author may edit / upload media. */
+export function canEditArticle(user: JwtPayload | undefined, authorId: string | null): boolean {
+  return canDeleteArticle(user, authorId)
+}
+
+export function canEditUseCase(user: JwtPayload | undefined, authorId: string | null): boolean {
+  return canDeleteUseCase(user, authorId)
+}

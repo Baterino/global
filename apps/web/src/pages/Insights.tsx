@@ -19,12 +19,6 @@ interface ArticleItem {
   excerpt: string
 }
 
-const FALLBACK_ARTICLES: ArticleItem[] = [
-  { id: 'global-delivery-framework', slug: 'global-delivery-framework', type: 'company', image: '/images/blog/global-delivery-framework.jpg', date: 'insights.article7.date', dateSort: '2026-03-01', title: 'insights.article7.title', excerpt: 'insights.article7.excerpt' },
-  { id: 'baterino-roles-in-every-market', slug: 'baterino-roles-in-every-market', type: 'company', image: '/images/about-baterino.jpg', date: 'insights.article8.date', dateSort: '2026-03-15', title: 'insights.article8.title', excerpt: 'insights.article8.excerpt' },
-  { id: 'request-to-operation', slug: 'request-to-operation', type: 'company', image: '/images/blog/how-baterino-assess-a-project.jpg', date: 'insights.article9.date', dateSort: '2026-03-20', title: 'insights.article9.title', excerpt: 'insights.article9.excerpt' },
-].sort((a, b) => b.dateSort.localeCompare(a.dateSort))
-
 function apiArticleToItem(a: PublicArticleListItem): ArticleItem {
   const sort = a.published_at ? a.published_at.slice(0, 10) : '1970-01-01'
   const dateDisplay = a.published_at ? new Date(a.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : ''
@@ -70,10 +64,7 @@ export function Insights() {
   }, [])
 
   const articles = useMemo(() => {
-    const bySlug = new Map<string, ArticleItem>()
-    FALLBACK_ARTICLES.forEach((a) => bySlug.set(a.slug, a))
-    apiArticles.forEach((a) => bySlug.set(a.slug, a))
-    return Array.from(bySlug.values()).sort((a, b) => b.dateSort.localeCompare(a.dateSort))
+    return [...apiArticles].sort((a, b) => b.dateSort.localeCompare(a.dateSort))
   }, [apiArticles])
 
   useEffect(() => {

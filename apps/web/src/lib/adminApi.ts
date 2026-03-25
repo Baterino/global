@@ -205,6 +205,47 @@ export async function adminDeleteArticle(id: string): Promise<void> {
   if (!res.ok || !data.ok) throw new Error(data.code ?? 'delete_failed')
 }
 
+export async function adminUploadMedia(params: {
+  kind: 'article' | 'use-case'
+  entityId: string
+  file: File
+}): Promise<{ url: string; key: string }> {
+  const token = getAdminToken()
+  if (!token) throw new Error('Not signed in')
+  const base = viteApiBaseUrl()
+  if (import.meta.env.PROD && !base) {
+    throw new Error('VITE_API_URL is not set; cannot upload.')
+  }
+  const form = new FormData()
+  form.append('kind', params.kind)
+  form.append('entityId', params.entityId)
+  form.append('file', params.file)
+  const res = await fetch(`${base}/api/admin/media/upload`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}` },
+    body: form,
+  })
+  const data = (await res.json()) as { ok?: boolean; url?: string; key?: string; code?: string }
+  if (!res.ok || !data.ok || !data.url) {
+    const code = data.code ?? 'upload_failed'
+    const messages: Record<string, string> = {
+      r2_not_configured: 'Server is not configured for file storage (R2).',
+      file_required: 'Choose a file to upload.',
+      invalid_kind: 'Invalid upload type.',
+      entity_id_required: 'Missing article or project id.',
+      invalid_article_id: 'Invalid article id.',
+      invalid_project_id: 'Invalid project id.',
+      not_found: 'Article or use case not found.',
+      forbidden: 'You cannot upload for this item.',
+      invalid_file_type: 'Only JPEG, PNG, WebP, GIF, or AVIF images are allowed.',
+      file_too_large: 'File is too large (max 12 MB).',
+      upload_failed: 'Upload failed.',
+    }
+    throw new Error(messages[code] ?? code)
+  }
+  return { url: data.url, key: data.key ?? '' }
+}
+
 export type UseCaseRow = {
   project_id: string
   sector: string

@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "i18next": "^23.7.0",
+    "jodit": "^4.11.15",
+    "jodit-react": "^5.3.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.0",

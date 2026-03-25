@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
-import { adminCreateUseCase, adminGetUseCase, adminUpdateUseCase } from '../lib/adminApi'
+import { adminCreateUseCase, adminGetUseCase, adminUpdateUseCase, adminUploadMedia } from '../lib/adminApi'
 
 const SECTORS = ['industrial', 'maritime', 'offgrid'] as const
 const INSTALL = ['cabinet', 'container', 'rack', 'marine'] as const
@@ -18,6 +18,7 @@ export function AdminUseCaseForm() {
 
   const [loading, setLoading] = useState(!isNew)
   const [saving, setSaving] = useState(false)
+  const [uploadBusy, setUploadBusy] = useState(false)
   const [form, setForm] = useState({
     project_id: '',
     sector: 'industrial' as (typeof SECTORS)[number],
@@ -103,17 +104,38 @@ export function AdminUseCaseForm() {
 
     setSaving(true)
     try {
+      const pid = form.project_id.trim()
       if (isNew) {
-        await adminCreateUseCase({ ...payload, project_id: form.project_id.trim() })
-        navigate('/admin/use-cases')
+        await adminCreateUseCase({ ...payload, project_id: pid })
+        navigate(`/admin/use-cases/${encodeURIComponent(pid)}`, { replace: true })
       } else {
-        await adminUpdateUseCase(form.project_id, payload)
+        await adminUpdateUseCase(pid, payload)
         navigate('/admin/use-cases')
       }
     } catch (err) {
       alert(err instanceof Error ? err.message : 'Save failed')
     } finally {
       setSaving(false)
+    }
+  }
+
+  async function onGalleryImageChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file || isNew) return
+    const pid = form.project_id.trim()
+    if (!pid) return
+    setUploadBusy(true)
+    try {
+      const { url } = await adminUploadMedia({ kind: 'use-case', entityId: pid, file })
+      setForm((f) => ({
+        ...f,
+        images_text: f.images_text.trim() ? `${f.images_text.trim()}\n${url}` : url,
+      }))
+    } catch (err) {
+      alert(err instanceof Error ? err.message : 'Upload failed')
+    } finally {
+      setUploadBusy(false)
     }
   }
 
@@ -227,13 +249,30 @@ export function AdminUseCaseForm() {
           />
         </div>
         <div>
-          <label className="block text-body-sm font-medium">Image URLs (one per line)</label>
+          <label className="block text-body-sm font-medium">Images (gallery)</label>
+          {!isNew && form.project_id ? (
+            <div className="mt-1 flex flex-wrap items-center gap-3">
+              <input
+                type="file"
+                accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+                disabled={uploadBusy || saving}
+                onChange={onGalleryImageChange}
+                className="text-body-sm text-neutral-700 file:mr-3 file:rounded file:border file:border-neutral-300 file:bg-white file:px-3 file:py-1.5"
+              />
+              {uploadBusy ? <span className="text-body-sm text-neutral-500">Uploading…</span> : null}
+            </div>
+          ) : isNew ? (
+            <p className="mt-1 text-body-xs text-neutral-500">
+              Create the use case first, then add images (each upload is appended as a new line below).
+            </p>
+          ) : null}
+          <label className="mt-3 block text-body-xs font-medium text-neutral-600">Image URLs (one per line)</label>
           <textarea
             className="mt-1 w-full rounded border border-neutral-300 px-3 py-2 font-mono text-body-sm"
             rows={5}
             value={form.images_text}
             onChange={(e) => setForm((f) => ({ ...f, images_text: e.target.value }))}
-            placeholder="/images/usecases/GS-229/GS-229_photo_01.jpg"
+            placeholder="https://… or /images/usecases/GS-229/GS-229_photo_01.jpg"
           />
         </div>
         <div>
