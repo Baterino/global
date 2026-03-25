@@ -10,6 +10,7 @@ import { adminUsersRouter } from './routes/adminUsers.js'
 import { adminArticlesRouter } from './routes/adminArticles.js'
 import { adminUseCasesRouter } from './routes/adminUseCases.js'
 import { publicContentRouter } from './routes/publicContent.js'
+import { hasResend } from './contact/resendChannel.js'
 
 /** Prefer IPv4 for outbound connections (e.g. SMTP) — many PaaS networks have no IPv6 egress (ENETUNREACH). */
 dns.setDefaultResultOrder('ipv4first')
@@ -47,4 +48,12 @@ if (hasDatabase()) {
 
 app.listen(PORT, () => {
   console.log(`API server running at http://localhost:${PORT}`)
+  const smtpConfigured = Boolean(
+    process.env.SMTP_HOST?.trim() && process.env.SMTP_USER?.trim() && process.env.SMTP_PASS?.trim(),
+  )
+  if (process.env.NODE_ENV === 'production' && smtpConfigured && !hasResend()) {
+    console.warn(
+      '[api] Contact mail will use SMTP, but RESEND_API_KEY is unset. Many hosts (e.g. Railway Hobby) block outbound SMTP (ETIMEDOUT); set RESEND_API_KEY + RESEND_FROM_EMAIL to use HTTPS delivery.',
+    )
+  }
 })

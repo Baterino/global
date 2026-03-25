@@ -2,6 +2,7 @@ import { randomBytes } from 'node:crypto'
 import dns from 'node:dns'
 import net from 'node:net'
 import nodemailer from 'nodemailer'
+import { hasResend, sendContactMailsWithResend } from './resendChannel.js'
 
 const INQUIRY_TYPES = ['general', 'projectsOperations', 'socialImpact'] as const
 type InquiryType = (typeof INQUIRY_TYPES)[number]
@@ -288,6 +289,27 @@ function formatFromDisplay(name: string, address: string): string {
   return `"${name}" <${a}>`
 }
 
+/** "From" for internal notification via Resend — domain must be verified in Resend. */
+function getResendNotificationFrom(): string {
+  const explicit = process.env.RESEND_FROM_EMAIL?.trim()
+  if (explicit) {
+    return explicit.includes('<') && explicit.includes('>') ? explicit : formatFromDisplay('Baterino', explicit)
+  }
+  return formatFromDisplay('Baterino', getSmtpFromAddress())
+}
+
+/** "From" for customer auto-reply via Resend — must be verified (or same verified domain). */
+function getResendAutoReplyFrom(): string {
+  const raw = getAutoReplyFromAddress()
+  if (raw.includes('<') && raw.includes('>')) return raw
+  return formatFromDisplay('Baterino', raw)
+}
+
+async function canDeliverContactMail(): Promise<boolean> {
+  if (hasResend()) return true
+  return (await getTransport()) != null
+}
+
 /**
  * Shared by Express (`/api/contact`) and Vercel serverless (`api/contact.ts`).
  */
@@ -309,11 +331,41 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
 
   const data = parsed.data
   const reference = generateInquiryReference()
-  const transport = await getTransport()
   const internalTo = getInternalToAddress()
-  const smtpFrom = getSmtpFromAddress()
-  const autoReplyFrom = getAutoReplyFromAddress()
+  const internal = buildInternalMail(data, reference)
+  const autoReply = buildAutoReplyMail(data.name, reference)
 
+  const deliverable = await canDeliverContactMail()
+  if (!deliverable) {
+    if (process.env.NODE_ENV === 'production') {
+      return { status: 503, body: { ok: false, code: 'contact_unavailable' } }
+    }
+    console.info('[contact] (dev, no Resend/SMTP) reference:', reference, 'payload:', JSON.stringify(data, null, 2))
+    return { status: 200, body: { ok: true, reference } }
+  }
+
+  if (hasResend()) {
+    try {
+      await sendContactMailsWithResend({
+        internalTo,
+        notificationFrom: getResendNotificationFrom(),
+        autoReplyFrom: getResendAutoReplyFrom(),
+        submitterEmail: data.email,
+        submitterName: data.name,
+        reference,
+        inquiryType: data.inquiryType,
+        internal,
+        autoReply,
+      })
+      return { status: 200, body: { ok: true, reference } }
+    } catch (err) {
+      const detail = err instanceof Error ? err.message : String(err)
+      console.error('[contact] Resend send failed:', detail, err)
+      return { status: 502, body: { ok: false, code: 'send_failed' } }
+    }
+  }
+
+  const transport = await getTransport()
   if (!transport) {
     if (process.env.NODE_ENV === 'production') {
       return { status: 503, body: { ok: false, code: 'contact_unavailable' } }
@@ -322,8 +374,8 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
     return { status: 200, body: { ok: true, reference } }
   }
 
-  const internal = buildInternalMail(data, reference)
-  const autoReply = buildAutoReplyMail(data.name, reference)
+  const smtpFrom = getSmtpFromAddress()
+  const autoReplyFrom = getAutoReplyFromAddress()
 
   try {
     await transport.sendMail({

@@ -2,33 +2,39 @@
 
 ## Project root
 
-Use the **repository root** as the Vercel project root (where the root `vercel.json` lives), not `apps/web` only. That way:
+Either layout works:
 
-- The static site is built from `apps/web`
-- The **serverless** handler at `api/contact.ts` handles `POST /api/contact`
+1. **Repository root** (root `vercel.json`): static output `apps/web/dist`, serverless entry `api/contact.ts`.
+2. **`apps/web` as Vercel Root Directory** (`apps/web/vercel.json`): static output `dist`, serverless entry **`apps/web/api/contact.ts`** (re-exports the same handler from `apps/api`).
+
+In both cases, `POST /api/contact` runs on Vercel and needs mail-related env vars **on that Vercel project** (Railway env does not apply here unless `VITE_API_URL` points the browser at Railway).
 
 ## Environment variables (Vercel → Settings → Environment Variables)
 
-Add the same values you use in `apps/api/.env` for production:
+Set production values to match what you need for `processContactPost` (see `apps/api/.env.example`):
 
 | Variable | Purpose |
 |----------|---------|
-| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` | Send mail (required in production) |
+| `RESEND_API_KEY` | **Preferred on Vercel** — HTTPS sending (set with `RESEND_FROM_EMAIL`); avoids SMTP egress issues |
+| `RESEND_FROM_EMAIL` | Verified sender, e.g. `no-reply@yourdomain.com` or `Name <no-reply@…>` |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` | SMTP fallback when `RESEND_API_KEY` is unset |
 | `SMTP_SECURE` | `true` if using port 465 |
 | `SMTP_REQUIRE_TLS` | For port 587, `false` only if STARTTLS breaks your host (default: require TLS) |
 | `CONTACT_TO_EMAIL` | Inbox for submissions |
-| `CONTACT_FROM_EMAIL` | Optional “From” for internal notification; defaults to `SMTP_USER` |
-| `AUTO_REPLY_FROM_EMAIL` | Optional “From” for customer auto-reply; defaults to `CONTACT_FROM_EMAIL`, then `SMTP_USER` |
+| `CONTACT_FROM_EMAIL` | Optional “From” for internal notification (SMTP / Resend fallback addressing) |
+| `AUTO_REPLY_FROM_EMAIL` | Optional “From” for customer auto-reply |
+| `SITE_PUBLIC_URL` | Your live URL, no trailing slash (email logo links) |
+| `SOCIAL_FACEBOOK_URL`, `SOCIAL_LINKEDIN_URL` | Optional |
 
 ### Mail fails / “sender” rejected
 
-Most SMTP providers only allow **From** addresses that match the authenticated account or a **verified sender/alias** on that account.
+**Resend:** verify the domain and sender in the Resend dashboard; check function logs for `[contact] Resend send failed`.
 
-1. Leave `CONTACT_FROM_EMAIL` and `AUTO_REPLY_FROM_EMAIL` unset so both use `SMTP_USER`, **or** set them to addresses your provider has verified for that SMTP login.
-2. Check Vercel **function logs** for `[contact] internal sendMail failed` or `auto-reply sendMail failed` — the message often includes the SMTP error (e.g. 535, 553).
+**SMTP:** Most providers only allow **From** addresses that match the authenticated account or a verified alias.
+
+1. Leave `CONTACT_FROM_EMAIL` and `AUTO_REPLY_FROM_EMAIL` unset so both use `SMTP_USER`, **or** set verified addresses.
+2. Check Vercel **function logs** for send errors.
 3. Port **587**: use `SMTP_SECURE=false` (or omit); port **465**: set `SMTP_SECURE=true`.
-| `SITE_PUBLIC_URL` | Your live URL, no trailing slash (email logo links) |
-| `SOCIAL_FACEBOOK_URL`, `SOCIAL_LINKEDIN_URL` | Optional |
 
 Do **not** set `VITE_API_URL` if the site and `/api` are on the same Vercel deployment (default).
 
