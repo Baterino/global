@@ -336,7 +336,17 @@ export async function processContactPost(rawBody: unknown): Promise<ContactProce
     })
   } catch (err) {
     const detail = err instanceof Error ? err.message : String(err)
-    console.error('[contact] internal sendMail failed:', detail, err)
+    const smtpPort = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587
+    console.error(
+      '[contact] internal sendMail failed:',
+      detail,
+      '| check server accepts TCP on SMTP_HOST:',
+      process.env.SMTP_HOST ?? '(unset)',
+      'port:',
+      smtpPort,
+      '(firewall / listen 0.0.0.0 / try 587+STARTTLS if 465 blocked)',
+      err
+    )
     return { status: 502, body: { ok: false, code: 'send_failed' } }
   }
 
