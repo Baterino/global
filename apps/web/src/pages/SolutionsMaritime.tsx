@@ -72,6 +72,18 @@ export function SolutionsMaritime() {
             }
             techTitleKey="maritime.techBoxTitle"
             techSubtitleKey="maritime.systems.techBoxSubtitle"
+            techProductTileAspect="tall"
+            techProductCaptionLayout="split"
+            techProductOffsetTop
+            techShowContactCta
+            techProductImages={[
+              {
+                src: '/images/products/maritime/white-sharl-series.png',
+                alt: 'White Shark 2.0 ESS Marine Power',
+                titleKey: 'maritime.systems.techProduct1.title',
+                subtitleKey: 'maritime.systems.techProduct1.subtitle',
+              },
+            ]}
             rightColumn={
               <div className="flex flex-col">
                 <h3 className="mb-4 font-heading text-lg font-bold uppercase tracking-tight text-neutral-900 sm:text-xl lg:mb-5">

@@ -523,6 +523,7 @@
       "subtitle": "From individual homes to entire communities, Baterino enables residential energy storage solutions built for resilience, reliability, and long-term impact."
     },
     "techBoxTitle": "Technologies we use",
+    "techContactCta": "Contact us",
     "individual": {
       "title": "Residential Storage for Individual Users",
       "desc1": "Residential energy storage systems allow individual households to store energy and use it when needed. These systems are designed to operate independently or in combination with renewable energy sources, such as solar.",
@@ -540,7 +541,15 @@
       "advantage1": "Reliable power during outages and grid instability",
       "advantage2": "Greater energy independence and control over energy use",
       "advantage3": "Optimized use of renewable energy through energy storage",
-      "advantage4": "Improved cost management by reducing exposure to peak tariffs"
+      "advantage4": "Improved cost management by reducing exposure to peak tariffs",
+      "techProduct1": {
+        "title": "Wall Mounted Storage LV",
+        "subtitle": "TR Series Residential - 5 kWh to 20 kWh"
+      },
+      "techProduct2": {
+        "title": "Wall Mounted Pro LV",
+        "subtitle": "TR Series Pro Residential - 10 kWh - 16 kWh"
+      }
     },
     "microgrids": {
       "title": "Microgrids for Our Communities",
@@ -559,7 +568,19 @@
       "advantage1": "Residential communities and villages",
       "advantage2": "Islands and remote or off-grid locations",
       "advantage3": "Hospitals, schools, and educational facilities",
-      "advantage4": "Water, sanitation, and essential services and community centers"
+      "advantage4": "Water, sanitation, and essential services and community centers",
+      "techProduct1": {
+        "title": "Green Planet Series HV Stacked",
+        "subtitle": "HP Ultra Series Stackable - 8 kWh - 48 kWh"
+      },
+      "techProduct2": {
+        "title": "Green Planet Pro HV Stacked",
+        "subtitle": "HP Ultra 2000k - from 20.48 kWh to 40.96 kWh"
+      },
+      "techProduct3": {
+        "title": "One Stop All in One Energy Series",
+        "subtitle": "TA6000 All In One - from 10.24 kWh to 20.48 kWh"
+      }
     }
   },
   "industrial": {
@@ -618,7 +639,15 @@
       "app3": "Renewable energy firming and integration",
       "app4": "Peak shaving, load management, and energy arbitrage",
       "app5": "Backup power for critical industrial operations",
-      "applicationsIntro": "Higher-capacity containerized BESS supports a wide range of industrial and grid-connected use cases, including:"
+      "applicationsIntro": "Higher-capacity containerized BESS supports a wide range of industrial and grid-connected use cases, including:",
+      "techProduct1": {
+        "title": "20ft Modular BESS Container",
+        "subtitle": "Air Cooling System - 3 MWh to 5 MWh"
+      },
+      "techProduct2": {
+        "title": "20ft Modular BESS Container",
+        "subtitle": "Liquid Cooling System - 656 kWh to 1.4 MWh"
+      }
     }
   },
   "maritime": {
@@ -644,7 +673,11 @@
       "safety2": "Marine-verified monitoring and control systems",
       "safety3": "Shock-proof and vibration-resistant construction",
       "safety4": "Corrosion-resistant enclosures",
-      "safety5": "Alignment with marine classification and compliance"
+      "safety5": "Alignment with marine classification and compliance",
+      "techProduct1": {
+        "title": "White Shark 2.0 ESS Marine Power",
+        "subtitle": "A modular stacking Lithion Iron Phosphate system, with 17.8 kWh per module. Air Cooling / Nature Cooling — string number is unlimited based on EMS."
+      }
     },
     "delivery": {
       "title": "How Do We Deliver",

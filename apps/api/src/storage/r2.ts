@@ -140,6 +140,36 @@ export function publicImageUrlForResponse(storedUrl: string | null | undefined):
   return u
 }
 
+/**
+ * Legacy article HTML often contains full S3-API URLs (*.r2.cloudflarestorage.com) which browsers cannot fetch.
+ * When R2_PUBLIC_URL is a valid public origin, rewrite those strings to the public base + object key.
+ */
+export function rewriteBodyHtmlR2ApiUrls(html: string | null | undefined): string {
+  if (html == null || html === '') return html ?? ''
+  const bucket = getR2BucketName()
+  const pubBase = normalizeScalarEnv(process.env.R2_PUBLIC_URL).replace(/\/+$/, '')
+  if (!bucket || !pubBase || isR2PublicUrlS3ApiEndpoint(pubBase)) return html
+
+  const esc = bucket.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  // Path-style: https://<accountId>.r2.cloudflarestorage.com/<bucket>/<key>
+  const re = new RegExp(
+    `https?://[a-f0-9]+\\.r2\\.cloudflarestorage\\.com/${esc}/([^"'\s>]+)`,
+    'gi',
+  )
+  return html.replace(re, (fullMatch, rawKey: string) => {
+    let key = rawKey.replace(/&amp;/g, '&')
+    try {
+      key = decodeURIComponent(key)
+    } catch {
+      /* keep key */
+    }
+    const fixed = tryPublicUrlForKey(key)
+    if (fixed) return fixed
+    if (isR2PublicUrlS3ApiEndpoint(pubBase)) return fullMatch
+    return `${pubBase}/${key.replace(/^\/+/, '')}`
+  })
+}
+
 const ALLOWED_TYPES = new Set([
   'image/jpeg',
   'image/png',

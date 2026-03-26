@@ -1,11 +1,57 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
-import { SolutionTwoColumnLayout } from '../components/solutions/SolutionTwoColumnLayout'
+import { SolutionTwoColumnLayout, type TechProductImage } from '../components/solutions/SolutionTwoColumnLayout'
 import { SEOHead } from '../components/SEOHead'
 
 type ResidentialSectionId = 'individual' | 'microgrids'
 
-function ResidentialSectionBody({ section }: { section: ResidentialSectionId }) {
+const INDIVIDUAL_LOW_VOLTAGE_PRODUCTS: readonly TechProductImage[] = [
+  {
+    src: '/images/products/residential/wall-mounted-low-voltage.png',
+    alt: 'Wall Mounted Storage LV TR Series residential',
+    titleKey: 'residential.individual.techProduct1.title',
+    subtitleKey: 'residential.individual.techProduct1.subtitle',
+  },
+  {
+    src: '/images/products/residential/wall-mounted-low-voltage-pro.png',
+    alt: 'Wall Mounted Pro LV TR Series Pro residential',
+    titleKey: 'residential.individual.techProduct2.title',
+    subtitleKey: 'residential.individual.techProduct2.subtitle',
+  },
+]
+
+/** Left → right: HV stack, HP Ultra 2000k stack, TA6000 all-in-one (matches Green Planet / One Stop copy). */
+const MICROGRID_HIGH_VOLTAGE_PRODUCTS: readonly TechProductImage[] = [
+  {
+    src: '/images/products/residential/high-voltage-stacked.png',
+    alt: 'Green Planet Series HV Stacked residential storage',
+    titleKey: 'residential.microgrids.techProduct1.title',
+    subtitleKey: 'residential.microgrids.techProduct1.subtitle',
+  },
+  {
+    src: '/images/products/residential/hp-2000k.png',
+    alt: 'Green Planet Pro HV Stacked HP Ultra 2000k',
+    titleKey: 'residential.microgrids.techProduct2.title',
+    subtitleKey: 'residential.microgrids.techProduct2.subtitle',
+  },
+  {
+    src: '/images/products/residential/all-in-one.png',
+    alt: 'One Stop All in One TA6000 energy series',
+    titleKey: 'residential.microgrids.techProduct3.title',
+    subtitleKey: 'residential.microgrids.techProduct3.subtitle',
+  },
+]
+
+function ResidentialSectionBody({
+  section,
+  techProductImages,
+  techProductPadToSlots,
+}: {
+  section: ResidentialSectionId
+  techProductImages: readonly TechProductImage[]
+  /** Total slots in the row (e.g. 3); empty slots stay blank. */
+  techProductPadToSlots?: number
+}) {
   const { t } = useTranslation()
   const base = `residential.${section}`
   const advantagesIntroKey =
@@ -28,6 +74,12 @@ function ResidentialSectionBody({ section }: { section: ResidentialSectionId }) 
       }
       techTitleKey="residential.techBoxTitle"
       techSubtitleKey={`${base}.techBoxSubtitle`}
+      techProductImages={techProductImages}
+      techProductColumns={3}
+      techProductPadToSlots={techProductPadToSlots}
+      techProductTileAspect="tall"
+      techShowContactCta
+      techContactCtaLabelKey="residential.techContactCta"
       primaryCard={{
         titleKey: `${base}.ourFocus`,
         introKey: `${base}.focusIntro`,
@@ -85,7 +137,11 @@ export function SolutionsResidential() {
             logoSize="lg"
             mobileCenter
           />
-          <ResidentialSectionBody section="individual" />
+          <ResidentialSectionBody
+            section="individual"
+            techProductImages={INDIVIDUAL_LOW_VOLTAGE_PRODUCTS}
+            techProductPadToSlots={3}
+          />
         </div>
       </section>
 
@@ -103,7 +159,7 @@ export function SolutionsResidential() {
             logoSize="lg"
             mobileCenter
           />
-          <ResidentialSectionBody section="microgrids" />
+          <ResidentialSectionBody section="microgrids" techProductImages={MICROGRID_HIGH_VOLTAGE_PRODUCTS} />
         </div>
       </section>
     </article>

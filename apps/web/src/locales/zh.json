@@ -531,6 +531,7 @@
       "subtitle": "从单个家庭到整个社区，Baterino提供为韧性、可靠性和长期影响而建立的住宅储能解决方案。"
     },
     "techBoxTitle": "我们采用的技术",
+    "techContactCta": "联系我们",
     "individual": {
       "title": "面向个人用户的住宅储能",
       "desc1": "住宅储能系统允许个人家庭储存能源并在需要时使用。这些系统设计为独立运行或与太阳能等可再生能源结合使用。",
@@ -548,7 +549,15 @@
       "advantage1": "在停电和电网不稳定期间提供可靠电力",
       "advantage2": "更大的能源独立性和对能源使用的控制",
       "advantage3": "通过储能优化使用可再生能源",
-      "advantage4": "通过减少峰值电价敞口改善成本管理"
+      "advantage4": "通过减少峰值电价敞口改善成本管理",
+      "techProduct1": {
+        "title": "壁挂式低压储能",
+        "subtitle": "TR 系列住宅 — 5 kWh 至 20 kWh"
+      },
+      "techProduct2": {
+        "title": "壁挂式低压 Pro",
+        "subtitle": "TR Pro 系列住宅 — 10 kWh - 16 kWh"
+      }
     },
     "microgrids": {
       "title": "我们社区的微电网",
@@ -567,7 +576,19 @@
       "advantage1": "住宅社区和村庄",
       "advantage2": "岛屿和偏远或离网地点",
       "advantage3": "医院、学校和教育设施",
-      "advantage4": "水、卫生、基本服务和社区中心"
+      "advantage4": "水、卫生、基本服务和社区中心",
+      "techProduct1": {
+        "title": "绿星球系列高压堆叠",
+        "subtitle": "HP Ultra 系列可堆叠 - 8 kWh - 48 kWh"
+      },
+      "techProduct2": {
+        "title": "绿星球 Pro 高压堆叠",
+        "subtitle": "HP Ultra 2000k - 20.48 kWh 至 40.96 kWh"
+      },
+      "techProduct3": {
+        "title": "一站式一体化能源系列",
+        "subtitle": "TA6000 一体化 - 10.24 kWh 至 20.48 kWh"
+      }
     }
   },
   "industrial": {
@@ -626,7 +647,15 @@
       "app3": "可再生能源稳定和集成",
       "app4": "削峰、负载管理和能源套利",
       "app5": "关键工业运营的备用电源",
-      "applicationsIntro": "更高容量的集装箱式 BESS 可支持广泛的工业与并网应用场景，包括："
+      "applicationsIntro": "更高容量的集装箱式 BESS 可支持广泛的工业与并网应用场景，包括：",
+      "techProduct1": {
+        "title": "20 英尺模块化 BESS 集装箱",
+        "subtitle": "风冷系统 - 3 MWh 至 5 MWh"
+      },
+      "techProduct2": {
+        "title": "20 英尺模块化 BESS 集装箱",
+        "subtitle": "液冷系统 - 656 kWh 至 1.4 MWh"
+      }
     }
   },
   "maritime": {
@@ -652,7 +681,11 @@
       "safety2": "经船用验证的监控和控制系统",
       "safety3": "抗冲击和抗振动结构",
       "safety4": "耐腐蚀外壳",
-      "safety5": "符合船用分类和合规性"
+      "safety5": "符合船用分类和合规性",
+      "techProduct1": {
+        "title": "White Shark 2.0 ESS 船用电源",
+        "subtitle": "模块化堆叠 Lithion Iron Phosphate 系统，单模块 17.8 kWh。风冷 / 自然冷却 — 依 EMS 组串数量不受限。"
+      }
     },
     "delivery": {
       "title": "我们如何交付",

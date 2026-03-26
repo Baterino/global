@@ -59,6 +59,7 @@ export function SolutionsIndustrial() {
             }
             techTitleKey="industrial.techBoxTitle"
             techSubtitleKey="industrial.cabinet.techBoxSubtitle"
+            techProductTileAspect="tall"
             techShowContactCta
             techProductImages={[
               {
@@ -131,6 +132,22 @@ export function SolutionsIndustrial() {
             }
             techTitleKey="industrial.techBoxTitle"
             techSubtitleKey="industrial.containerized.techBoxSubtitle"
+            techProductColumns={2}
+            techShowContactCta
+            techProductImages={[
+              {
+                src: '/images/products/industrial/20ft-container-air-cooling.png',
+                alt: '20 ft air-cooled BESS container',
+                titleKey: 'industrial.containerized.techProduct1.title',
+                subtitleKey: 'industrial.containerized.techProduct1.subtitle',
+              },
+              {
+                src: '/images/products/industrial/20-ft-Container-Liquid-Cooling.png',
+                alt: '20 ft liquid-cooled BESS container',
+                titleKey: 'industrial.containerized.techProduct2.title',
+                subtitleKey: 'industrial.containerized.techProduct2.subtitle',
+              },
+            ]}
             primaryCard={{
               titleKey: 'industrial.containerized.ourFocus',
               introKey: 'industrial.containerized.focusIntro',

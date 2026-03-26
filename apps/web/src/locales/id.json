@@ -531,6 +531,7 @@
       "subtitle": "Dari rumah individu hingga seluruh komunitas, Baterino memungkinkan solusi penyimpanan energi residensial yang dibangun untuk ketahanan, keandalan, dan dampak jangka panjang."
     },
     "techBoxTitle": "Teknologi yang kami gunakan",
+    "techContactCta": "Hubungi kami",
     "individual": {
       "title": "PENYIMPANAN RESIDENSIAL UNTUK PENGGUNA INDIVIDU",
       "desc1": "Sistem penyimpanan energi residensial memungkinkan rumah tangga individu untuk menyimpan energi dan menggunakannya saat dibutuhkan. Sistem ini dirancang untuk beroperasi secara independen atau dikombinasikan dengan sumber energi terbarukan, seperti tenaga surya.",
@@ -548,7 +549,15 @@
       "advantage1": "Daya andal selama pemadaman dan ketidakstabilan jaringan",
       "advantage2": "Kemandirian energi yang lebih besar dan kontrol atas penggunaan energi",
       "advantage3": "Penggunaan energi terbarukan yang dioptimalkan melalui penyimpanan energi",
-      "advantage4": "Manajemen biaya yang lebih baik dengan mengurangi eksposur terhadap tarif puncak"
+      "advantage4": "Manajemen biaya yang lebih baik dengan mengurangi eksposur terhadap tarif puncak",
+      "techProduct1": {
+        "title": "Penyimpanan dinding LV",
+        "subtitle": "Seri TR residensial - 5 kWh hingga 20 kWh"
+      },
+      "techProduct2": {
+        "title": "Pro dinding LV",
+        "subtitle": "Seri TR Pro residensial - 10 kWh - 16 kWh"
+      }
     },
     "microgrids": {
       "title": "MICROGRID UNTUK KOMUNITAS KAMI",
@@ -567,7 +576,19 @@
       "advantage1": "Komunitas residensial dan desa",
       "advantage2": "Pulau dan lokasi terpencil atau di luar jaringan",
       "advantage3": "Rumah sakit, sekolah, dan fasilitas pendidikan",
-      "advantage4": "Air, sanitasi, layanan penting, dan pusat komunitas"
+      "advantage4": "Air, sanitasi, layanan penting, dan pusat komunitas",
+      "techProduct1": {
+        "title": "Seri Green Planet HV Bertumpuk",
+        "subtitle": "Seri HP Ultra Dapat Ditumpuk - 8 kWh - 48 kWh"
+      },
+      "techProduct2": {
+        "title": "Seri Green Planet Pro HV Bertumpuk",
+        "subtitle": "HP Ultra 2000k - dari 20,48 kWh hingga 40,96 kWh"
+      },
+      "techProduct3": {
+        "title": "Seri One Stop All in One Energy",
+        "subtitle": "TA6000 All In One - dari 10,24 kWh hingga 20,48 kWh"
+      }
     }
   },
   "industrial": {
@@ -626,7 +647,15 @@
       "app3": "Penstabilan dan integrasi energi terbarukan",
       "app4": "Pengurangan puncak, manajemen beban, dan arbitrase energi",
       "app5": "Daya cadangan untuk operasi industri kritis",
-      "applicationsIntro": "BESS terkontainer berkapasitas lebih tinggi mendukung berbagai kasus industri dan terhubung jaringan, termasuk:"
+      "applicationsIntro": "BESS terkontainer berkapasitas lebih tinggi mendukung berbagai kasus industri dan terhubung jaringan, termasuk:",
+      "techProduct1": {
+        "title": "Kontainer BESS modular 20 ft",
+        "subtitle": "Sistem pendingin udara - 3 MWh hingga 5 MWh"
+      },
+      "techProduct2": {
+        "title": "Kontainer BESS modular 20 ft",
+        "subtitle": "Sistem pendingin cair - 656 kWh hingga 1,4 MWh"
+      }
     }
   },
   "maritime": {
@@ -652,7 +681,11 @@
       "safety2": "Sistem pemantauan dan kontrol yang diverifikasi untuk laut",
       "safety3": "Konstruksi tahan guncangan dan getaran",
       "safety4": "Penutup tahan korosi",
-      "safety5": "Keselarasan dengan klasifikasi dan kepatuhan laut"
+      "safety5": "Keselarasan dengan klasifikasi dan kepatuhan laut",
+      "techProduct1": {
+        "title": "White Shark 2.0 ESS Marine Power",
+        "subtitle": "Susunan modular Lithion Iron Phosphate, 17,8 kWh per modul. Pendingin udara / pendingin alam — jumlah string tidak terbatas berdasarkan EMS."
+      }
     },
     "delivery": {
       "title": "BAGAIMANA KAMI MENYAMPAIKAN",

@@ -14,14 +14,29 @@ function CheckIcon({ className }: { className?: string }) {
   )
 }
 
+export type TechProductTileAspect = 'tall' | 'compact'
+
+/** `stacked` = caption under image; `split` = image left, caption right (narrower image). */
+export type TechProductCaptionLayout = 'stacked' | 'split'
+
+function techTileAspectClass(aspect: TechProductTileAspect) {
+  return aspect === 'tall' ? 'aspect-[4/5]' : 'aspect-[5/4]'
+}
+
 /** Product photo slots — add <img> when assets are ready. */
-export function ProductImagePlaceholder({ slotIndex }: { slotIndex: number }) {
+export function ProductImagePlaceholder({
+  slotIndex,
+  tileAspect = 'compact',
+}: {
+  slotIndex: number
+  tileAspect?: TechProductTileAspect
+}) {
   return (
     <div
-      className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#f7f7f7] shadow-sm ring-1 ring-black/[0.06] transition-shadow duration-300 ease-out hover:shadow-lg hover:ring-[#0B0726]/12"
+      className={`relative ${techTileAspectClass(tileAspect)} w-full overflow-hidden rounded-xl bg-[#f7f7f7] shadow-sm ring-1 ring-black/[0.06] transition-shadow duration-300 ease-out hover:shadow-lg hover:ring-[#0B0726]/12`}
       data-product-slot={slotIndex}
     >
-      <div className="absolute inset-0 flex items-center justify-center opacity-[0.12]" aria-hidden>
+      <div className="absolute inset-4 flex items-center justify-center opacity-[0.12] sm:inset-6" aria-hidden>
         <svg className="h-12 w-12 text-neutral-900" fill="none" stroke="currentColor" strokeWidth={1} viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
@@ -34,38 +49,110 @@ export function ProductImagePlaceholder({ slotIndex }: { slotIndex: number }) {
   )
 }
 
-export function ProductImageSlot({ src, alt, slotIndex }: { src: string; alt: string; slotIndex: number }) {
+export function ProductImageSlot({
+  src,
+  alt,
+  slotIndex,
+  tileAspect = 'compact',
+}: {
+  src: string
+  alt: string
+  slotIndex: number
+  tileAspect?: TechProductTileAspect
+}) {
   return (
     <div
-      className="group relative aspect-[4/5] w-full cursor-default overflow-hidden rounded-xl bg-[#f7f7f7] shadow-sm ring-1 ring-black/[0.06] transition-shadow duration-300 ease-out hover:shadow-lg hover:ring-[#0B0726]/12"
+      className={`group relative ${techTileAspectClass(tileAspect)} w-full cursor-default overflow-hidden rounded-xl bg-[#f7f7f7] shadow-sm ring-1 ring-black/[0.06] transition-shadow duration-300 ease-out hover:shadow-lg hover:ring-[#0B0726]/12`}
       data-product-slot={slotIndex}
     >
-      <img
-        src={src}
-        alt={alt}
-        className="h-full w-full object-contain object-center transition-transform duration-300 ease-out group-hover:scale-[1.04]"
-        loading="lazy"
-        decoding="async"
-      />
+      <div className="absolute inset-4 sm:inset-6">
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-full object-contain object-center transition-transform duration-300 ease-out group-hover:scale-[1.04]"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
     </div>
   )
 }
 
-function ProductTechCell({ image, index }: { image: TechProductImage; index: number }) {
+function ProductTechContactLink({ to, labelKey }: { to: string; labelKey: string }) {
+  const { t } = useTranslation()
+  return (
+    <Link
+      to={to}
+      className="mt-4 inline-flex w-fit items-center justify-center rounded-lg border-2 border-[#0B0726] bg-white px-6 py-2.5 font-body text-xs font-semibold uppercase tracking-wide text-[#0B0726] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[#f7f7f7] hover:shadow-sm active:translate-y-px sm:mt-5 sm:px-8 sm:py-3 sm:text-body-sm"
+    >
+      {t(labelKey)}
+    </Link>
+  )
+}
+
+function TechProductGridEmptySlot({
+  tileAspect,
+  cellClassName = '',
+}: {
+  tileAspect: TechProductTileAspect
+  cellClassName?: string
+}) {
+  return (
+    <div className={`flex min-w-0 flex-col items-center ${cellClassName}`} aria-hidden>
+      <div className={`w-full ${techTileAspectClass(tileAspect)} opacity-0`} />
+    </div>
+  )
+}
+
+function ProductTechCell({
+  image,
+  index,
+  tileAspect,
+  captionLayout,
+  contactCta,
+  cellClassName = '',
+}: {
+  image: TechProductImage
+  index: number
+  tileAspect: TechProductTileAspect
+  captionLayout: TechProductCaptionLayout
+  /** When set with split layout, renders under the subtitle in the text column. */
+  contactCta?: { to: string; labelKey: string }
+  /** Extra classes on the outer cell (e.g. max width for smaller tiles). */
+  cellClassName?: string
+}) {
   const { t } = useTranslation()
   const titleKey = image.titleKey
   const subtitleKey = image.subtitleKey
   const showCaption = titleKey != null && subtitleKey != null
 
-  return (
-    <div className="flex min-w-0 flex-col items-center gap-2 sm:gap-2.5">
-      <ProductImageSlot src={image.src} alt={image.alt} slotIndex={index} />
-      {showCaption ? (
-        <div className="w-full text-center">
-          <p className="font-heading text-sm font-bold leading-snug text-[#0B0726] sm:text-base">{t(titleKey)}</p>
-          <p className="mt-1 font-body text-xs leading-relaxed text-neutral-600 sm:text-sm">{t(subtitleKey)}</p>
-        </div>
+  const captionBlock = showCaption ? (
+    <div
+      className={`min-w-0 flex-1 ${captionLayout === 'stacked' ? 'w-full text-center' : 'flex flex-col text-left'}`}
+    >
+      <p className="font-heading text-sm font-bold leading-snug text-[#0B0726] sm:text-base">{t(titleKey)}</p>
+      <p className="mt-1 font-body text-xs leading-relaxed text-neutral-600 sm:text-sm">{t(subtitleKey)}</p>
+      {contactCta != null && captionLayout === 'split' ? (
+        <ProductTechContactLink to={contactCta.to} labelKey={contactCta.labelKey} />
       ) : null}
+    </div>
+  ) : null
+
+  if (captionLayout === 'split') {
+    return (
+      <div className={`flex min-w-0 flex-row items-start gap-4 sm:gap-6 ${cellClassName}`}>
+        <div className="w-[46%] max-w-[260px] shrink-0 sm:w-auto sm:max-w-[300px]">
+          <ProductImageSlot src={image.src} alt={image.alt} slotIndex={index} tileAspect={tileAspect} />
+        </div>
+        {captionBlock}
+      </div>
+    )
+  }
+
+  return (
+    <div className={`flex min-w-0 flex-col items-center gap-2 sm:gap-2.5 ${cellClassName}`}>
+      <ProductImageSlot src={image.src} alt={image.alt} slotIndex={index} tileAspect={tileAspect} />
+      {captionBlock}
     </div>
   )
 }
@@ -91,8 +178,24 @@ export function SolutionTwoColumnLayout({
   techSubtitleKey,
   /** When set, replaces placeholder grid with product shots (e.g. cabinet lineup). */
   techProductImages,
+  /** Grid columns for product tiles at ≥sm breakpoints. Default 3 (2 cols on mobile). */
+  techProductColumns = 3,
+  /** `three-across` = always 3 columns (e.g. residential); default = 2 cols on small screens. */
+  techProductGridColsMode = 'default',
+  /** Pad grid with invisible cells up to this count (e.g. 2 products + 1 empty). */
+  techProductPadToSlots,
+  /** Applied to each product cell (and empty pads), e.g. `max-w-[150px] w-full`. */
+  techProductCellClassName = '',
+  /** `tall` = original portrait tiles (4:5); `compact` = shorter (5:4). */
+  techProductTileAspect = 'compact',
+  /** `split` = image and caption side by side (e.g. maritime). */
+  techProductCaptionLayout = 'stacked',
+  /** Adds 20px (e.g. mt-5) below the tech subtitle before the product grid + CTA. */
+  techProductOffsetTop = false,
   /** Renders a contact link below the tech product grid (when images are set). */
   techShowContactCta,
+  /** i18n key for CTA label (defaults to cabinet string for reuse). */
+  techContactCtaLabelKey = 'industrial.cabinet.techContactCta',
   primaryCard,
   secondaryCard,
   /** When set, replaces the default card stack (e.g. maritime feature grid). */
@@ -102,7 +205,15 @@ export function SolutionTwoColumnLayout({
   techTitleKey: string
   techSubtitleKey: string
   techProductImages?: readonly TechProductImage[]
+  techProductColumns?: 2 | 3
+  techProductGridColsMode?: 'default' | 'three-across'
+  techProductPadToSlots?: number
+  techProductCellClassName?: string
+  techProductTileAspect?: TechProductTileAspect
+  techProductCaptionLayout?: TechProductCaptionLayout
+  techProductOffsetTop?: boolean
   techShowContactCta?: boolean
+  techContactCtaLabelKey?: string
   primaryCard?: SolutionCardConfig
   secondaryCard?: SolutionCardConfig
   rightColumn?: ReactNode
@@ -110,6 +221,32 @@ export function SolutionTwoColumnLayout({
   const { t } = useTranslation()
   const { locale } = useParams<{ locale: string }>()
   const contactPath = `/${locale ?? 'en'}/contact`
+  const techProductCount = techProductImages?.length ?? 0
+  const trailingEmptySlots =
+    techProductPadToSlots != null ? Math.max(0, techProductPadToSlots - techProductCount) : 0
+  const techGridTop = techProductOffsetTop ? 'mt-0' : 'mt-4 sm:mt-5'
+
+  const threeAcross = techProductColumns === 3 && techProductGridColsMode === 'three-across'
+  const techGridClassName =
+    techProductCount === 1 && techProductCaptionLayout === 'split'
+      ? `${techGridTop} grid w-full max-w-2xl grid-cols-1 gap-3 lg:max-w-none`
+      : techProductCount === 1 && trailingEmptySlots === 0
+        ? `${techGridTop} grid grid-cols-1 gap-3 sm:max-w-xs md:max-w-sm`
+        : techProductColumns === 2
+          ? `${techGridTop} grid grid-cols-2 gap-3 sm:gap-4`
+          : threeAcross
+            ? `${techGridTop} grid w-full grid-cols-3 gap-2 sm:gap-3`
+            : `${techGridTop} grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4`
+
+  const contactCtaInSplitCaption =
+    techShowContactCta &&
+    techProductCaptionLayout === 'split' &&
+    techProductCount === 1 &&
+    techProductImages != null
+
+  const showOuterContactCta = Boolean(
+    techShowContactCta && techProductImages?.length && !contactCtaInSplitCaption,
+  )
 
   function renderCard(config: SolutionCardConfig) {
     return (
@@ -146,21 +283,48 @@ export function SolutionTwoColumnLayout({
           <p className="mt-2 font-body text-mobile-body leading-relaxed text-neutral-600 sm:mt-2.5 sm:text-body-md">
             {t(techSubtitleKey)}
           </p>
-          <div className="mt-4 grid grid-cols-2 gap-3 sm:mt-5 sm:grid-cols-3 sm:gap-4">
-            {techProductImages?.length
-              ? techProductImages.map((img, i) => <ProductTechCell key={`${img.src}-${i}`} image={img} index={i} />)
-              : [0, 1, 2, 3].map((i) => <ProductImagePlaceholder key={i} slotIndex={i} />)}
-          </div>
-          {techShowContactCta && techProductImages?.length ? (
-            <div className="mt-8 flex justify-start sm:mt-10">
-              <Link
-                to={contactPath}
-                className="inline-flex items-center justify-center rounded-lg border-2 border-[#0B0726] bg-white px-8 py-3 font-body text-sm font-semibold uppercase tracking-wide text-[#0B0726] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[#f7f7f7] hover:shadow-sm active:translate-y-px sm:text-body-sm"
-              >
-                {t('industrial.cabinet.techContactCta')}
-              </Link>
+          <div className={techProductOffsetTop ? 'mt-5' : ''}>
+            <div className={techGridClassName}>
+              {techProductImages?.length
+                ? (
+                    <>
+                      {techProductImages.map((img, i) => (
+                        <ProductTechCell
+                          key={`${img.src}-${i}`}
+                          image={img}
+                          index={i}
+                          tileAspect={techProductTileAspect}
+                          captionLayout={techProductCaptionLayout}
+                          cellClassName={techProductCellClassName}
+                          contactCta={
+                            contactCtaInSplitCaption ? { to: contactPath, labelKey: techContactCtaLabelKey } : undefined
+                          }
+                        />
+                      ))}
+                      {Array.from({ length: trailingEmptySlots }).map((_, i) => (
+                        <TechProductGridEmptySlot
+                          key={`tech-pad-${i}`}
+                          tileAspect={techProductTileAspect}
+                          cellClassName={techProductCellClassName}
+                        />
+                      ))}
+                    </>
+                  )
+                : [0, 1, 2, 3].map((i) => (
+                    <ProductImagePlaceholder key={i} slotIndex={i} tileAspect={techProductTileAspect} />
+                  ))}
             </div>
-          ) : null}
+            {showOuterContactCta ? (
+              <div className="mt-8 flex justify-start sm:mt-10">
+                <Link
+                  to={contactPath}
+                  className="inline-flex items-center justify-center rounded-lg border-2 border-[#0B0726] bg-white px-8 py-3 font-body text-sm font-semibold uppercase tracking-wide text-[#0B0726] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[#f7f7f7] hover:shadow-sm active:translate-y-px sm:text-body-sm"
+                >
+                  {t(techContactCtaLabelKey)}
+                </Link>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
 

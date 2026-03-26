@@ -2,7 +2,7 @@ import { Router, type Response } from 'express'
 import { getPool } from '../db/pool.js'
 import type { AuthedRequest } from '../auth/middleware.js'
 import { requireAuth, canDeleteArticle } from '../auth/middleware.js'
-import { publicImageUrlForResponse } from '../storage/r2.js'
+import { publicImageUrlForResponse, rewriteBodyHtmlR2ApiUrls } from '../storage/r2.js'
 
 export const adminArticlesRouter = Router()
 adminArticlesRouter.use(requireAuth)
@@ -66,7 +66,11 @@ adminArticlesRouter.get('/:id', async (req: AuthedRequest, res: Response) => {
     }
     res.json({
       ok: true,
-      article: { ...row, image_url: publicImageUrlForResponse(row.image_url) },
+      article: {
+        ...row,
+        image_url: publicImageUrlForResponse(row.image_url),
+        body_html: rewriteBodyHtmlR2ApiUrls(row.body_html),
+      },
     })
   } catch (e) {
     console.error('[admin/articles get]', e)

@@ -1,6 +1,6 @@
 import { Router, type Response } from 'express'
 import { getPool } from '../db/pool.js'
-import { publicImageUrlForResponse } from '../storage/r2.js'
+import { publicImageUrlForResponse, rewriteBodyHtmlR2ApiUrls } from '../storage/r2.js'
 
 export const publicContentRouter = Router()
 
@@ -42,7 +42,14 @@ publicContentRouter.get('/articles/slug/:slug', async (req, res: Response) => {
       res.status(404).json({ ok: false, code: 'not_found' })
       return
     }
-    res.json({ ok: true, article: row })
+    res.json({
+      ok: true,
+      article: {
+        ...row,
+        image_url: publicImageUrlForResponse(row.image_url),
+        body_html: rewriteBodyHtmlR2ApiUrls(row.body_html),
+      },
+    })
   } catch (e) {
     console.error('[public/articles/slug]', e)
     res.status(503).json({ ok: false, code: 'database_error' })

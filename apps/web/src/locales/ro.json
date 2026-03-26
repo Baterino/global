@@ -531,6 +531,7 @@
       "subtitle": "De la locuințe individuale la întregi comunități, Baterino activează soluții de stocare a energiei rezidențiale construite pentru reziliență, fiabilitate și impact pe termen lung."
     },
     "techBoxTitle": "Tehnologiile pe care le folosim",
+    "techContactCta": "Contactați-ne",
     "individual": {
       "title": "Stocare Rezidențială pentru Utilizatori Individuali",
       "desc1": "Sistemele de stocare a energiei rezidențiale permit gospodăriilor individuale să stocheze energia și să o utilizeze atunci când este nevoie. Aceste sisteme sunt proiectate să funcționeze independent sau în combinație cu surse de energie regenerabilă, cum ar fi energia solară.",
@@ -548,7 +549,15 @@
       "advantage1": "Alimentare fiabilă în timpul întreruperilor și instabilității rețelei",
       "advantage2": "Independență energetică mai mare și control asupra consumului de energie",
       "advantage3": "Utilizare optimizată a energiei regenerabile prin stocare",
-      "advantage4": "Gestionare îmbunătățită a costurilor prin reducerea expunerii la tarifele de vârf"
+      "advantage4": "Gestionare îmbunătățită a costurilor prin reducerea expunerii la tarifele de vârf",
+      "techProduct1": {
+        "title": "Stocare murală JT (LV)",
+        "subtitle": "Seria TR rezidențială - 5 kWh până la 20 kWh"
+      },
+      "techProduct2": {
+        "title": "Pro mural JT (LV)",
+        "subtitle": "Seria TR Pro rezidențială - 10 kWh - 16 kWh"
+      }
     },
     "microgrids": {
       "title": "Microrețele pentru Comunitățile Noastre",
@@ -567,7 +576,19 @@
       "advantage1": "Comunități rezidențiale și sate",
       "advantage2": "Insule și locații îndepărtate sau izolate de rețea",
       "advantage3": "Spitale, școli și instituții de învățământ",
-      "advantage4": "Apă, salubritate, servicii esențiale și centre comunitare"
+      "advantage4": "Apă, salubritate, servicii esențiale și centre comunitare",
+      "techProduct1": {
+        "title": "Seria Green Planet HV stivuită",
+        "subtitle": "Serie HP Ultra modulară - 8 kWh - 48 kWh"
+      },
+      "techProduct2": {
+        "title": "Seria Green Planet Pro HV stivuită",
+        "subtitle": "HP Ultra 2000k - de la 20,48 kWh la 40,96 kWh"
+      },
+      "techProduct3": {
+        "title": "Seria One Stop All in One Energy",
+        "subtitle": "TA6000 All In One - de la 10,24 kWh la 20,48 kWh"
+      }
     }
   },
   "industrial": {
@@ -626,7 +647,15 @@
       "app3": "Stabilizarea și integrarea energiei regenerabile",
       "app4": "Reducerea vârfurilor de sarcină, managementul încărcării și arbitraj energetic",
       "app5": "Alimentare de rezervă pentru operațiuni industriale critice",
-      "applicationsIntro": "BESS containerizat de capacitate mai mare susține o gamă largă de cazuri industriale și conectate la rețea, inclusiv:"
+      "applicationsIntro": "BESS containerizat de capacitate mai mare susține o gamă largă de cazuri industriale și conectate la rețea, inclusiv:",
+      "techProduct1": {
+        "title": "Container modular BESS 20 ft",
+        "subtitle": "Sistem de răcire pe aer - 3 MWh până la 5 MWh"
+      },
+      "techProduct2": {
+        "title": "Container modular BESS 20 ft",
+        "subtitle": "Sistem de răcire lichidă - 656 kWh până la 1,4 MWh"
+      }
     }
   },
   "maritime": {
@@ -652,7 +681,11 @@
       "safety2": "Sisteme de monitorizare și control verificate pentru uz marin",
       "safety3": "Construcție rezistentă la șocuri și vibrații",
       "safety4": "Carcase rezistente la coroziune",
-      "safety5": "Conformitate cu clasificările și reglementările marine"
+      "safety5": "Conformitate cu clasificările și reglementările marine",
+      "techProduct1": {
+        "title": "White Shark 2.0 ESS Marine Power",
+        "subtitle": "Sistem modular cu stivuire Lithion Iron Phosphate, 17,8 kWh per modul. Răcire pe aer / răcire naturală — numărul de stringuri este nelimitat în funcție de EMS."
+      }
     },
     "delivery": {
       "title": "Cum Livrăm",

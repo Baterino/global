@@ -531,6 +531,7 @@
       "subtitle": "Desde hogares individuales hasta comunidades enteras, Baterino habilita soluciones de almacenamiento de energía residencial construidas para resiliencia, confiabilidad e impacto a largo plazo."
     },
     "techBoxTitle": "Tecnologías que utilizamos",
+    "techContactCta": "Contáctenos",
     "individual": {
       "title": "ALMACENAMIENTO RESIDENCIAL PARA USUARIOS INDIVIDUALES",
       "desc1": "Los sistemas de almacenamiento de energía residencial permiten a los hogares individuales almacenar energía y usarla cuando sea necesario. Estos sistemas están diseñados para operar independientemente o en combinación con fuentes de energía renovable, como la solar.",
@@ -548,7 +549,15 @@
       "advantage1": "Energía confiable durante apagones e inestabilidad de la red",
       "advantage2": "Mayor independencia energética y control sobre el uso de energía",
       "advantage3": "Uso optimizado de energía renovable mediante almacenamiento de energía",
-      "advantage4": "Mejor gestión de costos al reducir la exposición a tarifas pico"
+      "advantage4": "Mejor gestión de costos al reducir la exposición a tarifas pico",
+      "techProduct1": {
+        "title": "Almacenamiento mural BT",
+        "subtitle": "Serie TR residencial - 5 kWh a 20 kWh"
+      },
+      "techProduct2": {
+        "title": "Pro mural BT",
+        "subtitle": "Serie TR Pro residencial - 10 kWh - 16 kWh"
+      }
     },
     "microgrids": {
       "title": "MICRORREDES PARA NUESTRAS COMUNIDADES",
@@ -567,7 +576,19 @@
       "advantage1": "Comunidades residenciales y aldeas",
       "advantage2": "Islas y ubicaciones remotas o fuera de la red",
       "advantage3": "Hospitales, escuelas e instalaciones educativas",
-      "advantage4": "Agua, saneamiento, servicios esenciales y centros comunitarios"
+      "advantage4": "Agua, saneamiento, servicios esenciales y centros comunitarios",
+      "techProduct1": {
+        "title": "Serie Green Planet HV apilada",
+        "subtitle": "Serie HP Ultra apilable - 8 kWh - 48 kWh"
+      },
+      "techProduct2": {
+        "title": "Serie Green Planet Pro HV apilada",
+        "subtitle": "HP Ultra 2000k - de 20,48 kWh a 40,96 kWh"
+      },
+      "techProduct3": {
+        "title": "Serie One Stop All in One Energy",
+        "subtitle": "TA6000 All In One - de 10,24 kWh a 20,48 kWh"
+      }
     }
   },
   "industrial": {
@@ -626,7 +647,15 @@
       "app3": "Firmeza e integración de energía renovable",
       "app4": "Reducción de picos, gestión de carga y arbitraje de energía",
       "app5": "Energía de respaldo para operaciones industriales críticas",
-      "applicationsIntro": "El BESS contenedorizado de mayor capacidad admite una amplia gama de usos industriales y conectados a la red, entre ellos:"
+      "applicationsIntro": "El BESS contenedorizado de mayor capacidad admite una amplia gama de usos industriales y conectados a la red, entre ellos:",
+      "techProduct1": {
+        "title": "Contenedor BESS modular de 20 ft",
+        "subtitle": "Sistema de refrigeración por aire - 3 MWh a 5 MWh"
+      },
+      "techProduct2": {
+        "title": "Contenedor BESS modular de 20 ft",
+        "subtitle": "Sistema de refrigeración líquida - 656 kWh a 1,4 MWh"
+      }
     }
   },
   "maritime": {
@@ -652,7 +681,11 @@
       "safety2": "Sistemas de monitoreo y control verificados para uso marino",
       "safety3": "Construcción resistente a golpes y vibraciones",
       "safety4": "Recintos resistentes a la corrosión",
-      "safety5": "Alineación con clasificación marina y cumplimiento"
+      "safety5": "Alineación con clasificación marina y cumplimiento",
+      "techProduct1": {
+        "title": "White Shark 2.0 ESS Marine Power",
+        "subtitle": "Apilamiento modular de Lithion Iron Phosphate, con 17,8 kWh por módulo. Refrigeración por aire / refrigeración natural — el número de strings es ilimitado según el EMS."
+      }
     },
     "delivery": {
       "title": "CÓMO ENTREGAMOS",
