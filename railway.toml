@@ -1,3 +1,6 @@
+# If the service Root Directory is the repo root, this applies. If Root Directory is apps/api
+# (typical for this API), Railway uses apps/api/railway.toml + apps/api/Dockerfile instead.
+
 [build]
 builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile.api"
