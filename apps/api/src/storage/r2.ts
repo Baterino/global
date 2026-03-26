@@ -13,25 +13,50 @@ function normalizeScalarEnv(v: string | undefined): string {
   return s
 }
 
-export function getR2BucketName(): string {
-  // S3-compatible names: lowercase, 3–63 chars, letters/digits/hyphens/dots (avoid upper case)
-  return normalizeScalarEnv(process.env.R2_BUCKET_NAME).toLowerCase()
+function r2AccountId(): string {
+  return (
+    normalizeScalarEnv(process.env.R2_ACCOUNT_ID) ||
+    normalizeScalarEnv(process.env.CLOUDFLARE_ACCOUNT_ID)
+  )
 }
 
-const R2_ENV_KEYS = [
-  'R2_ACCOUNT_ID',
-  'R2_ACCESS_KEY_ID',
-  'R2_SECRET_ACCESS_KEY',
-  'R2_BUCKET_NAME',
-  'R2_PUBLIC_URL',
-] as const
+/** S3-compatible token names (Wrangler/Terraform); optional fallbacks for R2_ACCESS_KEY_ID. */
+function r2AccessKeyId(): string {
+  return (
+    normalizeScalarEnv(process.env.R2_ACCESS_KEY_ID) ||
+    normalizeScalarEnv(process.env.AWS_ACCESS_KEY_ID)
+  )
+}
 
-/** Names of R2 vars that are unset or blank (for deploy debugging; never logs values). */
+function r2SecretAccessKey(): string {
+  return (
+    normalizeScalarEnv(process.env.R2_SECRET_ACCESS_KEY) ||
+    normalizeScalarEnv(process.env.AWS_SECRET_ACCESS_KEY)
+  )
+}
+
+function r2PublicUrl(): string {
+  return normalizeScalarEnv(process.env.R2_PUBLIC_URL)
+}
+
+export function getR2BucketName(): string {
+  // S3-compatible names: lowercase, 3–63 chars, letters/digits/hyphens/dots (avoid upper case)
+  return (
+    normalizeScalarEnv(process.env.R2_BUCKET_NAME) ||
+    normalizeScalarEnv(process.env.R2_BUCKET) ||
+    ''
+  ).toLowerCase()
+}
+
+/** Primary env names to show on /health when unset (aliases above do not count as “missing”). */
 export function missingR2EnvKeys(): readonly string[] {
-  return R2_ENV_KEYS.filter((k) => {
-    if (k === 'R2_BUCKET_NAME') return !getR2BucketName()
-    return !normalizeScalarEnv(process.env[k])
-  })
+  const missing: string[] = []
+  if (!r2AccountId()) missing.push('R2_ACCOUNT_ID')
+  if (!r2AccessKeyId()) missing.push('R2_ACCESS_KEY_ID')
+  if (!r2SecretAccessKey()) missing.push('R2_SECRET_ACCESS_KEY')
+  if (!getR2BucketName()) missing.push('R2_BUCKET_NAME')
+  if (!r2PublicUrl()) missing.push('R2_PUBLIC_URL')
+  return missing
 }
 
 export function isR2Configured(): boolean {
@@ -55,11 +80,11 @@ export function isR2PublicUrlS3ApiEndpoint(raw: string | undefined): boolean {
 
 /** Railway / local: public URL is set but will break `<img src>` on Vercel until fixed. */
 export function isR2PublicUrlMisconfiguredForBrowsers(): boolean {
-  return isR2PublicUrlS3ApiEndpoint(process.env.R2_PUBLIC_URL)
+  return isR2PublicUrlS3ApiEndpoint(r2PublicUrl())
 }
 
 function browserSafePublicBase(): string {
-  const base = normalizeScalarEnv(process.env.R2_PUBLIC_URL).replace(/\/+$/, '')
+  const base = r2PublicUrl().replace(/\/+$/, '')
   if (!base) {
     throw new Error('R2_PUBLIC_URL is not set')
   }
@@ -74,9 +99,9 @@ function browserSafePublicBase(): string {
 
 function getClient(): S3Client {
   if (client) return client
-  const accountId = normalizeScalarEnv(process.env.R2_ACCOUNT_ID)
-  const accessKeyId = normalizeScalarEnv(process.env.R2_ACCESS_KEY_ID)
-  const secretAccessKey = normalizeScalarEnv(process.env.R2_SECRET_ACCESS_KEY)
+  const accountId = r2AccountId()
+  const accessKeyId = r2AccessKeyId()
+  const secretAccessKey = r2SecretAccessKey()
   if (!accountId || !accessKeyId || !secretAccessKey) {
     throw new Error('R2 credentials not configured')
   }
@@ -114,7 +139,7 @@ export function publicImageUrlForResponse(storedUrl: string | null | undefined):
   const u = typeof storedUrl === 'string' ? storedUrl.trim() : ''
   if (!u) return u
 
-  const pubBase = normalizeScalarEnv(process.env.R2_PUBLIC_URL).replace(/\/+$/, '')
+  const pubBase = r2PublicUrl().replace(/\/+$/, '')
 
   // Bare object key from manual fixes / migrations
   if (!/^https?:\/\//i.test(u) && pubBase) {
@@ -157,7 +182,7 @@ export function publicImageUrlForResponse(storedUrl: string | null | undefined):
 export function rewriteBodyHtmlR2ApiUrls(html: string | null | undefined): string {
   if (html == null || html === '') return html ?? ''
   const bucket = getR2BucketName()
-  const pubBase = normalizeScalarEnv(process.env.R2_PUBLIC_URL).replace(/\/+$/, '')
+  const pubBase = r2PublicUrl().replace(/\/+$/, '')
   if (!bucket || !pubBase || isR2PublicUrlS3ApiEndpoint(pubBase)) return html
 
   const esc = bucket.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')

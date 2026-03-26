@@ -31,6 +31,7 @@ app.get(['/', '/health'], (_req, res) => {
     ok: true,
     r2: {
       configured: r2,
+      missingEnvKeys: r2 ? [] : [...missingR2EnvKeys()],
       /** If true, Vercel (and browsers) cannot load image URLs built from R2_PUBLIC_URL — fix the env on Railway. */
       publicUrlMisconfigured: r2PublicBroken,
     },
