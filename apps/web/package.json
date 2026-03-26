@@ -12,7 +12,8 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,json,css}\"",
     "test": "vitest run",
     "test:watch": "vitest",
-    "optimize:usecases": "node scripts/optimize-usecase-images.mjs"
+    "optimize:usecases": "node scripts/optimize-usecase-images.mjs",
+    "optimize:industrial-products": "node scripts/convert-industrial-products.mjs"
   },
   "dependencies": {
     "i18next": "^23.7.0",

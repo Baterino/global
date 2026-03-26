@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link, useParams } from 'react-router-dom'
 
 function CheckIcon({ className }: { className?: string }) {
   return (
@@ -17,7 +18,7 @@ function CheckIcon({ className }: { className?: string }) {
 export function ProductImagePlaceholder({ slotIndex }: { slotIndex: number }) {
   return (
     <div
-      className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#f7f7f7]"
+      className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#f7f7f7] shadow-sm ring-1 ring-black/[0.06] transition-shadow duration-300 ease-out hover:shadow-lg hover:ring-[#0B0726]/12"
       data-product-slot={slotIndex}
     >
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.12]" aria-hidden>
@@ -33,6 +34,50 @@ export function ProductImagePlaceholder({ slotIndex }: { slotIndex: number }) {
   )
 }
 
+export function ProductImageSlot({ src, alt, slotIndex }: { src: string; alt: string; slotIndex: number }) {
+  return (
+    <div
+      className="group relative aspect-[4/5] w-full cursor-default overflow-hidden rounded-xl bg-[#f7f7f7] shadow-sm ring-1 ring-black/[0.06] transition-shadow duration-300 ease-out hover:shadow-lg hover:ring-[#0B0726]/12"
+      data-product-slot={slotIndex}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className="h-full w-full object-contain object-center transition-transform duration-300 ease-out group-hover:scale-[1.04]"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  )
+}
+
+function ProductTechCell({ image, index }: { image: TechProductImage; index: number }) {
+  const { t } = useTranslation()
+  const titleKey = image.titleKey
+  const subtitleKey = image.subtitleKey
+  const showCaption = titleKey != null && subtitleKey != null
+
+  return (
+    <div className="flex min-w-0 flex-col items-center gap-2 sm:gap-2.5">
+      <ProductImageSlot src={image.src} alt={image.alt} slotIndex={index} />
+      {showCaption ? (
+        <div className="w-full text-center">
+          <p className="font-heading text-sm font-bold leading-snug text-[#0B0726] sm:text-base">{t(titleKey)}</p>
+          <p className="mt-1 font-body text-xs leading-relaxed text-neutral-600 sm:text-sm">{t(subtitleKey)}</p>
+        </div>
+      ) : null}
+    </div>
+  )
+}
+
+export type TechProductImage = {
+  src: string
+  alt: string
+  /** i18n keys for caption under the image */
+  titleKey?: string
+  subtitleKey?: string
+}
+
 export type SolutionCardConfig = {
   titleKey: string
   /** Optional intro paragraph below the title */
@@ -44,6 +89,10 @@ export function SolutionTwoColumnLayout({
   leftColumnContent,
   techTitleKey,
   techSubtitleKey,
+  /** When set, replaces placeholder grid with product shots (e.g. cabinet lineup). */
+  techProductImages,
+  /** Renders a contact link below the tech product grid (when images are set). */
+  techShowContactCta,
   primaryCard,
   secondaryCard,
   /** When set, replaces the default card stack (e.g. maritime feature grid). */
@@ -52,11 +101,15 @@ export function SolutionTwoColumnLayout({
   leftColumnContent: ReactNode
   techTitleKey: string
   techSubtitleKey: string
+  techProductImages?: readonly TechProductImage[]
+  techShowContactCta?: boolean
   primaryCard?: SolutionCardConfig
   secondaryCard?: SolutionCardConfig
   rightColumn?: ReactNode
 }) {
   const { t } = useTranslation()
+  const { locale } = useParams<{ locale: string }>()
+  const contactPath = `/${locale ?? 'en'}/contact`
 
   function renderCard(config: SolutionCardConfig) {
     return (
@@ -94,10 +147,20 @@ export function SolutionTwoColumnLayout({
             {t(techSubtitleKey)}
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:mt-5 sm:grid-cols-3 sm:gap-4">
-            {[0, 1, 2, 3].map((i) => (
-              <ProductImagePlaceholder key={i} slotIndex={i} />
-            ))}
+            {techProductImages?.length
+              ? techProductImages.map((img, i) => <ProductTechCell key={`${img.src}-${i}`} image={img} index={i} />)
+              : [0, 1, 2, 3].map((i) => <ProductImagePlaceholder key={i} slotIndex={i} />)}
           </div>
+          {techShowContactCta && techProductImages?.length ? (
+            <div className="mt-8 flex justify-start sm:mt-10">
+              <Link
+                to={contactPath}
+                className="inline-flex items-center justify-center rounded-lg border-2 border-[#0B0726] bg-white px-8 py-3 font-body text-sm font-semibold uppercase tracking-wide text-[#0B0726] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[#f7f7f7] hover:shadow-sm active:translate-y-px sm:text-body-sm"
+              >
+                {t('industrial.cabinet.techContactCta')}
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
 

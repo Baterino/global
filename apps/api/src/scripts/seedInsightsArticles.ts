@@ -1,17 +1,61 @@
+import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dotenv from 'dotenv'
 import { getPool, closePool } from '../db/pool.js'
 import { insightsFallbackBodies } from '../data/insightsFallbackBodies.js'
+import {
+  assertAllowedImageMime,
+  isR2Configured,
+  isR2PublicUrlMisconfiguredForBrowsers,
+  mimeToExt,
+  tryPublicUrlForKey,
+  uploadPublicImage,
+} from '../storage/r2.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__dirname, '../../.env') })
+
+/** Static site paths under `apps/web/public` used as fallbacks when R2 is not configured. */
+const WEB_PUBLIC_ROOT = path.join(__dirname, '../../..', 'web', 'public')
+
+function resolveLocalCoverPath(rel: string): string | null {
+  const candidates = [
+    path.join(WEB_PUBLIC_ROOT, rel),
+    path.join(process.cwd(), 'apps/web/public', rel),
+    path.join(process.cwd(), 'web/public', rel),
+  ]
+  for (const abs of candidates) {
+    if (fs.existsSync(abs)) return abs
+  }
+  return null
+}
+
+const COVER_FILE: Record<keyof typeof insightsFallbackBodies, string> = {
+  'global-delivery-framework': 'images/blog/global-delivery-framework.jpg',
+  'baterino-roles-in-every-market': 'images/about-baterino.jpg',
+  'request-to-operation': 'images/blog/how-baterino-assess-a-project.jpg',
+}
+
+function mimeFromFilePath(filePath: string): string {
+  const ext = path.extname(filePath).toLowerCase()
+  const map: Record<string, string> = {
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.png': 'image/png',
+    '.webp': 'image/webp',
+    '.gif': 'image/gif',
+    '.avif': 'image/avif',
+  }
+  return map[ext] ?? 'image/jpeg'
+}
 
 type SeedRow = {
   slug: keyof typeof insightsFallbackBodies
   type: string
   title: string
   excerpt: string
+  /** Public URL or site-relative path stored when R2 is off. */
   image_url: string
   location_label: string
   category_label: string
@@ -70,9 +114,20 @@ async function main() {
     process.exit(1)
   }
 
+  const r2 = isR2Configured()
+  if (!r2) {
+    console.warn(
+      '[seed insights] R2 env vars not set; cover images stay as /images/… paths. Set R2_* and re-run to upload covers.',
+    )
+  } else if (isR2PublicUrlMisconfiguredForBrowsers()) {
+    console.error(
+      '[seed insights] R2_PUBLIC_URL is the S3 API host (*.r2.cloudflarestorage.com). Fix to https://pub-….r2.dev (bucket Public access) before R2 cover URLs will load on Vercel.',
+    )
+  }
+
   for (const row of ROWS) {
     const body_html = insightsFallbackBodies[row.slug]
-    await pool.query(
+    const { rows: out } = await pool.query<{ id: string }>(
       `INSERT INTO blog_articles (
         slug, type, title, excerpt, body_html, image_url, author_name, location_label, category_label,
         author_id, status, published_at
@@ -89,7 +144,8 @@ async function main() {
         author_id = EXCLUDED.author_id,
         status = EXCLUDED.status,
         published_at = EXCLUDED.published_at,
-        updated_at = now()`,
+        updated_at = now()
+      RETURNING id`,
       [
         row.slug,
         row.type,
@@ -104,7 +160,50 @@ async function main() {
         row.published_at,
       ],
     )
+    const articleId = out[0]?.id
+    if (!articleId) {
+      console.error('No id after upsert:', row.slug)
+      continue
+    }
+
     console.log('Upserted article:', row.slug)
+
+    if (!r2) continue
+    if (isR2PublicUrlMisconfiguredForBrowsers()) continue
+
+    const rel = COVER_FILE[row.slug]
+    const abs = resolveLocalCoverPath(rel)
+    if (!abs) {
+      console.warn(
+        '[seed insights] local cover file missing (skip R2 upload). Tried apps/web/public from repo layout and cwd.',
+        rel,
+      )
+      continue
+    }
+
+    try {
+      const buffer = fs.readFileSync(abs)
+      const mime = mimeFromFilePath(abs)
+      assertAllowedImageMime(mime)
+      const ext = mimeToExt(mime)
+      const key = `articles/${articleId}/seed-cover.${ext}`
+      await uploadPublicImage(key, buffer, mime)
+      const url = tryPublicUrlForKey(key)
+      if (!url) {
+        console.error(
+          '[seed insights] R2_PUBLIC_URL is wrong (use pub-*.r2.dev or custom domain, not *.r2.cloudflarestorage.com). Skipping DB update for',
+          row.slug,
+        )
+        continue
+      }
+      await pool.query(`UPDATE blog_articles SET image_url = $1, updated_at = now() WHERE id = $2::uuid`, [
+        url,
+        articleId,
+      ])
+      console.log('[seed insights] R2 cover:', row.slug, '→', url)
+    } catch (e) {
+      console.error('[seed insights] R2 upload failed for', row.slug, e)
+    }
   }
 
   await closePool()

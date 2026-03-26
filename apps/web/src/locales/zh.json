@@ -581,7 +581,8 @@
       "desc1": "基于机柜的储能系统为工业储能提供灵活和模块化的方法。它们专为需要可扩展容量、有效利用可用空间以及与现有电气系统集成的设施而设计。",
       "desc2": "Baterino 将基于机柜的系统作为集成基础设施组件，适应每个站点的电气、运营和监管需求。",
       "power": "每个机柜安装功率约 30 kW 至 220 kW",
-      "techBoxSubtitle": "单机柜约 30 kW 至 220 kW 解决方案",
+      "techBoxSubtitle": "单机柜约 60 kWh 至 260 kWh 解决方案",
+      "techContactCta": "联系我们",
       "ourFocus": "我们的重点",
       "focusIntro": "我们专注于机柜式系统作为务实、省地的基础设施——不仅是设备交付，还包括在真实工业环境中的集成、安全与长期可运行性。",
       "focus1": "模块化和可扩展的系统架构",
@@ -593,7 +594,19 @@
       "app2": "制造工厂",
       "app3": "物流中心",
       "app4": "有限区域运营",
-      "applicationsIntro": "机柜式 BESS 适合需要可扩展储能且占地有限的场景，典型部署包括："
+      "applicationsIntro": "机柜式 BESS 适合需要可扩展储能且占地有限的场景，典型部署包括：",
+      "techProduct1": {
+        "title": "风冷机柜",
+        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+      },
+      "techProduct2": {
+        "title": "风冷机柜",
+        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+      },
+      "techProduct3": {
+        "title": "液冷机柜",
+        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+      }
     },
     "containerized": {
       "title": "集装箱式和大规模储能系统（BESS）",

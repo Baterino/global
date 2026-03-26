@@ -28,6 +28,40 @@ export function isR2Configured(): boolean {
   )
 }
 
+/**
+ * True when R2_PUBLIC_URL is the S3-compatible **API** host. That endpoint is for SDK uploads only;
+ * browsers cannot load images from it. Use the bucket public hostname (r2.dev or custom domain).
+ */
+export function isR2PublicUrlS3ApiEndpoint(raw: string | undefined): boolean {
+  const s = normalizeScalarEnv(raw)
+  if (!s) return false
+  try {
+    const withProto = /^https?:\/\//i.test(s) ? s : `https://${s}`
+    return new URL(withProto).hostname.endsWith('.r2.cloudflarestorage.com')
+  } catch {
+    return /r2\.cloudflarestorage\.com/i.test(s)
+  }
+}
+
+/** Railway / local: public URL is set but will break `<img src>` on Vercel until fixed. */
+export function isR2PublicUrlMisconfiguredForBrowsers(): boolean {
+  return isR2PublicUrlS3ApiEndpoint(process.env.R2_PUBLIC_URL)
+}
+
+function browserSafePublicBase(): string {
+  const base = normalizeScalarEnv(process.env.R2_PUBLIC_URL).replace(/\/+$/, '')
+  if (!base) {
+    throw new Error('R2_PUBLIC_URL is not set')
+  }
+  if (isR2PublicUrlS3ApiEndpoint(base)) {
+    throw new Error(
+      'R2_PUBLIC_URL must be your bucket public URL (e.g. https://pub-xxxx.r2.dev or https://media.yourdomain.com). ' +
+        'Do not use https://<accountid>.r2.cloudflarestorage.com — that host is only for the S3 API and images will not load on the website.',
+    )
+  }
+  return base
+}
+
 function getClient(): S3Client {
   if (client) return client
   const accountId = normalizeScalarEnv(process.env.R2_ACCOUNT_ID)
@@ -47,9 +81,18 @@ function getClient(): S3Client {
 }
 
 export function publicUrlForKey(key: string): string {
-  const base = normalizeScalarEnv(process.env.R2_PUBLIC_URL).replace(/\/+$/, '')
+  const base = browserSafePublicBase()
   const k = key.replace(/^\/+/, '')
   return `${base}/${k}`
+}
+
+/** Build public URL only when base is valid; otherwise return null (callers can skip or warn). */
+export function tryPublicUrlForKey(key: string): string | null {
+  try {
+    return publicUrlForKey(key)
+  } catch {
+    return null
+  }
 }
 
 /**
@@ -67,7 +110,8 @@ export function publicImageUrlForResponse(storedUrl: string | null | undefined):
   if (!/^https?:\/\//i.test(u) && pubBase) {
     const k = u.replace(/^\/+/, '')
     if (k.startsWith('articles/') || k.startsWith('use-cases/')) {
-      return publicUrlForKey(k)
+      const fixed = tryPublicUrlForKey(k)
+      return fixed ?? u
     }
     return u
   }
@@ -84,7 +128,10 @@ export function publicImageUrlForResponse(storedUrl: string | null | undefined):
       const path = parsed.pathname.replace(/^\/+/, '')
       if (!path) return u
       const key = path.split('/').slice(1).join('/')
-      if (key) return publicUrlForKey(key)
+      if (key) {
+        const fixed = tryPublicUrlForKey(key)
+        return fixed ?? u
+      }
     }
   } catch {
     /* ignore parse errors */

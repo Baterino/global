@@ -581,7 +581,8 @@
       "desc1": "Sistem penyimpanan energi berbasis kabinet memungkinkan pendekatan yang fleksibel dan modular untuk penyimpanan energi industri. Mereka dirancang untuk fasilitas yang memerlukan kapasitas yang dapat diskalakan, penggunaan ruang yang efisien, dan integrasi dengan sistem listrik yang ada.",
       "desc2": "Baterino memungkinkan sistem berbasis kabinet sebagai komponen infrastruktur terintegrasi, disesuaikan dengan kebutuhan listrik, operasional, dan peraturan dari setiap lokasi.",
       "power": "~30 kW hingga ~220 kW per kabinet daya terpasang",
-      "techBoxSubtitle": "Solusi ~30 kW hingga ~220 kW per kabinet",
+      "techBoxSubtitle": "Solusi ~60 kWh hingga ~260 kWh per kabinet",
+      "techContactCta": "Hubungi kami",
       "ourFocus": "FOKUS KAMI",
       "focusIntro": "Kami fokus pada sistem berbasis kabinet sebagai infrastruktur yang praktis dan hemat ruang — bukan sekadar pengiriman peralatan, melainkan integrasi, keselamatan, dan keoperasian jangka panjang di lingkungan industri nyata.",
       "focus1": "Arsitektur sistem modular & dapat diskalakan",
@@ -593,7 +594,19 @@
       "app2": "Pabrik manufaktur",
       "app3": "Pusat logistik",
       "app4": "Operasi area terbatas",
-      "applicationsIntro": "BESS kabinet cocok untuk lokasi yang membutuhkan penyimpanan skalabel tanpa jejak besar. Penerapan tipikal meliputi:"
+      "applicationsIntro": "BESS kabinet cocok untuk lokasi yang membutuhkan penyimpanan skalabel tanpa jejak besar. Penerapan tipikal meliputi:",
+      "techProduct1": {
+        "title": "Kabinet pendingin udara",
+        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+      },
+      "techProduct2": {
+        "title": "Kabinet pendingin udara",
+        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+      },
+      "techProduct3": {
+        "title": "Kabinet pendingin cair",
+        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+      }
     },
     "containerized": {
       "title": "SISTEM PENYIMPANAN DALAM KONTAINER & SKALA BESAR (BESS)",

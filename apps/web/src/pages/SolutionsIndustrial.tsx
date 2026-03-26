@@ -59,6 +59,27 @@ export function SolutionsIndustrial() {
             }
             techTitleKey="industrial.techBoxTitle"
             techSubtitleKey="industrial.cabinet.techBoxSubtitle"
+            techShowContactCta
+            techProductImages={[
+              {
+                src: '/images/products/industrial/lithtech-60kwh.png',
+                alt: 'LithTech 60 kWh cabinet',
+                titleKey: 'industrial.cabinet.techProduct1.title',
+                subtitleKey: 'industrial.cabinet.techProduct1.subtitle',
+              },
+              {
+                src: '/images/products/industrial/lt-204-air.png',
+                alt: 'LT 204 Air cabinet',
+                titleKey: 'industrial.cabinet.techProduct2.title',
+                subtitleKey: 'industrial.cabinet.techProduct2.subtitle',
+              },
+              {
+                src: '/images/products/industrial/lt-215-liquid.png',
+                alt: 'LT 215 Liquid cabinet',
+                titleKey: 'industrial.cabinet.techProduct3.title',
+                subtitleKey: 'industrial.cabinet.techProduct3.subtitle',
+              },
+            ]}
             primaryCard={{
               titleKey: 'industrial.cabinet.ourFocus',
               introKey: 'industrial.cabinet.focusIntro',

@@ -581,7 +581,8 @@
       "desc1": "Los sistemas de almacenamiento de energía basados en gabinetes permiten un enfoque flexible y modular para el almacenamiento de energía industrial. Están diseñados para instalaciones que requieren capacidad escalable, uso eficiente del espacio disponible e integración con sistemas eléctricos existentes.",
       "desc2": "Baterino habilita sistemas basados en gabinetes como componentes de infraestructura integrada, adaptados a las necesidades eléctricas, operativas y regulatorias de cada sitio.",
       "power": "~30 kW a ~220 kW por gabinete de potencia instalada",
-      "techBoxSubtitle": "Soluciones de ~30 kW a ~220 kW por gabinete",
+      "techBoxSubtitle": "Soluciones de ~60 kWh a ~260 kWh por gabinete",
+      "techContactCta": "Contáctenos",
       "ourFocus": "NUESTRO ENFOQUE",
       "focusIntro": "Nos centramos en sistemas en gabinete como infraestructura práctica y eficiente en espacio: no solo entrega de equipos, sino integración, seguridad y operabilidad a largo plazo en entornos industriales reales.",
       "focus1": "Arquitectura de sistema modular y escalable",
@@ -593,7 +594,19 @@
       "app2": "Plantas de fabricación",
       "app3": "Centros logísticos",
       "app4": "Operaciones de área limitada",
-      "applicationsIntro": "El BESS en gabinete encaja en sitios que necesitan almacenamiento escalable sin grandes huellas. Los despliegues típicos incluyen:"
+      "applicationsIntro": "El BESS en gabinete encaja en sitios que necesitan almacenamiento escalable sin grandes huellas. Los despliegues típicos incluyen:",
+      "techProduct1": {
+        "title": "Gabinete refrigerado por aire",
+        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+      },
+      "techProduct2": {
+        "title": "Gabinete refrigerado por aire",
+        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+      },
+      "techProduct3": {
+        "title": "Gabinete refrigerado por líquido",
+        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+      }
     },
     "containerized": {
       "title": "SISTEMAS DE ALMACENAMIENTO CONTENEDORIZADOS Y A GRAN ESCALA (BESS)",

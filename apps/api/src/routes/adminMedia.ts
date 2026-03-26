@@ -5,6 +5,7 @@ import type { AuthedRequest } from '../auth/middleware.js'
 import { requireAuth, canEditArticle, canEditUseCase } from '../auth/middleware.js'
 import {
   isR2Configured,
+  isR2PublicUrlMisconfiguredForBrowsers,
   publicUrlForKey,
   uniqueObjectKey,
   uploadPublicImage,
@@ -38,6 +39,15 @@ const PROJECT_ID_RE = /^[A-Za-z0-9._-]{1,80}$/
 adminMediaRouter.post('/upload', upload.single('file'), async (req: AuthedRequest, res: Response) => {
   if (!isR2Configured()) {
     res.status(503).json({ ok: false, code: 'r2_not_configured' })
+    return
+  }
+  if (isR2PublicUrlMisconfiguredForBrowsers()) {
+    res.status(503).json({
+      ok: false,
+      code: 'r2_public_url_invalid',
+      message:
+        'R2_PUBLIC_URL on the API must be the bucket public hostname (https://pub-….r2.dev or your media domain), not *.r2.cloudflarestorage.com. See Cloudflare R2 → bucket → Public access.',
+    })
     return
   }
 
@@ -107,7 +117,15 @@ adminMediaRouter.post('/upload', upload.single('file'), async (req: AuthedReques
 
     const objectKey = uniqueObjectKey(keyPrefix, file.originalname || 'image', file.mimetype)
     await uploadPublicImage(objectKey, file.buffer, file.mimetype)
-    const url = publicUrlForKey(objectKey)
+    let url: string
+    try {
+      url = publicUrlForKey(objectKey)
+    } catch (err) {
+      const hint = err instanceof Error ? err.message : String(err)
+      console.error('[admin/media upload] invalid R2_PUBLIC_URL:', hint)
+      res.status(503).json({ ok: false, code: 'r2_public_url_invalid', message: hint })
+      return
+    }
     res.status(201).json({ ok: true, url, key: objectKey })
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : String(e)

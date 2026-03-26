@@ -573,7 +573,8 @@
       "desc1": "Cabinet-based energy storage systems enable a flexible and modular approach to industrial energy storage. They are designed for facilities that require scalable capacity, efficient use of available space, and integration with existing electrical systems.",
       "desc2": "Baterino enables cabinet-based systems as integrated infrastructure components, adapted to the electrical, operational and regulatory needs of each site.",
       "power": "~30 kW to ~220 kW per cabinet installed power",
-      "techBoxSubtitle": "From ~30 kW to ~220 kW per cabinet solutions",
+      "techBoxSubtitle": "From ~60 kWh to ~260 kWh per cabinet solutions",
+      "techContactCta": "Contact us",
       "ourFocus": "Our Focus",
       "focusIntro": "We focus on cabinet-based systems as practical, space-efficient infrastructure — not only equipment delivery, but integration, safety, and long-term operability in real industrial environments.",
       "focus1": "Modular & scalable system architecture",
@@ -585,7 +586,19 @@
       "app2": "Manufacturing plants",
       "app3": "Logistics centers",
       "app4": "Limited-area operations",
-      "applicationsIntro": "Cabinet BESS fits sites that need scalable storage without large footprints. Typical deployments include:"
+      "applicationsIntro": "Cabinet BESS fits sites that need scalable storage without large footprints. Typical deployments include:",
+      "techProduct1": {
+        "title": "Air Cooled Cabinet",
+        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+      },
+      "techProduct2": {
+        "title": "Air Cooled Cabinet",
+        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+      },
+      "techProduct3": {
+        "title": "Liquid-Cooled Cabinet",
+        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+      }
     },
     "containerized": {
       "title": "Containerized & Large-Scale Storage Systems (BESS)",

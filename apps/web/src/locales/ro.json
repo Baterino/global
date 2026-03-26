@@ -581,7 +581,8 @@
       "desc1": "Sistemele de stocare a energiei pe bază de cabinete permit o abordare flexibilă și modulară a stocării industriale a energiei. Sunt concepute pentru instalații care necesită capacitate scalabilă, utilizare eficientă a spațiului disponibil și integrare cu sistemele electrice existente.",
       "desc2": "Baterino activează sistemele pe bază de cabinete ca componente de infrastructură integrate, adaptate la nevoile electrice, operaționale și de reglementare ale fiecărui amplasament.",
       "power": "~30 kW până la ~220 kW putere instalată per cabinet",
-      "techBoxSubtitle": "Soluții de la ~30 kW la ~220 kW per cabinet",
+      "techBoxSubtitle": "Soluții de la ~60 kWh la ~260 kWh per cabinet",
+      "techContactCta": "Contactați-ne",
       "ourFocus": "Concentrarea Noastră",
       "focusIntro": "Ne concentrăm pe sistemele pe bază de cabinete ca infrastructură practică și eficientă din punct de vedere al spațiului — nu doar livrarea echipamentelor, ci integrarea, siguranța și operabilitatea pe termen lung în medii industriale reale.",
       "focus1": "Arhitectură de sistem modulară și scalabilă",
@@ -593,7 +594,19 @@
       "app2": "Fabrici de producție",
       "app3": "Centre logistice",
       "app4": "Operațiuni în spații restrânse",
-      "applicationsIntro": "BESS-ul pe cabinete se potrivește amplasamentelor care au nevoie de stocare scalabilă fără amprente mari. Implementări tipice includ:"
+      "applicationsIntro": "BESS-ul pe cabinete se potrivește amplasamentelor care au nevoie de stocare scalabilă fără amprente mari. Implementări tipice includ:",
+      "techProduct1": {
+        "title": "Cabinet cu răcire pe aer",
+        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+      },
+      "techProduct2": {
+        "title": "Cabinet cu răcire pe aer",
+        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+      },
+      "techProduct3": {
+        "title": "Cabinet cu răcire lichidă",
+        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+      }
     },
     "containerized": {
       "title": "Sisteme de Stocare Containerizate și de Mare Scară (BESS)",

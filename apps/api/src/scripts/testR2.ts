@@ -5,7 +5,12 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dotenv from 'dotenv'
-import { isR2Configured, publicUrlForKey, uploadPublicImage } from '../storage/r2.js'
+import {
+  isR2Configured,
+  isR2PublicUrlMisconfiguredForBrowsers,
+  publicUrlForKey,
+  uploadPublicImage,
+} from '../storage/r2.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__dirname, '../../.env') })
@@ -22,6 +27,15 @@ async function main() {
       'R2 is not fully configured. Set in apps/api/.env (or env):',
       'R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET_NAME, R2_PUBLIC_URL',
     )
+    process.exit(1)
+  }
+
+  if (isR2PublicUrlMisconfiguredForBrowsers()) {
+    console.error('')
+    console.error('R2_PUBLIC_URL must NOT be *.r2.cloudflarestorage.com (that is the S3 API only).')
+    console.error('In Cloudflare → R2 → your bucket → Public access, enable the r2.dev URL or a custom domain,')
+    console.error('then set R2_PUBLIC_URL=https://pub-xxxxx.r2.dev (or your HTTPS media domain).')
+    console.error('')
     process.exit(1)
   }
 

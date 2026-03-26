@@ -225,11 +225,20 @@ export async function adminUploadMedia(params: {
     headers: { Authorization: `Bearer ${token}` },
     body: form,
   })
-  const data = (await res.json()) as { ok?: boolean; url?: string; key?: string; code?: string }
+  const data = (await res.json()) as {
+    ok?: boolean
+    url?: string
+    key?: string
+    code?: string
+    message?: string
+  }
   if (!res.ok || !data.ok || !data.url) {
     const code = data.code ?? 'upload_failed'
+    const serverHint = typeof data.message === 'string' && data.message.trim() ? data.message.trim() : ''
     const messages: Record<string, string> = {
       r2_not_configured: 'Server is not configured for file storage (R2).',
+      r2_public_url_invalid:
+        'R2_PUBLIC_URL on the API must be your public bucket URL (https://pub-….r2.dev or your media domain), not the *.r2.cloudflarestorage.com S3 endpoint. Update Railway env and redeploy.',
       file_required: 'Choose a file to upload.',
       invalid_kind: 'Invalid upload type.',
       entity_id_required: 'Missing article or project id.',
@@ -241,7 +250,7 @@ export async function adminUploadMedia(params: {
       file_too_large: 'File is too large (max 12 MB).',
       upload_failed: 'Upload failed.',
     }
-    throw new Error(messages[code] ?? code)
+    throw new Error(serverHint || messages[code] || code)
   }
   return { url: data.url, key: data.key ?? '' }
 }
