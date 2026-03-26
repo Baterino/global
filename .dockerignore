@@ -1,0 +1,11 @@
+node_modules
+**/node_modules
+.git
+.github
+apps/web
+**/.env
+**/.env.*
+*.md
+.pnpm-store
+**/*.tsbuildinfo
+**/dist
