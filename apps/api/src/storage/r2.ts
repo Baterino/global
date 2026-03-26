@@ -18,14 +18,24 @@ export function getR2BucketName(): string {
   return normalizeScalarEnv(process.env.R2_BUCKET_NAME).toLowerCase()
 }
 
+const R2_ENV_KEYS = [
+  'R2_ACCOUNT_ID',
+  'R2_ACCESS_KEY_ID',
+  'R2_SECRET_ACCESS_KEY',
+  'R2_BUCKET_NAME',
+  'R2_PUBLIC_URL',
+] as const
+
+/** Names of R2 vars that are unset or blank (for deploy debugging; never logs values). */
+export function missingR2EnvKeys(): readonly string[] {
+  return R2_ENV_KEYS.filter((k) => {
+    if (k === 'R2_BUCKET_NAME') return !getR2BucketName()
+    return !normalizeScalarEnv(process.env[k])
+  })
+}
+
 export function isR2Configured(): boolean {
-  return Boolean(
-    normalizeScalarEnv(process.env.R2_ACCOUNT_ID) &&
-      normalizeScalarEnv(process.env.R2_ACCESS_KEY_ID) &&
-      normalizeScalarEnv(process.env.R2_SECRET_ACCESS_KEY) &&
-      getR2BucketName() &&
-      normalizeScalarEnv(process.env.R2_PUBLIC_URL),
-  )
+  return missingR2EnvKeys().length === 0
 }
 
 /**

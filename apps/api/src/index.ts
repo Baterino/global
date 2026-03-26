@@ -12,7 +12,11 @@ import { adminUseCasesRouter } from './routes/adminUseCases.js'
 import { adminMediaRouter } from './routes/adminMedia.js'
 import { publicContentRouter } from './routes/publicContent.js'
 import { hasResend } from './contact/resendChannel.js'
-import { isR2Configured, isR2PublicUrlMisconfiguredForBrowsers } from './storage/r2.js'
+import {
+  isR2Configured,
+  isR2PublicUrlMisconfiguredForBrowsers,
+  missingR2EnvKeys,
+} from './storage/r2.js'
 
 /** Prefer IPv4 for outbound connections (e.g. SMTP) — many PaaS networks have no IPv6 egress (ENETUNREACH). */
 dns.setDefaultResultOrder('ipv4first')
@@ -49,8 +53,9 @@ if (hasDatabase()) {
       app.use('/api/admin/media', adminMediaRouter)
       console.log('[api] CMS enabled: /api/public/* and /api/admin/*')
       if (!isR2Configured()) {
+        const missing = missingR2EnvKeys().join(', ')
         console.warn(
-          '[api] R2 media uploads disabled — set R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET_NAME, R2_PUBLIC_URL',
+          `[api] R2 media uploads disabled — add these Railway variables on the API service (not Postgres): ${missing}`,
         )
       } else if (isR2PublicUrlMisconfiguredForBrowsers()) {
         console.error(
