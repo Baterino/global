@@ -1,6 +1,7 @@
 {
   "name": "baterino-global",
   "private": true,
+  "workspaces": ["apps/api"],
   "dependencies": {
     "nodemailer": "^8.0.3"
   },
@@ -12,7 +13,9 @@
     "dev": "pnpm run --parallel dev",
     "dev:web": "pnpm --filter web dev",
     "dev:api": "pnpm --filter api dev",
-    "build": "pnpm run -r build",
+    "build": "npm run build -w api",
+    "build:all": "pnpm run -r build",
+    "start": "npm run start -w api",
     "typecheck": "pnpm run -r typecheck",
     "lint": "pnpm --filter web lint",
     "format": "pnpm --filter web format",
