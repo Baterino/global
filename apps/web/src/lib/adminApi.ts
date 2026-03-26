@@ -220,18 +220,41 @@ export async function adminUploadMedia(params: {
   form.append('kind', params.kind)
   form.append('entityId', params.entityId)
   form.append('file', params.file)
-  const res = await fetch(`${base}/api/admin/media/upload`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${token}` },
-    body: form,
-  })
-  const data = (await res.json()) as {
+  let res: Response
+  try {
+    res = await fetch(`${base}/api/admin/media/upload`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+      body: form,
+    })
+  } catch (e) {
+    const hint =
+      viteApiBaseUrl() === ''
+        ? ' Could not reach the server. Is the API running on port 3001 and the web app using the Vite dev server (so /api proxies)?'
+        : ''
+    throw new Error(
+      (e instanceof Error ? e.message : 'Network error') +
+        hint +
+        ' Or set VITE_API_URL to your API base URL.',
+    )
+  }
+
+  const raw = await res.text()
+  let data = {} as {
     ok?: boolean
     url?: string
     key?: string
     code?: string
     message?: string
   }
+  try {
+    data = raw.trim() ? (JSON.parse(raw) as typeof data) : {}
+  } catch {
+    throw new Error(
+      `Upload failed (HTTP ${res.status}) — response was not JSON. ${raw.slice(0, 120).replace(/\s+/g, ' ')}`,
+    )
+  }
+
   if (!res.ok || !data.ok || !data.url) {
     const code = data.code ?? 'upload_failed'
     const serverHint = typeof data.message === 'string' && data.message.trim() ? data.message.trim() : ''
@@ -248,6 +271,8 @@ export async function adminUploadMedia(params: {
       forbidden: 'You cannot upload for this item.',
       invalid_file_type: 'Only JPEG, PNG, WebP, GIF, or AVIF images are allowed.',
       file_too_large: 'File is too large (max 12 MB).',
+      unauthorized: 'Sign in again — your session may have expired.',
+      invalid_token: 'Sign in again — your session token is invalid.',
       upload_failed: 'Upload failed.',
     }
     throw new Error(serverHint || messages[code] || code)

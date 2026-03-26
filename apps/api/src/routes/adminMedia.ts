@@ -134,7 +134,12 @@ adminMediaRouter.post('/upload', upload.single('file'), async (req: AuthedReques
       return
     }
     console.error('[admin/media upload]', e)
-    res.status(503).json({ ok: false, code: 'upload_failed' })
+    const safeDetail = msg.replace(/\s+/g, ' ').trim().slice(0, 500)
+    res.status(503).json({
+      ok: false,
+      code: 'upload_failed',
+      message: safeDetail || 'R2 upload failed — check API logs and R2 credentials / bucket name.',
+    })
   }
 })
 
