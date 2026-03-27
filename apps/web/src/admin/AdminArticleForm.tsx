@@ -9,6 +9,8 @@ import {
   type ArticleDetail,
 } from '../lib/adminApi'
 import { AdminArticleBodyEditor } from './AdminArticleBodyEditor'
+import { AdminFeaturedImageCropModal } from './AdminFeaturedImageCropModal'
+import { FEATURED_IMAGE_HEIGHT, FEATURED_IMAGE_WIDTH } from '../lib/cropFeaturedImage'
 
 function isArticleBodyEmpty(html: string): boolean {
   const t = html.trim()
@@ -64,6 +66,8 @@ export function AdminArticleForm() {
   const [uploadBusy, setUploadBusy] = useState(false)
   const [existingSlug, setExistingSlug] = useState('')
   const [pendingImageFile, setPendingImageFile] = useState<File | null>(null)
+  /** Object URL + original filename; opened in crop modal before upload or pending save. */
+  const [cropSession, setCropSession] = useState<{ src: string; name: string } | null>(null)
   const [form, setForm] = useState<FormState>({
     type: 'company',
     title: '',
@@ -115,16 +119,33 @@ export function AdminArticleForm() {
     }
   }, [id, isNew, navigate])
 
-  async function onFeaturedImageChange(e: React.ChangeEvent<HTMLInputElement>) {
+  useEffect(() => {
+    return () => {
+      if (cropSession) URL.revokeObjectURL(cropSession.src)
+    }
+  }, [cropSession])
+
+  function onFeaturedImageChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
     e.target.value = ''
     if (!file) return
+    const src = URL.createObjectURL(file)
+    setCropSession({ src, name: file.name })
+  }
 
+  function closeCropSession() {
+    if (cropSession) {
+      URL.revokeObjectURL(cropSession.src)
+      setCropSession(null)
+    }
+  }
+
+  async function onCroppedFeaturedImage(file: File) {
+    closeCropSession()
     if (isNew || !id) {
       setPendingImageFile(file)
       return
     }
-
     setUploadBusy(true)
     try {
       const { url } = await adminUploadMedia({ kind: 'article', entityId: id, file })
@@ -240,11 +261,14 @@ export function AdminArticleForm() {
         </div>
         <div>
           <label className="block text-body-sm font-medium">Featured image</label>
+          <p className="mt-1 text-body-xs text-neutral-500">
+            Images are cropped to {FEATURED_IMAGE_WIDTH} × {FEATURED_IMAGE_HEIGHT} px before upload.
+          </p>
           <div className="mt-1 flex flex-wrap items-center gap-3">
             <input
               type="file"
               accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
-              disabled={uploadBusy || saving}
+              disabled={uploadBusy || saving || Boolean(cropSession)}
               onChange={onFeaturedImageChange}
               className="text-body-sm text-neutral-700 file:mr-3 file:rounded file:border file:border-neutral-300 file:bg-white file:px-3 file:py-1.5"
             />
@@ -333,12 +357,20 @@ export function AdminArticleForm() {
         </div>
         <button
           type="submit"
-          disabled={saving || uploadBusy}
+          disabled={saving || uploadBusy || Boolean(cropSession)}
           className="rounded-lg bg-neutral-900 px-6 py-2.5 font-semibold text-white hover:bg-neutral-800 disabled:opacity-50"
         >
           {saving ? 'Saving…' : isNew ? 'Create' : 'Save changes'}
         </button>
       </form>
+      {cropSession ? (
+        <AdminFeaturedImageCropModal
+          imageSrc={cropSession.src}
+          originalName={cropSession.name}
+          onCancel={closeCropSession}
+          onComplete={onCroppedFeaturedImage}
+        />
+      ) : null}
     </div>
   )
 }
