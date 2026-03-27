@@ -256,8 +256,16 @@ export async function adminUploadMedia(params: {
   }
 
   if (!res.ok || !data.ok || !data.url) {
-    const code = data.code ?? 'upload_failed'
-    const serverHint = typeof data.message === 'string' && data.message.trim() ? data.message.trim() : ''
+    let code = typeof data.code === 'string' ? data.code.toLowerCase().trim() : ''
+    if (!code && res.status === 401) code = 'unauthorized'
+    if (!code && res.status === 403) code = 'forbidden'
+    if (!code) code = 'upload_failed'
+
+    let serverHint = typeof data.message === 'string' && data.message.trim() ? data.message.trim() : ''
+    if (/^unauthorized$/i.test(serverHint)) serverHint = ''
+
+    const authHelp = ` Sign out (admin), sign in again. You must use the same API for login and uploads: if VITE_API_URL is set, it must match where you logged in; if it is empty, the API must run on port 3001 (Vite proxy). Changing JWT_SECRET or R2 keys invalidates the old session token.`
+
     const messages: Record<string, string> = {
       r2_not_configured: 'Server is not configured for file storage (R2).',
       r2_public_url_invalid:
@@ -271,8 +279,8 @@ export async function adminUploadMedia(params: {
       forbidden: 'You cannot upload for this item.',
       invalid_file_type: 'Only JPEG, PNG, WebP, GIF, or AVIF images are allowed.',
       file_too_large: 'File is too large (max 12 MB).',
-      unauthorized: 'Sign in again — your session may have expired.',
-      invalid_token: 'Sign in again — your session token is invalid.',
+      unauthorized: 'Not signed in or session expired.' + authHelp,
+      invalid_token: 'Session token no longer valid.' + authHelp,
       upload_failed: 'Upload failed.',
     }
     throw new Error(serverHint || messages[code] || code)
