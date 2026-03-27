@@ -246,6 +246,7 @@ export async function adminUploadMedia(params: {
     key?: string
     code?: string
     message?: string
+    error?: string
   }
   try {
     data = raw.trim() ? (JSON.parse(raw) as typeof data) : {}
@@ -261,7 +262,9 @@ export async function adminUploadMedia(params: {
     if (!code && res.status === 403) code = 'forbidden'
     if (!code) code = 'upload_failed'
 
-    let serverHint = typeof data.message === 'string' && data.message.trim() ? data.message.trim() : ''
+    let serverHint =
+      (typeof data.message === 'string' && data.message.trim() ? data.message.trim() : '') ||
+      (typeof data.error === 'string' && data.error.trim() ? data.error.trim() : '')
     if (/^unauthorized$/i.test(serverHint)) serverHint = ''
 
     const authHelp = ` Sign out (admin), sign in again. You must use the same API for login and uploads: if VITE_API_URL is set, it must match where you logged in; if it is empty, the API must run on port 3001 (Vite proxy). Changing JWT_SECRET or R2 keys invalidates the old session token.`
@@ -281,9 +284,11 @@ export async function adminUploadMedia(params: {
       file_too_large: 'File is too large (max 12 MB).',
       unauthorized: 'Not signed in or session expired.' + authHelp,
       invalid_token: 'Session token no longer valid.' + authHelp,
-      upload_failed: 'Upload failed.',
+      upload_failed: '',
     }
-    throw new Error(serverHint || messages[code] || code)
+    const genericUploadFailed = `Upload failed (HTTP ${res.status}). Check the terminal running the API (pnpm dev:api) or the line starting with [admin/media upload] — often R2 credentials, bucket name, or network.`
+    const preset = code === 'upload_failed' ? genericUploadFailed : messages[code] || code
+    throw new Error(serverHint || preset)
   }
   return { url: data.url, key: data.key ?? '' }
 }
