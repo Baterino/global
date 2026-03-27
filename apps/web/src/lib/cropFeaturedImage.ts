@@ -1,6 +1,9 @@
-/** Featured article image: fixed aspect and output size (matches Insights cards). */
-export const FEATURED_IMAGE_WIDTH = 900
-export const FEATURED_IMAGE_HEIGHT = 400
+/**
+ * Featured article image: 16:10 — same as Insights grid cards (`aspect-[16/10]` in Insights.tsx).
+ * Output at 1600×1000 for sharp `object-cover` on retina-width cards.
+ */
+export const FEATURED_IMAGE_WIDTH = 1600
+export const FEATURED_IMAGE_HEIGHT = 1000
 export const FEATURED_IMAGE_ASPECT = FEATURED_IMAGE_WIDTH / FEATURED_IMAGE_HEIGHT
 
 export type PixelCrop = { x: number; y: number; width: number; height: number }
@@ -55,5 +58,5 @@ export async function renderCroppedFeaturedJpeg(
 
 export function featuredCropToFile(blob: Blob, originalName: string): File {
   const base = (originalName.replace(/\.[^.]+$/, '') || 'featured').replace(/[^a-zA-Z0-9._-]/g, '_')
-  return new File([blob], `${base}-900x400.jpg`, { type: 'image/jpeg' })
+  return new File([blob], `${base}-${FEATURED_IMAGE_WIDTH}x${FEATURED_IMAGE_HEIGHT}.jpg`, { type: 'image/jpeg' })
 }
