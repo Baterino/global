@@ -1,17 +1,26 @@
 /**
- * Social profile URLs. Set in `.env` when pages are live.
- * Until then, links fall back to the main site (update env when ready).
+ * Social profile URLs. Override with `.env` per environment if needed.
  */
 function urlOrFallback(raw: string | undefined, fallback: string): string {
   const v = raw?.trim()
   return v && v.length > 0 ? v : fallback
 }
 
-const SITE = 'https://baterino.com'
+/** Baterino Global Facebook Page (numeric URL until a custom @username is set in Meta). */
+export const defaultFacebookPageUrl = 'https://www.facebook.com/profile.php?id=61575386571436'
 
-export const socialFacebookUrl = urlOrFallback(import.meta.env.VITE_SOCIAL_FACEBOOK_URL, SITE)
+/** Public company page (not the /about “view as member” URL). */
+export const defaultLinkedInCompanyUrl = 'https://www.linkedin.com/company/baterino-global/'
 
-export const socialLinkedInUrl = urlOrFallback(import.meta.env.VITE_SOCIAL_LINKEDIN_URL, SITE)
+export const socialFacebookUrl = urlOrFallback(
+  import.meta.env.VITE_SOCIAL_FACEBOOK_URL,
+  defaultFacebookPageUrl
+)
+
+export const socialLinkedInUrl = urlOrFallback(
+  import.meta.env.VITE_SOCIAL_LINKEDIN_URL,
+  defaultLinkedInCompanyUrl
+)
 
 /** Substack — separate channel */
 export const socialSubstackUrl = 'https://baterino.substack.com'

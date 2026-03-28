@@ -167,6 +167,8 @@ export type ArticleDetail = ArticleRow & {
   author_name: string
   location_label: string
   category_label: string
+  /** Up to 4 keywords shown under hero on the public article. */
+  keywords?: string[]
 }
 
 export async function adminListArticles(): Promise<ArticleRow[]> {

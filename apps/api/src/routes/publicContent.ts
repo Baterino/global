@@ -8,13 +8,15 @@ publicContentRouter.get('/articles', async (_req, res: Response) => {
   try {
     const pool = getPool()
     const { rows } = await pool.query(
-      `SELECT id, slug, type, title, excerpt, image_url, author_name, location_label, category_label, published_at
+      `SELECT id, slug, type, title, excerpt, image_url, author_name, location_label, category_label,
+              COALESCE(keywords, ARRAY[]::text[]) AS keywords, published_at
        FROM blog_articles
        WHERE status = 'published'
        ORDER BY published_at DESC NULLS LAST, updated_at DESC`
     )
     const articles = rows.map((row) => ({
       ...row,
+      keywords: Array.isArray(row.keywords) ? row.keywords : [],
       image_url: publicImageUrlForResponse(row.image_url),
     }))
     res.json({ ok: true, articles })
@@ -33,7 +35,8 @@ publicContentRouter.get('/articles/slug/:slug', async (req, res: Response) => {
   try {
     const pool = getPool()
     const { rows } = await pool.query(
-      `SELECT id, slug, type, title, excerpt, body_html, image_url, author_name, location_label, category_label, published_at
+      `SELECT id, slug, type, title, excerpt, body_html, image_url, author_name, location_label, category_label,
+              COALESCE(keywords, ARRAY[]::text[]) AS keywords, published_at
        FROM blog_articles WHERE slug = $1 AND status = 'published'`,
       [slug]
     )
@@ -46,6 +49,7 @@ publicContentRouter.get('/articles/slug/:slug', async (req, res: Response) => {
       ok: true,
       article: {
         ...row,
+        keywords: Array.isArray(row.keywords) ? row.keywords : [],
         image_url: publicImageUrlForResponse(row.image_url),
         body_html: rewriteBodyHtmlR2ApiUrls(row.body_html),
       },

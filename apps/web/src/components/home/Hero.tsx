@@ -12,7 +12,24 @@ const HERO_SLIDER_TAB_KEYS = [
   'home.hero.sliderTabs.afterSales',
 ] as const
 
-const CAROUSEL_SLIDES = [
+/** When the tab hover panel is open — independent from the centered site intro layer. */
+type HeroTabHoverOverlay = {
+  /** Full-card bottom-to-top gradient behind slide title + CTA. Default true. Set false to disable for this tab. */
+  gradient?: boolean
+}
+
+type HeroSlide = {
+  image: string
+  mobileImage: string
+  titleKey: string
+  subtitleKey: string
+  to: string
+  buttonKey: string
+  /** Omit for defaults (gradient on). Add e.g. `{ gradient: false }` to turn off hover gradient for this tab only. */
+  tabHoverOverlay?: HeroTabHoverOverlay
+}
+
+const CAROUSEL_SLIDES: HeroSlide[] = [
   {
     image: '/images/hero-slide1.jpg',
     mobileImage: '/images/hero-slider-mobile1.jpg',
@@ -20,6 +37,7 @@ const CAROUSEL_SLIDES = [
     subtitleKey: 'home.heroSlides.slide1.subtitle',
     to: 'solutions/industrial',
     buttonKey: 'home.carousel.exploreMore',
+    tabHoverOverlay: { gradient: false },
   },
   {
     image: '/images/hero-slide2.jpg',
@@ -46,6 +64,10 @@ const CAROUSEL_SLIDES = [
     buttonKey: 'home.carousel.learnMore',
   },
 ]
+
+function tabHoverShowsGradient(slide: HeroSlide): boolean {
+  return slide.tabHoverOverlay?.gradient !== false
+}
 
 export function Hero() {
   const { t } = useTranslation()
@@ -75,7 +97,7 @@ export function Hero() {
                 className="absolute inset-0 h-full w-full rounded-[10px] object-cover"
                 draggable={false}
               />
-              <div className="absolute inset-0 rounded-[10px] bg-black/40" aria-hidden />
+              {i > 1 ? <div className="absolute inset-0 rounded-[10px] bg-black/40" aria-hidden /> : null}
               {i === MOBILE_SLIDER_IMAGES.length - 1 ? (
                 <div className="absolute left-0 top-0 pt-4 pl-4" aria-hidden>
                   <svg className="h-6 w-6 text-white sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -200,56 +222,87 @@ export function Hero() {
         {/* Desktop: 4-slide card with tabs */}
         <div className="mx-auto hidden w-full max-w-[1200px] overflow-hidden rounded-[10px] md:block">
           <div className="group relative h-[550px] w-full overflow-hidden rounded-[10px] bg-zinc-300">
-            <img src={slide.image} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            {/* Full-slider overlay: black 55%, hidden on hover — pointer-events-none so it never blocks clicks */}
-            <div className="pointer-events-none absolute inset-0 rounded-[10px] bg-black/55 opacity-100 transition-all duration-300 ease-in-out group-hover:opacity-0" />
-            {/* Bottom-to-top overlay on all slides */}
-            <div
-              className="pointer-events-none absolute inset-0 rounded-[10px] bg-gradient-to-t from-black/70 via-black/30 to-transparent"
-              aria-hidden
-            />
+            {/* Slide image (changes with tabs); no shared scrim here — intro and tab panels bring their own layers */}
+            <img src={slide.image} alt="" className="absolute inset-0 z-0 h-full w-full object-cover" />
 
-            {/* Logo, title and subtitle over slider, hidden on hover */}
-            <div className="pointer-events-none absolute left-1/2 top-[48%] z-[5] flex w-[98%] max-w-[98%] -translate-x-1/2 -translate-y-1/2 scale-100 flex-col items-center gap-4 px-4 text-center opacity-100 transition-all duration-300 ease-in-out group-hover:scale-[0.98] group-hover:opacity-0 sm:w-full sm:max-w-[1100px] lg:max-w-[1160px]">
-              <img
-                src="/images/baterino-logo-white.png"
-                alt="Baterino"
-                className="h-8 w-auto object-contain md:h-10"
-              />
-              <h1 className="mx-auto max-w-[800px] whitespace-pre-line font-publicSans text-xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-2xl lg:text-display-sm">
-                {t('home.hero.title')}
-              </h1>
-              <p className="max-w-[640px] font-body text-base font-normal leading-relaxed text-white/95 md:text-body-lg">
-                <Trans
-                  i18nKey="home.hero.subtitle"
-                  components={{
-                    bold: <strong className="font-bold text-white" />,
-                  }}
-                />
-              </p>
-              {/* Powered by: LithTech — under subtitle */}
-              <div className="mt-4 flex flex-wrap items-center justify-center gap-1.5 font-nunito text-xs font-normal text-white/90 md:mt-5 md:text-body-sm [pointer-events:auto]">
-                <span>{t('home.hero.poweredByLabel')}</span>
-                <a
-                  href="https://www.ltc-energy.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-opacity hover:opacity-100"
-                  aria-label="LithTech"
-                >
-                  <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="h-4 w-auto object-contain md:h-5" />
-                </a>
+            {/* Tab hover panel: gradient only (optional per tab via tabHoverOverlay). Shown when intro is hidden. */}
+            {tabHoverShowsGradient(slide) ? (
+              <div
+                className="pointer-events-none absolute inset-0 z-[7] rounded-[10px] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                aria-hidden
+              >
+                <div className="absolute inset-0 rounded-[10px] bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
               </div>
-            </div>
+            ) : null}
 
-            {/* Bottom: Hover to explore — lower, hidden on hover */}
-            <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-[5] flex flex-col items-center pb-6 pt-6 opacity-100 transition-opacity duration-300 group-hover:opacity-0 md:pb-8 md:pt-8">
-              <span className="flex items-center gap-2 font-nunito text-sm font-medium uppercase tracking-wider text-white/90 md:text-base">
-                <svg className="h-6 w-6 shrink-0 md:h-7 md:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                  <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
-                </svg>
-                {t('home.hero.hoverToExplore')}
-              </span>
+            {/*
+              Site introduction (NOT the tab slides): logo, global headline, subtitle, LithTech, hover hint.
+              Own scrim + gradient; independent from per-tab hover overlays above.
+            */}
+            <div
+              className="absolute inset-0 z-[6] flex min-h-0 flex-col opacity-100 transition-all duration-300 ease-in-out group-hover:pointer-events-none group-hover:opacity-0"
+              aria-label={t('home.hero.title')}
+            >
+              <div className="pointer-events-none absolute inset-0 rounded-[10px] bg-black/55" aria-hidden />
+              <div
+                className="pointer-events-none absolute inset-0 rounded-[10px] bg-gradient-to-t from-black/70 via-black/30 to-transparent"
+                aria-hidden
+              />
+              <div className="relative z-10 flex min-h-0 flex-1 flex-col pointer-events-none">
+                <div className="pointer-events-auto flex min-h-0 flex-1 flex-col items-center justify-center px-4 text-center sm:px-6">
+                  <div className="flex max-h-full w-full max-w-[1160px] flex-col items-center gap-4">
+                    <img
+                      src="/images/baterino-logo-white.png"
+                      alt="Baterino"
+                      className="h-8 w-auto shrink-0 object-contain md:h-10"
+                    />
+                    <h1 className="mx-auto max-w-[800px] whitespace-pre-line font-publicSans text-xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-2xl lg:text-display-sm">
+                      {t('home.hero.title')}
+                    </h1>
+                    <p className="max-w-[640px] font-body text-base font-normal leading-relaxed text-white/95 md:text-body-lg">
+                      <Trans
+                        i18nKey="home.hero.subtitle"
+                        components={{
+                          bold: <strong className="font-bold text-white" />,
+                        }}
+                      />
+                    </p>
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-1.5 font-nunito text-xs font-normal text-white/90 md:mt-5 md:text-body-sm">
+                      <span>{t('home.hero.poweredByLabel')}</span>
+                      <a
+                        href="https://www.ltc-energy.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-100"
+                        aria-label="LithTech"
+                      >
+                        <img
+                          src="/images/lithtech-logo-white 3.png"
+                          alt="LithTech"
+                          className="h-4 w-auto object-contain md:h-5"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="pointer-events-none flex shrink-0 flex-col items-center pb-6 pt-4 md:pb-8 md:pt-6">
+                  <span className="flex items-center gap-2 font-nunito text-sm font-medium uppercase tracking-wider text-white/90 md:text-base">
+                    <svg
+                      className="h-6 w-6 shrink-0 md:h-7 md:w-7"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden
+                    >
+                      <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
+                    </svg>
+                    {t('home.hero.hoverToExplore')}
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Tab bar inside card — visible on hover only */}

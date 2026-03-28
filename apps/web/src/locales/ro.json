@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
-    "description": "Website multilingv, optimizat pentru SEO, construit cu Vite și React.",
+    "title": "Baterino Global : EPC pentru soluții de stocare în baterii și infrastructură BESS",
+    "description": "Baterino Global: EPC, soluții de stocare în baterii și infrastructură BESS pentru proiecte rezidențiale, industriale și maritime. Sisteme de nivel enterprise cu suport integrat pe termen lung.",
     "welcome": "Bun venit"
   },
   "nav": {
@@ -32,7 +32,7 @@
     "solutions.residentialShort": "Rezidențial",
     "solutions.industrial": "Industrial",
     "solutions.medical": "Medical",
-    "solutions.criticalServices": "Servicii Critice",
+    "solutions.criticalServices": "Servicii esențiale",
     "solutions.maritime": "Maritim",
     "delivery": "Livrare",
     "impact": "Impact",
@@ -75,7 +75,7 @@
     "industrialDivisionsTitle": "Oferind prin diviziile noastre dedicate",
     "divisions": {
       "pro": { "desc": "pentru sector industrial și comercial" },
-      "med": { "desc": "pentru servicii medicale și critice" },
+      "med": { "desc": "pentru servicii medicale și esențiale" },
       "atSea": { "desc": "pentru sector maritim" }
     },
     "residentialUsers": "Utilizatori Finali Rezidențiali",
@@ -94,12 +94,12 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "home": "Baterino Global : EPC pentru soluții de stocare în baterii și infrastructură BESS",
     "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "Rezidențial & Comunități",
     "solutionsIndustrial": "Soluții Industriale",
     "solutionsMaritime": "Soluții Maritime",
-    "solutionsCriticalServices": "Servicii Critice",
+    "solutionsCriticalServices": "Servicii esențiale",
     "delivery": "Livrare",
     "company": "About Baterino | Company",
     "companyAboutBaterino": "Despre Baterino",
@@ -354,9 +354,10 @@
   },
   "home": {
     "ourDivisions": "Diviziile noastre",
+    "metaDescription": "Soluții de stocare a energiei (BESS) de nivel enterprise pentru aplicații rezidențiale, industriale și maritime. Sisteme cu baterii cu suport integrat pe termen lung de la Baterino.",
     "hero": {
       "title": "Soluții de stocare a energiei &\ninfrastructură BESS",
-      "subtitle": "<bold>Furnizăm, integrăm și susținem</bold> sisteme certificate de stocare a energiei în baterii pe piață — în mediile rezidențiale, industriale, maritime și de servicii critice.",
+      "subtitle": "<bold>Furnizăm, integrăm și susținem</bold> sisteme certificate de stocare a energiei în baterii pe piață — în mediile rezidențiale, industriale, maritime și de servicii esențiale.",
       "poweredBy": "alimentat de",
       "poweredByLabel": "Alimentat de:",
       "technologyPoweredBy": "Tehnologia noastră este alimentată de:",
@@ -364,7 +365,7 @@
       "sliderTabs": {
         "industrial": "BESS industrial",
         "residential": "Rezidențial",
-        "missionCritical": "Servicii critice",
+        "missionCritical": "Servicii esențiale",
         "afterSales": "Post-vânzare"
       }
     },
@@ -387,7 +388,7 @@
       },
       "slide5": {
         "title": "ENERGIE PENTRU SERVICII ESENȚIALE",
-        "subtitle": "Când defecțiunea nu este o opțiune, menținem funcționarea instalațiilor critice — spitale, flote de ambulanțe, centre de răspuns la urgențe, stații de tratare a apei și utilități publice de care comunitățile depind 24/7."
+        "subtitle": "Când defecțiunea nu este o opțiune, menținem funcționarea instalațiilor esențiale — spitale, flote de ambulanțe, centre de răspuns la urgențe, stații de tratare a apei și utilități publice de care comunitățile depind 24/7."
       }
     },
     "carousel": {
@@ -405,23 +406,25 @@
       "title": "Ce Activăm",
       "subtitle": "Cum vă servim",
       "intro": "Oferim soluții de stocare a energiei de nivel enterprise care transformă modul în care organizațiile își alimentează operațiunile — de la fiabilitate la scară de rețea până la reziliență pentru misiuni critice.",
-      "residential": "REZIDENȚIAL",
+      "residential": "SOLUȚII REZIDENȚIALE ȘI PENTRU MICROREȚELE",
       "residentialTabDesc": "Sisteme de energie pentru locuințe inteligente cu alimentare de rezervă și independență energetică.",
-      "residentialCardTitle": "Soluții de Microrețea Rezidențială",
+      "residentialCardTitle": "SOLUȚII REZIDENȚIALE ȘI PENTRU MICROREȚELE",
       "residentialDesc": "Sisteme de baterii modulare care permit proprietarilor să optimizeze consumul de energie, să reducă dependența de rețea și să mențină curentul în timpul întreruperilor.",
-      "industrial": "INDUSTRIAL BESS",
+      "industrial": "INFRASTRUCTURĂ BESS INDUSTRIALĂ ȘI COMERCIALĂ",
       "industrialTabDesc": "Stocare la scară de rețea pentru fabrici, parcuri solare și operațiuni industriale.",
-      "industrialCardTitle": "Soluții de Energie la Scară Industrială",
+      "industrialCardTitle": "INFRASTRUCTURĂ BESS INDUSTRIALĂ ȘI COMERCIALĂ",
       "industrialDesc": "Infrastructură de stocare de mare capacitate optimizată pentru nivelarea sarcinii, stabilizarea microrețelei și gestionarea resurselor energetice distribuite.",
-      "medical": "SERVICII CRITICE",
+      "medical": "BESS PENTRU SERVICII ESENȚIALE",
       "medicalTabDesc": "Soluții fiabile de energie pentru spitale, clinici și instalații de urgență.",
-      "medicalCardTitle": "Sisteme de Energie pentru Îngrijire Critică",
+      "medicalCardTitle": "BESS PENTRU SERVICII ESENȚIALE",
       "medicalDesc": "Infrastructură de baterii ultra-fiabilă, concepută pentru funcționare fără întreruperi, comutare rapidă a sarcinii și livrare continuă de energie către echipamentele vitale.",
-      "maritime": "MARITIM",
+      "maritime": "SOLUȚII ESS MARINE ȘI OFFSHORE",
       "maritimeTabDesc": "Sisteme avansate de baterii pentru electrificarea navelor și operațiuni offshore.",
-      "maritimeCardTitle": "Propulsie și Energie Navală",
+      "maritimeCardTitle": "SOLUȚII ESS MARINE ȘI OFFSHORE",
       "maritimeDesc": "Stocare de energie pentru uz greu, proiectată pentru medii cu apă sărată, gestionare dinamică a sarcinii și livrare de energie pe termen lung în operațiuni în larg.",
       "learnMore": "Află mai multe",
+      "sliderNav": "Diapozitive Ce activăm",
+      "slideDot": "Salt la diapozitivul {{n}}",
       "utility": "Utilități",
       "utilityDesc": "Stocare la scară utilitară pentru stabilitatea rețelei și integrarea energiei regenerabile."
     },
@@ -502,7 +505,7 @@
       "solutionsColumn": "Soluții",
       "companyColumn": "Companie",
       "exploreColumn": "Explorare",
-      "contactColumn": "Contact",
+      "contactColumn": "Informații contact",
       "socialColumn": "Urmărește-ne",
       "aboutUs": "Despre Noi",
       "aboutUsDesc": "Baterino activează infrastructura de stocare a energiei pentru comunități, industrie și aplicații maritime, integrând tehnologii dovedite de la parteneri precum LithTech, cu accent pe fiabilitate, siguranță și performanță pe termen lung.",
@@ -791,7 +794,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Soluții de stocare a energiei\npentru servicii critice",
+      "title": "Soluții de stocare a energiei\npentru servicii esențiale",
       "subtitle": "Baterino construiește sisteme energetice care susțin serviciile esențiale și consolidează reziliența comunităților din întreaga lume."
     },
     "essentialServices": {
@@ -1045,8 +1048,20 @@
     "readMore": "Citește mai mult",
     "loadMore": "Încarcă mai mult",
     "backToInsights": "Înapoi la Articole",
+    "articleTemplate": {
+      "shareOn": "Distribuie pe:",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "contactUs": "Contactează-ne",
+      "publishedByOn": "Publicat de: {{author}} pe {{date}}",
+      "publishedByAuthor": "Publicat de: {{author}}",
+      "publishedOnDate": "Publicat pe {{date}}",
+      "metaAriaLabel": "Detalii articol"
+    },
     "followUsOnLinkedIn": "Urmărește-ne pe LinkedIn",
     "noArticles": "Niciun articol nu corespunde filtrului tău.",
+    "loadingArticles": "Se încarcă articolele",
+    "searchArticlesPlaceholder": "Caută articole…",
     "filters": {
       "all": "Toate",
       "company": "Companie",

@@ -9,11 +9,13 @@
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
     "db:migrate": "tsx src/scripts/migrate.ts",
+    "db:apply-pending": "tsx src/scripts/applyPendingMigrations.ts",
     "db:seed": "tsx src/scripts/seedAdmin.ts",
     "db:seed:insights": "tsx src/scripts/seedInsightsArticles.ts",
     "db:migrate:prod": "node dist/scripts/migrate.js",
     "db:seed:prod": "node dist/scripts/seedAdmin.js",
-    "test:r2": "tsx src/scripts/testR2.ts"
+    "test:r2": "tsx src/scripts/testR2.ts",
+    "sync:public-images": "tsx src/scripts/syncPublicImagesToR2.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1016.0",

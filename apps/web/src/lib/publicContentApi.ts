@@ -10,6 +10,8 @@ export type PublicArticleListItem = {
   author_name: string
   location_label: string
   category_label: string
+  /** Up to 4 curator-defined keywords; empty if unset. */
+  keywords?: string[]
   published_at: string | null
 }
 
@@ -22,7 +24,11 @@ export async function fetchPublishedArticles(): Promise<PublicArticleListItem[]>
     const res = await fetch(`${viteApiBaseUrl()}/api/public/articles`, { headers: { Accept: 'application/json' } })
     if (!res.ok) return []
     const data = (await res.json()) as { ok?: boolean; articles?: PublicArticleListItem[] }
-    return data.ok && data.articles ? data.articles : []
+    if (!data.ok || !data.articles) return []
+    return data.articles.map((a) => ({
+      ...a,
+      keywords: Array.isArray(a.keywords) ? a.keywords : [],
+    }))
   } catch {
     return []
   }
@@ -35,7 +41,12 @@ export async function fetchPublishedArticleBySlug(slug: string): Promise<PublicA
     })
     if (!res.ok) return null
     const data = (await res.json()) as { ok?: boolean; article?: PublicArticleDetail }
-    return data.ok && data.article ? data.article : null
+    if (!data.ok || !data.article) return null
+    const a = data.article
+    return {
+      ...a,
+      keywords: Array.isArray(a.keywords) ? a.keywords : [],
+    }
   } catch {
     return null
   }

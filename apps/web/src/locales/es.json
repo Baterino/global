@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
-    "description": "Sitio web multilingüe y optimizado para SEO con Vite y React.",
+    "title": "Baterino Global : EPC para soluciones de almacenamiento en baterías e infraestructura BESS",
+    "description": "Baterino Global: EPC, soluciones de almacenamiento en baterías e infraestructura BESS para proyectos residenciales, industriales y marítimos. Sistemas de nivel empresarial con soporte integrado a largo plazo.",
     "welcome": "Bienvenido"
   },
   "nav": {
@@ -32,7 +32,7 @@
     "solutions.residentialShort": "Residencial",
     "solutions.industrial": "Industrial",
     "solutions.medical": "Médico",
-    "solutions.criticalServices": "Servicios Críticos",
+    "solutions.criticalServices": "Servicios esenciales",
     "solutions.maritime": "Marítimo",
     "delivery": "Entrega",
     "impact": "Impacto",
@@ -75,7 +75,7 @@
     "industrialDivisionsTitle": "Habilitando a través de nuestras divisiones dedicadas",
     "divisions": {
       "pro": { "desc": "para sector industrial y comercial" },
-      "med": { "desc": "para servicios médicos y críticos" },
+      "med": { "desc": "para servicios médicos y esenciales" },
       "atSea": { "desc": "para sector marítimo" }
     },
     "residentialUsers": "Usuarios Finales Residenciales",
@@ -94,12 +94,12 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "home": "Baterino Global : EPC para soluciones de almacenamiento en baterías e infraestructura BESS",
     "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "Residencial y Comunidades",
     "solutionsIndustrial": "Soluciones industriales",
     "solutionsMaritime": "Soluciones marítimas",
-    "solutionsCriticalServices": "Servicios Críticos",
+    "solutionsCriticalServices": "Servicios esenciales",
     "delivery": "Entrega",
     "company": "About Baterino | Company",
     "companyAboutBaterino": "Sobre Baterino",
@@ -354,9 +354,10 @@
   },
   "home": {
     "ourDivisions": "Nuestras divisiones",
+    "metaDescription": "Soluciones de almacenamiento de energía (BESS) de nivel empresarial para aplicaciones residenciales, industriales y marítimas. Sistemas de baterías con soporte integrado a largo plazo de Baterino.",
     "hero": {
       "title": "Soluciones de almacenamiento de energía &\ninfraestructura BESS",
-      "subtitle": "<bold>Suministramos, integramos y apoyamos</bold> sistemas de almacenamiento de baterías certificados en el mercado — en entornos residenciales, industriales, marítimos y de servicios críticos.",
+      "subtitle": "<bold>Suministramos, integramos y apoyamos</bold> sistemas de almacenamiento de baterías certificados en el mercado — en entornos residenciales, industriales, marítimos y de servicios esenciales.",
       "poweredBy": "impulsado por",
       "poweredByLabel": "Impulsado por:",
       "technologyPoweredBy": "Nuestra tecnología es impulsada por:",
@@ -364,7 +365,7 @@
       "sliderTabs": {
         "industrial": "BESS industrial",
         "residential": "Residencial",
-        "missionCritical": "Servicios críticos",
+        "missionCritical": "Servicios esenciales",
         "afterSales": "Posventa"
       }
     },
@@ -412,25 +413,27 @@
       "title": "Lo que habilitamos",
       "subtitle": "Cómo te servimos",
       "intro": "Ofrecemos soluciones de almacenamiento de energía de nivel empresarial que transforman la forma en que las organizaciones alimentan sus operaciones, desde la confiabilidad a escala de red hasta la resiliencia crítica.",
-      "residential": "RESIDENCIAL",
+      "residential": "SOLUCIONES RESIDENCIALES Y DE MICRORREDES",
       "residentialTabDesc": "Sistemas de energía para el hogar inteligente con respaldo y autonomía energética.",
-      "residentialCardTitle": "Soluciones de Microred Residencial",
+      "residentialCardTitle": "SOLUCIONES RESIDENCIALES Y DE MICRORREDES",
       "residentialDesc": "Sistemas de baterías modulares que permiten a los propietarios optimizar el uso de energía, reducir la dependencia de la red y mantener el suministro eléctrico durante interrupciones.",
-      "industrial": "INDUSTRIAL BESS",
+      "industrial": "INFRAESTRUCTURA BESS INDUSTRIAL Y COMERCIAL",
       "industrialTabDesc": "Almacenamiento a escala de red para fábricas, parques solares y operaciones industriales.",
-      "industrialCardTitle": "Soluciones de Energía a Escala Industrial",
+      "industrialCardTitle": "INFRAESTRUCTURA BESS INDUSTRIAL Y COMERCIAL",
       "industrialDesc": "Infraestructura de almacenamiento de alta capacidad optimizada para nivelación de carga, estabilización de microred y gestión de recursos energéticos distribuidos.",
-      "medical": "SERVICIOS CRÍTICOS",
+      "medical": "BESS PARA SERVICIOS ESENCIALES",
       "medicalTabDesc": "Soluciones de energía confiables para hospitales, clínicas e instalaciones de emergencia.",
-      "medicalCardTitle": "Sistemas de Energía para Atención Crítica",
+      "medicalCardTitle": "BESS PARA SERVICIOS ESENCIALES",
       "medicalDesc": "Infraestructura de baterías ultra-confiable diseñada para operación sin interrupciones, conmutación rápida de carga y suministro continuo de energía a equipos de soporte vital.",
-      "maritime": "MARÍTIMO",
+      "maritime": "SOLUCIONES BESS MARINAS Y OFFSHORE",
       "maritimeTabDesc": "Sistemas de baterías avanzados para la electrificación de embarcaciones y operaciones offshore.",
-      "maritimeCardTitle": "Propulsión y Energía Marina",
+      "maritimeCardTitle": "SOLUCIONES BESS MARINAS Y OFFSHORE",
       "maritimeDesc": "Almacenamiento de energía de servicio pesado diseñado para entornos de agua salada, manejo de cargas dinámicas y suministro de energía de larga duración en operaciones en alta mar.",
       "utility": "Utilidad",
       "utilityDesc": "Almacenamiento a escala de red para estabilidad y integración de energías renovables.",
-      "learnMore": "Saber más"
+      "learnMore": "Saber más",
+      "sliderNav": "Diapositivas de Lo que habilitamos",
+      "slideDot": "Ir a la diapositiva {{n}}"
     },
     "howWeDeliver": {
       "title": "Cómo entregamos",
@@ -791,7 +794,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Soluciones de almacenamiento de energía\npara servicios críticos",
+      "title": "Soluciones de almacenamiento de energía\npara servicios esenciales",
       "subtitle": "Baterino construye sistemas energéticos que apoyan servicios esenciales y fortalecen la resiliencia comunitaria en todo el mundo."
     },
     "essentialServices": {
@@ -1045,8 +1048,20 @@
     "readMore": "Leer más",
     "loadMore": "Cargar más",
     "backToInsights": "Volver a Insights",
+    "articleTemplate": {
+      "shareOn": "Compartir en:",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "contactUs": "Contáctenos",
+      "publishedByOn": "Publicado por: {{author}} el {{date}}",
+      "publishedByAuthor": "Publicado por: {{author}}",
+      "publishedOnDate": "Publicado el {{date}}",
+      "metaAriaLabel": "Detalles del artículo"
+    },
     "followUsOnLinkedIn": "Síguenos en LinkedIn",
     "noArticles": "No hay artículos que coincidan con su filtro.",
+    "loadingArticles": "Cargando artículos",
+    "searchArticlesPlaceholder": "Buscar artículos…",
     "filters": {
       "all": "Todos",
       "company": "Empresa",

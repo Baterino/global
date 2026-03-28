@@ -11,6 +11,7 @@ import {
 import { AdminArticleBodyEditor } from './AdminArticleBodyEditor'
 import { AdminFeaturedImageCropModal } from './AdminFeaturedImageCropModal'
 import { FEATURED_IMAGE_HEIGHT, FEATURED_IMAGE_WIDTH } from '../lib/cropFeaturedImage'
+import { ARTICLE_BODY_IMAGE_MAX_H, ARTICLE_BODY_IMAGE_MAX_W } from '../lib/resizeArticleBodyImage'
 
 function isArticleBodyEmpty(html: string): boolean {
   const t = html.trim()
@@ -29,6 +30,19 @@ const TYPE_TO_CATEGORY_I18N: Record<ArticleType, string> = {
   news: 'insights.filters.news',
 }
 
+const KEYWORD_SLOTS = 4 as const
+/** Matches meta / Open Graph description length used on the public article page. */
+const EXCERPT_MAX_LENGTH = 200
+
+function clampExcerpt(s: string): string {
+  return s.length <= EXCERPT_MAX_LENGTH ? s : s.slice(0, EXCERPT_MAX_LENGTH)
+}
+
+function padKeywordSlots(keys: string[] | undefined): [string, string, string, string] {
+  const k = [...(keys ?? [])].slice(0, KEYWORD_SLOTS).map((x) => String(x).trim())
+  return [k[0] ?? '', k[1] ?? '', k[2] ?? '', k[3] ?? '']
+}
+
 type FormState = {
   type: ArticleType
   title: string
@@ -38,19 +52,23 @@ type FormState = {
   author_name: string
   location_label: string
   status: 'draft' | 'published'
+  /** Four input slots; saved values are trimmed non-empty strings (max 4). */
+  keywords: [string, string, string, string]
 }
 
 function buildArticleBody(form: FormState): Record<string, unknown> {
+  const keywords = form.keywords.map((k) => k.trim()).filter(Boolean).slice(0, KEYWORD_SLOTS)
   return {
     type: form.type,
     title: form.title,
-    excerpt: form.excerpt,
+    excerpt: clampExcerpt(form.excerpt),
     body_html: form.body_html,
     image_url: form.image_url.trim(),
     author_name: form.author_name,
     location_label: form.location_label,
     category_label: TYPE_TO_CATEGORY_I18N[form.type],
     status: form.status,
+    keywords,
   }
 }
 
@@ -77,6 +95,7 @@ export function AdminArticleForm() {
     author_name: 'Baterino',
     location_label: '',
     status: 'draft',
+    keywords: ['', '', '', ''],
   })
 
   const [pendingImagePreviewUrl, setPendingImagePreviewUrl] = useState<string | null>(null)
@@ -101,12 +120,13 @@ export function AdminArticleForm() {
         setForm({
           type: (ARTICLE_TYPES.includes(a.type as ArticleType) ? a.type : 'company') as ArticleType,
           title: a.title,
-          excerpt: a.excerpt,
+          excerpt: clampExcerpt(a.excerpt ?? ''),
           body_html: a.body_html,
           image_url: a.image_url,
           author_name: a.author_name || 'Baterino',
           location_label: a.location_label || '',
           status: a.status === 'published' ? 'published' : 'draft',
+          keywords: padKeywordSlots(a.keywords),
         })
       } catch {
         navigate('/admin/articles', { replace: true })
@@ -251,13 +271,52 @@ export function AdminArticleForm() {
           <p className="mt-1 text-body-xs text-neutral-500">Matches Insights filter tabs on the public site.</p>
         </div>
         <div>
-          <label className="block text-body-sm font-medium">Excerpt</label>
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <label className="block text-body-sm font-medium">Excerpt</label>
+            <span
+              className={`text-body-xs tabular-nums ${
+                form.excerpt.length >= EXCERPT_MAX_LENGTH ? 'font-medium text-amber-800' : 'text-neutral-500'
+              }`}
+              aria-live="polite"
+            >
+              {form.excerpt.length} / {EXCERPT_MAX_LENGTH}
+            </span>
+          </div>
+          <p className="mt-1 text-body-xs text-neutral-500">
+            Used for search, cards, and social preview text (max {EXCERPT_MAX_LENGTH} characters).
+          </p>
           <textarea
             className="mt-1 w-full rounded border border-neutral-300 px-3 py-2"
             rows={3}
+            maxLength={EXCERPT_MAX_LENGTH}
             value={form.excerpt}
             onChange={(e) => setForm((f) => ({ ...f, excerpt: e.target.value }))}
           />
+        </div>
+        <div>
+          <label className="block text-body-sm font-medium">Keywords (max {KEYWORD_SLOTS})</label>
+          <p className="mt-1 text-body-xs text-neutral-500">
+            Optional tags shown under the hero on the public article (same line style as site labels).
+          </p>
+          <div className="mt-2 grid gap-2 sm:grid-cols-2">
+            {([0, 1, 2, 3] as const).map((i) => (
+              <input
+                key={i}
+                type="text"
+                maxLength={80}
+                className="w-full rounded border border-neutral-300 px-3 py-2"
+                placeholder={i === 0 ? 'e.g. Infrastructure' : `Keyword ${i + 1}`}
+                value={form.keywords[i]}
+                onChange={(e) =>
+                  setForm((f) => {
+                    const next: [string, string, string, string] = [...f.keywords]
+                    next[i] = e.target.value
+                    return { ...f, keywords: next }
+                  })
+                }
+              />
+            ))}
+          </div>
         </div>
         <div>
           <label className="block text-body-sm font-medium">Featured image</label>
@@ -331,6 +390,7 @@ export function AdminArticleForm() {
           <label className="mb-1 block text-body-sm font-medium">Body</label>
           <AdminArticleBodyEditor
             instanceKey={isNew ? 'new' : (id ?? 'edit')}
+            articleId={isNew ? null : (id ?? null)}
             value={form.body_html}
             onChange={(html) => setForm((f) => ({ ...f, body_html: html }))}
             disabled={saving || uploadBusy}
@@ -339,7 +399,9 @@ export function AdminArticleForm() {
             Rich text and <strong className="font-medium text-neutral-700">Source</strong> (&lt;/&gt;) for raw HTML.
             Custom classes (e.g. <code className="rounded bg-neutral-100 px-1">article-rich</code>) are easiest to
             keep in Source mode. Use <code className="rounded bg-neutral-100 px-1">__LOCALE__</code> in links; it is
-            replaced with the visitor&apos;s locale on the public site.
+            replaced with the visitor&apos;s locale on the public site. Uploaded body images are scaled to fit up to{' '}
+            {ARTICLE_BODY_IMAGE_MAX_W}×{ARTICLE_BODY_IMAGE_MAX_H} px without changing aspect ratio (save the article
+            first to enable uploads on a new draft).
           </p>
         </div>
         <div>

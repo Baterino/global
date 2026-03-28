@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
-    "description": "Situs web multilanguage dan ramah SEO dengan Vite dan React.",
+    "title": "Baterino Global : EPC untuk solusi penyimpanan baterai & infrastruktur BESS",
+    "description": "Baterino Global: EPC, solusi penyimpanan baterai, dan infrastruktur BESS untuk proyek residensial, industri, dan maritim. Sistem kelas perusahaan dengan dukungan terintegrasi jangka panjang.",
     "welcome": "Selamat datang"
   },
   "nav": {
@@ -32,7 +32,7 @@
     "solutions.residentialShort": "Residensial",
     "solutions.industrial": "Industri",
     "solutions.medical": "Medis",
-    "solutions.criticalServices": "Layanan Kritis",
+    "solutions.criticalServices": "Layanan esensial",
     "solutions.maritime": "Maritim",
     "delivery": "Pengiriman",
     "impact": "Dampak",
@@ -75,7 +75,7 @@
     "industrialDivisionsTitle": "Memungkinkan melalui divisi khusus kami",
     "divisions": {
       "pro": { "desc": "untuk sektor industri dan komersial" },
-      "med": { "desc": "untuk layanan medis dan kritis" },
+      "med": { "desc": "untuk layanan medis dan esensial" },
       "atSea": { "desc": "untuk sektor maritim" }
     },
     "residentialUsers": "Pengguna Akhir Perumahan",
@@ -94,12 +94,12 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "home": "Baterino Global : EPC untuk solusi penyimpanan baterai & infrastruktur BESS",
     "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "Residensial & Komunitas",
     "solutionsIndustrial": "Solusi Industri",
     "solutionsMaritime": "Solusi Maritim",
-    "solutionsCriticalServices": "Layanan Kritis",
+    "solutionsCriticalServices": "Layanan esensial",
     "delivery": "Pengiriman",
     "company": "About Baterino | Company",
     "companyAboutBaterino": "Tentang Baterino",
@@ -354,9 +354,10 @@
   },
   "home": {
     "ourDivisions": "Divisi kami",
+    "metaDescription": "Solusi penyimpanan energi tingkat perusahaan (BESS) untuk aplikasi residensial, industri, dan maritim. Sistem baterai dengan dukungan jangka panjang terpadu dari Baterino.",
     "hero": {
       "title": "Solusi penyimpanan energi &\ninfrastruktur BESS",
-      "subtitle": "Kami <bold>memasok, mengintegrasikan, dan mendukung</bold> sistem penyimpanan energi baterai bersertifikat ke pasar — di lingkungan perumahan, industri, maritim, dan layanan kritis.",
+      "subtitle": "Kami <bold>memasok, mengintegrasikan, dan mendukung</bold> sistem penyimpanan energi baterai bersertifikat ke pasar — di lingkungan perumahan, industri, maritim, dan layanan esensial.",
       "poweredBy": "didukung oleh",
       "poweredByLabel": "Didukung oleh:",
       "technologyPoweredBy": "Teknologi kami didukung oleh:",
@@ -364,7 +365,7 @@
       "sliderTabs": {
         "industrial": "BESS industri",
         "residential": "Residensial",
-        "missionCritical": "Layanan kritis",
+        "missionCritical": "Layanan esensial",
         "afterSales": "Purna jual"
       }
     },
@@ -387,7 +388,7 @@
       },
       "slide5": {
         "title": "DAYA UNTUK LAYANAN PENTING",
-        "subtitle": "Ketika kegagalan bukan pilihan, kami menjaga fasilitas kritis tetap beroperasi — rumah sakit, armada ambulans, pusat respons darurat, pabrik pengolahan air, dan utilitas publik yang masyarakat andalkan 24/7."
+        "subtitle": "Ketika kegagalan bukan pilihan, kami menjaga fasilitas esensial tetap beroperasi — rumah sakit, armada ambulans, pusat respons darurat, pabrik pengolahan air, dan utilitas publik yang masyarakat andalkan 24/7."
       }
     },
     "carousel": {
@@ -405,25 +406,27 @@
       "title": "Apa yang kami wujudkan",
       "subtitle": "Cara kami melayani Anda",
       "intro": "Kami menyediakan solusi penyimpanan energi tingkat perusahaan yang mengubah cara organisasi memberdayakan operasi mereka—dari keandalan skala grid hingga ketahanan misi kritis.",
-      "residential": "RESIDENSIAL",
+      "residential": "SOLUSI RESIDENSIAL & MIKROGRID",
       "residentialTabDesc": "Sistem energi rumah pintar dengan daya cadangan dan kemandirian energi.",
-      "residentialCardTitle": "Solusi Microgrid Residensial",
+      "residentialCardTitle": "SOLUSI RESIDENSIAL & MIKROGRID",
       "residentialDesc": "Sistem baterai modular yang memungkinkan pemilik rumah mengoptimalkan penggunaan energi, meminimalkan ketergantungan pada jaringan listrik, dan mempertahankan daya saat terjadi gangguan jaringan.",
-      "industrial": "INDUSTRIAL BESS",
+      "industrial": "INFRASTRUKTUR BESS INDUSTRI & KOMERSIAL",
       "industrialTabDesc": "Penyimpanan skala grid untuk pabrik, ladang surya, dan operasi industri.",
-      "industrialCardTitle": "Solusi Daya Skala Grid",
+      "industrialCardTitle": "INFRASTRUKTUR BESS INDUSTRI & KOMERSIAL",
       "industrialDesc": "Infrastruktur penyimpanan berkapasitas tinggi yang dioptimalkan untuk pemerataan beban, stabilisasi microgrid, dan manajemen sumber daya energi terdistribusi.",
-      "medical": "LAYANAN KRITIS",
+      "medical": "BESS LAYANAN ESENSIAL",
       "medicalTabDesc": "Solusi daya andal untuk rumah sakit, klinik, dan fasilitas darurat.",
-      "medicalCardTitle": "Sistem Daya Perawatan Kritis",
+      "medicalCardTitle": "BESS LAYANAN ESENSIAL",
       "medicalDesc": "Infrastruktur baterai yang sangat andal, dirancang untuk operasi tanpa gangguan, peralihan beban cepat, dan penyaluran daya berkelanjutan ke peralatan yang menunjang kehidupan.",
-      "maritime": "MARITIM",
+      "maritime": "SOLUSI ESS MARITIM & LEPAS PANTAI",
       "maritimeTabDesc": "Sistem baterai canggih untuk elektrifikasi kapal dan operasi lepas pantai.",
-      "maritimeCardTitle": "Propulsi & Daya Kelautan",
+      "maritimeCardTitle": "SOLUSI ESS MARITIM & LEPAS PANTAI",
       "maritimeDesc": "Penyimpanan energi tugas berat yang dirancang untuk lingkungan air asin, penanganan beban dinamis, dan penyaluran daya jangka panjang dalam operasi laut lepas.",
       "utility": "Utilitas",
       "utilityDesc": "Penyimpanan skala utilitas untuk stabilitas grid dan integrasi energi terbarukan.",
-      "learnMore": "Selengkapnya"
+      "learnMore": "Selengkapnya",
+      "sliderNav": "Geser untuk melihat semua sektor",
+      "slideDot": "Buka slaj ke-{{n}}"
     },
     "baterinoPro": {
       "introducing": "MEMPERKENALKAN",
@@ -453,7 +456,7 @@
       "subtitle": "Satu Perusahaan. Empat Peran.",
       "title": "Kami Beradaptasi dengan Kebutuhan Pasar",
       "intro": "Kebanyakan perusahaan energi memiliki identitas tetap. Baterino dibangun berbeda. Tergantung pada kebutuhan pasar, kami masuk di titik berbeda dalam rantai nilai — kadang hulu, kadang hilir, kadang keduanya.",
-      "integratorEnabler": { "title": "Integrator & Enabler", "desc": "Mendorong proyek dari ide ke kenyataan. Kami merancang, mengadakan, mengintegrasikan, dan mengirimkan — atau mendukung mitra lokal untuk melakukannya. Kami masuk di mana pasar membutuhkan kami." },
+      "integratorEnabler": { "title": "Integrator & fasilitator", "desc": "Mendorong proyek dari ide ke kenyataan. Kami merancang, mengadakan, mengintegrasikan, dan mengirimkan — atau mendukung mitra lokal untuk melakukannya. Kami masuk di mana pasar membutuhkan kami." },
       "importer": { "title": "Importir", "desc": "Membawa teknologi bersertifikat dan berkualitas tinggi ke pasar di mana akses adalah hambatan. Kami menavigasi bea cukai, kepatuhan, dan rantai pasokan agar proyek dapat diimplementasikan." },
       "distributor": { "title": "Distributor", "desc": "Membuat teknologi tersedia untuk installer, integrator, dan pengembang. Kami menyediakan pasokan andal, dukungan teknis, dan akuntabilitas ujung ke ujung." },
       "afterSales": { "title": "Purna Jual & Dukungan Siklus Hidup", "desc": "Pekerjaan yang dimulai setelah semua orang pergi. Pemantauan, pemeliharaan, optimasi, dan dukungan — untuk seluruh masa operasional sistem." },
@@ -791,7 +794,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Solusi penyimpanan energi\nuntuk layanan kritis",
+      "title": "Solusi penyimpanan energi\nuntuk layanan esensial",
       "subtitle": "Baterino membangun sistem energi yang mendukung layanan penting dan memperkuat ketahanan komunitas di seluruh dunia."
     },
     "essentialServices": {
@@ -1045,8 +1048,20 @@
     "readMore": "Baca selengkapnya",
     "loadMore": "Muat lebih banyak",
     "backToInsights": "Kembali ke Insights",
+    "articleTemplate": {
+      "shareOn": "Bagikan di:",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "contactUs": "Hubungi kami",
+      "publishedByOn": "Diterbitkan oleh: {{author}} pada {{date}}",
+      "publishedByAuthor": "Diterbitkan oleh: {{author}}",
+      "publishedOnDate": "Diterbitkan pada {{date}}",
+      "metaAriaLabel": "Detail artikel"
+    },
     "followUsOnLinkedIn": "Ikuti kami di LinkedIn",
     "noArticles": "Tidak ada artikel yang cocok dengan filter Anda.",
+    "loadingArticles": "Memuat artikel",
+    "searchArticlesPlaceholder": "Cari artikel…",
     "filters": {
       "all": "Semua",
       "company": "Perusahaan",

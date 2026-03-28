@@ -1,5 +1,6 @@
 export const siteUrl = import.meta.env.VITE_SITE_URL ?? 'https://example.com'
-export const siteName = 'Baterino'
+/** Open Graph `og:site_name` and default site brand in shared previews. */
+export const siteName = 'Baterino Global : EPC for Battery Storage Solution BESS infrastructure'
 /** Default image for social sharing (og:image, twitter:image). Use 1200×630px for best results. */
 export const defaultOgImage = '/images/og-images/og-home.jpg'
 

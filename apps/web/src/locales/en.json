@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
-    "description": "Multilanguage, SEO-friendly website built with Vite and React.",
+    "title": "Baterino Global : EPC for Battery Storage Solution BESS infrastructure",
+    "description": "Baterino Global: EPC, battery storage solutions, and BESS infrastructure for residential, industrial, and maritime projects. Enterprise-grade systems with integrated long-term support.",
     "welcome": "Welcome"
   },
   "nav": {
@@ -32,7 +32,7 @@
     "solutions.residentialShort": "Residential",
     "solutions.industrial": "Industrial",
     "solutions.medical": "Medical",
-    "solutions.criticalServices": "Critical Services",
+    "solutions.criticalServices": "Essential Services",
     "solutions.maritime": "Maritime",
     "delivery": "Delivery",
     "impact": "Impact",
@@ -75,7 +75,7 @@
     "industrialDivisionsTitle": "Enabling through our dedicated divisions",
     "divisions": {
       "pro": { "desc": "for industrial and commercial sector" },
-      "med": { "desc": "for medical and critical services" },
+      "med": { "desc": "for medical and essential services" },
       "atSea": { "desc": "for maritime sector" }
     },
     "residentialUsers": "Residential Final Users",
@@ -94,11 +94,11 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "home": "Baterino Global : EPC for Battery Storage Solution BESS infrastructure",
     "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "Residential & Communities",
     "solutionsIndustrial": "Industrial Solutions",
-    "solutionsCriticalServices": "Critical Services",
+    "solutionsCriticalServices": "Essential Services",
     "solutionsMaritime": "Maritime Solutions",
     "delivery": "Delivery",
     "company": "About Baterino | Company",
@@ -354,9 +354,10 @@
   },
   "home": {
     "ourDivisions": "Our divisions",
+    "metaDescription": "Enterprise-grade energy storage solutions (BESS) for residential, industrial, and maritime applications. Battery systems with integrated long-term support from Baterino.",
     "hero": {
       "title": "Energy Storage Solutions &\nBESS Infrastructure",
-      "subtitle": "We <bold>supply, integrate and support</bold> certified battery storage systems to market — across residential, industrial, maritime, and critical service environments.",
+      "subtitle": "We <bold>supply, integrate and support</bold> certified battery storage systems to market — across residential, industrial, maritime, and essential service environments.",
       "poweredBy": "powered by",
       "poweredByLabel": "Powered by:",
       "technologyPoweredBy": "Our technology is powered by:",
@@ -364,7 +365,7 @@
       "sliderTabs": {
         "industrial": "Industrial BESS",
         "residential": "Residential",
-        "missionCritical": "Mission critical",
+        "missionCritical": "Essential services",
         "afterSales": "After sales"
       }
     },
@@ -390,23 +391,25 @@
       "title": "What We Enable",
       "subtitle": "Across Sectors",
       "intro": "We deliver enterprise-grade energy storage solutions that transform how organizations power their operations—from grid-scale reliability to mission-critical resilience.",
-      "residential": "Residential",
+      "residential": "RESIDENTIAL & MICROGRIDS SOLUTIONS",
       "residentialTabDesc": "Smart home energy systems with backup power and energy independence.",
-      "residentialCardTitle": "Residential Microgrid Solutions",
+      "residentialCardTitle": "RESIDENTIAL & MICROGRIDS SOLUTIONS",
       "residentialDesc": "Modular battery systems enabling homeowners to optimize energy use, minimize utility dependence, and maintain power during grid disruptions.",
-      "industrial": "Industrial BESS",
+      "industrial": "INDUSTRIAL & COMMERCIAL BESS INFRASTRUCTURE",
       "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.",
-      "industrialCardTitle": "Grid-Scale Power Solutions",
+      "industrialCardTitle": "INDUSTRIAL & COMMERCIAL BESS INFRASTRUCTURE",
       "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.",
-      "medical": "Critical Services",
+      "medical": "ESSENTIAL SERVICES BESS",
       "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.",
-      "medicalCardTitle": "Critical Care Power Systems",
+      "medicalCardTitle": "ESSENTIAL SERVICES BESS",
       "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.",
-      "maritime": "Maritime",
+      "maritime": "MARINE OFFSHORE ESS SOLUTIONS",
       "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.",
-      "maritimeCardTitle": "Marine Propulsion & Power",
+      "maritimeCardTitle": "MARINE OFFSHORE ESS SOLUTIONS",
       "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.",
       "learnMore": "Learn more",
+      "sliderNav": "What we enable slides",
+      "slideDot": "Go to slide {{n}}",
       "utility": "Utility",
       "utilityDesc": "Utility-scale storage for grid stability and renewable integration."
     },
@@ -783,7 +786,7 @@
   },
   "impact": {
     "hero": {
-      "title": "Energy Storage Solutions\nfor Critical Services",
+      "title": "Energy Storage Solutions\nfor Essential Services",
       "subtitle": "Baterino builds energy systems that support essential services and strengthen community resilience around the world."
     },
     "essentialServices": {
@@ -1037,8 +1040,20 @@
     "readMore": "Read more",
     "loadMore": "Load more",
     "backToInsights": "Back to Insights",
+    "articleTemplate": {
+      "shareOn": "Share on:",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "contactUs": "Contact us",
+      "publishedByOn": "Published by: {{author}} on {{date}}",
+      "publishedByAuthor": "Published by: {{author}}",
+      "publishedOnDate": "Published on {{date}}",
+      "metaAriaLabel": "Article details"
+    },
     "followUsOnLinkedIn": "Follow us on LinkedIn",
     "noArticles": "No articles match your filter.",
+    "loadingArticles": "Loading articles",
+    "searchArticlesPlaceholder": "Search articles…",
     "filters": {
       "all": "All",
       "company": "Company",

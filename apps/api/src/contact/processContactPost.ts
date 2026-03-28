@@ -25,6 +25,8 @@ function isValidContactPhone(phone: string): boolean {
 
 const DEFAULT_CONTACT_TO = 'inquiries@baterino.com'
 const DEFAULT_SITE_PUBLIC_URL = 'https://baterino.com'
+const DEFAULT_SOCIAL_LINKEDIN_URL = 'https://www.linkedin.com/company/baterino-global/'
+const DEFAULT_SOCIAL_FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61575386571436'
 const LOGO_PATH = '/images/Baterino-Logo-black.png'
 
 const SOCIAL_ICON_PX = 20
@@ -147,11 +149,11 @@ function emailPublicUrl(path: string): string {
 }
 
 function getSocialFacebookUrl(): string {
-  return process.env.SOCIAL_FACEBOOK_URL?.trim() || DEFAULT_SITE_PUBLIC_URL
+  return process.env.SOCIAL_FACEBOOK_URL?.trim() || DEFAULT_SOCIAL_FACEBOOK_URL
 }
 
 function getSocialLinkedInUrl(): string {
-  return process.env.SOCIAL_LINKEDIN_URL?.trim() || DEFAULT_SITE_PUBLIC_URL
+  return process.env.SOCIAL_LINKEDIN_URL?.trim() || DEFAULT_SOCIAL_LINKEDIN_URL
 }
 
 function buildInternalMail(data: ContactSubmission, reference: string): { text: string; html: string } {

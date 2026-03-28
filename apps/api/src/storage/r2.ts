@@ -213,11 +213,48 @@ const ALLOWED_TYPES = new Set([
   'image/avif',
 ])
 
+/** Site static sync (`sync:public-images`) may include SVG; admin uploads still use {@link assertAllowedImageMime}. */
+const STATIC_PUBLIC_SYNC_TYPES = new Set([...ALLOWED_TYPES, 'image/svg+xml'])
+
 export function assertAllowedImageMime(mime: string): void {
   const m = mime.toLowerCase().split(';')[0].trim()
   if (!ALLOWED_TYPES.has(m)) {
     throw new Error(`unsupported_type:${m}`)
   }
+}
+
+function assertStaticPublicSyncMime(mime: string): void {
+  const m = mime.toLowerCase().split(';')[0].trim()
+  if (!STATIC_PUBLIC_SYNC_TYPES.has(m)) {
+    throw new Error(`unsupported_type:${m}`)
+  }
+}
+
+/**
+ * Upload a publicly readable object (immutable cache). Optional `bucket` for a dedicated static-images bucket.
+ */
+export async function putPublicObject(
+  key: string,
+  body: Buffer,
+  contentType: string,
+  opts?: { bucket?: string },
+): Promise<void> {
+  assertStaticPublicSyncMime(contentType)
+  const named = normalizeScalarEnv(opts?.bucket)
+  const bucket = (named || getR2BucketName()).toLowerCase()
+  if (!bucket) throw new Error('R2_BUCKET_NAME (or opts.bucket) not set')
+  if (bucket.includes('://') || bucket.includes('/')) {
+    throw new Error('Bucket must be the bucket label only, not a URL.')
+  }
+  await getClient().send(
+    new PutObjectCommand({
+      Bucket: bucket,
+      Key: key.replace(/^\/+/, ''),
+      Body: body,
+      ContentType: contentType.split(';')[0].trim(),
+      CacheControl: 'public, max-age=31536000, immutable',
+    }),
+  )
 }
 
 export function mimeToExt(mime: string): string {

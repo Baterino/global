@@ -19,11 +19,11 @@ export function Home() {
 
   return (
     <article className="relative w-full bg-white">
-      <SEOHead description="Enterprise-grade energy storage solutions (BESS) for residential, industrial, and maritime applications. Battery systems with integrated long-term support from Baterino." ogImage="/images/og-images/og-home.jpg" />
+      <SEOHead description={t('home.metaDescription')} ogImage="/images/og-images/og-home.jpg" />
       <Hero />
 
       {/* What we enable: title + subtitle on top; then intro and cards */}
-      <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section className="w-full bg-white px-[20px] py-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           {/* Subtitle on top, title below — centered on mobile */}
           <div className="mb-6 text-center md:text-left">

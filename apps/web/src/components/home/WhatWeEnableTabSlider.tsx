@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
@@ -9,7 +9,7 @@ const SECTORS = [
     descKey: 'home.whatWeEnable.industrialTabDesc',
     cardTitleKey: 'home.whatWeEnable.industrialCardTitle',
     cardDescKey: 'home.whatWeEnable.industrialDesc',
-    image: '/images/Home/enable-industrial.jpg',
+    image: '/images/Home/bess-solutions.jpg',
     to: '/solutions/industrial',
   },
   {
@@ -18,7 +18,7 @@ const SECTORS = [
     descKey: 'home.whatWeEnable.residentialTabDesc',
     cardTitleKey: 'home.whatWeEnable.residentialCardTitle',
     cardDescKey: 'home.whatWeEnable.residentialDesc',
-    image: '/images/Home/enable-residential.jpg',
+    image: '/images/Home/residential-storage-solutions.jpg',
     to: '/solutions/residential',
   },
   {
@@ -27,7 +27,7 @@ const SECTORS = [
     descKey: 'home.whatWeEnable.medicalTabDesc',
     cardTitleKey: 'home.whatWeEnable.medicalCardTitle',
     cardDescKey: 'home.whatWeEnable.medicalDesc',
-    image: '/images/Home/enable-medical.jpg',
+    image: '/images/Home/essential-critical-services.jpg',
     to: '/solutions/industrial',
   },
   {
@@ -41,213 +41,180 @@ const SECTORS = [
   },
 ] as const
 
+type Sector = (typeof SECTORS)[number]
+
+/** Mobile: horizontal snap slider. Slides are full track width (no +20px — avoids right clip in frame). md+: grid. */
+const CAROUSEL_CLASS =
+  'flex w-full min-w-0 snap-x snap-proximity gap-4 overflow-x-auto pb-1 scrollbar-hide md:grid md:snap-none md:grid-cols-2 md:gap-5 md:overflow-visible lg:grid-cols-4'
+
+const SLIDE_CLASS =
+  'max-md:w-full max-md:min-w-full max-md:snap-start max-md:scroll-ml-0 max-md:scroll-mr-0 max-md:shrink-0 md:w-auto md:min-w-0 md:shrink'
+
+const CARD_CLASS =
+  'group relative isolate block h-[480px] min-h-[480px] max-h-[480px] w-full overflow-hidden rounded-[10px] bg-zinc-300 outline-none ring-offset-2 transition-transform focus-visible:ring-2 focus-visible:ring-neutral-900'
+
+/** Flat black overlay: 50% opacity. */
+const OVERLAY_SOLID_STYLE = { backgroundColor: 'rgba(0,0,0,0.5)' } as const
+
+/** Flat black overlay on hover (md+): 70% opacity. */
+const OVERLAY_HOVER_STYLE = { backgroundColor: 'rgba(0,0,0,0.7)' } as const
+
+const OVERLAY_BASE_CLASS =
+  'pointer-events-none absolute inset-0 min-h-full min-w-full rounded-[10px] transition-opacity duration-300 ease-out'
+
+function WhatWeEnableCard({ sector, href }: { sector: Sector; href: string }) {
+  const { t } = useTranslation()
+
+  return (
+    <Link to={href} className={CARD_CLASS}>
+      <img
+        src={sector.image}
+        alt=""
+        className="absolute inset-0 z-0 h-full w-full object-cover object-center transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+        draggable={false}
+      />
+
+      <div
+        className={`${OVERLAY_BASE_CLASS} z-[1] opacity-100 md:group-hover:opacity-0`}
+        style={OVERLAY_SOLID_STYLE}
+        aria-hidden
+      />
+
+      <div
+        className={`${OVERLAY_BASE_CLASS} z-[2] hidden opacity-0 md:block md:group-hover:opacity-100`}
+        style={OVERLAY_HOVER_STYLE}
+        aria-hidden
+      />
+
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[25] flex justify-end p-4 sm:p-5">
+        <img
+          src="/images/baterino-logo-white.png"
+          alt="Baterino"
+          className="h-5 w-auto shrink-0 object-contain drop-shadow-sm sm:h-6"
+          draggable={false}
+        />
+      </div>
+
+      {/* Solid content — mobile: large title + body copy + CTA (hover has no reliable target); md+: title only until hover */}
+      <div className="absolute inset-0 z-10 flex flex-col justify-end transition-opacity duration-300 ease-out md:group-hover:pointer-events-none md:group-hover:opacity-0">
+        <div className="relative p-4 sm:p-5">
+          <h3 className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-white drop-shadow-sm sm:text-3xl md:text-xl md:sm:text-2xl">
+            {t(sector.titleKey)}
+          </h3>
+          <p className="mt-3 font-body text-base font-medium leading-relaxed text-white/95 sm:text-body-md md:hidden">
+            {t(sector.cardDescKey)}
+          </p>
+          <span className="mt-3 inline-block font-body text-body-sm font-semibold text-white underline-offset-2 md:hidden">
+            {t('home.whatWeEnable.learnMore', { defaultValue: 'Learn more' })} →
+          </span>
+        </div>
+      </div>
+
+      {/* Hover content (md+) */}
+      <div className="absolute inset-0 z-20 hidden flex-col justify-end md:flex md:pointer-events-none md:opacity-0 md:transition-opacity md:duration-300 md:ease-out md:group-hover:pointer-events-auto md:group-hover:opacity-100">
+        <div className="relative z-10 p-4 sm:p-5">
+          <h3 className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white drop-shadow-sm sm:text-xl">
+            {t(sector.cardTitleKey)}
+          </h3>
+          <p className="mt-2 font-body text-body-sm leading-relaxed text-white/95 sm:text-body-md">
+            {t(sector.cardDescKey)}
+          </p>
+          <span className="mt-3 inline-block font-body text-body-sm font-semibold text-white underline-offset-2 group-hover:underline">
+            {t('home.whatWeEnable.learnMore', { defaultValue: 'Learn more' })} →
+          </span>
+        </div>
+      </div>
+    </Link>
+  )
+}
+
 export function WhatWeEnableTabSlider() {
   const { t } = useTranslation()
   const { locale } = useParams<{ locale: string }>()
   const base = `/${locale ?? 'en'}`
+  const trackRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
-  const [, setIndicatorStyle] = useState({ top: 0, height: 0 })
-  const [desktopIndicatorStyle, setDesktopIndicatorStyle] = useState({ top: 0, height: 0 })
-  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
-  const tabWrapperRefs = useRef<(HTMLDivElement | null)[]>([])
-  const containerRef = useRef<HTMLDivElement>(null)
-  const desktopContainerRef = useRef<HTMLDivElement>(null)
-  const active = SECTORS[activeIndex]
 
-  const updateMobileIndicator = useCallback(() => {
-    const wrapper = tabWrapperRefs.current[activeIndex]
-    const container = containerRef.current
-    if (wrapper && container) {
-      const wrapperRect = wrapper.getBoundingClientRect()
-      const containerRect = container.getBoundingClientRect()
-      setIndicatorStyle({
-        top: wrapperRect.top - containerRect.top + container.scrollTop,
-        height: wrapperRect.height,
-      })
-    }
-  }, [activeIndex])
+  const syncActiveFromScroll = useCallback(() => {
+    const el = trackRef.current
+    if (!el) return
+    if (window.matchMedia('(min-width: 768px)').matches) return
 
-  const updateDesktopIndicator = useCallback(() => {
-    const btn = tabRefs.current[activeIndex]
-    const container = desktopContainerRef.current
-    if (btn && container) {
-      const btnRect = btn.getBoundingClientRect()
-      const containerRect = container.getBoundingClientRect()
-      setDesktopIndicatorStyle({
-        top: btnRect.top - containerRect.top + container.scrollTop,
-        height: btnRect.height,
-      })
+    const children = [...el.children] as HTMLElement[]
+    if (children.length === 0) return
+
+    const center = el.scrollLeft + el.clientWidth / 2
+    let best = 0
+    let bestDist = Infinity
+    for (let i = 0; i < children.length; i++) {
+      const c = children[i]
+      const mid = c.offsetLeft + c.clientWidth / 2
+      const d = Math.abs(center - mid)
+      if (d < bestDist) {
+        bestDist = d
+        best = i
+      }
     }
-  }, [activeIndex])
+    setActiveIndex(best)
+  }, [])
+
+  useLayoutEffect(() => {
+    const el = trackRef.current
+    if (!el || window.matchMedia('(min-width: 768px)').matches) return
+    el.scrollLeft = 0
+  }, [])
 
   useEffect(() => {
-    updateMobileIndicator()
-    updateDesktopIndicator()
-    requestAnimationFrame(() => {
-      updateMobileIndicator()
-      updateDesktopIndicator()
-    })
-  }, [updateMobileIndicator, updateDesktopIndicator])
+    const el = trackRef.current
+    if (!el) return
 
-  useEffect(() => {
-    const mobile = containerRef.current
-    const desktop = desktopContainerRef.current
-    const update = () => {
-      updateMobileIndicator()
-      updateDesktopIndicator()
+    syncActiveFromScroll()
+    el.addEventListener('scroll', syncActiveFromScroll, { passive: true })
+    window.addEventListener('resize', syncActiveFromScroll)
+    return () => {
+      el.removeEventListener('scroll', syncActiveFromScroll)
+      window.removeEventListener('resize', syncActiveFromScroll)
     }
-    const ro = new ResizeObserver(update)
-    if (mobile) ro.observe(mobile)
-    if (desktop) ro.observe(desktop)
-    return () => ro.disconnect()
-  }, [updateMobileIndicator, updateDesktopIndicator])
+  }, [syncActiveFromScroll])
+
+  const goToSlide = (index: number) => {
+    const el = trackRef.current
+    if (!el) return
+    const child = el.children[index] as HTMLElement | undefined
+    if (!child) return
+    el.scrollTo({ left: child.offsetLeft, behavior: 'smooth' })
+  }
 
   return (
-    <>
-      {/* Mobile: tabs with arrows, images expand under each tab */}
-      <div ref={containerRef} className="relative flex flex-col gap-4 rounded-lg bg-[#f7f7f7] p-2 md:hidden">
-        {SECTORS.map((sector, i) => {
-          const isActive = i === activeIndex
-          return (
-            <div
-              key={sector.id}
-              ref={(el) => { tabWrapperRefs.current[i] = el }}
-              className="relative z-10 flex flex-col gap-4"
-            >
-              <button
-                type="button"
-                onClick={() => setActiveIndex(i)}
-                className="group flex w-full items-start justify-between gap-3 rounded-lg px-3 py-2 text-left transition-colors sm:px-4 sm:py-2.5 hover:bg-neutral-50/50"
-              >
-                <div className="flex min-w-0 flex-1 flex-col items-start">
-                  <span
-                    className={`font-heading text-body-sm font-bold uppercase tracking-tight sm:text-heading-sm ${
-                      isActive ? 'text-neutral-900' : 'text-neutral-700'
-                    }`}
-                  >
-                    {t(sector.titleKey)}
-                  </span>
-                  <span
-                    className={`mt-1 block font-body text-xs leading-relaxed sm:text-body-sm ${
-                      isActive ? 'text-neutral-900' : 'text-neutral-600'
-                    }`}
-                  >
-                    {t(sector.descKey)}
-                  </span>
-                </div>
-                <svg
-                  className={`h-5 w-5 shrink-0 text-neutral-500 transition-transform duration-200 ${
-                    isActive ? 'rotate-90 text-neutral-900' : ''
-                  }`}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </button>
-              {isActive && (
-                <div className="relative h-[280px] w-full overflow-hidden rounded-[10px] bg-zinc-300 sm:h-[360px]">
-                  <Link
-                    to={`${base}${sector.to}`}
-                    className="group relative block h-full w-full animate-slide-down"
-                  >
-                    <img
-                      src={sector.image}
-                      alt=""
-                      className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                    <div className="absolute inset-0 rounded-[10px] bg-black/40" aria-hidden />
-                    <div className="absolute bottom-0 left-0 right-0 z-10 p-4 sm:p-6">
-                      <h3 className="font-heading text-xl font-bold uppercase tracking-tight text-white drop-shadow-sm sm:text-2xl">
-                        {t(sector.cardTitleKey)}
-                      </h3>
-                      <p className="mt-2 max-w-[560px] font-body text-body-sm leading-relaxed text-white/95 sm:text-body-md">
-                        {t(sector.cardDescKey)}
-                      </p>
-                    </div>
-                  </Link>
-                </div>
-              )}
-            </div>
-          )
-        })}
+    <div className="w-full min-w-0">
+      <div ref={trackRef} className={CAROUSEL_CLASS}>
+        {SECTORS.map((sector) => (
+          <div key={sector.id} className={SLIDE_CLASS}>
+            <WhatWeEnableCard sector={sector} href={`${base}${sector.to}`} />
+          </div>
+        ))}
       </div>
 
-      {/* Desktop: original layout — tabs left, image right (no arrows, no expand) */}
-      <div className="hidden grid-cols-1 items-center gap-8 md:grid lg:grid-cols-[minmax(0,380px)_1fr] lg:gap-12">
-        <div ref={desktopContainerRef} className="relative flex flex-col gap-4">
-          <div
-            className="absolute left-0 right-0 rounded-lg transition-all duration-300 ease-out"
-            style={{
-              top: desktopIndicatorStyle.top,
-              height: desktopIndicatorStyle.height,
-              backgroundColor: '#f7f7f7',
-            }}
-            aria-hidden
+      <nav
+        className="mt-5 flex justify-center gap-2 md:hidden"
+        aria-label={t('home.whatWeEnable.sliderNav', { defaultValue: 'What we enable slides' })}
+      >
+        {SECTORS.map((sector, i) => (
+          <button
+            key={sector.id}
+            type="button"
+            aria-label={t('home.whatWeEnable.slideDot', {
+              defaultValue: 'Go to slide {{n}}',
+              n: i + 1,
+            })}
+            aria-current={activeIndex === i ? 'true' : undefined}
+            className={`h-2.5 w-2.5 shrink-0 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2 ${
+              activeIndex === i ? 'bg-neutral-900' : 'bg-neutral-300 hover:bg-neutral-400'
+            }`}
+            onClick={() => goToSlide(i)}
           />
-          {SECTORS.map((sector, i) => {
-            const isActive = i === activeIndex
-            return (
-              <button
-                key={sector.id}
-                ref={(el) => { tabRefs.current[i] = el }}
-                type="button"
-                onClick={() => setActiveIndex(i)}
-                className="relative z-10 group flex flex-col items-start rounded-lg px-3 py-2 text-left transition-colors sm:px-4 sm:py-2.5 hover:bg-neutral-50/50"
-              >
-                <span
-                  className={`font-heading text-body-sm font-bold uppercase tracking-tight sm:text-heading-sm ${
-                    isActive ? 'text-neutral-900' : 'text-neutral-700'
-                  }`}
-                >
-                  {t(sector.titleKey)}
-                </span>
-                <span
-                  className={`mt-1 block font-body text-xs leading-relaxed sm:text-body-sm ${
-                    isActive ? 'text-neutral-900' : 'text-neutral-600'
-                  }`}
-                >
-                  {t(sector.descKey)}
-                </span>
-              </button>
-            )
-          })}
-        </div>
-        <div className="relative h-[320px] w-full overflow-hidden rounded-[10px] bg-zinc-300 sm:h-[400px] lg:h-[460px] lg:max-w-[772px]">
-          <Link
-            key={activeIndex}
-            to={`${base}${active.to}`}
-            className="group relative block h-full w-full animate-fade-in"
-          >
-            <img
-              src={active.image}
-              alt=""
-              className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.02]"
-            />
-            <div className="absolute inset-0 rounded-[10px] bg-black/40" aria-hidden />
-            <img
-              src="/images/baterino-logo-white.png"
-              alt="Baterino"
-              className="absolute right-4 top-4 z-10 h-8 w-auto object-contain drop-shadow-sm sm:right-6 sm:top-6 sm:h-10"
-            />
-            <div className="absolute bottom-0 left-0 right-0 z-10 p-4 sm:p-6 lg:p-8">
-              <h3 className="font-heading text-xl font-bold uppercase tracking-tight text-white drop-shadow-sm sm:text-2xl lg:text-section-title">
-                {t(active.cardTitleKey)}
-              </h3>
-              <p className="mt-2 max-w-[560px] font-body text-body-sm leading-relaxed text-white/95 sm:text-body-md">
-                {t(active.cardDescKey)}
-              </p>
-              <span className="mt-4 inline-block font-body text-body-sm font-semibold text-white underline-offset-2 group-hover:underline">
-                {t('home.whatWeEnable.learnMore', { defaultValue: 'Learn more' })} →
-              </span>
-            </div>
-          </Link>
-        </div>
-      </div>
-    </>
+        ))}
+      </nav>
+    </div>
   )
 }

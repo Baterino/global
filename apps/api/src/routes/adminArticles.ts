@@ -8,6 +8,33 @@ export const adminArticlesRouter = Router()
 adminArticlesRouter.use(requireAuth)
 
 const ALLOWED_TYPES = new Set(['company', 'press-release', 'use-cases', 'news'])
+const EXCERPT_MAX_LENGTH = 200
+
+function normalizeExcerpt(input: string): string {
+  if (input.length <= EXCERPT_MAX_LENGTH) return input
+  return input.slice(0, EXCERPT_MAX_LENGTH)
+}
+
+/** Up to 4 unique trimmed keywords for public article hero chips. */
+function normalizeArticleKeywords(input: unknown): string[] {
+  if (!Array.isArray(input)) return []
+  const out: string[] = []
+  for (const x of input) {
+    if (typeof x !== 'string') continue
+    const s = x.trim().replace(/\s+/g, ' ').slice(0, 80)
+    if (!s) continue
+    const lower = s.toLowerCase()
+    if (out.some((o) => o.toLowerCase() === lower)) continue
+    out.push(s)
+    if (out.length >= 4) break
+  }
+  return out
+}
+
+function coerceKeywordsRow(value: unknown): string[] {
+  if (Array.isArray(value)) return value.filter((v): v is string => typeof v === 'string')
+  return []
+}
 
 function slugifyForArticle(input: string): string {
   const t = input
@@ -55,6 +82,7 @@ adminArticlesRouter.get('/:id', async (req: AuthedRequest, res: Response) => {
     const pool = getPool()
     const { rows } = await pool.query(
       `SELECT id, slug, type, title, excerpt, body_html, image_url, author_name, location_label, category_label,
+              COALESCE(keywords, ARRAY[]::text[]) AS keywords,
               status::text AS status, published_at, author_id, created_at, updated_at
        FROM blog_articles WHERE id = $1`,
       [req.params.id]
@@ -68,6 +96,7 @@ adminArticlesRouter.get('/:id', async (req: AuthedRequest, res: Response) => {
       ok: true,
       article: {
         ...row,
+        keywords: coerceKeywordsRow(row.keywords),
         image_url: publicImageUrlForResponse(row.image_url),
         body_html: rewriteBodyHtmlR2ApiUrls(row.body_html),
       },
@@ -82,13 +111,15 @@ adminArticlesRouter.post('/', async (req: AuthedRequest, res: Response) => {
   const rawSlug = typeof req.body?.slug === 'string' ? req.body.slug.trim() : ''
   const type = typeof req.body?.type === 'string' ? req.body.type : 'company'
   const title = typeof req.body?.title === 'string' ? req.body.title.trim() : ''
-  const excerpt = typeof req.body?.excerpt === 'string' ? req.body.excerpt : ''
+  const excerpt =
+    typeof req.body?.excerpt === 'string' ? normalizeExcerpt(req.body.excerpt) : ''
   const body_html = typeof req.body?.body_html === 'string' ? req.body.body_html : ''
   const image_url = typeof req.body?.image_url === 'string' ? req.body.image_url.trim() : ''
   const author_name = typeof req.body?.author_name === 'string' ? req.body.author_name.trim() : 'Baterino'
   const location_label = typeof req.body?.location_label === 'string' ? req.body.location_label.trim() : ''
   const category_label = typeof req.body?.category_label === 'string' ? req.body.category_label.trim() : ''
   const status = req.body?.status === 'published' ? 'published' : 'draft'
+  const keywords = normalizeArticleKeywords(req.body?.keywords)
 
   if (!title) {
     res.status(400).json({ ok: false, code: 'slug_title_required' })
@@ -112,8 +143,8 @@ adminArticlesRouter.post('/', async (req: AuthedRequest, res: Response) => {
     const { rows } = await pool.query<{ id: string }>(
       `INSERT INTO blog_articles (
         slug, type, title, excerpt, body_html, image_url, author_name, location_label, category_label,
-        author_id, status, published_at
-      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10::uuid,$11::content_status,$12)
+        author_id, status, published_at, keywords
+      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10::uuid,$11::content_status,$12,$13)
       RETURNING id`,
       [
         slug,
@@ -128,6 +159,7 @@ adminArticlesRouter.post('/', async (req: AuthedRequest, res: Response) => {
         req.user!.sub,
         status,
         published_at,
+        keywords,
       ]
     )
     res.status(201).json({ ok: true, id: rows[0].id })
@@ -156,12 +188,13 @@ adminArticlesRouter.patch('/:id', async (req: AuthedRequest, res: Response) => {
   if (typeof req.body?.slug === 'string') set('slug', req.body.slug.trim().toLowerCase().replace(/\s+/g, '-'))
   if (typeof req.body?.type === 'string' && ALLOWED_TYPES.has(req.body.type)) set('type', req.body.type)
   if (typeof req.body?.title === 'string') set('title', req.body.title.trim())
-  if (typeof req.body?.excerpt === 'string') set('excerpt', req.body.excerpt)
+  if (typeof req.body?.excerpt === 'string') set('excerpt', normalizeExcerpt(req.body.excerpt))
   if (typeof req.body?.body_html === 'string') set('body_html', req.body.body_html)
   if (typeof req.body?.image_url === 'string') set('image_url', req.body.image_url.trim())
   if (typeof req.body?.author_name === 'string') set('author_name', req.body.author_name.trim())
   if (typeof req.body?.location_label === 'string') set('location_label', req.body.location_label.trim())
   if (typeof req.body?.category_label === 'string') set('category_label', req.body.category_label.trim())
+  if (req.body?.keywords !== undefined) set('keywords', normalizeArticleKeywords(req.body.keywords))
   if (req.body?.status === 'published' || req.body?.status === 'draft') {
     set('status', req.body.status)
     if (req.body.status === 'published') {

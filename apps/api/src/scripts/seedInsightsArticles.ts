@@ -61,6 +61,8 @@ type SeedRow = {
   category_label: string
   author_name: string
   published_at: string
+  /** Up to 4 keywords shown under hero on the public article. */
+  keywords: string[]
 }
 
 const ROWS: SeedRow[] = [
@@ -75,6 +77,7 @@ const ROWS: SeedRow[] = [
     category_label: 'insights.filters.company',
     author_name: 'Baterino Team',
     published_at: '2026-03-01T12:00:00.000Z',
+    keywords: ['Infrastructure', 'Delivery', 'Global presence', 'Partnerships'],
   },
   {
     slug: 'baterino-roles-in-every-market',
@@ -87,6 +90,7 @@ const ROWS: SeedRow[] = [
     category_label: 'insights.filters.company',
     author_name: 'Baterino Team',
     published_at: '2026-03-15T12:00:00.000Z',
+    keywords: ['Market roles', 'EPC', 'Importer', 'After-sales'],
   },
   {
     slug: 'request-to-operation',
@@ -99,6 +103,7 @@ const ROWS: SeedRow[] = [
     category_label: 'insights.filters.company',
     author_name: 'Baterino Team',
     published_at: '2026-03-20T12:00:00.000Z',
+    keywords: ['Assessment', 'Divisions', 'Process', 'Lifecycle'],
   },
 ]
 
@@ -130,8 +135,8 @@ async function main() {
     const { rows: out } = await pool.query<{ id: string }>(
       `INSERT INTO blog_articles (
         slug, type, title, excerpt, body_html, image_url, author_name, location_label, category_label,
-        author_id, status, published_at
-      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10::uuid,'published'::content_status,$11::timestamptz)
+        author_id, status, published_at, keywords
+      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10::uuid,'published'::content_status,$11::timestamptz,$12)
       ON CONFLICT (slug) DO UPDATE SET
         type = EXCLUDED.type,
         title = EXCLUDED.title,
@@ -144,6 +149,7 @@ async function main() {
         author_id = EXCLUDED.author_id,
         status = EXCLUDED.status,
         published_at = EXCLUDED.published_at,
+        keywords = EXCLUDED.keywords,
         updated_at = now()
       RETURNING id`,
       [
@@ -158,6 +164,7 @@ async function main() {
         row.category_label,
         authorId,
         row.published_at,
+        row.keywords.slice(0, 4),
       ],
     )
     const articleId = out[0]?.id

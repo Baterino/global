@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "Baterino | Energy Storage Solutions & BESS Infrastructure",
-    "description": "多语言、SEO 友好的网站，使用 Vite 和 React 构建。",
+    "title": "Baterino Global：电池储能方案与 BESS 基础设施 EPC",
+    "description": "Baterino Global：面向住宅、工业与海事项目的 EPC、电池储能方案与 BESS 基础设施。企业级系统与一体化长期支持。",
     "welcome": "欢迎"
   },
   "nav": {
@@ -32,7 +32,7 @@
     "solutions.residentialShort": "住宅",
     "solutions.industrial": "工业",
     "solutions.medical": "医疗",
-    "solutions.criticalServices": "关键服务",
+    "solutions.criticalServices": "基本服务",
     "solutions.maritime": "海事",
     "delivery": "交付",
     "impact": "影响",
@@ -75,7 +75,7 @@
     "industrialDivisionsTitle": "通过我们的专业部门赋能",
     "divisions": {
       "pro": { "desc": "面向工业和商业领域" },
-      "med": { "desc": "面向医疗和关键服务" },
+      "med": { "desc": "面向医疗与基本服务" },
       "atSea": { "desc": "面向海事领域" }
     },
     "residentialUsers": "住宅终端用户",
@@ -326,12 +326,12 @@
     }
   },
   "pageTitle": {
-    "home": "Baterino | Energy Storage Solutions & BESS Infrastructure",
+    "home": "Baterino Global：电池储能方案与 BESS 基础设施 EPC",
     "solutions": "Energy Storage Solutions | All Sectors",
     "solutionsResidential": "住宅与社区",
     "solutionsIndustrial": "工业解决方案",
     "solutionsMaritime": "海事解决方案",
-    "solutionsCriticalServices": "关键服务",
+    "solutionsCriticalServices": "基本服务",
     "delivery": "交付",
     "company": "About Baterino | Company",
     "companyAboutBaterino": "关于 Baterino",
@@ -354,9 +354,10 @@
   },
   "home": {
     "ourDivisions": "我们的业务板块",
+    "metaDescription": "面向住宅、工业与海事应用的企业级储能（BESS）解决方案。由 Baterino 提供集成长期支持的电池系统。",
     "hero": {
       "title": "储能解决方案 &\nBESS 基础设施",
-      "subtitle": "我们将经过认证的电池储能系统<bold>供应、集成并支持</bold>至市场 — 覆盖住宅、工业、海事与关键服务环境。",
+      "subtitle": "我们将经过认证的电池储能系统<bold>供应、集成并支持</bold>至市场 — 覆盖住宅、工业、海事与基本服务环境。",
       "poweredBy": "由以下技术驱动",
       "poweredByLabel": "技术支持方：",
       "technologyPoweredBy": "我们的技术由以下驱动：",
@@ -364,7 +365,7 @@
       "sliderTabs": {
         "industrial": "工业 BESS",
         "residential": "住宅",
-        "missionCritical": "关键服务",
+        "missionCritical": "基本服务",
         "afterSales": "售后"
       }
     },
@@ -386,7 +387,7 @@
         "subtitle": "支持社区、基本服务与长期韧性的能源基础设施。"
       },
       "slide5": {
-        "title": "关键服务的电力保障",
+        "title": "基本服务的电力保障",
         "subtitle": "当故障不可接受时，我们保障关键设施持续运行 — 医院、救护车队、应急响应中心、水处理厂和社区24/7依赖的公共设施。"
       }
     },
@@ -398,7 +399,7 @@
       "impact": "使命与影响",
       "impactSub": "教育 - 医疗 - 救灾",
       "learnMore": "了解更多",
-      "exploreMore": "EXPLORE",
+      "exploreMore": "探索",
       "tapToLearnMore": "点击了解更多"
     },
     "baterinoPro": {
@@ -412,25 +413,27 @@
       "title": "我们所赋能的",
       "subtitle": "跨领域服务",
       "intro": "我们提供企业级储能解决方案，改变组织为其运营供电的方式——从电网级可靠性到关键任务韧性。",
-      "residential": "住宅",
+      "residential": "住宅与微电网解决方案",
       "residentialTabDesc": "带备用电源和能源独立性的智能家居能源系统。",
-      "residentialCardTitle": "住宅微电网解决方案",
+      "residentialCardTitle": "住宅与微电网解决方案",
       "residentialDesc": "模块化电池系统，帮助房主优化能源使用，降低对电网的依赖，并在电网中断时保持供电。",
-      "industrial": "工业储能",
+      "industrial": "工商业BESS基础设施",
       "industrialTabDesc": "为工厂、太阳能农场和工业运营设计的电网级储能。",
-      "industrialCardTitle": "电网级电力解决方案",
+      "industrialCardTitle": "工商业BESS基础设施",
       "industrialDesc": "高容量储能基础设施，专为负荷均衡、微电网稳定及分布式能源资源管理而优化。",
-      "medical": "关键服务",
+      "medical": "基本服务BESS",
       "medicalTabDesc": "为医院、诊所和急救设施提供的可靠电源解决方案。",
-      "medicalCardTitle": "重症医疗电力系统",
+      "medicalCardTitle": "基本服务BESS",
       "medicalDesc": "超高可靠性电池基础设施，专为零停机运行、快速负载切换及向生命维持设备持续供电而设计。",
-      "maritime": "海事",
+      "maritime": "海洋与海上ESS解决方案",
       "maritimeTabDesc": "用于船舶电气化和海上作业的先进电池系统。",
-      "maritimeCardTitle": "船舶推进与电力",
+      "maritimeCardTitle": "海洋与海上ESS解决方案",
       "maritimeDesc": "重型储能系统，专为盐水环境、动态负载处理及远洋作业长时供电而设计。",
       "utility": "公用事业",
       "utilityDesc": "面向电网稳定与可再生能源并网的公用事业级储能。",
-      "learnMore": "了解更多"
+      "learnMore": "了解更多",
+      "sliderNav": "「我们所赋能」幻灯片",
+      "slideDot": "转到第 {{n}} 张"
     },
     "howWeDeliver": {
       "title": "我们如何交付",
@@ -791,7 +794,7 @@
   },
   "impact": {
     "hero": {
-      "title": "储能解决方案\n面向关键服务",
+      "title": "储能解决方案\n面向基本服务",
       "subtitle": "Baterino 构建支持基本服务并在全球范围内增强社区韧性的能源系统。"
     },
     "essentialServices": {
@@ -1045,8 +1048,20 @@
     "readMore": "阅读更多",
     "loadMore": "加载更多",
     "backToInsights": "返回洞察",
+    "articleTemplate": {
+      "shareOn": "分享至：",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "contactUs": "联系我们",
+      "publishedByOn": "由 {{author}} 发布于 {{date}}",
+      "publishedByAuthor": "发布者：{{author}}",
+      "publishedOnDate": "发布于 {{date}}",
+      "metaAriaLabel": "文章信息"
+    },
     "followUsOnLinkedIn": "在 LinkedIn 上关注我们",
     "noArticles": "没有与您的筛选条件匹配的文章。",
+    "loadingArticles": "正在加载文章",
+    "searchArticlesPlaceholder": "搜索文章…",
     "filters": {
       "all": "全部",
       "company": "公司",
