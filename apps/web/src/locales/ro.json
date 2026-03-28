@@ -370,6 +370,9 @@
       }
     },
     "heroSlides": {
+      "slide0": {
+        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+      },
       "slide1": {
         "title": "Infrastructură Industrială\nde Stocare a Energiei",
         "subtitle": "Proiectăm și implementăm infrastructură BESS de la 1 MW și peste — concepută pentru performanță la scară de rețea și fiabilitate pe termen lung."

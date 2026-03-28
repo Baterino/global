@@ -1,11 +1,14 @@
 /**
- * Backup of Hero mobile layout — 8 horizontal cards with first card content overlay.
- * Restore by copying the mobile section (lines 51–100) back into Hero.tsx
+ * Backup of Hero mobile layout — horizontal cards with content overlay on slide1 (after slide0).
+ * Restore by copying the mobile section from Hero.tsx
  */
 import { useTranslation } from 'react-i18next'
 import { assetUrl } from '@/lib/assetUrl'
 
-const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => assetUrl(`/images/mobile%20slider/slide${i + 1}.jpg`))
+const MOBILE_SLIDER_IMAGES = [
+  assetUrl('/images/mobile%20slider/slide0.jpg'),
+  ...Array.from({ length: 8 }, (_, i) => assetUrl(`/images/mobile%20slider/slide${i + 1}.jpg`)),
+]
 
 export function HeroMobileCardsBackup() {
   const { t } = useTranslation()
@@ -13,7 +16,7 @@ export function HeroMobileCardsBackup() {
   return (
     <section className="relative w-full bg-white">
       <div className="mx-auto w-full max-w-[1200px] px-4 pt-0 pb-8 sm:px-6 md:pt-12 lg:px-8">
-        {/* Mobile: 8 cards — break out of container, overflow visible */}
+        {/* Mobile: slide0 + slide1–8 — break out of container, overflow visible */}
         <div className="-mx-4 flex h-[500px] w-[calc(100%+2rem)] gap-[10px] overflow-x-auto px-4 md:hidden">
           {MOBILE_SLIDER_IMAGES.map((src, i) => (
             <div key={i} className="relative min-w-[320px] flex-1 shrink-0">
@@ -24,7 +27,7 @@ export function HeroMobileCardsBackup() {
                 className="absolute inset-0 h-full w-full rounded-[10px] object-cover"
                 draggable={false}
               />
-              {i === 0 && (
+              {i === 1 && (
                 <>
                   <div className="absolute inset-0 rounded-[10px] bg-black/70" aria-hidden />
                   <div className="absolute inset-0 flex flex-col justify-end px-4 pb-8">

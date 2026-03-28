@@ -370,6 +370,9 @@
       }
     },
     "heroSlides": {
+      "slide0": {
+        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+      },
       "slide1": {
         "title": "工业储能基础设施",
         "subtitle": "我们设计并部署从1MW及以上的BESS基础设施 — 专为电网级性能和长期可靠性而设计。"

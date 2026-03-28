@@ -370,6 +370,9 @@
       }
     },
     "heroSlides": {
+      "slide0": {
+        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+      },
       "slide1": {
         "title": "Infraestructura de almacenamiento energético industrial",
         "subtitle": "Diseñamos e implementamos infraestructura BESS desde 1MW y más — diseñada para rendimiento a escala de red y fiabilidad a largo plazo."

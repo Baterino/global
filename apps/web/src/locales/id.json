@@ -370,6 +370,9 @@
       }
     },
     "heroSlides": {
+      "slide0": {
+        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+      },
       "slide1": {
         "title": "Infrastruktur Penyimpanan Energi Industri",
         "subtitle": "Kami merancang dan mengerahkan infrastruktur BESS dari 1MW ke atas — dirancang untuk kinerja skala grid dan keandalan jangka panjang."

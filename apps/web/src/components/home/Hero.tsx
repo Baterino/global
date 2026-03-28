@@ -4,7 +4,10 @@ import { Trans, useTranslation } from 'react-i18next'
 import { ArrowRightIcon } from '../ArrowRightIcon'
 import { assetUrl } from '@/lib/assetUrl'
 
-const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => assetUrl(`/images/mobile%20slider/slide${i + 1}.jpg`))
+const MOBILE_SLIDER_IMAGES = [
+  assetUrl('/images/mobile%20slider/slide0.jpg'),
+  ...Array.from({ length: 8 }, (_, i) => assetUrl(`/images/mobile%20slider/slide${i + 1}.jpg`)),
+]
 
 const HERO_SLIDER_TAB_KEYS = [
   'home.hero.sliderTabs.industrial',
@@ -87,7 +90,7 @@ export function Hero() {
           </h2>
         </div>
 
-        {/* Mobile: 8 cards — aspect ratio + percentage width */}
+        {/* Mobile: 9 cards (slide0 + slide1–8) — aspect ratio + percentage width */}
         <div className="-mx-4 flex w-[calc(100%+2rem)] gap-[10px] overflow-x-auto px-4 scrollbar-hide md:hidden">
           {MOBILE_SLIDER_IMAGES.map((src, i) => (
             <div key={i} className="relative aspect-[320/500] w-[85vw] min-w-[85vw] shrink-0 sm:w-[75vw] sm:min-w-[75vw]">
@@ -98,7 +101,7 @@ export function Hero() {
                 className="absolute inset-0 h-full w-full rounded-[10px] object-cover"
                 draggable={false}
               />
-              {i > 1 ? <div className="absolute inset-0 rounded-[10px] bg-black/40" aria-hidden /> : null}
+              {i > 2 ? <div className="absolute inset-0 rounded-[10px] bg-black/40" aria-hidden /> : null}
               {i === MOBILE_SLIDER_IMAGES.length - 1 ? (
                 <div className="absolute left-0 top-0 pt-4 pl-4" aria-hidden>
                   <svg className="h-6 w-6 text-white sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -113,6 +116,25 @@ export function Hero() {
                 </div>
               )}
               {i === 0 && (
+                <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end gap-3 px-4 pb-8 pt-4 text-center">
+                  <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+                    {t('home.heroSlides.slide0.title')}
+                  </h3>
+                  <div className="flex flex-wrap items-center justify-center gap-1.5 font-nunito text-xs font-normal text-white/90">
+                    <span>{t('home.hero.poweredByLabel')}</span>
+                    <a
+                      href="https://www.ltc-energy.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-opacity hover:opacity-100"
+                      aria-label="LithTech"
+                    >
+                      <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
+                    </a>
+                  </div>
+                </div>
+              )}
+              {i === 1 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
                   <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide1.title')}
@@ -131,14 +153,14 @@ export function Hero() {
                   </div>
                 </div>
               )}
-              {i === 1 && (
+              {i === 2 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-start justify-end px-4 pb-8 pt-4 text-left">
                   <p className="font-body text-base font-normal leading-relaxed text-white/95 sm:text-lg">
                     {t('home.heroSlides.slide1.subtitle')}
                   </p>
                 </div>
               )}
-              {i === 2 && (
+              {i === 3 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
                   <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide2.title')}
@@ -157,14 +179,14 @@ export function Hero() {
                   </div>
                 </div>
               )}
-              {i === 3 && (
+              {i === 4 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-start justify-end px-4 pb-8 pt-4 text-left">
                   <p className="font-body text-base font-normal leading-relaxed text-white/95 sm:text-lg">
                     {t('home.heroSlides.slide2.subtitle')}
                   </p>
                 </div>
               )}
-              {i === 4 && (
+              {i === 5 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
                   <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide5.title')}
@@ -183,14 +205,14 @@ export function Hero() {
                   </div>
                 </div>
               )}
-              {i === 5 && (
+              {i === 6 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-start justify-end px-4 pb-8 pt-4 text-left">
                   <p className="font-body text-base font-normal leading-relaxed text-white/95 sm:text-lg">
                     {t('home.heroSlides.slide5.subtitle')}
                   </p>
                 </div>
               )}
-              {i === 6 && (
+              {i === 7 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-end justify-end gap-3 px-4 pb-8 pt-4 text-right">
                   <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
                     {t('home.heroSlides.slide3.title')}
@@ -209,7 +231,7 @@ export function Hero() {
                   </div>
                 </div>
               )}
-              {i === 7 && (
+              {i === 8 && (
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-start justify-end px-4 pb-8 pt-4 text-left">
                   <p className="font-body text-base font-normal leading-relaxed text-white/95 sm:text-lg">
                     {t('home.heroSlides.slide3.subtitle')}

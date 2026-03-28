@@ -370,6 +370,9 @@
       }
     },
     "heroSlides": {
+      "slide0": {
+        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+      },
       "slide1": { "title": "Industrial Energy Storage Infrastructure", "subtitle": "We design and deploy BESS infrastructure from 1MW and beyond — engineered for grid-scale performance and long-term reliability." },
       "slide2": { "title": "SOLUTIONS FOR RESIDENTIAL HOMES", "subtitle": "Power your home smarter — our battery storage systems keep the lights on, reduce energy costs, and maximize every bit of solar energy your roof produces." },
       "slide3": { "title": "After-Sales & Lifecycle Support", "subtitle": "Our responsibility continues beyond delivery — supporting performance, reliability, and system continuity over time." },
