@@ -50,14 +50,14 @@ export function Delivery() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-4 rounded-[10px] bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:gap-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                  className="flex flex-col items-start gap-3 rounded-[10px] bg-[#f7f7f7] p-4 sm:bg-transparent sm:p-0 sm:rounded-none"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
-                    <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <span className="font-body text-sm font-bold tabular-nums leading-none text-neutral-800" aria-hidden>
+                      {String.fromCharCode(64 + i)}
+                    </span>
                   </div>
-                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:font-normal">
                     {t(`delivery.framework.item1.point${i}`)}
                   </p>
                 </div>
@@ -89,14 +89,14 @@ export function Delivery() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-4 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:border-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                  className="flex flex-col items-start gap-3 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:border-0 sm:bg-transparent sm:p-0 sm:rounded-none"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
-                    <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <span className="font-body text-sm font-bold tabular-nums leading-none text-neutral-800" aria-hidden>
+                      {String.fromCharCode(64 + i)}
+                    </span>
                   </div>
-                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:font-normal">
                     {t(`delivery.framework.item2.point${i}`)}
                   </p>
                 </div>
@@ -128,14 +128,14 @@ export function Delivery() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-4 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:border-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                  className="flex flex-col items-start gap-3 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:border-0 sm:bg-transparent sm:p-0 sm:rounded-none"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
-                    <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <span className="font-body text-sm font-bold tabular-nums leading-none text-neutral-800" aria-hidden>
+                      {String.fromCharCode(64 + i)}
+                    </span>
                   </div>
-                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:font-normal">
                     {t(`delivery.framework.item3.point${i}`)}
                   </p>
                 </div>
@@ -167,14 +167,14 @@ export function Delivery() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-4 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:max-w-[180px] sm:flex-col sm:items-start sm:border-0 sm:bg-transparent sm:p-0 lg:max-w-none lg:w-44"
+                  className="flex flex-col items-start gap-3 rounded-[10px] border border-neutral-200 bg-[#f7f7f7] p-4 sm:border-0 sm:bg-transparent sm:p-0 sm:rounded-none"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-neutral-200 bg-neutral-50 sm:bg-white">
-                    <svg className="h-5 w-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <span className="font-body text-sm font-bold tabular-nums leading-none text-neutral-800" aria-hidden>
+                      {String.fromCharCode(64 + i)}
+                    </span>
                   </div>
-                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:mt-2 sm:font-normal">
+                  <p className="font-body text-body-md font-medium leading-relaxed text-neutral-900 sm:font-normal">
                     {t(`delivery.framework.item4.point${i}`)}
                   </p>
                 </div>
@@ -183,11 +183,6 @@ export function Delivery() {
           </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
 
       {/* Built for Consistency Section */}
       <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">

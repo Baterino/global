@@ -106,7 +106,7 @@ export function SolutionsIndustrial() {
       </section>
 
       {/* Containerized & Large Scale Section */}
-      <section className="w-full border-t border-neutral-200 bg-neutral-50/40 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="w-full bg-neutral-50/40 px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <h2 className="mb-6 text-center font-heading text-mobile-h2 font-bold uppercase tracking-tight text-neutral-900 lg:mb-8 lg:text-left lg:text-2xl xl:text-3xl">
             {t('industrial.containerized.title')}

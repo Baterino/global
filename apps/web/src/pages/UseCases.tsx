@@ -602,7 +602,7 @@ export function UseCases() {
         </section>
 
         {/* Filters */}
-        <section className="sticky top-16 z-[90] border-b border-neutral-200 bg-white px-4 py-4 sm:px-6 lg:px-8">
+        <section className="sticky top-16 z-[90] bg-white px-4 py-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[1280px]">
             {/* Mobile: dropdown */}
             <div className="relative md:hidden">

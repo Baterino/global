@@ -202,8 +202,7 @@ export function ProjectsArticleContent({ locale }: ProjectsArticleContentProps) 
         <p>The assessment process and implementation framework described here reflect a single underlying principle: every Baterino project is treated as infrastructure from the first conversation — not as a product sale with a defined end date. That is what long-term reliability requires, and it is the standard every division holds itself to.</p>
       </div>
 
-      <hr className="article-divider" />
-      <div className="article-footer">
+      <div className="article-footer mt-12">
         <div className="article-tags">
           <span className="article-tag">Process</span>
           <span className="article-tag">Divisions</span>

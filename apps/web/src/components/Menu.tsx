@@ -478,7 +478,7 @@ export function Menu() {
               </li>
 
               {/* Language: opens submenu panel */}
-              <li className="mt-8 border-t border-neutral-100 pt-6">
+              <li className="mt-8 pt-6">
                 <button
                   type="button"
                   className="flex w-full items-center justify-between gap-3 py-4 text-left text-neutral-900"

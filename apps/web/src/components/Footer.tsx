@@ -44,7 +44,7 @@ export function Footer() {
   const linkClass = 'font-body text-body-sm text-neutral-600 transition-colors hover:text-neutral-900'
 
   return (
-    <footer className="w-full border-t border-neutral-200 bg-white pt-16">
+    <footer className="w-full bg-white pt-16">
       <div className="mx-auto w-full max-w-[1200px] px-4 py-12 sm:px-6 lg:px-8">
         {/* Mobile footer: centered, stacked layout */}
         <div className="flex flex-col items-center gap-6 text-center lg:hidden">
@@ -241,7 +241,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar (desktop only; mobile has copyright in main block) */}
-        <div className="mt-16 hidden justify-center border-t border-neutral-200 pt-12 pb-4 lg:flex">
+        <div className="mt-16 hidden justify-center pt-12 pb-4 lg:flex">
           <p className="font-body text-body-sm text-neutral-600">
             {t('home.footer.copyright', { year })}
           </p>

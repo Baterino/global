@@ -80,11 +80,6 @@ export function AboutBaterino() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
-
       {/* What We Do Section */}
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
@@ -98,11 +93,6 @@ export function AboutBaterino() {
           <WhatWeDoSlider />
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
 
       {/* Social Impact Section */}
       <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">

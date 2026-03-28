@@ -1,4 +1,5 @@
-import { Link, useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, useParams, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { OperatingModelDiagramContent } from './OperatingModelDiagram'
@@ -8,6 +9,28 @@ export function GlobalPresence() {
   const { t } = useTranslation()
   const { locale } = useParams<{ locale: string }>()
   const base = `/${locale ?? 'en'}`
+  const location = useLocation()
+
+  useEffect(() => {
+    const id = location.hash.replace(/^#/, '')
+    if (!id) return
+
+    const scrollToTarget = () => {
+      const el = document.getElementById(id)
+      if (!el) return false
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return true
+    }
+
+    if (scrollToTarget()) return
+
+    const t1 = window.setTimeout(() => scrollToTarget(), 50)
+    const t2 = window.setTimeout(() => scrollToTarget(), 250)
+    return () => {
+      window.clearTimeout(t1)
+      window.clearTimeout(t2)
+    }
+  }, [location.pathname, location.hash])
 
   return (
     <article className="w-full bg-white">
@@ -65,11 +88,6 @@ export function GlobalPresence() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
-
       {/* Operating Model */}
       <section id="operating-model" className="w-full bg-white px-4 pt-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
@@ -82,11 +100,6 @@ export function GlobalPresence() {
         </div>
         <OperatingModelDiagramContent />
       </section>
-
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
 
       {/* Regional Presence - 1/3 text left, 2/3 image right */}
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
@@ -123,13 +136,8 @@ export function GlobalPresence() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
-
-      {/* Join Baterino — Partnership section */}
-      <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
+      {/* Join Baterino — Partnership section (in-page anchor for Home CTA) */}
+      <section id="partner-up-with-us" className="scroll-mt-20 w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
 
           {/* Header */}
@@ -151,8 +159,8 @@ export function GlobalPresence() {
                 {t('globalPresence.joinBaterino.pathwaysTitle')}
               </h3>
               <div className="space-y-4">
-                {(t('globalPresence.joinBaterino.partners', { returnObjects: true }) as { title: string; desc: string }[]).map((item, i, arr) => (
-                  <div key={i} className={`pb-4${i !== arr.length - 1 ? ' border-b border-neutral-200' : ''}`}>
+                {(t('globalPresence.joinBaterino.partners', { returnObjects: true }) as { title: string; desc: string }[]).map((item, i) => (
+                  <div key={i} className="pb-4">
                     <p className="mb-1 text-sm font-medium text-neutral-900 md:text-base">{item.title}</p>
                     <p className="text-xs text-neutral-500 md:text-sm">{item.desc}</p>
                   </div>
@@ -166,14 +174,14 @@ export function GlobalPresence() {
                 {t('globalPresence.joinBaterino.benefitsTitle')}
               </h3>
               <div className="space-y-4">
-                {(t('globalPresence.joinBaterino.benefits', { returnObjects: true }) as { title: string; desc: string }[]).map((item, i, arr) => (
-                  <div key={i} className={`pb-4${i !== arr.length - 1 ? ' border-b border-neutral-200' : ''}`}>
+                {(t('globalPresence.joinBaterino.benefits', { returnObjects: true }) as { title: string; desc: string }[]).map((item, i) => (
+                  <div key={i} className="pb-4">
                     <p className="mb-1 text-sm font-medium text-neutral-900 md:text-base">{item.title}</p>
                     <p className="text-xs text-neutral-500 md:text-sm">{item.desc}</p>
                   </div>
                 ))}
               </div>
-              <div className="mt-auto border-t border-neutral-200 pt-6">
+              <div className="mt-auto pt-6">
                 <p className="mb-4 text-sm text-neutral-500">
                   {t('globalPresence.joinBaterino.ctaLabel')}
                 </p>

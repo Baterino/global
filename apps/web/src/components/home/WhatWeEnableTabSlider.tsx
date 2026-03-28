@@ -98,7 +98,7 @@ function WhatWeEnableCard({ sector, href }: { sector: Sector; href: string }) {
       {/* Solid content — mobile: large title + body copy + CTA (hover has no reliable target); md+: title only until hover */}
       <div className="absolute inset-0 z-10 flex flex-col justify-end transition-opacity duration-300 ease-out md:group-hover:pointer-events-none md:group-hover:opacity-0">
         <div className="relative p-4 sm:p-5">
-          <h3 className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-white drop-shadow-sm sm:text-3xl md:text-xl md:sm:text-2xl">
+          <h3 className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-white drop-shadow-sm sm:text-3xl md:text-xl md:lg:text-2xl">
             {t(sector.titleKey)}
           </h3>
           <p className="mt-3 font-body text-base font-medium leading-relaxed text-white/95 sm:text-body-md md:hidden">

@@ -421,13 +421,13 @@
       "industrialTabDesc": "为工厂、太阳能农场和工业运营设计的电网级储能。",
       "industrialCardTitle": "工商业BESS基础设施",
       "industrialDesc": "高容量储能基础设施，专为负荷均衡、微电网稳定及分布式能源资源管理而优化。",
-      "medical": "基本服务BESS",
+      "medical": "基本与关键服务BESS",
       "medicalTabDesc": "为医院、诊所和急救设施提供的可靠电源解决方案。",
-      "medicalCardTitle": "基本服务BESS",
+      "medicalCardTitle": "基本与关键服务BESS",
       "medicalDesc": "超高可靠性电池基础设施，专为零停机运行、快速负载切换及向生命维持设备持续供电而设计。",
-      "maritime": "海洋与海上ESS解决方案",
+      "maritime": "海洋与海上储能解决方案",
       "maritimeTabDesc": "用于船舶电气化和海上作业的先进电池系统。",
-      "maritimeCardTitle": "海洋与海上ESS解决方案",
+      "maritimeCardTitle": "海洋与海上储能解决方案",
       "maritimeDesc": "重型储能系统，专为盐水环境、动态负载处理及远洋作业长时供电而设计。",
       "utility": "公用事业",
       "utilityDesc": "面向电网稳定与可再生能源并网的公用事业级储能。",
@@ -493,6 +493,11 @@
       "beyondDesc": "我们的影响工作超越了系统安装。我们部署为实际操作条件设计的实用、可扩展的能源基础设施——通过集成、本地参与和长期责任得到支持。影响是通过持续运行的系统实现的，而不是一次性部署。",
       "inclusive": "建设包容性系统",
       "inclusiveDesc": "能源转型必须适用于不同的现实。通过结合技术集成、生命周期支持和适应性系统设计，Baterino帮助社区建设支持当前需求和未来增长的能源系统。包容性来自可以维护、扩展和长期依赖的基础设施。"
+    },
+    "partnerCta": {
+      "title": "携手拓展本地市场",
+      "body": "作为分销商、集成商或本地运营商与 Baterino 合作。请在我们的「全球布局」页面了解合作路径与优势。",
+      "button": "加入我们的网络"
     },
     "globalPresence": {
       "title": "全球交付能源基础设施",

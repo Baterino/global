@@ -4,10 +4,13 @@
  *
  * Prerequisites (apps/api/.env):
  *   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY
- * Optional dedicated bucket (recommended if API uploads use a different bucket):
+ * Optional dedicated bucket for /images (recommended if API media lives in another bucket):
  *   R2_IMAGES_BUCKET_NAME
- *   R2_IMAGES_PUBLIC_URL   (https://pub-….r2.dev or https://media.example.com)
- * Fallback when unset: R2_BUCKET_NAME + R2_PUBLIC_URL (same as API media)
+ *   R2_IMAGES_PUBLIC_URL   (https://pub-….r2.dev or https://cdn.example.com)
+ *   If that bucket uses a different Cloudflare API token:
+ *     R2_IMAGES_ACCESS_KEY_ID, R2_IMAGES_SECRET_ACCESS_KEY
+ *     Optional: R2_IMAGES_ACCOUNT_ID (defaults to R2_ACCOUNT_ID)
+ * Fallback when R2_IMAGES_* bucket/Public URL unset: R2_BUCKET_NAME + R2_PUBLIC_URL (same as API media)
  *
  * Run: pnpm --filter api sync:public-images
  * Dry run: pnpm --filter api sync:public-images --dry-run
@@ -16,7 +19,11 @@ import { readdir, readFile, stat } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dotenv from 'dotenv'
-import { isR2PublicUrlS3ApiEndpoint, putPublicObject } from '../storage/r2.js'
+import {
+  isR2PublicUrlS3ApiEndpoint,
+  putPublicObject,
+  shouldUseR2ImagesCredentialsForBucket,
+} from '../storage/r2.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 dotenv.config({ path: path.join(__dirname, '../../.env') })
@@ -78,14 +85,25 @@ async function collectFiles(dir: string, out: string[]): Promise<void> {
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run')
-  const accountId = normalizeScalarEnv(process.env.R2_ACCOUNT_ID)
-  const accessKey = normalizeScalarEnv(process.env.R2_ACCESS_KEY_ID)
-  const secret = normalizeScalarEnv(process.env.R2_SECRET_ACCESS_KEY)
   const bucket = imagesBucketName()
   const pubBase = imagesPublicBase()
+  const useImagesCreds = shouldUseR2ImagesCredentialsForBucket(bucket)
+  const accountId = useImagesCreds
+    ? normalizeScalarEnv(process.env.R2_IMAGES_ACCOUNT_ID) || normalizeScalarEnv(process.env.R2_ACCOUNT_ID)
+    : normalizeScalarEnv(process.env.R2_ACCOUNT_ID)
+  const accessKey = useImagesCreds
+    ? normalizeScalarEnv(process.env.R2_IMAGES_ACCESS_KEY_ID)
+    : normalizeScalarEnv(process.env.R2_ACCESS_KEY_ID)
+  const secret = useImagesCreds
+    ? normalizeScalarEnv(process.env.R2_IMAGES_SECRET_ACCESS_KEY)
+    : normalizeScalarEnv(process.env.R2_SECRET_ACCESS_KEY)
 
   if (!accountId || !accessKey || !secret) {
-    console.error('Missing R2 credentials. Set R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY in apps/api/.env')
+    console.error(
+      useImagesCreds
+        ? 'Missing R2 images credentials. Set R2_IMAGES_ACCESS_KEY_ID, R2_IMAGES_SECRET_ACCESS_KEY, and R2_ACCOUNT_ID (or R2_IMAGES_ACCOUNT_ID) in apps/api/.env'
+        : 'Missing R2 credentials. Set R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY in apps/api/.env',
+    )
     process.exit(1)
   }
   if (!bucket) {

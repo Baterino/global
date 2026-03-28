@@ -2,6 +2,7 @@ import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3'
 import { randomBytes } from 'node:crypto'
 
 let client: S3Client | null = null
+let imagesClient: S3Client | null = null
 
 /** Trim and strip a single pair of surrounding quotes from .env pastes. */
 function normalizeScalarEnv(v: string | undefined): string {
@@ -33,6 +34,32 @@ function r2SecretAccessKey(): string {
     normalizeScalarEnv(process.env.R2_SECRET_ACCESS_KEY) ||
     normalizeScalarEnv(process.env.AWS_SECRET_ACCESS_KEY)
   )
+}
+
+/** Separate API token for the dedicated static-images bucket (optional). */
+function r2ImagesAccessKeyId(): string {
+  return normalizeScalarEnv(process.env.R2_IMAGES_ACCESS_KEY_ID)
+}
+
+function r2ImagesSecretAccessKey(): string {
+  return normalizeScalarEnv(process.env.R2_IMAGES_SECRET_ACCESS_KEY)
+}
+
+function r2ImagesAccountId(): string {
+  return normalizeScalarEnv(process.env.R2_IMAGES_ACCOUNT_ID) || r2AccountId()
+}
+
+/**
+ * When set (with {@link r2ImagesSecretAccessKey}), uploads to {@link getDedicatedImagesBucketNameOnly}
+ * use this token instead of `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY`.
+ */
+export function hasR2ImagesCredentialPair(): boolean {
+  return !!(r2ImagesAccessKeyId() && r2ImagesSecretAccessKey())
+}
+
+/** Lowercase name from `R2_IMAGES_BUCKET_NAME` only (no fallback to media bucket). */
+export function getDedicatedImagesBucketNameOnly(): string {
+  return normalizeScalarEnv(process.env.R2_IMAGES_BUCKET_NAME).toLowerCase()
 }
 
 function r2PublicUrl(): string {
@@ -113,6 +140,37 @@ function getClient(): S3Client {
     forcePathStyle: true,
   })
   return client
+}
+
+function getImagesClient(): S3Client {
+  if (imagesClient) return imagesClient
+  const accountId = r2ImagesAccountId()
+  const accessKeyId = r2ImagesAccessKeyId()
+  const secretAccessKey = r2ImagesSecretAccessKey()
+  if (!accountId || !accessKeyId || !secretAccessKey) {
+    throw new Error('R2 images credentials not configured (R2_IMAGES_ACCESS_KEY_ID + R2_IMAGES_SECRET_ACCESS_KEY)')
+  }
+  imagesClient = new S3Client({
+    region: 'auto',
+    endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
+    credentials: { accessKeyId, secretAccessKey },
+    forcePathStyle: true,
+  })
+  return imagesClient
+}
+
+/** True when uploads to this bucket name should use R2_IMAGES_* API keys (if the pair is set). */
+export function shouldUseR2ImagesCredentialsForBucket(bucket: string): boolean {
+  const dedicated = getDedicatedImagesBucketNameOnly()
+  return hasR2ImagesCredentialPair() && !!dedicated && bucket.toLowerCase() === dedicated
+}
+
+/** S3 client for `putPublicObject` when targeting the dedicated images bucket with a separate token. */
+function getS3ClientForPutPublicBucket(bucket: string): S3Client {
+  if (shouldUseR2ImagesCredentialsForBucket(bucket)) {
+    return getImagesClient()
+  }
+  return getClient()
 }
 
 export function publicUrlForKey(key: string): string {
@@ -246,7 +304,7 @@ export async function putPublicObject(
   if (bucket.includes('://') || bucket.includes('/')) {
     throw new Error('Bucket must be the bucket label only, not a URL.')
   }
-  await getClient().send(
+  await getS3ClientForPutPublicBucket(bucket).send(
     new PutObjectCommand({
       Bucket: bucket,
       Key: key.replace(/^\/+/, ''),

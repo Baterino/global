@@ -85,11 +85,6 @@ export function LithTech() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
-
       {/* What LithTech Does Section - 3 Cards */}
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
@@ -151,11 +146,6 @@ export function LithTech() {
           </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
 
       {/* Global Footprint Section */}
       <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">

@@ -33,7 +33,7 @@ export function TechnologyProvenSection() {
   )
 
   return (
-    <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
+    <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-[1200px]">
         {/* Header */}
         <div className="mb-6 text-center md:text-left">

@@ -110,11 +110,6 @@ export function SolutionsMaritime() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
-
       {/* Typical Applications Section */}
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
@@ -194,11 +189,6 @@ export function SolutionsMaritime() {
           </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
 
       {/* How We Deliver Section */}
       <section className="w-full bg-white py-16">

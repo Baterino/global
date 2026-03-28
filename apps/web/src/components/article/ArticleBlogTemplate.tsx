@@ -70,7 +70,7 @@ function ArticleBlogFooter({ locale }: { locale: string }) {
   const pageUrl = typeof window !== 'undefined' ? window.location.href : ''
 
   return (
-    <footer className="w-full border-t border-neutral-200 bg-white px-4 py-10 sm:px-6 lg:px-8">
+    <footer className="w-full bg-white px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-[900px] grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_auto_1fr] sm:gap-4">
         <div className="flex justify-center sm:justify-start">
           <Link

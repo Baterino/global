@@ -112,11 +112,6 @@ export function Impact() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
-
       {/* Infrastructure with Purpose */}
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
@@ -137,11 +132,6 @@ export function Impact() {
           />
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
 
       {/* Community Energy & Social Programs */}
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-8">
@@ -172,11 +162,6 @@ export function Impact() {
           </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
-        <hr className="divider" />
-      </div>
 
       {/* Global Alignment & Long-Term Impact */}
       <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">

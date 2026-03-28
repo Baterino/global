@@ -35,7 +35,7 @@ export function ArticleBlogTemplateSkeleton() {
         </div>
       </section>
 
-      <footer className="w-full border-t border-neutral-200 bg-white px-4 py-10 sm:px-6 lg:px-8">
+      <footer className="w-full bg-white px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-[900px] grid-cols-1 items-center gap-8 sm:grid-cols-[1fr_auto_1fr] sm:gap-4">
           <div className={`mx-auto h-7 w-40 sm:mx-0 ${bar}`} />
           <div className={`mx-auto h-11 w-[min(100%,20rem)] justify-self-center ${bar}`} />

@@ -421,13 +421,13 @@
       "industrialTabDesc": "Almacenamiento a escala de red para fábricas, parques solares y operaciones industriales.",
       "industrialCardTitle": "INFRAESTRUCTURA BESS INDUSTRIAL Y COMERCIAL",
       "industrialDesc": "Infraestructura de almacenamiento de alta capacidad optimizada para nivelación de carga, estabilización de microred y gestión de recursos energéticos distribuidos.",
-      "medical": "BESS PARA SERVICIOS ESENCIALES",
+      "medical": "BESS PARA SERVICIOS ESENCIALES Y CRÍTICOS",
       "medicalTabDesc": "Soluciones de energía confiables para hospitales, clínicas e instalaciones de emergencia.",
-      "medicalCardTitle": "BESS PARA SERVICIOS ESENCIALES",
+      "medicalCardTitle": "BESS PARA SERVICIOS ESENCIALES Y CRÍTICOS",
       "medicalDesc": "Infraestructura de baterías ultra-confiable diseñada para operación sin interrupciones, conmutación rápida de carga y suministro continuo de energía a equipos de soporte vital.",
-      "maritime": "SOLUCIONES BESS MARINAS Y OFFSHORE",
+      "maritime": "SOLUCIONES MARINAS Y OFFSHORE DE ALMACENAMIENTO DE ENERGÍA",
       "maritimeTabDesc": "Sistemas de baterías avanzados para la electrificación de embarcaciones y operaciones offshore.",
-      "maritimeCardTitle": "SOLUCIONES BESS MARINAS Y OFFSHORE",
+      "maritimeCardTitle": "SOLUCIONES MARINAS Y OFFSHORE DE ALMACENAMIENTO DE ENERGÍA",
       "maritimeDesc": "Almacenamiento de energía de servicio pesado diseñado para entornos de agua salada, manejo de cargas dinámicas y suministro de energía de larga duración en operaciones en alta mar.",
       "utility": "Utilidad",
       "utilityDesc": "Almacenamiento a escala de red para estabilidad y integración de energías renovables.",
@@ -493,6 +493,11 @@
       "beyondDesc": "Nuestro trabajo de impacto va más allá de la instalación del sistema. Desplegamos infraestructura energética práctica y escalable diseñada para condiciones operativas reales — respaldada por integración, compromiso local y responsabilidad a largo plazo. El impacto se logra a través de sistemas que continúan funcionando, no despliegues únicos.",
       "inclusive": "CONSTRUYENDO SISTEMAS INCLUSIVOS",
       "inclusiveDesc": "La transición energética debe funcionar en diferentes realidades. Al combinar integración tecnológica, soporte del ciclo de vida y diseño de sistemas adaptables, Baterino ayuda a las comunidades a construir sistemas energéticos que apoyan las necesidades presentes y el crecimiento futuro. La inclusión proviene de infraestructura que puede mantenerse, expandirse y confiarse con el tiempo."
+    },
+    "partnerCta": {
+      "title": "Asóciate con nosotros para mercados locales",
+      "body": "Colabora con Baterino como distribuidor, integrador u operador local. Descubre vías de colaboración y beneficios en nuestra página de Presencia global.",
+      "button": "Únete a nuestra red"
     },
     "globalPresence": {
       "title": "Entregando infraestructura energética en todo el mundo",

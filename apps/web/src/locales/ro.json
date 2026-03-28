@@ -414,13 +414,13 @@
       "industrialTabDesc": "Stocare la scară de rețea pentru fabrici, parcuri solare și operațiuni industriale.",
       "industrialCardTitle": "INFRASTRUCTURĂ BESS INDUSTRIALĂ ȘI COMERCIALĂ",
       "industrialDesc": "Infrastructură de stocare de mare capacitate optimizată pentru nivelarea sarcinii, stabilizarea microrețelei și gestionarea resurselor energetice distribuite.",
-      "medical": "BESS PENTRU SERVICII ESENȚIALE",
+      "medical": "BESS PENTRU SERVICII ESENȚIALE ȘI CRITICE",
       "medicalTabDesc": "Soluții fiabile de energie pentru spitale, clinici și instalații de urgență.",
-      "medicalCardTitle": "BESS PENTRU SERVICII ESENȚIALE",
+      "medicalCardTitle": "BESS PENTRU SERVICII ESENȚIALE ȘI CRITICE",
       "medicalDesc": "Infrastructură de baterii ultra-fiabilă, concepută pentru funcționare fără întreruperi, comutare rapidă a sarcinii și livrare continuă de energie către echipamentele vitale.",
-      "maritime": "SOLUȚII ESS MARINE ȘI OFFSHORE",
+      "maritime": "SOLUȚII MARINE ȘI OFFSHORE DE STOCARE A ENERGIEI",
       "maritimeTabDesc": "Sisteme avansate de baterii pentru electrificarea navelor și operațiuni offshore.",
-      "maritimeCardTitle": "SOLUȚII ESS MARINE ȘI OFFSHORE",
+      "maritimeCardTitle": "SOLUȚII MARINE ȘI OFFSHORE DE STOCARE A ENERGIEI",
       "maritimeDesc": "Stocare de energie pentru uz greu, proiectată pentru medii cu apă sărată, gestionare dinamică a sarcinii și livrare de energie pe termen lung în operațiuni în larg.",
       "learnMore": "Află mai multe",
       "sliderNav": "Diapozitive Ce activăm",
@@ -493,6 +493,11 @@
       "beyondDesc": "Activitatea noastră de impact depășește simpla instalare de sisteme. Implementăm infrastructură energetică practică și scalabilă, concepută pentru condiții reale de operare — susținută prin integrare, implicare locală și responsabilitate pe termen lung. Impactul se obține prin sisteme care continuă să funcționeze, nu prin implementări punctuale.",
       "inclusive": "Construind Sisteme Incluzive",
       "inclusiveDesc": "Tranziția energetică trebuie să funcționeze în realități diverse. Prin combinarea integrării tehnologice, suportului pe ciclul de viață și designului adaptabil al sistemelor, Baterino ajută comunitățile să construiască sisteme energetice care să susțină atât nevoile prezente, cât și creșterea viitoare. Incluziunea vine din infrastructura care poate fi întreținută, extinsă și pe care se poate conta în timp."
+    },
+    "partnerCta": {
+      "title": "Parteneriat cu noi pentru piețe locale",
+      "body": "Lucrați cu Baterino ca distribuitor, integrator sau operator local. Explorați căile de parteneriat și beneficiile pe pagina noastră Prezență globală.",
+      "button": "Alăturați-vă rețelei noastre"
     },
     "globalPresence": {
       "title": "Livrând Infrastructură Energetică la Nivel Mondial",

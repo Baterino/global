@@ -39,7 +39,7 @@ export function DeliveryStepCard({ number, titleKey, descKey, isLast = false }: 
         </div>
       ) : (
         <Link to={deliveryPath} className="group/arrow mt-6 flex cursor-pointer items-center gap-4">
-          <div className="flex-1 border-t border-neutral-500" aria-hidden />
+          <div className="flex-1" aria-hidden />
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-neutral-900 transition-transform duration-300 group-hover/arrow:translate-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -41,9 +41,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Divider — moved from between How we deliver and Built on trust */}
-      <div className="w-full border-t border-neutral-200" />
-
       {/* How we deliver */}
       <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
@@ -70,10 +67,32 @@ export function Home() {
 
       <RolesSection />
 
+      {/* Partner network CTA → Global Presence / Partner up with us */}
+      <section className="w-full bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[1200px]">
+          <div className="flex flex-col items-center gap-8 rounded-[10px] bg-[#f7f7f7] px-6 py-8 sm:px-8 sm:py-10 md:flex-row md:items-center md:justify-between md:gap-10">
+            <div className="max-w-2xl text-center md:text-left">
+              <h2 className="font-heading text-2xl font-bold uppercase tracking-tight text-neutral-900 sm:text-3xl">
+                {t('home.partnerCta.title')}
+              </h2>
+              <p className="mt-3 font-body text-body-md leading-relaxed text-neutral-600">
+                {t('home.partnerCta.body')}
+              </p>
+            </div>
+            <Link
+              to={`${base}/global-presence#partner-up-with-us`}
+              className="inline-flex shrink-0 items-center justify-center rounded-lg bg-[#10064B] px-8 py-3.5 font-body text-body-sm font-semibold uppercase tracking-wide text-white shadow-sm transition-colors hover:bg-[#1a0a6e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#10064B] focus-visible:ring-offset-2"
+            >
+              {t('home.partnerCta.button')}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <TechnologyProvenSection />
 
       {/* Our global impact */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <SectionHeading
             titleKey="home.globalImpact.title"
@@ -90,7 +109,7 @@ export function Home() {
       </section>
 
       {/* Global presence */}
-      <section className="w-full border-t border-neutral-200 bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <section className="w-full bg-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <SectionHeading
             titleKey="home.globalPresence.title"

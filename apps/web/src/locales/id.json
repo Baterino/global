@@ -414,13 +414,13 @@
       "industrialTabDesc": "Penyimpanan skala grid untuk pabrik, ladang surya, dan operasi industri.",
       "industrialCardTitle": "INFRASTRUKTUR BESS INDUSTRI & KOMERSIAL",
       "industrialDesc": "Infrastruktur penyimpanan berkapasitas tinggi yang dioptimalkan untuk pemerataan beban, stabilisasi microgrid, dan manajemen sumber daya energi terdistribusi.",
-      "medical": "BESS LAYANAN ESENSIAL",
+      "medical": "BESS LAYANAN ESENSIAL & KRITIS",
       "medicalTabDesc": "Solusi daya andal untuk rumah sakit, klinik, dan fasilitas darurat.",
-      "medicalCardTitle": "BESS LAYANAN ESENSIAL",
+      "medicalCardTitle": "BESS LAYANAN ESENSIAL & KRITIS",
       "medicalDesc": "Infrastruktur baterai yang sangat andal, dirancang untuk operasi tanpa gangguan, peralihan beban cepat, dan penyaluran daya berkelanjutan ke peralatan yang menunjang kehidupan.",
-      "maritime": "SOLUSI ESS MARITIM & LEPAS PANTAI",
+      "maritime": "SOLUSI PENYIMPANAN ENERGI MARITIM & LEPAS PANTAI",
       "maritimeTabDesc": "Sistem baterai canggih untuk elektrifikasi kapal dan operasi lepas pantai.",
-      "maritimeCardTitle": "SOLUSI ESS MARITIM & LEPAS PANTAI",
+      "maritimeCardTitle": "SOLUSI PENYIMPANAN ENERGI MARITIM & LEPAS PANTAI",
       "maritimeDesc": "Penyimpanan energi tugas berat yang dirancang untuk lingkungan air asin, penanganan beban dinamis, dan penyaluran daya jangka panjang dalam operasi laut lepas.",
       "utility": "Utilitas",
       "utilityDesc": "Penyimpanan skala utilitas untuk stabilitas grid dan integrasi energi terbarukan.",
@@ -493,6 +493,11 @@
       "beyondDesc": "Pekerjaan dampak kami melampaui instalasi sistem. Kami menyebarkan infrastruktur energi praktis dan scalable yang dirancang untuk kondisi operasi nyata — didukung melalui integrasi, keterlibatan lokal, dan tanggung jawab jangka panjang. Dampak dicapai melalui sistem yang terus berkinerja, bukan penyebaran satu kali.",
       "inclusive": "MEMBANGUN SISTEM INKLUSIF",
       "inclusiveDesc": "Transisi energi harus bekerja di berbagai realitas. Dengan menggabungkan integrasi teknologi, dukungan siklus hidup, dan desain sistem yang dapat disesuaikan, Baterino membantu komunitas membangun sistem energi yang mendukung kebutuhan saat ini dan pertumbuhan masa depan. Inklusi berasal dari infrastruktur yang dapat dipelihara, diperluas, dan diandalkan dari waktu ke waktu."
+    },
+    "partnerCta": {
+      "title": "Bermitra dengan kami untuk pasar lokal",
+      "body": "Bekerja sama dengan Baterino sebagai distributor, integrator, atau operator lokal. Jelajahi jalur kemitraan dan manfaat di halaman Kehadiran global kami.",
+      "button": "Gabung jaringan kami"
     },
     "globalPresence": {
       "title": "Mengirimkan infrastruktur energi ke seluruh dunia",

@@ -189,7 +189,7 @@ export function MaritimeDeliverySlider() {
                     </div>
                   ) : (
                     <div className="flex items-center gap-3">
-                      <div className="flex-1 border-t border-neutral-400" aria-hidden />
+                      <div className="flex-1" aria-hidden />
                       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-neutral-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +274,7 @@ export function MaritimeDeliverySlider() {
                     </div>
                   ) : (
                     <div className="mt-auto flex items-center gap-4">
-                      <div className="flex-1 border-t border-neutral-400" aria-hidden />
+                      <div className="flex-1" aria-hidden />
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-neutral-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

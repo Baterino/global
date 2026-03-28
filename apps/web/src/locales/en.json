@@ -399,13 +399,13 @@
       "industrialTabDesc": "Grid-scale storage for factories, solar farms, and industrial operations.",
       "industrialCardTitle": "INDUSTRIAL & COMMERCIAL BESS INFRASTRUCTURE",
       "industrialDesc": "High-capacity storage infrastructure optimized for load leveling, microgrid stabilization, and distributed energy resource management.",
-      "medical": "ESSENTIAL SERVICES BESS",
+      "medical": "ESSENTIAL & CRITICAL SERVICES BESS",
       "medicalTabDesc": "Reliable power solutions for hospitals, clinics, and emergency facilities.",
-      "medicalCardTitle": "ESSENTIAL SERVICES BESS",
+      "medicalCardTitle": "ESSENTIAL & CRITICAL SERVICES BESS",
       "medicalDesc": "Ultra-reliable battery infrastructure engineered for zero-downtime operation, rapid load switching, and continuous power delivery to life-critical equipment.",
-      "maritime": "MARINE OFFSHORE ESS SOLUTIONS",
+      "maritime": "MARINE OFFSHORE ENERGY STORAGE SOLUTIONS",
       "maritimeTabDesc": "Advanced battery systems for vessel electrification and offshore operations.",
-      "maritimeCardTitle": "MARINE OFFSHORE ESS SOLUTIONS",
+      "maritimeCardTitle": "MARINE OFFSHORE ENERGY STORAGE SOLUTIONS",
       "maritimeDesc": "Heavy-duty energy storage engineered for saltwater environments, dynamic load handling, and long-duration power delivery in open-ocean operations.",
       "learnMore": "Learn more",
       "sliderNav": "What we enable slides",
@@ -490,6 +490,11 @@
       "beyondDesc": "Our impact work goes beyond system installation. We deploy practical, scalable energy infrastructure designed for real operating conditions — supported through integration, local engagement, and long-term responsibility. Impact is achieved through systems that continue to perform, not one-off deployments.",
       "inclusive": "Building Inclusive Systems",
       "inclusiveDesc": "The energy transition must work across different realities. By combining technology integration, lifecycle support, and adaptable system design, Baterino helps communities build energy systems that support both present needs and future growth. Inclusion comes from infrastructure that can be maintained, expanded, and relied upon over time."
+    },
+    "partnerCta": {
+      "title": "Partner Up with Us for Local Markets",
+      "body": "Work with Baterino as a distributor, integrator, or local operator. Explore partnership pathways and benefits on our Global Presence page.",
+      "button": "JOIN OUR NETWORK"
     },
     "globalPresence": {
       "title": "Delivering Energy Infrastructure Worldwide",
