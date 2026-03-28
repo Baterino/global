@@ -1,3 +1,5 @@
+import { assetUrl } from '@/lib/assetUrl'
+
 export type Sector = 'industrial' | 'maritime' | 'offgrid'
 export type InstallType = 'cabinet' | 'container' | 'rack' | 'marine'
 
@@ -26,7 +28,7 @@ export interface UseCaseProject {
 /** Generate image paths for a project from /images/usecases/{id}/{id}_photo_{NN}.jpg */
 function projectImages(id: string, count: number): string[] {
   return Array.from({ length: count }, (_, i) =>
-    `/images/usecases/${id}/${id}_photo_${String(i + 1).padStart(2, '0')}.jpg`
+    assetUrl(`/images/usecases/${id}/${id}_photo_${String(i + 1).padStart(2, '0')}.jpg`),
   )
 }
 

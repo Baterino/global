@@ -1,3 +1,5 @@
+import { assetUrl } from '@/lib/assetUrl'
+
 export const siteUrl = import.meta.env.VITE_SITE_URL ?? 'https://example.com'
 /** Open Graph `og:site_name` and default site brand in shared previews. */
 export const siteName = 'Baterino Global : EPC for Battery Storage Solution BESS infrastructure'
@@ -11,7 +13,9 @@ export function canonicalUrl(path: string): string {
 }
 
 export function absoluteUrl(path: string): string {
-  const base = siteUrl.replace(/\/$/, '')
   const p = path.startsWith('/') ? path : `/${path}`
-  return `${base}${p}`
+  const resolved = assetUrl(p)
+  if (/^https?:\/\//i.test(resolved)) return resolved
+  const base = siteUrl.replace(/\/$/, '')
+  return `${base}${resolved}`
 }

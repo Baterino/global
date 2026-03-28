@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { adminLogin, setAdminToken } from '../lib/adminApi'
 import { EMAIL_REGEX, EMAIL_MESSAGE_FORBIDDEN, sanitizeContactEmailInput } from '../lib/contactValidation'
+import { assetUrl } from '@/lib/assetUrl'
 
-const HERO_SRC = '/images/og-images/og-global-presence.jpg'
+const HERO_SRC = assetUrl('/images/og-images/og-global-presence.jpg')
 const HERO_CAPTION = 'Global presence, local delivery'
 
 function BackChevron() {
@@ -79,7 +80,7 @@ export function AdminLogin() {
             <BackChevron />
           </Link>
           <img
-            src="/images/baterino-logo-white.png"
+            src={assetUrl('/images/baterino-logo-white.png')}
             alt="Baterino Global"
             className="h-8 w-auto shrink-0 object-contain sm:h-9"
           />

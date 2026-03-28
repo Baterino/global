@@ -8,6 +8,7 @@ import {
 } from '../data/useCasesProjects'
 import { fetchPublishedUseCases, type PublicUseCaseProject } from '../lib/publicContentApi'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 const FILTERS = ['all', 'industrial', 'offgrid', 'maritime', 'solar', 'container', 'cabinet'] as const
 type FilterType = (typeof FILTERS)[number]
@@ -165,7 +166,7 @@ function ProjectCard({
           </span>
         </div>
         <img
-          src="/images/lithtech-logo-white 3.png"
+          src={assetUrl('/images/lithtech-logo-white 3.png')}
           alt="LithTech"
           className="absolute bottom-3 right-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
           aria-hidden
@@ -562,7 +563,7 @@ export function UseCases() {
             {/* Left: heading + paragraph */}
             <div className="flex-1 text-left">
               <img
-                src="/images/lithtech-logo.webp"
+                src={assetUrl('/images/lithtech-logo.webp')}
                 alt="LithTech"
                 className="mb-4 h-8 w-auto object-contain sm:h-10"
               />

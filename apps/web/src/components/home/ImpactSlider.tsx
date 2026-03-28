@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { assetUrl } from '@/lib/assetUrl'
 
 const SLIDE_WIDTH_PX = 700
 const SLIDE_HEIGHT = 360
@@ -11,21 +12,21 @@ const DRAG_THRESHOLD = 60
 const CONTAINER_WIDTH = 1200
 
 const IMPACT_SLIDES = [
-  { type: 'alignedGoals' as const, image: '/images/baterino-un-global-goals.png' },
+  { type: 'alignedGoals' as const, image: assetUrl('/images/baterino-un-global-goals.png') },
   {
     type: 'energyWhere' as const,
-    image: '/images/energy-where-it-matters-most-desktop.jpg',
-    mobileImage: '/images/energy-where-it-matter-most-mobile.png',
+    image: assetUrl('/images/energy-where-it-matters-most-desktop.jpg'),
+    mobileImage: assetUrl('/images/energy-where-it-matter-most-mobile.png'),
   },
   {
     type: 'beyond' as const,
-    image: '/images/beyond-delivery-desktop.jpg',
-    mobileImage: '/images/beyond-delivery-mobile.png',
+    image: assetUrl('/images/beyond-delivery-desktop.jpg'),
+    mobileImage: assetUrl('/images/beyond-delivery-mobile.png'),
   },
   {
     type: 'inclusive' as const,
-    image: '/images/microgrids-communities.png',
-    mobileImage: '/images/building-inclusive-systems-mobile.png',
+    image: assetUrl('/images/microgrids-communities.png'),
+    mobileImage: assetUrl('/images/building-inclusive-systems-mobile.png'),
   },
 ]
 
@@ -166,7 +167,7 @@ export function ImpactSlider() {
                     />
                     {slide.type !== 'alignedGoals' && (
                       <img
-                        src="/images/baterino-logo-white.png"
+                        src={assetUrl('/images/baterino-logo-white.png')}
                         alt="Baterino"
                         className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm"
                         aria-hidden
@@ -256,7 +257,7 @@ export function ImpactSlider() {
                     />
                     {slide.type !== 'alignedGoals' && (
                       <img
-                        src="/images/baterino-logo-white.png"
+                        src={assetUrl('/images/baterino-logo-white.png')}
                         alt="Baterino"
                         className="absolute bottom-4 right-4 z-10 h-5 w-auto object-contain drop-shadow-sm"
                         aria-hidden

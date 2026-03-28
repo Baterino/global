@@ -3,6 +3,8 @@
 
 interface ImportMetaEnv {
   readonly VITE_SITE_URL?: string
+  /** Public origin for `/images/*` (R2 static bucket); no trailing slash. Production: set on Vercel to your CDN host. */
+  readonly VITE_ASSET_BASE_URL?: string
   readonly VITE_API_URL?: string
   /** Facebook page URL (optional; defaults to Baterino Global page) */
   readonly VITE_SOCIAL_FACEBOOK_URL?: string

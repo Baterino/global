@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { SolutionTwoColumnLayout } from '../components/solutions/SolutionTwoColumnLayout'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function SolutionsIndustrial() {
   const { t } = useTranslation()
@@ -26,7 +27,7 @@ export function SolutionsIndustrial() {
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
             >
-              <img src="/images/lithtech-logo.webp" alt="LithTech" className="h-5 w-auto object-contain" />
+              <img src={assetUrl('/images/lithtech-logo.webp')} alt="LithTech" className="h-5 w-auto object-contain" />
             </a>
           </div>
         </div>
@@ -39,7 +40,7 @@ export function SolutionsIndustrial() {
             {t('industrial.cabinet.title')}
           </h2>
           <ImageWithLogo
-            src="/images/industrial-cabinet.png"
+            src={assetUrl('/images/industrial-cabinet.png')}
             alt=""
             className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"
@@ -63,19 +64,19 @@ export function SolutionsIndustrial() {
             techShowContactCta
             techProductImages={[
               {
-                src: '/images/products/industrial/lithtech-60kwh.png',
+                src: assetUrl('/images/products/industrial/lithtech-60kwh.png'),
                 alt: 'LithTech 60 kWh cabinet',
                 titleKey: 'industrial.cabinet.techProduct1.title',
                 subtitleKey: 'industrial.cabinet.techProduct1.subtitle',
               },
               {
-                src: '/images/products/industrial/lt-204-air.png',
+                src: assetUrl('/images/products/industrial/lt-204-air.png'),
                 alt: 'LT 204 Air cabinet',
                 titleKey: 'industrial.cabinet.techProduct2.title',
                 subtitleKey: 'industrial.cabinet.techProduct2.subtitle',
               },
               {
-                src: '/images/products/industrial/lt-215-liquid.png',
+                src: assetUrl('/images/products/industrial/lt-215-liquid.png'),
                 alt: 'LT 215 Liquid cabinet',
                 titleKey: 'industrial.cabinet.techProduct3.title',
                 subtitleKey: 'industrial.cabinet.techProduct3.subtitle',
@@ -112,7 +113,7 @@ export function SolutionsIndustrial() {
             {t('industrial.containerized.title')}
           </h2>
           <ImageWithLogo
-            src="/images/consistency-bess.jpg"
+            src={assetUrl('/images/consistency-bess.jpg')}
             alt=""
             className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"
@@ -136,13 +137,13 @@ export function SolutionsIndustrial() {
             techShowContactCta
             techProductImages={[
               {
-                src: '/images/products/industrial/20ft-container-air-cooling.png',
+                src: assetUrl('/images/products/industrial/20ft-container-air-cooling.png'),
                 alt: '20 ft air-cooled BESS container',
                 titleKey: 'industrial.containerized.techProduct1.title',
                 subtitleKey: 'industrial.containerized.techProduct1.subtitle',
               },
               {
-                src: '/images/products/industrial/20-ft-Container-Liquid-Cooling.png',
+                src: assetUrl('/images/products/industrial/20-ft-Container-Liquid-Cooling.png'),
                 alt: '20 ft liquid-cooled BESS container',
                 titleKey: 'industrial.containerized.techProduct2.title',
                 subtitleKey: 'industrial.containerized.techProduct2.subtitle',

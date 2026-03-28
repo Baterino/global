@@ -1,3 +1,5 @@
+import { assetUrl } from '@/lib/assetUrl'
+
 interface ImageWithLogoProps {
   src: string
   alt?: string
@@ -16,8 +18,8 @@ const LOGO_SIZES = {
 } as const
 
 const LOGO_SRC = {
-  baterino: '/images/baterino-logo-white.png',
-  lithtech: '/images/lithtech-logo-white 3.png',
+  baterino: assetUrl('/images/baterino-logo-white.png'),
+  lithtech: assetUrl('/images/lithtech-logo-white 3.png'),
 } as const
 
 export function ImageWithLogo({

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function Partnership() {
   const { t } = useTranslation()
@@ -24,18 +25,18 @@ export function Partnership() {
         <div className="mx-auto w-full max-w-[1200px]">
           <div className="relative h-[360px] w-full overflow-hidden rounded-[10px] sm:h-[400px]">
             <img
-              src="/images/lithtech-baterino-partnership.jpg"
+              src={assetUrl('/images/lithtech-baterino-partnership.jpg')}
               alt="LithTech Baterino Partnership"
               className="h-full w-full rounded-[10px] object-cover"
             />
             <img
-              src="/images/lithtech-logo-white 3.png"
+              src={assetUrl('/images/lithtech-logo-white 3.png')}
               alt="LithTech"
               className="absolute bottom-4 left-4 z-10 h-8 w-auto object-contain drop-shadow-sm sm:h-10"
               aria-hidden
             />
             <img
-              src="/images/baterino-logo-white.png"
+              src={assetUrl('/images/baterino-logo-white.png')}
               alt="Baterino"
               className="absolute bottom-4 right-4 z-10 h-8 w-auto object-contain drop-shadow-sm sm:h-10"
               aria-hidden
@@ -52,7 +53,7 @@ export function Partnership() {
             <div>
               <div className="relative mb-4 h-[400px] w-full overflow-hidden rounded-[10px] lg:hidden">
                 <img
-                  src="/images/partnership/lithtech.jpg"
+                  src={assetUrl('/images/partnership/lithtech.jpg')}
                   alt="LithTech"
                   className="h-full w-full object-cover"
                 />
@@ -96,7 +97,7 @@ export function Partnership() {
             <div>
               <div className="relative mb-4 h-[400px] w-full overflow-hidden rounded-[10px] lg:hidden">
                 <img
-                  src="/images/partnership/baterino.jpg"
+                  src={assetUrl('/images/partnership/baterino.jpg')}
                   alt="Baterino"
                   className="h-full w-full object-cover"
                 />

@@ -3,6 +3,7 @@ import { ImageWithLogo } from '../components/ImageWithLogo'
 import { MaritimeDeliverySlider } from '../components/maritime/MaritimeDeliverySlider'
 import { SolutionTwoColumnLayout } from '../components/solutions/SolutionTwoColumnLayout'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 const MARITIME_SYSTEM_GRID_KEYS = [
   'maritime.systems.feature1',
@@ -39,7 +40,7 @@ export function SolutionsMaritime() {
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
             >
-              <img src="/images/lithtech-logo.webp" alt="LithTech" className="h-5 w-auto object-contain" />
+              <img src={assetUrl('/images/lithtech-logo.webp')} alt="LithTech" className="h-5 w-auto object-contain" />
             </a>
           </div>
         </div>
@@ -52,7 +53,7 @@ export function SolutionsMaritime() {
             {t('maritime.systems.title')}
           </h2>
           <ImageWithLogo
-            src="/images/maritime-solution.png"
+            src={assetUrl('/images/maritime-solution.png')}
             alt=""
             className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"
@@ -78,7 +79,7 @@ export function SolutionsMaritime() {
             techShowContactCta
             techProductImages={[
               {
-                src: '/images/products/maritime/white-sharl-series.png',
+                src: assetUrl('/images/products/maritime/white-sharl-series.png'),
                 alt: 'White Shark 2.0 ESS Marine Power',
                 titleKey: 'maritime.systems.techProduct1.title',
                 subtitleKey: 'maritime.systems.techProduct1.subtitle',
@@ -122,8 +123,8 @@ export function SolutionsMaritime() {
 
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
-              <img src="/images/tugboat.jpg" alt="Tugboat" className="absolute inset-0 h-full w-full object-cover" />
-              <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
+              <img src={assetUrl('/images/tugboat.jpg')} alt="Tugboat" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={assetUrl('/images/baterino-logo-white.png')} alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">
@@ -133,8 +134,8 @@ export function SolutionsMaritime() {
             </div>
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
-              <img src="/images/ferry.jpg" alt="Tourist Vessel" className="absolute inset-0 h-full w-full object-cover" />
-              <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
+              <img src={assetUrl('/images/ferry.jpg')} alt="Tourist Vessel" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={assetUrl('/images/baterino-logo-white.png')} alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">
@@ -144,8 +145,8 @@ export function SolutionsMaritime() {
             </div>
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
-              <img src="/images/car-ferry.jpg" alt="Car Ferry" className="absolute inset-0 h-full w-full object-cover" />
-              <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
+              <img src={assetUrl('/images/car-ferry.jpg')} alt="Car Ferry" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={assetUrl('/images/baterino-logo-white.png')} alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">
@@ -155,8 +156,8 @@ export function SolutionsMaritime() {
             </div>
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
-              <img src="/images/fish-farm.jpg" alt="Fish Farm" className="absolute inset-0 h-full w-full object-cover" />
-              <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
+              <img src={assetUrl('/images/fish-farm.jpg')} alt="Fish Farm" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={assetUrl('/images/baterino-logo-white.png')} alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">
@@ -166,8 +167,8 @@ export function SolutionsMaritime() {
             </div>
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
-              <img src="/images/container-ship.jpg" alt="MPV Cargo Vessel" className="absolute inset-0 h-full w-full object-cover" />
-              <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
+              <img src={assetUrl('/images/container-ship.jpg')} alt="MPV Cargo Vessel" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={assetUrl('/images/baterino-logo-white.png')} alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">
@@ -177,8 +178,8 @@ export function SolutionsMaritime() {
             </div>
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[10px] sm:aspect-square">
-              <img src="/images/service-boat.jpg" alt="Offshore Supply Vessel" className="absolute inset-0 h-full w-full object-cover" />
-              <img src="/images/baterino-logo-white.png" alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
+              <img src={assetUrl('/images/service-boat.jpg')} alt="Offshore Supply Vessel" className="absolute inset-0 h-full w-full object-cover" />
+              <img src={assetUrl('/images/baterino-logo-white.png')} alt="Baterino" className="absolute right-3 top-3 z-20 h-4 w-auto object-contain drop-shadow-sm sm:h-5" aria-hidden />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 z-10">
                 <p className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-white">

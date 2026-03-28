@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { assetUrl } from '@/lib/assetUrl'
 
 const SLIDE_WIDTH_PX = 587
 const SLIDE_HEIGHT = 360
@@ -11,10 +12,10 @@ const DRAG_THRESHOLD = 60
 const CONTAINER_WIDTH = 1200
 
 const DELIVERY_SLIDES = [
-  { step: 1 as const, image: '/images/delivery-enablement.jpg' },
-  { step: 2 as const, image: '/images/delivery-technology-integration.jpg' },
-  { step: 3 as const, image: '/images/delivery-after-sales.jpg' },
-  { step: 4 as const, image: '/images/delivery-enablement.jpg' },
+  { step: 1 as const, image: assetUrl('/images/delivery-enablement.jpg') },
+  { step: 2 as const, image: assetUrl('/images/delivery-technology-integration.jpg') },
+  { step: 3 as const, image: assetUrl('/images/delivery-after-sales.jpg') },
+  { step: 4 as const, image: assetUrl('/images/delivery-enablement.jpg') },
 ]
 
 export function HowWeDeliverSlider() {
@@ -152,7 +153,7 @@ export function HowWeDeliverSlider() {
       <div className="relative h-full w-72 shrink-0 overflow-hidden rounded-tr-[10px] rounded-br-[10px]">
         <img src={slide.image} alt="" className="h-full w-full object-cover" draggable={false} />
         <img
-          src="/images/baterino-logo-white.png"
+          src={assetUrl('/images/baterino-logo-white.png')}
           alt="Baterino"
           className="absolute bottom-4 right-4 h-6 w-auto object-contain drop-shadow-sm md:bottom-6 md:right-6 md:h-7"
         />
@@ -178,7 +179,7 @@ export function HowWeDeliverSlider() {
                   <div className="relative h-44 w-full overflow-hidden rounded-t-[10px]">
                     <img src={slide.image} alt="" className="h-full w-full object-cover" draggable={false} />
                     <img
-                      src="/images/baterino-logo-white.png"
+                      src={assetUrl('/images/baterino-logo-white.png')}
                       alt="Baterino"
                       className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-sm"
                     />

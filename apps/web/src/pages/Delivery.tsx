@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function Delivery() {
   const { t } = useTranslation()
@@ -26,12 +27,12 @@ export function Delivery() {
           {/* Left: image */}
           <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-[10px] bg-zinc-300 lg:h-80 lg:w-96">
             <img
-              src="/images/delivery-enablement.jpg"
+              src={assetUrl('/images/delivery-enablement.jpg')}
               alt=""
               className="h-full w-full object-cover"
             />
             <img
-              src="/images/baterino-logo-white.png"
+              src={assetUrl('/images/baterino-logo-white.png')}
               alt="Baterino"
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
@@ -69,9 +70,9 @@ export function Delivery() {
         {/* Technology Integration */}
         <div className="mx-auto mt-8 flex w-full max-w-[1200px] flex-col gap-5 lg:flex-row">
           <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-[10px] bg-zinc-300 lg:h-80 lg:w-96">
-            <img src="/images/delivery-technology-integration.jpg" alt="" className="h-full w-full object-cover" />
+            <img src={assetUrl('/images/delivery-technology-integration.jpg')} alt="" className="h-full w-full object-cover" />
             <img
-              src="/images/baterino-logo-white.png"
+              src={assetUrl('/images/baterino-logo-white.png')}
               alt="Baterino"
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
@@ -108,9 +109,9 @@ export function Delivery() {
         {/* After-Sales & Reliability */}
         <div className="mx-auto mt-8 flex w-full max-w-[1200px] flex-col gap-5 lg:flex-row">
           <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-[10px] bg-zinc-300 lg:h-80 lg:w-96">
-            <img src="/images/delivery-after-sales.jpg" alt="" className="h-full w-full object-cover" />
+            <img src={assetUrl('/images/delivery-after-sales.jpg')} alt="" className="h-full w-full object-cover" />
             <img
-              src="/images/baterino-logo-white.png"
+              src={assetUrl('/images/baterino-logo-white.png')}
               alt="Baterino"
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
@@ -147,9 +148,9 @@ export function Delivery() {
         {/* Project Structuring & Funding Support */}
         <div className="mx-auto mt-8 flex w-full max-w-[1200px] flex-col gap-5 lg:flex-row">
           <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-[10px] bg-zinc-300 lg:h-80 lg:w-96">
-            <img src="/images/delivery-enablement.jpg" alt="" className="h-full w-full object-cover" />
+            <img src={assetUrl('/images/delivery-enablement.jpg')} alt="" className="h-full w-full object-cover" />
             <img
-              src="/images/baterino-logo-white.png"
+              src={assetUrl('/images/baterino-logo-white.png')}
               alt="Baterino"
               className="absolute bottom-4 right-4 h-5 w-auto object-contain drop-shadow-md sm:bottom-6 sm:right-6 sm:h-6"
             />
@@ -195,7 +196,7 @@ export function Delivery() {
           </p>
 
           <ImageWithLogo
-            src="/images/consistency-bess.jpg"
+            src={assetUrl('/images/consistency-bess.jpg')}
             alt=""
             className="mb-12 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"

@@ -3,6 +3,7 @@ import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { SEOHead } from '../components/SEOHead'
 import { fetchPublishedArticles, type PublicArticleListItem } from '../lib/publicContentApi'
+import { assetUrl } from '@/lib/assetUrl'
 
 const FILTERS = ['all', 'company', 'press-release', 'use-cases', 'news'] as const
 const INSIGHTS_BASE = 'company/insights'
@@ -26,7 +27,7 @@ function apiArticleToItem(a: PublicArticleListItem): ArticleItem {
     id: a.id,
     slug: a.slug,
     type: a.type,
-    image: a.image_url || '/images/og-images/og-insights.jpg',
+    image: a.image_url || assetUrl('/images/og-images/og-insights.jpg'),
     date: dateDisplay,
     dateSort: sort,
     title: a.title,
@@ -253,7 +254,7 @@ export function Insights() {
                       />
                       <div className="pointer-events-none absolute inset-0 bg-black/40" aria-hidden />
                       <img
-                        src="/images/baterino-logo-white.png"
+                        src={assetUrl('/images/baterino-logo-white.png')}
                         alt=""
                         className="absolute bottom-4 right-4 z-10 h-5 w-auto object-contain drop-shadow-sm"
                         aria-hidden

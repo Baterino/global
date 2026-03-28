@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { ArrowRightIcon } from '../components/ArrowRightIcon'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function LithTech() {
   const { t } = useTranslation()
@@ -25,9 +26,9 @@ export function LithTech() {
       <section className="w-full bg-white px-4 pb-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <div className="relative h-[400px] w-full overflow-hidden rounded-[10px]">
-            <img src="/images/about-lithtech.jpg" alt="LithTech" className="h-full w-full object-cover" />
+            <img src={assetUrl('/images/about-lithtech.jpg')} alt="LithTech" className="h-full w-full object-cover" />
             <img
-              src="/images/lithtech-logo-white 3.png"
+              src={assetUrl('/images/lithtech-logo-white 3.png')}
               alt="LithTech"
               className="absolute bottom-4 right-4 z-10 h-8 w-auto object-contain drop-shadow-sm"
               aria-hidden
@@ -99,8 +100,8 @@ export function LithTech() {
             {/* Card 1 - Industrial & Commercial */}
             <div className="flex flex-col overflow-hidden rounded-[10px] bg-neutral-50 shadow-sm">
               <div className="relative h-48 w-full shrink-0">
-                <img src="/images/lithtechc-industrial-storage.jpg" alt="" className="h-full w-full object-cover" />
-                <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
+                <img src={assetUrl('/images/lithtechc-industrial-storage.jpg')} alt="" className="h-full w-full object-cover" />
+                <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <h4 className="mb-3 max-w-[13rem] font-heading text-base font-bold uppercase leading-tight tracking-tight text-neutral-900">
@@ -115,8 +116,8 @@ export function LithTech() {
             {/* Card 2 - Marine */}
             <div className="flex flex-col overflow-hidden rounded-[10px] bg-neutral-50 shadow-sm">
               <div className="relative h-48 w-full shrink-0">
-                <img src="/images/lithtech-maritime-solutions.jpg" alt="" className="h-full w-full object-cover" />
-                <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
+                <img src={assetUrl('/images/lithtech-maritime-solutions.jpg')} alt="" className="h-full w-full object-cover" />
+                <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <h4 className="mb-3 max-w-[13rem] font-heading text-base font-bold uppercase leading-tight tracking-tight text-neutral-900">
@@ -131,8 +132,8 @@ export function LithTech() {
             {/* Card 3 - BMS */}
             <div className="flex flex-col overflow-hidden rounded-[10px] bg-neutral-50 shadow-sm">
               <div className="relative h-48 w-full shrink-0">
-                <img src="/images/lithtech-energy-battery-system.jpg" alt="" className="h-full w-full object-cover" />
-                <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
+                <img src={assetUrl('/images/lithtech-energy-battery-system.jpg')} alt="" className="h-full w-full object-cover" />
+                <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm" aria-hidden />
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <h4 className="mb-3 max-w-[13rem] font-heading text-base font-bold uppercase leading-tight tracking-tight text-neutral-900">
@@ -168,7 +169,7 @@ export function LithTech() {
 
             {/* Right Column - Image Placeholder (2/3) */}
             <ImageWithLogo
-              src="/images/lithtech-globall-presence.jpg"
+              src={assetUrl('/images/lithtech-globall-presence.jpg')}
               alt="Global Footprint"
               className="h-[400px] w-full rounded-[10px] lg:col-span-2"
               imgClassName="rounded-[10px] object-cover"

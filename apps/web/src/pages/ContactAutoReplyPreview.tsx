@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { SEOHead } from '../components/SEOHead'
 import { socialFacebookUrl, socialLinkedInUrl } from '../config/socialLinks'
+import { assetUrl } from '@/lib/assetUrl'
 
 /** Placeholders — mirrors client auto-reply in apps/api/src/routes/contact.ts */
 const SAMPLE_NAME = 'Alex Morgan'
@@ -71,7 +72,7 @@ export function ContactAutoReplyPreview() {
                   <tr>
                     <td style={{ paddingBottom: 24 }}>
                       <img
-                        src="/images/Baterino-Logo-black.png"
+                        src={assetUrl('/images/Baterino-Logo-black.png')}
                         alt="Baterino"
                         width={200}
                         style={{ display: 'block', maxWidth: 200, height: 'auto', border: 0 }}
@@ -122,7 +123,7 @@ export function ContactAutoReplyPreview() {
                           title="Facebook"
                         >
                           <img
-                            src="/images/social/email-facebook.svg"
+                            src={assetUrl('/images/social/email-facebook.svg')}
                             alt="Facebook"
                             width={SOCIAL_ICON_SIZE}
                             height={SOCIAL_ICON_SIZE}
@@ -146,7 +147,7 @@ export function ContactAutoReplyPreview() {
                           title="LinkedIn"
                         >
                           <img
-                            src="/images/social/email-linkedin.svg"
+                            src={assetUrl('/images/social/email-linkedin.svg')}
                             alt="LinkedIn"
                             width={SOCIAL_ICON_SIZE}
                             height={SOCIAL_ICON_SIZE}

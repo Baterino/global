@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { OperatingModelDiagramContent } from './OperatingModelDiagram'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function GlobalPresence() {
   const { t } = useTranslation()
@@ -60,7 +61,7 @@ export function GlobalPresence() {
                 {t('globalPresence.operatingGlobally.description')}
               </p>
               <ImageWithLogo
-                src="/images/operating-globally.jpg"
+                src={assetUrl('/images/operating-globally.jpg')}
                 alt="Operating Globally"
                 className="h-[320px] w-full rounded-[10px] sm:h-[350px]"
                 imgClassName="rounded-[10px] object-cover"
@@ -77,7 +78,7 @@ export function GlobalPresence() {
                 {t('globalPresence.deliveringLocally.description')}
               </p>
               <ImageWithLogo
-                src="/images/delivering-locally.jpg"
+                src={assetUrl('/images/delivering-locally.jpg')}
                 alt="Acting Locally"
                 className="h-[320px] w-full rounded-[10px] sm:h-[350px]"
                 imgClassName="rounded-[10px] object-cover"
@@ -126,7 +127,7 @@ export function GlobalPresence() {
 
             {/* Right - Image (2/3), height 440px */}
             <ImageWithLogo
-              src="/images/regional-presence-baterino.jpg"
+              src={assetUrl('/images/regional-presence-baterino.jpg')}
               alt="Regional Presence"
               className="h-[440px] w-full rounded-[10px] lg:col-span-2"
               imgClassName="rounded-[10px] object-cover"

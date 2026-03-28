@@ -1,10 +1,11 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { assetUrl } from '@/lib/assetUrl'
 
 const DIVISIONS = [
-  { src: '/images/baterino-industrial-black.png', altKey: 'nav.solutions.industrial', to: 'solutions/industrial' },
-  { src: '/images/baterino-medical-black.png', altKey: 'nav.solutions.medical', to: 'impact' },
-  { src: '/images/baterino-maritime-black.png', altKey: 'nav.solutions.maritime', to: 'solutions/maritime' },
+  { src: assetUrl('/images/baterino-industrial-black.png'), altKey: 'nav.solutions.industrial', to: 'solutions/industrial' },
+  { src: assetUrl('/images/baterino-medical-black.png'), altKey: 'nav.solutions.medical', to: 'impact' },
+  { src: assetUrl('/images/baterino-maritime-black.png'), altKey: 'nav.solutions.maritime', to: 'solutions/maritime' },
 ] as const
 
 export function OurDivisions() {

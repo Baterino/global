@@ -11,6 +11,7 @@ import { RolesSection } from '../components/home/RolesSection'
 import { TechnologyProvenSection } from '../components/home/TechnologyProvenSection'
 import { ImpactSlider } from '../components/home/ImpactSlider'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function Home() {
   const { t } = useTranslation()
@@ -117,7 +118,7 @@ export function Home() {
             centerOnMobile
           />
           <ImageWithLogo
-            src="/images/global-presence-wide.jpg"
+            src={assetUrl('/images/global-presence-wide.jpg')}
             alt="Global Presence"
             className="h-96 w-full max-w-[1200px] rounded-[10px]"
             imgClassName="rounded-[10px] object-cover"

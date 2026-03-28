@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Trans, useTranslation } from 'react-i18next'
 import { ArrowRightIcon } from '../ArrowRightIcon'
+import { assetUrl } from '@/lib/assetUrl'
 
-const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => `/images/mobile%20slider/slide${i + 1}.jpg`)
+const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => assetUrl(`/images/mobile%20slider/slide${i + 1}.jpg`))
 
 const HERO_SLIDER_TAB_KEYS = [
   'home.hero.sliderTabs.industrial',
@@ -31,8 +32,8 @@ type HeroSlide = {
 
 const CAROUSEL_SLIDES: HeroSlide[] = [
   {
-    image: '/images/hero-slide1.jpg',
-    mobileImage: '/images/hero-slider-mobile1.jpg',
+    image: assetUrl('/images/hero-slide1.jpg'),
+    mobileImage: assetUrl('/images/hero-slider-mobile1.jpg'),
     titleKey: 'home.heroSlides.slide1.title',
     subtitleKey: 'home.heroSlides.slide1.subtitle',
     to: 'solutions/industrial',
@@ -40,24 +41,24 @@ const CAROUSEL_SLIDES: HeroSlide[] = [
     tabHoverOverlay: { gradient: false },
   },
   {
-    image: '/images/hero-slide2.jpg',
-    mobileImage: '/images/hero-slider-mobile2.jpg',
+    image: assetUrl('/images/hero-slide2.jpg'),
+    mobileImage: assetUrl('/images/hero-slider-mobile2.jpg'),
     titleKey: 'home.heroSlides.slide2.title',
     subtitleKey: 'home.heroSlides.slide2.subtitle',
     to: 'solutions/residential',
     buttonKey: 'home.carousel.learnMore',
   },
   {
-    image: '/images/slide3-mission-critical.jpg',
-    mobileImage: '/images/slide3-mission-critical.jpg',
+    image: assetUrl('/images/slide3-mission-critical.jpg'),
+    mobileImage: assetUrl('/images/slide3-mission-critical.jpg'),
     titleKey: 'home.heroSlides.slide5.title',
     subtitleKey: 'home.heroSlides.slide5.subtitle',
     to: 'solutions/critical-services',
     buttonKey: 'home.carousel.learnMore',
   },
   {
-    image: '/images/hero-slide3.jpg',
-    mobileImage: '/images/hero-slider-mobile3.jpg',
+    image: assetUrl('/images/hero-slide3.jpg'),
+    mobileImage: assetUrl('/images/hero-slider-mobile3.jpg'),
     titleKey: 'home.heroSlides.slide3.title',
     subtitleKey: 'home.heroSlides.slide3.subtitle',
     to: 'delivery',
@@ -125,7 +126,7 @@ export function Hero() {
                       className="transition-opacity hover:opacity-100"
                       aria-label="LithTech"
                     >
-                      <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
+                      <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
                     </a>
                   </div>
                 </div>
@@ -151,7 +152,7 @@ export function Hero() {
                       className="transition-opacity hover:opacity-100"
                       aria-label="LithTech"
                     >
-                      <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
+                      <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
                     </a>
                   </div>
                 </div>
@@ -177,7 +178,7 @@ export function Hero() {
                       className="transition-opacity hover:opacity-100"
                       aria-label="LithTech"
                     >
-                      <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
+                      <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
                     </a>
                   </div>
                 </div>
@@ -203,7 +204,7 @@ export function Hero() {
                       className="transition-opacity hover:opacity-100"
                       aria-label="LithTech"
                     >
-                      <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
+                      <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="h-4 w-auto object-contain sm:h-5" />
                     </a>
                   </div>
                 </div>
@@ -252,7 +253,7 @@ export function Hero() {
                 <div className="pointer-events-auto flex min-h-0 flex-1 flex-col items-center justify-center px-4 text-center sm:px-6">
                   <div className="flex max-h-full w-full max-w-[1160px] flex-col items-center gap-4">
                     <img
-                      src="/images/baterino-logo-white.png"
+                      src={assetUrl('/images/baterino-logo-white.png')}
                       alt="Baterino"
                       className="h-8 w-auto shrink-0 object-contain md:h-10"
                     />
@@ -277,7 +278,7 @@ export function Hero() {
                         aria-label="LithTech"
                       >
                         <img
-                          src="/images/lithtech-logo-white 3.png"
+                          src={assetUrl('/images/lithtech-logo-white 3.png')}
                           alt="LithTech"
                           className="h-4 w-auto object-contain md:h-5"
                         />

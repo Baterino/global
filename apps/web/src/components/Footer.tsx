@@ -3,6 +3,7 @@ import { Link, useLocation, useParams } from 'react-router-dom'
 import { handleHomeLogoLinkClick } from '../utils/homeLogoClick'
 import { nav } from '../config/nav'
 import { socialFacebookUrl, socialLinkedInUrl, socialSubstackUrl } from '../config/socialLinks'
+import { assetUrl } from '@/lib/assetUrl'
 
 const SOCIAL_LINKS = [
   { name: 'Facebook', href: socialFacebookUrl, Icon: FacebookIcon },
@@ -54,7 +55,7 @@ export function Footer() {
             onClick={(e) => handleHomeLogoLinkClick(e, pathname, base)}
           >
             <img
-              src="/images/Baterino-Logo-black.png"
+              src={assetUrl('/images/Baterino-Logo-black.png')}
               alt="Baterino"
               className="h-8 w-auto"
             />
@@ -99,7 +100,7 @@ export function Footer() {
               onClick={(e) => handleHomeLogoLinkClick(e, pathname, base)}
             >
               <img
-                src="/images/Baterino-Logo-black.png"
+                src={assetUrl('/images/Baterino-Logo-black.png')}
                 alt="Baterino"
                 className="h-8 w-auto"
               />

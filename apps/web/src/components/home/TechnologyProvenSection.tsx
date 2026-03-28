@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowRightIcon } from '../ArrowRightIcon'
 import { USE_CASE_PROJECTS, type UseCaseProject, type Sector } from '../../data/useCasesProjects'
+import { assetUrl } from '@/lib/assetUrl'
 
 const FEATURED_IDS = ['GS0030', 'GB008', 'GS0009'] as const
 
@@ -100,7 +101,7 @@ export function TechnologyProvenSection() {
                     {getSectorLabel(project.sector, t)}
                   </span>
                   <img
-                    src="/images/lithtech-logo-white 3.png"
+                    src={assetUrl('/images/lithtech-logo-white 3.png')}
                     alt="LithTech"
                     className="absolute bottom-3 right-3 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
                     aria-hidden

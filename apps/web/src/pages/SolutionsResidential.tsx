@@ -2,18 +2,19 @@ import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { SolutionTwoColumnLayout, type TechProductImage } from '../components/solutions/SolutionTwoColumnLayout'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 type ResidentialSectionId = 'individual' | 'microgrids'
 
 const INDIVIDUAL_LOW_VOLTAGE_PRODUCTS: readonly TechProductImage[] = [
   {
-    src: '/images/products/residential/wall-mounted-low-voltage.png',
+    src: assetUrl('/images/products/residential/wall-mounted-low-voltage.png'),
     alt: 'Wall Mounted Storage LV TR Series residential',
     titleKey: 'residential.individual.techProduct1.title',
     subtitleKey: 'residential.individual.techProduct1.subtitle',
   },
   {
-    src: '/images/products/residential/wall-mounted-low-voltage-pro.png',
+    src: assetUrl('/images/products/residential/wall-mounted-low-voltage-pro.png'),
     alt: 'Wall Mounted Pro LV TR Series Pro residential',
     titleKey: 'residential.individual.techProduct2.title',
     subtitleKey: 'residential.individual.techProduct2.subtitle',
@@ -23,19 +24,19 @@ const INDIVIDUAL_LOW_VOLTAGE_PRODUCTS: readonly TechProductImage[] = [
 /** Left → right: HV stack, HP Ultra 2000k stack, TA6000 all-in-one (matches Green Planet / One Stop copy). */
 const MICROGRID_HIGH_VOLTAGE_PRODUCTS: readonly TechProductImage[] = [
   {
-    src: '/images/products/residential/high-voltage-stacked.png',
+    src: assetUrl('/images/products/residential/high-voltage-stacked.png'),
     alt: 'Green Planet Series HV Stacked residential storage',
     titleKey: 'residential.microgrids.techProduct1.title',
     subtitleKey: 'residential.microgrids.techProduct1.subtitle',
   },
   {
-    src: '/images/products/residential/hp-2000k.png',
+    src: assetUrl('/images/products/residential/hp-2000k.png'),
     alt: 'Green Planet Pro HV Stacked HP Ultra 2000k',
     titleKey: 'residential.microgrids.techProduct2.title',
     subtitleKey: 'residential.microgrids.techProduct2.subtitle',
   },
   {
-    src: '/images/products/residential/all-in-one.png',
+    src: assetUrl('/images/products/residential/all-in-one.png'),
     alt: 'One Stop All in One TA6000 energy series',
     titleKey: 'residential.microgrids.techProduct3.title',
     subtitleKey: 'residential.microgrids.techProduct3.subtitle',
@@ -117,7 +118,7 @@ export function SolutionsResidential() {
               rel="noopener noreferrer"
               className="transition-opacity hover:opacity-80"
             >
-              <img src="/images/lithtech-logo.webp" alt="LithTech" className="h-5 w-auto object-contain" />
+              <img src={assetUrl('/images/lithtech-logo.webp')} alt="LithTech" className="h-5 w-auto object-contain" />
             </a>
           </div>
         </div>
@@ -130,7 +131,7 @@ export function SolutionsResidential() {
             {t('residential.individual.title')}
           </h2>
           <ImageWithLogo
-            src="/images/residential-storage-solutions.png"
+            src={assetUrl('/images/residential-storage-solutions.png')}
             alt=""
             className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"
@@ -152,7 +153,7 @@ export function SolutionsResidential() {
             {t('residential.microgrids.title')}
           </h2>
           <ImageWithLogo
-            src="/images/residential-microgrids.png"
+            src={assetUrl('/images/residential-microgrids.png')}
             alt=""
             className="mb-8 h-64 w-full rounded-[10px] sm:h-96"
             imgClassName="rounded-[10px] object-cover"

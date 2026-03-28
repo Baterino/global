@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { assetUrl } from '@/lib/assetUrl'
 
 const SLIDE_WIDTH_PX = 380
 const SLIDE_HEIGHT = 440
@@ -10,10 +11,10 @@ const DRAG_THRESHOLD = 60
 const CONTAINER_WIDTH = 1200
 
 const WHAT_WE_DO_SLIDES = [
-  { key: 'technology', image: '/images/import-distribution.jpg' },
-  { key: 'integration', image: '/images/system-integration.jpg' },
-  { key: 'afterSales', image: '/images/after-sales.jpg' },
-  { key: 'infrastructure', image: '/images/infrastructure-enablement.jpg' },
+  { key: 'technology', image: assetUrl('/images/import-distribution.jpg') },
+  { key: 'integration', image: assetUrl('/images/system-integration.jpg') },
+  { key: 'afterSales', image: assetUrl('/images/after-sales.jpg') },
+  { key: 'infrastructure', image: assetUrl('/images/infrastructure-enablement.jpg') },
 ]
 
 export function WhatWeDoSlider() {
@@ -151,7 +152,7 @@ export function WhatWeDoSlider() {
                       draggable={false}
                     />
                     <img
-                      src="/images/baterino-logo-white.png"
+                      src={assetUrl('/images/baterino-logo-white.png')}
                       alt="Baterino"
                       className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm"
                       aria-hidden
@@ -218,7 +219,7 @@ export function WhatWeDoSlider() {
                         draggable={false}
                       />
                       <img
-                        src="/images/baterino-logo-white.png"
+                        src={assetUrl('/images/baterino-logo-white.png')}
                         alt="Baterino"
                         className="absolute bottom-3 right-3 z-10 h-5 w-auto object-contain drop-shadow-sm"
                         aria-hidden

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { assetUrl } from '@/lib/assetUrl'
 
 const SECTORS = [
   {
@@ -9,7 +10,7 @@ const SECTORS = [
     descKey: 'home.whatWeEnable.industrialTabDesc',
     cardTitleKey: 'home.whatWeEnable.industrialCardTitle',
     cardDescKey: 'home.whatWeEnable.industrialDesc',
-    image: '/images/Home/bess-solutions.jpg',
+    image: assetUrl('/images/Home/bess-solutions.jpg'),
     to: '/solutions/industrial',
   },
   {
@@ -18,7 +19,7 @@ const SECTORS = [
     descKey: 'home.whatWeEnable.residentialTabDesc',
     cardTitleKey: 'home.whatWeEnable.residentialCardTitle',
     cardDescKey: 'home.whatWeEnable.residentialDesc',
-    image: '/images/Home/residential-storage-solutions.jpg',
+    image: assetUrl('/images/Home/residential-storage-solutions.jpg'),
     to: '/solutions/residential',
   },
   {
@@ -27,7 +28,7 @@ const SECTORS = [
     descKey: 'home.whatWeEnable.medicalTabDesc',
     cardTitleKey: 'home.whatWeEnable.medicalCardTitle',
     cardDescKey: 'home.whatWeEnable.medicalDesc',
-    image: '/images/Home/essential-critical-services.jpg',
+    image: assetUrl('/images/Home/essential-critical-services.jpg'),
     to: '/solutions/industrial',
   },
   {
@@ -36,7 +37,7 @@ const SECTORS = [
     descKey: 'home.whatWeEnable.maritimeTabDesc',
     cardTitleKey: 'home.whatWeEnable.maritimeCardTitle',
     cardDescKey: 'home.whatWeEnable.maritimeDesc',
-    image: '/images/Home/enable-maritime.jpg',
+    image: assetUrl('/images/Home/enable-maritime.jpg'),
     to: '/solutions/maritime',
   },
 ] as const
@@ -88,7 +89,7 @@ function WhatWeEnableCard({ sector, href }: { sector: Sector; href: string }) {
 
       <div className="pointer-events-none absolute inset-x-0 top-0 z-[25] flex justify-end p-4 sm:p-5">
         <img
-          src="/images/baterino-logo-white.png"
+          src={assetUrl('/images/baterino-logo-white.png')}
           alt="Baterino"
           className="h-5 w-auto shrink-0 object-contain drop-shadow-sm sm:h-6"
           draggable={false}

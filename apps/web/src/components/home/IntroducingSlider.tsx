@@ -1,10 +1,11 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { assetUrl } from '@/lib/assetUrl'
 
 const SLIDES = [
-  { id: 'industrial', src: '/images/baterino-industrial-black.png', descKey: 'home.baterinoPro.industrialDesc' },
-  { id: 'medical', src: '/images/baterino-medical-black.png', descKey: 'home.baterinoPro.medicalDesc' },
-  { id: 'maritime', src: '/images/baterino-maritime-black.png', descKey: 'home.baterinoPro.maritimeDesc' },
+  { id: 'industrial', src: assetUrl('/images/baterino-industrial-black.png'), descKey: 'home.baterinoPro.industrialDesc' },
+  { id: 'medical', src: assetUrl('/images/baterino-medical-black.png'), descKey: 'home.baterinoPro.medicalDesc' },
+  { id: 'maritime', src: assetUrl('/images/baterino-maritime-black.png'), descKey: 'home.baterinoPro.maritimeDesc' },
 ] as const
 
 export function IntroducingSlider() {

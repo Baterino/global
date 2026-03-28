@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function Careers() {
   const { t } = useTranslation()
@@ -34,7 +35,7 @@ export function Careers() {
       <section className="w-full bg-white px-4 pb-4 sm:px-6 sm:pb-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <ImageWithLogo
-            src="/images/careers-baterino.png"
+            src={assetUrl('/images/careers-baterino.png')}
             alt=""
             className="h-[360px] w-full rounded-[10px] bg-neutral-200 sm:h-[400px]"
             logoSize="lg"

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { stripArticleBoilerplate } from '../../lib/stripArticleBoilerplate'
+import { assetUrl } from '@/lib/assetUrl'
 
 export type ArticleBlogHeroModel = {
   title: string
@@ -191,7 +192,7 @@ export function ArticleBlogTemplate({ hero, locale, bodyHtml, keywords = [] }: A
             <div className="absolute inset-0 z-[3] flex flex-col items-center justify-center px-4 py-5 text-center sm:px-6 sm:py-6">
               <div className="flex max-h-full w-full max-w-[700px] flex-col items-center overflow-hidden">
                 <img
-                  src="/images/baterino-logo-white.png"
+                  src={assetUrl('/images/baterino-logo-white.png')}
                   alt=""
                   className="mb-3 h-5 w-auto shrink-0 object-contain drop-shadow-md sm:mb-4 sm:h-6"
                   aria-hidden

@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { assetUrl } from '@/lib/assetUrl'
 
 const DIVISION_LOGOS: Record<string, string> = {
-  res: '/images/baterino-logo-white.png',
-  pro: '/images/baterino-industrial-black.png',
-  med: '/images/baterino-medical-black.png',
-  sea: '/images/baterino-maritime-black.png',
+  res: assetUrl('/images/baterino-logo-white.png'),
+  pro: assetUrl('/images/baterino-industrial-black.png'),
+  med: assetUrl('/images/baterino-medical-black.png'),
+  sea: assetUrl('/images/baterino-maritime-black.png'),
 }
 
 const DIVISION_CARD_ICONS: Record<string, string> = {
-  res: '/images/mobile menu/residential.png',
-  pro: '/images/baterino-industrial-black.png',
-  med: '/images/baterino-medical-black.png',
-  sea: '/images/baterino-maritime-black.png',
+  res: assetUrl('/images/mobile menu/residential.png'),
+  pro: assetUrl('/images/baterino-industrial-black.png'),
+  med: assetUrl('/images/baterino-medical-black.png'),
+  sea: assetUrl('/images/baterino-maritime-black.png'),
 }
 
 const DIVISIONS = [

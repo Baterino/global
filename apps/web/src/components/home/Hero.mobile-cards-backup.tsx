@@ -3,8 +3,9 @@
  * Restore by copying the mobile section (lines 51–100) back into Hero.tsx
  */
 import { useTranslation } from 'react-i18next'
+import { assetUrl } from '@/lib/assetUrl'
 
-const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => `/images/mobile%20slider/slide${i + 1}.jpg`)
+const MOBILE_SLIDER_IMAGES = Array.from({ length: 8 }, (_, i) => assetUrl(`/images/mobile%20slider/slide${i + 1}.jpg`))
 
 export function HeroMobileCardsBackup() {
   const { t } = useTranslation()
@@ -33,7 +34,7 @@ export function HeroMobileCardsBackup() {
                       </svg>
                     </div>
                     <img
-                      src="/images/baterino-logo-white.png"
+                      src={assetUrl('/images/baterino-logo-white.png')}
                       alt="Baterino"
                       className="mx-auto mb-4 h-8 w-auto object-contain"
                     />
@@ -52,7 +53,7 @@ export function HeroMobileCardsBackup() {
                         className="transition-opacity hover:opacity-100"
                         aria-label="LithTech"
                       >
-                        <img src="/images/lithtech-logo-white 3.png" alt="LithTech" className="h-5 w-auto object-contain" />
+                        <img src={assetUrl('/images/lithtech-logo-white 3.png')} alt="LithTech" className="h-5 w-auto object-contain" />
                       </a>
                     </div>
                   </div>

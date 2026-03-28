@@ -6,6 +6,7 @@ import { ArticleBlogTemplate } from '../components/article/ArticleBlogTemplate'
 import { ArticleBlogTemplateSkeleton } from '../components/article/ArticleBlogTemplateSkeleton'
 import { insightsFallbackBodies } from '@api-insights'
 import { fetchPublishedArticleBySlug, type PublicArticleDetail } from '../lib/publicContentApi'
+import { assetUrl } from '@/lib/assetUrl'
 
 interface ArticleData {
   id: string
@@ -38,7 +39,7 @@ const FALLBACK_ARTICLES: ArticleData[] = [
     date: '',
     location: '',
     category: 'insights.categoryCompany',
-    image: '/images/blog/global-delivery-framework.jpg',
+    image: assetUrl('/images/blog/global-delivery-framework.jpg'),
     content: insightsFallbackBodies['global-delivery-framework'],
     keywords: ['Infrastructure', 'Delivery', 'Global presence', 'Partnerships'],
   },
@@ -50,7 +51,7 @@ const FALLBACK_ARTICLES: ArticleData[] = [
     date: '',
     location: '',
     category: 'insights.categoryCompany',
-    image: '/images/about-baterino.jpg',
+    image: assetUrl('/images/about-baterino.jpg'),
     content: insightsFallbackBodies['baterino-roles-in-every-market'],
     keywords: ['Market roles', 'EPC', 'Importer', 'After-sales'],
   },
@@ -62,7 +63,7 @@ const FALLBACK_ARTICLES: ArticleData[] = [
     date: '',
     location: '',
     category: 'insights.categoryCompany',
-    image: '/images/blog/how-baterino-assess-a-project.jpg',
+    image: assetUrl('/images/blog/how-baterino-assess-a-project.jpg'),
     content: insightsFallbackBodies['request-to-operation'],
     keywords: ['Assessment', 'Divisions', 'Process', 'Lifecycle'],
   },
@@ -111,7 +112,7 @@ export function Article() {
             : remote.category_label
           : t('insights.publicRelease'),
         type: remote.type,
-        image: remote.image_url || '/images/og-images/og-insights.jpg',
+        image: remote.image_url || assetUrl('/images/og-images/og-insights.jpg'),
         content: remote.body_html,
         keywords: remote.keywords?.slice(0, 4) ?? [],
       }

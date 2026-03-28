@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { WhatWeDoSlider } from '../components/about/WhatWeDoSlider'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function AboutBaterino() {
   const { t } = useTranslation()
@@ -25,7 +26,7 @@ export function AboutBaterino() {
       <section className="w-full bg-white px-4 pb-12 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px]">
           <ImageWithLogo
-            src="/images/about-baterino.jpg"
+            src={assetUrl('/images/about-baterino.jpg')}
             alt="About Baterino"
             className="h-[400px] w-full rounded-[10px]"
             imgClassName="rounded-[10px] object-cover"
@@ -103,7 +104,7 @@ export function AboutBaterino() {
 
           {/* Large Image */}
           <ImageWithLogo
-            src="/images/social-impact.jpg"
+            src={assetUrl('/images/social-impact.jpg')}
             alt="Social Impact"
             className="mb-12 h-[400px] w-full rounded-[10px]"
             imgClassName="rounded-[10px] object-cover"

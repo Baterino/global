@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { ImageWithLogo } from '../components/ImageWithLogo'
 import { SEOHead } from '../components/SEOHead'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function Impact() {
   const { t } = useTranslation()
@@ -34,12 +35,12 @@ export function Impact() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="relative aspect-[3/4] overflow-hidden rounded-[10px]">
               <img
-                src="/images/medical-center.png"
+                src={assetUrl('/images/medical-center.png')}
                 alt=""
                 className="h-full w-full object-cover"
               />
               <img
-                src="/images/baterino-logo-white.png"
+                src={assetUrl('/images/baterino-logo-white.png')}
                 alt="Baterino"
                 className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
                 aria-hidden
@@ -53,12 +54,12 @@ export function Impact() {
             </div>
             <div className="relative aspect-[3/4] overflow-hidden rounded-[10px]">
               <img
-                src="/images/highschool.png"
+                src={assetUrl('/images/highschool.png')}
                 alt=""
                 className="h-full w-full object-cover"
               />
               <img
-                src="/images/baterino-logo-white.png"
+                src={assetUrl('/images/baterino-logo-white.png')}
                 alt="Baterino"
                 className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
                 aria-hidden
@@ -72,12 +73,12 @@ export function Impact() {
             </div>
             <div className="relative aspect-[3/4] overflow-hidden rounded-[10px]">
               <img
-                src="/images/water-sanitation.png"
+                src={assetUrl('/images/water-sanitation.png')}
                 alt=""
                 className="h-full w-full object-cover"
               />
               <img
-                src="/images/baterino-logo-white.png"
+                src={assetUrl('/images/baterino-logo-white.png')}
                 alt="Baterino"
                 className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
                 aria-hidden
@@ -91,12 +92,12 @@ export function Impact() {
             </div>
             <div className="relative aspect-[3/4] overflow-hidden rounded-[10px]">
               <img
-                src="/images/emergency-service.png"
+                src={assetUrl('/images/emergency-service.png')}
                 alt=""
                 className="h-full w-full object-cover"
               />
               <img
-                src="/images/baterino-logo-white.png"
+                src={assetUrl('/images/baterino-logo-white.png')}
                 alt="Baterino"
                 className="absolute right-3 top-3 z-10 h-4 w-auto object-contain drop-shadow-sm sm:h-5"
                 aria-hidden
@@ -124,7 +125,7 @@ export function Impact() {
 
           {/* Large Image */}
           <ImageWithLogo
-            src="/images/purpose-infrastructure.jpg"
+            src={assetUrl('/images/purpose-infrastructure.jpg')}
             alt="Infrastructure with Purpose"
             className="h-[440px] w-full rounded-[10px]"
             imgClassName="rounded-[10px] object-cover"
@@ -146,14 +147,14 @@ export function Impact() {
           {/* Two Images Side by Side */}
           <div className="grid gap-4 sm:grid-cols-2">
             <ImageWithLogo
-              src="/images/social-programs.png"
+              src={assetUrl('/images/social-programs.png')}
               alt="Social Programs"
               className="aspect-[4/3] w-full rounded-[10px]"
               imgClassName="rounded-[10px] object-cover"
               logoSize="md"
             />
             <ImageWithLogo
-              src="/images/disaster-relief.png"
+              src={assetUrl('/images/disaster-relief.png')}
               alt="Disaster Relief"
               className="aspect-[4/3] w-full rounded-[10px]"
               imgClassName="rounded-[10px] object-cover"
@@ -181,7 +182,7 @@ export function Impact() {
               {/* UN Logo Box */}
               <div className="flex flex-col items-start rounded-[10px] bg-zinc-100 p-8">
                 <img
-                  src="/images/baterino-un-global-goals.png"
+                  src={assetUrl('/images/baterino-un-global-goals.png')}
                   alt="UN Sustainable Development Goals"
                   className="mb-6 h-auto w-52"
                   onError={(e) => {
@@ -210,7 +211,7 @@ export function Impact() {
               {/* Goals */}
               <div className="relative flex flex-col justify-center overflow-hidden rounded-[10px] p-8">
                 <img
-                  src="/images/clean-energy.jpg"
+                  src={assetUrl('/images/clean-energy.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -224,7 +225,7 @@ export function Impact() {
               </div>
               <div className="relative flex flex-col justify-center overflow-hidden rounded-[10px] p-8">
                 <img
-                  src="/images/inovation-infrastructure.jpg"
+                  src={assetUrl('/images/inovation-infrastructure.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -238,7 +239,7 @@ export function Impact() {
               </div>
               <div className="relative flex flex-col justify-center overflow-hidden rounded-[10px] p-8">
                 <img
-                  src="/images/sustainable-city.jpg"
+                  src={assetUrl('/images/sustainable-city.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -252,7 +253,7 @@ export function Impact() {
               </div>
               <div className="relative flex flex-col justify-center overflow-hidden rounded-[10px] p-8">
                 <img
-                  src="/images/climate-action.jpg"
+                  src={assetUrl('/images/climate-action.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -266,7 +267,7 @@ export function Impact() {
               </div>
               <div className="relative flex flex-col justify-center overflow-hidden rounded-[10px] p-8">
                 <img
-                  src="/images/partnership-for-goals.jpg"
+                  src={assetUrl('/images/partnership-for-goals.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -285,7 +286,7 @@ export function Impact() {
               {/* UN Logo Box - Tall left column spanning 2 rows */}
               <div className="relative row-span-2 flex h-[592px] flex-col rounded-[10px] bg-zinc-100 p-9">
                 <img
-                  src="/images/baterino-un-global-goals.png"
+                  src={assetUrl('/images/baterino-un-global-goals.png')}
                   alt="UN Sustainable Development Goals"
                   className="mt-4 h-44 w-52"
                   onError={(e) => {
@@ -313,7 +314,7 @@ export function Impact() {
               {/* Goal 7 - Second column, top */}
               <div className="relative aspect-square overflow-hidden rounded-[10px]">
                 <img
-                  src="/images/clean-energy.jpg"
+                  src={assetUrl('/images/clean-energy.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -329,7 +330,7 @@ export function Impact() {
               {/* Goal 9 - Third column, top */}
               <div className="relative aspect-square overflow-hidden rounded-[10px]">
                 <img
-                  src="/images/inovation-infrastructure.jpg"
+                  src={assetUrl('/images/inovation-infrastructure.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -345,7 +346,7 @@ export function Impact() {
               {/* Goal 11 - Fourth column, top */}
               <div className="relative aspect-square overflow-hidden rounded-[10px]">
                 <img
-                  src="/images/sustainable-city.jpg"
+                  src={assetUrl('/images/sustainable-city.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -361,7 +362,7 @@ export function Impact() {
               {/* Goal 13 - Second column, bottom */}
               <div className="relative aspect-square overflow-hidden rounded-[10px]">
                 <img
-                  src="/images/climate-action.jpg"
+                  src={assetUrl('/images/climate-action.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -377,7 +378,7 @@ export function Impact() {
               {/* Goal 17 - Third column, bottom */}
               <div className="relative aspect-square overflow-hidden rounded-[10px]">
                 <img
-                  src="/images/partnership-for-goals.jpg"
+                  src={assetUrl('/images/partnership-for-goals.jpg')}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />

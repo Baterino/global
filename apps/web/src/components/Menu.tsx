@@ -6,6 +6,7 @@ import { nav } from '../config/nav'
 import { handleHomeLogoLinkClick } from '../utils/homeLogoClick'
 import { LanguageDropdown } from './LanguageDropdown'
 import { localeLabels, supportedLngs, type Locale } from '../i18n'
+import { assetUrl } from '@/lib/assetUrl'
 
 export function Menu() {
   const { t, i18n } = useTranslation()
@@ -83,7 +84,7 @@ export function Menu() {
         }}
       >
         <img
-          src="/images/Baterino-Logo-black.png"
+          src={assetUrl('/images/Baterino-Logo-black.png')}
           alt="Baterino"
           className="h-6 w-auto sm:h-7"
         />
@@ -295,7 +296,7 @@ export function Menu() {
                 {t('home.footer.poweredByLabel')}
               </span>
               <img
-                src="/images/lithtech-logo.webp"
+                src={assetUrl('/images/lithtech-logo.webp')}
                 alt="LithTech"
                 className="h-6 w-auto"
               />
@@ -617,7 +618,7 @@ export function Menu() {
                       }}
                     >
                       <img
-                        src={`/images/mobile%20menu/${item.path}.png`}
+                        src={assetUrl(`/images/mobile%20menu/${item.path}.png`)}
                         alt=""
                         className="h-16 w-14 shrink-0 rounded-lg object-cover"
                         aria-hidden
