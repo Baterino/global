@@ -95,13 +95,13 @@
   },
   "pageTitle": {
     "home": "Baterino Global : EPC para soluciones de almacenamiento en baterías e infraestructura BESS",
-    "solutions": "Energy Storage Solutions | All Sectors",
+    "solutions": "Soluciones de almacenamiento de energía | Todos los sectores",
     "solutionsResidential": "Residencial y Comunidades",
     "solutionsIndustrial": "Soluciones industriales",
     "solutionsMaritime": "Soluciones marítimas",
     "solutionsCriticalServices": "Servicios esenciales",
     "delivery": "Entrega",
-    "company": "About Baterino | Company",
+    "company": "Sobre Baterino | Empresa",
     "companyAboutBaterino": "Sobre Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "Asociación",
@@ -114,7 +114,17 @@
     "privacyPolicy": "Política de Privacidad",
     "notFound": "Página no encontrada",
     "unauthorized": "401 — No autorizado",
-    "operatingModel": "Modelo operativo | Baterino"
+    "operatingModel": "Modelo operativo | Baterino",
+    "solutionsIndustrialSeoTitle": "Soluciones BESS industriales | Baterino",
+    "solutionsIndustrialSeoDescription": "Soluciones BESS industriales para instalaciones comerciales. Sistemas de almacenamiento en baterías containerizados y en gabinete, escalables, para estabilidad de red.",
+    "solutionsResidentialSeoTitle": "Soluciones de almacenamiento residencial | Baterino",
+    "solutionsResidentialSeoDescription": "Sistemas de baterías para hogares y comunidades. Almacenamiento fiable para integración solar e independencia energética.",
+    "solutionsMaritimeSeoTitle": "Almacenamiento marítimo de energía | Baterino",
+    "solutionsMaritimeSeoDescription": "Sistemas marinos de baterías para buques y operaciones offshore. ESS de grado marino pensados para seguridad y fiabilidad.",
+    "termsOfUseMetaDescription": "Términos de uso de Baterino. Consulte los términos y condiciones que rigen el uso de nuestro sitio web y servicios.",
+    "privacyPolicyMetaDescription": "Política de privacidad de Baterino. Cómo recopilamos, usamos y protegemos sus datos personales conforme a la normativa aplicable.",
+    "contactMetaDescription": "Contacte con Baterino para consultas de proyectos, oportunidades de colaboración y soluciones de almacenamiento de energía. Nuestro equipo está listo para ayudar.",
+    "careersMetaDescription": "Únase al equipo de Baterino. Explore oportunidades profesionales en almacenamiento de energía, entrega de infraestructura y soporte de proyectos a largo plazo."
   },
   "unauthorized": {
     "code": "401",
@@ -371,7 +381,9 @@
     },
     "heroSlides": {
       "slide0": {
-        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+        "prefixLine": "NOSOTROS",
+        "title": "SUMINISTRAMOS\nINTEGRAMOS &\nAPOYAMOS",
+        "forLine": "PARA"
       },
       "slide1": {
         "title": "Infraestructura de almacenamiento energético industrial",
@@ -442,10 +454,10 @@
       "title": "Cómo entregamos",
       "subtitle": "Nuestro proceso principal",
       "intro": "Baterino habilita proyectos de almacenamiento de energía combinando integración tecnológica, entrega operativa y soporte a largo plazo. Eliminamos barreras técnicas, logísticas y estructurales para que los proyectos pasen del concepto a la operación con confianza.",
-      "stage1": "Primera etapa",
-      "stage2": "Segunda etapa",
-      "stage3": "Tercera etapa",
-      "stage4": "Cuarta etapa",
+      "stage1": "Fundamentos",
+      "stage2": "Integración",
+      "stage3": "Ciclo de vida",
+      "stage4": "Financiación",
       "step1": "Habilitación de infraestructura",
       "step1Desc": "Reunimos las tecnologías, socios y logística necesarios para hacer que los proyectos de almacenamiento de energía sean implementables en entornos reales.",
       "step2": "Integración tecnológica",
@@ -629,15 +641,15 @@
       "applicationsIntro": "El BESS en gabinete encaja en sitios que necesitan almacenamiento escalable sin grandes huellas. Los despliegues típicos incluyen:",
       "techProduct1": {
         "title": "Gabinete refrigerado por aire",
-        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+        "subtitle": "LT Ultra 60/100 — de 60 kWh a 105 kWh"
       },
       "techProduct2": {
         "title": "Gabinete refrigerado por aire",
-        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+        "subtitle": "LT 204 Air — de 204 kWh a 225 kWh"
       },
       "techProduct3": {
         "title": "Gabinete refrigerado por líquido",
-        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+        "subtitle": "LT 215 — de 215 kWh a 260 kWh"
       }
     },
     "containerized": {
@@ -694,7 +706,7 @@
       "safety4": "Recintos resistentes a la corrosión",
       "safety5": "Alineación con clasificación marina y cumplimiento",
       "techProduct1": {
-        "title": "White Shark 2.0 ESS Marine Power",
+        "title": "White Shark 2.0 ESS — Energía marina",
         "subtitle": "Apilamiento modular de Lithion Iron Phosphate, con 17,8 kWh por módulo. Refrigeración por aire / refrigeración natural — el número de strings es ilimitado según el EMS."
       }
     },

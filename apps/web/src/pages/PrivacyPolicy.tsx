@@ -6,7 +6,7 @@ export function PrivacyPolicy() {
 
   return (
     <>
-      <SEOHead title={t('pageTitle.privacyPolicy')} description="Baterino's Privacy Policy. Learn how we collect, use, and protect your personal data in accordance with applicable data protection regulations." ogImage="/images/og-images/og-privacy-policy.jpg" />
+      <SEOHead title={t('pageTitle.privacyPolicy')} description={t('pageTitle.privacyPolicyMetaDescription')} ogImage="/images/og-images/og-privacy-policy.jpg" />
       <article className="w-full bg-white">
         <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[800px]">

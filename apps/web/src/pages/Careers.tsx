@@ -17,7 +17,7 @@ export function Careers() {
 
   return (
     <>
-      <SEOHead title={t('pageTitle.careers')} description="Join the Baterino team. Explore career opportunities in energy storage, infrastructure delivery, and long-term project support across global markets." ogImage="/images/og-images/og-careers.jpg" />
+      <SEOHead title={t('pageTitle.careers')} description={t('pageTitle.careersMetaDescription')} ogImage="/images/og-images/og-careers.jpg" />
     <article className="w-full bg-white">
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">

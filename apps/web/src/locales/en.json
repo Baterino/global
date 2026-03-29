@@ -114,7 +114,17 @@
     "privacyPolicy": "Privacy Policy",
     "notFound": "Page not found",
     "unauthorized": "401 — Unauthorized",
-    "operatingModel": "Operating Model"
+    "operatingModel": "Operating Model",
+    "solutionsIndustrialSeoTitle": "Industrial BESS Solutions | Baterino",
+    "solutionsIndustrialSeoDescription": "Industrial BESS solutions for commercial facilities. Scalable containerized and cabinet-based battery energy storage systems for grid stability.",
+    "solutionsResidentialSeoTitle": "Residential Energy Storage Solutions | Baterino",
+    "solutionsResidentialSeoDescription": "Residential battery storage systems for homes and communities. Reliable energy storage solutions for solar integration and energy independence.",
+    "solutionsMaritimeSeoTitle": "Maritime Energy Storage | Baterino",
+    "solutionsMaritimeSeoDescription": "Maritime battery energy storage systems for vessels and offshore operations. Marine-grade ESS engineered for safety and reliability.",
+    "termsOfUseMetaDescription": "Baterino Terms of Use. Read the terms and conditions governing the use of our website and services.",
+    "privacyPolicyMetaDescription": "Baterino's Privacy Policy. Learn how we collect, use, and protect your personal data in accordance with applicable data protection regulations.",
+    "contactMetaDescription": "Get in touch with Baterino for project inquiries, partnership opportunities, and energy storage solutions. Our team is ready to support your next energy project.",
+    "careersMetaDescription": "Join the Baterino team. Explore career opportunities in energy storage, infrastructure delivery, and long-term project support across global markets."
   },
   "unauthorized": {
     "code": "401",
@@ -371,7 +381,9 @@
     },
     "heroSlides": {
       "slide0": {
-        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+        "prefixLine": "WE",
+        "title": "SUPPLY\nINTEGRATE &\nSUPPORT",
+        "forLine": "FOR"
       },
       "slide1": { "title": "Industrial Energy Storage Infrastructure", "subtitle": "We design and deploy BESS infrastructure from 1MW and beyond — engineered for grid-scale performance and long-term reliability." },
       "slide2": { "title": "SOLUTIONS FOR RESIDENTIAL HOMES", "subtitle": "Power your home smarter — our battery storage systems keep the lights on, reduce energy costs, and maximize every bit of solar energy your roof produces." },
@@ -427,10 +439,10 @@
       "title": "How We Deliver",
       "subtitle": "From Concept to Operation",
       "intro": "Baterino enables energy storage projects by combining technology integration, operational delivery, and long-term support. We remove technical, logistical, and structural barriers so projects can move from concept to operation with confidence.",
-      "stage1": "First stage",
-      "stage2": "Second stage",
-      "stage3": "Third stage",
-      "stage4": "Fourth stage",
+      "stage1": "Foundation",
+      "stage2": "Integration",
+      "stage3": "Lifecycle",
+      "stage4": "Financing",
       "step1": "Infrastructure Enablement",
       "step1Desc": "We bring together the technologies, partners, and logistics required to make energy storage projects deployable in real-world environments.",
       "step2": "Technology Integration",

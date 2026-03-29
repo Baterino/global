@@ -1,17 +1,1144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://example.com/id" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    <loc>https://baterino.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en"/>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/id</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://example.com/id" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    <loc>https://baterino.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en"/>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/solutions/residential</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/residential"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/solutions/residential</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/residential"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/solutions/residential</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/residential"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/solutions/residential</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/residential"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/solutions/residential</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/residential"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/residential"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/solutions/industrial</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/industrial"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/solutions/industrial</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/industrial"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/solutions/industrial</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/industrial"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/solutions/industrial</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/industrial"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/solutions/industrial</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/industrial"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/industrial"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/solutions/maritime</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/maritime"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/solutions/maritime</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/maritime"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/solutions/maritime</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/maritime"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/solutions/maritime</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/maritime"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/solutions/maritime</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/maritime"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/maritime"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/solutions/critical-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/critical-services"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/solutions/critical-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/critical-services"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/solutions/critical-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/critical-services"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/solutions/critical-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/critical-services"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/solutions/critical-services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/solutions/critical-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/solutions/critical-services"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/delivery"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/delivery"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/delivery"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/delivery"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/delivery"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/delivery"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/delivery"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/delivery"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/delivery"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/delivery"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/delivery"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/delivery"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/delivery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/delivery"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/delivery"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/delivery"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/delivery"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/delivery"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/company/about-baterino</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/about-baterino"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/company/about-baterino</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/about-baterino"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/company/about-baterino</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/about-baterino"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/company/about-baterino</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/about-baterino"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/company/about-baterino</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/about-baterino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/about-baterino"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/company/lithtech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/lithtech"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/company/lithtech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/lithtech"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/company/lithtech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/lithtech"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/company/lithtech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/lithtech"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/company/lithtech</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/lithtech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/lithtech"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/company/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/company/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/company/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/company/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/company/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/company/insights/global-delivery-framework</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/company/insights/global-delivery-framework</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/company/insights/global-delivery-framework</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/company/insights/global-delivery-framework</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/company/insights/global-delivery-framework</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/global-delivery-framework"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/global-delivery-framework"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/company/insights/baterino-roles-in-every-market</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/company/insights/baterino-roles-in-every-market</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/company/insights/baterino-roles-in-every-market</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/company/insights/baterino-roles-in-every-market</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/company/insights/baterino-roles-in-every-market</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/baterino-roles-in-every-market"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/baterino-roles-in-every-market"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/company/insights/request-to-operation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/company/insights/request-to-operation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/company/insights/request-to-operation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/company/insights/request-to-operation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/company/insights/request-to-operation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/insights/request-to-operation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/insights/request-to-operation"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/use-cases"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/use-cases"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/use-cases"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/use-cases"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/use-cases</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/use-cases"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/use-cases"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/company/partnership</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/partnership"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/company/partnership</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/partnership"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/company/partnership</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/partnership"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/company/partnership</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/partnership"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/company/partnership</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/company/partnership"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/company/partnership"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/global-presence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/global-presence"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/global-presence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/global-presence"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/global-presence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/global-presence"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/global-presence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/global-presence"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/global-presence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/global-presence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/global-presence"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/careers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/careers"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/careers"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/careers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/careers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/careers"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/careers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/careers"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/careers"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/careers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/careers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/careers"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/careers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/careers"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/careers"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/careers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/careers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/careers"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/careers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/careers"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/careers"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/careers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/careers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/careers"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/careers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/careers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/careers"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/careers"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/careers"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/careers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/careers"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/contact"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/contact"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/contact"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/contact"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/contact"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/contact"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/contact"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/terms-of-use"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/terms-of-use"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/terms-of-use"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/terms-of-use"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/terms-of-use"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/privacy-policy"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/es/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/privacy-policy"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/id/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/privacy-policy"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/zh/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/privacy-policy"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baterino.com/ro/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baterino.com/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baterino.com/es/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://baterino.com/id/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://baterino.com/zh/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://baterino.com/ro/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baterino.com/en/privacy-policy"/>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -95,13 +95,13 @@
   },
   "pageTitle": {
     "home": "Baterino Global : EPC untuk solusi penyimpanan baterai & infrastruktur BESS",
-    "solutions": "Energy Storage Solutions | All Sectors",
+    "solutions": "Solusi penyimpanan energi | Semua sektor",
     "solutionsResidential": "Residensial & Komunitas",
     "solutionsIndustrial": "Solusi Industri",
     "solutionsMaritime": "Solusi Maritim",
     "solutionsCriticalServices": "Layanan esensial",
     "delivery": "Pengiriman",
-    "company": "About Baterino | Company",
+    "company": "Tentang Baterino | Perusahaan",
     "companyAboutBaterino": "Tentang Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "Kemitraan",
@@ -114,7 +114,17 @@
     "privacyPolicy": "Kebijakan Privasi",
     "notFound": "Halaman tidak ditemukan",
     "unauthorized": "401 — Tidak diizinkan",
-    "operatingModel": "Model Operasional | Baterino"
+    "operatingModel": "Model Operasional | Baterino",
+    "solutionsIndustrialSeoTitle": "Solusi BESS industri | Baterino",
+    "solutionsIndustrialSeoDescription": "Solusi BESS industri untuk fasilitas komersial. Sistem penyimpanan baterai berbasis kontainer dan kabinet yang dapat diskalakan untuk stabilitas jaringan.",
+    "solutionsResidentialSeoTitle": "Solusi penyimpanan energi residensial | Baterino",
+    "solutionsResidentialSeoDescription": "Sistem baterai untuk rumah dan komunitas. Penyimpanan energi andal untuk integrasi surya dan kemandirian energi.",
+    "solutionsMaritimeSeoTitle": "Penyimpanan energi maritim | Baterino",
+    "solutionsMaritimeSeoDescription": "Sistem baterai maritim untuk kapal dan operasi lepas pantai. ESS kelas maritim yang dirancang untuk keselamatan dan keandalan.",
+    "termsOfUseMetaDescription": "Ketentuan penggunaan Baterino. Baca syarat dan ketentuan penggunaan situs web dan layanan kami.",
+    "privacyPolicyMetaDescription": "Kebijakan privasi Baterino. Pelajari bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi Anda sesuai peraturan yang berlaku.",
+    "contactMetaDescription": "Hubungi Baterino untuk pertanyaan proyek, peluang kemitraan, dan solusi penyimpanan energi. Tim kami siap mendukung proyek energi Anda.",
+    "careersMetaDescription": "Bergabunglah dengan tim Baterino. Jelajahi peluang karier di penyimpanan energi, pengiriman infrastruktur, dan dukungan proyek jangka panjang."
   },
   "unauthorized": {
     "code": "401",
@@ -371,7 +381,9 @@
     },
     "heroSlides": {
       "slide0": {
-        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+        "prefixLine": "KAMI",
+        "title": "MENYEDIAKAN\nMENGINTEGRASIKAN &\nMENDUKUNG",
+        "forLine": "UNTUK"
       },
       "slide1": {
         "title": "Infrastruktur Penyimpanan Energi Industri",
@@ -442,10 +454,10 @@
       "title": "Cara kami mengirimkan",
       "subtitle": "Proses inti kami",
       "intro": "Dari penemuan hingga pendanaan dan dukungan purna jual.",
-      "stage1": "Tahap pertama",
-      "stage2": "Tahap kedua",
-      "stage3": "Tahap ketiga",
-      "stage4": "Tahap keempat",
+      "stage1": "Fondasi",
+      "stage2": "Integrasi",
+      "stage3": "Siklus hidup",
+      "stage4": "Pembiayaan",
       "step1": "Penemuan Proyek",
       "step1Desc": "Kami menilai kebutuhan dan merancang solusi yang tepat.",
       "step2": "Integrasi Teknologi",
@@ -629,15 +641,15 @@
       "applicationsIntro": "BESS kabinet cocok untuk lokasi yang membutuhkan penyimpanan skalabel tanpa jejak besar. Penerapan tipikal meliputi:",
       "techProduct1": {
         "title": "Kabinet pendingin udara",
-        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+        "subtitle": "LT Ultra 60/100 — 60 kWh hingga 105 kWh"
       },
       "techProduct2": {
         "title": "Kabinet pendingin udara",
-        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+        "subtitle": "LT 204 Air — 204 kWh hingga 225 kWh"
       },
       "techProduct3": {
         "title": "Kabinet pendingin cair",
-        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+        "subtitle": "LT 215 — 215 kWh hingga 260 kWh"
       }
     },
     "containerized": {
@@ -694,7 +706,7 @@
       "safety4": "Penutup tahan korosi",
       "safety5": "Keselarasan dengan klasifikasi dan kepatuhan laut",
       "techProduct1": {
-        "title": "White Shark 2.0 ESS Marine Power",
+        "title": "White Shark 2.0 ESS — Daya maritim",
         "subtitle": "Susunan modular Lithion Iron Phosphate, 17,8 kWh per modul. Pendingin udara / pendingin alam — jumlah string tidak terbatas berdasarkan EMS."
       }
     },

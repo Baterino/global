@@ -22,7 +22,11 @@ export function SolutionsMaritime() {
 
   return (
     <article className="w-full bg-white">
-      <SEOHead title="Maritime Energy Storage | Baterino" description="Maritime battery energy storage systems for vessels and offshore operations. Marine-grade ESS engineered for safety and reliability." ogImage="/images/og-images/og-maritime.jpg" />
+      <SEOHead
+        title={t('pageTitle.solutionsMaritimeSeoTitle')}
+        description={t('pageTitle.solutionsMaritimeSeoDescription')}
+        ogImage="/images/og-images/og-maritime.jpg"
+      />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

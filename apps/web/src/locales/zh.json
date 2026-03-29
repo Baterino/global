@@ -327,13 +327,13 @@
   },
   "pageTitle": {
     "home": "Baterino Global：电池储能方案与 BESS 基础设施 EPC",
-    "solutions": "Energy Storage Solutions | All Sectors",
+    "solutions": "储能解决方案 | 全行业",
     "solutionsResidential": "住宅与社区",
     "solutionsIndustrial": "工业解决方案",
     "solutionsMaritime": "海事解决方案",
     "solutionsCriticalServices": "基本服务",
     "delivery": "交付",
-    "company": "About Baterino | Company",
+    "company": "关于 Baterino | 公司",
     "companyAboutBaterino": "关于 Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "合作",
@@ -346,7 +346,17 @@
     "privacyPolicy": "隐私政策",
     "notFound": "页面未找到",
     "unauthorized": "401 — 未授权",
-    "operatingModel": "运营模式 | Baterino"
+    "operatingModel": "运营模式 | Baterino",
+    "solutionsIndustrialSeoTitle": "工业 BESS 解决方案 | Baterino",
+    "solutionsIndustrialSeoDescription": "面向商业设施的工业 BESS 解决方案。可扩展的集装箱式与机柜式电池储能系统，助力电网稳定。",
+    "solutionsResidentialSeoTitle": "住宅储能解决方案 | Baterino",
+    "solutionsResidentialSeoDescription": "面向家庭与社区的电池储能系统。可靠的储能方案，支持太阳能接入与能源独立。",
+    "solutionsMaritimeSeoTitle": "海事储能 | Baterino",
+    "solutionsMaritimeSeoDescription": "面向船舶与海上作业的海事电池储能系统。为满足安全与可靠性而设计的海事级 ESS。",
+    "termsOfUseMetaDescription": "Baterino 使用条款。阅读规范您使用本网站与服务的条款与条件。",
+    "privacyPolicyMetaDescription": "Baterino 隐私政策。了解我们如何依据适用法规收集、使用并保护您的个人数据。",
+    "contactMetaDescription": "就项目咨询、合作机会与储能解决方案联系 Baterino。我们的团队愿为您的能源项目提供支持。",
+    "careersMetaDescription": "加入 Baterino 团队。了解储能、基础设施交付与长期项目支持等领域的职业机会。"
   },
   "greeting": {
     "hello": "你好！",
@@ -371,7 +381,9 @@
     },
     "heroSlides": {
       "slide0": {
-        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+        "prefixLine": "我们",
+        "title": "供应\n整合与\n支持",
+        "forLine": "为"
       },
       "slide1": {
         "title": "工业储能基础设施",
@@ -442,10 +454,10 @@
       "title": "我们如何交付",
       "subtitle": "从概念到运营",
       "intro": "Baterino 通过技术集成、运营交付与长期支持赋能储能项目，消除技术、物流与结构障碍，让项目从概念到运营更有信心。",
-      "stage1": "第一阶段",
-      "stage2": "第二阶段",
-      "stage3": "第三阶段",
-      "stage4": "第四阶段",
+      "stage1": "基础与准备",
+      "stage2": "集成交付",
+      "stage3": "全生命周期",
+      "stage4": "融资支持",
       "step1": "基础设施赋能",
       "step1Desc": "我们汇聚使储能项目在真实环境中可部署所需的技术、合作伙伴与物流。",
       "step2": "技术集成",
@@ -629,15 +641,15 @@
       "applicationsIntro": "机柜式 BESS 适合需要可扩展储能且占地有限的场景，典型部署包括：",
       "techProduct1": {
         "title": "风冷机柜",
-        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+        "subtitle": "LT Ultra 60/100 — 60 kWh 至 105 kWh"
       },
       "techProduct2": {
         "title": "风冷机柜",
-        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+        "subtitle": "LT 204 Air — 204 kWh 至 225 kWh"
       },
       "techProduct3": {
         "title": "液冷机柜",
-        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+        "subtitle": "LT 215 — 215 kWh 至 260 kWh"
       }
     },
     "containerized": {

@@ -116,11 +116,17 @@ export function Hero() {
                 </div>
               )}
               {i === 0 && (
-                <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end gap-3 px-4 pb-8 pt-4 text-center">
-                  <h3 className="font-heading whitespace-pre-line text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+                <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end gap-2 px-4 pb-8 pt-4 text-center">
+                  <p className="font-heading text-2xl font-black uppercase leading-snug tracking-tight text-white sm:text-3xl">
+                    {t('home.heroSlides.slide0.prefixLine')}
+                  </p>
+                  <h3 className="font-heading whitespace-pre-line text-4xl font-black uppercase leading-[1.08] tracking-tight text-white sm:text-5xl sm:leading-[1.12]">
                     {t('home.heroSlides.slide0.title')}
                   </h3>
-                  <div className="flex flex-wrap items-center justify-center gap-1.5 font-nunito text-xs font-normal text-white/90">
+                  <p className="font-heading text-2xl font-black uppercase leading-snug tracking-tight text-white sm:text-3xl">
+                    {t('home.heroSlides.slide0.forLine')}
+                  </p>
+                  <div className="mt-1 flex flex-wrap items-center justify-center gap-1.5 font-nunito text-xs font-normal text-white/90">
                     <span>{t('home.hero.poweredByLabel')}</span>
                     <a
                       href="https://www.ltc-energy.com/"

@@ -6,7 +6,7 @@ export function TermsOfUse() {
 
   return (
     <>
-      <SEOHead title={t('pageTitle.termsOfUse')} description="Baterino Terms of Use. Read the terms and conditions governing the use of our website and services." ogImage="/images/og-images/og-terms-of-use.jpg" />
+      <SEOHead title={t('pageTitle.termsOfUse')} description={t('pageTitle.termsOfUseMetaDescription')} ogImage="/images/og-images/og-terms-of-use.jpg" />
       <article className="w-full bg-white">
         <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[800px]">

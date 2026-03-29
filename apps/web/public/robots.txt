@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+# CMS / internal — do not index
+Disallow: /admin
+
+Sitemap: https://baterino.com/sitemap.xml

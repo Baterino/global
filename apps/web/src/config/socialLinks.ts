@@ -22,5 +22,9 @@ export const socialLinkedInUrl = urlOrFallback(
   defaultLinkedInCompanyUrl
 )
 
-/** Substack — separate channel */
-export const socialSubstackUrl = 'https://baterino.substack.com'
+export const defaultSubstackProfileUrl = 'https://substack.com/@baterino'
+
+export const socialSubstackUrl = urlOrFallback(
+  import.meta.env.VITE_SOCIAL_SUBSTACK_URL,
+  defaultSubstackProfileUrl
+)

@@ -100,7 +100,11 @@ export function SolutionsResidential() {
 
   return (
     <article className="w-full bg-white">
-      <SEOHead title="Residential Energy Storage Solutions | Baterino" description="Residential battery storage systems for homes and communities. Reliable energy storage solutions for solar integration and energy independence." ogImage="/images/og-images/og-residential.jpg" />
+      <SEOHead
+        title={t('pageTitle.solutionsResidentialSeoTitle')}
+        description={t('pageTitle.solutionsResidentialSeoDescription')}
+        ogImage="/images/og-images/og-residential.jpg"
+      />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

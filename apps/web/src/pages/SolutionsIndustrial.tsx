@@ -9,7 +9,11 @@ export function SolutionsIndustrial() {
 
   return (
     <article className="w-full bg-white">
-      <SEOHead title="Industrial BESS Solutions | Baterino" description="Industrial BESS solutions for commercial facilities. Scalable containerized and cabinet-based battery energy storage systems for grid stability." ogImage="/images/og-images/og-industrial.jpg" />
+      <SEOHead
+        title={t('pageTitle.solutionsIndustrialSeoTitle')}
+        description={t('pageTitle.solutionsIndustrialSeoDescription')}
+        ogImage="/images/og-images/og-industrial.jpg"
+      />
       {/* Hero Section */}
       <section className="w-full bg-white px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-[1200px] text-center">

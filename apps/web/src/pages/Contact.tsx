@@ -265,7 +265,7 @@ export function Contact() {
 
   return (
     <>
-      <SEOHead title={t('pageTitle.contact')} description="Get in touch with Baterino for project inquiries, partnership opportunities, and energy storage solutions. Our team is ready to support your next energy project." ogImage="/images/og-images/og-contact.jpg" />
+      <SEOHead title={t('pageTitle.contact')} description={t('pageTitle.contactMetaDescription')} ogImage="/images/og-images/og-contact.jpg" />
       <article className="w-full bg-white">
         {/* Hero */}
         <section className="w-full bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">

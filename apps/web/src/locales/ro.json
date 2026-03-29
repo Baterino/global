@@ -95,13 +95,13 @@
   },
   "pageTitle": {
     "home": "Baterino Global : EPC pentru soluții de stocare în baterii și infrastructură BESS",
-    "solutions": "Energy Storage Solutions | All Sectors",
+    "solutions": "Soluții de stocare a energiei | Toate sectoarele",
     "solutionsResidential": "Rezidențial & Comunități",
     "solutionsIndustrial": "Soluții Industriale",
     "solutionsMaritime": "Soluții Maritime",
     "solutionsCriticalServices": "Servicii esențiale",
     "delivery": "Livrare",
-    "company": "About Baterino | Company",
+    "company": "Despre Baterino | Companie",
     "companyAboutBaterino": "Despre Baterino",
     "companyLithtech": "LithTech",
     "companyPartnership": "Parteneriat",
@@ -114,7 +114,17 @@
     "privacyPolicy": "Politica de Confidențialitate",
     "notFound": "Pagina nu a fost găsită",
     "unauthorized": "401 — Neautorizat",
-    "operatingModel": "Model operațional | Baterino"
+    "operatingModel": "Model operațional | Baterino",
+    "solutionsIndustrialSeoTitle": "Soluții BESS industriale | Baterino",
+    "solutionsIndustrialSeoDescription": "Soluții BESS industriale pentru facilități comerciale. Sisteme de stocare în baterii containerizate și în dulap, scalabile, pentru stabilitatea rețelei.",
+    "solutionsResidentialSeoTitle": "Soluții de stocare rezidențială a energiei | Baterino",
+    "solutionsResidentialSeoDescription": "Sisteme pe baterii pentru locuințe și comunități. Stocare de încredere pentru integrarea solare și independența energetică.",
+    "solutionsMaritimeSeoTitle": "Stocare maritimă a energiei | Baterino",
+    "solutionsMaritimeSeoDescription": "Sisteme marine pe baterii pentru nave și operațiuni offshore. ESS de calitate marină, proiectate pentru siguranță și fiabilitate.",
+    "termsOfUseMetaDescription": "Termenii de utilizare Baterino. Citiți termenii și condițiile care guvernează utilizarea site-ului și serviciilor noastre.",
+    "privacyPolicyMetaDescription": "Politica de confidențialitate Baterino. Aflați cum colectăm, folosim și protejăm datele dumneavoastră personale conform reglementărilor aplicabile.",
+    "contactMetaDescription": "Luați legătura cu Baterino pentru întrebări despre proiecte, oportunități de parteneriat și soluții de stocare a energiei. Echipa noastră vă poate sprijini.",
+    "careersMetaDescription": "Alăturați-vă echipei Baterino. Explorați oportunități de carieră în stocarea energiei, livrarea infrastructurii și suportul pe termen lung al proiectelor."
   },
   "unauthorized": {
     "code": "401",
@@ -371,7 +381,9 @@
     },
     "heroSlides": {
       "slide0": {
-        "title": "WE\nSUPPLY\nENABLE\nSUPPORT"
+        "prefixLine": "NOI",
+        "title": "FURNIZĂM\nINTEGRĂM &\nSUSȚINEM",
+        "forLine": "PENTRU"
       },
       "slide1": {
         "title": "Infrastructură Industrială\nde Stocare a Energiei",
@@ -442,10 +454,10 @@
       "title": "Cum Livrăm",
       "subtitle": "De la Concept la Operare",
       "intro": "Baterino activează proiecte de stocare a energiei prin combinarea integrării tehnologice, livrării operaționale și suportului pe termen lung. Eliminăm barierele tehnice, logistice și structurale pentru ca proiectele să poată trece de la concept la operare cu încredere.",
-      "stage1": "Prima etapă",
-      "stage2": "A doua etapă",
-      "stage3": "A treia etapă",
-      "stage4": "A patra etapă",
+      "stage1": "Fundație",
+      "stage2": "Integrare",
+      "stage3": "Ciclu de viață",
+      "stage4": "Finanțare",
       "step1": "Activarea Infrastructurii",
       "step1Desc": "Reunim tehnologiile, partenerii și logistica necesară pentru a face proiectele de stocare a energiei deployabile în medii reale.",
       "step2": "Integrarea Tehnologiei",
@@ -629,15 +641,15 @@
       "applicationsIntro": "BESS-ul pe cabinete se potrivește amplasamentelor care au nevoie de stocare scalabilă fără amprente mari. Implementări tipice includ:",
       "techProduct1": {
         "title": "Cabinet cu răcire pe aer",
-        "subtitle": "LT Ultra 60/100 - 60kWh - 105 kWh"
+        "subtitle": "LT Ultra 60/100 — de la 60 kWh la 105 kWh"
       },
       "techProduct2": {
         "title": "Cabinet cu răcire pe aer",
-        "subtitle": "LT 204 Air - 204 kWh - 225 kWh"
+        "subtitle": "LT 204 Air — de la 204 kWh la 225 kWh"
       },
       "techProduct3": {
         "title": "Cabinet cu răcire lichidă",
-        "subtitle": "LT 215 - 215 kWh - 260 kWh"
+        "subtitle": "LT 215 — de la 215 kWh la 260 kWh"
       }
     },
     "containerized": {
@@ -694,7 +706,7 @@
       "safety4": "Carcase rezistente la coroziune",
       "safety5": "Conformitate cu clasificările și reglementările marine",
       "techProduct1": {
-        "title": "White Shark 2.0 ESS Marine Power",
+        "title": "White Shark 2.0 ESS — Energie maritimă",
         "subtitle": "Sistem modular cu stivuire Lithion Iron Phosphate, 17,8 kWh per modul. Răcire pe aer / răcire naturală — numărul de stringuri este nelimitat în funcție de EMS."
       }
     },
